@@ -1,0 +1,896 @@
+{
+  "job": {
+    "id": "pjb-dr9c67e0nm54mq40onz8q72vlmby",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:15:56.596312Z",
+    "error_message": null,
+    "name": "funsd_021.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:16:09.482010Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "08/05/96 13:44 FAX 909 889 1555 LORILLARD TOBAC. 002",
+                "value": "08/05/96 13:44 FAX 909 889 1555 LORILLARD TOBAC. 002",
+                "bbox": [
+                  {
+                    "h": 23.79,
+                    "w": 85.94,
+                    "x": 103.57,
+                    "y": 84.6,
+                    "confidence": 0.8,
+                    "end_index": 7,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.79,
+                    "w": 59.06,
+                    "x": 208.46,
+                    "y": 85.48,
+                    "confidence": 0.8,
+                    "end_index": 13,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 9
+                  },
+                  {
+                    "h": 22.27,
+                    "w": 155.72,
+                    "x": 291.73,
+                    "y": 87.22,
+                    "confidence": 0.8,
+                    "end_index": 30,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 15
+                  },
+                  {
+                    "h": 24.67,
+                    "w": 159.98,
+                    "x": 527.53,
+                    "y": 89.89,
+                    "confidence": 0.8,
+                    "end_index": 47,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 32
+                  },
+                  {
+                    "h": 24.23,
+                    "w": 52.89,
+                    "x": 938.28,
+                    "y": 94.29,
+                    "confidence": 0.8,
+                    "end_index": 51,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 49
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "08/05/96 13:44 FAX 909 889 1555 LORILLARD TOBAC. 002",
+            "bbox": [
+              {
+                "h": 33.93,
+                "w": 887.6,
+                "x": 103.57,
+                "y": 84.6,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "md": "2",
+            "value": "2",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**TO**: <u>K. A. SPARROW</u>",
+                "value": "TO: <u>K. A. SPARROW</u>",
+                "bbox": [
+                  {
+                    "h": 23.26,
+                    "w": 209.23,
+                    "x": 90.66,
+                    "y": 163.77,
+                    "confidence": 1.0,
+                    "end_index": 23,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**FROM**: <u>S.P. ZOLOT</u>",
+                "value": "FROM: <u>S.P. ZOLOT</u>",
+                "bbox": [
+                  {
+                    "h": 23.26,
+                    "w": 171.6,
+                    "x": 91.94,
+                    "y": 207.71,
+                    "confidence": 1.0,
+                    "end_index": 22,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.39,
+                    "w": 171.91,
+                    "x": 95.56,
+                    "y": 211.81,
+                    "confidence": 1.0,
+                    "end_index": null,
+                    "label": "text",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**SUBMISSION DATE**:",
+                "value": "SUBMISSION DATE:",
+                "bbox": [
+                  {
+                    "h": 22.27,
+                    "w": 184.92,
+                    "x": 553.85,
+                    "y": 165.82,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "items": [
+                  {
+                    "md": "AUG. 5 [x]",
+                    "value": "AUG. 5 [x]",
+                    "bbox": [
+                      {
+                        "h": 18.8,
+                        "w": 66.32,
+                        "x": 483.23,
+                        "y": 213.99,
+                        "confidence": 0.81,
+                        "end_index": 9,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "SEPT. 9 [ ]",
+                    "value": "SEPT. 9 [ ]",
+                    "bbox": [
+                      {
+                        "h": 17.67,
+                        "w": 71.97,
+                        "x": 480.17,
+                        "y": 242.01,
+                        "confidence": 0.81,
+                        "end_index": 10,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "OCT. 7 [ ]",
+                    "value": "OCT. 7 [ ]",
+                    "bbox": [
+                      {
+                        "h": 17.43,
+                        "w": 65.27,
+                        "x": 483.98,
+                        "y": 280.71,
+                        "confidence": 0.8,
+                        "end_index": 9,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "NOV. 4 [ ]",
+                    "value": "NOV. 4 [ ]",
+                    "bbox": [
+                      {
+                        "h": 18.42,
+                        "w": 66.27,
+                        "x": 715.26,
+                        "y": 213.88,
+                        "confidence": 0.77,
+                        "end_index": 9,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "DEC. 9 [ ]",
+                    "value": "DEC. 9 [ ]",
+                    "bbox": [
+                      {
+                        "h": 18.8,
+                        "w": 64.45,
+                        "x": 716.43,
+                        "y": 242.46,
+                        "confidence": 0.78,
+                        "end_index": 9,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  }
+                ],
+                "md": "* AUG. 5 [x]\n* SEPT. 9 [ ]\n* OCT. 7 [ ]\n* NOV. 4 [ ]\n* DEC. 9 [ ]",
+                "ordered": false,
+                "bbox": [
+                  {
+                    "h": 84.15,
+                    "w": 71.97,
+                    "x": 480.17,
+                    "y": 213.99,
+                    "confidence": 0.81,
+                    "end_index": 39,
+                    "label": "list",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 47.37,
+                    "w": 66.27,
+                    "x": 715.26,
+                    "y": 213.88,
+                    "confidence": 0.78,
+                    "end_index": 64,
+                    "label": "list",
+                    "r": null,
+                    "start_index": 40
+                  }
+                ],
+                "type": "list"
+              }
+            ],
+            "md": "* **TO**: <u>K. A. SPARROW</u>\n* **FROM**: <u>S.P. ZOLOT</u>\n* **SUBMISSION DATE**:\n  * AUG. 5 [x]\n  * SEPT. 9 [ ]\n  * OCT. 7 [ ]\n  * NOV. 4 [ ]\n  * DEC. 9 [ ]",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 67.2,
+                "w": 209.23,
+                "x": 90.66,
+                "y": 163.77,
+                "confidence": 1.0,
+                "end_index": 83,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 84.15,
+                "w": 71.97,
+                "x": 480.17,
+                "y": 213.99,
+                "confidence": 0.81,
+                "end_index": 129,
+                "label": "list",
+                "r": null,
+                "start_index": 84
+              },
+              {
+                "h": 95.43,
+                "w": 227.68,
+                "x": 553.85,
+                "y": 165.82,
+                "confidence": 0.89,
+                "end_index": 158,
+                "label": "list",
+                "r": null,
+                "start_index": 130
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "level": 2,
+            "md": "## <u>NEWPORT HEAVY UP PROGRESS REPORT</u>",
+            "value": "<u>NEWPORT HEAVY UP PROGRESS REPORT</u>",
+            "bbox": [
+              {
+                "h": 21.62,
+                "w": 434.89,
+                "x": 281.12,
+                "y": 349.39,
+                "confidence": 0.93,
+                "end_index": 41,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 3,
+            "md": "### <u>EFFECTIVENESS OF DISTRIBUTION ALLOWANCE:</u>",
+            "value": "<u>EFFECTIVENESS OF DISTRIBUTION ALLOWANCE:</u>",
+            "bbox": [
+              {
+                "h": 21.19,
+                "w": 510.74,
+                "x": 153.34,
+                "y": 415.26,
+                "confidence": 0.87,
+                "end_index": 50,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**<u>DIRECT ACCOUNT/WHOLESALERS:</u>** <u>N/A</u>",
+            "value": "<u>DIRECT ACCOUNT/WHOLESALERS:</u> <u>N/A</u>",
+            "bbox": [
+              {
+                "h": 22.27,
+                "w": 328.31,
+                "x": 151.58,
+                "y": 457.93,
+                "confidence": 1.0,
+                "end_index": 31,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 21.61,
+                "w": 332.76,
+                "x": 153.19,
+                "y": 460.62,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>ALL WHOLESALERS WITHIN DIVISION 921, CURRENTLY STOCK ALL EIGHT</u>",
+            "value": "<u>ALL WHOLESALERS WITHIN DIVISION 921, CURRENTLY STOCK ALL EIGHT</u>",
+            "bbox": [
+              {
+                "h": 18.34,
+                "w": 687.11,
+                "x": 151.58,
+                "y": 505.09,
+                "confidence": 0.95,
+                "end_index": 68,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.27,
+                "w": 695.87,
+                "x": 151.83,
+                "y": 505.73,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>NEWPORT PACKINGS.</u>",
+            "value": "<u>NEWPORT PACKINGS.</u>",
+            "bbox": [
+              {
+                "h": 19.98,
+                "w": 210.64,
+                "x": 152.87,
+                "y": 551.48,
+                "confidence": 0.94,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>DIRECT ACCOUNT CHAINS:</u>** <u>N/A (AT THIS TIME)</u>",
+            "value": "<u>DIRECT ACCOUNT CHAINS:</u> <u>N/A (AT THIS TIME)</u>",
+            "bbox": [
+              {
+                "h": 21.15,
+                "w": 476.22,
+                "x": 153.07,
+                "y": 620.4,
+                "confidence": 0.95,
+                "end_index": 58,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.27,
+                "w": 261.48,
+                "x": 150.28,
+                "y": 617.75,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 21.97,
+                "w": 315.13,
+                "x": 151.26,
+                "y": 777.7,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 22.27,
+                "w": 177.13,
+                "x": 446.15,
+                "y": 617.75,
+                "confidence": 1.0,
+                "end_index": 54,
+                "label": "text",
+                "r": null,
+                "start_index": 37
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>PRESENTATIONS ARE PENDING AT THRIFTY-PAYLESS (MCA #18),</u>",
+            "value": "<u>PRESENTATIONS ARE PENDING AT THRIFTY-PAYLESS (MCA #18),</u>",
+            "bbox": [
+              {
+                "h": 21.97,
+                "w": 618.77,
+                "x": 151.26,
+                "y": 663.96,
+                "confidence": 0.94,
+                "end_index": 61,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.4,
+                "w": 628.24,
+                "x": 152.67,
+                "y": 665.56,
+                "confidence": 0.94,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>RALPH'S GROCERY (MCA #19), AMERICAN DRUG STORES (MCA #19)</u>",
+            "value": "<u>RALPH'S GROCERY (MCA #19), AMERICAN DRUG STORES (MCA #19)</u>",
+            "bbox": [
+              {
+                "h": 22.27,
+                "w": 658.56,
+                "x": 150.28,
+                "y": 709.44,
+                "confidence": 0.94,
+                "end_index": 63,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.23,
+                "w": 664.01,
+                "x": 153.02,
+                "y": 710.15,
+                "confidence": 0.94,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>NON-DIRECT ACCOUNT CHAINS:</u>** <u>N/A (AT THIS TIME)</u>",
+            "value": "<u>NON-DIRECT ACCOUNT CHAINS:</u> <u>N/A (AT THIS TIME)</u>",
+            "bbox": [
+              {
+                "h": 22.27,
+                "w": 184.27,
+                "x": 575.91,
+                "y": 778.87,
+                "confidence": 1.0,
+                "end_index": 58,
+                "label": "text",
+                "r": null,
+                "start_index": 41
+              },
+              {
+                "h": 21.19,
+                "w": 321.14,
+                "x": 151.95,
+                "y": 780.53,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.88,
+                "w": 184.96,
+                "x": 581.42,
+                "y": 781.8,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>PRESENTATION PENDING AT STATER BROS. MARKETS (MCA #19)</u>",
+            "value": "<u>PRESENTATION PENDING AT STATER BROS. MARKETS (MCA #19)</u>",
+            "bbox": [
+              {
+                "h": 21.97,
+                "w": 613.67,
+                "x": 151.26,
+                "y": 824.23,
+                "confidence": 0.94,
+                "end_index": 60,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>EFFECTIVENESS OF THE RETAIL (1.00 OFF CARTON) DISTRIBUTION ALLOWANCE:</u>** <u>CURRENTLY, INTRODUCTIONS ARE BEING</u>",
+            "value": "<u>EFFECTIVENESS OF THE RETAIL (1.00 OFF CARTON) DISTRIBUTION ALLOWANCE:</u> <u>CURRENTLY, INTRODUCTIONS ARE BEING</u>",
+            "bbox": [
+              {
+                "h": 21.97,
+                "w": 235.39,
+                "x": 149.99,
+                "y": 916.0,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 22.27,
+                "w": 256.29,
+                "x": 150.28,
+                "y": 939.99,
+                "confidence": 1.0,
+                "end_index": 49,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 18.34,
+                "w": 267.97,
+                "x": 151.58,
+                "y": 964.88,
+                "confidence": 1.0,
+                "end_index": 73,
+                "label": "text",
+                "r": null,
+                "start_index": 51
+              },
+              {
+                "h": 22.27,
+                "w": 399.03,
+                "x": 447.45,
+                "y": 962.26,
+                "confidence": 1.0,
+                "end_index": 117,
+                "label": "text",
+                "r": null,
+                "start_index": 84
+              },
+              {
+                "h": 66.98,
+                "w": 270.47,
+                "x": 152.45,
+                "y": 918.84,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.9,
+                "w": 401.31,
+                "x": 451.19,
+                "y": 965.02,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>MADE WITHOUT THE USE OR NEED OF ADDITIONAL FUNDS.</u>",
+            "value": "<u>MADE WITHOUT THE USE OR NEED OF ADDITIONAL FUNDS.</u>",
+            "bbox": [
+              {
+                "h": 22.13,
+                "w": 567.15,
+                "x": 152.63,
+                "y": 1011.8,
+                "confidence": 0.93,
+                "end_index": 55,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>PROMOTIONAL ACTIVITY</u>** <u>JULY/AUGUST</u>",
+            "value": "<u>PROMOTIONAL ACTIVITY</u>\n<u>JULY/AUGUST</u>",
+            "bbox": [
+              {
+                "h": 21.29,
+                "w": 261.43,
+                "x": 152.28,
+                "y": 1150.17,
+                "confidence": 0.61,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 22.1,
+                "w": 136.86,
+                "x": 151.85,
+                "y": 1171.91,
+                "confidence": 0.61,
+                "end_index": 45,
+                "label": "text",
+                "r": null,
+                "start_index": 35
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>30¢/40¢ OFF PACK -</u>",
+            "value": "<u>30¢/40¢ OFF PACK -</u>",
+            "bbox": [
+              {
+                "h": 21.97,
+                "w": 195.2,
+                "x": 148.71,
+                "y": 1193.89,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>GENERAL MARKET</u> <u>RETAILER AND CUSTOMER RESPONSE IS</u>",
+            "value": "<u>GENERAL MARKET</u> <u>RETAILER AND CUSTOMER RESPONSE IS</u>",
+            "bbox": [
+              {
+                "h": 22.27,
+                "w": 178.43,
+                "x": 150.28,
+                "y": 1217.7,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 21.97,
+                "w": 384.02,
+                "x": 377.08,
+                "y": 1217.15,
+                "confidence": 1.0,
+                "end_index": 57,
+                "label": "text",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 21.98,
+                "w": 390.45,
+                "x": 380.91,
+                "y": 1219.25,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>EXCELLENT, MOST TEMPORARY DISPLAYS ARE SELLING THROUGH UPON</u>",
+            "value": "<u>EXCELLENT, MOST TEMPORARY DISPLAYS ARE SELLING THROUGH UPON</u>",
+            "bbox": [
+              {
+                "h": 23.01,
+                "w": 703.12,
+                "x": 152.12,
+                "y": 1264.6,
+                "confidence": 0.92,
+                "end_index": 65,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>RETURN TO OUTLETS.</u>",
+            "value": "<u>RETURN TO OUTLETS.</u>",
+            "bbox": [
+              {
+                "h": 21.16,
+                "w": 214.79,
+                "x": 152.42,
+                "y": 1311.38,
+                "confidence": 0.92,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "95879095",
+                "value": "95879095",
+                "bbox": [
+                  {
+                    "h": 145.61,
+                    "w": 29.33,
+                    "x": 921.09,
+                    "y": 1145.59,
+                    "confidence": 0.86,
+                    "end_index": 7,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "95879095",
+            "bbox": [
+              {
+                "h": 145.61,
+                "w": 29.33,
+                "x": 921.09,
+                "y": 1145.59,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "2\n\n* **TO**: <u>K. A. SPARROW</u>\n* **FROM**: <u>S.P. ZOLOT</u>\n* **SUBMISSION DATE**:\n    * AUG. 5 [x]\n    * SEPT. 9 [ ]\n    * OCT. 7 [ ]\n    * NOV. 4 [ ]\n    * DEC. 9 [ ]\n\n## <u>NEWPORT HEAVY UP PROGRESS REPORT</u>\n\n### <u>EFFECTIVENESS OF DISTRIBUTION ALLOWANCE:</u>\n\n**<u>DIRECT ACCOUNT/WHOLESALERS:</u>** <u>N/A</u>\n\n<u>ALL WHOLESALERS WITHIN DIVISION 921, CURRENTLY STOCK ALL EIGHT</u>\n\n<u>NEWPORT PACKINGS.</u>\n\n**<u>DIRECT ACCOUNT CHAINS:</u>** <u>N/A (AT THIS TIME)</u>\n\n<u>PRESENTATIONS ARE PENDING AT THRIFTY-PAYLESS (MCA #18),</u>\n\n<u>RALPH'S GROCERY (MCA #19), AMERICAN DRUG STORES (MCA #19)</u>\n\n**<u>NON-DIRECT ACCOUNT CHAINS:</u>** <u>N/A (AT THIS TIME)</u>\n\n<u>PRESENTATION PENDING AT STATER BROS. MARKETS (MCA #19)</u>\n\n**<u>EFFECTIVENESS OF THE RETAIL (1.00 OFF CARTON) DISTRIBUTION ALLOWANCE:</u>** <u>CURRENTLY, INTRODUCTIONS ARE BEING</u>\n\n<u>MADE WITHOUT THE USE OR NEED OF ADDITIONAL FUNDS.</u>\n\n**<u>PROMOTIONAL ACTIVITY</u>**\n<u>JULY/AUGUST</u>\n<u>30¢/40¢ OFF PACK -</u>\n<u>GENERAL MARKET</u> <u>RETAILER AND CUSTOMER RESPONSE IS</u>\n\n<u>EXCELLENT, MOST TEMPORARY DISPLAYS ARE SELLING THROUGH UPON</u>\n\n<u>RETURN TO OUTLETS.</u>",
+        "page_number": 1,
+        "success": true,
+        "footer": "95879095",
+        "header": "08/05/96 13:44 FAX 909 889 1555 LORILLARD TOBAC. 002",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

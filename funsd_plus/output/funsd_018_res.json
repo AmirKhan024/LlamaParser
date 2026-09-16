@@ -1,0 +1,1104 @@
+{
+  "job": {
+    "id": "pjb-cfe1bsuag4dej9op4785ziiquxpw",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:09:32.656411Z",
+    "error_message": null,
+    "name": "funsd_018.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:09:51.126330Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 1,
+            "md": "# LAURENCE, CHARLES, FREE & LAWSON, INC.",
+            "value": "LAURENCE, CHARLES, FREE & LAWSON, INC.",
+            "bbox": [
+              {
+                "h": 34.82,
+                "w": 587.79,
+                "x": 233.75,
+                "y": 64.23,
+                "confidence": 0.9,
+                "end_index": 39,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 2,
+            "md": "## BULLETIN ADVERTISING—INSPECTION REPORT",
+            "value": "BULLETIN ADVERTISING—INSPECTION REPORT",
+            "bbox": [
+              {
+                "h": 20.22,
+                "w": 447.0,
+                "x": 304.36,
+                "y": 101.64,
+                "confidence": 0.87,
+                "end_index": 40,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "items": [
+              {
+                "md": "**MARKET**: Orlando, FL",
+                "value": "MARKET: Orlando, FL",
+                "bbox": [
+                  {
+                    "h": 30.43,
+                    "w": 227.75,
+                    "x": 80.55,
+                    "y": 170.8,
+                    "confidence": 0.59,
+                    "end_index": 22,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 22.64712369791667,
+                    "w": 72.34321207615533,
+                    "x": 80.55364070617993,
+                    "y": 178.57559375,
+                    "confidence": 0.59,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 20.668217773437505,
+                    "w": 110.05853642557653,
+                    "x": 198.24208424482728,
+                    "y": 170.7974384765625,
+                    "confidence": 0.59,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**BRAND**: Misty",
+                "value": "BRAND: Misty",
+                "bbox": [
+                  {
+                    "h": 33.76,
+                    "w": 220.8,
+                    "x": 510.64,
+                    "y": 167.35,
+                    "confidence": 0.57,
+                    "end_index": 15,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.290336588541663,
+                    "w": 58.10543848555278,
+                    "x": 510.64426527891715,
+                    "y": 181.82048795572916,
+                    "confidence": 0.57,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 31.69126725260415,
+                    "w": 61.523405455291254,
+                    "x": 669.9215260687266,
+                    "y": 167.35273551432292,
+                    "confidence": 0.57,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**POPULATION**:",
+                "value": "POPULATION:",
+                "bbox": [
+                  {
+                    "h": 19.29,
+                    "w": 99.8,
+                    "x": 80.66,
+                    "y": 223.16,
+                    "confidence": 1.0,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**SCHEDULE**: 2/16/ - 60 Days",
+                "value": "SCHEDULE: 2/16/ - 60 Days",
+                "bbox": [
+                  {
+                    "h": 30.97,
+                    "w": 328.83,
+                    "x": 512.73,
+                    "y": 214.63,
+                    "confidence": 1.0,
+                    "end_index": 28,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**RIDE DATE**:",
+                "value": "RIDE DATE:",
+                "bbox": [
+                  {
+                    "h": 30.97,
+                    "w": 328.83,
+                    "x": 512.73,
+                    "y": 214.63,
+                    "confidence": 0.57,
+                    "end_index": 13,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**OPERATOR**: POA - Orlando",
+                "value": "OPERATOR: POA - Orlando",
+                "bbox": [
+                  {
+                    "h": 31.27,
+                    "w": 268.17,
+                    "x": 82.03,
+                    "y": 251.14,
+                    "confidence": 0.6,
+                    "end_index": 26,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 24.96,
+                    "w": 134.35,
+                    "x": 215.84,
+                    "y": 251.14,
+                    "confidence": 1.0,
+                    "end_index": 26,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 14
+                  },
+                  {
+                    "h": 15.15669303385414,
+                    "w": 83.39839406161701,
+                    "x": 82.03120727372163,
+                    "y": 267.2491214192708,
+                    "confidence": 0.6,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 24.95805468750001,
+                    "w": 134.35167957000277,
+                    "x": 215.84484251093795,
+                    "y": 251.13882682291666,
+                    "confidence": 0.6,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**FULL INSPECTION**:",
+                "value": "FULL INSPECTION:",
+                "bbox": [
+                  {
+                    "h": 19.29,
+                    "w": 136.04,
+                    "x": 510.64,
+                    "y": 267.25,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**SPOT CHECK**:",
+                "value": "SPOT CHECK:",
+                "bbox": [
+                  {
+                    "h": 15.16,
+                    "w": 101.17,
+                    "x": 746.48,
+                    "y": 270.0,
+                    "confidence": 0.57,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**NUMBER VIEWED**:",
+                "value": "NUMBER VIEWED:",
+                "bbox": [
+                  {
+                    "h": 19.29,
+                    "w": 131.93,
+                    "x": 510.64,
+                    "y": 309.96,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **MARKET**: Orlando, FL\n* **BRAND**: Misty\n* **POPULATION**:\n* **SCHEDULE**: 2/16/ - 60 Days\n* **RIDE DATE**:\n* **OPERATOR**: POA - Orlando\n* **FULL INSPECTION**:\n* **SPOT CHECK**:\n* **NUMBER VIEWED**:",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 111.61,
+                "w": 269.64,
+                "x": 80.55,
+                "y": 170.8,
+                "confidence": 0.8,
+                "end_index": 111,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 161.9,
+                "w": 337.02,
+                "x": 510.64,
+                "y": 167.35,
+                "confidence": 0.78,
+                "end_index": 202,
+                "label": "list",
+                "r": null,
+                "start_index": 112
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "level": 3,
+            "md": "### TYPE OF DISPLAY",
+            "value": "TYPE OF DISPLAY",
+            "bbox": [
+              {
+                "h": 15.8,
+                "w": 144.34,
+                "x": 455.13,
+                "y": 349.97,
+                "confidence": 0.87,
+                "end_index": 18,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**PERMANENT**",
+            "value": "PERMANENT",
+            "bbox": [
+              {
+                "h": 15.3,
+                "w": 105.16,
+                "x": 253.13,
+                "y": 398.44,
+                "confidence": 0.87,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**BULLETIN**: [ ]",
+                "value": "BULLETIN: [ ]",
+                "bbox": [
+                  {
+                    "h": 19.29,
+                    "w": 70.41,
+                    "x": 80.66,
+                    "y": 438.11,
+                    "confidence": 0.47,
+                    "end_index": 16,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.43,
+                    "w": 820.39,
+                    "x": 74.1,
+                    "y": 1011.48,
+                    "confidence": 0.47,
+                    "end_index": 16,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**WALL**: [ ]",
+                "value": "WALL: [ ]",
+                "bbox": [
+                  {
+                    "h": 20.67,
+                    "w": 51.27,
+                    "x": 246.78,
+                    "y": 438.11,
+                    "confidence": 0.47,
+                    "end_index": 12,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**ROTARY**: [x]",
+                "value": "ROTARY: [x]",
+                "bbox": [
+                  {
+                    "h": 20.55,
+                    "w": 81.12,
+                    "x": 540.59,
+                    "y": 440.06,
+                    "confidence": 0.54,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**LOCATION**: See attached list",
+                "value": "LOCATION: See attached list",
+                "bbox": [
+                  {
+                    "h": 13.09,
+                    "w": 68.32,
+                    "x": 82.53,
+                    "y": 487.4,
+                    "confidence": 0.884765625,
+                    "end_index": 11,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.04,
+                    "w": 169.17,
+                    "x": 188.49,
+                    "y": 484.8,
+                    "confidence": 0.8857421875,
+                    "end_index": 30,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 14
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**NO. OF ROTARIES**: 15 RB",
+                "value": "NO. OF ROTARIES: 15 RB",
+                "bbox": [
+                  {
+                    "h": 24.03368229166665,
+                    "w": 225.48533634126318,
+                    "x": 538.1009690319935,
+                    "y": 476.68569140625004,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 13.38,
+                    "w": 116.21,
+                    "x": 540.25,
+                    "y": 489.32,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 19.411820312499913,
+                    "w": 119.31932381391846,
+                    "x": 538.1009690319935,
+                    "y": 480.38318098958337,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 24.03368229166665,
+                    "w": 57.310856320071025,
+                    "x": 706.2754490531856,
+                    "y": 476.68569140625004,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**DAILY EFFECTIVE CIRCULATION**: 814,000",
+                "value": "DAILY EFFECTIVE CIRCULATION: 814,000",
+                "bbox": [
+                  {
+                    "h": 14.25,
+                    "w": 166.68,
+                    "x": 82.34,
+                    "y": 549.35,
+                    "confidence": 0.81,
+                    "end_index": 28,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 8
+                  },
+                  {
+                    "h": 18.06,
+                    "w": 70.56,
+                    "x": 305.7,
+                    "y": 545.79,
+                    "confidence": 0.88,
+                    "end_index": 39,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 29
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**AVERAGE DAILY EFFECTIVE CIRCULATION**: 562,000",
+                "value": "AVERAGE DAILY EFFECTIVE CIRCULATION: 562,000",
+                "bbox": [
+                  {
+                    "h": 30.87,
+                    "w": 293.98,
+                    "x": 82.31,
+                    "y": 533.14,
+                    "confidence": 0.85,
+                    "end_index": 47,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.8,
+                    "w": 170.37,
+                    "x": 79.3,
+                    "y": 537.69,
+                    "confidence": 1.0,
+                    "end_index": 39,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 16
+                  },
+                  {
+                    "h": 13.86,
+                    "w": 105.03,
+                    "x": 539.92,
+                    "y": 535.04,
+                    "confidence": 0.85,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 30.44,
+                    "w": 167.96,
+                    "x": 539.76,
+                    "y": 534.89,
+                    "confidence": 0.85,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 19.03,
+                    "w": 69.7,
+                    "x": 749.43,
+                    "y": 548.48,
+                    "confidence": 0.85,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **BULLETIN**: [ ]\n\n* **WALL**: [ ]\n\n* **ROTARY**: [x]\n\n* **LOCATION**: See attached list\n\n* **NO. OF ROTARIES**: 15 RB\n\n* **DAILY EFFECTIVE CIRCULATION**: 814,000\n\n* **AVERAGE DAILY EFFECTIVE CIRCULATION**: 562,000",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 598.8,
+                "w": 820.39,
+                "x": 74.1,
+                "y": 438.11,
+                "confidence": 0.74,
+                "end_index": 215,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**DESIGN ON DISPLAY: (Condition And Rendition of Copy)**",
+            "value": "DESIGN ON DISPLAY: (Condition And Rendition of Copy)",
+            "bbox": [
+              {
+                "h": 23.571496093750056,
+                "w": 420.90596117035824,
+                "x": 80.55364070617992,
+                "y": 575.1313515625,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.03,
+                "w": 246.09,
+                "x": 256.27,
+                "y": 586.81,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**COMMENTS: (Description of Location or Rotary Plan, Brand Category Competition)**",
+            "value": "COMMENTS: (Description of Location or Rotary Plan, Brand Category Competition)",
+            "bbox": [
+              {
+                "h": 20.74,
+                "w": 605.34,
+                "x": 81.7,
+                "y": 686.53,
+                "confidence": 0.85,
+                "end_index": 81,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "This is a very strong showing at 44% above plant average. The pattern shows locations on all the major arterials, heavying up in the highest circulation areas. No make-goods were requested, as all locations were acceptable and in good condition.",
+            "value": "This is a very strong showing at 44% above plant average. The pattern shows locations on all the major arterials, heavying up in the highest circulation areas. No make-goods were requested, as all locations were acceptable and in good condition.",
+            "bbox": [
+              {
+                "h": 63.76,
+                "w": 848.13,
+                "x": 77.72,
+                "y": 719.23,
+                "confidence": 0.98,
+                "end_index": 244,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 1094.71,
+                "w": 927.9,
+                "x": 51.72,
+                "y": 171.28,
+                "confidence": 0.98,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "Capri - 9 Bull",
+                "value": "Capri - 9 Bull",
+                "bbox": null,
+                "type": "text"
+              },
+              {
+                "md": "Kent - #75",
+                "value": "Kent - #75",
+                "bbox": [
+                  {
+                    "h": 22.05,
+                    "w": 45.8,
+                    "x": 563.28,
+                    "y": 799.11,
+                    "confidence": 0.86,
+                    "end_index": 3,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.49,
+                    "w": 30.67,
+                    "x": 777.02,
+                    "y": 802.41,
+                    "confidence": 0.79,
+                    "end_index": 9,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 7
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Marlboro - 9 Bull",
+                "value": "Marlboro - 9 Bull",
+                "bbox": [
+                  {
+                    "h": 39.59,
+                    "w": 191.0,
+                    "x": 75.2,
+                    "y": 796.72,
+                    "confidence": 0.47,
+                    "end_index": 16,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Camel - 15 Bull #50",
+                "value": "Camel - 15 Bull #50",
+                "bbox": [
+                  {
+                    "h": 23.26,
+                    "w": 171.88,
+                    "x": 566.98,
+                    "y": 818.19,
+                    "confidence": 0.47,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.26,
+                    "w": 171.88,
+                    "x": 566.98,
+                    "y": 818.19,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Bucks - 3 Bull #50",
+                "value": "Bucks - 3 Bull #50",
+                "bbox": [
+                  {
+                    "h": 20.57,
+                    "w": 191.58,
+                    "x": 74.61,
+                    "y": 835.18,
+                    "confidence": 0.46,
+                    "end_index": 17,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 20.57328822544639,
+                    "w": 54.6083025704129,
+                    "x": 74.61368608148756,
+                    "y": 835.1842912946429,
+                    "confidence": 0.46,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 19.67879743303581,
+                    "w": 91.3122436423298,
+                    "x": 174.87811047306536,
+                    "y": 836.0787820870535,
+                    "confidence": 0.46,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Salem - 8 Bull #50",
+                "value": "Salem - 8 Bull #50",
+                "bbox": [
+                  {
+                    "h": 24.63,
+                    "w": 236.24,
+                    "x": 566.98,
+                    "y": 837.87,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Newport - 4 Bull #75",
+                "value": "Newport - 4 Bull #75",
+                "bbox": [
+                  {
+                    "h": 20.57,
+                    "w": 190.68,
+                    "x": 75.51,
+                    "y": 855.76,
+                    "confidence": 0.47,
+                    "end_index": 19,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.678797433035697,
+                    "w": 74.30310021875853,
+                    "x": 75.50890415641236,
+                    "y": 855.7575795200893,
+                    "confidence": 0.47,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 19.678797433035697,
+                    "w": 94.89311594202903,
+                    "x": 171.29723817336614,
+                    "y": 856.6520703125,
+                    "confidence": 0.47,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* Capri - 9 Bull\n* Kent - #75\n* Marlboro - 9 Bull\n* Camel - 15 Bull #50\n* Bucks - 3 Bull #50\n* Salem - 8 Bull #50\n* Newport - 4 Bull #75",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 79.61,
+                "w": 191.58,
+                "x": 74.61,
+                "y": 796.72,
+                "confidence": 0.47,
+                "end_index": 71,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 63.39,
+                "w": 244.41,
+                "x": 563.28,
+                "y": 799.11,
+                "confidence": 0.82,
+                "end_index": 135,
+                "label": "list",
+                "r": null,
+                "start_index": 72
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "No newspaper advertising was noted.",
+            "value": "No newspaper advertising was noted.",
+            "bbox": [
+              {
+                "h": 21.42,
+                "w": 344.07,
+                "x": 76.78,
+                "y": 895.98,
+                "confidence": 0.97,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**COMMENTS ON PLANT: (Condition, Structures, Painting Ability, Lighting, Cooperation, etc.)**",
+            "value": "COMMENTS ON PLANT: (Condition, Structures, Painting Ability, Lighting, Cooperation, etc.)",
+            "bbox": [
+              {
+                "h": 21.48,
+                "w": 667.36,
+                "x": 80.24,
+                "y": 959.74,
+                "confidence": 1.0,
+                "end_index": 92,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "This is a prime rotary plant. These are major areas (Winter Park, Pine Hill, etc.) with no thirty-sheet coverage, so the bulletin remains the only medium available to deliver advertising messages.",
+            "value": "This is a prime rotary plant. These are major areas (Winter Park, Pine Hill, etc.) with no thirty-sheet coverage, so the bulletin remains the only medium available to deliver advertising messages.",
+            "bbox": [
+              {
+                "h": 60.96,
+                "w": 819.19,
+                "x": 75.1,
+                "y": 992.91,
+                "confidence": 0.98,
+                "end_index": 195,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "signature: BCe",
+            "value": "signature: BCe",
+            "bbox": [
+              {
+                "h": 74.41,
+                "w": 262.89,
+                "x": 676.07,
+                "y": 1186.3,
+                "confidence": 0.8,
+                "end_index": 13,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "INSPECTION BY",
+            "value": "INSPECTION BY",
+            "bbox": [
+              {
+                "h": 19.29,
+                "w": 130.57,
+                "x": 738.28,
+                "y": 1241.41,
+                "confidence": 1.0,
+                "end_index": 12,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "(FORM NO. MS-002)",
+            "value": "(FORM NO. MS-002)",
+            "bbox": [
+              {
+                "h": 12.08,
+                "w": 90.02,
+                "x": 43.94,
+                "y": 1247.12,
+                "confidence": 0.94,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "970518870\nPRODUCED FROM B&W WEB SITE",
+                "value": "970518870\nPRODUCED FROM B&W WEB SITE",
+                "bbox": [
+                  {
+                    "h": 40.22,
+                    "w": 324.86,
+                    "x": 0.0,
+                    "y": 1336.92,
+                    "confidence": 0.8,
+                    "end_index": 35,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.29,
+                    "w": 110.74,
+                    "x": 0.0,
+                    "y": 1335.11,
+                    "confidence": 0.8,
+                    "end_index": 8,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.29,
+                    "w": 323.34,
+                    "x": 0.0,
+                    "y": 1358.53,
+                    "confidence": 1.0,
+                    "end_index": 35,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 10
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "970518870\nPRODUCED FROM B&W WEB SITE",
+            "bbox": [
+              {
+                "h": 42.71,
+                "w": 324.86,
+                "x": 0.0,
+                "y": 1335.11,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1403.0,
+        "page_number": 1,
+        "page_width": 1069.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# LAURENCE, CHARLES, FREE & LAWSON, INC.\n\n## BULLETIN ADVERTISING—INSPECTION REPORT\n\n* **MARKET**: Orlando, FL\n* **BRAND**: Misty\n* **POPULATION**:     \n* **SCHEDULE**: 2/16/ - 60 Days\n* **RIDE DATE**:     \n* **OPERATOR**: POA - Orlando\n* **FULL INSPECTION**:     \n* **SPOT CHECK**:     \n* **NUMBER VIEWED**:     \n\n### TYPE OF DISPLAY\n\n**PERMANENT**\n\n* **BULLETIN**: [ ] \n\n* **WALL**: [ ] \n\n* **ROTARY**: [x] \n\n* **LOCATION**: See attached list \n\n* **NO. OF ROTARIES**: 15 RB \n\n* **DAILY EFFECTIVE CIRCULATION**: 814,000 \n\n* **AVERAGE DAILY EFFECTIVE CIRCULATION**: 562,000 \n\n**DESIGN ON DISPLAY: (Condition And Rendition of Copy)**\n\n**COMMENTS: (Description of Location or Rotary Plan, Brand Category Competition)**\n\nThis is a very strong showing at 44% above plant average. The pattern shows locations on all the major arterials, heavying up in the highest circulation areas. No make-goods were requested, as all locations were acceptable and in good condition.\n\n* Capri - 9 Bull\n* Kent - #75\n* Marlboro - 9 Bull\n* Camel - 15 Bull #50\n* Bucks - 3 Bull #50\n* Salem - 8 Bull #50\n* Newport - 4 Bull #75\n\nNo newspaper advertising was noted.\n\n**COMMENTS ON PLANT: (Condition, Structures, Painting Ability, Lighting, Cooperation, etc.)**\n\nThis is a prime rotary plant. These are major areas (Winter Park, Pine Hill, etc.) with no thirty-sheet coverage, so the bulletin remains the only medium available to deliver advertising messages.\n\nsignature: BCe\n\nINSPECTION BY\n\n(FORM NO. MS-002)",
+        "page_number": 1,
+        "success": true,
+        "footer": "970518870\nPRODUCED FROM B&W WEB SITE",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

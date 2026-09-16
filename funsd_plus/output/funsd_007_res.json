@@ -1,0 +1,489 @@
+{
+  "job": {
+    "id": "pjb-tw73g7lm68tw60slb2jt35d17nme",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:05:45.122915Z",
+    "error_message": null,
+    "name": "funsd_007.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:06:02.230037Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "INBIFO Institut für biologische Forschung · Köln",
+                "value": "INBIFO Institut für biologische Forschung · Köln",
+                "bbox": [
+                  {
+                    "h": 413.65,
+                    "w": 23.09,
+                    "x": 1244.66,
+                    "y": 134.95,
+                    "confidence": 0.81,
+                    "end_index": 47,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "INBIFO Institut für biologische Forschung · Köln",
+            "bbox": [
+              {
+                "h": 413.65,
+                "w": 23.09,
+                "x": 1244.66,
+                "y": 134.95,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "md": "FORM 46.KW 84 ERO/MWO MWO89A29",
+            "value": "FORM 46.KW 84 ERO/MWO MWO89A29",
+            "bbox": [
+              {
+                "h": 19.42,
+                "w": 323.4,
+                "x": 33.31,
+                "y": 147.82,
+                "confidence": 0.77,
+                "end_index": 29,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.11,
+                "w": 144.24,
+                "x": 32.95,
+                "y": 146.48,
+                "confidence": 1.0,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 1
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## <u>ÜBERPRÜFUNG DURCH QA-UNIT</u>",
+            "value": "<u>ÜBERPRÜFUNG DURCH QA-UNIT</u>",
+            "bbox": [
+              {
+                "h": 19.42,
+                "w": 234.57,
+                "x": 40.25,
+                "y": 222.27,
+                "confidence": 0.82,
+                "end_index": 34,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "P 6509 [icon: check]",
+            "value": "P 6509 [icon: check]",
+            "bbox": [
+              {
+                "h": 15.86,
+                "w": 74.03,
+                "x": 1040.28,
+                "y": 215.2,
+                "confidence": 0.87,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>TITEL</u>**: DNA Conformation Assay:\nDetermination of in vitro DNA Adduct Formation and Strand Breaks (PT)",
+            "value": "<u>TITEL</u>: DNA Conformation Assay:\nDetermination of in vitro DNA Adduct Formation and Strand Breaks (PT)",
+            "bbox": [
+              {
+                "h": 22.25,
+                "w": 636.78,
+                "x": 96.99,
+                "y": 312.87,
+                "confidence": 0.83,
+                "end_index": 110,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.11,
+                "w": 276.78,
+                "x": 32.95,
+                "y": 297.15,
+                "confidence": 1.0,
+                "end_index": 40,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 6
+              },
+              {
+                "h": 230.38,
+                "w": 1205.54,
+                "x": 32.26,
+                "y": 296.96,
+                "confidence": 0.83,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "KENNTNISNAHME DURCH\nPROJEKTLEITER: RWA",
+            "value": "KENNTNISNAHME DURCH\nPROJEKTLEITER: RWA",
+            "bbox": [
+              {
+                "h": 35.61,
+                "w": 183.22,
+                "x": 881.38,
+                "y": 328.02,
+                "confidence": 0.75,
+                "end_index": 37,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.46,
+                "w": 174.13,
+                "x": 881.49,
+                "y": 345.01,
+                "confidence": 1.0,
+                "end_index": 37,
+                "label": "text",
+                "r": null,
+                "start_index": 20
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TEAM: BC TEAM-MANAGER: HHM",
+            "value": "TEAM: BC TEAM-MANAGER: HHM",
+            "bbox": [
+              {
+                "h": 18.34,
+                "w": 305.36,
+                "x": 882.77,
+                "y": 364.7,
+                "confidence": 0.91,
+                "end_index": 25,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "AUTOR: TMU 3. Mrz. 88 [signature]",
+            "value": "AUTOR: TMU 3. Mrz. 88 [signature]",
+            "bbox": [
+              {
+                "h": 22.66,
+                "w": 247.06,
+                "x": 881.38,
+                "y": 385.2,
+                "confidence": 0.82,
+                "end_index": 32,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>ÜBERPRÜFTER PARAMETER</u>**: Publikationstext, Originalprotokolle",
+            "value": "<u>ÜBERPRÜFTER PARAMETER</u>: Publikationstext, Originalprotokolle",
+            "bbox": [
+              {
+                "h": 25.87,
+                "w": 547.07,
+                "x": 31.65,
+                "y": 402.56,
+                "confidence": 1.0,
+                "end_index": 69,
+                "label": "text",
+                "r": null,
+                "start_index": 12
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "DATUM/ZN: 3. Mrz. 88 [signature] [signature]",
+            "value": "DATUM/ZN: 3. Mrz. 88 [signature] [signature]",
+            "bbox": [
+              {
+                "h": 55.03,
+                "w": 351.16,
+                "x": 874.44,
+                "y": 407.86,
+                "confidence": 0.76,
+                "end_index": 43,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 25.87,
+                "w": 137.74,
+                "x": 880.19,
+                "y": 489.86,
+                "confidence": 1.0,
+                "end_index": 8,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**<u>PRÜFZEITPUNKT</u>**: vor Ausgang des Publikationstexts",
+            "value": "<u>PRÜFZEITPUNKT</u>: vor Ausgang des Publikationstexts",
+            "bbox": [
+              {
+                "h": 23.28,
+                "w": 447.01,
+                "x": 30.36,
+                "y": 498.91,
+                "confidence": 1.0,
+                "end_index": 58,
+                "label": "text",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 20.83,
+                "w": 305.92,
+                "x": 172.13,
+                "y": 504.45,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "UHA, DATUM/ZN: [signature] 8. April 1988",
+            "value": "UHA, DATUM/ZN: [signature] 8. April 1988",
+            "bbox": [
+              {
+                "h": 23.74,
+                "w": 320.63,
+                "x": 882.77,
+                "y": 493.1,
+                "confidence": 0.91,
+                "end_index": 39,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.69,
+                "w": 115.65,
+                "x": 1089.4,
+                "y": 485.33,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 27
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"BEANSTANDUNG\",\"KONSEQUENZ\",\"BEMERKUNGEN\"\n\"wenige Kleinigkeiten\",\"bitte korrigieren\",\"-\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>BEANSTANDUNG</th>\n        <th>KONSEQUENZ</th>\n        <th>BEMERKUNGEN</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>wenige Kleinigkeiten</td>\n        <td>bitte korrigieren</td>\n        <td>-</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| BEANSTANDUNG         | KONSEQUENZ        | BEMERKUNGEN |\n| -------------------- | ----------------- | ----------- |\n| wenige Kleinigkeiten | bitte korrigieren | -           |",
+            "rows": [
+              [
+                "BEANSTANDUNG",
+                "KONSEQUENZ",
+                "BEMERKUNGEN"
+              ],
+              [
+                "wenige Kleinigkeiten",
+                "bitte korrigieren",
+                "-"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 306.38,
+                "w": 1200.57,
+                "x": 31.28,
+                "y": 532.44,
+                "confidence": 0.88,
+                "end_index": 175,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": null,
+            "type": "table"
+          },
+          {
+            "items": [
+              {
+                "md": "Mrz. 88 [signature]\nQA: DATUM/ZN",
+                "value": "Mrz. 88 [signature]\nQA: DATUM/ZN",
+                "bbox": [
+                  {
+                    "h": 43.16,
+                    "w": 138.8,
+                    "x": 1035.45,
+                    "y": 843.78,
+                    "confidence": 0.86,
+                    "end_index": 31,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2. Mrz. 88 [signature]\n   QA: DATUM/ZN",
+            "ordered": true,
+            "bbox": [
+              {
+                "h": 43.16,
+                "w": 138.8,
+                "x": 1035.45,
+                "y": 843.78,
+                "confidence": 0.86,
+                "end_index": 37,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "UHA, HHM, TMU, RWA, QA",
+            "value": "UHA, HHM, TMU, RWA, QA",
+            "bbox": [
+              {
+                "h": 18.97,
+                "w": 203.35,
+                "x": 140.36,
+                "y": 879.39,
+                "confidence": 0.86,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2226683205",
+                "value": "2226683205",
+                "bbox": [
+                  {
+                    "h": 31.87,
+                    "w": 190.25,
+                    "x": 238.7,
+                    "y": 959.49,
+                    "confidence": 0.8,
+                    "end_index": 9,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2226683205",
+            "bbox": [
+              {
+                "h": 31.87,
+                "w": 190.25,
+                "x": 238.7,
+                "y": 959.49,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1079.0,
+        "page_number": 1,
+        "page_width": 1388.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "FORM 46.KW 84 ERO/MWO MWO89A29\n\n## <u>ÜBERPRÜFUNG DURCH QA-UNIT</u>\n\nP 6509 [icon: check]\n\n**<u>TITEL</u>**: DNA Conformation Assay:\nDetermination of in vitro DNA Adduct Formation and Strand Breaks (PT)\n\nKENNTNISNAHME DURCH\nPROJEKTLEITER: RWA\n\nTEAM: BC TEAM-MANAGER: HHM\n\nAUTOR: TMU 3. Mrz. 88 [signature]\n\n**<u>ÜBERPRÜFTER PARAMETER</u>**: Publikationstext, Originalprotokolle\n\nDATUM/ZN: 3. Mrz. 88 [signature] [signature]\n\n**<u>PRÜFZEITPUNKT</u>**: vor Ausgang des Publikationstexts\n\nUHA, DATUM/ZN: [signature] 8. April 1988\n\n| BEANSTANDUNG         | KONSEQUENZ        | BEMERKUNGEN |\n| -------------------- | ----------------- | ----------- |\n| wenige Kleinigkeiten | bitte korrigieren | -           |\n\n\n2. Mrz. 88 [signature]\nQA: DATUM/ZN\n\nUHA, HHM, TMU, RWA, QA",
+        "page_number": 1,
+        "success": true,
+        "footer": "2226683205",
+        "header": "INBIFO Institut für biologische Forschung · Köln",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,696 @@
+{
+  "job": {
+    "id": "pjb-630doyzrqe6hyw1p1ysmsutv7col",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:18:09.155797Z",
+    "error_message": null,
+    "name": "funsd_027.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:18:23.091911Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "JAN-24-97 SUN 1 50 PM Healthy Buildings Intl. FAX NO. 703 323 4440 P. 1",
+                "value": "JAN-24-97 SUN 1 50 PM Healthy Buildings Intl. FAX NO. 703 323 4440 P. 1",
+                "bbox": [
+                  {
+                    "h": 20.96,
+                    "w": 151.51,
+                    "x": 798.18,
+                    "y": 220.27,
+                    "confidence": 0.59,
+                    "end_index": 70,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.56,
+                    "w": 289.11,
+                    "x": 238.43,
+                    "y": 101.78,
+                    "confidence": 1.0,
+                    "end_index": 58,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 14
+                  },
+                  {
+                    "h": 27.76,
+                    "w": 194.05,
+                    "x": 575.0,
+                    "y": 100.46,
+                    "confidence": 1.0,
+                    "end_index": 70,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 46
+                  },
+                  {
+                    "h": 22.3,
+                    "w": 416.24,
+                    "x": 110.19,
+                    "y": 104.28,
+                    "confidence": 0.59,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 22.71,
+                    "w": 247.67,
+                    "x": 702.14,
+                    "y": 219.12,
+                    "confidence": 0.59,
+                    "end_index": null,
+                    "label": "text",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "JAN-24-97 SUN 1 50 PM Healthy Buildings Intl. FAX NO. 703 323 4440 P. 1",
+            "bbox": [
+              {
+                "h": 140.78,
+                "w": 711.27,
+                "x": 238.43,
+                "y": 100.46,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 2,
+            "md": "## HEALTHY BUILDINGS INTERNATIONAL, INC. HBI Fax: 703-323-4440",
+            "value": "HEALTHY BUILDINGS INTERNATIONAL, INC. HBI Fax: 703-323-4440",
+            "bbox": [
+              {
+                "h": 23.87,
+                "w": 447.74,
+                "x": 117.28,
+                "y": 215.53,
+                "confidence": 0.83,
+                "end_index": 39,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 21.33,
+                "w": 88.38,
+                "x": 702.61,
+                "y": 219.66,
+                "confidence": 0.66,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 41
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Company**: <u>Philip Morris Co</u> **Fax #**: <u>S.D.</u>\n**Attention**: <u>Mopsy Pottorff</u> **Date**: <u>January 24, 1997</u>\n**From**: <u>Gray Robertson</u>\n**Subject**: <u>Restaurants - Smoking Bills etc</u>\n**Fax pages**: <u>7</u> (total including cover sheet)",
+            "value": "Company: <u>Philip Morris Co</u> Fax #: <u>S.D.</u>\nAttention: <u>Mopsy Pottorff</u> Date: <u>January 24, 1997</u>\nFrom: <u>Gray Robertson</u>\nSubject: <u>Restaurants - Smoking Bills etc</u>\nFax pages: <u>7</u> (total including cover sheet)",
+            "bbox": [
+              {
+                "h": 19.34,
+                "w": 101.39,
+                "x": 118.11,
+                "y": 312.91,
+                "confidence": 0.82,
+                "end_index": 267,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.91,
+                "w": 156.44,
+                "x": 259.94,
+                "y": 312.88,
+                "confidence": 0.81,
+                "end_index": 91,
+                "label": "text",
+                "r": null,
+                "start_index": 78
+              },
+              {
+                "h": 19.08,
+                "w": 57.06,
+                "x": 117.42,
+                "y": 389.78,
+                "confidence": 0.8,
+                "end_index": 138,
+                "label": "text",
+                "r": null,
+                "start_index": 131
+              },
+              {
+                "h": 23.6,
+                "w": 80.31,
+                "x": 117.54,
+                "y": 426.94,
+                "confidence": 0.74,
+                "end_index": 173,
+                "label": "text",
+                "r": null,
+                "start_index": 163
+              },
+              {
+                "h": 24.54,
+                "w": 313.81,
+                "x": 256.17,
+                "y": 427.16,
+                "confidence": 0.84,
+                "end_index": 209,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 179
+              },
+              {
+                "h": 29.08125000000001,
+                "w": 307.61774461028193,
+                "x": 115.9075456053068,
+                "y": 269.221875,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 25.124804687500045,
+                "w": 756.4222230056114,
+                "x": 117.90132398810212,
+                "y": 311.00459960937496,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.08125000000001,
+                "w": 305.85489220563846,
+                "x": 111.05970149253731,
+                "y": 384.22499999999997,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.962500000000034,
+                "w": 458.78233830845767,
+                "x": 110.17827529021558,
+                "y": 421.67812499999997,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 26.381044921875002,
+                "w": 394.73641151076015,
+                "x": 112.28895794766478,
+                "y": 475.5720703125,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 228.91,
+                "w": 457.94,
+                "x": 115.12,
+                "y": 273.13,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.93,
+                "w": 200.48,
+                "x": 681.84,
+                "y": 315.12,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Dear Mopsy,",
+            "value": "Dear Mopsy,",
+            "bbox": [
+              {
+                "h": 23.83,
+                "w": 128.62,
+                "x": 134.36,
+                "y": 562.36,
+                "confidence": 0.86,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Your Tracy Mehause asked me if I could send to her copies of correspondence that I had with the Hawaiian Hotel and Restaurant Associations back in 1994, I duly sent her copies of what I had left in my files.",
+            "value": "Your Tracy Mehause asked me if I could send to her copies of correspondence that I had with the Hawaiian Hotel and Restaurant Associations back in 1994, I duly sent her copies of what I had left in my files.",
+            "bbox": [
+              {
+                "h": 82.44,
+                "w": 771.96,
+                "x": 131.83,
+                "y": 609.81,
+                "confidence": 0.8,
+                "end_index": 206,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tracy asked me if we had ever drafted a Bill concerning smoking/IAQ regulations for restaurants. I knew that we had helped draft Bills for IAQ proposals at the State Level. I also empathize with Tracy, unless you can offer an alternative proposal you usually lose out if you simply criticize proposals drawn-up by others, usually drafted by antis. For that reason I pulled out the latest \"Clean Air Act\" proposal we had worked on and tried to convert it into a Bill suitable for Restaurants. A copy is attached. Please critique it and if you think appropriate, circulate to your legal eagles. If you and they like it, or a modification of it we can pass it to Tracy. Alternatively, don't be shy in telling me to lose it!!!",
+            "value": "Tracy asked me if we had ever drafted a Bill concerning smoking/IAQ regulations for restaurants. I knew that we had helped draft Bills for IAQ proposals at the State Level. I also empathize with Tracy, unless you can offer an alternative proposal you usually lose out if you simply criticize proposals drawn-up by others, usually drafted by antis. For that reason I pulled out the latest \"Clean Air Act\" proposal we had worked on and tried to convert it into a Bill suitable for Restaurants. A copy is attached. Please critique it and if you think appropriate, circulate to your legal eagles. If you and they like it, or a modification of it we can pass it to Tracy. Alternatively, don't be shy in telling me to lose it!!!",
+            "bbox": [
+              {
+                "h": 251.34,
+                "w": 775.26,
+                "x": 126.38,
+                "y": 714.02,
+                "confidence": 0.7,
+                "end_index": 721,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Best wishes,",
+            "value": "Best wishes,",
+            "bbox": [
+              {
+                "h": 22.57,
+                "w": 128.59,
+                "x": 124.72,
+                "y": 1019.61,
+                "confidence": 0.89,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Gray Robertson.",
+            "value": "Gray Robertson.",
+            "bbox": [
+              {
+                "h": 22.44,
+                "w": 158.43,
+                "x": 259.41,
+                "y": 389.29,
+                "confidence": 0.95,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**HBI-USA**\nCorporate Headquarters\n9401 Mathy Drive\nFairfax, VA 22031\nUSA\n(703) 323-4400\nFax (703) 323-4440",
+                "value": "HBI-USA\nCorporate Headquarters\n9401 Mathy Drive\nFairfax, VA 22031\nUSA\n(703) 323-4400\nFax (703) 323-4440",
+                "bbox": [
+                  {
+                    "h": 97.78,
+                    "w": 140.8,
+                    "x": 120.14,
+                    "y": 1198.9,
+                    "confidence": 0.85,
+                    "end_index": 106,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 15.07,
+                    "w": 29.93,
+                    "x": 119.15,
+                    "y": 1249.42,
+                    "confidence": 0.85,
+                    "end_index": 10,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 42.71,
+                    "w": 108.51,
+                    "x": 119.15,
+                    "y": 1221.78,
+                    "confidence": 1.0,
+                    "end_index": 72,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 12
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 96.03,
+                    "x": 119.15,
+                    "y": 1265.75,
+                    "confidence": 0.85,
+                    "end_index": 87,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 74
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 120.35,
+                    "x": 119.15,
+                    "y": 1282.08,
+                    "confidence": 1.0,
+                    "end_index": 104,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 89
+                  },
+                  {
+                    "h": 20.51,
+                    "w": 185.83,
+                    "x": 580.65,
+                    "y": 104.9,
+                    "confidence": 0.85,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**HBI-USA**\nWestern Region\n25 Mauchly, Suite 314\nIrvine, CA 92618\nUSA\n(714) 450-1111\nFax (714) 450-1120",
+                "value": "HBI-USA\nWestern Region\n25 Mauchly, Suite 314\nIrvine, CA 92618\nUSA\n(714) 450-1111\nFax (714) 450-1120",
+                "bbox": [
+                  {
+                    "h": 95.47,
+                    "w": 135.94,
+                    "x": 292.51,
+                    "y": 1202.94,
+                    "confidence": 0.82,
+                    "end_index": 102,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 15.07,
+                    "w": 31.8,
+                    "x": 295.0,
+                    "y": 1250.67,
+                    "confidence": 0.82,
+                    "end_index": 10,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 62.81,
+                    "w": 134.7,
+                    "x": 293.76,
+                    "y": 1202.94,
+                    "confidence": 1.0,
+                    "end_index": 68,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 12
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 95.41,
+                    "x": 295.0,
+                    "y": 1267.0,
+                    "confidence": 0.82,
+                    "end_index": 83,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 70
+                  },
+                  {
+                    "h": 18.84,
+                    "w": 122.85,
+                    "x": 292.51,
+                    "y": 1279.57,
+                    "confidence": 1.0,
+                    "end_index": 102,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 85
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**HBI-Australia**\nTownhouse 18\nGreenwich Square\n130-134 Pacific Hwy\nSt Leonards NSW 2065\n(02) 9901-3933\nFax (02) 9901-3939",
+                "value": "HBI-Australia\nTownhouse 18\nGreenwich Square\n130-134 Pacific Hwy\nSt Leonards NSW 2065\n(02) 9901-3933\nFax (02) 9901-3939",
+                "bbox": [
+                  {
+                    "h": 94.22,
+                    "w": 130.96,
+                    "x": 457.14,
+                    "y": 1204.19,
+                    "confidence": 0.8,
+                    "end_index": 121,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 16.33,
+                    "w": 86.68,
+                    "x": 458.38,
+                    "y": 1204.19,
+                    "confidence": 0.8,
+                    "end_index": 29,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 18
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 105.39,
+                    "x": 458.38,
+                    "y": 1221.78,
+                    "confidence": 0.8,
+                    "end_index": 46,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 31
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 120.98,
+                    "x": 459.63,
+                    "y": 1236.85,
+                    "confidence": 0.8,
+                    "end_index": 66,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 48
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 130.96,
+                    "x": 457.14,
+                    "y": 1251.93,
+                    "confidence": 0.8,
+                    "end_index": 87,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 68
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 94.16,
+                    "x": 458.38,
+                    "y": 1268.26,
+                    "confidence": 0.8,
+                    "end_index": 102,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 89
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 116.61,
+                    "x": 457.14,
+                    "y": 1284.59,
+                    "confidence": 1.0,
+                    "end_index": 121,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 104
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**HBI-Iberica**\nAñastro, 9 6C\n28033 Madrid\nSpain\n(1) 302-12-79\nFax (1) 302-17-07",
+                "value": "HBI-Iberica\nAñastro, 9 6C\n28033 Madrid\nSpain\n(1) 302-12-79\nFax (1) 302-17-07",
+                "bbox": [
+                  {
+                    "h": 90.09,
+                    "w": 108.19,
+                    "x": 623.32,
+                    "y": 1193.78,
+                    "confidence": 0.68,
+                    "end_index": 79,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**HBI-UK**\n229 Ryde End Road\nSpencers Wood\nBerkshire RG7 1BU\nUnited Kingdom\n(0118) 988-9999\nFax (0118) 988-5599",
+                "value": "HBI-UK\n229 Ryde End Road\nSpencers Wood\nBerkshire RG7 1BU\nUnited Kingdom\n(0118) 988-9999\nFax (0118) 988-5599",
+                "bbox": [
+                  {
+                    "h": 101.03,
+                    "w": 129.18,
+                    "x": 753.79,
+                    "y": 1198.73,
+                    "confidence": 0.69,
+                    "end_index": 110,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 47.74,
+                    "w": 120.35,
+                    "x": 748.98,
+                    "y": 1202.94,
+                    "confidence": 1.0,
+                    "end_index": 59,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 11
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 105.39,
+                    "x": 748.98,
+                    "y": 1269.52,
+                    "confidence": 0.69,
+                    "end_index": 90,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 76
+                  },
+                  {
+                    "h": 13.82,
+                    "w": 127.84,
+                    "x": 748.98,
+                    "y": 1285.85,
+                    "confidence": 1.0,
+                    "end_index": 110,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 99
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "**HBI-USA**\nCorporate Headquarters\n9401 Mathy Drive\nFairfax, VA 22031\nUSA\n(703) 323-4400\nFax (703) 323-4440\n\n**HBI-USA**\nWestern Region\n25 Mauchly, Suite 314\nIrvine, CA 92618\nUSA\n(714) 450-1111\nFax (714) 450-1120\n\n**HBI-Australia**\nTownhouse 18\nGreenwich Square\n130-134 Pacific Hwy\nSt Leonards NSW 2065\n(02) 9901-3933\nFax (02) 9901-3939\n\n**HBI-Iberica**\nAñastro, 9 6C\n28033 Madrid\nSpain\n(1) 302-12-79\nFax (1) 302-17-07\n\n**HBI-UK**\n229 Ryde End Road\nSpencers Wood\nBerkshire RG7 1BU\nUnited Kingdom\n(0118) 988-9999\nFax (0118) 988-5599",
+            "bbox": [
+              {
+                "h": 105.98,
+                "w": 763.82,
+                "x": 119.15,
+                "y": 1193.78,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## HEALTHY BUILDINGS INTERNATIONAL, INC. HBI Fax: 703-323-4440\n\n**Company**: <u>Philip Morris Co</u> **Fax #**: <u>S.D.</u>\n**Attention**: <u>Mopsy Pottorff</u> **Date**: <u>January 24, 1997</u>\n**From**: <u>Gray Robertson</u>\n**Subject**: <u>Restaurants - Smoking Bills etc</u>\n**Fax pages**: <u>7</u> (total including cover sheet)\n\nDear Mopsy,\n\nYour Tracy Mehause asked me if I could send to her copies of correspondence that I had with the Hawaiian Hotel and Restaurant Associations back in 1994, I duly sent her copies of what I had left in my files.\n\nTracy asked me if we had ever drafted a Bill concerning smoking/IAQ regulations for restaurants. I knew that we had helped draft Bills for IAQ proposals at the State Level. I also empathize with Tracy, unless you can offer an alternative proposal you usually lose out if you simply criticize proposals drawn-up by others, usually drafted by antis. For that reason I pulled out the latest \"Clean Air Act\" proposal we had worked on and tried to convert it into a Bill suitable for Restaurants. A copy is attached. Please critique it and if you think appropriate, circulate to your legal eagles. If you and they like it, or a modification of it we can pass it to Tracy. Alternatively, don't be shy in telling me to lose it!!!\n\nBest wishes,\n\nGray Robertson.",
+        "page_number": 1,
+        "success": true,
+        "footer": "**HBI-USA**\nCorporate Headquarters\n9401 Mathy Drive\nFairfax, VA 22031\nUSA\n(703) 323-4400\nFax (703) 323-4440\n\n**HBI-USA**\nWestern Region\n25 Mauchly, Suite 314\nIrvine, CA 92618\nUSA\n(714) 450-1111\nFax (714) 450-1120\n\n**HBI-Australia**\nTownhouse 18\nGreenwich Square\n130-134 Pacific Hwy\nSt Leonards NSW 2065\n(02) 9901-3933\nFax (02) 9901-3939\n\n**HBI-Iberica**\nAñastro, 9 6C\n28033 Madrid\nSpain\n(1) 302-12-79\nFax (1) 302-17-07\n\n**HBI-UK**\n229 Ryde End Road\nSpencers Wood\nBerkshire RG7 1BU\nUnited Kingdom\n(0118) 988-9999\nFax (0118) 988-5599",
+        "header": "JAN-24-97 SUN 1 50 PM Healthy Buildings Intl. FAX NO. 703 323 4440 P. 1",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,429 @@
+{
+  "job": {
+    "id": "pjb-y9ye4q6jmizb98hhq5146lc752vo",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:16:15.404462Z",
+    "error_message": null,
+    "name": "funsd_022.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:16:32.046333Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## NOTICE OF",
+            "value": "NOTICE OF",
+            "bbox": [
+              {
+                "h": 23.12,
+                "w": 138.07,
+                "x": 554.69,
+                "y": 102.26,
+                "confidence": 0.94,
+                "end_index": 11,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "[ ] **DISPOSAL SUSPENSION.** The disposal of the records described below is hereby suspended until further notice.",
+            "value": "[ ] DISPOSAL SUSPENSION. The disposal of the records described below is hereby suspended until further notice.",
+            "bbox": [
+              {
+                "h": 60.34,
+                "w": 781.35,
+                "x": 239.87,
+                "y": 165.39,
+                "confidence": 0.95,
+                "end_index": 113,
+                "label": "checkbox-unselected",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "[x] **DISPOSAL SUSPENSION RELEASE.** The disposal suspension of the records described below is hereby released.",
+            "value": "[x] DISPOSAL SUSPENSION RELEASE. The disposal suspension of the records described below is hereby released.",
+            "bbox": [
+              {
+                "h": 59.29,
+                "w": 805.13,
+                "x": 195.42,
+                "y": 228.68,
+                "confidence": 0.86,
+                "end_index": 110,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TO: 1. ALL LOCATIONS**      **DATE:** 10/28/91\n(records management group)",
+            "value": "TO: 1. ALL LOCATIONS      DATE: 10/28/91\n(records management group)",
+            "bbox": [
+              {
+                "h": 145.19,
+                "w": 766.3,
+                "x": 197.89,
+                "y": 582.33,
+                "confidence": 0.84,
+                "end_index": 74,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 33.94,
+                "w": 398.31,
+                "x": 197.89,
+                "y": 798.59,
+                "confidence": 0.84,
+                "end_index": 74,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 210.14,
+                "w": 698.08,
+                "x": 196.56,
+                "y": 881.61,
+                "confidence": 0.84,
+                "end_index": 74,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 348.16,
+                "w": 831.43,
+                "x": 196.94,
+                "y": 165.39,
+                "confidence": 0.84,
+                "end_index": 73,
+                "label": "form",
+                "r": null,
+                "start_index": 2
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**2. Records Coordinator:**\\\n(name)",
+            "value": "2. Records Coordinator: (name)",
+            "bbox": [
+              {
+                "h": 103.24,
+                "w": 442.21,
+                "x": 257.04,
+                "y": 383.57,
+                "confidence": 0.95,
+                "end_index": 34,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.0,
+                "w": 342.97,
+                "x": 257.04,
+                "y": 383.57,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 76.41,
+                "w": 63.23,
+                "x": 636.02,
+                "y": 410.4,
+                "confidence": 0.95,
+                "end_index": 34,
+                "label": "form",
+                "r": null,
+                "start_index": 29
+              },
+              {
+                "h": 28.02,
+                "w": 63.23,
+                "x": 861.13,
+                "y": 625.63,
+                "confidence": 0.95,
+                "end_index": 34,
+                "label": "form",
+                "r": null,
+                "start_index": 29
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**3. Department Head:**\\\n(name)",
+            "value": "3. Department Head: (name)",
+            "bbox": [
+              {
+                "h": 30.06,
+                "w": 251.39,
+                "x": 257.04,
+                "y": 434.96,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.02,
+                "w": 63.23,
+                "x": 636.02,
+                "y": 458.79,
+                "confidence": 0.95,
+                "end_index": 30,
+                "label": "form",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 101.88,
+                "w": 63.23,
+                "x": 861.13,
+                "y": 625.63,
+                "confidence": 0.95,
+                "end_index": 30,
+                "label": "form",
+                "r": null,
+                "start_index": 25
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**4. Others:**",
+            "value": "4. Others:",
+            "bbox": [
+              {
+                "h": 20.45,
+                "w": 138.46,
+                "x": 263.84,
+                "y": 489.86,
+                "confidence": 0.95,
+                "end_index": 13,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**INITIATED BY: Philip Morris Corporate Tax Department:**\\\n(name)",
+            "value": "INITIATED BY: Philip Morris Corporate Tax Department: (name)",
+            "bbox": [
+              {
+                "h": 24.24,
+                "w": 153.6,
+                "x": 197.89,
+                "y": 585.26,
+                "confidence": 1.0,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.74,
+                "w": 131.52,
+                "x": 390.68,
+                "y": 582.33,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 16
+              },
+              {
+                "h": 29.29,
+                "w": 259.88,
+                "x": 391.95,
+                "y": 605.25,
+                "confidence": 1.0,
+                "end_index": 57,
+                "label": "text",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 47.18,
+                "w": 255.32,
+                "x": 396.37,
+                "y": 587.83,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Philip Morris U.S.A. Legal Department Representative:** CLARE PURCELL\n(name)",
+            "value": "Philip Morris U.S.A. Legal Department Representative: CLARE PURCELL\n(name)",
+            "bbox": [
+              {
+                "h": 48.34,
+                "w": 571.79,
+                "x": 396.03,
+                "y": 658.74,
+                "confidence": 0.77,
+                "end_index": 77,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.18,
+                "w": 242.8,
+                "x": 390.61,
+                "y": 654.11,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.02,
+                "w": 63.23,
+                "x": 861.13,
+                "y": 699.49,
+                "confidence": 0.77,
+                "end_index": 77,
+                "label": "form",
+                "r": null,
+                "start_index": 72
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## GENERAL DESCRIPTION OF RECORDS",
+            "value": "GENERAL DESCRIPTION OF RECORDS",
+            "bbox": [
+              {
+                "h": 27.74,
+                "w": 401.61,
+                "x": 200.15,
+                "y": 805.24,
+                "confidence": 0.84,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "ALL RECORDS SUSPENDED REGARDING LAMB v. PM (1982) KENTUCKY TOBACCO GROWERS CASE ARE RELEASED DUE TO RESOLUTION OF LITIGATION.",
+            "value": "ALL RECORDS SUSPENDED REGARDING LAMB v. PM (1982) KENTUCKY TOBACCO GROWERS CASE ARE RELEASED DUE TO RESOLUTION OF LITIGATION.",
+            "bbox": [
+              {
+                "h": 201.28,
+                "w": 699.5,
+                "x": 199.99,
+                "y": 888.45,
+                "confidence": 0.93,
+                "end_index": 124,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2054520273",
+                "value": "2054520273",
+                "bbox": [
+                  {
+                    "h": 192.51,
+                    "w": 27.88,
+                    "x": 1011.09,
+                    "y": 1122.76,
+                    "confidence": 0.86,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2054520273",
+            "bbox": [
+              {
+                "h": 192.51,
+                "w": 27.88,
+                "x": 1011.09,
+                "y": 1122.76,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1381.0,
+        "page_number": 1,
+        "page_width": 1085.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## NOTICE OF\n\n[ ] **DISPOSAL SUSPENSION.** The disposal of the records described below is hereby suspended until further notice.\n\n[x] **DISPOSAL SUSPENSION RELEASE.** The disposal suspension of the records described below is hereby released.\n\n**TO: 1. ALL LOCATIONS**      **DATE:** 10/28/91\n(records management group)\n\n**2. Records Coordinator:**     \n(name)\n\n**3. Department Head:**     \n(name)\n\n**4. Others:**     \n    \n    \n\n**INITIATED BY: Philip Morris Corporate Tax Department:**     \n(name)\n\n**Philip Morris U.S.A. Legal Department Representative:** CLARE PURCELL\n(name)\n\n## GENERAL DESCRIPTION OF RECORDS\n\nALL RECORDS SUSPENDED REGARDING LAMB v. PM (1982) KENTUCKY TOBACCO GROWERS CASE ARE RELEASED DUE TO RESOLUTION OF LITIGATION.",
+        "page_number": 1,
+        "success": true,
+        "footer": "2054520273",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

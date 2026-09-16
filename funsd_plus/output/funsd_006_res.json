@@ -1,0 +1,1487 @@
+{
+  "job": {
+    "id": "pjb-k3ysm4fac7xhv7tahdwhv45xpjzb",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:05:20.112599Z",
+    "error_message": null,
+    "name": "funsd_006.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:05:40.460113Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## <u>SUMMER SALES SPECTACULAR</u>",
+            "value": "<u>SUMMER SALES SPECTACULAR</u>",
+            "bbox": [
+              {
+                "h": 30.76,
+                "w": 475.92,
+                "x": 307.63,
+                "y": 152.93,
+                "confidence": 0.88,
+                "end_index": 33,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Retailer Understanding of Program Elements**",
+            "value": "Retailer Understanding of Program Elements",
+            "bbox": [
+              {
+                "h": 21.83,
+                "w": 409.84,
+                "x": 339.81,
+                "y": 185.32,
+                "confidence": 0.84,
+                "end_index": 45,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "In order to receive the Philip Morris allowance, I understand that participants for **Phase I** will need to reduce the price of **Marlboro and Basic** by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from **June 26 thru July 9, 1995.**",
+            "value": "In order to receive the Philip Morris allowance, I understand that participants for Phase I will need to reduce the price of Marlboro and Basic by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from June 26 thru July 9, 1995.",
+            "bbox": [
+              {
+                "h": 85.59,
+                "w": 855.18,
+                "x": 118.47,
+                "y": 221.03,
+                "confidence": 0.99,
+                "end_index": 379,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.09,
+                "w": 111.14,
+                "x": 120.25,
+                "y": 437.37,
+                "confidence": 1.0,
+                "end_index": 255,
+                "label": "text",
+                "r": null,
+                "start_index": 241
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Additionally, the following point-of-sale items (**Minimum of 4 pieces POS - 3 Marlboro and 1 Basic**) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.",
+            "value": "Additionally, the following point-of-sale items (Minimum of 4 pieces POS - 3 Marlboro and 1 Basic) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.",
+            "bbox": [
+              {
+                "h": 47.43,
+                "w": 854.59,
+                "x": 119.23,
+                "y": 308.22,
+                "confidence": 0.97,
+                "end_index": 206,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #1**",
+                "value": "POS Item #1",
+                "bbox": [
+                  {
+                    "h": 18.64,
+                    "w": 99.31,
+                    "x": 119.47,
+                    "y": 368.85,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 18.64,
+                    "w": 101.79,
+                    "x": 121.95,
+                    "y": 692.01,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #1**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 341.81,
+                "w": 104.27,
+                "x": 119.47,
+                "y": 368.85,
+                "confidence": 0.92,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location**",
+            "value": "Location",
+            "bbox": [
+              {
+                "h": 15.9,
+                "w": 66.92,
+                "x": 353.37,
+                "y": 368.55,
+                "confidence": 0.91,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #2**",
+                "value": "POS Item #2",
+                "bbox": [
+                  {
+                    "h": 21.09,
+                    "w": 102.99,
+                    "x": 533.96,
+                    "y": 362.38,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.92,
+                    "w": 102.99,
+                    "x": 504.87,
+                    "y": 686.96,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #2**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 344.51,
+                "w": 132.09,
+                "x": 504.87,
+                "y": 362.38,
+                "confidence": 0.92,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location** <u>    </u>",
+            "value": "Location <u>    </u>",
+            "bbox": [
+              {
+                "h": 16.71,
+                "w": 67.36,
+                "x": 725.45,
+                "y": 686.68,
+                "confidence": 0.9,
+                "end_index": 23,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #3**",
+                "value": "POS Item #3",
+                "bbox": [
+                  {
+                    "h": 16.27,
+                    "w": 98.13,
+                    "x": 121.48,
+                    "y": 402.68,
+                    "confidence": 0.96,
+                    "end_index": 14,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #3**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 16.27,
+                "w": 98.13,
+                "x": 121.48,
+                "y": 402.68,
+                "confidence": 0.96,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location**",
+            "value": "Location",
+            "bbox": [
+              {
+                "h": 16.16,
+                "w": 65.94,
+                "x": 354.34,
+                "y": 400.47,
+                "confidence": 0.92,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #4**",
+                "value": "POS Item #4",
+                "bbox": [
+                  {
+                    "h": 21.09,
+                    "w": 101.83,
+                    "x": 535.13,
+                    "y": 394.02,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #4**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 21.09,
+                "w": 101.83,
+                "x": 535.13,
+                "y": 394.02,
+                "confidence": 0.92,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location** <u>    </u>",
+            "value": "Location <u>    </u>",
+            "bbox": [
+              {
+                "h": 16.33,
+                "w": 66.3,
+                "x": 332.45,
+                "y": 691.99,
+                "confidence": 0.87,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Price in Effect<br/>Reduced Price:\",\"Marlboro<br/>Pack: $<br/>Pack: $\",\"Marlboro<br/>Ctn: $<br/>Ctn: $\",\"Basic<br/>Pack: $<br/>Pack: $\",\"Basic<br/>Ctn: $<br/>Ctn: $\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th colspan=\"2\">Marlboro</th>\n        <th colspan=\"2\">Basic</th>\n    </tr>\n    <tr>\n        <th><u>Price in Effect</u></th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n    </tr>\n    <tr>\n        <th><u>Reduced Price:</u></th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n    </tr>\n  </thead>\n</table>",
+            "md": "| Price in Effect<br/>Reduced Price: | Marlboro<br/>Pack: $<br/>Pack: $ | Marlboro<br/>Ctn: $<br/>Ctn: $ | Basic<br/>Pack: $<br/>Pack: $ | Basic<br/>Ctn: $<br/>Ctn: $ |\n| ---------------------------------- | -------------------------------- | ------------------------------ | ----------------------------- | --------------------------- |",
+            "rows": [
+              [
+                "Price in Effect<br/>Reduced Price:",
+                "Marlboro<br/>Pack: $<br/>Pack: $",
+                "Marlboro<br/>Ctn: $<br/>Ctn: $",
+                "Basic<br/>Pack: $<br/>Pack: $",
+                "Basic<br/>Ctn: $<br/>Ctn: $"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 110.17,
+                "w": 491.41,
+                "x": 120.63,
+                "y": 439.35,
+                "confidence": 1.0,
+                "end_index": 336,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.17,
+                "w": 85.63,
+                "x": 231.15,
+                "y": 457.23,
+                "confidence": 1.0,
+                "end_index": 46,
+                "label": "text",
+                "r": null,
+                "start_index": 39
+              },
+              {
+                "h": 15.62,
+                "w": 42.94,
+                "x": 121.58,
+                "y": 478.04,
+                "confidence": 1.0,
+                "end_index": 58,
+                "label": "text",
+                "r": null,
+                "start_index": 52
+              },
+              {
+                "h": 16.08,
+                "w": 42.54,
+                "x": 122.35,
+                "y": 533.44,
+                "confidence": 1.0,
+                "end_index": 70,
+                "label": "text",
+                "r": null,
+                "start_index": 64
+              },
+              {
+                "h": 16.52,
+                "w": 32.97,
+                "x": 280.92,
+                "y": 531.22,
+                "confidence": 1.0,
+                "end_index": 92,
+                "label": "text",
+                "r": null,
+                "start_index": 87
+              },
+              {
+                "h": 16.35,
+                "w": 33.71,
+                "x": 571.66,
+                "y": 471.44,
+                "confidence": 1.0,
+                "end_index": 103,
+                "label": "text",
+                "r": null,
+                "start_index": 98
+              },
+              {
+                "h": 16.76,
+                "w": 52.24,
+                "x": 540.07,
+                "y": 452.69,
+                "confidence": 1.0,
+                "end_index": 111,
+                "label": "text",
+                "r": null,
+                "start_index": 107
+              },
+              {
+                "h": 16.09,
+                "w": 42.35,
+                "x": 415.62,
+                "y": 529.15,
+                "confidence": 1.0,
+                "end_index": 123,
+                "label": "text",
+                "r": null,
+                "start_index": 117
+              },
+              {
+                "h": 16.44,
+                "w": 38.95,
+                "x": 573.09,
+                "y": 527.17,
+                "confidence": 1.0,
+                "end_index": 154,
+                "label": "text",
+                "r": null,
+                "start_index": 149
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "For **Phase II**, participants will need to reduce the price of **Benson & Hedges, Merit, Parliament, and Virginia Slims** by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from <u>    </u> / <u>    </u> / 95 thru <u>    </u> / <u>    </u> / 95.",
+            "value": "For Phase II, participants will need to reduce the price of Benson & Hedges, Merit, Parliament, and Virginia Slims by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from <u>    </u> / <u>    </u> / 95 thru <u>    </u> / <u>    </u> / 95.",
+            "bbox": [
+              {
+                "h": 64.75,
+                "w": 855.83,
+                "x": 120.97,
+                "y": 560.51,
+                "confidence": 0.98,
+                "end_index": 387,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.09,
+                "w": 116.38,
+                "x": 120.25,
+                "y": 511.2,
+                "confidence": 1.0,
+                "end_index": 289,
+                "label": "text",
+                "r": null,
+                "start_index": 277
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Additionally, the following point-of-sale items (**Minimum of 3 PM Premium Brand POS pieces**) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.",
+            "value": "Additionally, the following point-of-sale items (Minimum of 3 PM Premium Brand POS pieces) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.",
+            "bbox": [
+              {
+                "h": 47.41,
+                "w": 856.19,
+                "x": 121.48,
+                "y": 636.0,
+                "confidence": 0.96,
+                "end_index": 198,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #1**",
+                "value": "POS Item #1",
+                "bbox": null,
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #1**",
+            "ordered": false,
+            "bbox": null,
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location** <u>    </u>",
+            "value": "Location <u>    </u>",
+            "bbox": [
+              {
+                "h": 93.76,
+                "w": 775.06,
+                "x": 119.08,
+                "y": 326.05,
+                "confidence": 0.48,
+                "end_index": 23,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 87.88,
+                "w": 743.06,
+                "x": 120.25,
+                "y": 654.15,
+                "confidence": 0.48,
+                "end_index": 23,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #2**",
+                "value": "POS Item #2",
+                "bbox": null,
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #2**",
+            "ordered": false,
+            "bbox": null,
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location** <u>    </u>",
+            "value": "Location <u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**POS Item #3**",
+                "value": "POS Item #3",
+                "bbox": [
+                  {
+                    "h": 21.09,
+                    "w": 101.83,
+                    "x": 119.08,
+                    "y": 399.88,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.09,
+                    "w": 101.83,
+                    "x": 121.41,
+                    "y": 723.29,
+                    "confidence": 0.92,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **POS Item #3**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 344.51,
+                "w": 104.16,
+                "x": 119.08,
+                "y": 399.88,
+                "confidence": 0.92,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Location** <u>    </u>",
+            "value": "Location <u>    </u>",
+            "bbox": [
+              {
+                "h": 16.33,
+                "w": 66.58,
+                "x": 332.74,
+                "y": 723.51,
+                "confidence": 0.91,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Price in Effect<br/>Reduced Price\",\"Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Pack: $<br/>Pack: $\",\"Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Ctn: $<br/>Ctn: $\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th colspan=\"3\">Merit, Virginia Slims, Benson &#x26; Hedges, and Parliament</th>\n    </tr>\n    <tr>\n        <th>Price in Effect</th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n    </tr>\n    <tr>\n        <th>Reduced Price</th>\n        <th>Pack: $ <u>    </u></th>\n        <th>Ctn: $ <u>    </u></th>\n    </tr>\n  </thead>\n</table>",
+            "md": "| Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Price in Effect<br/>Reduced Price | Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Pack: $<br/>Pack: $ | Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Ctn: $<br/>Ctn: $ |\n| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |",
+            "rows": [
+              [
+                "Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Price in Effect<br/>Reduced Price",
+                "Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Pack: $<br/>Pack: $",
+                "Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Ctn: $<br/>Ctn: $"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 40.63,
+                "w": 544.33,
+                "x": 268.43,
+                "y": 755.85,
+                "confidence": 1.0,
+                "end_index": 512,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.28,
+                "w": 523.7,
+                "x": 289.06,
+                "y": 755.85,
+                "confidence": 1.0,
+                "end_index": 55,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 17.22,
+                "w": 109.79,
+                "x": 268.43,
+                "y": 779.26,
+                "confidence": 1.0,
+                "end_index": 82,
+                "label": "text",
+                "r": null,
+                "start_index": 61
+              },
+              {
+                "h": 16.75,
+                "w": 33.72,
+                "x": 638.37,
+                "y": 775.6,
+                "confidence": 1.0,
+                "end_index": 242,
+                "label": "text",
+                "r": null,
+                "start_index": 237
+              },
+              {
+                "h": 16.79,
+                "w": 110.83,
+                "x": 269.04,
+                "y": 801.23,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.25,
+                "w": 172.6,
+                "x": 268.96,
+                "y": 800.82,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**<u>Potential Promotion Allowance Payment</u>**",
+            "value": "<u>Potential Promotion Allowance Payment</u>",
+            "bbox": [
+              {
+                "h": 20.87,
+                "w": 368.98,
+                "x": 124.01,
+                "y": 838.8,
+                "confidence": 0.84,
+                "end_index": 47,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Payments will be made at the completion of each phase of this promotion.",
+            "value": "Payments will be made at the completion of each phase of this promotion.",
+            "bbox": [
+              {
+                "h": 24.63,
+                "w": 559.36,
+                "x": 124.03,
+                "y": 855.03,
+                "confidence": 0.94,
+                "end_index": 71,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": ",,\"# Ctns\"\n\"Potential Phase I Promotion Allowance is\",\"$**\",\"**\"\n\"Potential Phase II Promotion Allowance is\",\"$**\",\"**\"\n\"Flex Fund Allowance to extend Marlboro 1 week\",\"$**\",\"**\"\n\"Total Potential Promotion Allowance is\",\"$**\",",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th> </th>\n        <th><u># Ctns</u></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Potential Phase I Promotion Allowance is</td>\n        <td>$ <u>    </u></td>\n        <td><u>    </u></td>\n    </tr>\n    <tr>\n        <td>Potential Phase II Promotion Allowance is</td>\n        <td>$ <u>    </u></td>\n        <td><u>    </u></td>\n    </tr>\n    <tr>\n        <td>Flex Fund Allowance to extend Marlboro 1 week</td>\n        <td>$ <u>    </u></td>\n        <td><u>    </u></td>\n    </tr>\n    <tr>\n        <td><strong>Total Potential Promotion Allowance is</strong></td>\n        <td><strong>$</strong> <u>    </u></td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "|                                               |         | # Ctns |\n| --------------------------------------------- | ------- | ------ |\n| Potential Phase I Promotion Allowance is      | $**     | **     |\n| Potential Phase II Promotion Allowance is     | $**     | **     |\n| Flex Fund Allowance to extend Marlboro 1 week | $**     | **     |\n| **Total Potential Promotion Allowance is**    | **$**** |        |",
+            "rows": [
+              [
+                "",
+                "",
+                "# Ctns"
+              ],
+              [
+                "Potential Phase I Promotion Allowance is",
+                "$**",
+                "**"
+              ],
+              [
+                "Potential Phase II Promotion Allowance is",
+                "$**",
+                "**"
+              ],
+              [
+                "Flex Fund Allowance to extend Marlboro 1 week",
+                "$**",
+                "**"
+              ],
+              [
+                "Total Potential Promotion Allowance is",
+                "$**",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 114.0,
+                "w": 600.51,
+                "x": 124.75,
+                "y": 873.0,
+                "confidence": 1.0,
+                "end_index": 412,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.95,
+                "w": 52.71,
+                "x": 672.55,
+                "y": 873.0,
+                "confidence": 1.0,
+                "end_index": 65,
+                "label": "text",
+                "r": null,
+                "start_index": 62
+              },
+              {
+                "h": 19.5,
+                "w": 317.18,
+                "x": 125.27,
+                "y": 895.53,
+                "confidence": 1.0,
+                "end_index": 179,
+                "label": "text",
+                "r": null,
+                "start_index": 140
+              },
+              {
+                "h": 19.67,
+                "w": 322.51,
+                "x": 125.23,
+                "y": 913.51,
+                "confidence": 1.0,
+                "end_index": 249,
+                "label": "text",
+                "r": null,
+                "start_index": 225
+              },
+              {
+                "h": 18.38,
+                "w": 375.39,
+                "x": 124.75,
+                "y": 933.65,
+                "confidence": 1.0,
+                "end_index": 322,
+                "label": "text",
+                "r": null,
+                "start_index": 278
+              },
+              {
+                "h": 18.34,
+                "w": 300.13,
+                "x": 124.96,
+                "y": 968.66,
+                "confidence": 1.0,
+                "end_index": 388,
+                "label": "text",
+                "r": null,
+                "start_index": 347
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Philip Morris reserves the right to audit compliance of any of these program requirements at any time, to audit sales and/or shipment receipts upon request, and to withhold payment for any non-compliance.",
+            "value": "Philip Morris reserves the right to audit compliance of any of these program requirements at any time, to audit sales and/or shipment receipts upon request, and to withhold payment for any non-compliance.",
+            "bbox": [
+              {
+                "h": 45.05,
+                "w": 856.12,
+                "x": 124.78,
+                "y": 998.24,
+                "confidence": 0.96,
+                "end_index": 203,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Store Name:**",
+                "value": "Store Name:",
+                "bbox": [
+                  {
+                    "h": 22.37,
+                    "w": 112.96,
+                    "x": 152.37,
+                    "y": 1049.98,
+                    "confidence": 0.48,
+                    "end_index": 14,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Store Name:**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 22.37,
+                "w": 112.96,
+                "x": 152.37,
+                "y": 1049.98,
+                "confidence": 0.48,
+                "end_index": 16,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "American Drug",
+            "value": "American Drug",
+            "bbox": [
+              {
+                "h": 33.2,
+                "w": 212.76,
+                "x": 300.31,
+                "y": 1040.78,
+                "confidence": 0.81,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Call# 15068 17530",
+            "value": "Call# 15068 17530",
+            "bbox": [
+              {
+                "h": 18.34,
+                "w": 72.39,
+                "x": 713.98,
+                "y": 1034.53,
+                "confidence": 0.73,
+                "end_index": 16,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Control# <u>    </u>",
+            "value": "Control# <u>    </u>",
+            "bbox": [
+              {
+                "h": 16.0,
+                "w": 75.0,
+                "x": 810.0,
+                "y": 1047.0,
+                "confidence": 0.65,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 10
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Store Address:**",
+                "value": "Store Address:",
+                "bbox": null,
+                "type": "text"
+              }
+            ],
+            "md": "* **Store Address:**",
+            "ordered": false,
+            "bbox": null,
+            "type": "list"
+          },
+          {
+            "md": "1818 Swift Drive, Oakbrook, Illinois 60521",
+            "value": "1818 Swift Drive, Oakbrook, Illinois 60521",
+            "bbox": [
+              {
+                "h": 28.06,
+                "w": 499.6,
+                "x": 279.39,
+                "y": 1070.64,
+                "confidence": 0.68,
+                "end_index": 41,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Philip Morris Representative (please print)**",
+                "value": "Philip Morris Representative (please print)",
+                "bbox": [
+                  {
+                    "h": 18.77,
+                    "w": 188.55,
+                    "x": 776.78,
+                    "y": 1307.09,
+                    "confidence": 0.68,
+                    "end_index": 46,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Philip Morris Representative (please print)**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 18.77,
+                "w": 188.55,
+                "x": 776.78,
+                "y": 1307.09,
+                "confidence": 0.68,
+                "end_index": 48,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "Barbara Lynch",
+            "value": "Barbara Lynch",
+            "bbox": [
+              {
+                "h": 22.45,
+                "w": 324.52,
+                "x": 154.63,
+                "y": 1108.62,
+                "confidence": 0.9,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Territory #**",
+            "value": "Territory #",
+            "bbox": [
+              {
+                "h": 19.39,
+                "w": 89.86,
+                "x": 761.37,
+                "y": 1105.02,
+                "confidence": 0.93,
+                "end_index": 14,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "20",
+            "value": "20",
+            "bbox": [
+              {
+                "h": 118.7,
+                "w": 18.62,
+                "x": 976.53,
+                "y": 1091.15,
+                "confidence": 0.84,
+                "end_index": 1,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Philip Morris Representative Signature**",
+                "value": "Philip Morris Representative Signature",
+                "bbox": [
+                  {
+                    "h": 23.62,
+                    "w": 301.03,
+                    "x": 152.37,
+                    "y": 1134.5,
+                    "confidence": 1.0,
+                    "end_index": 41,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 22.45,
+                    "w": 324.52,
+                    "x": 154.63,
+                    "y": 1108.62,
+                    "confidence": 1.0,
+                    "end_index": null,
+                    "label": "text",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Philip Morris Representative Signature**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 23.62,
+                "w": 301.03,
+                "x": 152.37,
+                "y": 1134.5,
+                "confidence": 1.0,
+                "end_index": 43,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "[signature]",
+            "value": "[signature]",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Date** <u>    </u>",
+            "value": "Date <u>    </u>",
+            "bbox": [
+              {
+                "h": 15.82,
+                "w": 35.75,
+                "x": 762.29,
+                "y": 1133.83,
+                "confidence": 0.96,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**I understand the elements of the SUMMER SALES SPECTACULAR and will participate.**",
+            "value": "I understand the elements of the SUMMER SALES SPECTACULAR and will participate.",
+            "bbox": [
+              {
+                "h": 27.11,
+                "w": 817.76,
+                "x": 126.65,
+                "y": 1160.54,
+                "confidence": 0.89,
+                "end_index": 82,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Retailer (Please print name)**",
+                "value": "Retailer (Please print name)",
+                "bbox": [
+                  {
+                    "h": 22.26,
+                    "w": 216.46,
+                    "x": 153.41,
+                    "y": 1193.18,
+                    "confidence": 1.0,
+                    "end_index": 31,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Retailer (Please print name)**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 22.26,
+                "w": 216.46,
+                "x": 153.41,
+                "y": 1193.18,
+                "confidence": 1.0,
+                "end_index": 33,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Retailer Signature**",
+                "value": "Retailer Signature",
+                "bbox": [
+                  {
+                    "h": 19.92,
+                    "w": 140.23,
+                    "x": 154.58,
+                    "y": 1224.81,
+                    "confidence": 1.0,
+                    "end_index": 21,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Retailer Signature**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 19.92,
+                "w": 140.23,
+                "x": 154.58,
+                "y": 1224.81,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "<u>    </u>",
+            "value": "<u>    </u>",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**Date** <u>    </u>",
+            "value": "Date <u>    </u>",
+            "bbox": [
+              {
+                "h": 15.41,
+                "w": 35.95,
+                "x": 704.99,
+                "y": 1220.9,
+                "confidence": 0.96,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "2062442445",
+            "value": "2062442445",
+            "bbox": [
+              {
+                "h": 23.97,
+                "w": 735.6,
+                "x": 229.61,
+                "y": 1307.07,
+                "confidence": 0.59,
+                "end_index": 9,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "Distribution: Original - Section Office Copy 1 - PM Manager Copy 2 - Retailer Copy 3 - PM Representative",
+                "value": "Distribution: Original - Section Office Copy 1 - PM Manager Copy 2 - Retailer Copy 3 - PM Representative",
+                "bbox": [
+                  {
+                    "h": 18.89,
+                    "w": 147.67,
+                    "x": 423.72,
+                    "y": 1310.34,
+                    "confidence": 0.76,
+                    "end_index": 58,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 40
+                  },
+                  {
+                    "h": 18.71,
+                    "w": 114.42,
+                    "x": 618.87,
+                    "y": 1308.27,
+                    "confidence": 0.75,
+                    "end_index": 76,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 60
+                  },
+                  {
+                    "h": 19.920380859374973,
+                    "w": 262.42743638577946,
+                    "x": 127.22836339137645,
+                    "y": 1310.35541015625,
+                    "confidence": 0.76,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 18.77,
+                    "w": 188.55,
+                    "x": 776.78,
+                    "y": 1307.09,
+                    "confidence": 0.76,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "Distribution: Original - Section Office Copy 1 - PM Manager Copy 2 - Retailer Copy 3 - PM Representative",
+            "bbox": [
+              {
+                "h": 20.96,
+                "w": 309.57,
+                "x": 423.72,
+                "y": 1308.27,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## <u>SUMMER SALES SPECTACULAR</u>\n\n**Retailer Understanding of Program Elements**\n\nIn order to receive the Philip Morris allowance, I understand that participants for **Phase I** will need to reduce the price of **Marlboro and Basic** by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from **June 26 thru July 9, 1995.**\n\nAdditionally, the following point-of-sale items (**Minimum of 4 pieces POS - 3 Marlboro and 1 Basic**) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.\n\n*   **POS Item #1** \n\n <u>    </u> \n\n **Location** \n\n <u>    </u>\n*   **POS Item #2** \n\n <u>    </u> \n\n **Location** <u>    </u>\n*   **POS Item #3** \n\n <u>    </u> \n\n **Location** \n\n <u>    </u>\n*   **POS Item #4** \n\n <u>    </u> \n\n **Location** <u>    </u>\n\n| Price in Effect<br/>Reduced Price: | Marlboro<br/>Pack: $<br/>Pack: $ | Marlboro<br/>Ctn: $<br/>Ctn: $ | Basic<br/>Pack: $<br/>Pack: $ | Basic<br/>Ctn: $<br/>Ctn: $ |\n| ---------------------------------- | -------------------------------- | ------------------------------ | ----------------------------- | --------------------------- |\n\n\nFor **Phase II**, participants will need to reduce the price of **Benson & Hedges, Merit, Parliament, and Virginia Slims** by at least 20¢ a pack or $2 a carton based on the normal non-promotional retail selling price in effect on <u>    </u> / <u>    </u> / 95, and offer the reduced price to consumers for 2 weeks from <u>    </u> / <u>    </u> / 95 thru <u>    </u> / <u>    </u> / 95.\n\nAdditionally, the following point-of-sale items (**Minimum of 3 PM Premium Brand POS pieces**) will need to be placed and maintained in agreed-upon locations during the entire price reduction period.\n\n*   **POS Item #1** \n\n <u>    </u> \n\n **Location** <u>    </u>\n*   **POS Item #2** \n\n <u>    </u> \n\n **Location** <u>    </u>\n*   **POS Item #3** \n\n <u>    </u> \n\n **Location** <u>    </u>\n\n| Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Price in Effect<br/>Reduced Price | Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Pack: $<br/>Pack: $ | Merit, Virginia Slims, Benson & Hedges, and Parliament<br/>Ctn: $<br/>Ctn: $ |\n| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |\n\n\n**<u>Potential Promotion Allowance Payment</u>**\n\nPayments will be made at the completion of each phase of this promotion.\n\n|                                               |         | # Ctns |\n| --------------------------------------------- | ------- | ------ |\n| Potential Phase I Promotion Allowance is      | $**     | **     |\n| Potential Phase II Promotion Allowance is     | $**     | **     |\n| Flex Fund Allowance to extend Marlboro 1 week | $**     | **     |\n| **Total Potential Promotion Allowance is**    | **$**** |        |\n\n\nPhilip Morris reserves the right to audit compliance of any of these program requirements at any time, to audit sales and/or shipment receipts upon request, and to withhold payment for any non-compliance.\n\n*   **Store Name:** \n\n \n\n American Drug \n\n \n\n Call# 15068 17530 \n\n Control# <u>    </u>\n*   **Store Address:** \n\n 1818 Swift Drive, Oakbrook, Illinois 60521\n*   **Philip Morris Representative (please print)** \n\n Barbara Lynch \n\n **Territory #** \n\n 20\n*   **Philip Morris Representative Signature** \n\n [signature] \n\n **Date** <u>    </u>\n\n**I understand the elements of the SUMMER SALES SPECTACULAR and will participate.**\n\n*   **Retailer (Please print name)** \n\n <u>    </u>\n*   **Retailer Signature** \n\n <u>    </u> \n\n **Date** <u>    </u>\n\n\n2062442445",
+        "page_number": 1,
+        "success": true,
+        "footer": "Distribution: Original - Section Office Copy 1 - PM Manager Copy 2 - Retailer Copy 3 - PM Representative",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

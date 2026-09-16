@@ -1,0 +1,1388 @@
+{
+  "funsd_000": {
+    "headers": [
+      "facsimile cover sheet"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "date:",
+        "value": "5/31/2000"
+      },
+      {
+        "key": "attn:",
+        "value": "Yvette Robinson / Philip Morris USA"
+      },
+      {
+        "key": "fax #",
+        "value": "917-663-5463"
+      },
+      {
+        "key": "from:",
+        "value": "Chuck Laws"
+      }
+    ]
+  },
+  "funsd_001": {
+    "headers": [
+      "BRANDS BUSINESS UNIT PRODUCT APPROVAL NOTE"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "BBU Note No.",
+        "value": "96-61"
+      },
+      {
+        "key": "Date:",
+        "value": "8/5/96"
+      },
+      {
+        "key": "Termination Date:",
+        "value": "Permanent"
+      },
+      {
+        "key": "Type:",
+        "value": "Product"
+      },
+      {
+        "key": "SUBJECT:",
+        "value": "WINSTON Lt 100/CAMEL Lt 100 Specification Adjustments"
+      },
+      {
+        "key": "BACKGROUND:",
+        "value": "Specifications for all WINSTON and CAMEL products were recently reviewed. In some instances adjustments were recommended (previous BU Notes #96-31; #96- 39) while in other instances products/changes were still under investigation. In the case of WINSTON Lt 100/CAMEL Lt 100, BPU implementation initially caused drafts and dilutions to increase with a corresponding decrease in 'tar'. A subsequent paper change brought 'tar' values back up to target. Post BPU specification adjustments were made reflecting the higher drafts and dilutions. However, in the last six months, the drafts seem to be settling back to the pre-BPU levels. While investigations for an assignable cause are still underway (and include G-19 particle size; CRES filling capacity; others) the recommendation is to adjust specification targets back to what they were going in to BPU implementation."
+      },
+      {
+        "key": "RECOMMENDATION:",
+        "value": "The recommendation is to adjust HO and HC drafts and dilution targets back to where they were just as BPU implementation was occurring. Please refer to the attachment."
+      },
+      {
+        "key": "RISK ASSESSMENT:",
+        "value": "None. Adjustments are relatively minor."
+      }
+    ]
+  },
+  "funsd_002": {
+    "headers": [
+      "RETENTION SCHEDULE MAINTENANCE FORM",
+      "RETENTION PERIOD",
+      "REVISION CODES:",
+      "FOR RECORDS MANAGEMENT USE"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "TO:",
+        "value": "Records Management Department"
+      },
+      {
+        "key": "FROM:",
+        "value": "Jackie Hargrave"
+      },
+      {
+        "key": "NAME OF DEPARTMENT:",
+        "value": "01MFP101 - Processing Plants General Manager"
+      },
+      {
+        "key": "Responsible Records Management Group Approval:",
+        "value": "Date:"
+      }
+    ]
+  },
+  "funsd_003": {
+    "headers": [
+      "Distribution:",
+      "Timing:",
+      "Data Entry:",
+      "Agency:",
+      "Fulfillment:"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "FAX",
+        "value": "336 741 3327"
+      },
+      {
+        "key": "Attn:",
+        "value": "Bonnie Tucker"
+      },
+      {
+        "key": "RIR Brand",
+        "value": "Corporate"
+      },
+      {
+        "key": "Program Number",
+        "value": "801004"
+      },
+      {
+        "key": "Response Code",
+        "value": "BJ3"
+      },
+      {
+        "key": "Project Name",
+        "value": "4/98 Corporate Spring Rescreen - Cigarette Survey - Orig.(GC II) (Blind/Long)"
+      },
+      {
+        "key": "Description:",
+        "value": "Greeting Card Il\" is a blind, long scitener Version for the 4788 rescreen. This is the origrial place."
+      },
+      {
+        "key": "Distribution Vehicle:",
+        "value": "Direct Marketing"
+      },
+      {
+        "key": "Quantity",
+        "value": "25,000"
+      },
+      {
+        "key": "Pct. Response",
+        "value": "25.00 %"
+      },
+      {
+        "key": "# of Responders",
+        "value": "6250"
+      },
+      {
+        "key": "DTS",
+        "value": "04/27/98"
+      },
+      {
+        "key": "Expiration Date",
+        "value": "06/16/98"
+      },
+      {
+        "key": "Supplier",
+        "value": "WWA/R/C"
+      },
+      {
+        "key": "Offer Complete",
+        "value": "06/15/98"
+      },
+      {
+        "key": "Days Offor Open",
+        "value": "49"
+      },
+      {
+        "key": "No. Days Tumaround",
+        "value": "10"
+      },
+      {
+        "key": "Incoming mail",
+        "value": "BRE"
+      },
+      {
+        "key": "Agency Name",
+        "value": "Russell Agency"
+      },
+      {
+        "key": "Contact Person",
+        "value": "Betsy Hamilton"
+      },
+      {
+        "key": "IT M/A/R/C Is supplier, do you Phone # (910) 727-0314 need a M/A/R/C P.O. Box?",
+        "value": "Yes"
+      },
+      {
+        "key": "P.O. Box Title:",
+        "value": "National Smoker Services"
+      },
+      {
+        "key": "Company",
+        "value": "MIA/R/C"
+      },
+      {
+        "key": "Comments:",
+        "value": "P.O. Box 834080 Permit # 359"
+      },
+      {
+        "key": "Marketing Person Responsible for Project:",
+        "value": "Lisa Drum"
+      },
+      {
+        "key": "Production Contact:",
+        "value": "Joe Leinster"
+      },
+      {
+        "key": "Code Requested By:",
+        "value": "Jonnie Shore"
+      },
+      {
+        "key": "Copies of Confirmation Letter To:",
+        "value": "Mary Cloutier 52264 5832 Lisa Drum Joyce Begby Jonnie Shore Bonnie Tucker Betsy Hamilton"
+      }
+    ]
+  },
+  "funsd_004": {
+    "headers": [
+      "JOB PROCEDURE",
+      "BASIC JOB PROCEDURE",
+      "KEY POINTS"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "APPLICABLE TO:",
+        "value": "Waste Water/Maintenance"
+      },
+      {
+        "key": "UPDATE RESPONSIBILTY:",
+        "value": "Area Supervisor"
+      },
+      {
+        "key": "SUBJECT:",
+        "value": "Lockout Procedure for Secondary Scum Pumps"
+      },
+      {
+        "key": "REQUIRED PERSONAL PROTECTIVE EQUIPMENT:",
+        "value": "Safety Glasses, Leather Gloves"
+      },
+      {
+        "key": "REQUIRED SPECIAL TOOLS AND EQUIPMENT:",
+        "value": "Locks, Tags, Lockout Device, Chain"
+      },
+      {
+        "key": "THIS PROCEDURE COVERS THE FOLLOWING EQUIPMENT:",
+        "value": "52-052, 52-053"
+      }
+    ]
+  },
+  "funsd_005": {
+    "headers": [
+      "EXTERNAL REQUEST FOR PATHOLOGICAL EXAMINATIONS"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "YOUR REF. NO.",
+        "value": "53 M"
+      },
+      {
+        "key": "NAME OF INSTITUTE",
+        "value": "HACKING & CHURCHILL"
+      },
+      {
+        "key": "DEPARTMENT",
+        "value": "ABBOTS RIPTON ROAD"
+      },
+      {
+        "key": "ADDRESS",
+        "value": "WYTON Department of Pathology, Woodmansterne Road, HUNTINGDON Carshalton, CAMB. PEIT 2DT."
+      },
+      {
+        "key": "ENQUIRER:",
+        "value": "Malcolm HACKING"
+      },
+      {
+        "key": "POSITION:",
+        "value": "B.W."
+      },
+      {
+        "key": ".LAC STAFF MEMBER:",
+        "value": "P.ALDRED"
+      },
+      {
+        "key": "DATE OF ARRIVAL:",
+        "value": "18.2.82"
+      },
+      {
+        "key": "NO. OF ANIMALS:",
+        "value": "8"
+      }
+    ]
+  },
+  "funsd_006": {
+    "headers": [
+      "SUMMER SALES SPECTACULAR Retailer Understanding of Program Elements",
+      "Price in Effect",
+      "Basic",
+      "Marlboro",
+      "Reduced Price:",
+      "Potential Promotion Allowance Payment"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Store Address:",
+        "value": "1818 Swift Drive, Oakbrook, Illiwas 60521"
+      },
+      {
+        "key": "Philip Morris Representative (please print)",
+        "value": "Barbara Lynch"
+      },
+      {
+        "key": "Distribution:",
+        "value": "Original - Section Office"
+      }
+    ]
+  },
+  "funsd_007": {
+    "headers": [
+      "ÜBERPRÜFUNG DURCH OA-UNIT"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "TITEL:",
+        "value": "DNA Conformation Assay: Determination of in vitro DNA Adduct Formation and Strand Breaks (PT)"
+      },
+      {
+        "key": "KENNTNISNAHME DURCH PROJEKTLEITER:",
+        "value": "RWA"
+      },
+      {
+        "key": "TEAM:",
+        "value": "BC"
+      },
+      {
+        "key": "TEAM-MANAGER:",
+        "value": "HHM"
+      },
+      {
+        "key": "AUTOR:",
+        "value": "TMU"
+      },
+      {
+        "key": "ÜBERPRÜFTER PARAMETER:",
+        "value": "Publikationstext, Originalprotokolle"
+      },
+      {
+        "key": "PRÜFZEITPUNKT:",
+        "value": "vor Ausgang des Publikationstexts"
+      }
+    ]
+  },
+  "funsd_008": {
+    "headers": [
+      "Philip Morris Management Corp. External Relations"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Date:",
+        "value": "October 27, 1997"
+      },
+      {
+        "key": "To:",
+        "value": "Lance Morgan"
+      },
+      {
+        "key": "Company:",
+        "value": "Bozell Sawyer Miller"
+      },
+      {
+        "key": "Fax:",
+        "value": "202-659-8287"
+      },
+      {
+        "key": "Phone:",
+        "value": "202-739-0285"
+      },
+      {
+        "key": "From:",
+        "value": "Peggy Roberts"
+      },
+      {
+        "key": "Phone:",
+        "value": "212-878-2149"
+      },
+      {
+        "key": "Fax:",
+        "value": "212-907-5544"
+      },
+      {
+        "key": "Number of Pages Including Cover Sheet:",
+        "value": "11"
+      },
+      {
+        "key": "COMMENTS/MESSAGE:",
+        "value": "Please take a look at the attached revised press statements on the upcoming Appeals Court decision in the FDA case. Any questions or suggestions should be directed to Scott Williams or Jennifer Swint at Bozell Sawyer Miller. They can be reached at the following numbers: phone: 202-739-0285; fax: 202-659-8287."
+      }
+    ]
+  },
+  "funsd_009": {
+    "headers": [
+      "CLASSIFIED MATERIAL RECEIPT",
+      "INSTRUCTIONS FOR USE"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Title and/or number of document",
+        "value": "W-175-RBD"
+      },
+      {
+        "key": "Number of Copies",
+        "value": "1"
+      },
+      {
+        "key": "Deliver to",
+        "value": "Thomas L. Gentry"
+      },
+      {
+        "key": "From",
+        "value": "Grover M. Myers"
+      },
+      {
+        "key": "Date",
+        "value": "8/4/88"
+      }
+    ]
+  },
+  "funsd_010": {
+    "headers": [
+      "Erläuterungen zum Laufzettel für Dokumente",
+      "STATION",
+      "BEMERKUNG",
+      "DATUM",
+      "ZN"
+    ],
+    "key_value_pairs": []
+  },
+  "funsd_011": {
+    "headers": [],
+    "key_value_pairs": [
+      {
+        "key": "TELEPHONE:",
+        "value": "011-44-071-495-5655"
+      },
+      {
+        "key": "TELEFAX:",
+        "value": "011-44-071-495-3101"
+      },
+      {
+        "key": "TELEFAX:",
+        "value": "(202) 662-6291"
+      },
+      {
+        "key": "TELEX:",
+        "value": "89-593 (COVLING WSH)"
+      },
+      {
+        "key": "CABLE:",
+        "value": "COVLING"
+      },
+      {
+        "key": "TELEPHONE:",
+        "value": "011-32-2-549-5230"
+      },
+      {
+        "key": "TELEFAX:",
+        "value": "011-32-2-502-1598"
+      },
+      {
+        "key": "FROM:",
+        "value": "Mark F. Kightlinger"
+      },
+      {
+        "key": "NO. OF PAGES:",
+        "value": "5"
+      },
+      {
+        "key": "DATE:",
+        "value": "August 8, 1997"
+      }
+    ]
+  },
+  "funsd_012": {
+    "headers": [
+      "Facsimile Message"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "TO:",
+        "value": "DISTRIBUTION"
+      },
+      {
+        "key": "FROM:",
+        "value": "GREG FOWLER"
+      },
+      {
+        "key": "DATE:",
+        "value": "SEPTEMBER 17, 1993."
+      },
+      {
+        "key": "REF:",
+        "value": "A:BRCPRO.GLF3"
+      },
+      {
+        "key": "PAGE",
+        "value": "1"
+      },
+      {
+        "key": "SUBJECT:",
+        "value": "BURSWOOD RESORT CASINO PROSECUTION"
+      },
+      {
+        "key": "Attached is the TIA's Press Release and the court's Reasons for Decision. The court stated its conclusion as follows:",
+        "value": "Whilst ETS is annoying and of discomfort to non smokers it has not been proved at the required standard, or at all, in this prosecution, that it is a risk to the health of the employees at the Casino."
+      },
+      {
+        "key": "Distribution:",
+        "value": "David Davies Judy Hargrave Peter Hobday Tim Lindon 2501172720 Bob Northrip Steve Parrish Lee Pollak David Schechter Chuck Wall"
+      }
+    ]
+  },
+  "funsd_013": {
+    "headers": [
+      "CONFIDENTIAL Complete Project Alert",
+      "Summary Information",
+      "Contacts",
+      "Distribution",
+      "Key Information",
+      "Project Objectives"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Alert #",
+        "value": "96-0662"
+      },
+      {
+        "key": "Issue Date",
+        "value": "Sep 12, 96"
+      },
+      {
+        "key": "Status",
+        "value": "XTBA"
+      },
+      {
+        "key": "Author",
+        "value": "Jill Long"
+      },
+      {
+        "key": "Count Date",
+        "value": "Sep 19, 96"
+      },
+      {
+        "key": "Thursday",
+        "value": "OK"
+      },
+      {
+        "key": "Brand",
+        "value": "Sales"
+      },
+      {
+        "key": "Scan Date",
+        "value": "Sep 19, 96"
+      },
+      {
+        "key": "Thursday",
+        "value": "OK"
+      },
+      {
+        "key": "Title",
+        "value": "Mapco Express R37-96 MF Req"
+      },
+      {
+        "key": "Extract Date",
+        "value": "Sep 20, 96"
+      },
+      {
+        "key": "Friday",
+        "value": "OK"
+      },
+      {
+        "key": "QA Scan Date",
+        "value": "Sep 23, 96"
+      },
+      {
+        "key": "Monday",
+        "value": "OK"
+      },
+      {
+        "key": "Files to be sent out?",
+        "value": "Yes"
+      },
+      {
+        "key": "MPS Date",
+        "value": "Sep 23, 96"
+      },
+      {
+        "key": "Monday",
+        "value": "OK"
+      },
+      {
+        "key": "Type of File (Research, Mailfile, PFH)",
+        "value": "Mailfile"
+      },
+      {
+        "key": "Control #",
+        "value": "IR Use only"
+      },
+      {
+        "key": "Printer Date",
+        "value": "Sep 25, 96"
+      },
+      {
+        "key": "Wednesday",
+        "value": "OK"
+      },
+      {
+        "key": "Resource/Prgm",
+        "value": "208"
+      },
+      {
+        "key": "Mail Date",
+        "value": "Sep 30, 96"
+      },
+      {
+        "key": "Monday",
+        "value": "OK"
+      },
+      {
+        "key": "Brand:",
+        "value": "K. Wadia"
+      },
+      {
+        "key": "Alt Brand:",
+        "value": "Jacquie McLaurin"
+      },
+      {
+        "key": "Promo Production:",
+        "value": "Karen Hughes"
+      },
+      {
+        "key": "Printer:",
+        "value": "Meredith Webb"
+      },
+      {
+        "key": "RIR-DMG:",
+        "value": "Nikki Lall"
+      },
+      {
+        "key": "TB-Acent Services:",
+        "value": "JIIl Long"
+      },
+      {
+        "key": "Non-Email:",
+        "value": "Shannon Armfield"
+      },
+      {
+        "key": "RJR-IR:",
+        "value": "Janet Myers"
+      },
+      {
+        "key": "ew Mailfile?",
+        "value": "Yes"
+      },
+      {
+        "key": "DB Maint?",
+        "value": "Yes"
+      },
+      {
+        "key": "TCodes:",
+        "value": "63728 = 4 $.40 off pack Counts? Yes PIT Info? No 63729 = 2 $2.00 off ctn"
+      },
+      {
+        "key": "Research?",
+        "value": "No"
+      },
+      {
+        "key": "Seeds?",
+        "value": "Yes"
+      },
+      {
+        "key": "MFID'S:",
+        "value": "TBD"
+      },
+      {
+        "key": "Analysis?",
+        "value": "No"
+      },
+      {
+        "key": "PID to ME to FF?",
+        "value": "No"
+      },
+      {
+        "key": "Scan?",
+        "value": "Yes"
+      },
+      {
+        "key": "Suppression?",
+        "value": "Yes"
+      }
+    ]
+  },
+  "funsd_014": {
+    "headers": [
+      "FACSIMILE TRANSMISSION"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "FAX:",
+        "value": "212/772-2617"
+      },
+      {
+        "key": "TO:",
+        "value": "List"
+      },
+      {
+        "key": "FROM:",
+        "value": "Jay Kenney"
+      },
+      {
+        "key": "FAX NO:",
+        "value": "See Below"
+      },
+      {
+        "key": "DATE:",
+        "value": "May 2, 1997"
+      },
+      {
+        "key": "COMPANY/FIRM FOR DISTRIBUTION: OR IMG OFFICE NOT FOR DISTRIBUTION: LOCATION:",
+        "value": "Philip Morris"
+      },
+      {
+        "key": "Re:",
+        "value": "Camel/Pro Billiards Tour"
+      }
+    ]
+  },
+  "funsd_015": {
+    "headers": [
+      "TELECOPY"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "FAX",
+        "value": "(202) 434-5629"
+      },
+      {
+        "key": "TO:",
+        "value": "Mark L. Holtou"
+      },
+      {
+        "key": "FIRM OR COMPANY:",
+        "value": "R.J. Reynolds Tobacco Company"
+      },
+      {
+        "key": "FROM:",
+        "value": "Terrence O'Donnell"
+      },
+      {
+        "key": "TELEPHONE:",
+        "value": "(202) 434-5678"
+      },
+      {
+        "key": "DATE:",
+        "value": "July 24, 1998"
+      },
+      {
+        "key": "MATTER NUMBER:",
+        "value": "28150.0010"
+      }
+    ]
+  },
+  "funsd_016": {
+    "headers": [
+      "COMPOUND STRUCTURE"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "COMPOUND CODE",
+        "value": "B83"
+      },
+      {
+        "key": "Genetic Assay No.",
+        "value": "6692"
+      },
+      {
+        "key": "Chem Abstr #",
+        "value": "N/A"
+      },
+      {
+        "key": "Compound Name",
+        "value": "_Proprietary Mixture"
+      },
+      {
+        "key": "ASSAY RESULT",
+        "value": "M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border COMPOUND STROE positive with $9 activation -Technical problems with the test"
+      },
+      {
+        "key": "PH (CALCULATED 50%)",
+        "value": "5.26"
+      },
+      {
+        "key": "PHYSICAL APPEARANCE",
+        "value": "Yellow liquid"
+      },
+      {
+        "key": "REGULATORY STATUS",
+        "value": "N/A"
+      }
+    ]
+  },
+  "funsd_017": {
+    "headers": [
+      "SPECIAL EVENTS"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "·State:",
+        "value": "Illinois"
+      },
+      {
+        "key": "City/Town:",
+        "value": "Dundee"
+      },
+      {
+        "key": "Type of Event:",
+        "value": "Beauty Contest"
+      },
+      {
+        "key": "Estimated Attendance:",
+        "value": "700"
+      },
+      {
+        "key": "Name of Event:",
+        "value": "Mrs. Illinois Beauty Pageant"
+      },
+      {
+        "key": "Contact (Name/Telephone):",
+        "value": "Ms. Joy Weathers (Sales) 312/426-8000"
+      },
+      {
+        "key": "Audience Concentration:",
+        "value": "90% White - 10% Black Age category 21 yrs. to 45 yrs."
+      },
+      {
+        "key": "Recommended Brand(s) and Promotional Activity:",
+        "value": "BARCLAY sampling 2 - 12M cases mixed. To be placed on tables by B & W Reps."
+      }
+    ]
+  },
+  "funsd_018": {
+    "headers": [
+      "BULLETIN ADVERTISING-INSPECTION REPORT",
+      "TYPE OF DISPLAY"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "MARKET",
+        "value": "Orlando, FL"
+      },
+      {
+        "key": "BRAND",
+        "value": "Misty"
+      },
+      {
+        "key": "SCHEDULE",
+        "value": "2/16/ - 60 Days"
+      },
+      {
+        "key": "OPERATOR",
+        "value": "POA - Orlando"
+      },
+      {
+        "key": "LOCATION",
+        "value": "See attached list"
+      },
+      {
+        "key": "NO. OF ROTARIES",
+        "value": "15 RB"
+      },
+      {
+        "key": "DESIGN ON DISPLAY:",
+        "value": "(Condition And Rendition of Copy)"
+      },
+      {
+        "key": "Capri",
+        "value": "9 Bull"
+      },
+      {
+        "key": "Bucks",
+        "value": "3 Bull"
+      },
+      {
+        "key": "Newport",
+        "value": "4 Bull"
+      }
+    ]
+  },
+  "funsd_019": {
+    "headers": [
+      "FACSIMILE TRANSMISSION",
+      "Distribution:"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Phone:",
+        "value": "212-880-3074"
+      },
+      {
+        "key": "Fax:",
+        "value": "212-949-2395"
+      },
+      {
+        "key": "DATE:",
+        "value": "December 16, 1997"
+      },
+      {
+        "key": "TO:",
+        "value": "Distribution"
+      },
+      {
+        "key": "PAGES TO FOLLOW:",
+        "value": "7"
+      },
+      {
+        "key": "M. Berfind",
+        "value": "914-335-9374"
+      },
+      {
+        "key": "M. Bring",
+        "value": "212-687-1438"
+      },
+      {
+        "key": "P. Carlton",
+        "value": "919-827-5487"
+      },
+      {
+        "key": "Jocelyn Dyer",
+        "value": "WRO - Manual"
+      },
+      {
+        "key": "D. Donahue",
+        "value": "910-741-0671"
+      },
+      {
+        "key": "M. Firestone",
+        "value": "212-907-5473"
+      },
+      {
+        "key": "R. Fiske",
+        "value": "212-450-5566"
+      },
+      {
+        "key": "A. Golden",
+        "value": "212-450-5568"
+      },
+      {
+        "key": "T. Griscom",
+        "value": "910-741-7975"
+      },
+      {
+        "key": "J. Hickie",
+        "value": "202-371-6338"
+      },
+      {
+        "key": "B. Hirsch",
+        "value": "212-935-6801"
+      },
+      {
+        "key": "D. Keane",
+        "value": "212-907-5399"
+      },
+      {
+        "key": "M. Koplow",
+        "value": "212-403-2020"
+      },
+      {
+        "key": "M. McGraw",
+        "value": "502-568-7107"
+      },
+      {
+        "key": "S Parrish",
+        "value": "212-949-2395"
+      },
+      {
+        "key": "S. Patton",
+        "value": "312-861-2200"
+      },
+      {
+        "key": "R. Sharpe",
+        "value": "212-969-9917"
+      },
+      {
+        "key": "A. Stevens/R. Millstein",
+        "value": "910-335-7707"
+      },
+      {
+        "key": "R. Verher",
+        "value": "203-863-7233"
+      },
+      {
+        "key": "H. Wachtell",
+        "value": "212-403-2216"
+      },
+      {
+        "key": "C. Wall",
+        "value": "212-907-5817"
+      },
+      {
+        "key": "S. Wise",
+        "value": "212-450-5987"
+      }
+    ]
+  },
+  "funsd_020": {
+    "headers": [
+      "TRANSMISSION RESULT REPORT"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Attention:",
+        "value": "Henry Fernandez"
+      },
+      {
+        "key": "Fax #:",
+        "value": "3-0449"
+      },
+      {
+        "key": "Sender:",
+        "value": "Paula Desel"
+      },
+      {
+        "key": "Sender Telephone #:",
+        "value": "917-663-3203"
+      },
+      {
+        "key": "Sender Fax #:",
+        "value": "917-663-5978"
+      }
+    ]
+  },
+  "funsd_021": {
+    "headers": [
+      "NEWPORT HEAVY UP PROGRESS REPORT",
+      "EFFECTIVENESS OF DISTRIBUTION ALLOWANCE:"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "FAX",
+        "value": "909 889 1555"
+      },
+      {
+        "key": "TO:",
+        "value": "K. A. SPARROW"
+      },
+      {
+        "key": "FROM:S.P.",
+        "value": "ZOLOT"
+      },
+      {
+        "key": "DIRECT ACCOUNT/WHOLESALERS:",
+        "value": "N/A A ALL WHOLESALERS WITHIN DIVISION 921, CURRENTLY STOCK ALL EIGHT NEWPORT PACKINGS."
+      },
+      {
+        "key": "DIRECT ACCOUNT CHAINS:",
+        "value": "N/A (AT THIS TIME) PRESENTATIONS ARE PENDING AT THRIFTY-PAYLESS (MCA #18), RALPH'S GROCERY (MCA #19), AMERICAN DRUG STORES (MCA #19)"
+      },
+      {
+        "key": "NON-DIRECT ACCOUNT CHAINS:",
+        "value": "N/A (AT THIS TIME) PRESENTATION PENDING AT STATER BROS. MARKETS (MCA #19)"
+      },
+      {
+        "key": "EFFECTIVENESS OF THE RETAIL (1.00 OFF CARTON) DISTRIBUTION ALLOWANCE:",
+        "value": "CURRENTLY, INTRODUCTIONS ARE BEING MADE WITHOUT THE USE OR NEED OF ADDITIONAL FUNDS."
+      },
+      {
+        "key": "PROMOTIONAL ACTIVITY 95879095 JULY/AUGUST 30¢/40¢ OFF PACK - GENERAL MARKET",
+        "value": "RETAILER AND CUSTOMER RESPONSE IS EXCELLENT, MOST TEMPORARY DISPLAYS ARE SELLING THROUGH UPON RETURN TO OUTLETS."
+      }
+    ]
+  },
+  "funsd_022": {
+    "headers": [
+      "NOTICE OF",
+      "INITIATED BY:"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "DATE:",
+        "value": "10/28/91"
+      },
+      {
+        "key": "GENERAL DESCRIPTION OF RECORDS",
+        "value": "ALL RECORDS SUSPENDED REGARDING LAMB V. PM (1982) KENTUCKY TOBACCO GROWERS CASE ARE RELEASED DUE TO RESOLUTION OF LITIGATION ."
+      }
+    ]
+  },
+  "funsd_023": {
+    "headers": [
+      "FAX"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "P.",
+        "value": "01"
+      },
+      {
+        "key": "PLEASE DELIVER TO:",
+        "value": "ELLIS WOODWARD"
+      },
+      {
+        "key": "FAX NUMBER:",
+        "value": "212-907-5379"
+      },
+      {
+        "key": "SENT BY:",
+        "value": "Trish Rodriguez"
+      },
+      {
+        "key": "DATE:",
+        "value": "March 3. 1998"
+      }
+    ]
+  },
+  "funsd_024": {
+    "headers": [
+      "CHAIN PROMOTIONAL INFORMATION"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "TO:",
+        "value": "BOSTON ROU DATE: 7/8/97 BUFFALO ROU"
+      },
+      {
+        "key": "FOR:",
+        "value": "DISSEMINATION TO ALL APPROPRIATE PERSONNEL"
+      },
+      {
+        "key": "CHAIN NAME:",
+        "value": "CHRISTY'S"
+      },
+      {
+        "key": "PROMOTION TYPE:",
+        "value": "PRICE REDUCTION"
+      },
+      {
+        "key": "DESCRIPTION:",
+        "value": "$2.00 OFF PER CARTON .20 ¢ OFF PER PACK"
+      },
+      {
+        "key": "BRANDS:",
+        "value": "COURIER BRAND FAMILY"
+      },
+      {
+        "key": "AUTHORIZED LOCATIONS:",
+        "value": "ALL STORES"
+      },
+      {
+        "key": "TIMING:",
+        "value": "7/21/97 THROUGH 10/12/97"
+      },
+      {
+        "key": "DISPLAY METHOD:",
+        "value": "TEMPORARY COURIER DISPLAYS"
+      },
+      {
+        "key": "ACTION REQUIRED:",
+        "value": "PRICE COMMUNICATION MONITOR STOCK LEVELS"
+      },
+      {
+        "key": "COMMENTS:",
+        "value": "CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION."
+      },
+      {
+        "key": "R.J.R. REP:",
+        "value": "J. L. Merusi"
+      },
+      {
+        "key": "DIVISION:",
+        "value": "1142"
+      },
+      {
+        "key": "CC:",
+        "value": "RM'S"
+      },
+      {
+        "key": "PHONE:",
+        "value": "508-923-0521"
+      },
+      {
+        "key": "FAX:",
+        "value": "508-923-0240"
+      }
+    ]
+  },
+  "funsd_025": {
+    "headers": [
+      "NEWS RELEASE AND SPEECH APPROVALS"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "DATE:",
+        "value": "06/07/90"
+      },
+      {
+        "key": "SUBJECT:",
+        "value": "CAMEL GT/Watkins Glen/Brabham-Daly"
+      },
+      {
+        "key": "PROPOSED RELEASE DATE:",
+        "value": "06/08/90"
+      },
+      {
+        "key": "DISTRIBUTE TO:",
+        "value": "CAMEL GT mailing list & Watkins Glen press kits"
+      },
+      {
+        "key": "CONTACT:",
+        "value": "Earl Fannin"
+      },
+      {
+        "key": "NEED APPROVALS NO LATER THAN:",
+        "value": "06/07/90"
+      }
+    ]
+  },
+  "funsd_026": {
+    "headers": [
+      "TESTING REQUEST",
+      "Approval of Test Request"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "Note:'",
+        "value": "A Complete Testing Request consists of Parts I (Test Request), 2 (Sample Design), 3 (Sample Release), and 4 (Protocols)"
+      },
+      {
+        "key": "Request Code",
+        "value": "Project Juice"
+      },
+      {
+        "key": "Requester",
+        "value": "Ed Carmines"
+      },
+      {
+        "key": "Cost Center to be Charged",
+        "value": "2R6"
+      },
+      {
+        "key": "Study Objective",
+        "value": "Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added."
+      },
+      {
+        "key": "Samples",
+        "value": "Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)"
+      },
+      {
+        "key": "CC:",
+        "value": "Dr. C. Ellis (Part 1 only) Dr. P. Terpstra Dr. W. Reininghaus"
+      },
+      {
+        "key": "RECEIVED",
+        "value": "JUL 2 9 1998"
+      }
+    ]
+  },
+  "funsd_027": {
+    "headers": [],
+    "key_value_pairs": [
+      {
+        "key": "FAX NO.",
+        "value": "703 323 4440"
+      },
+      {
+        "key": "P.",
+        "value": "1"
+      },
+      {
+        "key": "HBI Fax:",
+        "value": "703-323-4440"
+      },
+      {
+        "key": "Company:",
+        "value": "Philip Morris Co"
+      },
+      {
+        "key": "Attention:",
+        "value": "Mopsy Pottorff"
+      },
+      {
+        "key": "From:",
+        "value": "Gray Robertson"
+      },
+      {
+        "key": "Subject:",
+        "value": "Restaurants - Smoking Bills etc"
+      },
+      {
+        "key": "Fax pages:",
+        "value": "7. (total including cover sheet)"
+      }
+    ]
+  },
+  "funsd_028": {
+    "headers": [
+      "REPAIR AND RETURN REQUISITION SERVICE CLASS: 2"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "SUGGESTED SUPPLIER:",
+        "value": "EMC12 DEPT REQ NO: DV42780201 ELECTRIC MOTOR & CONTRACTING"
+      },
+      {
+        "key": "IREQUESTOR:",
+        "value": "VARGO, DANA"
+      },
+      {
+        "key": "SHIP TO:",
+        "value": "500"
+      },
+      {
+        "key": "DELIVER TO:",
+        "value": "STOCKROOM 411000"
+      },
+      {
+        "key": "ACCOUNT:",
+        "value": "180-400"
+      },
+      {
+        "key": "ANALYST:",
+        "value": "V:D VARGO"
+      }
+    ]
+  },
+  "funsd_029": {
+    "headers": [
+      "MATERIAL SAFETY DATA SHEET"
+    ],
+    "key_value_pairs": [
+      {
+        "key": "MANUFACTURER'S NAME",
+        "value": "H. Kohnstamm & Co ., Inc."
+      },
+      {
+        "key": "STREET ADDRESS",
+        "value": "P.O. Box 13"
+      },
+      {
+        "key": "CITY, STATE. AND ZIP CODE",
+        "value": "Harrison, N.J. 07029"
+      },
+      {
+        "key": "EMERGENCY TELEPHONE NO.",
+        "value": "(201) 991-2355"
+      },
+      {
+        "key": "PRODUCT CLASS",
+        "value": "Liquid Flavoring Material"
+      },
+      {
+        "key": "MANUFACTURERS CODE IDENTIFICATION",
+        "value": "P-532 Rose of Latakia Oils"
+      },
+      {
+        "key": "BOILING RANGE",
+        "value": "Not applicable"
+      },
+      {
+        "key": "VAPOR DENSITY",
+        "value": "HEAVIER."
+      },
+      {
+        "key": "FLAMMABILITY CLASSIFICATION",
+        "value": "Flammable Liquid"
+      },
+      {
+        "key": "FLASH POINT",
+        "value": "80ºF"
+      },
+      {
+        "key": "EXTINGUISHING MEDIA",
+        "value": "CO, or Foam"
+      },
+      {
+        "key": "UNUSUAL FIRE AND EXPLOSION HAZARDS",
+        "value": "None-Follow Good Manufacturing Procedures."
+      },
+      {
+        "key": "SPECIAL FIRE FIGHTING PROCEDURES",
+        "value": "NONE"
+      }
+    ]
+  }
+}

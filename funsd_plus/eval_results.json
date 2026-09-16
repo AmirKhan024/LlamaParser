@@ -1,0 +1,2002 @@
+{
+  "summary": {
+    "documents_scored": 29,
+    "total_key_value_pairs": 288,
+    "key_value_pairs_correct": 216,
+    "key_value_accuracy_overall": 0.75,
+    "value_found_anywhere_overall": 0.8472,
+    "documents_with_all_pairs_correct": 7,
+    "documents_with_all_pairs_correct_pct": 0.2414
+  },
+  "per_document": {
+    "funsd_000": {
+      "num_pairs": 4,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 4,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "date:",
+          "value": "5/31/2000",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "attn:",
+          "value": "Yvette Robinson / Philip Morris USA",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "fax #",
+          "value": "917-663-5463",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "from:",
+          "value": "Chuck Laws",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_001": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 5,
+      "key_value_accuracy": 0.625,
+      "value_found_anywhere": 7,
+      "value_recall": 0.875,
+      "pairs": [
+        {
+          "key": "BBU Note No.",
+          "value": "96-61",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Date:",
+          "value": "8/5/96",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Termination Date:",
+          "value": "Permanent",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Type:",
+          "value": "Product",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SUBJECT:",
+          "value": "WINSTON Lt 100/CAMEL Lt 100 Specification Adjustments",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "BACKGROUND:",
+          "value": "Specifications for all WINSTON and CAMEL products were recently reviewed. In some instances adjustments were recommended (previous BU Notes #96-31; #96- 39) while in other instances products/changes were still under investigation. In the case of WINSTON Lt 100/CAMEL Lt 100, BPU implementation initially caused drafts and dilutions to increase with a corresponding decrease in 'tar'. A subsequent paper change brought 'tar' values back up to target. Post BPU specification adjustments were made reflecting the higher drafts and dilutions. However, in the last six months, the drafts seem to be settling back to the pre-BPU levels. While investigations for an assignable cause are still underway (and include G-19 particle size; CRES filling capacity; others) the recommendation is to adjust specification targets back to what they were going in to BPU implementation.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "RECOMMENDATION:",
+          "value": "The recommendation is to adjust HO and HC drafts and dilution targets back to where they were just as BPU implementation was occurring. Please refer to the attachment.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "RISK ASSESSMENT:",
+          "value": "None. Adjustments are relatively minor.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_002": {
+      "num_pairs": 4,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 4,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "TO:",
+          "value": "Records Management Department",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:",
+          "value": "Jackie Hargrave",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NAME OF DEPARTMENT:",
+          "value": "01MFP101 - Processing Plants General Manager",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Responsible Records Management Group Approval:",
+          "value": "Date:",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_003": {
+      "num_pairs": 28,
+      "key_value_pairs_correct": 25,
+      "key_value_accuracy": 0.8929,
+      "value_found_anywhere": 21,
+      "value_recall": 0.75,
+      "pairs": [
+        {
+          "key": "FAX",
+          "value": "336 741 3327",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Attn:",
+          "value": "Bonnie Tucker",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "RIR Brand",
+          "value": "Corporate",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Program Number",
+          "value": "801004",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Response Code",
+          "value": "BJ3",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Project Name",
+          "value": "4/98 Corporate Spring Rescreen - Cigarette Survey - Orig.(GC II) (Blind/Long)",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Description:",
+          "value": "Greeting Card Il\" is a blind, long scitener Version for the 4788 rescreen. This is the origrial place.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Distribution Vehicle:",
+          "value": "Direct Marketing",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Quantity",
+          "value": "25,000",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Pct. Response",
+          "value": "25.00 %",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "# of Responders",
+          "value": "6250",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DTS",
+          "value": "04/27/98",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Expiration Date",
+          "value": "06/16/98",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Supplier",
+          "value": "WWA/R/C",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Offer Complete",
+          "value": "06/15/98",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Days Offor Open",
+          "value": "49",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "No. Days Tumaround",
+          "value": "10",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Incoming mail",
+          "value": "BRE",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Agency Name",
+          "value": "Russell Agency",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Contact Person",
+          "value": "Betsy Hamilton",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "IT M/A/R/C Is supplier, do you Phone # (910) 727-0314 need a M/A/R/C P.O. Box?",
+          "value": "Yes",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "P.O. Box Title:",
+          "value": "National Smoker Services",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Company",
+          "value": "MIA/R/C",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Comments:",
+          "value": "P.O. Box 834080 Permit # 359",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Marketing Person Responsible for Project:",
+          "value": "Lisa Drum",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Production Contact:",
+          "value": "Joe Leinster",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Code Requested By:",
+          "value": "Jonnie Shore",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Copies of Confirmation Letter To:",
+          "value": "Mary Cloutier 52264 5832 Lisa Drum Joyce Begby Jonnie Shore Bonnie Tucker Betsy Hamilton",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_004": {
+      "num_pairs": 6,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 0.6667,
+      "value_found_anywhere": 6,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "APPLICABLE TO:",
+          "value": "Waste Water/Maintenance",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "UPDATE RESPONSIBILTY:",
+          "value": "Area Supervisor",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SUBJECT:",
+          "value": "Lockout Procedure for Secondary Scum Pumps",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "REQUIRED PERSONAL PROTECTIVE EQUIPMENT:",
+          "value": "Safety Glasses, Leather Gloves",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "REQUIRED SPECIAL TOOLS AND EQUIPMENT:",
+          "value": "Locks, Tags, Lockout Device, Chain",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "THIS PROCEDURE COVERS THE FOLLOWING EQUIPMENT:",
+          "value": "52-052, 52-053",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_005": {
+      "num_pairs": 9,
+      "key_value_pairs_correct": 8,
+      "key_value_accuracy": 0.8889,
+      "value_found_anywhere": 7,
+      "value_recall": 0.7778,
+      "pairs": [
+        {
+          "key": "YOUR REF. NO.",
+          "value": "53 M",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NAME OF INSTITUTE",
+          "value": "HACKING & CHURCHILL",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DEPARTMENT",
+          "value": "ABBOTS RIPTON ROAD",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ADDRESS",
+          "value": "WYTON Department of Pathology, Woodmansterne Road, HUNTINGDON Carshalton, CAMB. PEIT 2DT.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "ENQUIRER:",
+          "value": "Malcolm HACKING",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "POSITION:",
+          "value": "B.W.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": ".LAC STAFF MEMBER:",
+          "value": "P.ALDRED",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "DATE OF ARRIVAL:",
+          "value": "18.2.82",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NO. OF ANIMALS:",
+          "value": "8",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_006": {
+      "num_pairs": 3,
+      "key_value_pairs_correct": 2,
+      "key_value_accuracy": 0.6667,
+      "value_found_anywhere": 1,
+      "value_recall": 0.3333,
+      "pairs": [
+        {
+          "key": "Store Address:",
+          "value": "1818 Swift Drive, Oakbrook, Illiwas 60521",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Philip Morris Representative (please print)",
+          "value": "Barbara Lynch",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Distribution:",
+          "value": "Original - Section Office",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_007": {
+      "num_pairs": 7,
+      "key_value_pairs_correct": 6,
+      "key_value_accuracy": 0.8571,
+      "value_found_anywhere": 7,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "TITEL:",
+          "value": "DNA Conformation Assay: Determination of in vitro DNA Adduct Formation and Strand Breaks (PT)",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "KENNTNISNAHME DURCH PROJEKTLEITER:",
+          "value": "RWA",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TEAM:",
+          "value": "BC",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TEAM-MANAGER:",
+          "value": "HHM",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "AUTOR:",
+          "value": "TMU",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ÜBERPRÜFTER PARAMETER:",
+          "value": "Publikationstext, Originalprotokolle",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PRÜFZEITPUNKT:",
+          "value": "vor Ausgang des Publikationstexts",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_008": {
+      "num_pairs": 10,
+      "key_value_pairs_correct": 9,
+      "key_value_accuracy": 0.9,
+      "value_found_anywhere": 10,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "Date:",
+          "value": "October 27, 1997",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "To:",
+          "value": "Lance Morgan",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Company:",
+          "value": "Bozell Sawyer Miller",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Fax:",
+          "value": "202-659-8287",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Phone:",
+          "value": "202-739-0285",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "From:",
+          "value": "Peggy Roberts",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Phone:",
+          "value": "212-878-2149",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Fax:",
+          "value": "212-907-5544",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Number of Pages Including Cover Sheet:",
+          "value": "11",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "COMMENTS/MESSAGE:",
+          "value": "Please take a look at the attached revised press statements on the upcoming Appeals Court decision in the FDA case. Any questions or suggestions should be directed to Scott Williams or Jennifer Swint at Bozell Sawyer Miller. They can be reached at the following numbers: phone: 202-739-0285; fax: 202-659-8287.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_009": {
+      "num_pairs": 5,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 0.8,
+      "value_found_anywhere": 4,
+      "value_recall": 0.8,
+      "pairs": [
+        {
+          "key": "Title and/or number of document",
+          "value": "W-175-RBD",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Number of Copies",
+          "value": "1",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Deliver to",
+          "value": "Thomas L. Gentry",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "From",
+          "value": "Grover M. Myers",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Date",
+          "value": "8/4/88",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_011": {
+      "num_pairs": 10,
+      "key_value_pairs_correct": 10,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 10,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "TELEPHONE:",
+          "value": "011-44-071-495-5655",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEFAX:",
+          "value": "011-44-071-495-3101",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEFAX:",
+          "value": "(202) 662-6291",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEX:",
+          "value": "89-593 (COVLING WSH)",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CABLE:",
+          "value": "COVLING",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEPHONE:",
+          "value": "011-32-2-549-5230",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEFAX:",
+          "value": "011-32-2-502-1598",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:",
+          "value": "Mark F. Kightlinger",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NO. OF PAGES:",
+          "value": "5",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "August 8, 1997",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_012": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 5,
+      "key_value_accuracy": 0.625,
+      "value_found_anywhere": 7,
+      "value_recall": 0.875,
+      "pairs": [
+        {
+          "key": "TO:",
+          "value": "DISTRIBUTION",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:",
+          "value": "GREG FOWLER",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "SEPTEMBER 17, 1993.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "REF:",
+          "value": "A:BRCPRO.GLF3",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PAGE",
+          "value": "1",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SUBJECT:",
+          "value": "BURSWOOD RESORT CASINO PROSECUTION",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Attached is the TIA's Press Release and the court's Reasons for Decision. The court stated its conclusion as follows:",
+          "value": "Whilst ETS is annoying and of discomfort to non smokers it has not been proved at the required standard, or at all, in this prosecution, that it is a risk to the health of the employees at the Casino.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Distribution:",
+          "value": "David Davies Judy Hargrave Peter Hobday Tim Lindon 2501172720 Bob Northrip Steve Parrish Lee Pollak David Schechter Chuck Wall",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_013": {
+      "num_pairs": 42,
+      "key_value_pairs_correct": 16,
+      "key_value_accuracy": 0.381,
+      "value_found_anywhere": 38,
+      "value_recall": 0.9048,
+      "pairs": [
+        {
+          "key": "Alert #",
+          "value": "96-0662",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Issue Date",
+          "value": "Sep 12, 96",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Status",
+          "value": "XTBA",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Author",
+          "value": "Jill Long",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Count Date",
+          "value": "Sep 19, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Thursday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Brand",
+          "value": "Sales",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Scan Date",
+          "value": "Sep 19, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Thursday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Title",
+          "value": "Mapco Express R37-96 MF Req",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Extract Date",
+          "value": "Sep 20, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Friday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "QA Scan Date",
+          "value": "Sep 23, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Monday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Files to be sent out?",
+          "value": "Yes",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "MPS Date",
+          "value": "Sep 23, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Monday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Type of File (Research, Mailfile, PFH)",
+          "value": "Mailfile",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Control #",
+          "value": "IR Use only",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Printer Date",
+          "value": "Sep 25, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Wednesday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Resource/Prgm",
+          "value": "208",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Mail Date",
+          "value": "Sep 30, 96",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Monday",
+          "value": "OK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Brand:",
+          "value": "K. Wadia",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Alt Brand:",
+          "value": "Jacquie McLaurin",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Promo Production:",
+          "value": "Karen Hughes",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Printer:",
+          "value": "Meredith Webb",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "RIR-DMG:",
+          "value": "Nikki Lall",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "TB-Acent Services:",
+          "value": "JIIl Long",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Non-Email:",
+          "value": "Shannon Armfield",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "RJR-IR:",
+          "value": "Janet Myers",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ew Mailfile?",
+          "value": "Yes",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DB Maint?",
+          "value": "Yes",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TCodes:",
+          "value": "63728 = 4 $.40 off pack Counts? Yes PIT Info? No 63729 = 2 $2.00 off ctn",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Research?",
+          "value": "No",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Seeds?",
+          "value": "Yes",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "MFID'S:",
+          "value": "TBD",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Analysis?",
+          "value": "No",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PID to ME to FF?",
+          "value": "No",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Scan?",
+          "value": "Yes",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Suppression?",
+          "value": "Yes",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_014": {
+      "num_pairs": 7,
+      "key_value_pairs_correct": 6,
+      "key_value_accuracy": 0.8571,
+      "value_found_anywhere": 7,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "FAX:",
+          "value": "212/772-2617",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TO:",
+          "value": "List",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:",
+          "value": "Jay Kenney",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FAX NO:",
+          "value": "See Below",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "May 2, 1997",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "COMPANY/FIRM FOR DISTRIBUTION: OR IMG OFFICE NOT FOR DISTRIBUTION: LOCATION:",
+          "value": "Philip Morris",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Re:",
+          "value": "Camel/Pro Billiards Tour",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_015": {
+      "num_pairs": 7,
+      "key_value_pairs_correct": 6,
+      "key_value_accuracy": 0.8571,
+      "value_found_anywhere": 4,
+      "value_recall": 0.5714,
+      "pairs": [
+        {
+          "key": "FAX",
+          "value": "(202) 434-5629",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "TO:",
+          "value": "Mark L. Holtou",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "FIRM OR COMPANY:",
+          "value": "R.J. Reynolds Tobacco Company",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:",
+          "value": "Terrence O'Donnell",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TELEPHONE:",
+          "value": "(202) 434-5678",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "July 24, 1998",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "MATTER NUMBER:",
+          "value": "28150.0010",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_016": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 7,
+      "key_value_accuracy": 0.875,
+      "value_found_anywhere": 7,
+      "value_recall": 0.875,
+      "pairs": [
+        {
+          "key": "COMPOUND CODE",
+          "value": "B83",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Genetic Assay No.",
+          "value": "6692",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Chem Abstr #",
+          "value": "N/A",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Compound Name",
+          "value": "_Proprietary Mixture",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ASSAY RESULT",
+          "value": "M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border COMPOUND STROE positive with $9 activation -Technical problems with the test",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "PH (CALCULATED 50%)",
+          "value": "5.26",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PHYSICAL APPEARANCE",
+          "value": "Yellow liquid",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "REGULATORY STATUS",
+          "value": "N/A",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_017": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 8,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 6,
+      "value_recall": 0.75,
+      "pairs": [
+        {
+          "key": "·State:",
+          "value": "Illinois",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "City/Town:",
+          "value": "Dundee",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Type of Event:",
+          "value": "Beauty Contest",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Estimated Attendance:",
+          "value": "700",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Name of Event:",
+          "value": "Mrs. Illinois Beauty Pageant",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Contact (Name/Telephone):",
+          "value": "Ms. Joy Weathers (Sales) 312/426-8000",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Audience Concentration:",
+          "value": "90% White - 10% Black Age category 21 yrs. to 45 yrs.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Recommended Brand(s) and Promotional Activity:",
+          "value": "BARCLAY sampling 2 - 12M cases mixed. To be placed on tables by B & W Reps.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_018": {
+      "num_pairs": 10,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 0.4,
+      "value_found_anywhere": 10,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "MARKET",
+          "value": "Orlando, FL",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "BRAND",
+          "value": "Misty",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SCHEDULE",
+          "value": "2/16/ - 60 Days",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "OPERATOR",
+          "value": "POA - Orlando",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "LOCATION",
+          "value": "See attached list",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NO. OF ROTARIES",
+          "value": "15 RB",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DESIGN ON DISPLAY:",
+          "value": "(Condition And Rendition of Copy)",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Capri",
+          "value": "9 Bull",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Bucks",
+          "value": "3 Bull",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Newport",
+          "value": "4 Bull",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_019": {
+      "num_pairs": 27,
+      "key_value_pairs_correct": 27,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 27,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "Phone:",
+          "value": "212-880-3074",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Fax:",
+          "value": "212-949-2395",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "December 16, 1997",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TO:",
+          "value": "Distribution",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PAGES TO FOLLOW:",
+          "value": "7",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "M. Berfind",
+          "value": "914-335-9374",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "M. Bring",
+          "value": "212-687-1438",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "P. Carlton",
+          "value": "919-827-5487",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Jocelyn Dyer",
+          "value": "WRO - Manual",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "D. Donahue",
+          "value": "910-741-0671",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "M. Firestone",
+          "value": "212-907-5473",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "R. Fiske",
+          "value": "212-450-5566",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "A. Golden",
+          "value": "212-450-5568",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "T. Griscom",
+          "value": "910-741-7975",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "J. Hickie",
+          "value": "202-371-6338",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "B. Hirsch",
+          "value": "212-935-6801",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "D. Keane",
+          "value": "212-907-5399",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "M. Koplow",
+          "value": "212-403-2020",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "M. McGraw",
+          "value": "502-568-7107",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "S Parrish",
+          "value": "212-949-2395",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "S. Patton",
+          "value": "312-861-2200",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "R. Sharpe",
+          "value": "212-969-9917",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "A. Stevens/R. Millstein",
+          "value": "910-335-7707",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "R. Verher",
+          "value": "203-863-7233",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "H. Wachtell",
+          "value": "212-403-2216",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "C. Wall",
+          "value": "212-907-5817",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "S. Wise",
+          "value": "212-450-5987",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_020": {
+      "num_pairs": 5,
+      "key_value_pairs_correct": 5,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 5,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "Attention:",
+          "value": "Henry Fernandez",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Fax #:",
+          "value": "3-0449",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Sender:",
+          "value": "Paula Desel",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Sender Telephone #:",
+          "value": "917-663-3203",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Sender Fax #:",
+          "value": "917-663-5978",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_021": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 2,
+      "key_value_accuracy": 0.25,
+      "value_found_anywhere": 2,
+      "value_recall": 0.25,
+      "pairs": [
+        {
+          "key": "FAX",
+          "value": "909 889 1555",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "TO:",
+          "value": "K. A. SPARROW",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FROM:S.P.",
+          "value": "ZOLOT",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DIRECT ACCOUNT/WHOLESALERS:",
+          "value": "N/A A ALL WHOLESALERS WITHIN DIVISION 921, CURRENTLY STOCK ALL EIGHT NEWPORT PACKINGS.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "DIRECT ACCOUNT CHAINS:",
+          "value": "N/A (AT THIS TIME) PRESENTATIONS ARE PENDING AT THRIFTY-PAYLESS (MCA #18), RALPH'S GROCERY (MCA #19), AMERICAN DRUG STORES (MCA #19)",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "NON-DIRECT ACCOUNT CHAINS:",
+          "value": "N/A (AT THIS TIME) PRESENTATION PENDING AT STATER BROS. MARKETS (MCA #19)",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "EFFECTIVENESS OF THE RETAIL (1.00 OFF CARTON) DISTRIBUTION ALLOWANCE:",
+          "value": "CURRENTLY, INTRODUCTIONS ARE BEING MADE WITHOUT THE USE OR NEED OF ADDITIONAL FUNDS.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "PROMOTIONAL ACTIVITY 95879095 JULY/AUGUST 30¢/40¢ OFF PACK - GENERAL MARKET",
+          "value": "RETAILER AND CUSTOMER RESPONSE IS EXCELLENT, MOST TEMPORARY DISPLAYS ARE SELLING THROUGH UPON RETURN TO OUTLETS.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_022": {
+      "num_pairs": 2,
+      "key_value_pairs_correct": 0,
+      "key_value_accuracy": 0.0,
+      "value_found_anywhere": 1,
+      "value_recall": 0.5,
+      "pairs": [
+        {
+          "key": "DATE:",
+          "value": "10/28/91",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "GENERAL DESCRIPTION OF RECORDS",
+          "value": "ALL RECORDS SUSPENDED REGARDING LAMB V. PM (1982) KENTUCKY TOBACCO GROWERS CASE ARE RELEASED DUE TO RESOLUTION OF LITIGATION .",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_023": {
+      "num_pairs": 5,
+      "key_value_pairs_correct": 3,
+      "key_value_accuracy": 0.6,
+      "value_found_anywhere": 4,
+      "value_recall": 0.8,
+      "pairs": [
+        {
+          "key": "P.",
+          "value": "01",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PLEASE DELIVER TO:",
+          "value": "ELLIS WOODWARD",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FAX NUMBER:",
+          "value": "212-907-5379",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SENT BY:",
+          "value": "Trish Rodriguez",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DATE:",
+          "value": "March 3. 1998",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_024": {
+      "num_pairs": 16,
+      "key_value_pairs_correct": 13,
+      "key_value_accuracy": 0.8125,
+      "value_found_anywhere": 13,
+      "value_recall": 0.8125,
+      "pairs": [
+        {
+          "key": "TO:",
+          "value": "BOSTON ROU DATE: 7/8/97 BUFFALO ROU",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "FOR:",
+          "value": "DISSEMINATION TO ALL APPROPRIATE PERSONNEL",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CHAIN NAME:",
+          "value": "CHRISTY'S",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PROMOTION TYPE:",
+          "value": "PRICE REDUCTION",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DESCRIPTION:",
+          "value": "$2.00 OFF PER CARTON .20 ¢ OFF PER PACK",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "BRANDS:",
+          "value": "COURIER BRAND FAMILY",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "AUTHORIZED LOCATIONS:",
+          "value": "ALL STORES",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "TIMING:",
+          "value": "7/21/97 THROUGH 10/12/97",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DISPLAY METHOD:",
+          "value": "TEMPORARY COURIER DISPLAYS",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ACTION REQUIRED:",
+          "value": "PRICE COMMUNICATION MONITOR STOCK LEVELS",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "COMMENTS:",
+          "value": "CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "R.J.R. REP:",
+          "value": "J. L. Merusi",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DIVISION:",
+          "value": "1142",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CC:",
+          "value": "RM'S",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PHONE:",
+          "value": "508-923-0521",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FAX:",
+          "value": "508-923-0240",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_025": {
+      "num_pairs": 6,
+      "key_value_pairs_correct": 6,
+      "key_value_accuracy": 1.0,
+      "value_found_anywhere": 6,
+      "value_recall": 1.0,
+      "pairs": [
+        {
+          "key": "DATE:",
+          "value": "06/07/90",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SUBJECT:",
+          "value": "CAMEL GT/Watkins Glen/Brabham-Daly",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PROPOSED RELEASE DATE:",
+          "value": "06/08/90",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DISTRIBUTE TO:",
+          "value": "CAMEL GT mailing list & Watkins Glen press kits",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CONTACT:",
+          "value": "Earl Fannin",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "NEED APPROVALS NO LATER THAN:",
+          "value": "06/07/90",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_026": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 7,
+      "key_value_accuracy": 0.875,
+      "value_found_anywhere": 6,
+      "value_recall": 0.75,
+      "pairs": [
+        {
+          "key": "Note:'",
+          "value": "A Complete Testing Request consists of Parts I (Test Request), 2 (Sample Design), 3 (Sample Release), and 4 (Protocols)",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "Request Code",
+          "value": "Project Juice",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Requester",
+          "value": "Ed Carmines",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Cost Center to be Charged",
+          "value": "2R6",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Study Objective",
+          "value": "Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Samples",
+          "value": "Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CC:",
+          "value": "Dr. C. Ellis (Part 1 only) Dr. P. Terpstra Dr. W. Reininghaus",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "RECEIVED",
+          "value": "JUL 2 9 1998",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_027": {
+      "num_pairs": 8,
+      "key_value_pairs_correct": 6,
+      "key_value_accuracy": 0.75,
+      "value_found_anywhere": 6,
+      "value_recall": 0.75,
+      "pairs": [
+        {
+          "key": "FAX NO.",
+          "value": "703 323 4440",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "P.",
+          "value": "1",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "HBI Fax:",
+          "value": "703-323-4440",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Company:",
+          "value": "Philip Morris Co",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Attention:",
+          "value": "Mopsy Pottorff",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "From:",
+          "value": "Gray Robertson",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Subject:",
+          "value": "Restaurants - Smoking Bills etc",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "Fax pages:",
+          "value": "7. (total including cover sheet)",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        }
+      ]
+    },
+    "funsd_028": {
+      "num_pairs": 6,
+      "key_value_pairs_correct": 4,
+      "key_value_accuracy": 0.6667,
+      "value_found_anywhere": 5,
+      "value_recall": 0.8333,
+      "pairs": [
+        {
+          "key": "SUGGESTED SUPPLIER:",
+          "value": "EMC12 DEPT REQ NO: DV42780201 ELECTRIC MOTOR & CONTRACTING",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "IREQUESTOR:",
+          "value": "VARGO, DANA",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SHIP TO:",
+          "value": "500",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "DELIVER TO:",
+          "value": "STOCKROOM 411000",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ACCOUNT:",
+          "value": "180-400",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "ANALYST:",
+          "value": "V:D VARGO",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    },
+    "funsd_029": {
+      "num_pairs": 13,
+      "key_value_pairs_correct": 10,
+      "key_value_accuracy": 0.7692,
+      "value_found_anywhere": 9,
+      "value_recall": 0.6923,
+      "pairs": [
+        {
+          "key": "MANUFACTURER'S NAME",
+          "value": "H. Kohnstamm & Co ., Inc.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "STREET ADDRESS",
+          "value": "P.O. Box 13",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "CITY, STATE. AND ZIP CODE",
+          "value": "Harrison, N.J. 07029",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "EMERGENCY TELEPHONE NO.",
+          "value": "(201) 991-2355",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "PRODUCT CLASS",
+          "value": "Liquid Flavoring Material",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "MANUFACTURERS CODE IDENTIFICATION",
+          "value": "P-532 Rose of Latakia Oils",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "BOILING RANGE",
+          "value": "Not applicable",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "VAPOR DENSITY",
+          "value": "HEAVIER.",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "FLAMMABILITY CLASSIFICATION",
+          "value": "Flammable Liquid",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "FLASH POINT",
+          "value": "80ºF",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "EXTINGUISHING MEDIA",
+          "value": "CO, or Foam",
+          "key_value_pair_correct": false,
+          "value_found_anywhere": false
+        },
+        {
+          "key": "UNUSUAL FIRE AND EXPLOSION HAZARDS",
+          "value": "None-Follow Good Manufacturing Procedures.",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        },
+        {
+          "key": "SPECIAL FIRE FIGHTING PROCEDURES",
+          "value": "NONE",
+          "key_value_pair_correct": true,
+          "value_found_anywhere": true
+        }
+      ]
+    }
+  }
+}

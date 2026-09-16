@@ -1,0 +1,510 @@
+{
+  "job": {
+    "id": "pjb-xejq3zgacgeep07jmg3p9sm491ca",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:16:39.234901Z",
+    "error_message": null,
+    "name": "funsd_023.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:16:53.311973Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "MAR-03-98 TUE 13:16",
+                "value": "MAR-03-98 TUE 13:16",
+                "bbox": [
+                  {
+                    "h": 23.28,
+                    "w": 182.13,
+                    "x": 61.83,
+                    "y": 95.26,
+                    "confidence": 0.94,
+                    "end_index": 18,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "P.01\n2065577695",
+                "value": "P.01\n2065577695",
+                "bbox": [
+                  {
+                    "h": 116.23,
+                    "w": 24.61,
+                    "x": 921.53,
+                    "y": 1060.76,
+                    "confidence": 0.84,
+                    "end_index": 14,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "MAR-03-98 TUE 13:16\n\nP.01\n2065577695",
+            "bbox": [
+              {
+                "h": 1081.73,
+                "w": 884.31,
+                "x": 61.83,
+                "y": 95.26,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 1,
+            "md": "# BOZELL SAWYER MILLER GROUP",
+            "value": "BOZELL SAWYER MILLER GROUP",
+            "bbox": [
+              {
+                "h": 22.16,
+                "w": 540.97,
+                "x": 232.81,
+                "y": 185.32,
+                "confidence": 0.91,
+                "end_index": 27,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "BOZELL | ESKEW",
+            "value": "BOZELL | ESKEW",
+            "bbox": [
+              {
+                "h": 18.48,
+                "w": 137.49,
+                "x": 437.3,
+                "y": 241.66,
+                "confidence": 0.84,
+                "end_index": 13,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "logo: FAX",
+            "value": "logo: FAX",
+            "bbox": [
+              {
+                "h": 60.0,
+                "w": 146.0,
+                "x": 111.0,
+                "y": 334.0,
+                "confidence": 0.76,
+                "end_index": 8,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**PLEASE DELIVER TO:** ELLIS WOODWARD",
+                "value": "PLEASE DELIVER TO: ELLIS WOODWARD",
+                "bbox": [
+                  {
+                    "h": 17.18,
+                    "w": 164.83,
+                    "x": 322.6,
+                    "y": 387.31,
+                    "confidence": 1.0,
+                    "end_index": 21,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.39,
+                    "w": 180.25,
+                    "x": 577.33,
+                    "y": 385.55,
+                    "confidence": 1.0,
+                    "end_index": 36,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 23
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**COMPANY:**",
+                "value": "COMPANY:",
+                "bbox": [
+                  {
+                    "h": 15.86,
+                    "w": 89.43,
+                    "x": 322.51,
+                    "y": 469.28,
+                    "confidence": 0.96,
+                    "end_index": 11,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**FAX NUMBER:** 212-907-5379",
+                "value": "FAX NUMBER: 212-907-5379",
+                "bbox": [
+                  {
+                    "h": 18.07,
+                    "w": 378.13,
+                    "x": 320.84,
+                    "y": 547.7,
+                    "confidence": 0.54,
+                    "end_index": 27,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.63,
+                    "w": 120.31,
+                    "x": 578.66,
+                    "y": 547.7,
+                    "confidence": 1.0,
+                    "end_index": 27,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 16
+                  },
+                  {
+                    "h": 17.184375000000045,
+                    "w": 115.02611940298505,
+                    "x": 320.8391376451078,
+                    "y": 548.578125,
+                    "confidence": 0.54,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 17.625,
+                    "w": 120.31467661691545,
+                    "x": 578.6563018242123,
+                    "y": 547.696875,
+                    "confidence": 0.54,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**SENT BY:** Trish Rodriguez",
+                "value": "SENT BY: Trish Rodriguez",
+                "bbox": [
+                  {
+                    "h": 19.39,
+                    "w": 401.49,
+                    "x": 320.84,
+                    "y": 645.52,
+                    "confidence": 0.54,
+                    "end_index": 27,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.39,
+                    "w": 144.11,
+                    "x": 578.22,
+                    "y": 645.52,
+                    "confidence": 1.0,
+                    "end_index": 27,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 13
+                  },
+                  {
+                    "h": 18.065624999999955,
+                    "w": 77.56550580431178,
+                    "x": 320.8391376451078,
+                    "y": 645.515625,
+                    "confidence": 0.54,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 19.387500000000045,
+                    "w": 144.11318407960198,
+                    "x": 578.2155887230515,
+                    "y": 645.515625,
+                    "confidence": 0.54,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**DATE:** March 3, 1998",
+                "value": "DATE: March 3, 1998",
+                "bbox": [
+                  {
+                    "h": 21.15,
+                    "w": 384.74,
+                    "x": 319.08,
+                    "y": 731.88,
+                    "confidence": 0.53,
+                    "end_index": 22,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.63,
+                    "w": 125.6,
+                    "x": 578.22,
+                    "y": 733.2,
+                    "confidence": 1.0,
+                    "end_index": 22,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 10
+                  },
+                  {
+                    "h": 21.149999999999977,
+                    "w": 56.85199004975124,
+                    "x": 319.07628524046436,
+                    "y": 731.878125,
+                    "confidence": 0.53,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 17.625,
+                    "w": 125.60323383084574,
+                    "x": 578.2155887230515,
+                    "y": 733.2,
+                    "confidence": 0.53,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**NUMBER OF PAGES INCLUDING COVER SHEET:**",
+                "value": "NUMBER OF PAGES INCLUDING COVER SHEET:",
+                "bbox": [
+                  {
+                    "h": 37.45,
+                    "w": 213.31,
+                    "x": 320.84,
+                    "y": 821.77,
+                    "confidence": 1.0,
+                    "end_index": 41,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**IF THERE IS A PROBLEM WITH THIS FAX PLEASE CONTACT:** Trish, 202-739-0241",
+                "value": "IF THERE IS A PROBLEM WITH THIS FAX PLEASE CONTACT: Trish, 202-739-0241",
+                "bbox": [
+                  {
+                    "h": 18.51,
+                    "w": 347.28,
+                    "x": 319.96,
+                    "y": 947.34,
+                    "confidence": 1.0,
+                    "end_index": 74,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 16.74000000000001,
+                    "w": 324.36000000000007,
+                    "x": 320.84,
+                    "y": 930.6,
+                    "confidence": 0.61,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 664.89,
+                    "w": 442.87,
+                    "x": 318.3,
+                    "y": 386.18,
+                    "confidence": 0.61,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**COMMENTS:**",
+                "value": "COMMENTS:",
+                "bbox": [
+                  {
+                    "h": 22.47,
+                    "w": 96.52,
+                    "x": 319.08,
+                    "y": 1029.74,
+                    "confidence": 0.51,
+                    "end_index": 12,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **PLEASE DELIVER TO:** ELLIS WOODWARD\n* **COMPANY:**\n* **FAX NUMBER:** 212-907-5379\n* **SENT BY:** Trish Rodriguez\n* **DATE:** March 3, 1998\n* **NUMBER OF PAGES INCLUDING COVER SHEET:**\n* **IF THERE IS A PROBLEM WITH THIS FAX PLEASE CONTACT:** Trish, 202-739-0241\n* **COMMENTS:**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 666.66,
+                "w": 438.5,
+                "x": 319.08,
+                "y": 385.55,
+                "confidence": 0.82,
+                "end_index": 280,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "1501 M Street NW Suite 600 Washington DC 20005 1710 202-739-0200 Fax 202-659-8287",
+            "value": "1501 M Street NW Suite 600 Washington DC 20005 1710 202-739-0200 Fax 202-659-8287",
+            "bbox": [
+              {
+                "h": 16.34,
+                "w": 744.09,
+                "x": 131.96,
+                "y": 1230.37,
+                "confidence": 0.83,
+                "end_index": 80,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "The information contained in this facsimile message is intended only for the use of the individual or entity named above. If the reader of this message is not the intended recipient, or the employee or agent responsible for delivering it to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the address shown above. Thank You.",
+                "value": "The information contained in this facsimile message is intended only for the use of the individual or entity named above. If the reader of this message is not the intended recipient, or the employee or agent responsible for delivering it to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the address shown above. Thank You.",
+                "bbox": [
+                  {
+                    "h": 57.52,
+                    "w": 916.94,
+                    "x": 45.64,
+                    "y": 1273.21,
+                    "confidence": 0.88,
+                    "end_index": 550,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "The information contained in this facsimile message is intended only for the use of the individual or entity named above. If the reader of this message is not the intended recipient, or the employee or agent responsible for delivering it to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the address shown above. Thank You.",
+            "bbox": [
+              {
+                "h": 57.52,
+                "w": 916.94,
+                "x": 45.64,
+                "y": 1273.21,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# BOZELL SAWYER MILLER GROUP\n\nBOZELL | ESKEW\n\nlogo: FAX\n\n* **PLEASE DELIVER TO:** ELLIS WOODWARD\n* **COMPANY:**     \n* **FAX NUMBER:** 212-907-5379\n* **SENT BY:** Trish Rodriguez\n* **DATE:** March 3, 1998\n* **NUMBER OF PAGES INCLUDING COVER SHEET:**     \n* **IF THERE IS A PROBLEM WITH THIS FAX PLEASE CONTACT:** Trish, 202-739-0241\n* **COMMENTS:**     \n\n\n\n1501 M Street NW Suite 600 Washington DC 20005 1710 202-739-0200 Fax 202-659-8287",
+        "page_number": 1,
+        "success": true,
+        "footer": "The information contained in this facsimile message is intended only for the use of the individual or entity named above. If the reader of this message is not the intended recipient, or the employee or agent responsible for delivering it to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the address shown above. Thank You.",
+        "header": "MAR-03-98 TUE 13:16\n\nP.01\n2065577695",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

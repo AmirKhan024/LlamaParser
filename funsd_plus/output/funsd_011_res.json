@@ -1,0 +1,596 @@
+{
+  "job": {
+    "id": "pjb-6mfibs7o6yj7fqi93fl1bki8vaza",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:06:55.635237Z",
+    "error_message": null,
+    "name": "funsd_011.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:07:09.320729Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "Ps file leadership file",
+            "value": "Ps file leadership file",
+            "bbox": [
+              {
+                "h": 48.12,
+                "w": 403.7,
+                "x": 576.56,
+                "y": 97.3,
+                "confidence": 0.82,
+                "end_index": 22,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## COVINGTON & BURLING",
+            "value": "COVINGTON & BURLING",
+            "bbox": [
+              {
+                "h": 35.69,
+                "w": 404.57,
+                "x": 101.36,
+                "y": 148.05,
+                "confidence": 0.89,
+                "end_index": 21,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "1201 PENNSYLVANIA AVENUE, N.W.\nP.O. BOX 7566\nWASHINGTON, D.C. 20044-7566",
+            "value": "1201 PENNSYLVANIA AVENUE, N.W.\nP.O. BOX 7566\nWASHINGTON, D.C. 20044-7566",
+            "bbox": [
+              {
+                "h": 72.7,
+                "w": 360.94,
+                "x": 100.92,
+                "y": 222.08,
+                "confidence": 0.77,
+                "end_index": 71,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 25.56,
+                "w": 311.58,
+                "x": 100.92,
+                "y": 269.22,
+                "confidence": 1.0,
+                "end_index": 71,
+                "label": "text",
+                "r": null,
+                "start_index": 45
+              },
+              {
+                "h": 201.59,
+                "w": 361.98,
+                "x": 99.91,
+                "y": 222.49,
+                "confidence": 0.77,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEFAX**: (202) 662-6291",
+            "value": "TELEFAX: (202) 662-6291",
+            "bbox": [
+              {
+                "h": 22.02,
+                "w": 243.83,
+                "x": 102.07,
+                "y": 314.87,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.69,
+                "w": 140.07,
+                "x": 208.58,
+                "y": 316.31,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEX**: 89-593 (COVLING WSH)",
+            "value": "TELEX: 89-593 (COVLING WSH)",
+            "bbox": [
+              {
+                "h": 26.0,
+                "w": 309.82,
+                "x": 101.8,
+                "y": 360.87,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CABLE**: COVLING",
+            "value": "CABLE: COVLING",
+            "bbox": [
+              {
+                "h": 22.03,
+                "w": 178.49,
+                "x": 100.92,
+                "y": 405.37,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "LEONFIELD HOUSE\nCURZON STREET\nLONDON W1Y 8AS\nENGLAND",
+            "value": "LEONFIELD HOUSE\nCURZON STREET\nLONDON W1Y 8AS\nENGLAND",
+            "bbox": [
+              {
+                "h": 90.32,
+                "w": 205.94,
+                "x": 652.01,
+                "y": 151.18,
+                "confidence": 0.83,
+                "end_index": 51,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEPHONE**: 011-44-071-495-5655",
+            "value": "TELEPHONE: 011-44-071-495-5655",
+            "bbox": [
+              {
+                "h": 24.68,
+                "w": 332.3,
+                "x": 587.91,
+                "y": 241.9,
+                "confidence": 1.0,
+                "end_index": 33,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 45.24,
+                "w": 331.64,
+                "x": 588.35,
+                "y": 243.34,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEFAX**: 011-44-071-495-3101",
+            "value": "TELEFAX: 011-44-071-495-3101",
+            "bbox": [
+              {
+                "h": 21.34,
+                "w": 194.11,
+                "x": 708.85,
+                "y": 267.25,
+                "confidence": 0.96,
+                "end_index": 31,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "BRUSSELS CORRESPONDENT OFFICE\n44 AVENUE DES ARTS",
+            "value": "BRUSSELS CORRESPONDENT OFFICE\n44 AVENUE DES ARTS",
+            "bbox": [
+              {
+                "h": 43.75,
+                "w": 377.37,
+                "x": 565.73,
+                "y": 335.24,
+                "confidence": 0.82,
+                "end_index": 47,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "BRUSSELS 1040 BELGIUM",
+            "value": "BRUSSELS 1040 BELGIUM",
+            "bbox": [
+              {
+                "h": 20.86,
+                "w": 257.05,
+                "x": 625.5,
+                "y": 380.96,
+                "confidence": 0.79,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEPHONE**: 011-32-2-549-5230",
+            "value": "TELEPHONE: 011-32-2-549-5230",
+            "bbox": [
+              {
+                "h": 20.72,
+                "w": 304.79,
+                "x": 594.22,
+                "y": 400.36,
+                "confidence": 1.0,
+                "end_index": 31,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 41.34,
+                "w": 308.15,
+                "x": 599.4,
+                "y": 402.67,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEFAX**: 011-32-2-502-1598",
+            "value": "TELEFAX: 011-32-2-502-1598",
+            "bbox": [
+              {
+                "h": 19.97,
+                "w": 172.83,
+                "x": 719.65,
+                "y": 424.02,
+                "confidence": 0.96,
+                "end_index": 29,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "THIS FACSIMILE TRANSMISSION IS INTENDED ONLY FOR THE ADDRESSEE SHOWN BELOW. IT MAY CONTAIN INFORMATION THAT IS PRIVILEGED, CONFIDENTIAL OR OTHERWISE PROTECTED FROM DISCLOSURE. ANY REVIEW, DISSEMINATION OR USE OF THIS TRANSMISSION OR ITS CONTENTS BY PERSONS OTHER THAN THE ADDRESSEE IS STRICTLY PROHIBITED. IF YOU HAVE RECEIVED THIS TRANSMISSION IN ERROR, PLEASE NOTIFY US IMMEDIATELY AND MAIL THE ORIGINAL TO US AT THE ABOVE ADDRESS. THANK YOU.",
+            "value": "THIS FACSIMILE TRANSMISSION IS INTENDED ONLY FOR THE ADDRESSEE SHOWN BELOW. IT MAY CONTAIN INFORMATION THAT IS PRIVILEGED, CONFIDENTIAL OR OTHERWISE PROTECTED FROM DISCLOSURE. ANY REVIEW, DISSEMINATION OR USE OF THIS TRANSMISSION OR ITS CONTENTS BY PERSONS OTHER THAN THE ADDRESSEE IS STRICTLY PROHIBITED. IF YOU HAVE RECEIVED THIS TRANSMISSION IN ERROR, PLEASE NOTIFY US IMMEDIATELY AND MAIL THE ORIGINAL TO US AT THE ABOVE ADDRESS. THANK YOU.",
+            "bbox": [
+              {
+                "h": 89.4,
+                "w": 861.1,
+                "x": 99.6,
+                "y": 457.9,
+                "confidence": 0.99,
+                "end_index": 443,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TO**: Ginny Murphy -- (212) 907-5978",
+            "value": "TO: Ginny Murphy -- (212) 907-5978",
+            "bbox": [
+              {
+                "h": 23.63,
+                "w": 355.16,
+                "x": 102.0,
+                "y": 559.2,
+                "confidence": 0.89,
+                "end_index": 37,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FROM**: Mark F. Kightlinger",
+            "value": "FROM: Mark F. Kightlinger",
+            "bbox": [
+              {
+                "h": 25.91,
+                "w": 266.29,
+                "x": 539.04,
+                "y": 555.79,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Ron Milstein -- (910) 335-7707",
+            "value": "Ron Milstein -- (910) 335-7707",
+            "bbox": [
+              {
+                "h": 21.45,
+                "w": 290.62,
+                "x": 136.56,
+                "y": 604.79,
+                "confidence": 0.89,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tom Rucker -- (910) 741-7598",
+            "value": "Tom Rucker -- (910) 741-7598",
+            "bbox": [
+              {
+                "h": 19.55,
+                "w": 286.52,
+                "x": 135.66,
+                "y": 649.42,
+                "confidence": 0.8,
+                "end_index": 27,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.85,
+                "w": 286.17,
+                "x": 136.36,
+                "y": 650.08,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Bart Freedman -- (502) 568-7297",
+            "value": "Bart Freedman -- (502) 568-7297",
+            "bbox": [
+              {
+                "h": 22.02,
+                "w": 310.57,
+                "x": 133.51,
+                "y": 691.79,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**NO. OF PAGES**: 5",
+            "value": "NO. OF PAGES: 5",
+            "bbox": [
+              {
+                "h": 19.74,
+                "w": 176.46,
+                "x": 100.99,
+                "y": 727.56,
+                "confidence": 0.87,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE**: August 8, 1997",
+            "value": "DATE: August 8, 1997",
+            "bbox": [
+              {
+                "h": 23.27,
+                "w": 214.66,
+                "x": 543.52,
+                "y": 724.37,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.25,
+                "w": 212.47,
+                "x": 546.31,
+                "y": 728.17,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "PLEASE CALL (202) 662-6280 (TELECOMMUNICATIONS) IF THERE ARE TRANSMISSION PROBLEMS.",
+            "value": "PLEASE CALL (202) 662-6280 (TELECOMMUNICATIONS) IF THERE ARE TRANSMISSION PROBLEMS.",
+            "bbox": [
+              {
+                "h": 18.13,
+                "w": 799.51,
+                "x": 99.5,
+                "y": 763.03,
+                "confidence": 0.88,
+                "end_index": 82,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**COMMENTS**:",
+            "value": "COMMENTS:",
+            "bbox": [
+              {
+                "h": 19.07,
+                "w": 127.28,
+                "x": 99.78,
+                "y": 797.37,
+                "confidence": 0.86,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "20",
+                "value": "20",
+                "bbox": [
+                  {
+                    "h": 119.04,
+                    "w": 18.4,
+                    "x": 918.96,
+                    "y": 1107.69,
+                    "confidence": 0.84,
+                    "end_index": 1,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "P.01 08.08.1997 15:39 FROM COVINGTON & BURLING",
+                "value": "P.01 08.08.1997 15:39 FROM COVINGTON & BURLING",
+                "bbox": [
+                  {
+                    "h": 15.51,
+                    "w": 878.04,
+                    "x": 90.36,
+                    "y": 1315.53,
+                    "confidence": 0.94,
+                    "end_index": 45,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "20\n\nP.01 08.08.1997 15:39 FROM COVINGTON & BURLING",
+            "bbox": [
+              {
+                "h": 223.35,
+                "w": 878.04,
+                "x": 90.36,
+                "y": 1107.69,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "Ps file leadership file\n\n## COVINGTON & BURLING\n\n1201 PENNSYLVANIA AVENUE, N.W.\nP.O. BOX 7566\nWASHINGTON, D.C. 20044-7566\n\n**TELEFAX**: (202) 662-6291\n\n**TELEX**: 89-593 (COVLING WSH)\n\n**CABLE**: COVLING\n\nLEONFIELD HOUSE\nCURZON STREET\nLONDON W1Y 8AS\nENGLAND\n\n**TELEPHONE**: 011-44-071-495-5655\n\n**TELEFAX**: 011-44-071-495-3101\n\nBRUSSELS CORRESPONDENT OFFICE\n44 AVENUE DES ARTS\n\nBRUSSELS 1040 BELGIUM\n\n**TELEPHONE**: 011-32-2-549-5230\n\n**TELEFAX**: 011-32-2-502-1598\n\nTHIS FACSIMILE TRANSMISSION IS INTENDED ONLY FOR THE ADDRESSEE SHOWN BELOW. IT MAY CONTAIN INFORMATION THAT IS PRIVILEGED, CONFIDENTIAL OR OTHERWISE PROTECTED FROM DISCLOSURE. ANY REVIEW, DISSEMINATION OR USE OF THIS TRANSMISSION OR ITS CONTENTS BY PERSONS OTHER THAN THE ADDRESSEE IS STRICTLY PROHIBITED. IF YOU HAVE RECEIVED THIS TRANSMISSION IN ERROR, PLEASE NOTIFY US IMMEDIATELY AND MAIL THE ORIGINAL TO US AT THE ABOVE ADDRESS. THANK YOU.\n\n**TO**: Ginny Murphy -- (212) 907-5978\n\n**FROM**: Mark F. Kightlinger\n\nRon Milstein -- (910) 335-7707\n\nTom Rucker -- (910) 741-7598\n\nBart Freedman -- (502) 568-7297\n\n**NO. OF PAGES**: 5\n\n**DATE**: August 8, 1997\n\nPLEASE CALL (202) 662-6280 (TELECOMMUNICATIONS) IF THERE ARE TRANSMISSION PROBLEMS.\n\n**COMMENTS**:",
+        "page_number": 1,
+        "success": true,
+        "footer": "20\n\nP.01 08.08.1997 15:39 FROM COVINGTON & BURLING",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

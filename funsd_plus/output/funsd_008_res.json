@@ -1,0 +1,549 @@
+{
+  "job": {
+    "id": "pjb-3a1gvmoujoo4vo318c0bp0o1iwsy",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:06:09.233566Z",
+    "error_message": null,
+    "name": "funsd_008.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:06:20.532963Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "logo: Philip Morris",
+            "value": "logo: Philip Morris",
+            "bbox": [
+              {
+                "h": 93.16,
+                "w": 134.4,
+                "x": 429.03,
+                "y": 100.49,
+                "confidence": 0.89,
+                "end_index": 18,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Philip Morris Management Corp.",
+            "value": "Philip Morris Management Corp.",
+            "bbox": [
+              {
+                "h": 35.69,
+                "w": 435.42,
+                "x": 295.72,
+                "y": 189.91,
+                "confidence": 1.0,
+                "end_index": 32,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 57.01,
+                "w": 425.76,
+                "x": 300.87,
+                "y": 193.72,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 2,
+            "md": "## External Relations",
+            "value": "External Relations",
+            "bbox": [
+              {
+                "h": 29.08,
+                "w": 241.95,
+                "x": 393.56,
+                "y": 225.16,
+                "confidence": 0.69,
+                "end_index": 20,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "120 Park Avenue, New York, NY 10017",
+            "value": "120 Park Avenue, New York, NY 10017",
+            "bbox": [
+              {
+                "h": 24.48,
+                "w": 401.07,
+                "x": 315.31,
+                "y": 258.96,
+                "confidence": 0.84,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Date:** October 27, 1997",
+            "value": "Date: October 27, 1997",
+            "bbox": [
+              {
+                "h": 30.4,
+                "w": 236.66,
+                "x": 479.06,
+                "y": 352.94,
+                "confidence": 1.0,
+                "end_index": 25,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**To:** <u>Lance Morgan</u>",
+                "value": "To: <u>Lance Morgan</u>",
+                "bbox": [
+                  {
+                    "h": 22.91,
+                    "w": 158.66,
+                    "x": 259.14,
+                    "y": 459.13,
+                    "confidence": 0.45,
+                    "end_index": 26,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 22.91,
+                    "w": 158.66,
+                    "x": 259.14,
+                    "y": 459.13,
+                    "confidence": 1.0,
+                    "end_index": 22,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 11
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Company:** <u>Bozell Sawyer Miller</u>",
+                "value": "Company: <u>Bozell Sawyer Miller</u>",
+                "bbox": [
+                  {
+                    "h": 22.47,
+                    "w": 342.87,
+                    "x": 126.04,
+                    "y": 490.42,
+                    "confidence": 1.0,
+                    "end_index": 35,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 20.91,
+                    "w": 238.27,
+                    "x": 259.98,
+                    "y": 493.04,
+                    "confidence": 1.0,
+                    "end_index": null,
+                    "label": "text",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Fax:** <u>202-659-8287</u>",
+                "value": "Fax: <u>202-659-8287</u>",
+                "bbox": [
+                  {
+                    "h": 193.88,
+                    "w": 271.92,
+                    "x": 123.4,
+                    "y": 517.73,
+                    "confidence": 0.45,
+                    "end_index": 27,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 20.71,
+                    "w": 128.25,
+                    "x": 267.07,
+                    "y": 521.26,
+                    "confidence": 1.0,
+                    "end_index": 23,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 12
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Phone:** <u>202-739-0285</u>",
+                "value": "Phone: <u>202-739-0285</u>",
+                "bbox": [
+                  {
+                    "h": 133.07,
+                    "w": 267.95,
+                    "x": 124.28,
+                    "y": 549.46,
+                    "confidence": 0.46,
+                    "end_index": 29,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.15,
+                    "w": 128.25,
+                    "x": 263.99,
+                    "y": 551.66,
+                    "confidence": 1.0,
+                    "end_index": 25,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 14
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**From:** <u>Peggy Roberts</u>",
+                "value": "From: <u>Peggy Roberts</u>",
+                "bbox": [
+                  {
+                    "h": 25.12,
+                    "w": 302.77,
+                    "x": 124.28,
+                    "y": 626.57,
+                    "confidence": 0.46,
+                    "end_index": 29,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 22.47,
+                    "w": 163.06,
+                    "x": 263.99,
+                    "y": 628.33,
+                    "confidence": 1.0,
+                    "end_index": 25,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 13
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Phone:** <u>212-878-2149</u>",
+                "value": "Phone: <u>212-878-2149</u>",
+                "bbox": [
+                  {
+                    "h": 20.71,
+                    "w": 148.08,
+                    "x": 277.65,
+                    "y": 658.29,
+                    "confidence": 1.0,
+                    "end_index": 25,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 14
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Fax:** <u>212-907-5544</u>",
+                "value": "Fax: <u>212-907-5544</u>",
+                "bbox": [
+                  {
+                    "h": 20.71,
+                    "w": 147.64,
+                    "x": 277.65,
+                    "y": 687.82,
+                    "confidence": 1.0,
+                    "end_index": 23,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 12
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Number of Pages Including Cover Sheet:** <u>11</u>",
+                "value": "Number of Pages Including Cover Sheet: <u>11</u>",
+                "bbox": [
+                  {
+                    "h": 22.18,
+                    "w": 375.31,
+                    "x": 128.52,
+                    "y": 760.66,
+                    "confidence": 0.89,
+                    "end_index": 51,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**IN CASE OF DIFFICULTY PLEASE CALL (212) 880-3900**",
+                "value": "IN CASE OF DIFFICULTY PLEASE CALL (212) 880-3900",
+                "bbox": [
+                  {
+                    "h": 20.27,
+                    "w": 510.35,
+                    "x": 127.81,
+                    "y": 782.99,
+                    "confidence": 1.0,
+                    "end_index": 51,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 42.55,
+                    "w": 508.73,
+                    "x": 127.99,
+                    "y": 760.28,
+                    "confidence": 1.0,
+                    "end_index": null,
+                    "label": "text",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **To:** <u>Lance Morgan</u>\n\n* **Company:** <u>Bozell Sawyer Miller</u>\n\n* **Fax:** <u>202-659-8287</u>\n\n* **Phone:** <u>202-739-0285</u>\n\n* **From:** <u>Peggy Roberts</u>\n\n* **Phone:** <u>212-878-2149</u>\n\n* **Fax:** <u>212-907-5544</u>\n\n* **Number of Pages Including Cover Sheet:** <u>11</u>\n\n* **IN CASE OF DIFFICULTY PLEASE CALL (212) 880-3900**",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 344.13,
+                "w": 514.76,
+                "x": 123.4,
+                "y": 459.13,
+                "confidence": 0.82,
+                "end_index": 350,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "COMMENTS/MESSAGE:",
+            "value": "COMMENTS/MESSAGE:",
+            "bbox": [
+              {
+                "h": 16.73,
+                "w": 236.54,
+                "x": 128.66,
+                "y": 854.64,
+                "confidence": 0.84,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Please take a look at the attached revised press statements on the upcoming Appeals Court decision in the FDA case.",
+            "value": "Please take a look at the attached revised press statements on the upcoming Appeals Court decision in the FDA case.",
+            "bbox": [
+              {
+                "h": 45.66,
+                "w": 721.03,
+                "x": 128.54,
+                "y": 925.26,
+                "confidence": 0.98,
+                "end_index": 114,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Any questions or suggestions should be directed to Scott Williams or Jennifer Swint at Bozell Sawyer Miller. They can be reached at the following numbers: phone: 202-739-0285; fax: 202-659-8287.",
+            "value": "Any questions or suggestions should be directed to Scott Williams or Jennifer Swint at Bozell Sawyer Miller. They can be reached at the following numbers: phone: 202-739-0285; fax: 202-659-8287.",
+            "bbox": [
+              {
+                "h": 68.89,
+                "w": 722.42,
+                "x": 128.77,
+                "y": 996.02,
+                "confidence": 0.98,
+                "end_index": 193,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 113.33,
+                "w": 374.31,
+                "x": 125.27,
+                "y": 459.92,
+                "confidence": 0.98,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 249.91,
+                "w": 401.59,
+                "x": 124.91,
+                "y": 460.65,
+                "confidence": 0.98,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>THIS FACSIMILE TRANSMISSION (AND/OR THE DOCUMENTS ACCOMPANYING IT) MAY CONTAIN PRIVILEGED AND CONFIDENTIAL INFORMATION BELONGING TO THE SENDER.</u>",
+            "value": "<u>THIS FACSIMILE TRANSMISSION (AND/OR THE DOCUMENTS ACCOMPANYING IT) MAY CONTAIN PRIVILEGED AND CONFIDENTIAL INFORMATION BELONGING TO THE SENDER.</u>",
+            "bbox": [
+              {
+                "h": 37.53,
+                "w": 762.06,
+                "x": 128.86,
+                "y": 1138.26,
+                "confidence": 0.8,
+                "end_index": 149,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>The information is intended only for use by the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.</u>",
+            "value": "<u>The information is intended only for use by the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.</u>",
+            "bbox": [
+              {
+                "h": 98.97,
+                "w": 774.05,
+                "x": 129.06,
+                "y": 1178.53,
+                "confidence": 0.91,
+                "end_index": 434,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2083468154",
+                "value": "2083468154",
+                "bbox": [
+                  {
+                    "h": 130.98,
+                    "w": 21.73,
+                    "x": 949.09,
+                    "y": 1123.86,
+                    "confidence": 0.88,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2083468154",
+            "bbox": [
+              {
+                "h": 130.98,
+                "w": 21.73,
+                "x": 949.09,
+                "y": 1123.86,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: Philip Morris\n\n## Philip Morris Management Corp.\n## External Relations\n\n120 Park Avenue, New York, NY 10017\n\n**Date:** October 27, 1997\n\n*   **To:** <u>Lance Morgan</u>\n*   **Company:** <u>Bozell Sawyer Miller</u>\n*   **Fax:** <u>202-659-8287</u>\n*   **Phone:** <u>202-739-0285</u>\n\n*   **From:** <u>Peggy Roberts</u>\n*   **Phone:** <u>212-878-2149</u>\n*   **Fax:** <u>212-907-5544</u>\n\n*   **Number of Pages Including Cover Sheet:** <u>11</u>\n*   **IN CASE OF DIFFICULTY PLEASE CALL (212) 880-3900**\n\nCOMMENTS/MESSAGE:\n\nPlease take a look at the attached revised press statements on the upcoming Appeals Court decision in the FDA case.\n\nAny questions or suggestions should be directed to Scott Williams or Jennifer Swint at Bozell Sawyer Miller. They can be reached at the following numbers: phone: 202-739-0285; fax: 202-659-8287.\n\n<u>THIS FACSIMILE TRANSMISSION (AND/OR THE DOCUMENTS ACCOMPANYING IT) MAY CONTAIN PRIVILEGED AND CONFIDENTIAL INFORMATION BELONGING TO THE SENDER.</u>\n\n<u>The information is intended only for use by the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.</u>",
+        "page_number": 1,
+        "success": true,
+        "footer": "2083468154",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

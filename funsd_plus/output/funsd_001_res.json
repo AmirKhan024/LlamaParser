@@ -1,0 +1,524 @@
+{
+  "job": {
+    "id": "pjb-63dpy2xtvabp4n30sod4z7tc4vj4",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:03:27.671045Z",
+    "error_message": null,
+    "name": "funsd_001.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:03:40.560452Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## <u>BRANDS BUSINESS UNIT PRODUCT APPROVAL NOTE</u>",
+            "value": "<u>BRANDS BUSINESS UNIT PRODUCT APPROVAL NOTE</u>",
+            "bbox": [
+              {
+                "h": 22.11,
+                "w": 542.8,
+                "x": 231.77,
+                "y": 116.04,
+                "confidence": 0.93,
+                "end_index": 51,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "items": [
+              {
+                "md": "**BBU Note No.**: 96-61",
+                "value": "BBU Note No.: 96-61",
+                "bbox": [
+                  {
+                    "h": 25.12,
+                    "w": 239.19,
+                    "x": 91.23,
+                    "y": 187.71,
+                    "confidence": 0.62,
+                    "end_index": 22,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 24.674999999999983,
+                    "w": 131.77321724709785,
+                    "x": 91.22761194029852,
+                    "y": 188.146875,
+                    "confidence": 0.62,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 24.0966796875,
+                    "w": 54.06998859867332,
+                    "x": 276.3460895752718,
+                    "y": 187.70625,
+                    "confidence": 0.62,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Date**: 8/5/96",
+                "value": "Date: 8/5/96",
+                "bbox": [
+                  {
+                    "h": 27.76,
+                    "w": 171.88,
+                    "x": 535.91,
+                    "y": 186.38,
+                    "confidence": 0.61,
+                    "end_index": 15,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.759375000000006,
+                    "w": 58.61484245439465,
+                    "x": 535.9071310116086,
+                    "y": 186.384375,
+                    "confidence": 0.61,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 22.47187500000001,
+                    "w": 59.49626865671644,
+                    "x": 648.2889718076285,
+                    "y": 187.265625,
+                    "confidence": 0.61,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Temporary**: [ ]",
+                "value": "Temporary: [ ]",
+                "bbox": [
+                  {
+                    "h": 25.56,
+                    "w": 97.84,
+                    "x": 90.35,
+                    "y": 237.5,
+                    "confidence": 0.61,
+                    "end_index": 17,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Effective Date**:",
+                "value": "Effective Date:",
+                "bbox": [
+                  {
+                    "h": 25.12,
+                    "w": 130.45,
+                    "x": 338.91,
+                    "y": 235.73,
+                    "confidence": 1.0,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Termination Date**:",
+                "value": "Termination Date:",
+                "bbox": [
+                  {
+                    "h": 21.69,
+                    "w": 153.2,
+                    "x": 579.14,
+                    "y": 237.1,
+                    "confidence": 1.0,
+                    "end_index": 20,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Permanent**: [x]",
+                "value": "Permanent: [x]",
+                "bbox": [
+                  {
+                    "h": 21.69,
+                    "w": 94.32,
+                    "x": 90.11,
+                    "y": 263.61,
+                    "confidence": 0.62,
+                    "end_index": 17,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Type**:",
+                "value": "Type:",
+                "bbox": [
+                  {
+                    "h": 24.0,
+                    "w": 127.0,
+                    "x": 155.0,
+                    "y": 314.0,
+                    "confidence": 0.58,
+                    "end_index": 8,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "items": [
+                  {
+                    "md": "Product [x]",
+                    "value": "Product [x]",
+                    "bbox": [
+                      {
+                        "h": 176.25,
+                        "w": 774.93,
+                        "x": 93.54,
+                        "y": 186.12,
+                        "confidence": 0.61,
+                        "end_index": 10,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      },
+                      {
+                        "h": 21.59,
+                        "w": 25.12,
+                        "x": 241.95,
+                        "y": 313.28,
+                        "confidence": 1.0,
+                        "end_index": 10,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Process [ ]",
+                    "value": "Process [ ]",
+                    "bbox": [
+                      {
+                        "h": 22.89,
+                        "w": 70.89,
+                        "x": 338.83,
+                        "y": 310.6,
+                        "confidence": 0.95,
+                        "end_index": 10,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Packaging [ ]",
+                    "value": "Packaging [ ]",
+                    "bbox": [
+                      {
+                        "h": 26.51,
+                        "w": 95.52,
+                        "x": 522.66,
+                        "y": 310.6,
+                        "confidence": 0.61,
+                        "end_index": 12,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Flavor [ ]",
+                    "value": "Flavor [ ]",
+                    "bbox": [
+                      {
+                        "h": 18.51,
+                        "w": 56.4,
+                        "x": 713.02,
+                        "y": 313.44,
+                        "confidence": 0.96,
+                        "end_index": 9,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Tobacco [ ]",
+                    "value": "Tobacco [ ]",
+                    "bbox": [
+                      {
+                        "h": 26.88,
+                        "w": 79.77,
+                        "x": 152.49,
+                        "y": 336.2,
+                        "confidence": 0.94,
+                        "end_index": 10,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Material [ ]",
+                    "value": "Material [ ]",
+                    "bbox": [
+                      {
+                        "h": 22.89,
+                        "w": 77.5,
+                        "x": 338.83,
+                        "y": 337.11,
+                        "confidence": 0.61,
+                        "end_index": 11,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "Other [ ]",
+                    "value": "Other [ ]",
+                    "bbox": [
+                      {
+                        "h": 24.1,
+                        "w": 55.27,
+                        "x": 522.66,
+                        "y": 335.9,
+                        "confidence": 0.92,
+                        "end_index": 8,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  }
+                ],
+                "md": "* Product [x]\n* Process [ ]\n* Packaging [ ]\n* Flavor [ ]\n* Tobacco [ ]\n* Material [ ]\n* Other [ ]",
+                "ordered": false,
+                "bbox": [
+                  {
+                    "h": 176.96,
+                    "w": 774.93,
+                    "x": 93.54,
+                    "y": 186.12,
+                    "confidence": 0.83,
+                    "end_index": 96,
+                    "label": "list",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "list"
+              }
+            ],
+            "md": "* **BBU Note No.**: 96-61\n* **Date**: 8/5/96\n* **Temporary**: [ ]\n* **Effective Date**:\n* **Termination Date**:\n* **Permanent**: [x]\n* **Type**:\n  * Product [x]\n  * Process [ ]\n  * Packaging [ ]\n  * Flavor [ ]\n  * Tobacco [ ]\n  * Material [ ]\n  * Other [ ]",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 176.96,
+                "w": 778.36,
+                "x": 90.11,
+                "y": 186.12,
+                "confidence": 0.73,
+                "end_index": 255,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**SUBJECT: WINSTON Lt 100/CAMEL Lt 100 Specification Adjustments**",
+            "value": "SUBJECT: WINSTON Lt 100/CAMEL Lt 100 Specification Adjustments",
+            "bbox": [
+              {
+                "h": 20.48,
+                "w": 621.2,
+                "x": 93.71,
+                "y": 413.01,
+                "confidence": 1.0,
+                "end_index": 65,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**BACKGROUND:** Specifications for all WINSTON and CAMEL products were recently reviewed. In some instances adjustments were recommended (previous BU Notes #96-31; #96-39) while in other instances products/changes were still under investigation. In the case of WINSTON Lt 100/CAMEL Lt 100, BPU implementation initially caused drafts and dilutions to increase with a corresponding decrease in 'tar'. A subsequent paper change brought 'tar' values back up to target. Post BPU specification adjustments were made reflecting the higher drafts and dilutions. However, in the last six months, the drafts seem to be settling back to the pre-BPU levels. While investigations for an assignable cause are still underway (and include G-19 particle size; CRES filling capacity; others) the recommendation is to adjust specification targets back to what they were going in to BPU implementation.",
+            "value": "BACKGROUND: Specifications for all WINSTON and CAMEL products were recently reviewed. In some instances adjustments were recommended (previous BU Notes #96-31; #96-39) while in other instances products/changes were still under investigation. In the case of WINSTON Lt 100/CAMEL Lt 100, BPU implementation initially caused drafts and dilutions to increase with a corresponding decrease in 'tar'. A subsequent paper change brought 'tar' values back up to target. Post BPU specification adjustments were made reflecting the higher drafts and dilutions. However, in the last six months, the drafts seem to be settling back to the pre-BPU levels. While investigations for an assignable cause are still underway (and include G-19 particle size; CRES filling capacity; others) the recommendation is to adjust specification targets back to what they were going in to BPU implementation.",
+            "bbox": [
+              {
+                "h": 249.7,
+                "w": 803.28,
+                "x": 92.84,
+                "y": 464.82,
+                "confidence": 1.0,
+                "end_index": 881,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**RECOMMENDATION:** The recommendation is to adjust HO and HC drafts and dilution targets back to where they were just as BPU implementation was occurring. Please refer to the attachment.",
+            "value": "RECOMMENDATION: The recommendation is to adjust HO and HC drafts and dilution targets back to where they were just as BPU implementation was occurring. Please refer to the attachment.",
+            "bbox": [
+              {
+                "h": 69.9,
+                "w": 785.25,
+                "x": 92.85,
+                "y": 740.39,
+                "confidence": 0.98,
+                "end_index": 186,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**RISK ASSESSMENT:** None. Adjustments are relatively minor.",
+            "value": "RISK ASSESSMENT: None. Adjustments are relatively minor.",
+            "bbox": [
+              {
+                "h": 20.48,
+                "w": 541.9,
+                "x": 92.51,
+                "y": 840.73,
+                "confidence": 1.0,
+                "end_index": 59,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "51910 0940",
+                "value": "51910 0940",
+                "bbox": [
+                  {
+                    "h": 128.41,
+                    "w": 17.58,
+                    "x": 930.69,
+                    "y": 1134.57,
+                    "confidence": 0.87,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "51910 0940",
+            "bbox": [
+              {
+                "h": 128.41,
+                "w": 17.58,
+                "x": 930.69,
+                "y": 1134.57,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## <u>BRANDS BUSINESS UNIT PRODUCT APPROVAL NOTE</u>\n\n* **BBU Note No.**: 96-61\n* **Date**: 8/5/96\n* **Temporary**: [ ]\n* **Effective Date**:     \n* **Termination Date**:     \n* **Permanent**: [x]\n* **Type**:\n    - Product [x]\n    - Process [ ]\n    - Packaging [ ]\n    - Flavor [ ]\n    - Tobacco [ ]\n    - Material [ ]\n    - Other [ ]\n\n**SUBJECT: WINSTON Lt 100/CAMEL Lt 100 Specification Adjustments**\n\n**BACKGROUND:** Specifications for all WINSTON and CAMEL products were recently reviewed. In some instances adjustments were recommended (previous BU Notes #96-31; #96-39) while in other instances products/changes were still under investigation. In the case of WINSTON Lt 100/CAMEL Lt 100, BPU implementation initially caused drafts and dilutions to increase with a corresponding decrease in 'tar'. A subsequent paper change brought 'tar' values back up to target. Post BPU specification adjustments were made reflecting the higher drafts and dilutions. However, in the last six months, the drafts seem to be settling back to the pre-BPU levels. While investigations for an assignable cause are still underway (and include G-19 particle size; CRES filling capacity; others) the recommendation is to adjust specification targets back to what they were going in to BPU implementation.\n\n**RECOMMENDATION:** The recommendation is to adjust HO and HC drafts and dilution targets back to where they were just as BPU implementation was occurring. Please refer to the attachment.\n\n**RISK ASSESSMENT:** None. Adjustments are relatively minor.",
+        "page_number": 1,
+        "success": true,
+        "footer": "51910 0940",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

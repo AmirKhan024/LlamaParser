@@ -1,0 +1,785 @@
+{
+  "job": {
+    "id": "pjb-y1nfjdmy8lof9ckelnst03ncv74c",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:07:32.563649Z",
+    "error_message": null,
+    "name": "funsd_013.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:07:49.393084Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 1,
+            "md": "# CONFIDENTIAL Project Alert",
+            "value": "CONFIDENTIAL Project Alert",
+            "bbox": [
+              {
+                "h": 52.42,
+                "w": 229.03,
+                "x": 408.09,
+                "y": 62.87,
+                "confidence": 0.88,
+                "end_index": 27,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "logo: Complete",
+            "value": "logo: Complete",
+            "bbox": [
+              {
+                "h": 69.85,
+                "w": 188.79,
+                "x": 756.17,
+                "y": 63.11,
+                "confidence": 0.87,
+                "end_index": 13,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Summary Information",
+            "value": "Summary Information",
+            "bbox": [
+              {
+                "h": 27.54,
+                "w": 239.33,
+                "x": 36.16,
+                "y": 121.62,
+                "confidence": 0.91,
+                "end_index": 21,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"Alert-#\",\"96-0662\",\"Revision #\",,\"Revision Comments\",,\n\"Issue Date\",\"Sep 12, 96\",\"Thursday\",\"Status\",\"XTBA\",\"Sent to IR - programmer not yet assign\",\n\"Author\",\"Jill Long\",\"Count Date\",\"Sep 19, 96\",\"Thursday\",\"OK\",\n\"Brand\",\"Sales\",\"OK\",\"Scan Date\",\"Sep 19, 96\",\"Thursday\",\"OK\"\n\"Title\",\"Mapco Express R37-96 MF Req\",\"Extract Date\",\"Sep 20, 96\",\"Friday\",\"OK\",\n\"Program #\",\"602379\",\"QA Scan Date\",\"Sep 23, 96\",\"Monday\",\"OK\",\n\"Files to be sent out?\",\"Yes\",\"Ok\",\"MPS Date\",\"Sep 23, 96\",\"Monday\",\"OK\"\n\"Type of File (Research, Mailfile, FFH) Mailfile\",,,,,,\n\"Control #\",,\"IR Use only\",\"Printer Date\",\"Sep 25, 96\",\"Wednesday\",\"OK\"\n\"Resource/Prgm\",\"208\",\"Mail Date\",\"Sep 30, 96\",\"Monday\",\"OK\",",
+            "html": "<table>\n    <tr>\n        <td>Alert-#</td>\n        <td>96-0662</td>\n        <td>Revision #</td>\n        <td> </td>\n        <td>Revision Comments</td><td></td>\n        <td></td>\n    </tr>\n    <tr><td>Issue Date</td><td>Sep 12, 96</td><td>Thursday</td><td>Status</td><td>XTBA</td><td>Sent to IR - programmer not yet assign</td><td></td></tr>\n    <tr>\n        <td>Author</td>\n        <td>Jill Long</td>\n        <td>Count Date</td>\n        <td>Sep 19, 96</td>\n        <td>Thursday</td>\n        <td>OK</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>Brand</td>\n        <td>Sales</td>\n        <td>OK</td>\n        <td>Scan Date</td>\n        <td>Sep 19, 96</td>\n        <td>Thursday</td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>Title</td>\n        <td>Mapco Express R37-96 MF Req</td>\n        <td>Extract Date</td>\n        <td>Sep 20, 96</td>\n        <td>Friday</td>\n        <td>OK</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>Program #</td>\n        <td>602379</td>\n        <td>QA Scan Date</td>\n        <td>Sep 23, 96</td>\n        <td>Monday</td>\n        <td>OK</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>Files to be sent out?</td>\n        <td>Yes</td>\n        <td>Ok</td>\n        <td>MPS Date</td>\n        <td>Sep 23, 96</td>\n        <td>Monday</td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td colspan=\"7\">Type of File (Research, Mailfile, FFH) Mailfile</td>\n    </tr>\n    <tr>\n        <td>Control #</td>\n        <td> </td>\n        <td>IR Use only</td>\n        <td>Printer Date</td>\n        <td>Sep 25, 96</td>\n        <td>Wednesday</td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>Resource/Prgm</td>\n        <td>208</td>\n        <td>Mail Date</td>\n        <td>Sep 30, 96</td>\n        <td>Monday</td>\n        <td>OK</td>\n        <td></td>\n    </tr>\n</table>",
+            "md": "| Alert-#                                         | 96-0662                     | Revision #   |              | Revision Comments |                                        |    |\n| ----------------------------------------------- | --------------------------- | ------------ | ------------ | ----------------- | -------------------------------------- | -- |\n| Issue Date                                      | Sep 12, 96                  | Thursday     | Status       | XTBA              | Sent to IR - programmer not yet assign |    |\n| Author                                          | Jill Long                   | Count Date   | Sep 19, 96   | Thursday          | OK                                     |    |\n| Brand                                           | Sales                       | OK           | Scan Date    | Sep 19, 96        | Thursday                               | OK |\n| Title                                           | Mapco Express R37-96 MF Req | Extract Date | Sep 20, 96   | Friday            | OK                                     |    |\n| Program #                                       | 602379                      | QA Scan Date | Sep 23, 96   | Monday            | OK                                     |    |\n| Files to be sent out?                           | Yes                         | Ok           | MPS Date     | Sep 23, 96        | Monday                                 | OK |\n| Type of File (Research, Mailfile, FFH) Mailfile |                             |              |              |                   |                                        |    |\n| Control #                                       |                             | IR Use only  | Printer Date | Sep 25, 96        | Wednesday                              | OK |\n| Resource/Prgm                                   | 208                         | Mail Date    | Sep 30, 96   | Monday            | OK                                     |    |",
+            "rows": [
+              [
+                "Alert-#",
+                "96-0662",
+                "Revision #",
+                "",
+                "Revision Comments",
+                "",
+                ""
+              ],
+              [
+                "Issue Date",
+                "Sep 12, 96",
+                "Thursday",
+                "Status",
+                "XTBA",
+                "Sent to IR - programmer not yet assign",
+                ""
+              ],
+              [
+                "Author",
+                "Jill Long",
+                "Count Date",
+                "Sep 19, 96",
+                "Thursday",
+                "OK",
+                ""
+              ],
+              [
+                "Brand",
+                "Sales",
+                "OK",
+                "Scan Date",
+                "Sep 19, 96",
+                "Thursday",
+                "OK"
+              ],
+              [
+                "Title",
+                "Mapco Express R37-96 MF Req",
+                "Extract Date",
+                "Sep 20, 96",
+                "Friday",
+                "OK",
+                ""
+              ],
+              [
+                "Program #",
+                "602379",
+                "QA Scan Date",
+                "Sep 23, 96",
+                "Monday",
+                "OK",
+                ""
+              ],
+              [
+                "Files to be sent out?",
+                "Yes",
+                "Ok",
+                "MPS Date",
+                "Sep 23, 96",
+                "Monday",
+                "OK"
+              ],
+              [
+                "Type of File (Research, Mailfile, FFH) Mailfile",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Control #",
+                "",
+                "IR Use only",
+                "Printer Date",
+                "Sep 25, 96",
+                "Wednesday",
+                "OK"
+              ],
+              [
+                "Resource/Prgm",
+                "208",
+                "Mail Date",
+                "Sep 30, 96",
+                "Monday",
+                "OK",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 261.73,
+                "w": 981.92,
+                "x": 32.91,
+                "y": 146.6,
+                "confidence": 0.89,
+                "end_index": 1956,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Alert-#' expects numeric, got 'Issue Date' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 2 'Revision #' expects numeric, got 'Thursday' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 4 'Revision Comments': 3/8 (38%) have interior whitespace",
+                "type": "possible_merged_columns"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 2,
+            "md": "## Contacts",
+            "value": "Contacts",
+            "bbox": [
+              {
+                "h": 23.49,
+                "w": 94.9,
+                "x": 36.37,
+                "y": 428.08,
+                "confidence": 0.81,
+                "end_index": 10,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"Brand:<br/>Promo Production:<br/>Fulfillment:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\",\"K. Wadia<br/>Karen Hughes If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\",\"Alt Brand:<br/>Printer:<br/>Mailer:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\",\"Jacqule McLaurin<br/>Meredith Webb If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\",\"If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\",\"If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!\"\n\"Distribution\",\"1\",\"2\",\"3\",\"4\",\"5\"\n\"RJR-DMC:\",\"Nikki Lail\",\"Lucy Russell\",,,\"OK\"\n\"TB-Accnt Services:\",\"Jill Long\",,,,\"OK\"\n\"Non-Email:\",\"Shannon Armfield\",,,,\n\"RJR-IR:\",\"Janet Myers\",\"Mary Cloutier\",,,\"OK\"\n\"RJR BIAD:\",,,,,\"OK\"\n\"RJR Other:\",,,,,\"OK\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Brand:</th>\n        <th>K. Wadia</th>\n        <th>Alt Brand:</th>\n        <th>Jacqule McLaurin</th>\n        <th> </th>\n        <th> </th>\n    </tr>\n    <tr>\n        <th>Promo Production:</th>\n        <th>Karen Hughes</th>\n        <th>Printer:</th>\n        <th>Meredith Webb</th>\n        <th> </th>\n        <th> </th>\n    </tr>\n    <tr>\n        <th>Fulfillment:</th>\n        <th> </th>\n        <th>Mailer:</th>\n        <th> </th>\n        <th> </th>\n        <th> </th>\n    </tr>\n    <tr>\n        <th colspan=\"6\">If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Distribution</td>\n        <td>1</td>\n        <td>2</td>\n        <td>3</td>\n        <td>4</td>\n        <td>5</td>\n    </tr>\n    <tr>\n        <td>RJR-DMC:</td>\n        <td>Nikki Lail</td>\n        <td>Lucy Russell</td>\n        <td> </td>\n        <td> </td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>TB-Accnt Services:</td>\n        <td>Jill Long</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>Non-Email:</td>\n        <td>Shannon Armfield</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>RJR-IR:</td>\n        <td>Janet Myers</td>\n        <td>Mary Cloutier</td>\n        <td> </td>\n        <td> </td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>RJR BIAD:</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>OK</td>\n    </tr>\n    <tr>\n        <td>RJR Other:</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>OK</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Brand:<br/>Promo Production:<br/>Fulfillment:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | K. Wadia<br/>Karen Hughes If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | Alt Brand:<br/>Printer:<br/>Mailer:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | Jacqule McLaurin<br/>Meredith Webb If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! |\n| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |\n| Distribution                                                                                                                                    | 1                                                                                                                       | 2                                                                                                                                     | 3                                                                                                                                | 4                                                                                             | 5                                                                                             |\n| RJR-DMC:                                                                                                                                        | Nikki Lail                                                                                                              | Lucy Russell                                                                                                                          |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| TB-Accnt Services:                                                                                                                              | Jill Long                                                                                                               |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| Non-Email:                                                                                                                                      | Shannon Armfield                                                                                                        |                                                                                                                                       |                                                                                                                                  |                                                                                               |                                                                                               |\n| RJR-IR:                                                                                                                                         | Janet Myers                                                                                                             | Mary Cloutier                                                                                                                         |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| RJR BIAD:                                                                                                                                       |                                                                                                                         |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| RJR Other:                                                                                                                                      |                                                                                                                         |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |",
+            "rows": [
+              [
+                "Brand:<br/>Promo Production:<br/>Fulfillment:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!",
+                "K. Wadia<br/>Karen Hughes If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!",
+                "Alt Brand:<br/>Printer:<br/>Mailer:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!",
+                "Jacqule McLaurin<br/>Meredith Webb If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!",
+                "If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!",
+                "If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!!"
+              ],
+              [
+                "Distribution",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              [
+                "RJR-DMC:",
+                "Nikki Lail",
+                "Lucy Russell",
+                "",
+                "",
+                "OK"
+              ],
+              [
+                "TB-Accnt Services:",
+                "Jill Long",
+                "",
+                "",
+                "",
+                "OK"
+              ],
+              [
+                "Non-Email:",
+                "Shannon Armfield",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "RJR-IR:",
+                "Janet Myers",
+                "Mary Cloutier",
+                "",
+                "",
+                "OK"
+              ],
+              [
+                "RJR BIAD:",
+                "",
+                "",
+                "",
+                "",
+                "OK"
+              ],
+              [
+                "RJR Other:",
+                "",
+                "",
+                "",
+                "",
+                "OK"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 47.97,
+                "w": 861.75,
+                "x": 36.71,
+                "y": 529.16,
+                "confidence": 1.0,
+                "end_index": 6559,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.4,
+                "w": 699.25,
+                "x": 199.22,
+                "y": 529.16,
+                "confidence": 1.0,
+                "end_index": 149,
+                "label": "text",
+                "r": null,
+                "start_index": 52
+              },
+              {
+                "h": 24.0,
+                "w": 130.59,
+                "x": 36.71,
+                "y": 553.13,
+                "confidence": 1.0,
+                "end_index": 224,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 213
+              },
+              {
+                "h": 22.203927364864853,
+                "w": 555.4183263370646,
+                "x": 142.28422470978438,
+                "y": 450.2770692567567,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.71783150337842,
+                "w": 635.0593154021558,
+                "x": 45.060160136815924,
+                "y": 471.47172719594585,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.708562077702595,
+                "w": 453.0227689676617,
+                "x": 102.98087945688223,
+                "y": 493.6756545608108,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.176119087837833,
+                "w": 505.7719954912935,
+                "x": 353.2811308043117,
+                "y": 575.9311127533783,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.222466216216276,
+                "w": 806.7528762437811,
+                "x": 51.26595149253731,
+                "y": 594.0979624155405,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.16684966216212,
+                "w": 201.68821906094516,
+                "x": 105.04947657545605,
+                "y": 621.3482369087837,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.699292652026998,
+                "w": 721.9403943822554,
+                "x": 136.078433354063,
+                "y": 643.5521642736486,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.222466216216276,
+                "w": 746.7635598051409,
+                "x": 112.28956649046432,
+                "y": 666.2607263513512,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 25.73637035472973,
+                "w": 749.8664554830016,
+                "x": 109.18667081260364,
+                "y": 687.9600190033783,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 302.15,
+                "w": 983.34,
+                "x": 31.88,
+                "y": 432.27,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 2,
+            "md": "## Key Information",
+            "value": "Key Information",
+            "bbox": [
+              {
+                "h": 28.64,
+                "w": 176.64,
+                "x": 36.43,
+                "y": 754.83,
+                "confidence": 0.91,
+                "end_index": 17,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"New Mailfile?\",\"Yes\",\"DB Maint?\",\"Yes\",\"T-Codes:\",\"63728 = 4 $.40 off pack\"\n\"Counts?\",\"Yes\",\"PIT Info?\",\"No\",,\"63729 = 2 $2.00 off ctn\"\n\"Research?\",\"No\",\"Seeds?\",\"Yes\",\"MFID's:\",\"TBD\"\n\"Analysis?\",\"No\",\"PID to MF to FF?\",\"No\",,\n\"Scan?\",\"Yes\",\"Suppression?\",\"Yes\",,",
+            "html": "<table>\n    <tr>\n        <td>New Mailfile?</td>\n        <td>Yes</td>\n        <td>DB Maint?</td>\n        <td>Yes</td>\n        <td>T-Codes:</td>\n        <td>63728 = 4 $.40 off pack</td>\n    </tr>\n    <tr>\n        <td>Counts?</td>\n        <td>Yes</td>\n        <td>PIT Info?</td>\n        <td>No</td>\n        <td> </td>\n        <td>63729 = 2 $2.00 off ctn</td>\n    </tr>\n    <tr>\n        <td>Research?</td>\n        <td>No</td>\n        <td>Seeds?</td>\n        <td>Yes</td>\n        <td>MFID's:</td>\n        <td>TBD</td>\n    </tr>\n    <tr>\n        <td>Analysis?</td>\n        <td>No</td>\n        <td>PID to MF to FF?</td>\n        <td>No</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Scan?</td>\n        <td>Yes</td>\n        <td>Suppression?</td>\n        <td>Yes</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n</table>",
+            "md": "| New Mailfile? | Yes | DB Maint?        | Yes | T-Codes: | 63728 = 4 $.40 off pack |\n| ------------- | --- | ---------------- | --- | -------- | ----------------------- |\n| Counts?       | Yes | PIT Info?        | No  |          | 63729 = 2 $2.00 off ctn |\n| Research?     | No  | Seeds?           | Yes | MFID's:  | TBD                     |\n| Analysis?     | No  | PID to MF to FF? | No  |          |                         |\n| Scan?         | Yes | Suppression?     | Yes |          |                         |",
+            "rows": [
+              [
+                "New Mailfile?",
+                "Yes",
+                "DB Maint?",
+                "Yes",
+                "T-Codes:",
+                "63728 = 4 $.40 off pack"
+              ],
+              [
+                "Counts?",
+                "Yes",
+                "PIT Info?",
+                "No",
+                "",
+                "63729 = 2 $2.00 off ctn"
+              ],
+              [
+                "Research?",
+                "No",
+                "Seeds?",
+                "Yes",
+                "MFID's:",
+                "TBD"
+              ],
+              [
+                "Analysis?",
+                "No",
+                "PID to MF to FF?",
+                "No",
+                "",
+                ""
+              ],
+              [
+                "Scan?",
+                "Yes",
+                "Suppression?",
+                "Yes",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 124.7,
+                "w": 982.64,
+                "x": 31.63,
+                "y": 781.29,
+                "confidence": 0.8,
+                "end_index": 514,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.26,
+                "w": 131.41,
+                "x": 36.12,
+                "y": 785.29,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 20.33,
+                "w": 120.93,
+                "x": 266.32,
+                "y": 786.28,
+                "confidence": 1.0,
+                "end_index": 45,
+                "label": "text",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 22.01,
+                "w": 189.27,
+                "x": 559.4,
+                "y": 787.73,
+                "confidence": 1.0,
+                "end_index": 82,
+                "label": "text",
+                "r": null,
+                "start_index": 60
+              },
+              {
+                "h": 22.07,
+                "w": 100.38,
+                "x": 67.49,
+                "y": 807.66,
+                "confidence": 1.0,
+                "end_index": 192,
+                "label": "text",
+                "r": null,
+                "start_index": 174
+              },
+              {
+                "h": 21.02,
+                "w": 99.77,
+                "x": 278.48,
+                "y": 808.39,
+                "confidence": 1.0,
+                "end_index": 216,
+                "label": "text",
+                "r": null,
+                "start_index": 196
+              },
+              {
+                "h": 20.31,
+                "w": 179.86,
+                "x": 559.99,
+                "y": 809.62,
+                "confidence": 1.0,
+                "end_index": 254,
+                "label": "text",
+                "r": null,
+                "start_index": 232
+              },
+              {
+                "h": 22.28,
+                "w": 105.25,
+                "x": 54.22,
+                "y": 831.19,
+                "confidence": 1.0,
+                "end_index": 277,
+                "label": "text",
+                "r": null,
+                "start_index": 260
+              },
+              {
+                "h": 20.4,
+                "w": 89.39,
+                "x": 297.75,
+                "y": 831.39,
+                "confidence": 1.0,
+                "end_index": 303,
+                "label": "text",
+                "r": null,
+                "start_index": 282
+              },
+              {
+                "h": 21.75,
+                "w": 101.41,
+                "x": 58.4,
+                "y": 854.46,
+                "confidence": 1.0,
+                "end_index": 363,
+                "label": "text",
+                "r": null,
+                "start_index": 346
+              },
+              {
+                "h": 21.78,
+                "w": 160.32,
+                "x": 218.32,
+                "y": 854.49,
+                "confidence": 1.0,
+                "end_index": 388,
+                "label": "text",
+                "r": null,
+                "start_index": 368
+              },
+              {
+                "h": 22.88,
+                "w": 141.09,
+                "x": 246.07,
+                "y": 877.27,
+                "confidence": 1.0,
+                "end_index": 475,
+                "label": "text",
+                "r": null,
+                "start_index": 454
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 5 '63728 = 4 $.40 off pack': 1/2 (50%) have interior whitespace",
+                "type": "possible_merged_columns"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 2,
+            "md": "## Project Objectives",
+            "value": "Project Objectives",
+            "bbox": [
+              {
+                "h": 30.15,
+                "w": 190.24,
+                "x": 36.81,
+                "y": 927.25,
+                "confidence": 0.93,
+                "end_index": 20,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "We need counts and a mailfile for a program with Mapco Express in TN. Original counts on Alert 96-0308 were 42,935, but we're adding Vantage in the MF so I started a new alert.",
+            "value": "We need counts and a mailfile for a program with Mapco Express in TN. Original counts on Alert 96-0308 were 42,935, but we're adding Vantage in the MF so I started a new alert.",
+            "bbox": [
+              {
+                "h": 41.07,
+                "w": 944.07,
+                "x": 41.82,
+                "y": 961.24,
+                "confidence": 0.93,
+                "end_index": 175,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "MF Submitted 9-19\nMF Counts to Nikki 9-19\nCount request submitted! 9-18\n(49,596) (42,389) ← approved 9-19\nPassed to Nikki 9-18\nMFID 3695",
+            "value": "MF Submitted 9-19\nMF Counts to Nikki 9-19\nCount request submitted! 9-18\n(49,596) (42,389) ← approved 9-19\nPassed to Nikki 9-18\nMFID 3695",
+            "bbox": [
+              {
+                "h": 286.23,
+                "w": 857.84,
+                "x": 93.54,
+                "y": 1074.42,
+                "confidence": 0.77,
+                "end_index": 135,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "\\WSMAIN2\\market\\dmg\\alerts\\960662.XLS 9/23/96 52240 9841",
+                "value": "\\WSMAIN2\\market\\dmg\\alerts\\960662.XLS 9/23/96 52240 9841",
+                "bbox": [
+                  {
+                    "h": 176.25,
+                    "w": 921.62,
+                    "x": 89.29,
+                    "y": 1233.75,
+                    "confidence": 0.92,
+                    "end_index": 55,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "\\\\WSMAIN2\\market\\dmg\\alerts\\960662.XLS 9/23/96 52240 9841",
+            "bbox": [
+              {
+                "h": 176.25,
+                "w": 921.62,
+                "x": 89.29,
+                "y": 1233.75,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# CONFIDENTIAL Project Alert\n\nlogo: Complete\n\n## Summary Information\n\n| Alert-#                                         | 96-0662                     | Revision #   |              | Revision Comments |                                        |    |\n| ----------------------------------------------- | --------------------------- | ------------ | ------------ | ----------------- | -------------------------------------- | -- |\n| Issue Date                                      | Sep 12, 96                  | Thursday     | Status       | XTBA              | Sent to IR - programmer not yet assign |    |\n| Author                                          | Jill Long                   | Count Date   | Sep 19, 96   | Thursday          | OK                                     |    |\n| Brand                                           | Sales                       | OK           | Scan Date    | Sep 19, 96        | Thursday                               | OK |\n| Title                                           | Mapco Express R37-96 MF Req | Extract Date | Sep 20, 96   | Friday            | OK                                     |    |\n| Program #                                       | 602379                      | QA Scan Date | Sep 23, 96   | Monday            | OK                                     |    |\n| Files to be sent out?                           | Yes                         | Ok           | MPS Date     | Sep 23, 96        | Monday                                 | OK |\n| Type of File (Research, Mailfile, FFH) Mailfile |                             |              |              |                   |                                        |    |\n| Control #                                       |                             | IR Use only  | Printer Date | Sep 25, 96        | Wednesday                              | OK |\n| Resource/Prgm                                   | 208                         | Mail Date    | Sep 30, 96   | Monday            | OK                                     |    |\n\n\n## Contacts\n\n| Brand:<br/>Promo Production:<br/>Fulfillment:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | K. Wadia<br/>Karen Hughes If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | Alt Brand:<br/>Printer:<br/>Mailer:<br/>If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | Jacqule McLaurin<br/>Meredith Webb If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! | If you want to delete someone from the Distribution List goto the cell and key in 2 spaces!!! |\n| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |\n| Distribution                                                                                                                                    | 1                                                                                                                       | 2                                                                                                                                     | 3                                                                                                                                | 4                                                                                             | 5                                                                                             |\n| RJR-DMC:                                                                                                                                        | Nikki Lail                                                                                                              | Lucy Russell                                                                                                                          |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| TB-Accnt Services:                                                                                                                              | Jill Long                                                                                                               |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| Non-Email:                                                                                                                                      | Shannon Armfield                                                                                                        |                                                                                                                                       |                                                                                                                                  |                                                                                               |                                                                                               |\n| RJR-IR:                                                                                                                                         | Janet Myers                                                                                                             | Mary Cloutier                                                                                                                         |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| RJR BIAD:                                                                                                                                       |                                                                                                                         |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |\n| RJR Other:                                                                                                                                      |                                                                                                                         |                                                                                                                                       |                                                                                                                                  |                                                                                               | OK                                                                                            |\n\n\n## Key Information\n\n| New Mailfile? | Yes | DB Maint?        | Yes | T-Codes: | 63728 = 4 $.40 off pack |\n| ------------- | --- | ---------------- | --- | -------- | ----------------------- |\n| Counts?       | Yes | PIT Info?        | No  |          | 63729 = 2 $2.00 off ctn |\n| Research?     | No  | Seeds?           | Yes | MFID's:  | TBD                     |\n| Analysis?     | No  | PID to MF to FF? | No  |          |                         |\n| Scan?         | Yes | Suppression?     | Yes |          |                         |\n\n\n## Project Objectives\n\nWe need counts and a mailfile for a program with Mapco Express in TN. Original counts on Alert 96-0308 were 42,935, but we're adding Vantage in the MF so I started a new alert.\n\nMF Submitted 9-19\nMF Counts to Nikki 9-19\nCount request submitted! 9-18\n(49,596) (42,389) ← approved 9-19\nPassed to Nikki 9-18\nMFID 3695",
+        "page_number": 1,
+        "success": true,
+        "footer": "\\\\WSMAIN2\\market\\dmg\\alerts\\960662.XLS 9/23/96 52240 9841",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

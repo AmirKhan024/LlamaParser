@@ -1,0 +1,495 @@
+{
+  "job": {
+    "id": "pjb-n1r3i8eb8r85zczni5xu6y9yosk2",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:06:35.685158Z",
+    "error_message": null,
+    "name": "funsd_010.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:06:47.824465Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "39.KW 90 WRE/MWO LAUF_INB.WM",
+                "value": "39.KW 90 WRE/MWO LAUF_INB.WM",
+                "bbox": [
+                  {
+                    "h": 18.21,
+                    "w": 303.51,
+                    "x": 118.62,
+                    "y": 136.65,
+                    "confidence": 0.92,
+                    "end_index": 27,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "39.KW 90 WRE/MWO LAUF_INB.WM",
+            "bbox": [
+              {
+                "h": 18.21,
+                "w": 303.51,
+                "x": 118.62,
+                "y": 136.65,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 2,
+            "md": "## Erläuterungen zum Laufzettel für Dokumente",
+            "value": "Erläuterungen zum Laufzettel für Dokumente",
+            "bbox": [
+              {
+                "h": 24.66,
+                "w": 474.6,
+                "x": 120.51,
+                "y": 264.78,
+                "confidence": 0.96,
+                "end_index": 44,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(1) Dokumententyp auf dem Laufzettel eintragen (Report, Protocol, Application o. ä.).",
+            "value": "(1) Dokumententyp auf dem Laufzettel eintragen (Report, Protocol, Application o. ä.).",
+            "bbox": [
+              {
+                "h": 18.45,
+                "w": 589.78,
+                "x": 120.45,
+                "y": 339.59,
+                "confidence": 0.95,
+                "end_index": 84,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "(2) Jede Weitergabe des Dokuments ist auf der <u>Vorderseite</u> durch Ausgangsdatum beim Weitergebenden und Eingangsdatum beim Empfänger mit Datum und Zeichen zu dokumentieren.",
+            "value": "(2) Jede Weitergabe des Dokuments ist auf der <u>Vorderseite</u> durch Ausgangsdatum beim Weitergebenden und Eingangsdatum beim Empfänger mit Datum und Zeichen zu dokumentieren.",
+            "bbox": [
+              {
+                "h": 36.81,
+                "w": 744.25,
+                "x": 120.5,
+                "y": 375.22,
+                "confidence": 0.96,
+                "end_index": 176,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "(3) Die in der folgenden Tabelle aufgeführten Stationen sind für jedes Dokument in der angegebenen Reihenfolge zu durchlaufen und auf der <u>Vorderseite</u> des Laufzettels einzutragen. Treten geplante oder unvorhergesehene Abweichungen auf, so müssen diese Abweichungen in der folgenden Tabelle vermerkt werden:",
+            "value": "(3) Die in der folgenden Tabelle aufgeführten Stationen sind für jedes Dokument in der angegebenen Reihenfolge zu durchlaufen und auf der <u>Vorderseite</u> des Laufzettels einzutragen. Treten geplante oder unvorhergesehene Abweichungen auf, so müssen diese Abweichungen in der folgenden Tabelle vermerkt werden:",
+            "bbox": [
+              {
+                "h": 71.08,
+                "w": 746.16,
+                "x": 120.31,
+                "y": 429.07,
+                "confidence": 0.97,
+                "end_index": 311,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"STATION\",\"BEMERKUNG\",\"DATUM\",\"ZN\"\n\"Freigabe Autor\",,,\n\"Freigabe SD bzw. Coordinator\",,,\n\"Editing\",,,\n\"DP-Meeting (a)\",,,\n\"GLP-Check\",,,\n\"Language-Check\",,,\n\"LR-Standards-Prüfung\",,,\n\"QA-Freigabe\",,,\n\"Approval GM oder Reviewer\",,,\n\"Binden\",,,\n\"Versand\",,,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>STATION</th>\n        <th>BEMERKUNG</th>\n        <th>DATUM</th>\n        <th>ZN</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Freigabe Autor</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Freigabe SD bzw. Coordinator</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Editing</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>DP-Meeting <sup>(a)</sup></td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>GLP-Check</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Language-Check</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>LR-Standards-Prüfung</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>QA-Freigabe</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Approval GM oder Reviewer</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Binden</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Versand</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| STATION                      | BEMERKUNG | DATUM | ZN |\n| ---------------------------- | --------- | ----- | -- |\n| Freigabe Autor               |           |       |    |\n| Freigabe SD bzw. Coordinator |           |       |    |\n| Editing                      |           |       |    |\n| DP-Meeting (a)               |           |       |    |\n| GLP-Check                    |           |       |    |\n| Language-Check               |           |       |    |\n| LR-Standards-Prüfung         |           |       |    |\n| QA-Freigabe                  |           |       |    |\n| Approval GM oder Reviewer    |           |       |    |\n| Binden                       |           |       |    |\n| Versand                      |           |       |    |",
+            "rows": [
+              [
+                "STATION",
+                "BEMERKUNG",
+                "DATUM",
+                "ZN"
+              ],
+              [
+                "Freigabe Autor",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Freigabe SD bzw. Coordinator",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Editing",
+                "",
+                "",
+                ""
+              ],
+              [
+                "DP-Meeting (a)",
+                "",
+                "",
+                ""
+              ],
+              [
+                "GLP-Check",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Language-Check",
+                "",
+                "",
+                ""
+              ],
+              [
+                "LR-Standards-Prüfung",
+                "",
+                "",
+                ""
+              ],
+              [
+                "QA-Freigabe",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Approval GM oder Reviewer",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Binden",
+                "",
+                "",
+                ""
+              ],
+              [
+                "Versand",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 22.51,
+                "w": 81.27,
+                "x": 165.71,
+                "y": 555.3,
+                "confidence": 0.5,
+                "end_index": 8,
+                "label": "table",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 20.27,
+                "w": 111.06,
+                "x": 426.61,
+                "y": 555.63,
+                "confidence": 0.5,
+                "end_index": 41,
+                "label": "table",
+                "r": null,
+                "start_index": 33
+              },
+              {
+                "h": 22.51,
+                "w": 72.52,
+                "x": 692.7,
+                "y": 555.3,
+                "confidence": 0.5,
+                "end_index": 49,
+                "label": "table",
+                "r": null,
+                "start_index": 45
+              },
+              {
+                "h": 20.27,
+                "w": 107.53,
+                "x": 168.79,
+                "y": 605.42,
+                "confidence": 0.5,
+                "end_index": 131,
+                "label": "table",
+                "r": null,
+                "start_index": 118
+              },
+              {
+                "h": 21.26,
+                "w": 213.8,
+                "x": 168.21,
+                "y": 651.61,
+                "confidence": 0.5,
+                "end_index": 203,
+                "label": "table",
+                "r": null,
+                "start_index": 176
+              },
+              {
+                "h": 31.27,
+                "w": 65.01,
+                "x": 163.83,
+                "y": 693.51,
+                "confidence": 0.5,
+                "end_index": 240,
+                "label": "table",
+                "r": null,
+                "start_index": 234
+              },
+              {
+                "h": 22.51,
+                "w": 112.53,
+                "x": 168.21,
+                "y": 745.42,
+                "confidence": 0.5,
+                "end_index": 304,
+                "label": "table",
+                "r": null,
+                "start_index": 292
+              },
+              {
+                "h": 18.76,
+                "w": 86.27,
+                "x": 169.46,
+                "y": 794.19,
+                "confidence": 0.5,
+                "end_index": 358,
+                "label": "table",
+                "r": null,
+                "start_index": 350
+              },
+              {
+                "h": 22.47,
+                "w": 120.31,
+                "x": 170.12,
+                "y": 840.27,
+                "confidence": 0.5,
+                "end_index": 421,
+                "label": "table",
+                "r": null,
+                "start_index": 408
+              },
+              {
+                "h": 22.03,
+                "w": 158.22,
+                "x": 171.0,
+                "y": 886.54,
+                "confidence": 0.5,
+                "end_index": 485,
+                "label": "table",
+                "r": null,
+                "start_index": 466
+              },
+              {
+                "h": 22.51,
+                "w": 95.02,
+                "x": 169.46,
+                "y": 934.28,
+                "confidence": 0.5,
+                "end_index": 534,
+                "label": "table",
+                "r": null,
+                "start_index": 524
+              },
+              {
+                "h": 24.67,
+                "w": 204.49,
+                "x": 171.88,
+                "y": 980.39,
+                "confidence": 0.5,
+                "end_index": 606,
+                "label": "table",
+                "r": null,
+                "start_index": 582
+              },
+              {
+                "h": 24.67,
+                "w": 59.06,
+                "x": 168.79,
+                "y": 1028.42,
+                "confidence": 0.5,
+                "end_index": 645,
+                "label": "table",
+                "r": null,
+                "start_index": 640
+              },
+              {
+                "h": 24.23,
+                "w": 65.23,
+                "x": 169.23,
+                "y": 1076.01,
+                "confidence": 0.5,
+                "end_index": 704,
+                "label": "table",
+                "r": null,
+                "start_index": 698
+              },
+              {
+                "h": 571.99,
+                "w": 730.42,
+                "x": 144.74,
+                "y": 540.81,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": null,
+            "type": "table"
+          },
+          {
+            "md": "(4) Der Laufzettel ist Teil des Project Management Files (PMF), verbleibt bis zum Ausgang des Dokuments jedoch beim Dokument und wird erst danach im PMF eingeordnet.",
+            "value": "(4) Der Laufzettel ist Teil des Project Management Files (PMF), verbleibt bis zum Ausgang des Dokuments jedoch beim Dokument und wird erst danach im PMF eingeordnet.",
+            "bbox": [
+              {
+                "h": 222.78,
+                "w": 909.93,
+                "x": 56.34,
+                "y": 1094.16,
+                "confidence": 0.86,
+                "end_index": 164,
+                "label": "header",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.51,
+                "w": 458.23,
+                "x": 145.7,
+                "y": 1181.92,
+                "confidence": 1.0,
+                "end_index": 164,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "<sup>(a)</sup> Im Anschluß an das DP-Meeting werden die weiteren Stationen und der Reviewer festgelegt.",
+                "value": "<sup>(a)</sup> Im Anschluß an das DP-Meeting werden die weiteren Stationen und der Reviewer festgelegt.",
+                "bbox": [
+                  {
+                    "h": 18.2,
+                    "w": 663.27,
+                    "x": 124.95,
+                    "y": 1309.49,
+                    "confidence": 0.78,
+                    "end_index": 102,
+                    "label": "footnote",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "2505102380",
+                "value": "2505102380",
+                "bbox": null,
+                "type": "text"
+              },
+              {
+                "items": [
+                  {
+                    "md": "Sep. 1990 logo: QA QA",
+                    "value": "Sep. 1990 logo: QA QA",
+                    "bbox": null,
+                    "type": "text"
+                  }
+                ],
+                "md": "24. Sep. 1990 logo: QA QA",
+                "ordered": true,
+                "bbox": null,
+                "type": "list"
+              }
+            ],
+            "md": "<sup>(a)</sup> Im Anschluß an das DP-Meeting werden die weiteren Stationen und der Reviewer festgelegt.\n\n2505102380\n\n24. Sep. 1990 logo: QA QA",
+            "bbox": [
+              {
+                "h": 18.2,
+                "w": 663.27,
+                "x": 124.95,
+                "y": 1309.49,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## Erläuterungen zum Laufzettel für Dokumente\n\n(1) Dokumententyp auf dem Laufzettel eintragen (Report, Protocol, Application o. ä.).\n\n(2) Jede Weitergabe des Dokuments ist auf der <u>Vorderseite</u> durch Ausgangsdatum beim Weitergebenden und Eingangsdatum beim Empfänger mit Datum und Zeichen zu dokumentieren.\n\n(3) Die in der folgenden Tabelle aufgeführten Stationen sind für jedes Dokument in der angegebenen Reihenfolge zu durchlaufen und auf der <u>Vorderseite</u> des Laufzettels einzutragen. Treten geplante oder unvorhergesehene Abweichungen auf, so müssen diese Abweichungen in der folgenden Tabelle vermerkt werden:\n\n| STATION                      | BEMERKUNG | DATUM | ZN |\n| ---------------------------- | --------- | ----- | -- |\n| Freigabe Autor               |           |       |    |\n| Freigabe SD bzw. Coordinator |           |       |    |\n| Editing                      |           |       |    |\n| DP-Meeting (a)               |           |       |    |\n| GLP-Check                    |           |       |    |\n| Language-Check               |           |       |    |\n| LR-Standards-Prüfung         |           |       |    |\n| QA-Freigabe                  |           |       |    |\n| Approval GM oder Reviewer    |           |       |    |\n| Binden                       |           |       |    |\n| Versand                      |           |       |    |\n\n\n(4) Der Laufzettel ist Teil des Project Management Files (PMF), verbleibt bis zum Ausgang des Dokuments jedoch beim Dokument und wird erst danach im PMF eingeordnet.",
+        "page_number": 1,
+        "success": true,
+        "footer": "<sup>(a)</sup> Im Anschluß an das DP-Meeting werden die weiteren Stationen und der Reviewer festgelegt.\n\n2505102380\n\n24. Sep. 1990 logo: QA QA",
+        "header": "39.KW 90 WRE/MWO LAUF_INB.WM",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

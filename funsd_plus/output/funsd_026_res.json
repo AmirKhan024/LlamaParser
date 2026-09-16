@@ -1,0 +1,760 @@
+{
+  "job": {
+    "id": "pjb-2l1iduw2lh9yvt3fo2vkdw3cj0u0",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:17:40.171162Z",
+    "error_message": null,
+    "name": "funsd_026.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:18:06.910368Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "Philip Morris USA Confidential",
+                "value": "Philip Morris USA Confidential",
+                "bbox": [
+                  {
+                    "h": 18.1,
+                    "w": 219.73,
+                    "x": 708.03,
+                    "y": 81.66,
+                    "confidence": 0.93,
+                    "end_index": 29,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "Philip Morris USA Confidential",
+            "bbox": [
+              {
+                "h": 18.1,
+                "w": 219.73,
+                "x": 708.03,
+                "y": 81.66,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 1,
+            "md": "# TESTING REQUEST",
+            "value": "TESTING REQUEST",
+            "bbox": [
+              {
+                "h": 17.57,
+                "w": 162.84,
+                "x": 477.79,
+                "y": 139.67,
+                "confidence": 0.71,
+                "end_index": 16,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 2,
+            "md": "## Part 1",
+            "value": "Part 1",
+            "bbox": [
+              {
+                "h": 17.14,
+                "w": 50.14,
+                "x": 534.79,
+                "y": 160.24,
+                "confidence": 0.54,
+                "end_index": 8,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 2,
+            "md": "## Test Request",
+            "value": "Test Request",
+            "bbox": [
+              {
+                "h": 18.42,
+                "w": 98.99,
+                "x": 510.36,
+                "y": 179.09,
+                "confidence": 0.67,
+                "end_index": 14,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "Note: A Complete Testing Request consists of Parts 1 (Test Request), 2 (Sample Design), 3 (Sample Release), and 4 (Protocols)",
+            "value": "Note: A Complete Testing Request consists of Parts 1 (Test Request), 2 (Sample Design), 3 (Sample Release), and 4 (Protocols)",
+            "bbox": [
+              {
+                "h": 37.85,
+                "w": 686.07,
+                "x": 190.35,
+                "y": 218.32,
+                "confidence": 0.92,
+                "end_index": 124,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 57.92,
+                "w": 163.37,
+                "x": 478.42,
+                "y": 140.8,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Date**: 7/9/98",
+                "value": "Date: 7/9/98",
+                "bbox": [
+                  {
+                    "h": 16.03,
+                    "w": 45.51,
+                    "x": 406.91,
+                    "y": 277.63,
+                    "confidence": 0.82,
+                    "end_index": 15,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Request Code**: Project Juice",
+                "value": "Request Code: Project Juice",
+                "bbox": [
+                  {
+                    "h": 19.28,
+                    "w": 97.27,
+                    "x": 189.83,
+                    "y": 295.19,
+                    "confidence": 1.0,
+                    "end_index": 16,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 18.42,
+                    "w": 91.27,
+                    "x": 405.38,
+                    "y": 295.19,
+                    "confidence": 1.0,
+                    "end_index": 30,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 18
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Requester**: Ed Carmines",
+                "value": "Requester: Ed Carmines",
+                "bbox": [
+                  {
+                    "h": 19.71,
+                    "w": 307.67,
+                    "x": 189.83,
+                    "y": 314.47,
+                    "confidence": 0.43,
+                    "end_index": 25,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.99,
+                    "w": 92.99,
+                    "x": 404.52,
+                    "y": 314.47,
+                    "confidence": 1.0,
+                    "end_index": 25,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 15
+                  },
+                  {
+                    "h": 18.851249999999993,
+                    "w": 72.41911476694082,
+                    "x": 189.83235409322367,
+                    "y": 315.33,
+                    "confidence": 0.43,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 17.99437499999999,
+                    "w": 92.98785742264005,
+                    "x": 404.51860556208385,
+                    "y": 314.473125,
+                    "confidence": 0.43,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Cost Center to be Charged**: 2R6",
+                "value": "Cost Center to be Charged: 2R6",
+                "bbox": [
+                  {
+                    "h": 20.99,
+                    "w": 249.82,
+                    "x": 190.26,
+                    "y": 333.32,
+                    "confidence": 0.44,
+                    "end_index": 33,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 18.42,
+                    "w": 182.98,
+                    "x": 190.26,
+                    "y": 335.04,
+                    "confidence": 1.0,
+                    "end_index": 29,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 18.422812499999964,
+                    "w": 182.9761065413239,
+                    "x": 190.2608695652174,
+                    "y": 335.03812500000004,
+                    "confidence": 0.44,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 20.99343749999997,
+                    "w": 36.42381511946735,
+                    "x": 403.6615746180963,
+                    "y": 333.32437500000003,
+                    "confidence": 0.44,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Study Objective**: Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added.",
+                "value": "Study Objective: Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added.",
+                "bbox": [
+                  {
+                    "h": 117.39,
+                    "w": 721.19,
+                    "x": 188.12,
+                    "y": 374.03,
+                    "confidence": 0.61,
+                    "end_index": 297,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 18.42,
+                    "w": 117.84,
+                    "x": 190.26,
+                    "y": 374.03,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 56.55,
+                    "w": 504.79,
+                    "x": 404.52,
+                    "y": 374.03,
+                    "confidence": 1.0,
+                    "end_index": 297,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 21
+                  },
+                  {
+                    "h": 254.71,
+                    "w": 722.39,
+                    "x": 189.78,
+                    "y": 276.39,
+                    "confidence": 0.61,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Samples**: Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)",
+                "value": "Samples: Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)",
+                "bbox": [
+                  {
+                    "h": 59.12,
+                    "w": 500.93,
+                    "x": 401.95,
+                    "y": 471.28,
+                    "confidence": 1.0,
+                    "end_index": 168,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 13
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Date**: 7/9/98\n* **Request Code**: Project Juice\n* **Requester**: Ed Carmines\n* **Cost Center to be Charged**: 2R6\n* **Study Objective**: Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added.\n* **Samples**: Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 252.77,
+                "w": 721.19,
+                "x": 188.12,
+                "y": 277.63,
+                "confidence": 0.85,
+                "end_index": 590,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "csv": "\"Test(s) Requested\",\"Location of Testing\",\"Projected Start Date\",\"Projected Completion Date\"\n\"Smoke Chemistry\",\"INBIFO\",\"9/98\",\"3/99\"\n\"Metals Analyses\",\"Henkel\",\"TBD\",\"TBD\"\n\"Ames Assay\",\"INBIFO\",\"4/99\",\"8/99\"\n\"Cytotoxicity Assay\",\"4/99 8/99\",,\n\"90-day Inhalation Study\",\"CRC\",\"9/98\",\"10/99\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Test(s) Requested</th>\n        <th>Location of Testing</th>\n        <th>Projected Start Date</th>\n        <th>Projected Completion Date</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Smoke Chemistry</td>\n        <td>INBIFO</td>\n        <td>9/98</td>\n        <td>3/99</td>\n    </tr>\n    <tr>\n        <td>Metals Analyses</td>\n        <td>Henkel</td>\n        <td>TBD</td>\n        <td>TBD</td>\n    </tr>\n    <tr>\n        <td>Ames Assay</td>\n        <td>INBIFO</td>\n        <td>4/99</td>\n        <td>8/99</td>\n    </tr>\n    <tr>\n        <td>Cytotoxicity Assay</td>\n        <td>4/99\t8/99</td>\n        <td></td><td></td>\n    </tr>\n    <tr>\n        <td>90-day Inhalation Study</td>\n        <td>CRC</td>\n        <td>9/98</td>\n        <td>10/99</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Test(s) Requested       | Location of Testing | Projected Start Date | Projected Completion Date |\n| ----------------------- | ------------------- | -------------------- | ------------------------- |\n| Smoke Chemistry         | INBIFO              | 9/98                 | 3/99                      |\n| Metals Analyses         | Henkel              | TBD                  | TBD                       |\n| Ames Assay              | INBIFO              | 4/99                 | 8/99                      |\n| Cytotoxicity Assay      | 4/99 8/99           |                      |                           |\n| 90-day Inhalation Study | CRC                 | 9/98                 | 10/99                     |",
+            "rows": [
+              [
+                "Test(s) Requested",
+                "Location of Testing",
+                "Projected Start Date",
+                "Projected Completion Date"
+              ],
+              [
+                "Smoke Chemistry",
+                "INBIFO",
+                "9/98",
+                "3/99"
+              ],
+              [
+                "Metals Analyses",
+                "Henkel",
+                "TBD",
+                "TBD"
+              ],
+              [
+                "Ames Assay",
+                "INBIFO",
+                "4/99",
+                "8/99"
+              ],
+              [
+                "Cytotoxicity Assay",
+                "4/99 8/99",
+                "",
+                ""
+              ],
+              [
+                "90-day Inhalation Study",
+                "CRC",
+                "9/98",
+                "10/99"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 119.49,
+                "w": 802.08,
+                "x": 178.65,
+                "y": 549.1,
+                "confidence": 0.97,
+                "end_index": 705,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.99,
+                "w": 137.78,
+                "x": 189.78,
+                "y": 726.24,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 2 'Projected Start Date' expects datetime, got 'TBD' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 3 'Projected Completion Date' expects datetime, got 'TBD' in row 2",
+                "type": "header_value_type_mismatch"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Approval of Test Request**",
+            "value": "Approval of Test Request",
+            "bbox": [
+              {
+                "h": 17.99,
+                "w": 185.98,
+                "x": 189.83,
+                "y": 687.21,
+                "confidence": 0.85,
+                "end_index": 27,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 73.92,
+                "w": 791.36,
+                "x": 188.05,
+                "y": 686.76,
+                "confidence": 0.85,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Requester Signature**: signature: Ed Carmines Date: 7/9/98",
+            "value": "Requester Signature: signature: Ed Carmines Date: 7/9/98",
+            "bbox": [
+              {
+                "h": 18.03,
+                "w": 68.96,
+                "x": 192.0,
+                "y": 316.37,
+                "confidence": 0.75,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.99,
+                "w": 137.78,
+                "x": 189.78,
+                "y": 726.24,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CC**:",
+            "value": "CC:",
+            "bbox": [
+              {
+                "h": 20.14,
+                "w": 33.42,
+                "x": 186.83,
+                "y": 822.17,
+                "confidence": 0.9,
+                "end_index": 6,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "Dr. C. Ellis (Part 1 only)",
+                "value": "Dr. C. Ellis (Part 1 only)",
+                "bbox": [
+                  {
+                    "h": 58.95,
+                    "w": 230.83,
+                    "x": 189.26,
+                    "y": 823.97,
+                    "confidence": 0.68,
+                    "end_index": 25,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Dr. P. Terpstra",
+                "value": "Dr. P. Terpstra",
+                "bbox": [
+                  {
+                    "h": 17.99,
+                    "w": 105.41,
+                    "x": 248.54,
+                    "y": 844.02,
+                    "confidence": 0.52,
+                    "end_index": 14,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Dr. W. Reininghaus",
+                "value": "Dr. W. Reininghaus",
+                "bbox": [
+                  {
+                    "h": 17.99,
+                    "w": 138.41,
+                    "x": 248.54,
+                    "y": 863.73,
+                    "confidence": 0.55,
+                    "end_index": 17,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* Dr. C. Ellis (Part 1 only)\n* Dr. P. Terpstra\n* Dr. W. Reininghaus",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 58.95,
+                "w": 230.83,
+                "x": 189.26,
+                "y": 823.97,
+                "confidence": 0.58,
+                "end_index": 66,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "items": [
+              {
+                "md": "P0622",
+                "value": "P0622",
+                "bbox": [
+                  {
+                    "h": 15.28,
+                    "w": 44.58,
+                    "x": 187.01,
+                    "y": 1259.75,
+                    "confidence": 0.91,
+                    "end_index": 4,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "2060578335",
+                "value": "2060578335",
+                "bbox": [
+                  {
+                    "h": 151.47,
+                    "w": 31.73,
+                    "x": 1029.61,
+                    "y": 995.04,
+                    "confidence": 0.87,
+                    "end_index": 9,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "RECEIVED",
+                "value": "RECEIVED",
+                "bbox": [
+                  {
+                    "h": 36.42,
+                    "w": 120.41,
+                    "x": 845.46,
+                    "y": 1177.77,
+                    "confidence": 0.62,
+                    "end_index": 7,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "JUL 2 9 1998",
+                "value": "JUL 2 9 1998",
+                "bbox": [
+                  {
+                    "h": 26.85,
+                    "w": 117.29,
+                    "x": 847.93,
+                    "y": 1241.14,
+                    "confidence": 0.88,
+                    "end_index": 11,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 162.61,
+                    "w": 244.47,
+                    "x": 786.12,
+                    "y": 1172.47,
+                    "confidence": 0.88,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "C.L. ELLIS",
+                "value": "C.L. ELLIS",
+                "bbox": [
+                  {
+                    "h": 32.22,
+                    "w": 112.07,
+                    "x": 855.26,
+                    "y": 1293.09,
+                    "confidence": 0.83,
+                    "end_index": 9,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "P0622\n\n2060578335\n\n> RECEIVED\n>\n> JUL 2 9 1998\n>\n> C.L. ELLIS",
+            "bbox": [
+              {
+                "h": 330.28,
+                "w": 874.32,
+                "x": 187.01,
+                "y": 995.04,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1371.0,
+        "page_number": 1,
+        "page_width": 1094.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# TESTING REQUEST\n## Part 1\n## Test Request\n\nNote: A Complete Testing Request consists of Parts 1 (Test Request), 2 (Sample Design), 3 (Sample Release), and 4 (Protocols)\n\n*   **Date**: 7/9/98\n*   **Request Code**: Project Juice\n*   **Requester**: Ed Carmines\n*   **Cost Center to be Charged**: 2R6\n*   **Study Objective**: Perform Ames, cytotoxicity, and 90-day inhalation assays on blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added. Perform smoke chemistry analyses only on control and sample with highest level of citric acid added.\n*   **Samples**: Blended cigarette samples with three different levels of citric acid added, and a control with no citric acid added (control to be shared with Project Milk)\n\n| Test(s) Requested       | Location of Testing | Projected Start Date | Projected Completion Date |\n| ----------------------- | ------------------- | -------------------- | ------------------------- |\n| Smoke Chemistry         | INBIFO              | 9/98                 | 3/99                      |\n| Metals Analyses         | Henkel              | TBD                  | TBD                       |\n| Ames Assay              | INBIFO              | 4/99                 | 8/99                      |\n| Cytotoxicity Assay      | 4/99 8/99           |                      |                           |\n| 90-day Inhalation Study | CRC                 | 9/98                 | 10/99                     |\n\n\n**Approval of Test Request**\n\n**Requester Signature**: signature: Ed Carmines Date: 7/9/98\n\n**CC**:\n*   Dr. C. Ellis (Part 1 only)\n*   Dr. P. Terpstra\n*   Dr. W. Reininghaus",
+        "page_number": 1,
+        "success": true,
+        "footer": "P0622\n\n2060578335\n\n> RECEIVED\n>\n> JUL 2 9 1998\n>\n> C.L. ELLIS",
+        "header": "Philip Morris USA Confidential",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

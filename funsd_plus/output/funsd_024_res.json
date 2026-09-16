@@ -1,0 +1,778 @@
+{
+  "job": {
+    "id": "pjb-0f5zovghdz3gp9pmlnwqydhyuqr7",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:16:57.890898Z",
+    "error_message": null,
+    "name": "funsd_024.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:17:14.088950Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [],
+            "md": "*",
+            "ordered": false,
+            "bbox": null,
+            "type": "list"
+          },
+          {
+            "md": "**TO**:",
+            "value": "TO:",
+            "bbox": [
+              {
+                "h": 15.68,
+                "w": 29.34,
+                "x": 98.74,
+                "y": 79.03,
+                "confidence": 0.93,
+                "end_index": 6,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "BOSTON ROUBUFFALO ROU\n\\*",
+            "value": "BOSTON ROUBUFFALO ROU\n*",
+            "bbox": [
+              {
+                "h": 36.31,
+                "w": 118.18,
+                "x": 270.3,
+                "y": 79.95,
+                "confidence": 0.9,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE**:",
+            "value": "DATE:",
+            "bbox": [
+              {
+                "h": 15.14,
+                "w": 49.59,
+                "x": 691.0,
+                "y": 81.22,
+                "confidence": 0.91,
+                "end_index": 8,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>7/8/97</u>\n\\*",
+            "value": "<u>7/8/97</u>\n*",
+            "bbox": [
+              {
+                "h": 15.56,
+                "w": 45.64,
+                "x": 816.33,
+                "y": 81.64,
+                "confidence": 0.91,
+                "end_index": 15,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FOR**:",
+            "value": "FOR:",
+            "bbox": [
+              {
+                "h": 18.05,
+                "w": 41.54,
+                "x": 99.29,
+                "y": 146.54,
+                "confidence": 0.95,
+                "end_index": 7,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>DISSEMINATION TO ALL APPROPRIATE PERSONNEL</u>",
+            "value": "<u>DISSEMINATION TO ALL APPROPRIATE PERSONNEL</u>",
+            "bbox": [
+              {
+                "h": 18.61,
+                "w": 414.15,
+                "x": 270.39,
+                "y": 147.0,
+                "confidence": 0.86,
+                "end_index": 48,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## CHAIN PROMOTIONAL INFORMATION",
+            "value": "CHAIN PROMOTIONAL INFORMATION",
+            "bbox": [
+              {
+                "h": 17.99,
+                "w": 346.61,
+                "x": 345.92,
+                "y": 172.91,
+                "confidence": 0.87,
+                "end_index": 31,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "items": [],
+            "md": "*",
+            "ordered": false,
+            "bbox": null,
+            "type": "list"
+          },
+          {
+            "md": "**CHAIN NAME**:",
+            "value": "CHAIN NAME:",
+            "bbox": [
+              {
+                "h": 16.71,
+                "w": 108.96,
+                "x": 99.38,
+                "y": 218.6,
+                "confidence": 0.96,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>CHRISTY'S</u>\n\\*",
+            "value": "<u>CHRISTY'S</u>\n*",
+            "bbox": [
+              {
+                "h": 17.32,
+                "w": 87.74,
+                "x": 270.17,
+                "y": 218.47,
+                "confidence": 0.95,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CID #**:",
+            "value": "CID #:",
+            "bbox": [
+              {
+                "h": 16.4,
+                "w": 46.78,
+                "x": 691.71,
+                "y": 219.28,
+                "confidence": 0.96,
+                "end_index": 9,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>0934-00-00</u>\n\\*",
+            "value": "<u>0934-00-00</u>\n*",
+            "bbox": [
+              {
+                "h": 17.24,
+                "w": 83.71,
+                "x": 787.91,
+                "y": 219.36,
+                "confidence": 0.94,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**PROMOTION TYPE**:",
+            "value": "PROMOTION TYPE:",
+            "bbox": [
+              {
+                "h": 16.01,
+                "w": 154.73,
+                "x": 99.6,
+                "y": 262.07,
+                "confidence": 0.96,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>PRICE REDUCTION</u>\n\\*",
+            "value": "<u>PRICE REDUCTION</u>\n*",
+            "bbox": [
+              {
+                "h": 17.41,
+                "w": 154.62,
+                "x": 269.88,
+                "y": 262.47,
+                "confidence": 0.95,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**SUPPLIER**:\\\n\\*",
+            "value": "SUPPLIER: *",
+            "bbox": [
+              {
+                "h": 16.49,
+                "w": 85.99,
+                "x": 691.84,
+                "y": 283.16,
+                "confidence": 0.96,
+                "end_index": 16,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DESCRIPTION**:",
+            "value": "DESCRIPTION:",
+            "bbox": [
+              {
+                "h": 16.42,
+                "w": 118.17,
+                "x": 100.03,
+                "y": 313.59,
+                "confidence": 0.96,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>$2.00 OFF PER CARTON</u>",
+            "value": "<u>$2.00 OFF PER CARTON</u>",
+            "bbox": [
+              {
+                "h": 18.12,
+                "w": 193.37,
+                "x": 269.08,
+                "y": 313.19,
+                "confidence": 0.94,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>.20 ¢ OFF PER PACK</u>\n\\*",
+            "value": "<u>.20 ¢ OFF PER PACK</u>\n*",
+            "bbox": [
+              {
+                "h": 19.98,
+                "w": 164.33,
+                "x": 270.84,
+                "y": 343.71,
+                "confidence": 0.95,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**BRANDS**:",
+            "value": "BRANDS:",
+            "bbox": [
+              {
+                "h": 16.65,
+                "w": 74.0,
+                "x": 100.41,
+                "y": 433.9,
+                "confidence": 0.96,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>COURIER BRAND FAMILY</u>\n\\*",
+            "value": "<u>COURIER BRAND FAMILY</u>\n*",
+            "bbox": [
+              {
+                "h": 17.84,
+                "w": 203.0,
+                "x": 271.3,
+                "y": 433.09,
+                "confidence": 0.95,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**AUTHORIZED LOCATIONS**:",
+            "value": "AUTHORIZED LOCATIONS:",
+            "bbox": [
+              {
+                "h": 16.53,
+                "w": 214.04,
+                "x": 99.54,
+                "y": 494.34,
+                "confidence": 0.96,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>ALL STORES</u>\n\\*",
+            "value": "<u>ALL STORES</u>\n*",
+            "bbox": [
+              {
+                "h": 17.73,
+                "w": 106.18,
+                "x": 350.21,
+                "y": 493.87,
+                "confidence": 0.95,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TIMING**:",
+            "value": "TIMING:",
+            "bbox": [
+              {
+                "h": 16.34,
+                "w": 64.09,
+                "x": 100.64,
+                "y": 612.85,
+                "confidence": 0.96,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>7/21/97 THROUGH 10/12/97</u>\n\\*",
+            "value": "<u>7/21/97 THROUGH 10/12/97</u>\n*",
+            "bbox": [
+              {
+                "h": 18.41,
+                "w": 211.22,
+                "x": 271.36,
+                "y": 611.65,
+                "confidence": 0.95,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DISPLAY METHOD**: <u>TEMPORARY COURIER DISPLAYS</u>\n\\*",
+            "value": "DISPLAY METHOD: <u>TEMPORARY COURIER DISPLAYS</u>\n*",
+            "bbox": [
+              {
+                "h": 23.12,
+                "w": 434.36,
+                "x": 98.8,
+                "y": 697.07,
+                "confidence": 1.0,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**ACTION REQUIRED**: <u>PRICE COMMUNICATION</u>",
+            "value": "ACTION REQUIRED: <u>PRICE COMMUNICATION</u>",
+            "bbox": [
+              {
+                "h": 23.12,
+                "w": 370.23,
+                "x": 98.89,
+                "y": 846.09,
+                "confidence": 1.0,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>MONITOR STOCK LEVELS</u>\n\\*",
+            "value": "<u>MONITOR STOCK LEVELS</u>\n*",
+            "bbox": [
+              {
+                "h": 17.83,
+                "w": 207.38,
+                "x": 272.48,
+                "y": 881.79,
+                "confidence": 0.94,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**COMMENTS**:",
+            "value": "COMMENTS:",
+            "bbox": [
+              {
+                "h": 16.15,
+                "w": 101.92,
+                "x": 103.47,
+                "y": 1032.6,
+                "confidence": 0.95,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION.</u>\n\\*",
+            "value": "<u>CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION.</u>\n*",
+            "bbox": [
+              {
+                "h": 17.99,
+                "w": 608.97,
+                "x": 271.87,
+                "y": 1029.8,
+                "confidence": 0.95,
+                "end_index": 74,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.11,
+                "w": 614.22,
+                "x": 272.93,
+                "y": 1031.41,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**AUTHORIZED BY**:\\\n\\*",
+            "value": "AUTHORIZED BY: *",
+            "bbox": [
+              {
+                "h": 16.92,
+                "w": 140.07,
+                "x": 103.74,
+                "y": 1212.51,
+                "confidence": 0.96,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**R.J.R. REP**: J. L. Merusi\n\\*",
+            "value": "R.J.R. REP: J. L. Merusi\n*",
+            "bbox": [
+              {
+                "h": 21.83985351562501,
+                "w": 184.98087303774685,
+                "x": 587.4561655500904,
+                "y": 1208.3755078124998,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DIVISION**:",
+            "value": "DIVISION:",
+            "bbox": [
+              {
+                "h": 16.14,
+                "w": 76.06,
+                "x": 600.16,
+                "y": 1241.96,
+                "confidence": 0.94,
+                "end_index": 12,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "1142\n\\*",
+            "value": "1142\n*",
+            "bbox": [
+              {
+                "h": 15.52,
+                "w": 37.91,
+                "x": 749.88,
+                "y": 1242.02,
+                "confidence": 0.9,
+                "end_index": 6,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CC: RM'S**\n\\*",
+            "value": "CC: RM'S\n*",
+            "bbox": [
+              {
+                "h": 19.27,
+                "w": 80.43,
+                "x": 102.72,
+                "y": 1262.33,
+                "confidence": 0.47,
+                "end_index": 14,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**PHONE**:",
+            "value": "PHONE:",
+            "bbox": [
+              {
+                "h": 17.08,
+                "w": 63.99,
+                "x": 599.59,
+                "y": 1262.94,
+                "confidence": 0.93,
+                "end_index": 9,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "508-923-0521\n\\*",
+            "value": "508-923-0521\n*",
+            "bbox": [
+              {
+                "h": 17.87,
+                "w": 101.54,
+                "x": 695.93,
+                "y": 1262.09,
+                "confidence": 0.9,
+                "end_index": 14,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FAX**:",
+            "value": "FAX:",
+            "bbox": [
+              {
+                "h": 15.93,
+                "w": 37.78,
+                "x": 599.97,
+                "y": 1285.51,
+                "confidence": 0.94,
+                "end_index": 7,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "508-923-0240",
+            "value": "508-923-0240",
+            "bbox": [
+              {
+                "h": 16.89,
+                "w": 103.61,
+                "x": 695.96,
+                "y": 1284.46,
+                "confidence": 0.89,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "51869 1081",
+                "value": "51869 1081",
+                "bbox": [
+                  {
+                    "h": 120.49,
+                    "w": 15.59,
+                    "x": 960.12,
+                    "y": 1177.61,
+                    "confidence": 0.79,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "51869 1081",
+            "bbox": [
+              {
+                "h": 120.49,
+                "w": 15.59,
+                "x": 960.12,
+                "y": 1177.61,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "*   \n\n**TO**: \n\nBOSTON ROUBUFFALO ROU\n*   \n\n**DATE**: \n\n<u>7/8/97</u>\n*   \n\n**FOR**: \n\n<u>DISSEMINATION TO ALL APPROPRIATE PERSONNEL</u>\n\n## CHAIN PROMOTIONAL INFORMATION\n\n*   \n\n**CHAIN NAME**: \n\n<u>CHRISTY'S</u>\n*   \n\n**CID #**: \n\n<u>0934-00-00</u>\n*   \n\n**PROMOTION TYPE**: \n\n<u>PRICE REDUCTION</u>\n*   \n\n**SUPPLIER**:     \n*   \n\n**DESCRIPTION**: \n\n<u>$2.00 OFF PER CARTON</u>\n\n<u>.20 ¢ OFF PER PACK</u>\n*   \n\n**BRANDS**: \n\n<u>COURIER BRAND FAMILY</u>\n*   \n\n**AUTHORIZED LOCATIONS**: \n\n<u>ALL STORES</u>\n*   \n\n**TIMING**: \n\n<u>7/21/97 THROUGH 10/12/97</u>\n*   \n\n**DISPLAY METHOD**: <u>TEMPORARY COURIER DISPLAYS</u>\n*   \n\n**ACTION REQUIRED**: <u>PRICE COMMUNICATION</u>\n\n<u>MONITOR STOCK LEVELS</u>\n*   \n\n**COMMENTS**: \n\n<u>CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION.</u>\n*   \n\n**AUTHORIZED BY**:     \n*   \n\n**R.J.R. REP**: J. L. Merusi\n*   \n\n**DIVISION**: \n\n1142\n*   \n\n**CC: RM'S**\n*   \n\n**PHONE**: \n\n508-923-0521\n*   \n\n**FAX**: \n\n508-923-0240",
+        "page_number": 1,
+        "success": true,
+        "footer": "51869 1081",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,665 @@
+{
+  "job": {
+    "id": "pjb-5xy7cpfclev7eny06ext60750rf3",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:18:27.660378Z",
+    "error_message": null,
+    "name": "funsd_028.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:18:45.642061Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## REPAIR AND RETURN REQUISITION",
+            "value": "REPAIR AND RETURN REQUISITION",
+            "bbox": [
+              {
+                "h": 22.99,
+                "w": 359.48,
+                "x": 213.3,
+                "y": 88.92,
+                "confidence": 0.74,
+                "end_index": 31,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.52,
+                "w": 355.81,
+                "x": 216.76,
+                "y": 92.99,
+                "confidence": 0.74,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "SERVICE CLASS: 2",
+            "value": "SERVICE CLASS: 2",
+            "bbox": [
+              {
+                "h": 17.19,
+                "w": 167.9,
+                "x": 252.85,
+                "y": 113.52,
+                "confidence": 0.77,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE**: 10/05/93\n**SUGGESTED SUPPLIER**: EMC12 ELECTRIC MOTOR & CONTRACTING\n**DEPT REQ NO**: DV42780201\n**REQUESTOR**: VARGO, DANA\n**SHIP TO**: 500\n**PO NO**:\\\n**DELIVER TO**: STOCKROOM 411000\n**VIA**:\\\n**TERMS**:\\\n**F.O.B**:\\\n**FREIGHT**:\\\n**ACCOUNT**: 180-400\n**ANALYST**: V:D VARGO\n**DEPT APPROVAL**:\\\n**PURPOSE**: Last Issue",
+            "value": "DATE: 10/05/93\nSUGGESTED SUPPLIER: EMC12 ELECTRIC MOTOR & CONTRACTING\nDEPT REQ NO: DV42780201\nREQUESTOR: VARGO, DANA\nSHIP TO: 500\nPO NO: DELIVER TO: STOCKROOM 411000\nVIA: TERMS: F.O.B: FREIGHT: ACCOUNT: 180-400\nANALYST: V:D VARGO\nDEPT APPROVAL: PURPOSE: Last Issue",
+            "bbox": [
+              {
+                "h": 15.33,
+                "w": 58.78,
+                "x": 801.86,
+                "y": 135.87,
+                "confidence": 0.8,
+                "end_index": 7,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.19,
+                "w": 97.93,
+                "x": 899.0,
+                "y": 135.64,
+                "confidence": 0.79,
+                "end_index": 17,
+                "label": "form",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 38.07,
+                "w": 391.85,
+                "x": 58.18,
+                "y": 176.91,
+                "confidence": 0.7,
+                "end_index": 76,
+                "label": "text",
+                "r": null,
+                "start_index": 19
+              },
+              {
+                "h": 16.73,
+                "w": 141.05,
+                "x": 718.56,
+                "y": 177.22,
+                "confidence": 0.77,
+                "end_index": 104,
+                "label": "form",
+                "r": null,
+                "start_index": 78
+              },
+              {
+                "h": 17.86,
+                "w": 95.78,
+                "x": 58.64,
+                "y": 240.2,
+                "confidence": 0.81,
+                "end_index": 148,
+                "label": "text",
+                "r": null,
+                "start_index": 133
+              },
+              {
+                "h": 15.46,
+                "w": 70.85,
+                "x": 790.09,
+                "y": 240.05,
+                "confidence": 0.79,
+                "end_index": 158,
+                "label": "form",
+                "r": null,
+                "start_index": 150
+              },
+              {
+                "h": 15.07,
+                "w": 46.33,
+                "x": 58.55,
+                "y": 324.58,
+                "confidence": 0.8,
+                "end_index": 201,
+                "label": "text",
+                "r": null,
+                "start_index": 195
+              },
+              {
+                "h": 15.9,
+                "w": 70.64,
+                "x": 790.35,
+                "y": 323.97,
+                "confidence": 0.79,
+                "end_index": 213,
+                "label": "form",
+                "r": null,
+                "start_index": 205
+              },
+              {
+                "h": 15.16,
+                "w": 72.35,
+                "x": 58.28,
+                "y": 366.64,
+                "confidence": 0.79,
+                "end_index": 225,
+                "label": "text",
+                "r": null,
+                "start_index": 217
+              },
+              {
+                "h": 15.54,
+                "w": 96.06,
+                "x": 765.25,
+                "y": 365.33,
+                "confidence": 0.78,
+                "end_index": 239,
+                "label": "form",
+                "r": null,
+                "start_index": 229
+              },
+              {
+                "h": 15.85,
+                "w": 166.91,
+                "x": 707.05,
+                "y": 405.93,
+                "confidence": 0.79,
+                "end_index": 303,
+                "label": "form",
+                "r": null,
+                "start_index": 287
+              },
+              {
+                "h": 15.36,
+                "w": 94.27,
+                "x": 60.25,
+                "y": 469.49,
+                "confidence": 0.79,
+                "end_index": 317,
+                "label": "text",
+                "r": null,
+                "start_index": 307
+              },
+              {
+                "h": 18.41060213414633,
+                "w": 308.48270732770175,
+                "x": 58.308390319120406,
+                "y": 174.69427591463415,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.391272865853665,
+                "w": 346.2967166130329,
+                "x": 103.0881381570126,
+                "y": 193.1048780487805,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.396105182926817,
+                "w": 806.0354610820594,
+                "x": 56.31817930410297,
+                "y": 236.89225609756096,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.41060213414636,
+                "w": 271.6638035498793,
+                "x": 59.30349582662912,
+                "y": 279.68446646341465,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.40576981707318,
+                "w": 50.750380882944484,
+                "x": 56.31817930410297,
+                "y": 321.48150914634147,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.898521341463436,
+                "w": 218.92321165191743,
+                "x": 375.7470472144006,
+                "y": 403.08525914634146,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 15.9,
+                "w": 208.85,
+                "x": 217.62,
+                "y": 282.31,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 642.97,
+                "w": 945.67,
+                "x": 55.56,
+                "y": 133.98,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.396105182926817,
+                "w": 164.19240873893807,
+                "x": 56.31817930410297,
+                "y": 236.89225609756096,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.41060213414633,
+                "w": 73.63780755564494,
+                "x": 788.7158328305175,
+                "y": 237.8874237804878,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"QUANTITY\",\"DESCRIPTION\",\"UNIT PRICE (DATE DUE)\",\"PURCHASE AMOUNT\"\n\"1 EA\",\"TAS160CD2/2<br/>DRIVE, VARIABLE SPEED<br/>1130-3026 A ALT MPN= N ROQ= 1<br/>TAX STAT= E EXT DESC= Y FCST= 5<br/>UNION= N PRICE REVW= N\",\"NOT TO<br/>EXCEED<br/>.00<br/>10/15/93\",\".00\"\n\"\\*RUSH\\*\",,,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>QUANTITY</th>\n        <th>DESCRIPTION</th>\n        <th>UNIT PRICE (DATE DUE)</th>\n        <th>PURCHASE AMOUNT</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>1 EA</td>\n        <td>TAS160CD2/2<br />DRIVE, VARIABLE SPEED<br />1130-3026 A ALT MPN= N ROQ= 1<br />TAX STAT= E EXT DESC= Y FCST= 5<br />UNION= N PRICE REVW= N</td>\n        <td>NOT TO<br />EXCEED<br />.00<br />10/15/93</td>\n        <td>.00</td>\n    </tr>\n    <tr>\n        <td colspan=\"4\">\\*RUSH\\*</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| QUANTITY     | DESCRIPTION                                                                                                                            | UNIT PRICE (DATE DUE)                  | PURCHASE AMOUNT |\n| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | --------------- |\n| 1 EA         | TAS160CD2/2<br/>DRIVE, VARIABLE SPEED<br/>1130-3026 A ALT MPN= N ROQ= 1<br/>TAX STAT= E EXT DESC= Y FCST= 5<br/>UNION= N PRICE REVW= N | NOT TO<br/>EXCEED<br/>.00<br/>10/15/93 | .00             |\n| \\\\\\*RUSH\\\\\\* |                                                                                                                                        |                                        |                 |",
+            "rows": [
+              [
+                "QUANTITY",
+                "DESCRIPTION",
+                "UNIT PRICE (DATE DUE)",
+                "PURCHASE AMOUNT"
+              ],
+              [
+                "1 EA",
+                "TAS160CD2/2<br/>DRIVE, VARIABLE SPEED<br/>1130-3026 A ALT MPN= N ROQ= 1<br/>TAX STAT= E EXT DESC= Y FCST= 5<br/>UNION= N PRICE REVW= N",
+                "NOT TO<br/>EXCEED<br/>.00<br/>10/15/93",
+                ".00"
+              ],
+              [
+                "\\*RUSH\\*",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 140.74,
+                "w": 379.96,
+                "x": 70.86,
+                "y": 530.58,
+                "confidence": 1.0,
+                "end_index": 850,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 16.95,
+                "w": 98.48,
+                "x": 70.86,
+                "y": 531.86,
+                "confidence": 1.0,
+                "end_index": 9,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 16.22,
+                "w": 134.87,
+                "x": 315.95,
+                "y": 530.58,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 17
+              },
+              {
+                "h": 15.04,
+                "w": 50.04,
+                "x": 120.36,
+                "y": 593.65,
+                "confidence": 1.0,
+                "end_index": 431,
+                "label": "text",
+                "r": null,
+                "start_index": 428
+              },
+              {
+                "h": 15.71,
+                "w": 74.09,
+                "x": 71.0,
+                "y": 655.61,
+                "confidence": 1.0,
+                "end_index": 652,
+                "label": "text",
+                "r": null,
+                "start_index": 641
+              },
+              {
+                "h": 18.017596375512255,
+                "w": 271.1662507961249,
+                "x": 678.5078978739273,
+                "y": 507.6770094774591,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.638892802254077,
+                "w": 100.75443263525744,
+                "x": 69.0057745248391,
+                "y": 529.4223844134222,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.88148565573772,
+                "w": 247.532494992793,
+                "x": 203.3450180385157,
+                "y": 608.948327036373,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.745374935963127,
+                "w": 584.6244856613703,
+                "x": 183.44290788834138,
+                "y": 628.8298126921107,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.909999999999968,
+                "w": 257.73,
+                "x": 679.25,
+                "y": 528.97,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.909999999999968,
+                "w": 78.61000000000001,
+                "x": 691.2,
+                "y": 610.58,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.68999999999994,
+                "w": 360.23,
+                "x": 616.56,
+                "y": 648.09,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.41999999999996,
+                "w": 308.49,
+                "x": 203.59,
+                "y": 673.77,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.639999999999986,
+                "w": 99.50999999999999,
+                "x": 692.19,
+                "y": 692.2,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 275.42,
+                "w": 933.5,
+                "x": 56.53,
+                "y": 500.91,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'QUANTITY' expects numeric, got '1 EA' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 2 'UNIT PRICE (DATE DUE)' expects numeric, got 'NOT TO\nEXCEED\n.00\n10/15/93' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 1 'DESCRIPTION': 1/1 (100%) have interior whitespace",
+                "type": "possible_merged_columns"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**INSPECTABLE**: YES [ ] NO [x]\n**SUNDRY ORD #**:\\\n**RETURN AUTH #**:\\\n**WORK ORD #**:",
+            "value": "INSPECTABLE: YES [ ] NO [x]\nSUNDRY ORD #: RETURN AUTH #: WORK ORD #:",
+            "bbox": [
+              {
+                "h": 14.98,
+                "w": 36.93,
+                "x": 438.18,
+                "y": 1105.83,
+                "confidence": 0.55908203125,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.93,
+                "w": 157.74,
+                "x": 279.86,
+                "y": 1146.37,
+                "confidence": 0.8798828125,
+                "end_index": 43,
+                "label": "text",
+                "r": null,
+                "start_index": 32
+              },
+              {
+                "h": 15.31,
+                "w": 167.51,
+                "x": 280.15,
+                "y": 1186.48,
+                "confidence": 0.88427734375,
+                "end_index": 63,
+                "label": "text",
+                "r": null,
+                "start_index": 51
+              },
+              {
+                "h": 18.019999999999982,
+                "w": 140.56,
+                "x": 279.22,
+                "y": 1224.65,
+                "confidence": 0.55908203125,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 42.539999999999964,
+                "w": 202.69000000000005,
+                "x": 779.52,
+                "y": 1257.48,
+                "confidence": 0.55908203125,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 192.25,
+                "w": 701.07,
+                "x": 278.44,
+                "y": 1103.87,
+                "confidence": 0.55908203125,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2030681942",
+                "value": "2030681942",
+                "bbox": [
+                  {
+                    "h": 32.68,
+                    "w": 193.01,
+                    "x": 784.92,
+                    "y": 1262.49,
+                    "confidence": 0.84,
+                    "end_index": 9,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2030681942",
+            "bbox": [
+              {
+                "h": 32.68,
+                "w": 193.01,
+                "x": 784.92,
+                "y": 1262.49,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1389.0,
+        "page_number": 1,
+        "page_width": 1079.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## REPAIR AND RETURN REQUISITION\nSERVICE CLASS: 2\n\n**DATE**: 10/05/93\n**SUGGESTED SUPPLIER**: EMC12 ELECTRIC MOTOR & CONTRACTING\n**DEPT REQ NO**: DV42780201\n**REQUESTOR**: VARGO, DANA\n**SHIP TO**: 500\n**PO NO**:     \n**DELIVER TO**: STOCKROOM 411000\n**VIA**:     \n**TERMS**:     \n**F.O.B**:     \n**FREIGHT**:     \n**ACCOUNT**: 180-400\n**ANALYST**: V:D VARGO\n**DEPT APPROVAL**:     \n**PURPOSE**: Last Issue\n\n| QUANTITY     | DESCRIPTION                                                                                                                            | UNIT PRICE (DATE DUE)                  | PURCHASE AMOUNT |\n| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | --------------- |\n| 1 EA         | TAS160CD2/2<br/>DRIVE, VARIABLE SPEED<br/>1130-3026 A ALT MPN= N ROQ= 1<br/>TAX STAT= E EXT DESC= Y FCST= 5<br/>UNION= N PRICE REVW= N | NOT TO<br/>EXCEED<br/>.00<br/>10/15/93 | .00             |\n| \\\\\\*RUSH\\\\\\* |                                                                                                                                        |                                        |                 |\n\n\n**INSPECTABLE**: YES [ ] NO [x]\n**SUNDRY ORD #**:     \n**RETURN AUTH #**:     \n**WORK ORD #**:",
+        "page_number": 1,
+        "success": true,
+        "footer": "2030681942",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

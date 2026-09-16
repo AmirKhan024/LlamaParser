@@ -1,0 +1,654 @@
+{
+  "job": {
+    "id": "pjb-baitih4a6hhipig3ask8cugmu285",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:15:20.743116Z",
+    "error_message": null,
+    "name": "funsd_020.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:15:49.778998Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "TRANSMISSION RESULT REPORT (SEP 14 '99 10:31AM)",
+                "value": "TRANSMISSION RESULT REPORT (SEP 14 '99 10:31AM)",
+                "bbox": [
+                  {
+                    "h": 23.35,
+                    "w": 249.88,
+                    "x": 393.12,
+                    "y": 109.28,
+                    "confidence": 0.85,
+                    "end_index": 25,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.56,
+                    "w": 112.82,
+                    "x": 738.64,
+                    "y": 107.51,
+                    "confidence": 0.85,
+                    "end_index": 37,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 27
+                  },
+                  {
+                    "h": 24.67,
+                    "w": 83.29,
+                    "x": 859.39,
+                    "y": 108.39,
+                    "confidence": 0.85,
+                    "end_index": 46,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 39
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "PMMC/LEGAL-USA",
+                "value": "PMMC/LEGAL-USA",
+                "bbox": [
+                  {
+                    "h": 15.91,
+                    "w": 133.58,
+                    "x": 637.52,
+                    "y": 139.2,
+                    "confidence": 0.84,
+                    "end_index": 13,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "(AUTO)",
+                "value": "(AUTO)",
+                "bbox": [
+                  {
+                    "h": 14.02,
+                    "w": 54.47,
+                    "x": 855.1,
+                    "y": 166.83,
+                    "confidence": 0.86,
+                    "end_index": 5,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "TRANSMISSION RESULT REPORT (SEP 14 '99 10:31AM)\n\nPMMC/LEGAL-USA\n\n(AUTO)",
+            "bbox": [
+              {
+                "h": 73.34,
+                "w": 549.57,
+                "x": 393.12,
+                "y": 107.51,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "md": "THE FOLLOWING FILE(S) ERASED",
+            "value": "THE FOLLOWING FILE(S) ERASED",
+            "bbox": [
+              {
+                "h": 15.67,
+                "w": 264.59,
+                "x": 116.22,
+                "y": 192.87,
+                "confidence": 0.88,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"FILE\",\"FILE TYPE\",\"OPTION\",\"TEL NO.\",\"PAGE\",\"RESULT\"\n\"012\",\"MEMORY TX\",,\"30449\",\"04/04\",\"OK\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>FILE</th>\n        <th>FILE TYPE</th>\n        <th>OPTION</th>\n        <th>TEL NO.</th>\n        <th>PAGE</th>\n        <th>RESULT</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>012</td>\n        <td>MEMORY TX</td>\n        <td> </td>\n        <td>30449</td>\n        <td>04/04</td>\n        <td>OK</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| FILE | FILE TYPE | OPTION | TEL NO. | PAGE  | RESULT |\n| ---- | --------- | ------ | ------- | ----- | ------ |\n| 012  | MEMORY TX |        | 30449   | 04/04 | OK     |",
+            "rows": [
+              [
+                "FILE",
+                "FILE TYPE",
+                "OPTION",
+                "TEL NO.",
+                "PAGE",
+                "RESULT"
+              ],
+              [
+                "012",
+                "MEMORY TX",
+                "",
+                "30449",
+                "04/04",
+                "OK"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 50.23,
+                "w": 801.66,
+                "x": 112.38,
+                "y": 212.82,
+                "confidence": 1.0,
+                "end_index": 169,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.27,
+                "w": 148.08,
+                "x": 113.26,
+                "y": 215.47,
+                "confidence": 0.78,
+                "end_index": 17,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 21.15,
+                "w": 63.02,
+                "x": 357.42,
+                "y": 214.58,
+                "confidence": 0.78,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 21
+              },
+              {
+                "h": 21.15,
+                "w": 68.75,
+                "x": 560.59,
+                "y": 214.58,
+                "confidence": 0.78,
+                "end_index": 36,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 22.47,
+                "w": 48.92,
+                "x": 782.71,
+                "y": 212.82,
+                "confidence": 0.78,
+                "end_index": 43,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 40
+              },
+              {
+                "h": 21.59,
+                "w": 65.67,
+                "x": 848.37,
+                "y": 213.7,
+                "confidence": 0.78,
+                "end_index": 53,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 48
+              },
+              {
+                "h": 22.03,
+                "w": 149.84,
+                "x": 112.38,
+                "y": 241.02,
+                "confidence": 0.78,
+                "end_index": 131,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 116
+              },
+              {
+                "h": 22.03,
+                "w": 56.41,
+                "x": 559.71,
+                "y": 240.14,
+                "confidence": 0.78,
+                "end_index": 148,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 144
+              },
+              {
+                "h": 23.79,
+                "w": 94.31,
+                "x": 783.59,
+                "y": 239.26,
+                "confidence": 0.78,
+                "end_index": 163,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 154
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [image, text, paragraph_title, key-value-region] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "ERRORS",
+            "value": "ERRORS",
+            "bbox": [
+              {
+                "h": 13.7,
+                "w": 60.16,
+                "x": 141.73,
+                "y": 698.31,
+                "confidence": 0.85,
+                "end_index": 5,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "HANG UP OR LINE FAIL 2) BUSY 3) NO ANSWER 4) NO FACSIMILE CONNECTION",
+                "value": "HANG UP OR LINE FAIL 2) BUSY 3) NO ANSWER 4) NO FACSIMILE CONNECTION",
+                "bbox": [
+                  {
+                    "h": 45.92,
+                    "w": 777.67,
+                    "x": 141.53,
+                    "y": 695.01,
+                    "confidence": 0.75,
+                    "end_index": 67,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 24.23,
+                    "w": 218.59,
+                    "x": 140.15,
+                    "y": 717.34,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.59,
+                    "w": 249.0,
+                    "x": 669.44,
+                    "y": 719.1,
+                    "confidence": 1.0,
+                    "end_index": 67,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 45
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "1. HANG UP OR LINE FAIL 2) BUSY 3) NO ANSWER 4) NO FACSIMILE CONNECTION",
+            "ordered": true,
+            "bbox": [
+              {
+                "h": 46.56,
+                "w": 779.05,
+                "x": 140.15,
+                "y": 695.01,
+                "confidence": 0.92,
+                "end_index": 70,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "logo: Philip Morris",
+            "value": "logo: Philip Morris",
+            "bbox": [
+              {
+                "h": 74.96,
+                "w": 145.17,
+                "x": 442.41,
+                "y": 798.75,
+                "confidence": 0.89,
+                "end_index": 18,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## PHILIP MORRIS",
+            "value": "PHILIP MORRIS",
+            "bbox": [
+              {
+                "h": 37.01,
+                "w": 300.57,
+                "x": 361.83,
+                "y": 919.14,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "MANAGEMENT CORP.",
+            "value": "MANAGEMENT CORP.",
+            "bbox": [
+              {
+                "h": 16.2,
+                "w": 187.52,
+                "x": 418.42,
+                "y": 963.75,
+                "confidence": 0.8,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "120 Park Avenue, New York, N.Y. 10017-5592 Telephone (917) 663-5000",
+            "value": "120 Park Avenue, New York, N.Y. 10017-5592 Telephone (917) 663-5000",
+            "bbox": [
+              {
+                "h": 23.35,
+                "w": 481.7,
+                "x": 270.6,
+                "y": 999.78,
+                "confidence": 1.0,
+                "end_index": 66,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 55.86,
+                "w": 475.83,
+                "x": 275.15,
+                "y": 1001.63,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "September 14, 1999",
+            "value": "September 14, 1999",
+            "bbox": [
+              {
+                "h": 21.83,
+                "w": 166.21,
+                "x": 429.17,
+                "y": 1035.91,
+                "confidence": 0.86,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Attention**: Henry Fernandez\n**Fax#**: 3-0449",
+            "value": "Attention: Henry Fernandez\nFax#: 3-0449",
+            "bbox": [
+              {
+                "h": 22.91,
+                "w": 258.7,
+                "x": 276.33,
+                "y": 1072.48,
+                "confidence": 0.81,
+                "end_index": 29,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.91,
+                "w": 142.79,
+                "x": 392.23,
+                "y": 1072.48,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 15
+              },
+              {
+                "h": 25.12,
+                "w": 145.44,
+                "x": 309.82,
+                "y": 1109.05,
+                "confidence": 0.81,
+                "end_index": 46,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 57.24,
+                "w": 255.23,
+                "x": 279.04,
+                "y": 1074.46,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Sender**: Paula Desel\n**Sender Telephone #**: 917-663-3203\n**Sender Fax #**: 917-663-5978",
+            "value": "Sender: Paula Desel\nSender Telephone #: 917-663-3203\nSender Fax #: 917-663-5978",
+            "bbox": [
+              {
+                "h": 26.88,
+                "w": 195.24,
+                "x": 297.92,
+                "y": 1179.99,
+                "confidence": 0.87,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.0,
+                "w": 102.25,
+                "x": 390.91,
+                "y": 1179.99,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 12
+              },
+              {
+                "h": 25.56,
+                "w": 179.37,
+                "x": 189.95,
+                "y": 1227.14,
+                "confidence": 1.0,
+                "end_index": 41,
+                "label": "text",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 29.08,
+                "w": 120.31,
+                "x": 390.47,
+                "y": 1223.62,
+                "confidence": 1.0,
+                "end_index": 59,
+                "label": "text",
+                "r": null,
+                "start_index": 48
+              },
+              {
+                "h": 117.65,
+                "w": 264.43,
+                "x": 245.48,
+                "y": 1181.32,
+                "confidence": 0.87,
+                "end_index": 90,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 61
+              },
+              {
+                "h": 24.67,
+                "w": 118.55,
+                "x": 391.35,
+                "y": 1273.41,
+                "confidence": 1.0,
+                "end_index": 90,
+                "label": "text",
+                "r": null,
+                "start_index": 79
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "You should receive <u>4</u> pages, including this cover sheet. If you do not receive all of the pages, please call Betsy Gunn at 917-663-3676.",
+            "value": "You should receive <u>4</u> pages, including this cover sheet. If you do not receive all of the pages, please call Betsy Gunn at 917-663-3676.",
+            "bbox": [
+              {
+                "h": 42.6,
+                "w": 649.35,
+                "x": 182.01,
+                "y": 1321.98,
+                "confidence": 0.92,
+                "end_index": 141,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "20",
+                "value": "20",
+                "bbox": [
+                  {
+                    "h": 130.97,
+                    "w": 43.76,
+                    "x": 913.23,
+                    "y": 1126.76,
+                    "confidence": 0.87,
+                    "end_index": 1,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "20",
+            "bbox": [
+              {
+                "h": 130.97,
+                "w": 43.76,
+                "x": 913.23,
+                "y": 1126.76,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "THE FOLLOWING FILE(S) ERASED\n\n| FILE | FILE TYPE | OPTION | TEL NO. | PAGE  | RESULT |\n| ---- | --------- | ------ | ------- | ----- | ------ |\n| 012  | MEMORY TX |        | 30449   | 04/04 | OK     |\n\n\nERRORS\n\n1) HANG UP OR LINE FAIL 2) BUSY 3) NO ANSWER 4) NO FACSIMILE CONNECTION\n\nlogo: Philip Morris\n\n## PHILIP MORRIS\nMANAGEMENT CORP.\n\n120 Park Avenue, New York, N.Y. 10017-5592 Telephone (917) 663-5000\n\nSeptember 14, 1999\n\n**Attention**: Henry Fernandez\n**Fax#**: 3-0449\n\n**Sender**: Paula Desel\n**Sender Telephone #**: 917-663-3203\n**Sender Fax #**: 917-663-5978\n\nYou should receive <u>4</u> pages, including this cover sheet. If you do not receive all of the pages, please call Betsy Gunn at 917-663-3676.",
+        "page_number": 1,
+        "success": true,
+        "footer": "20",
+        "header": "TRANSMISSION RESULT REPORT (SEP 14 '99 10:31AM)\n\nPMMC/LEGAL-USA\n\n(AUTO)",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

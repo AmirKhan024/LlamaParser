@@ -1,0 +1,438 @@
+{
+  "job": {
+    "id": "pjb-gamql4lxncg9x78aka1rtcg7q4my",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:17:16.342253Z",
+    "error_message": null,
+    "name": "funsd_025.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:17:33.115715Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## NEWS RELEASE AND SPEECH APPROVALS",
+            "value": "NEWS RELEASE AND SPEECH APPROVALS",
+            "bbox": [
+              {
+                "h": 19.15,
+                "w": 420.17,
+                "x": 316.49,
+                "y": 204.72,
+                "confidence": 0.95,
+                "end_index": 35,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**DATE**: 06/07/90\n**SUBJECT**: CAMEL GT/Watkins Glen/Brabham-Daly\n**PROPOSED RELEASE DATE**: 06/08/90\n**DISTRIBUTE TO**: CAMEL GT mailing list & Watkins Glen press kits\n**CONTACT**: Earl Fannin\n**NEED APPROVALS NO LATER THAN**: 06/07/90",
+            "value": "DATE: 06/07/90\nSUBJECT: CAMEL GT/Watkins Glen/Brabham-Daly\nPROPOSED RELEASE DATE: 06/08/90\nDISTRIBUTE TO: CAMEL GT mailing list & Watkins Glen press kits\nCONTACT: Earl Fannin\nNEED APPROVALS NO LATER THAN: 06/07/90",
+            "bbox": [
+              {
+                "h": 24.54,
+                "w": 189.66,
+                "x": 114.72,
+                "y": 283.65,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.87,
+                "w": 548.35,
+                "x": 113.57,
+                "y": 323.37,
+                "confidence": 1.0,
+                "end_index": 65,
+                "label": "text",
+                "r": null,
+                "start_index": 19
+              },
+              {
+                "h": 24.4,
+                "w": 408.25,
+                "x": 114.15,
+                "y": 368.1,
+                "confidence": 1.0,
+                "end_index": 101,
+                "label": "text",
+                "r": null,
+                "start_index": 67
+              },
+              {
+                "h": 22.65,
+                "w": 797.77,
+                "x": 115.02,
+                "y": 410.79,
+                "confidence": 1.0,
+                "end_index": 168,
+                "label": "text",
+                "r": null,
+                "start_index": 103
+              },
+              {
+                "h": 21.03,
+                "w": 259.56,
+                "x": 115.87,
+                "y": 453.07,
+                "confidence": 1.0,
+                "end_index": 193,
+                "label": "text",
+                "r": null,
+                "start_index": 170
+              },
+              {
+                "h": 26.87,
+                "w": 487.62,
+                "x": 112.43,
+                "y": 491.63,
+                "confidence": 1.0,
+                "end_index": 236,
+                "label": "text",
+                "r": null,
+                "start_index": 195
+              },
+              {
+                "h": 230.85,
+                "w": 799.71,
+                "x": 115.73,
+                "y": 286.52,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Name\",\"Initials/Date\",\"Initials/Date\"\n\"Earl Fannin\",\"[signature: EF]\",\"6-7-90\"\n\"Bob Moore\",\"sut.\",\n\"Nat Walker\",\"[signature]\",\n\"Rob Powell\",,\n\"Jeff Byrd\",,\n\"Nat Walker\",,\n\"Lisa Dawson\",\"LGD\",\"6-7-90\"\n\"Earl Fannin\",\"EF\",\"6/7/90\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th><u>Name</u></th>\n        <th colspan=\"2\"><u>Initials/Date</u></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Earl Fannin</td>\n        <td>[signature: EF]</td>\n        <td>6-7-90</td>\n    </tr>\n    <tr>\n        <td>Bob Moore</td>\n        <td>sut.</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>Nat Walker</td>\n        <td>[signature]</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>~~Rob Powell~~</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>~~Jeff Byrd~~</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>~~Nat Walker~~</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Lisa Dawson</td>\n        <td>LGD</td>\n        <td>6-7-90</td>\n    </tr>\n    <tr>\n        <td>Earl Fannin</td>\n        <td>EF</td>\n        <td>6/7/90</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Name               | Initials/Date    | Initials/Date |\n| ------------------ | ---------------- | ------------- |\n| Earl Fannin        | \\[signature: EF] | 6-7-90        |\n| Bob Moore          | sut.             |               |\n| Nat Walker         | \\[signature]     |               |\n| ~~Rob Powell~~ |                  |               |\n| ~~Jeff Byrd~~  |                  |               |\n| ~~Nat Walker~~ |                  |               |\n| Lisa Dawson        | LGD              | 6-7-90        |\n| Earl Fannin        | EF               | 6/7/90        |",
+            "rows": [
+              [
+                "Name",
+                "Initials/Date",
+                "Initials/Date"
+              ],
+              [
+                "Earl Fannin",
+                "[signature: EF]",
+                "6-7-90"
+              ],
+              [
+                "Bob Moore",
+                "sut.",
+                ""
+              ],
+              [
+                "Nat Walker",
+                "[signature]",
+                ""
+              ],
+              [
+                "Rob Powell",
+                "",
+                ""
+              ],
+              [
+                "Jeff Byrd",
+                "",
+                ""
+              ],
+              [
+                "Nat Walker",
+                "",
+                ""
+              ],
+              [
+                "Lisa Dawson",
+                "LGD",
+                "6-7-90"
+              ],
+              [
+                "Earl Fannin",
+                "EF",
+                "6/7/90"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 382.48,
+                "w": 301.0,
+                "x": 108.99,
+                "y": 577.2,
+                "confidence": 0.5,
+                "end_index": 477,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 387.93,
+                "w": 220.6,
+                "x": 491.75,
+                "y": 575.76,
+                "confidence": 0.5,
+                "end_index": 163,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 23
+              },
+              {
+                "h": 18.88,
+                "w": 53.88,
+                "x": 152.73,
+                "y": 582.31,
+                "confidence": 1.0,
+                "end_index": 5,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 20.52,
+                "w": 168.1,
+                "x": 555.72,
+                "y": 581.49,
+                "confidence": 1.0,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 23
+              },
+              {
+                "h": 17.08,
+                "w": 140.68,
+                "x": 115.79,
+                "y": 644.46,
+                "confidence": 1.0,
+                "end_index": 128,
+                "label": "text",
+                "r": null,
+                "start_index": 118
+              },
+              {
+                "h": 28.67,
+                "w": 98.89,
+                "x": 513.2,
+                "y": 623.12,
+                "confidence": 1.0,
+                "end_index": 163,
+                "label": "text",
+                "r": null,
+                "start_index": 158
+              },
+              {
+                "h": 17.24,
+                "w": 114.52,
+                "x": 116.08,
+                "y": 686.76,
+                "confidence": 1.0,
+                "end_index": 184,
+                "label": "text",
+                "r": null,
+                "start_index": 176
+              },
+              {
+                "h": 17.0,
+                "w": 49.06,
+                "x": 325.22,
+                "y": 689.08,
+                "confidence": 1.0,
+                "end_index": 200,
+                "label": "text",
+                "r": null,
+                "start_index": 197
+              },
+              {
+                "h": 17.13,
+                "w": 128.58,
+                "x": 115.09,
+                "y": 728.1,
+                "confidence": 1.0,
+                "end_index": 243,
+                "label": "text",
+                "r": null,
+                "start_index": 234
+              },
+              {
+                "h": 17.29,
+                "w": 126.4,
+                "x": 114.81,
+                "y": 769.94,
+                "confidence": 1.0,
+                "end_index": 305,
+                "label": "text",
+                "r": null,
+                "start_index": 292
+              },
+              {
+                "h": 22.7,
+                "w": 120.19,
+                "x": 111.29,
+                "y": 809.28,
+                "confidence": 1.0,
+                "end_index": 358,
+                "label": "text",
+                "r": null,
+                "start_index": 346
+              },
+              {
+                "h": 19.98,
+                "w": 134.83,
+                "x": 108.68,
+                "y": 850.69,
+                "confidence": 1.0,
+                "end_index": 413,
+                "label": "text",
+                "r": null,
+                "start_index": 400
+              },
+              {
+                "h": 18.06,
+                "w": 139.83,
+                "x": 115.79,
+                "y": 895.16,
+                "confidence": 1.0,
+                "end_index": 464,
+                "label": "text",
+                "r": null,
+                "start_index": 454
+              },
+              {
+                "h": 23.86,
+                "w": 88.14,
+                "x": 506.23,
+                "y": 881.98,
+                "confidence": 1.0,
+                "end_index": 499,
+                "label": "text",
+                "r": null,
+                "start_index": 494
+              },
+              {
+                "h": 17.55,
+                "w": 140.52,
+                "x": 115.62,
+                "y": 937.44,
+                "confidence": 1.0,
+                "end_index": 522,
+                "label": "text",
+                "r": null,
+                "start_index": 512
+              },
+              {
+                "h": 140.09,
+                "w": 234.94,
+                "x": 462.0,
+                "y": 623.79,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'Initials/Date' expects datetime, got '[signature: EF]' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title, footer, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "items": [
+              {
+                "md": "20",
+                "value": "20",
+                "bbox": [
+                  {
+                    "h": 134.37,
+                    "w": 23.49,
+                    "x": 940.4,
+                    "y": 1185.71,
+                    "confidence": 1.0,
+                    "end_index": 1,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "50741 9516",
+                "value": "50741 9516",
+                "bbox": null,
+                "type": "text"
+              }
+            ],
+            "md": "20\n\n50741 9516",
+            "bbox": [
+              {
+                "h": 134.37,
+                "w": 23.49,
+                "x": 940.4,
+                "y": 1185.71,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1394.0,
+        "page_number": 1,
+        "page_width": 1074.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## NEWS RELEASE AND SPEECH APPROVALS\n\n**DATE**: 06/07/90\n**SUBJECT**: CAMEL GT/Watkins Glen/Brabham-Daly\n**PROPOSED RELEASE DATE**: 06/08/90\n**DISTRIBUTE TO**: CAMEL GT mailing list & Watkins Glen press kits\n**CONTACT**: Earl Fannin\n**NEED APPROVALS NO LATER THAN**: 06/07/90\n\n| Name               | Initials/Date    | Initials/Date |\n| ------------------ | ---------------- | ------------- |\n| Earl Fannin        | \\[signature: EF] | 6-7-90        |\n| Bob Moore          | sut.             |               |\n| Nat Walker         | \\[signature]     |               |\n| ~~Rob Powell~~ |                  |               |\n| ~~Jeff Byrd~~  |                  |               |\n| ~~Nat Walker~~ |                  |               |\n| Lisa Dawson        | LGD              | 6-7-90        |\n| Earl Fannin        | EF               | 6/7/90        |",
+        "page_number": 1,
+        "success": true,
+        "footer": "20\n\n50741 9516",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,1023 @@
+{
+  "job": {
+    "id": "pjb-uziezxtt825zenl0dle26204y3xo",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:18:51.680466Z",
+    "error_message": null,
+    "name": "funsd_029.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:19:11.408631Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "MATERIAL SAFETY DATA SHEET NPCA 1-",
+                "value": "MATERIAL SAFETY DATA SHEET NPCA 1-",
+                "bbox": [
+                  {
+                    "h": 32.87,
+                    "w": 544.03,
+                    "x": 284.55,
+                    "y": 21.19,
+                    "confidence": 0.92,
+                    "end_index": 25,
+                    "label": "paragraph_title",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.63,
+                    "w": 71.35,
+                    "x": 1010.21,
+                    "y": 24.22,
+                    "confidence": 0.92,
+                    "end_index": 33,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 27
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "MATERIAL SAFETY DATA SHEET NPCA 1-",
+            "bbox": [
+              {
+                "h": 32.87,
+                "w": 797.01,
+                "x": 284.55,
+                "y": 21.19,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 2,
+            "md": "## FOR COATINGS, RESINS AND RELATED MATERIALS",
+            "value": "FOR COATINGS, RESINS AND RELATED MATERIALS",
+            "bbox": [
+              {
+                "h": 18.81,
+                "w": 486.9,
+                "x": 315.13,
+                "y": 71.67,
+                "confidence": 0.86,
+                "end_index": 44,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(Approved by U.S. Department of Labor \"Essentially Similar\" to Form OSHA-20)",
+            "value": "(Approved by U.S. Department of Labor \"Essentially Similar\" to Form OSHA-20)",
+            "bbox": [
+              {
+                "h": 15.14,
+                "w": 488.94,
+                "x": 316.72,
+                "y": 103.03,
+                "confidence": 0.94,
+                "end_index": 75,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE OF PREP.** 4/18/84",
+            "value": "DATE OF PREP. 4/18/84",
+            "bbox": [
+              {
+                "h": 32.44,
+                "w": 212.41,
+                "x": 12.11,
+                "y": 112.45,
+                "confidence": 0.81,
+                "end_index": 24,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.7,
+                "w": 99.9,
+                "x": 12.11,
+                "y": 112.45,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 46.36,
+                "w": 274.34,
+                "x": 0.48,
+                "y": 99.57,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### Section I",
+            "value": "Section I",
+            "bbox": [
+              {
+                "h": 20.37,
+                "w": 95.47,
+                "x": 512.3,
+                "y": 153.27,
+                "confidence": 0.91,
+                "end_index": 12,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**MANUFACTURER'S NAME**: H. Kohnstamm & Co., Inc.",
+            "value": "MANUFACTURER'S NAME: H. Kohnstamm & Co., Inc.",
+            "bbox": [
+              {
+                "h": 17.3,
+                "w": 174.07,
+                "x": 12.52,
+                "y": 197.02,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.86,
+                "w": 311.08,
+                "x": 205.58,
+                "y": 191.92,
+                "confidence": 1.0,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 23.1,
+                "w": 305.25,
+                "x": 210.98,
+                "y": 196.49,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**STREET ADDRESS**: P.O. Box 13",
+            "value": "STREET ADDRESS: P.O. Box 13",
+            "bbox": [
+              {
+                "h": 20.83,
+                "w": 131.19,
+                "x": 9.47,
+                "y": 243.65,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.2,
+                "w": 147.42,
+                "x": 155.54,
+                "y": 234.24,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 20
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CITY, STATE, AND ZIP CODE**: Harrison, N.J. 07029",
+            "value": "CITY, STATE, AND ZIP CODE: Harrison, N.J. 07029",
+            "bbox": [
+              {
+                "h": 17.3,
+                "w": 182.84,
+                "x": 480.89,
+                "y": 244.58,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.2,
+                "w": 262.39,
+                "x": 680.31,
+                "y": 238.27,
+                "confidence": 1.0,
+                "end_index": 50,
+                "label": "text",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 23.63,
+                "w": 460.44,
+                "x": 481.89,
+                "y": 243.73,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**EMERGENCY TELEPHONE NO.**: (201) 991-2355",
+            "value": "EMERGENCY TELEPHONE NO.: (201) 991-2355",
+            "bbox": [
+              {
+                "h": 18.81,
+                "w": 205.58,
+                "x": 12.17,
+                "y": 294.03,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.18,
+                "w": 193.41,
+                "x": 248.86,
+                "y": 287.31,
+                "confidence": 1.0,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 29
+              },
+              {
+                "h": 25.09,
+                "w": 191.6,
+                "x": 250.71,
+                "y": 290.24,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**INFORMATION TELEPHONE NO.**:",
+            "value": "INFORMATION TELEPHONE NO.:",
+            "bbox": [
+              {
+                "h": 13.59,
+                "w": 206.63,
+                "x": 13.78,
+                "y": 321.18,
+                "confidence": 0.85,
+                "end_index": 29,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.32,
+                "w": 207.03,
+                "x": 15.42,
+                "y": 324.45,
+                "confidence": 0.85,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**PRODUCT CLASS**: Liquid Flavoring Material",
+            "value": "PRODUCT CLASS: Liquid Flavoring Material",
+            "bbox": [
+              {
+                "h": 17.3,
+                "w": 116.47,
+                "x": 11.27,
+                "y": 343.42,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.87,
+                "w": 324.6,
+                "x": 156.89,
+                "y": 339.04,
+                "confidence": 1.0,
+                "end_index": 43,
+                "label": "text",
+                "r": null,
+                "start_index": 19
+              },
+              {
+                "h": 13.29,
+                "w": 113.8,
+                "x": 13.82,
+                "y": 350.89,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 25.64,
+                "w": 320.37,
+                "x": 160.63,
+                "y": 344.55,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**MANUFACTURERS CODE IDENTIFICATION**: P-532 Rose of Latakia Oils",
+            "value": "MANUFACTURERS CODE IDENTIFICATION: P-532 Rose of Latakia Oils",
+            "bbox": [
+              {
+                "h": 14.78,
+                "w": 279.97,
+                "x": 576.17,
+                "y": 344.42,
+                "confidence": 1.0,
+                "end_index": 37,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.71,
+                "w": 335.62,
+                "x": 568.55,
+                "y": 364.42,
+                "confidence": 1.0,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 39
+              },
+              {
+                "h": 12.33,
+                "w": 282.12,
+                "x": 575.98,
+                "y": 349.02,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.1,
+                "w": 333.54,
+                "x": 570.43,
+                "y": 371.49,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TRADE NAME**:",
+            "value": "TRADE NAME:",
+            "bbox": [
+              {
+                "h": 11.59,
+                "w": 91.15,
+                "x": 14.76,
+                "y": 400.95,
+                "confidence": 0.88,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### Section II — HAZARDOUS INGREDIENTS",
+            "value": "Section II — HAZARDOUS INGREDIENTS",
+            "bbox": [
+              {
+                "h": 21.59,
+                "w": 452.11,
+                "x": 332.21,
+                "y": 444.71,
+                "confidence": 0.83,
+                "end_index": 37,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"INGREDIENT\",\"PERCENT\",\"TLV<br/>PPM\",\"TLV<br/>mg/M³\",\"LEL\",\"VAPOR PRESSURE\"\n\"NOT APPLICABLE (Not for ingestion)\",,,,,\n\"NO HAZARDOUS INGREDIENTS\",,,,,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">INGREDIENT</th>\n        <th rowspan=\"2\">PERCENT</th>\n        <th colspan=\"2\">TLV</th>\n        <th rowspan=\"2\">LEL</th>\n        <th rowspan=\"2\">VAPOR PRESSURE</th>\n    </tr>\n    <tr>\n        <th>PPM</th>\n        <th>mg/M³</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>NOT APPLICABLE (Not for ingestion)</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>NO HAZARDOUS INGREDIENTS</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| INGREDIENT                         | PERCENT | TLV<br/>PPM | TLV<br/>mg/M³ | LEL | VAPOR PRESSURE |\n| ---------------------------------- | ------- | ----------- | ------------- | --- | -------------- |\n| NOT APPLICABLE (Not for ingestion) |         |             |               |     |                |\n| NO HAZARDOUS INGREDIENTS           |         |             |               |     |                |",
+            "rows": [
+              [
+                "INGREDIENT",
+                "PERCENT",
+                "TLV<br/>PPM",
+                "TLV<br/>mg/M³",
+                "LEL",
+                "VAPOR PRESSURE"
+              ],
+              [
+                "NOT APPLICABLE (Not for ingestion)",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "NO HAZARDOUS INGREDIENTS",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 14.78,
+                "w": 90.62,
+                "x": 12.17,
+                "y": 488.18,
+                "confidence": 0.5,
+                "end_index": 11,
+                "label": "table",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 79.81,
+                "w": 491.71,
+                "x": 330.61,
+                "y": 437.93,
+                "confidence": 0.5,
+                "end_index": 75,
+                "label": "table",
+                "r": null,
+                "start_index": 39
+              },
+              {
+                "h": 17.47,
+                "w": 29.75,
+                "x": 879.13,
+                "y": 484.15,
+                "confidence": 0.5,
+                "end_index": 81,
+                "label": "table",
+                "r": null,
+                "start_index": 79
+              },
+              {
+                "h": 25.98,
+                "w": 78.9,
+                "x": 971.8,
+                "y": 477.43,
+                "confidence": 0.5,
+                "end_index": 98,
+                "label": "table",
+                "r": null,
+                "start_index": 85
+              },
+              {
+                "h": 29.03,
+                "w": 437.06,
+                "x": 45.08,
+                "y": 575.07,
+                "confidence": 0.5,
+                "end_index": 238,
+                "label": "table",
+                "r": null,
+                "start_index": 206
+              },
+              {
+                "h": 26.2,
+                "w": 308.37,
+                "x": 47.34,
+                "y": 642.69,
+                "confidence": 0.5,
+                "end_index": 331,
+                "label": "table",
+                "r": null,
+                "start_index": 308
+              },
+              {
+                "h": 11.73,
+                "w": 86.55,
+                "x": 15.18,
+                "y": 493.24,
+                "confidence": 1.0,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 22.98,
+                "w": 178.94,
+                "x": 141.48,
+                "y": 873.44,
+                "confidence": 1.0,
+                "end_index": 219,
+                "label": "text",
+                "r": null,
+                "start_index": 206
+              },
+              {
+                "h": 396.26,
+                "w": 1081.74,
+                "x": 0.0,
+                "y": 432.42,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'PERCENT' expects numeric, got 'mg/M³' in row 1",
+                "type": "header_value_type_mismatch"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 3,
+            "md": "### Section III — PHYSICAL DATA",
+            "value": "Section III — PHYSICAL DATA",
+            "bbox": [
+              {
+                "h": 21.7,
+                "w": 318.32,
+                "x": 389.61,
+                "y": 839.31,
+                "confidence": 0.85,
+                "end_index": 30,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**BOILING RANGE**: Not applicable\n**VAPOR DENSITY**: [x] HEAVIER, [ ] LIGHTER, THAN AIR",
+            "value": "BOILING RANGE: Not applicable\nVAPOR DENSITY: [x] HEAVIER, [ ] LIGHTER, THAN AIR",
+            "bbox": [
+              {
+                "h": 21.82,
+                "w": 116.92,
+                "x": 10.82,
+                "y": 865.4,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.2,
+                "w": 193.41,
+                "x": 133.9,
+                "y": 863.71,
+                "confidence": 1.0,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 19
+              },
+              {
+                "h": 21.71,
+                "w": 454.09,
+                "x": 553.52,
+                "y": 864.17,
+                "confidence": 0.89,
+                "end_index": 86,
+                "label": "form",
+                "r": null,
+                "start_index": 34
+              },
+              {
+                "h": 15.45,
+                "w": 136.6,
+                "x": 871.01,
+                "y": 867.74,
+                "confidence": 1.0,
+                "end_index": 86,
+                "label": "checkbox-unselected",
+                "r": null,
+                "start_index": 70
+              },
+              {
+                "h": 13.5,
+                "w": 111.41,
+                "x": 11.57,
+                "y": 879.35,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.296454918032737,
+                "w": 112.70833333333337,
+                "x": 553.5231481481482,
+                "y": 864.1686782786884,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.825584016393464,
+                "w": 108.19999999999993,
+                "x": 697.89,
+                "y": 865.0567213114754,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 15.45123975409831,
+                "w": 136.60249999999996,
+                "x": 871.01,
+                "y": 867.743893442623,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**EVAPORATION RATE**: [ ] FASTER [x] SLOWER, THAN ETHER\n**PERCENT VOLATILE BY VOLUME**: 48-52%\n**WEIGHT PER GALLON**: 7.75 - 7.85 Lbs.",
+            "value": "EVAPORATION RATE: [ ] FASTER [x] SLOWER, THAN ETHER\nPERCENT VOLATILE BY VOLUME: 48-52%\nWEIGHT PER GALLON: 7.75 - 7.85 Lbs.",
+            "bbox": [
+              {
+                "h": 18.81,
+                "w": 137.95,
+                "x": 10.82,
+                "y": 912.75,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 25.39,
+                "w": 465.06,
+                "x": 10.82,
+                "y": 906.17,
+                "confidence": 0.81,
+                "end_index": 54,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.05,
+                "w": 187.8,
+                "x": 288.08,
+                "y": 906.17,
+                "confidence": 1.0,
+                "end_index": 54,
+                "label": "checkbox-selected",
+                "r": null,
+                "start_index": 33
+              },
+              {
+                "h": 38.72,
+                "w": 177.83,
+                "x": 505.94,
+                "y": 904.94,
+                "confidence": 0.81,
+                "end_index": 93,
+                "label": "form",
+                "r": null,
+                "start_index": 56
+              },
+              {
+                "h": 25.13,
+                "w": 177.83,
+                "x": 505.94,
+                "y": 918.53,
+                "confidence": 1.0,
+                "end_index": 98,
+                "label": "text",
+                "r": null,
+                "start_index": 75
+              },
+              {
+                "h": 32.22,
+                "w": 316.84,
+                "x": 748.88,
+                "y": 907.41,
+                "confidence": 0.81,
+                "end_index": 133,
+                "label": "form",
+                "r": null,
+                "start_index": 95
+              },
+              {
+                "h": 14.78,
+                "w": 59.51,
+                "x": 749.29,
+                "y": 924.85,
+                "confidence": 1.0,
+                "end_index": 116,
+                "label": "text",
+                "r": null,
+                "start_index": 108
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### Section IV — FIRE AND EXPLOSION HAZARD DATA",
+            "value": "Section IV — FIRE AND EXPLOSION HAZARD DATA",
+            "bbox": [
+              {
+                "h": 75.07,
+                "w": 562.29,
+                "x": 276.76,
+                "y": 911.41,
+                "confidence": 0.41,
+                "end_index": 46,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**FLAMMABILITY CLASSIFICATION**: Flammable Liquid",
+            "value": "FLAMMABILITY CLASSIFICATION: Flammable Liquid",
+            "bbox": [
+              {
+                "h": 27.8,
+                "w": 444.57,
+                "x": 7.51,
+                "y": 1003.78,
+                "confidence": 0.75,
+                "end_index": 48,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FLASH POINT**: 80°F",
+            "value": "FLASH POINT: 80°F",
+            "bbox": [
+              {
+                "h": 20.96,
+                "w": 159.49,
+                "x": 551.26,
+                "y": 1014.09,
+                "confidence": 0.87,
+                "end_index": 20,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**LEL**:",
+            "value": "LEL:",
+            "bbox": [
+              {
+                "h": 23.0,
+                "w": 206.0,
+                "x": 244.0,
+                "y": 1019.0,
+                "confidence": 0.42,
+                "end_index": 7,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**EXTINGUISHING MEDIA**: CO<sub>2</sub> or Foam",
+            "value": "EXTINGUISHING MEDIA: CO<sub>2</sub> or Foam",
+            "bbox": [
+              {
+                "h": 31.83,
+                "w": 350.57,
+                "x": 11.9,
+                "y": 1071.22,
+                "confidence": 0.81,
+                "end_index": 46,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**UNUSUAL FIRE AND EXPLOSION HAZARDS**: None-Follow Good Manufacturing Procedures.",
+            "value": "UNUSUAL FIRE AND EXPLOSION HAZARDS: None-Follow Good Manufacturing Procedures.",
+            "bbox": [
+              {
+                "h": 22.43,
+                "w": 286.28,
+                "x": 11.27,
+                "y": 1156.36,
+                "confidence": 0.28,
+                "end_index": 35,
+                "label": "form",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 27.18,
+                "w": 541.0,
+                "x": 371.94,
+                "y": 1146.47,
+                "confidence": 0.28,
+                "end_index": 80,
+                "label": "form",
+                "r": null,
+                "start_index": 40
+              },
+              {
+                "h": 30.57,
+                "w": 368.78,
+                "x": 11.27,
+                "y": 1257.05,
+                "confidence": 0.28,
+                "end_index": 43,
+                "label": "form",
+                "r": null,
+                "start_index": 40
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**SPECIAL FIRE FIGHTING PROCEDURES**: NONE",
+            "value": "SPECIAL FIRE FIGHTING PROCEDURES: NONE",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "51147 5315",
+                "value": "51147 5315",
+                "bbox": [
+                  {
+                    "h": 125.69,
+                    "w": 18.16,
+                    "x": 1022.6,
+                    "y": 1171.56,
+                    "confidence": 0.78,
+                    "end_index": 9,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "51147 5315",
+            "bbox": [
+              {
+                "h": 125.69,
+                "w": 18.16,
+                "x": 1022.6,
+                "y": 1171.56,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1384.0,
+        "page_number": 1,
+        "page_width": 1082.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## FOR COATINGS, RESINS AND RELATED MATERIALS\n\n(Approved by U.S. Department of Labor \"Essentially Similar\" to Form OSHA-20)\n\n**DATE OF PREP.** 4/18/84\n\n### Section I\n\n**MANUFACTURER'S NAME**: H. Kohnstamm & Co., Inc.\n\n**STREET ADDRESS**: P.O. Box 13\n\n**CITY, STATE, AND ZIP CODE**: Harrison, N.J. 07029\n\n**EMERGENCY TELEPHONE NO.**: (201) 991-2355\n\n**INFORMATION TELEPHONE NO.**:     \n\n**PRODUCT CLASS**: Liquid Flavoring Material\n\n**MANUFACTURERS CODE IDENTIFICATION**: P-532 Rose of Latakia Oils\n\n**TRADE NAME**:     \n\n### Section II — HAZARDOUS INGREDIENTS\n\n| INGREDIENT                         | PERCENT | TLV<br/>PPM | TLV<br/>mg/M³ | LEL | VAPOR PRESSURE |\n| ---------------------------------- | ------- | ----------- | ------------- | --- | -------------- |\n| NOT APPLICABLE (Not for ingestion) |         |             |               |     |                |\n| NO HAZARDOUS INGREDIENTS           |         |             |               |     |                |\n\n\n### Section III — PHYSICAL DATA\n\n**BOILING RANGE**: Not applicable\n**VAPOR DENSITY**: [x] HEAVIER, [ ] LIGHTER, THAN AIR\n\n**EVAPORATION RATE**: [ ] FASTER [x] SLOWER, THAN ETHER\n**PERCENT VOLATILE BY VOLUME**: 48-52%\n**WEIGHT PER GALLON**: 7.75 - 7.85 Lbs.\n\n### Section IV — FIRE AND EXPLOSION HAZARD DATA\n\n**FLAMMABILITY CLASSIFICATION**: Flammable Liquid\n\n**FLASH POINT**: 80°F\n\n**LEL**:     \n\n**EXTINGUISHING MEDIA**: CO<sub>2</sub> or Foam\n\n**UNUSUAL FIRE AND EXPLOSION HAZARDS**: None-Follow Good Manufacturing Procedures.\n\n**SPECIAL FIRE FIGHTING PROCEDURES**: NONE",
+        "page_number": 1,
+        "success": true,
+        "footer": "51147 5315",
+        "header": "MATERIAL SAFETY DATA SHEET NPCA 1-",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

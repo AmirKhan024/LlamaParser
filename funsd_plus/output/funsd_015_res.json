@@ -1,0 +1,738 @@
+{
+  "job": {
+    "id": "pjb-1omvvxqhu8vc1dpo9mlwsunvbphh",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:08:15.715391Z",
+    "error_message": null,
+    "name": "funsd_015.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:08:33.063368Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "JUL 24 '98 10:15 TO-92023475011 FROM-RJR-LAW T-485 P.01 F-327\n20",
+                "value": "JUL 24 '98 10:15 TO-92023475011 FROM-RJR-LAW T-485 P.01 F-327\n20",
+                "bbox": [
+                  {
+                    "h": 17.47,
+                    "w": 232.23,
+                    "x": 125.31,
+                    "y": 99.51,
+                    "confidence": 0.72,
+                    "end_index": 63,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 26.44,
+                    "w": 240.63,
+                    "x": 121.2,
+                    "y": 94.73,
+                    "confidence": 0.72,
+                    "end_index": 60,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 17.12,
+                    "w": 151.58,
+                    "x": 790.58,
+                    "y": 99.42,
+                    "confidence": 0.74,
+                    "end_index": 60,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 45
+                  },
+                  {
+                    "h": 127.01,
+                    "w": 28.87,
+                    "x": 961.54,
+                    "y": 915.31,
+                    "confidence": 0.72,
+                    "end_index": 63,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 62
+                  },
+                  {
+                    "h": 16.78,
+                    "w": 86.0,
+                    "x": 461.86,
+                    "y": 99.3,
+                    "confidence": 0.72,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 24.234375,
+                    "w": 86.8204809286899,
+                    "x": 785.7914593698176,
+                    "y": 95.17499999999998,
+                    "confidence": 0.74,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 24.234375,
+                    "w": 45.834162520729706,
+                    "x": 899.4954394693201,
+                    "y": 95.17499999999998,
+                    "confidence": 0.74,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "JUL 24 '98 10:15 TO-92023475011 FROM-RJR-LAW T-485 P.01 F-327\n20",
+            "bbox": [
+              {
+                "h": 947.59,
+                "w": 869.21,
+                "x": 121.2,
+                "y": 94.73,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "md": "logo: Williams & Connolly",
+            "value": "logo: Williams & Connolly",
+            "bbox": [
+              {
+                "h": 94.25,
+                "w": 56.01,
+                "x": 24.2,
+                "y": 93.2,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "image",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## LAW OFFICES WILLIAMS & CONNOLLY",
+            "value": "LAW OFFICES WILLIAMS & CONNOLLY",
+            "bbox": [
+              {
+                "h": 26.44,
+                "w": 101.36,
+                "x": 478.61,
+                "y": 209.74,
+                "confidence": 1.0,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 23.79,
+                "w": 249.44,
+                "x": 403.25,
+                "y": 235.73,
+                "confidence": 1.0,
+                "end_index": 33,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 15
+              },
+              {
+                "h": 42.56,
+                "w": 247.74,
+                "x": 405.09,
+                "y": 214.81,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "725 TWELFTH STREET, N.W.",
+            "value": "725 TWELFTH STREET, N.W.",
+            "bbox": [
+              {
+                "h": 17.36,
+                "w": 179.47,
+                "x": 437.7,
+                "y": 267.72,
+                "confidence": 0.78,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "WASHINGTON, D. C. 20005",
+            "value": "WASHINGTON, D. C. 20005",
+            "bbox": [
+              {
+                "h": 18.27,
+                "w": 178.44,
+                "x": 439.44,
+                "y": 293.04,
+                "confidence": 0.81,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "(202) 434-5000",
+            "value": "(202) 434-5000",
+            "bbox": [
+              {
+                "h": 16.16,
+                "w": 101.84,
+                "x": 478.95,
+                "y": 321.32,
+                "confidence": 0.85,
+                "end_index": 13,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "FAX (202) 434-5020",
+            "value": "FAX (202) 434-5020",
+            "bbox": [
+              {
+                "h": 14.35,
+                "w": 131.76,
+                "x": 463.73,
+                "y": 349.21,
+                "confidence": 0.89,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TELECOPY",
+            "value": "TELECOPY",
+            "bbox": [
+              {
+                "h": 17.91,
+                "w": 138.76,
+                "x": 455.81,
+                "y": 460.65,
+                "confidence": 0.86,
+                "end_index": 10,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**TO**: Mark L. Holton",
+            "value": "TO: Mark L. Holton",
+            "bbox": [
+              {
+                "h": 454.72,
+                "w": 405.46,
+                "x": 183.34,
+                "y": 500.55,
+                "confidence": 0.76,
+                "end_index": 21,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.83,
+                "w": 121.64,
+                "x": 467.16,
+                "y": 500.55,
+                "confidence": 1.0,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 8
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FIRM OR COMPANY**: R.J. Reynolds Tobacco Company",
+            "value": "FIRM OR COMPANY: R.J. Reynolds Tobacco Company",
+            "bbox": [
+              {
+                "h": 18.95,
+                "w": 183.78,
+                "x": 185.1,
+                "y": 541.53,
+                "confidence": 1.0,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.83,
+                "w": 249.44,
+                "x": 467.16,
+                "y": 541.53,
+                "confidence": 1.0,
+                "end_index": 49,
+                "label": "text",
+                "r": null,
+                "start_index": 21
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELECOPY NUMBER**: \\~\\~ (336) 741-0671 \\~\\~\n202 347-5011",
+            "value": "TELECOPY NUMBER: ~~ (336) 741-0671 ~~\n202 347-5011",
+            "bbox": [
+              {
+                "h": 19.39,
+                "w": 189.07,
+                "x": 185.98,
+                "y": 582.95,
+                "confidence": 1.0,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.35,
+                "w": 142.79,
+                "x": 462.31,
+                "y": 580.3,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 29.08,
+                "w": 223.88,
+                "x": 453.05,
+                "y": 605.42,
+                "confidence": 1.0,
+                "end_index": 57,
+                "label": "text",
+                "r": null,
+                "start_index": 46
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FROM**: Terrence O'Donnell",
+            "value": "FROM: Terrence O'Donnell",
+            "bbox": [
+              {
+                "h": 18.33,
+                "w": 431.58,
+                "x": 186.02,
+                "y": 666.93,
+                "confidence": 0.96,
+                "end_index": 27,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.15,
+                "w": 148.96,
+                "x": 468.04,
+                "y": 664.46,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 13
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TELEPHONE**: (202) 434-5678",
+            "value": "TELEPHONE: (202) 434-5678",
+            "bbox": [
+              {
+                "h": 19.74,
+                "w": 400.75,
+                "x": 186.02,
+                "y": 707.82,
+                "confidence": 0.96,
+                "end_index": 28,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.71,
+                "w": 118.99,
+                "x": 468.04,
+                "y": 706.32,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 15
+              },
+              {
+                "h": 18.065625000000068,
+                "w": 116.34825870646767,
+                "x": 185.9809286898839,
+                "y": 708.9656249999999,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.709375000000023,
+                "w": 118.99253731343288,
+                "x": 468.03731343283573,
+                "y": 706.321875,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE**: July 24, 1998",
+            "value": "DATE: July 24, 1998",
+            "bbox": [
+              {
+                "h": 21.15,
+                "w": 384.81,
+                "x": 186.02,
+                "y": 748.71,
+                "confidence": 0.96,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.44,
+                "w": 105.77,
+                "x": 466.27,
+                "y": 745.1,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 22.03125,
+                "w": 61.699834162520744,
+                "x": 184.21807628524044,
+                "y": 747.7406249999999,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 26.4375,
+                "w": 105.77114427860704,
+                "x": 466.27446102819226,
+                "y": 745.096875,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**MATTER NUMBER**: 28150 0010",
+            "value": "MATTER NUMBER: 28150 0010",
+            "bbox": [
+              {
+                "h": 18.33,
+                "w": 373.11,
+                "x": 186.02,
+                "y": 791.01,
+                "confidence": 0.96,
+                "end_index": 28,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.83,
+                "w": 171.44,
+                "x": 185.1,
+                "y": 790.48,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.828125,
+                "w": 171.43739635157544,
+                "x": 185.09950248756218,
+                "y": 790.4812499999999,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.065625000000068,
+                "w": 90.78689883913773,
+                "x": 468.03731343283573,
+                "y": 790.4812499999999,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**NUMBER OF PAGES INCLUDING THIS PAGE**: 12",
+            "value": "NUMBER OF PAGES INCLUDING THIS PAGE: 12",
+            "bbox": [
+              {
+                "h": 16.92,
+                "w": 414.57,
+                "x": 186.02,
+                "y": 831.9,
+                "confidence": 0.95,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "IF THERE ARE ANY PROBLEMS RECEIVING THIS TRANSMISSION, PLEASE CALL (202) 434-5608 <u>IMMEDIATELY</u>. THANK YOU",
+            "value": "IF THERE ARE ANY PROBLEMS RECEIVING THIS TRANSMISSION, PLEASE CALL (202) 434-5608 <u>IMMEDIATELY</u>. THANK YOU",
+            "bbox": [
+              {
+                "h": 42.24,
+                "w": 648.16,
+                "x": 185.94,
+                "y": 870.92,
+                "confidence": 0.93,
+                "end_index": 110,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Mark,",
+            "value": "Mark,",
+            "bbox": [
+              {
+                "h": 17.14,
+                "w": 48.86,
+                "x": 186.18,
+                "y": 936.91,
+                "confidence": 0.93,
+                "end_index": 4,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "The attached draft is a preliminary analysis of the deficiencies in the complaint filed with the FEC by the Campaign for Tobacco Free Kids, and might form the basis for a joint reply. We are in a very strong position on both the law and the facts (the content of the ads).",
+            "value": "The attached draft is a preliminary analysis of the deficiencies in the complaint filed with the FEC by the Campaign for Tobacco Free Kids, and might form the basis for a joint reply. We are in a very strong position on both the law and the facts (the content of the ads).",
+            "bbox": [
+              {
+                "h": 79.86,
+                "w": 670.99,
+                "x": 185.39,
+                "y": 976.62,
+                "confidence": 0.99,
+                "end_index": 271,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 575.72,
+                "w": 685.5,
+                "x": 184.42,
+                "y": 482.2,
+                "confidence": 0.99,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "This message is intended for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this message is not the intended recipient or the employee or agent responsible for delivering this message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the above address via the U S Postal Service.",
+            "value": "This message is intended for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this message is not the intended recipient or the employee or agent responsible for delivering this message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the above address via the U S Postal Service.",
+            "bbox": [
+              {
+                "h": 119.49,
+                "w": 788.97,
+                "x": 147.07,
+                "y": 1099.42,
+                "confidence": 0.96,
+                "end_index": 647,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Williams & Connolly Telecopy Number: (202) 434-5029",
+            "value": "Williams & Connolly Telecopy Number: (202) 434-5029",
+            "bbox": [
+              {
+                "h": 22.56,
+                "w": 429.45,
+                "x": 308.27,
+                "y": 1232.34,
+                "confidence": 0.88,
+                "end_index": 50,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "P. 01 FAX NO. 2024345020 WILLIAMS & CONNOLLY JUL-24-98 FRI 9:18",
+                "value": "P. 01 FAX NO. 2024345020 WILLIAMS & CONNOLLY JUL-24-98 FRI 9:18",
+                "bbox": [
+                  {
+                    "h": 21.15,
+                    "w": 790.87,
+                    "x": 157.32,
+                    "y": 1319.76,
+                    "confidence": 0.95,
+                    "end_index": 62,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "P. 01 FAX NO. 2024345020 WILLIAMS & CONNOLLY JUL-24-98 FRI 9:18",
+            "bbox": [
+              {
+                "h": 21.15,
+                "w": 790.87,
+                "x": 157.32,
+                "y": 1319.76,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: Williams & Connolly\n\n## LAW OFFICES WILLIAMS & CONNOLLY\n\n725 TWELFTH STREET, N.W.\n\nWASHINGTON, D. C. 20005\n\n(202) 434-5000\n\nFAX (202) 434-5020\n\n## TELECOPY\n\n**TO**: Mark L. Holton\n\n**FIRM OR COMPANY**: R.J. Reynolds Tobacco Company\n\n**TELECOPY NUMBER**: ~~ (336) 741-0671 ~~\n202 347-5011\n\n**FROM**: Terrence O'Donnell\n\n**TELEPHONE**: (202) 434-5678\n\n**DATE**: July 24, 1998\n\n**MATTER NUMBER**: 28150 0010\n\n**NUMBER OF PAGES INCLUDING THIS PAGE**: 12\n\nIF THERE ARE ANY PROBLEMS RECEIVING THIS TRANSMISSION, PLEASE CALL (202) 434-5608 <u>IMMEDIATELY</u>. THANK YOU\n\nMark,\n\nThe attached draft is a preliminary analysis of the deficiencies in the complaint filed with the FEC by the Campaign for Tobacco Free Kids, and might form the basis for a joint reply. We are in a very strong position on both the law and the facts (the content of the ads).\n\n\n\n> This message is intended for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this message is not the intended recipient or the employee or agent responsible for delivering this message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by telephone and return the original message to us at the above address via the U S Postal Service.\n\nWilliams & Connolly Telecopy Number: (202) 434-5029",
+        "page_number": 1,
+        "success": true,
+        "footer": "P. 01 FAX NO. 2024345020 WILLIAMS & CONNOLLY JUL-24-98 FRI 9:18",
+        "header": "JUL 24 '98 10:15 TO-92023475011 FROM-RJR-LAW T-485 P.01 F-327\n20",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

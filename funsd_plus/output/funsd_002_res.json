@@ -1,0 +1,598 @@
+{
+  "job": {
+    "id": "pjb-20zw5s8mijmqck1946f7d63rqn1s",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:03:47.994923Z",
+    "error_message": null,
+    "name": "funsd_002.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:04:07.699987Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "logo: DUCE",
+            "value": "logo: DUCE",
+            "bbox": [
+              {
+                "h": 36.13,
+                "w": 40.86,
+                "x": 692.41,
+                "y": 26.84,
+                "confidence": 0.68,
+                "end_index": 9,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## RETENTION SCHEDULE MAINTENANCE FORM",
+            "value": "RETENTION SCHEDULE MAINTENANCE FORM",
+            "bbox": [
+              {
+                "h": 15.44,
+                "w": 377.08,
+                "x": 540.19,
+                "y": 56.96,
+                "confidence": 0.88,
+                "end_index": 37,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**TO**: <u>Records Management Department</u> (RESPONSIBLE RECORDS MANAGEMENT GROUP)",
+            "value": "TO: <u>Records Management Department</u> (RESPONSIBLE RECORDS MANAGEMENT GROUP)",
+            "bbox": [
+              {
+                "h": 38.35,
+                "w": 1154.83,
+                "x": 195.25,
+                "y": 118.11,
+                "confidence": 0.57,
+                "end_index": 82,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.23,
+                "w": 310.21,
+                "x": 195.25,
+                "y": 118.11,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 15.75,
+                "w": 199.13,
+                "x": 63.17,
+                "y": 248.23,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 22.6,
+                "w": 392.17,
+                "x": 957.91,
+                "y": 133.86,
+                "confidence": 1.0,
+                "end_index": 82,
+                "label": "text",
+                "r": null,
+                "start_index": 45
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**FROM**: <u>Jackie Hargrave</u> (RECORDS COORDINATOR)",
+            "value": "FROM: <u>Jackie Hargrave</u> (RECORDS COORDINATOR)",
+            "bbox": [
+              {
+                "h": 35.61,
+                "w": 1289.61,
+                "x": 60.46,
+                "y": 183.17,
+                "confidence": 0.54,
+                "end_index": 53,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.75,
+                "w": 159.85,
+                "x": 249.43,
+                "y": 184.54,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 13
+              },
+              {
+                "h": 19.86,
+                "w": 214.03,
+                "x": 1136.04,
+                "y": 198.92,
+                "confidence": 1.0,
+                "end_index": 53,
+                "label": "text",
+                "r": null,
+                "start_index": 33
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**NAME OF DEPARTMENT**: <u>01MFP101 - Processing Plants General Manager</u>",
+            "value": "NAME OF DEPARTMENT: <u>01MFP101 - Processing Plants General Manager</u>",
+            "bbox": [
+              {
+                "h": 294.89,
+                "w": 1308.54,
+                "x": 60.46,
+                "y": 118.11,
+                "confidence": 0.56,
+                "end_index": 74,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.6,
+                "w": 467.35,
+                "x": 365.25,
+                "y": 241.38,
+                "confidence": 1.0,
+                "end_index": 70,
+                "label": "text",
+                "r": null,
+                "start_index": 34
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**AUTHORIZED SIGNATURE**: <u>[signature]</u> (DEPARTMENT HEAD)",
+            "value": "AUTHORIZED SIGNATURE: <u>[signature]</u> (DEPARTMENT HEAD)",
+            "bbox": [
+              {
+                "h": 34.24,
+                "w": 1288.26,
+                "x": 63.17,
+                "y": 310.55,
+                "confidence": 0.55,
+                "end_index": 61,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.75,
+                "w": 219.45,
+                "x": 63.17,
+                "y": 310.55,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.86,
+                "w": 172.72,
+                "x": 1178.71,
+                "y": 324.93,
+                "confidence": 1.0,
+                "end_index": 61,
+                "label": "text",
+                "r": null,
+                "start_index": 45
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "[NOTE: You will receive a separate memorandum providing you with any new record category codes or with reasons for denial of requested additions or changes.]",
+            "value": "[NOTE: You will receive a separate memorandum providing you with any new record category codes or with reasons for denial of requested additions or changes.]",
+            "bbox": [
+              {
+                "h": 46.57,
+                "w": 939.44,
+                "x": 135.64,
+                "y": 366.02,
+                "confidence": 1.0,
+                "end_index": 156,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 294.89,
+                "w": 1308.54,
+                "x": 60.46,
+                "y": 118.11,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Requested Revision*\",\"Record Category Code\",\"Record Category\",\"RETENTION PERIOD<br/>In Dept.\",\"RETENTION PERIOD<br/>In Storage\",\"RETENTION PERIOD<br/>Total\"\n\"CRC/CRP\",\"S0763\",\"SAFETY ISSUES\",\"C + 5\",,\"C + 5\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">Requested Revision*</th>\n        <th rowspan=\"2\">Record Category Code</th>\n        <th rowspan=\"2\">Record Category</th>\n        <th colspan=\"3\">RETENTION PERIOD</th>\n    </tr>\n    <tr>\n        <th>In Dept.</th>\n        <th>In Storage</th>\n        <th>Total</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>CRC/CRP</td>\n        <td>S0763</td>\n        <td>SAFETY ISSUES</td>\n        <td>C + 5</td>\n        <td> </td>\n        <td>C + 5</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Requested Revision\\* | Record Category Code | Record Category | RETENTION PERIOD<br/>In Dept. | RETENTION PERIOD<br/>In Storage | RETENTION PERIOD<br/>Total |\n| -------------------- | -------------------- | --------------- | ----------------------------- | ------------------------------- | -------------------------- |\n| CRC/CRP              | S0763                | SAFETY ISSUES   | C + 5                         |                                 | C + 5                      |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |",
+            "rows": [
+              [
+                "Requested Revision*",
+                "Record Category Code",
+                "Record Category",
+                "RETENTION PERIOD<br/>In Dept.",
+                "RETENTION PERIOD<br/>In Storage",
+                "RETENTION PERIOD<br/>Total"
+              ],
+              [
+                "CRC/CRP",
+                "S0763",
+                "SAFETY ISSUES",
+                "C + 5",
+                "",
+                "C + 5"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 104.78,
+                "w": 215.39,
+                "x": 82.13,
+                "y": 455.05,
+                "confidence": 0.5,
+                "end_index": 351,
+                "label": "table",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 19.86,
+                "w": 161.88,
+                "x": 554.9,
+                "y": 474.91,
+                "confidence": 0.5,
+                "end_index": 39,
+                "label": "table",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 107.52,
+                "w": 339.34,
+                "x": 987.71,
+                "y": 449.57,
+                "confidence": 0.5,
+                "end_index": 392,
+                "label": "table",
+                "r": null,
+                "start_index": 66
+              },
+              {
+                "h": 19.86,
+                "w": 141.56,
+                "x": 334.1,
+                "y": 538.6,
+                "confidence": 0.5,
+                "end_index": 382,
+                "label": "table",
+                "r": null,
+                "start_index": 370
+              },
+              {
+                "h": 13.04,
+                "w": 30.63,
+                "x": 85.21,
+                "y": 124.9,
+                "confidence": 1.0,
+                "end_index": 124,
+                "label": "text",
+                "r": null,
+                "start_index": 123
+              },
+              {
+                "h": 303.23,
+                "w": 1307.35,
+                "x": 67.76,
+                "y": 437.02,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 908.19,
+                "w": 1315.76,
+                "x": 60.85,
+                "y": 115.84,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": null,
+            "type": "table"
+          },
+          {
+            "md": "You <u>must</u> attach a description of records in each new category requested and reasons for any suggested retention period changes.",
+            "value": "You <u>must</u> attach a description of records in each new category requested and reasons for any suggested retention period changes.",
+            "bbox": [
+              {
+                "h": 45.36,
+                "w": 1255.67,
+                "x": 84.14,
+                "y": 747.57,
+                "confidence": 0.97,
+                "end_index": 133,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**\\*REQUESTED REVISION CODES:**",
+            "value": "*REQUESTED REVISION CODES:",
+            "bbox": [
+              {
+                "h": 17.38,
+                "w": 275.23,
+                "x": 587.75,
+                "y": 791.82,
+                "confidence": 0.91,
+                "end_index": 30,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "ADD = Add to the records retention schedule",
+            "value": "ADD = Add to the records retention schedule",
+            "bbox": [
+              {
+                "h": 17.55,
+                "w": 460.11,
+                "x": 596.7,
+                "y": 811.26,
+                "confidence": 0.88,
+                "end_index": 42,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "DEL = Delete from the records retention schedule",
+            "value": "DEL = Delete from the records retention schedule",
+            "bbox": [
+              {
+                "h": 16.93,
+                "w": 512.63,
+                "x": 596.98,
+                "y": 832.42,
+                "confidence": 0.89,
+                "end_index": 47,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CRC = Change the record category description",
+            "value": "CRC = Change the record category description",
+            "bbox": [
+              {
+                "h": 17.5,
+                "w": 469.44,
+                "x": 596.75,
+                "y": 852.59,
+                "confidence": 0.88,
+                "end_index": 43,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CRP = Change the retention period for a category",
+            "value": "CRP = Change the retention period for a category",
+            "bbox": [
+              {
+                "h": 15.75,
+                "w": 511.88,
+                "x": 597.19,
+                "y": 875.34,
+                "confidence": 0.89,
+                "end_index": 47,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.06,
+                "w": 512.4,
+                "x": 597.42,
+                "y": 874.87,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "FOR RECORDS MANAGEMENT USE",
+            "value": "FOR RECORDS MANAGEMENT USE",
+            "bbox": [
+              {
+                "h": 14.37,
+                "w": 279.6,
+                "x": 587.15,
+                "y": 917.95,
+                "confidence": 0.87,
+                "end_index": 25,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "9900090900\n**Responsible Records Management Group Approval**: <u>    </u> **Date**: <u>    </u>",
+            "value": "9900090900\nResponsible Records Management Group Approval: <u>    </u> Date: <u>    </u>",
+            "bbox": [
+              {
+                "h": 22.93,
+                "w": 195.23,
+                "x": 110.2,
+                "y": 938.51,
+                "confidence": 1.0,
+                "end_index": 9,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 38.21,
+                "w": 495.84,
+                "x": 63.59,
+                "y": 938.51,
+                "confidence": 1.0,
+                "end_index": 82,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 54.67,
+                "w": 60.8,
+                "x": 1092.42,
+                "y": 953.79,
+                "confidence": 1.0,
+                "end_index": 82,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.75,
+                "w": 495.84,
+                "x": 63.59,
+                "y": 954.96,
+                "confidence": 1.0,
+                "end_index": 60,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 85.43,
+                "w": 1308.83,
+                "x": 63.53,
+                "y": 938.51,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Legal Counsel Approval**: <u>    </u> **Date**: <u>    </u>",
+            "value": "Legal Counsel Approval: <u>    </u> Date: <u>    </u>",
+            "bbox": [
+              {
+                "h": 58.19,
+                "w": 1089.62,
+                "x": 63.59,
+                "y": 953.79,
+                "confidence": 0.52,
+                "end_index": 60,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1070.0,
+        "page_number": 1,
+        "page_width": 1400.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: DUCE\n\n## RETENTION SCHEDULE MAINTENANCE FORM\n\n**TO**: <u>Records Management Department</u> (RESPONSIBLE RECORDS MANAGEMENT GROUP)\n\n**FROM**: <u>Jackie Hargrave</u> (RECORDS COORDINATOR)\n\n**NAME OF DEPARTMENT**: <u>01MFP101 - Processing Plants General Manager</u>\n\n**AUTHORIZED SIGNATURE**: <u>[signature]</u> (DEPARTMENT HEAD)\n\n[NOTE: You will receive a separate memorandum providing you with any new record category codes or with reasons for denial of requested additions or changes.]\n\n| Requested Revision\\* | Record Category Code | Record Category | RETENTION PERIOD<br/>In Dept. | RETENTION PERIOD<br/>In Storage | RETENTION PERIOD<br/>Total |\n| -------------------- | -------------------- | --------------- | ----------------------------- | ------------------------------- | -------------------------- |\n| CRC/CRP              | S0763                | SAFETY ISSUES   | C + 5                         |                                 | C + 5                      |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |\n|                      |                      |                 |                               |                                 |                            |\n\n\nYou <u>must</u> attach a description of records in each new category requested and reasons for any suggested retention period changes.\n\n**\\*REQUESTED REVISION CODES:**\n\nADD = Add to the records retention schedule\n\nDEL = Delete from the records retention schedule\n\nCRC = Change the record category description\n\nCRP = Change the retention period for a category\n\nFOR RECORDS MANAGEMENT USE\n\n9900090900\n**Responsible Records Management Group Approval**: <u>    </u> **Date**: <u>    </u>\n\n**Legal Counsel Approval**: <u>    </u> **Date**: <u>    </u>",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

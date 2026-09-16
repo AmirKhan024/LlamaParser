@@ -1,0 +1,756 @@
+{
+  "job": {
+    "id": "pjb-6ezzv7fca14whnmhi7wh8p67di3l",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:04:32.144539Z",
+    "error_message": null,
+    "name": "funsd_004.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:04:45.135229Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "**JP NO:** CFPK45EM052A\n**PAGE:** 1 of 6\n**ISSUE DATE:** 7/10/92\n**SUPERSEDES:**\\\n**APPLICABLE TO:** Waste Water/Maintenance\n**UPDATE RESPONSIBILITY:** Area Supervisor",
+            "value": "JP NO: CFPK45EM052A\nPAGE: 1 of 6\nISSUE DATE: 7/10/92\nSUPERSEDES: APPLICABLE TO: Waste Water/Maintenance\nUPDATE RESPONSIBILITY: Area Supervisor",
+            "bbox": [
+              {
+                "h": 198.48,
+                "w": 306.27,
+                "x": 551.8,
+                "y": 124.05,
+                "confidence": 0.86,
+                "end_index": 166,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 40.57,
+                "w": 174.44,
+                "x": 551.8,
+                "y": 124.05,
+                "confidence": 0.86,
+                "end_index": 22,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.21,
+                "w": 126.87,
+                "x": 599.38,
+                "y": 142.4,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 42.01,
+                "w": 58.48,
+                "x": 774.81,
+                "y": 124.05,
+                "confidence": 0.86,
+                "end_index": 39,
+                "label": "form",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 50.71,
+                "w": 113.98,
+                "x": 552.79,
+                "y": 172.83,
+                "confidence": 0.86,
+                "end_index": 63,
+                "label": "form",
+                "r": null,
+                "start_index": 41
+              },
+              {
+                "h": 14.0,
+                "w": 82.27,
+                "x": 775.8,
+                "y": 173.79,
+                "confidence": 1.0,
+                "end_index": 80,
+                "label": "text",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 15.94,
+                "w": 97.13,
+                "x": 552.79,
+                "y": 220.64,
+                "confidence": 1.0,
+                "end_index": 99,
+                "label": "text",
+                "r": null,
+                "start_index": 82
+              },
+              {
+                "h": 21.73,
+                "w": 204.18,
+                "x": 599.38,
+                "y": 242.37,
+                "confidence": 1.0,
+                "end_index": 123,
+                "label": "text",
+                "r": null,
+                "start_index": 101
+              },
+              {
+                "h": 21.73,
+                "w": 125.88,
+                "x": 599.38,
+                "y": 300.8,
+                "confidence": 0.86,
+                "end_index": 166,
+                "label": "form",
+                "r": null,
+                "start_index": 125
+              },
+              {
+                "h": 21.73,
+                "w": 125.88,
+                "x": 599.38,
+                "y": 300.8,
+                "confidence": 1.0,
+                "end_index": 166,
+                "label": "text",
+                "r": null,
+                "start_index": 152
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## PHILIP MORRIS U.S.A.",
+            "value": "PHILIP MORRIS U.S.A.",
+            "bbox": [
+              {
+                "h": 18.31,
+                "w": 187.89,
+                "x": 274.9,
+                "y": 143.94,
+                "confidence": 0.84,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "logo: Philip Morris",
+            "value": "logo: Philip Morris",
+            "bbox": [
+              {
+                "h": 293.62,
+                "w": 786.98,
+                "x": 71.09,
+                "y": 124.05,
+                "confidence": 0.39,
+                "end_index": 18,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 41.53,
+                "w": 379.61,
+                "x": 70.1,
+                "y": 455.82,
+                "confidence": 0.39,
+                "end_index": 18,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 77.27,
+                "w": 515.4,
+                "x": 68.12,
+                "y": 543.23,
+                "confidence": 0.39,
+                "end_index": 18,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 73.4,
+                "w": 177.42,
+                "x": 694.53,
+                "y": 549.99,
+                "confidence": 0.39,
+                "end_index": 18,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## JOB PROCEDURE",
+            "value": "JOB PROCEDURE",
+            "bbox": [
+              {
+                "h": 20.07,
+                "w": 185.85,
+                "x": 275.32,
+                "y": 278.58,
+                "confidence": 0.86,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**SUBJECT:** Lockout Procedure for Secondary Scum Pumps",
+            "value": "SUBJECT: Lockout Procedure for Secondary Scum Pumps",
+            "bbox": [
+              {
+                "h": 43.46,
+                "w": 467.83,
+                "x": 71.09,
+                "y": 316.74,
+                "confidence": 0.87,
+                "end_index": 54,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.66,
+                "w": 363.75,
+                "x": 175.16,
+                "y": 336.54,
+                "confidence": 1.0,
+                "end_index": 54,
+                "label": "text",
+                "r": null,
+                "start_index": 13
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**REQUIRED PERSONAL PROTECTIVE EQUIPMENT:** Safety Glasses, Leather Gloves",
+            "value": "REQUIRED PERSONAL PROTECTIVE EQUIPMENT: Safety Glasses, Leather Gloves",
+            "bbox": [
+              {
+                "h": 16.42,
+                "w": 274.55,
+                "x": 71.09,
+                "y": 365.51,
+                "confidence": 1.0,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.73,
+                "w": 236.89,
+                "x": 175.16,
+                "y": 395.94,
+                "confidence": 1.0,
+                "end_index": 73,
+                "label": "text",
+                "r": null,
+                "start_index": 44
+              },
+              {
+                "h": 14.85,
+                "w": 273.97,
+                "x": 72.58,
+                "y": 373.38,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.27,
+                "w": 236.19,
+                "x": 176.08,
+                "y": 405.69,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**REQUIRED SPECIAL TOOLS AND EQUIPMENT:** Locks, Tags, Lockout Device, Chain",
+            "value": "REQUIRED SPECIAL TOOLS AND EQUIPMENT: Locks, Tags, Lockout Device, Chain",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "**APPROVAL:** [signature: M B Aralge]\n**APPROVAL:** [signature: M J Hill]\n**LOSS PREVENTION APPROVAL:**",
+            "value": "APPROVAL: [signature: M B Aralge]\nAPPROVAL: [signature: M J Hill]\nLOSS PREVENTION APPROVAL:",
+            "bbox": [
+              {
+                "h": 72.44,
+                "w": 801.62,
+                "x": 71.02,
+                "y": 559.99,
+                "confidence": 0.92,
+                "end_index": 102,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**BASIC JOB PROCEDURE** | **KEY POINTS**",
+            "value": "BASIC JOB PROCEDURE | KEY POINTS",
+            "bbox": [
+              {
+                "h": 74.37,
+                "w": 316.18,
+                "x": 267.34,
+                "y": 546.13,
+                "confidence": 0.38,
+                "end_index": 20,
+                "label": "form",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 89.82,
+                "w": 550.09,
+                "x": 175.16,
+                "y": 270.38,
+                "confidence": 0.38,
+                "end_index": 20,
+                "label": "form",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 15.936518554687495,
+                "w": 572.8891113807981,
+                "x": 267.3405137540453,
+                "y": 607.4581884765624,
+                "confidence": 0.38,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 13.038969726562527,
+                "w": 138.76206850053944,
+                "x": 267.3405137540453,
+                "y": 607.4581884765624,
+                "confidence": 0.38,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 14.004819335937555,
+                "w": 70.37219188241636,
+                "x": 769.8574332524271,
+                "y": 609.3898876953124,
+                "confidence": 0.38,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "THIS PROCEDURE COVERS THE FOLLOWING EQUIPMENT:\n52-052, 52-053",
+            "value": "THIS PROCEDURE COVERS THE FOLLOWING EQUIPMENT:\n52-052, 52-053",
+            "bbox": [
+              {
+                "h": 39.58,
+                "w": 467.52,
+                "x": 53.44,
+                "y": 650.46,
+                "confidence": 0.84,
+                "end_index": 60,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## I. Potential Hazards",
+            "value": "I. Potential Hazards",
+            "bbox": [
+              {
+                "h": 17.41,
+                "w": 196.11,
+                "x": 54.27,
+                "y": 712.24,
+                "confidence": 0.9,
+                "end_index": 22,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.730625000000032,
+                "w": 144.51132686084142,
+                "x": 110.12459546925567,
+                "y": 706.9475,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "A. Low overhead obstructions and/or congested work area could result in lacerations, concussion, and/or contusions.",
+            "value": "A. Low overhead obstructions and/or congested work area could result in lacerations, concussion, and/or contusions.",
+            "bbox": [
+              {
+                "h": 60.94,
+                "w": 454.57,
+                "x": 113.64,
+                "y": 752.58,
+                "confidence": 0.92,
+                "end_index": 114,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.33031249999999,
+                "w": 391.747572815534,
+                "x": 175.415857605178,
+                "y": 752.6553125,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "B. Lacerations, contusions, and/or abrasions could result due to striking surrounding structures or equipment.",
+            "value": "B. Lacerations, contusions, and/or abrasions could result due to striking surrounding structures or equipment.",
+            "bbox": [
+              {
+                "h": 61.11,
+                "w": 428.43,
+                "x": 115.63,
+                "y": 835.82,
+                "confidence": 0.94,
+                "end_index": 109,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.024374999999964,
+                "w": 368.6779935275081,
+                "x": 175.415857605178,
+                "y": 835.3646875000001,
+                "confidence": 0.94,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "C. Severe crush injury and/or amputation could result from unexpected operation of moving parts of pump.",
+            "value": "C. Severe crush injury and/or amputation could result from unexpected operation of moving parts of pump.",
+            "bbox": [
+              {
+                "h": 61.17,
+                "w": 403.42,
+                "x": 115.5,
+                "y": 916.29,
+                "confidence": 0.95,
+                "end_index": 103,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.459687499999973,
+                "w": 342.5614886731392,
+                "x": 176.2864077669903,
+                "y": 916.3328125,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "D. Severe lacerations and/or amputation could result from unexpected operation of moving parts of pump.",
+            "value": "D. Severe lacerations and/or amputation could result from unexpected operation of moving parts of pump.",
+            "bbox": [
+              {
+                "h": 62.45,
+                "w": 395.89,
+                "x": 115.75,
+                "y": 997.36,
+                "confidence": 0.95,
+                "end_index": 102,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.459687499999973,
+                "w": 335.59708737864077,
+                "x": 176.2864077669903,
+                "y": 996.865625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "E. Burns, skin/eye irritation, and/or temporary respiratory problems could result from contact with substance discharged through pump.",
+            "value": "E. Burns, skin/eye irritation, and/or temporary respiratory problems could result from contact with substance discharged through pump.",
+            "bbox": [
+              {
+                "h": 83.51,
+                "w": 393.72,
+                "x": 116.11,
+                "y": 1080.14,
+                "confidence": 0.95,
+                "end_index": 133,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.20093750000001,
+                "w": 334.2912621359223,
+                "x": 176.2864077669903,
+                "y": 1079.575,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "F. Flying objects/debris could result in lacerations, eye injuries, or injuries from embedded objects.",
+            "value": "F. Flying objects/debris could result in lacerations, eye injuries, or injuries from embedded objects.",
+            "bbox": [
+              {
+                "h": 41.56,
+                "w": 427.81,
+                "x": 116.0,
+                "y": 1184.43,
+                "confidence": 0.96,
+                "end_index": 101,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.459687499999973,
+                "w": 365.63106796116506,
+                "x": 176.72168284789643,
+                "y": 1184.05,
+                "confidence": 0.96,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "G. Slips and falls could result due to wet and/or uneven working surfaces.",
+            "value": "G. Slips and falls could result due to wet and/or uneven working surfaces.",
+            "bbox": [
+              {
+                "h": 41.85,
+                "w": 405.99,
+                "x": 116.27,
+                "y": 1244.85,
+                "confidence": 0.95,
+                "end_index": 73,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.33031249999999,
+                "w": 344.7378640776698,
+                "x": 177.15695792880257,
+                "y": 1244.5584375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "H. Slips and falls could result from improper housekeeping practices.",
+            "value": "H. Slips and falls could result from improper housekeeping practices.",
+            "bbox": [
+              {
+                "h": 41.66,
+                "w": 374.87,
+                "x": 117.15,
+                "y": 1306.57,
+                "confidence": 0.95,
+                "end_index": 68,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.33031249999999,
+                "w": 314.70388349514565,
+                "x": 177.59223300970874,
+                "y": 1305.9375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2030239433",
+                "value": "2030239433",
+                "bbox": [
+                  {
+                    "h": 30.45,
+                    "w": 192.52,
+                    "x": 784.67,
+                    "y": 1302.98,
+                    "confidence": 0.87,
+                    "end_index": 9,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "\\#5009 2/86",
+                "value": "#5009 2/86",
+                "bbox": [
+                  {
+                    "h": 11.51,
+                    "w": 60.44,
+                    "x": 943.74,
+                    "y": 1355.67,
+                    "confidence": 0.89,
+                    "end_index": 10,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2030239433\n\n#5009 2/86",
+            "bbox": [
+              {
+                "h": 64.21,
+                "w": 219.51,
+                "x": 784.67,
+                "y": 1302.98,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1393.0,
+        "page_number": 1,
+        "page_width": 1076.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "**JP NO:** CFPK45EM052A\n**PAGE:** 1 of 6\n**ISSUE DATE:** 7/10/92\n**SUPERSEDES:**     \n**APPLICABLE TO:** Waste Water/Maintenance\n**UPDATE RESPONSIBILITY:** Area Supervisor\n\n## PHILIP MORRIS U.S.A.\n\nlogo: Philip Morris\n\n## JOB PROCEDURE\n\n**SUBJECT:** Lockout Procedure for Secondary Scum Pumps\n\n**REQUIRED PERSONAL PROTECTIVE EQUIPMENT:** Safety Glasses, Leather Gloves\n\n**REQUIRED SPECIAL TOOLS AND EQUIPMENT:** Locks, Tags, Lockout Device, Chain\n\n**APPROVAL:** [signature: M B Aralge]\n**APPROVAL:** [signature: M J Hill]\n**LOSS PREVENTION APPROVAL:**     \n\n**BASIC JOB PROCEDURE** | **KEY POINTS**\n\nTHIS PROCEDURE COVERS THE FOLLOWING EQUIPMENT:\n52-052, 52-053\n\n## I. Potential Hazards\n\nA. Low overhead obstructions and/or congested work area could result in lacerations, concussion, and/or contusions.\n\nB. Lacerations, contusions, and/or abrasions could result due to striking surrounding structures or equipment.\n\nC. Severe crush injury and/or amputation could result from unexpected operation of moving parts of pump.\n\nD. Severe lacerations and/or amputation could result from unexpected operation of moving parts of pump.\n\nE. Burns, skin/eye irritation, and/or temporary respiratory problems could result from contact with substance discharged through pump.\n\nF. Flying objects/debris could result in lacerations, eye injuries, or injuries from embedded objects.\n\nG. Slips and falls could result due to wet and/or uneven working surfaces.\n\nH. Slips and falls could result from improper housekeeping practices.",
+        "page_number": 1,
+        "success": true,
+        "footer": "2030239433\n\n#5009 2/86",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

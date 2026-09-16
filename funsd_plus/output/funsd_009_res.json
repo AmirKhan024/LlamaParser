@@ -1,0 +1,511 @@
+{
+  "job": {
+    "id": "pjb-kz8oc4scj1d0qsqvs00us2twu4qq",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:06:22.587347Z",
+    "error_message": null,
+    "name": "funsd_009.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:06:33.677064Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## CLASSIFIED MATERIAL RECEIPT",
+            "value": "CLASSIFIED MATERIAL RECEIPT",
+            "bbox": [
+              {
+                "h": 27.32,
+                "w": 301.01,
+                "x": 513.43,
+                "y": 897.99,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Title and/or number of document**: W-175-RDD",
+            "value": "Title and/or number of document: W-175-RDD",
+            "bbox": [
+              {
+                "h": 26.79,
+                "w": 450.71,
+                "x": 373.11,
+                "y": 946.11,
+                "confidence": 0.93,
+                "end_index": 45,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.35,
+                "w": 264.43,
+                "x": 371.52,
+                "y": 950.43,
+                "confidence": 1.0,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.353124999999977,
+                "w": 264.42786069651737,
+                "x": 371.521144278607,
+                "y": 950.4281249999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.234375,
+                "w": 98.71973466003317,
+                "x": 727.1766169154229,
+                "y": 941.6156249999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Number of Copies**: 1",
+            "value": "Number of Copies: 1",
+            "bbox": [
+              {
+                "h": 23.79,
+                "w": 146.76,
+                "x": 373.28,
+                "y": 992.73,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Classification**:",
+            "value": "Classification:",
+            "bbox": [
+              {
+                "h": 17.02,
+                "w": 114.43,
+                "x": 376.07,
+                "y": 1041.74,
+                "confidence": 0.95,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "SECRET [x]",
+                "value": "SECRET [x]",
+                "bbox": [
+                  {
+                    "h": 26.87,
+                    "w": 108.23,
+                    "x": 558.35,
+                    "y": 1029.09,
+                    "confidence": 0.95,
+                    "end_index": 9,
+                    "label": "checkbox-selected",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "CONFIDENTIAL [ ]",
+                "value": "CONFIDENTIAL [ ]",
+                "bbox": [
+                  {
+                    "h": 25.56,
+                    "w": 125.16,
+                    "x": 706.9,
+                    "y": 1030.18,
+                    "confidence": 0.96,
+                    "end_index": 15,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 26.58,
+                    "w": 168.18,
+                    "x": 709.0,
+                    "y": 1026.07,
+                    "confidence": 0.96,
+                    "end_index": null,
+                    "label": "checkbox-unselected",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* SECRET [x]\n\n* CONFIDENTIAL [ ]",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 26.87,
+                "w": 108.23,
+                "x": 558.35,
+                "y": 1029.09,
+                "confidence": 0.95,
+                "end_index": 12,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 25.56,
+                "w": 125.16,
+                "x": 706.9,
+                "y": 1030.18,
+                "confidence": 0.96,
+                "end_index": 31,
+                "label": "list",
+                "r": null,
+                "start_index": 14
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**Deliver to**: Thomas L. Gentry",
+            "value": "Deliver to: Thomas L. Gentry",
+            "bbox": [
+              {
+                "h": 23.97,
+                "w": 291.26,
+                "x": 377.37,
+                "y": 1094.16,
+                "confidence": 0.89,
+                "end_index": 31,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.79,
+                "w": 166.15,
+                "x": 503.74,
+                "y": 1090.99,
+                "confidence": 1.0,
+                "end_index": 31,
+                "label": "text",
+                "r": null,
+                "start_index": 16
+              },
+              {
+                "h": 18.94687500000009,
+                "w": 80.65049751243782,
+                "x": 375.4875621890547,
+                "y": 1100.240625,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.793750000000045,
+                "w": 166.14883913764504,
+                "x": 503.73507462686564,
+                "y": 1090.9875,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**From**: Grover M. Myers **Date**: 8/4/88",
+            "value": "From: Grover M. Myers Date: 8/4/88",
+            "bbox": [
+              {
+                "h": 36.13,
+                "w": 513.43,
+                "x": 374.61,
+                "y": 1126.24,
+                "confidence": 0.92,
+                "end_index": 41,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.23,
+                "w": 155.13,
+                "x": 505.06,
+                "y": 1132.41,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 22.03125,
+                "w": 49.359867330016584,
+                "x": 374.60613598673297,
+                "y": 1140.3374999999999,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.234375,
+                "w": 155.13101160862357,
+                "x": 505.0572139303482,
+                "y": 1132.40625,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.284374999999955,
+                "w": 142.7910447761194,
+                "x": 745.2458540630182,
+                "y": 1126.2375,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Received by**: [signature: G M G] **Date**: 8/5/88",
+            "value": "Received by: [signature: G M G] Date: 8/5/88",
+            "bbox": [
+              {
+                "h": 70.5,
+                "w": 507.05,
+                "x": 378.43,
+                "y": 1132.23,
+                "confidence": 0.93,
+                "end_index": 51,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 49.79,
+                "w": 175.84,
+                "x": 739.96,
+                "y": 1156.2,
+                "confidence": 1.0,
+                "end_index": 51,
+                "label": "text",
+                "r": null,
+                "start_index": 36
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### INSTRUCTIONS FOR USE",
+            "value": "INSTRUCTIONS FOR USE",
+            "bbox": [
+              {
+                "h": 19.21,
+                "w": 200.45,
+                "x": 570.26,
+                "y": 1213.03,
+                "confidence": 0.89,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**A. When Transmitting**:\nPrepare in two copies and forward with material.",
+            "value": "A. When Transmitting:\nPrepare in two copies and forward with material.",
+            "bbox": [
+              {
+                "h": 54.99,
+                "w": 198.78,
+                "x": 379.49,
+                "y": 1257.72,
+                "confidence": 0.83,
+                "end_index": 73,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.03,
+                "w": 177.17,
+                "x": 378.13,
+                "y": 1254.9,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.18,
+                "w": 147.2,
+                "x": 403.69,
+                "y": 1296.76,
+                "confidence": 1.0,
+                "end_index": 73,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**B. When Receiving**:\nVerify that material received is as Described. Sign original copy and return to sender. Retain other copy for your files.",
+            "value": "B. When Receiving:\nVerify that material received is as Described. Sign original copy and return to sender. Retain other copy for your files.",
+            "bbox": [
+              {
+                "h": 73.32,
+                "w": 326.34,
+                "x": 655.87,
+                "y": 1253.49,
+                "confidence": 0.82,
+                "end_index": 143,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.4,
+                "w": 159.98,
+                "x": 652.26,
+                "y": 1246.53,
+                "confidence": 1.0,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 18.95,
+                "w": 263.55,
+                "x": 680.9,
+                "y": 1290.59,
+                "confidence": 1.0,
+                "end_index": 143,
+                "label": "text",
+                "r": null,
+                "start_index": 23
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "RJRT USA Form 2838 - Rev. 6/87",
+                "value": "RJRT USA Form 2838 - Rev. 6/87",
+                "bbox": [
+                  {
+                    "h": 12.69,
+                    "w": 193.47,
+                    "x": 381.62,
+                    "y": 1352.19,
+                    "confidence": 0.84,
+                    "end_index": 29,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "RJRT USA Form 2838 - Rev. 6/87",
+            "bbox": [
+              {
+                "h": 12.69,
+                "w": 193.47,
+                "x": 381.62,
+                "y": 1352.19,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## CLASSIFIED MATERIAL RECEIPT\n\n**Title and/or number of document**: W-175-RDD\n\n**Number of Copies**: 1\n\n**Classification**:\n\n* SECRET [x]\n\n* CONFIDENTIAL [ ]\n\n**Deliver to**: Thomas L. Gentry\n\n**From**: Grover M. Myers **Date**: 8/4/88\n\n**Received by**: [signature: G M G] **Date**: 8/5/88\n\n### INSTRUCTIONS FOR USE\n\n**A. When Transmitting**:\nPrepare in two copies and forward with material.\n\n**B. When Receiving**:\nVerify that material received is as Described. Sign original copy and return to sender. Retain other copy for your files.",
+        "page_number": 1,
+        "success": true,
+        "footer": "RJRT USA Form 2838 - Rev. 6/87",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

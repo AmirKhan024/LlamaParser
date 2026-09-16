@@ -1,0 +1,685 @@
+{
+  "job": {
+    "id": "pjb-20fc0y6o0mzv0s8xeg1wbwqc82q2",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:07:14.242776Z",
+    "error_message": null,
+    "name": "funsd_012.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:07:27.072420Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "SEP 19 '93 11:45",
+                "value": "SEP 19 '93 11:45",
+                "bbox": [
+                  {
+                    "h": 16.45,
+                    "w": 160.53,
+                    "x": 107.86,
+                    "y": 26.63,
+                    "confidence": 0.94,
+                    "end_index": 15,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "P.2\nP.2",
+                "value": "P.2\nP.2",
+                "bbox": [
+                  {
+                    "h": 15.63,
+                    "w": 33.95,
+                    "x": 866.58,
+                    "y": 32.95,
+                    "confidence": 0.94,
+                    "end_index": 6,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "SEP 19 '93 11:45\n\nP.2\nP.2",
+            "bbox": [
+              {
+                "h": 21.94,
+                "w": 792.66,
+                "x": 107.86,
+                "y": 26.63,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 1,
+            "md": "# PHILIP MORRIS LIMITED",
+            "value": "PHILIP MORRIS LIMITED",
+            "bbox": [
+              {
+                "h": 29.98,
+                "w": 431.88,
+                "x": 301.64,
+                "y": 80.46,
+                "confidence": 0.89,
+                "end_index": 22,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "A.C.N. 004 694 428",
+            "value": "A.C.N. 004 694 428",
+            "bbox": [
+              {
+                "h": 21.26,
+                "w": 186.49,
+                "x": 422.04,
+                "y": 116.54,
+                "confidence": 0.85,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "handwritten note: to Han Kimber Lutterio",
+            "value": "handwritten note: to Han Kimber Lutterio",
+            "bbox": [
+              {
+                "h": 233.14,
+                "w": 209.71,
+                "x": 815.53,
+                "y": 96.68,
+                "confidence": 0.9,
+                "end_index": 39,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Facsimile Message",
+            "value": "Facsimile Message",
+            "bbox": [
+              {
+                "h": 36.53,
+                "w": 272.41,
+                "x": 379.93,
+                "y": 193.59,
+                "confidence": 0.91,
+                "end_index": 19,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**TO:** DISTRIBUTION\n**FROM:** GREG FOWLER\n**DATE:** SEPTEMBER 17, 1993.\n**REF:** A:BRCPRO.GLF3 PAGE 1 OF 12\n**SUBJECT:** <u>BURSWOOD RESORT CASINO PROSECUTION</u>",
+            "value": "TO: DISTRIBUTION\nFROM: GREG FOWLER\nDATE: SEPTEMBER 17, 1993.\nREF: A:BRCPRO.GLF3 PAGE 1 OF 12\nSUBJECT: <u>BURSWOOD RESORT CASINO PROSECUTION</u>",
+            "bbox": [
+              {
+                "h": 31.27,
+                "w": 299.93,
+                "x": 120.06,
+                "y": 284.56,
+                "confidence": 0.95,
+                "end_index": 19,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.0,
+                "w": 149.51,
+                "x": 270.48,
+                "y": 285.92,
+                "confidence": 1.0,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 32.17,
+                "w": 299.93,
+                "x": 120.06,
+                "y": 331.23,
+                "confidence": 0.95,
+                "end_index": 41,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 21
+              },
+              {
+                "h": 31.27,
+                "w": 149.51,
+                "x": 270.48,
+                "y": 332.14,
+                "confidence": 1.0,
+                "end_index": 41,
+                "label": "text",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 32.63,
+                "w": 356.11,
+                "x": 119.16,
+                "y": 376.55,
+                "confidence": 0.95,
+                "end_index": 71,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 43
+              },
+              {
+                "h": 28.55,
+                "w": 204.79,
+                "x": 270.48,
+                "y": 380.63,
+                "confidence": 1.0,
+                "end_index": 71,
+                "label": "text",
+                "r": null,
+                "start_index": 53
+              },
+              {
+                "h": 32.63,
+                "w": 690.93,
+                "x": 119.16,
+                "y": 424.13,
+                "confidence": 0.95,
+                "end_index": 107,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 73
+              },
+              {
+                "h": 26.28,
+                "w": 155.86,
+                "x": 271.39,
+                "y": 426.39,
+                "confidence": 1.0,
+                "end_index": 94,
+                "label": "text",
+                "r": null,
+                "start_index": 82
+              },
+              {
+                "h": 27.19,
+                "w": 105.57,
+                "x": 120.06,
+                "y": 469.89,
+                "confidence": 0.95,
+                "end_index": 162,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 109
+              },
+              {
+                "h": 27.19,
+                "w": 437.67,
+                "x": 267.76,
+                "y": 470.8,
+                "confidence": 1.0,
+                "end_index": 158,
+                "label": "text",
+                "r": null,
+                "start_index": 132
+              },
+              {
+                "h": 207.08,
+                "w": 689.5,
+                "x": 120.67,
+                "y": 286.29,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.265625,
+                "w": 44.85394736842106,
+                "x": 120.06359649122807,
+                "y": 284.5625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.0,
+                "w": 149.51315789473688,
+                "x": 270.4828947368421,
+                "y": 285.921875,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.265625,
+                "w": 77.02192982456141,
+                "x": 120.06359649122807,
+                "y": 331.234375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.265625,
+                "w": 149.51315789473688,
+                "x": 270.4828947368421,
+                "y": 332.140625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 32.625,
+                "w": 72.49122807017542,
+                "x": 119.15745614035089,
+                "y": 376.546875,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 28.546875,
+                "w": 204.78771929824563,
+                "x": 270.4828947368421,
+                "y": 380.625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.453125,
+                "w": 54.82149122807019,
+                "x": 119.15745614035089,
+                "y": 424.125,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 26.28125,
+                "w": 155.85614035087724,
+                "x": 271.3890350877193,
+                "y": 426.390625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 28.546875,
+                "w": 159.4807017543859,
+                "x": 591.709649122807,
+                "y": 427.296875,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 28.09375,
+                "w": 27.637280701754435,
+                "x": 782.4521929824562,
+                "y": 428.65625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "I am pleased to report that the Western Australian court dismissed the Health Department's ETS-based claims against Burswood Casino.",
+            "value": "I am pleased to report that the Western Australian court dismissed the Health Department's ETS-based claims against Burswood Casino.",
+            "bbox": [
+              {
+                "h": 46.17,
+                "w": 758.99,
+                "x": 119.29,
+                "y": 562.74,
+                "confidence": 0.97,
+                "end_index": 131,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Attached is the TIA's Press Release and the court's Reasons for Decision. The court stated its conclusion as follows:",
+            "value": "Attached is the TIA's Press Release and the court's Reasons for Decision. The court stated its conclusion as follows:",
+            "bbox": [
+              {
+                "h": 42.15,
+                "w": 783.52,
+                "x": 119.2,
+                "y": 631.95,
+                "confidence": 0.97,
+                "end_index": 116,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Whilst ETS is annoying and of discomfort to non smokers it has not been proved at the required standard, or at all, in this prosecution, that it is a risk to the health of the employees at the Casino.",
+            "value": "Whilst ETS is annoying and of discomfort to non smokers it has not been proved at the required standard, or at all, in this prosecution, that it is a risk to the health of the employees at the Casino.",
+            "bbox": [
+              {
+                "h": 68.72,
+                "w": 708.01,
+                "x": 192.18,
+                "y": 698.62,
+                "confidence": 0.98,
+                "end_index": 199,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "At pages 8-9 of the Reasons, the Court considered but rejected the EPA Risk Assessment's \"conclusion\" on ETS and respiratory illness.",
+            "value": "At pages 8-9 of the Reasons, the Court considered but rejected the EPA Risk Assessment's \"conclusion\" on ETS and respiratory illness.",
+            "bbox": [
+              {
+                "h": 46.6,
+                "w": 756.9,
+                "x": 118.04,
+                "y": 790.88,
+                "confidence": 0.97,
+                "end_index": 132,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Regards,",
+            "value": "Regards,",
+            "bbox": [
+              {
+                "h": 21.33,
+                "w": 77.65,
+                "x": 117.35,
+                "y": 859.26,
+                "confidence": 0.94,
+                "end_index": 7,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "signature: Akto",
+            "value": "signature: Akto",
+            "bbox": [
+              {
+                "h": 17.69,
+                "w": 39.44,
+                "x": 123.06,
+                "y": 288.1,
+                "confidence": 0.82,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "for <u>GREGORY L. FOWLER</u>",
+            "value": "for <u>GREGORY L. FOWLER</u>",
+            "bbox": [
+              {
+                "h": 38.97,
+                "w": 282.26,
+                "x": 55.73,
+                "y": 957.91,
+                "confidence": 0.8,
+                "end_index": 27,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.81,
+                "w": 224.72,
+                "x": 113.27,
+                "y": 964.7,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 7
+              },
+              {
+                "h": 139.82,
+                "w": 279.67,
+                "x": 57.15,
+                "y": 858.01,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<u>Distribution:</u> David Davies\nJudy Hargrave\nPeter Hobday\nTim Lindon\nBob Northrip\nSteve Parrish\nLee Pollak\nDavid Schechter\nChuck Wall",
+            "value": "<u>Distribution:</u> David Davies\nJudy Hargrave\nPeter Hobday\nTim Lindon\nBob Northrip\nSteve Parrish\nLee Pollak\nDavid Schechter\nChuck Wall",
+            "bbox": [
+              {
+                "h": 24.47,
+                "w": 110.1,
+                "x": 115.08,
+                "y": 1015.91,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 22.66,
+                "w": 116.89,
+                "x": 263.69,
+                "y": 1016.81,
+                "confidence": 1.0,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 21
+              },
+              {
+                "h": 213.88,
+                "w": 141.36,
+                "x": 262.78,
+                "y": 1016.81,
+                "confidence": 1.0,
+                "end_index": 135,
+                "label": "text",
+                "r": null,
+                "start_index": 21
+              },
+              {
+                "h": 25.38,
+                "w": 126.41,
+                "x": 263.69,
+                "y": 1039.92,
+                "confidence": 1.0,
+                "end_index": 46,
+                "label": "text",
+                "r": null,
+                "start_index": 34
+              },
+              {
+                "h": 26.73,
+                "w": 117.8,
+                "x": 262.78,
+                "y": 1107.44,
+                "confidence": 1.0,
+                "end_index": 83,
+                "label": "text",
+                "r": null,
+                "start_index": 72
+              },
+              {
+                "h": 23.56,
+                "w": 140.9,
+                "x": 263.23,
+                "y": 1182.66,
+                "confidence": 1.0,
+                "end_index": 124,
+                "label": "text",
+                "r": null,
+                "start_index": 110
+              },
+              {
+                "h": 272.14,
+                "w": 349.07,
+                "x": 57.09,
+                "y": 958.61,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2501172720",
+                "value": "2501172720",
+                "bbox": [
+                  {
+                    "h": 148.78,
+                    "w": 25.79,
+                    "x": 873.62,
+                    "y": 1097.51,
+                    "confidence": 0.83,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2501172720",
+            "bbox": [
+              {
+                "h": 148.78,
+                "w": 25.79,
+                "x": 873.62,
+                "y": 1097.51,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1450.0,
+        "page_number": 1,
+        "page_width": 1033.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# PHILIP MORRIS LIMITED\n\nA.C.N. 004 694 428\n\nhandwritten note: to Han Kimber Lutterio\n\n## Facsimile Message\n\n**TO:** DISTRIBUTION\n**FROM:** GREG FOWLER\n**DATE:** SEPTEMBER 17, 1993.\n**REF:** A:BRCPRO.GLF3 PAGE 1 OF 12\n**SUBJECT:** <u>BURSWOOD RESORT CASINO PROSECUTION</u>\n\nI am pleased to report that the Western Australian court dismissed the Health Department's ETS-based claims against Burswood Casino.\n\nAttached is the TIA's Press Release and the court's Reasons for Decision. The court stated its conclusion as follows:\n\n> Whilst ETS is annoying and of discomfort to non smokers it has not been proved at the required standard, or at all, in this prosecution, that it is a risk to the health of the employees at the Casino.\n\nAt pages 8-9 of the Reasons, the Court considered but rejected the EPA Risk Assessment's \"conclusion\" on ETS and respiratory illness.\n\nRegards,\n\nsignature: Akto\n\nfor <u>GREGORY L. FOWLER</u>\n\n<u>Distribution:</u> David Davies\nJudy Hargrave\nPeter Hobday\nTim Lindon\nBob Northrip\nSteve Parrish\nLee Pollak\nDavid Schechter\nChuck Wall",
+        "page_number": 1,
+        "success": true,
+        "footer": "2501172720",
+        "header": "SEP 19 '93 11:45\n\nP.2\nP.2",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

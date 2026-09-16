@@ -1,0 +1,1273 @@
+{
+  "job": {
+    "id": "pjb-vt3wetm8m7t04hvrft4hm9k56q9c",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:04:11.931244Z",
+    "error_message": null,
+    "name": "funsd_003.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:04:28.944312Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "03/12/98 THU 15:48 FAX 336 741 5327 RJR SALES/MKTG OPERATION →→→ MARC 018",
+                "value": "03/12/98 THU 15:48 FAX 336 741 5327 RJR SALES/MKTG OPERATION →→→ MARC 018",
+                "bbox": [
+                  {
+                    "h": 30.84,
+                    "w": 345.96,
+                    "x": 56.41,
+                    "y": 8.37,
+                    "confidence": 0.85,
+                    "end_index": 34,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.38,
+                    "w": 312.55,
+                    "x": 471.54,
+                    "y": 14.1,
+                    "confidence": 0.85,
+                    "end_index": 68,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 36
+                  },
+                  {
+                    "h": 19.57,
+                    "w": 315.13,
+                    "x": 478.94,
+                    "y": 16.17,
+                    "confidence": 0.85,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "03/12/98 THU 15:48 FAX 336 741 5327 RJR SALES/MKTG OPERATION →→→ MARC 018",
+            "bbox": [
+              {
+                "h": 30.84,
+                "w": 727.68,
+                "x": 56.41,
+                "y": 8.37,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 1,
+            "md": "# Response Code Request Form",
+            "value": "Response Code Request Form",
+            "bbox": [
+              {
+                "h": 1251.51,
+                "w": 934.78,
+                "x": 55.51,
+                "y": 77.04,
+                "confidence": 0.96,
+                "end_index": 27,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "Fax # (336) 741-5327\nAttn: Bonnie Tucker",
+            "value": "Fax # (336) 741-5327\nAttn: Bonnie Tucker",
+            "bbox": [
+              {
+                "h": 46.53,
+                "w": 194.53,
+                "x": 427.33,
+                "y": 145.23,
+                "confidence": 0.79,
+                "end_index": 39,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.45,
+                "w": 194.92,
+                "x": 420.24,
+                "y": 141.45,
+                "confidence": 0.79,
+                "end_index": 19,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.91,
+                "w": 182.33,
+                "x": 438.51,
+                "y": 163.81,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 21
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**RJR Brand**: Corporate\n**RJR Program Number**: 801004",
+            "value": "RJR Brand: Corporate\nRJR Program Number: 801004",
+            "bbox": [
+              {
+                "h": 30.22,
+                "w": 199.38,
+                "x": 77.13,
+                "y": 190.09,
+                "confidence": 0.5,
+                "end_index": 23,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 27.6,
+                "w": 249.89,
+                "x": 530.99,
+                "y": 207.17,
+                "confidence": 1.0,
+                "end_index": 54,
+                "label": "text",
+                "r": null,
+                "start_index": 25
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Response Code**: BJ3",
+            "value": "Response Code: BJ3",
+            "bbox": [
+              {
+                "h": 35.48,
+                "w": 175.12,
+                "x": 75.16,
+                "y": 229.51,
+                "confidence": 1.0,
+                "end_index": 21,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Project Name**: 4/98 Corporate Spring Rescreen - Cigarette Survey - Orig. (GC II) (Blind/Long)",
+            "value": "Project Name: 4/98 Corporate Spring Rescreen - Cigarette Survey - Orig. (GC II) (Blind/Long)",
+            "bbox": [
+              {
+                "h": 42.57,
+                "w": 803.06,
+                "x": 79.96,
+                "y": 297.06,
+                "confidence": 0.83,
+                "end_index": 95,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Description**: \"Greeting Card II\" is a blind, long screener version for the 4/98 rescreen. This is the original piece.",
+            "value": "Description: \"Greeting Card II\" is a blind, long screener version for the 4/98 rescreen. This is the original piece.",
+            "bbox": [
+              {
+                "h": 39.4,
+                "w": 807.65,
+                "x": 88.69,
+                "y": 338.23,
+                "confidence": 0.83,
+                "end_index": 119,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Distribution**:\n**Distribution Vehicle**: Direct Marketing",
+            "value": "Distribution:\nDistribution Vehicle: Direct Marketing",
+            "bbox": [
+              {
+                "h": 26.28,
+                "w": 108.87,
+                "x": 73.85,
+                "y": 458.16,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.84,
+                "w": 321.44,
+                "x": 496.16,
+                "y": 468.15,
+                "confidence": 0.85,
+                "end_index": 59,
+                "label": "form",
+                "r": null,
+                "start_index": 18
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**Quantity**: 25,000",
+                "value": "Quantity: 25,000",
+                "bbox": [
+                  {
+                    "h": 22.56,
+                    "w": 266.81,
+                    "x": 105.24,
+                    "y": 485.04,
+                    "confidence": 0.85,
+                    "end_index": 19,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Pct. Response**: 25.00 %\n**Age Verification**: YES [ ] NO [x]",
+                "value": "Pct. Response: 25.00 %\nAge Verification: YES [ ] NO [x]",
+                "bbox": [
+                  {
+                    "h": 27.6,
+                    "w": 117.4,
+                    "x": 99.43,
+                    "y": 502.84,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.6,
+                    "w": 273.5,
+                    "x": 99.43,
+                    "y": 502.84,
+                    "confidence": 0.83,
+                    "end_index": 25,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.69,
+                    "w": 121.74,
+                    "x": 494.79,
+                    "y": 533.21,
+                    "confidence": 1.0,
+                    "end_index": 47,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 27
+                  },
+                  {
+                    "h": 34.61,
+                    "w": 348.8,
+                    "x": 494.79,
+                    "y": 533.21,
+                    "confidence": 0.83,
+                    "end_index": 62,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 27
+                  },
+                  {
+                    "h": 27.685937500000023,
+                    "w": 121.73760400177144,
+                    "x": 494.78872387588575,
+                    "y": 533.2076562499999,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 34.607421875,
+                    "w": 139.5195012155134,
+                    "x": 704.0679756991558,
+                    "y": 533.2076562499999,
+                    "confidence": 0.83,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**# of Responders**: 6250",
+                "value": "# of Responders: 6250",
+                "bbox": [
+                  {
+                    "h": 22.56,
+                    "w": 266.81,
+                    "x": 104.17,
+                    "y": 527.34,
+                    "confidence": 0.87,
+                    "end_index": 24,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 26.28,
+                    "w": 129.21,
+                    "x": 99.43,
+                    "y": 523.86,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 4
+                  },
+                  {
+                    "h": 26.281445312499955,
+                    "w": 129.20575738207114,
+                    "x": 99.43130268794914,
+                    "y": 523.862734375,
+                    "confidence": 0.87,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 20.764453125000045,
+                    "w": 44.45474303435475,
+                    "x": 324.4928620981268,
+                    "y": 524.9018749999999,
+                    "confidence": 0.87,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Quantity**: 25,000\n\n* **Pct. Response**: 25.00 %\n  **Age Verification**: YES [ ] NO [x]\n\n* **# of Responders**: 6250",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 65.1,
+                "w": 273.5,
+                "x": 99.43,
+                "y": 485.04,
+                "confidence": 0.91,
+                "end_index": 52,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 34.61,
+                "w": 348.8,
+                "x": 494.79,
+                "y": 533.21,
+                "confidence": 0.92,
+                "end_index": 119,
+                "label": "list",
+                "r": null,
+                "start_index": 53
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**Timing**:\n**Data Entry**:",
+            "value": "Timing:\nData Entry:",
+            "bbox": [
+              {
+                "h": 46.53,
+                "w": 527.25,
+                "x": 74.41,
+                "y": 586.56,
+                "confidence": 0.86,
+                "end_index": 26,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**DTS**: 04/27/98\n**Supplier**: M/A/R/C",
+                "value": "DTS: 04/27/98\nSupplier: M/A/R/C",
+                "bbox": [
+                  {
+                    "h": 60.62,
+                    "w": 504.05,
+                    "x": 98.8,
+                    "y": 602.71,
+                    "confidence": 0.86,
+                    "end_index": 38,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.4,
+                    "w": 262.32,
+                    "x": 98.8,
+                    "y": 602.71,
+                    "confidence": 0.86,
+                    "end_index": 16,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 24.92,
+                    "w": 70.44,
+                    "x": 532.4,
+                    "y": 638.41,
+                    "confidence": 1.0,
+                    "end_index": 37,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 18
+                  },
+                  {
+                    "h": 25.99,
+                    "w": 139.22,
+                    "x": 540.78,
+                    "y": 637.39,
+                    "confidence": 0.86,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 22.14874999999995,
+                    "w": 38.983390045511086,
+                    "x": 98.7995513083258,
+                    "y": 607.9596875,
+                    "confidence": 0.86,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 26.281445312499955,
+                    "w": 74.11294712778698,
+                    "x": 287.0092042680118,
+                    "y": 602.7070703124999,
+                    "confidence": 0.86,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Expiration Date**: 06/15/98\n**No. Days Turnaround**: 10",
+                "value": "Expiration Date: 06/15/98\nNo. Days Turnaround: 10",
+                "bbox": [
+                  {
+                    "h": 77.55,
+                    "w": 653.74,
+                    "x": 102.05,
+                    "y": 628.86,
+                    "confidence": 0.84,
+                    "end_index": 56,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.53,
+                    "w": 116.27,
+                    "x": 98.8,
+                    "y": 627.34,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 41.07,
+                    "w": 261.01,
+                    "x": 98.8,
+                    "y": 627.34,
+                    "confidence": 0.84,
+                    "end_index": 28,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 24.09,
+                    "w": 34.1,
+                    "x": 721.85,
+                    "y": 677.17,
+                    "confidence": 0.84,
+                    "end_index": 56,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 30
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Offer Complete**: 06/15/98\n**Incoming mail**: BRE (From 1 - 10)",
+                "value": "Offer Complete: 06/15/98\nIncoming mail: BRE (From 1 - 10)",
+                "bbox": [
+                  {
+                    "h": 26.3,
+                    "w": 119.0,
+                    "x": 97.43,
+                    "y": 646.72,
+                    "confidence": 1.0,
+                    "end_index": 18,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 28.26,
+                    "w": 262.38,
+                    "x": 97.43,
+                    "y": 644.76,
+                    "confidence": 0.84,
+                    "end_index": 27,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.6,
+                    "w": 114.78,
+                    "x": 536.24,
+                    "y": 719.66,
+                    "confidence": 1.0,
+                    "end_index": 46,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 29
+                  },
+                  {
+                    "h": 70.08,
+                    "w": 336.07,
+                    "x": 536.24,
+                    "y": 677.17,
+                    "confidence": 0.84,
+                    "end_index": 64,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 29
+                  },
+                  {
+                    "h": 26.301640625000005,
+                    "w": 119.00192750734962,
+                    "x": 97.43171306111489,
+                    "y": 646.7199999999999,
+                    "confidence": 0.84,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 23.653300781249982,
+                    "w": 71.48947997282107,
+                    "x": 288.32093784549477,
+                    "y": 644.7573828124999,
+                    "confidence": 0.84,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Days Offer Open**: 49\n**If M/A/R/C is supplier, do you need a M/A/R/C P.O. Box?**: Yes",
+                "value": "Days Offer Open: 49\nIf M/A/R/C is supplier, do you need a M/A/R/C P.O. Box?: Yes",
+                "bbox": [
+                  {
+                    "h": 136.77,
+                    "w": 728.16,
+                    "x": 100.99,
+                    "y": 669.75,
+                    "confidence": 0.87,
+                    "end_index": 87,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 22.34,
+                    "w": 28.2,
+                    "x": 308.65,
+                    "y": 667.1,
+                    "confidence": 0.87,
+                    "end_index": 22,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 26.3,
+                    "w": 129.94,
+                    "x": 97.43,
+                    "y": 667.48,
+                    "confidence": 1.0,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 4
+                  },
+                  {
+                    "h": 23.53,
+                    "w": 37.62,
+                    "x": 785.45,
+                    "y": 782.38,
+                    "confidence": 0.87,
+                    "end_index": 87,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 24
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **DTS**: 04/27/98\n  **Supplier**: M/A/R/C\n\n* **Expiration Date**: 06/15/98\n  **No. Days Turnaround**: 10\n\n* **Offer Complete**: 06/15/98\n  **Incoming mail**: BRE (From 1 - 10)\n\n* **Days Offer Open**: 49\n  **If M/A/R/C is supplier, do you need a M/A/R/C P.O. Box?**: Yes",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 203.81,
+                "w": 774.88,
+                "x": 97.43,
+                "y": 602.71,
+                "confidence": 0.9,
+                "end_index": 270,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**Agency**: Russell Agency\n**P.O. Box Title**: National Smoker Services",
+            "value": "Agency: Russell Agency\nP.O. Box Title: National Smoker Services",
+            "bbox": [
+              {
+                "h": 118.44,
+                "w": 781.31,
+                "x": 70.16,
+                "y": 728.97,
+                "confidence": 0.87,
+                "end_index": 70,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.28,
+                "w": 112.81,
+                "x": 95.5,
+                "y": 749.88,
+                "confidence": 1.0,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.07,
+                "w": 142.94,
+                "x": 226.69,
+                "y": 743.62,
+                "confidence": 1.0,
+                "end_index": 25,
+                "label": "text",
+                "r": null,
+                "start_index": 12
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Agency Name**: Betsy Hamilton",
+            "value": "Agency Name: Betsy Hamilton",
+            "bbox": [
+              {
+                "h": 35.25,
+                "w": 247.68,
+                "x": 97.8,
+                "y": 754.35,
+                "confidence": 0.85,
+                "end_index": 30,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Contact Person**: (910) 727-0314",
+            "value": "Contact Person: (910) 727-0314",
+            "bbox": [
+              {
+                "h": 24.97,
+                "w": 121.99,
+                "x": 94.18,
+                "y": 769.59,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.07,
+                "w": 119.69,
+                "x": 225.32,
+                "y": 785.15,
+                "confidence": 1.0,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 20
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Phone #**:",
+            "value": "Phone #:",
+            "bbox": [
+              {
+                "h": 18.02,
+                "w": 66.74,
+                "x": 97.58,
+                "y": 793.07,
+                "confidence": 0.86,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Fulfillment**:\n**Company**: M/A/R/C",
+            "value": "Fulfillment:\nCompany: M/A/R/C",
+            "bbox": [
+              {
+                "h": 48.45,
+                "w": 106.01,
+                "x": 63.24,
+                "y": 847.44,
+                "confidence": 0.85,
+                "end_index": 36,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 27.69,
+                "w": 103.27,
+                "x": 63.24,
+                "y": 847.44,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.53,
+                "w": 77.28,
+                "x": 91.96,
+                "y": 872.36,
+                "confidence": 0.85,
+                "end_index": 36,
+                "label": "form",
+                "r": null,
+                "start_index": 17
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Job Number**:",
+            "value": "Job Number:",
+            "bbox": [
+              {
+                "h": 18.63,
+                "w": 93.45,
+                "x": 95.9,
+                "y": 894.51,
+                "confidence": 0.84,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Number of Items on Order Form**:",
+            "value": "Number of Items on Order Form:",
+            "bbox": [
+              {
+                "h": 21.61,
+                "w": 237.21,
+                "x": 95.69,
+                "y": 917.78,
+                "confidence": 0.88,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**P.O. Box**:      **City**:      **State**:      **Zip Code**:",
+            "value": "P.O. Box:      City:      State:      Zip Code:",
+            "bbox": [
+              {
+                "h": 39.422167968750045,
+                "w": 194.79243625621893,
+                "x": 607.0721971738529,
+                "y": 939.7666064453124,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "form",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Comments**:\nP.O. Box 834080\nPermit # 359\n46200-46299",
+            "value": "Comments:\nP.O. Box 834080\nPermit # 359\n46200-46299",
+            "bbox": [
+              {
+                "h": 210.09,
+                "w": 882.29,
+                "x": 76.54,
+                "y": 950.34,
+                "confidence": 0.87,
+                "end_index": 53,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 40.14,
+                "w": 276.3,
+                "x": 594.64,
+                "y": 994.18,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 14
+              },
+              {
+                "h": 49.93,
+                "w": 221.03,
+                "x": 737.59,
+                "y": 1110.6,
+                "confidence": 1.0,
+                "end_index": 53,
+                "label": "text",
+                "r": null,
+                "start_index": 43
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Marketing Person Responsible for Project**: Lisa Drum",
+            "value": "Marketing Person Responsible for Project: Lisa Drum",
+            "bbox": [
+              {
+                "h": 28.2,
+                "w": 405.0,
+                "x": 62.72,
+                "y": 1116.72,
+                "confidence": 0.9,
+                "end_index": 54,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.54,
+                "w": 316.13,
+                "x": 60.74,
+                "y": 1112.57,
+                "confidence": 1.0,
+                "end_index": 44,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Production Contact**: Joe Leinster\n**Code Requested By**: Jonnie Shore",
+            "value": "Production Contact: Joe Leinster\nCode Requested By: Jonnie Shore",
+            "bbox": [
+              {
+                "h": 36.66,
+                "w": 695.2,
+                "x": 62.72,
+                "y": 1157.61,
+                "confidence": 0.9,
+                "end_index": 71,
+                "label": "form",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.91,
+                "w": 158.72,
+                "x": 58.11,
+                "y": 1151.99,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.28,
+                "w": 99.69,
+                "x": 222.73,
+                "y": 1153.3,
+                "confidence": 1.0,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 24
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Copies of Confirmation Letter To**:",
+            "value": "Copies of Confirmation Letter To:",
+            "bbox": [
+              {
+                "h": 23.47,
+                "w": 245.82,
+                "x": 62.59,
+                "y": 1189.36,
+                "confidence": 0.9,
+                "end_index": 36,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "Mary Cloutier",
+                "value": "Mary Cloutier",
+                "bbox": [
+                  {
+                    "h": 20.77,
+                    "w": 104.64,
+                    "x": 71.41,
+                    "y": 1216.08,
+                    "confidence": 0.89,
+                    "end_index": 12,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Lisa Drum",
+                "value": "Lisa Drum",
+                "bbox": [
+                  {
+                    "h": 26.28,
+                    "w": 83.3,
+                    "x": 353.91,
+                    "y": 1216.38,
+                    "confidence": 1.0,
+                    "end_index": 8,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Joyce Bagby",
+                "value": "Joyce Bagby",
+                "bbox": [
+                  {
+                    "h": 20.74,
+                    "w": 100.23,
+                    "x": 70.81,
+                    "y": 1237.39,
+                    "confidence": 0.87,
+                    "end_index": 10,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Jonnie Shore",
+                "value": "Jonnie Shore",
+                "bbox": [
+                  {
+                    "h": 27.6,
+                    "w": 266.28,
+                    "x": 492.3,
+                    "y": 1166.44,
+                    "confidence": 0.52,
+                    "end_index": 11,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.53,
+                    "w": 103.27,
+                    "x": 351.17,
+                    "y": 1239.2,
+                    "confidence": 0.52,
+                    "end_index": 11,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.53,
+                    "w": 103.27,
+                    "x": 351.17,
+                    "y": 1239.2,
+                    "confidence": 1.0,
+                    "end_index": 11,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Bonnie Tucker",
+                "value": "Bonnie Tucker",
+                "bbox": [
+                  {
+                    "h": 20.72,
+                    "w": 109.87,
+                    "x": 72.7,
+                    "y": 1257.97,
+                    "confidence": 0.86,
+                    "end_index": 12,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "Betsy Hamilton",
+                "value": "Betsy Hamilton",
+                "bbox": [
+                  {
+                    "h": 19.5,
+                    "w": 112.44,
+                    "x": 78.44,
+                    "y": 1275.38,
+                    "confidence": 0.85,
+                    "end_index": 13,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* Mary Cloutier\n\n* Lisa Drum\n\n* Joyce Bagby\n\n* Jonnie Shore\n\n* Bonnie Tucker\n\n* Betsy Hamilton",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 78.8,
+                "w": 120.07,
+                "x": 70.81,
+                "y": 1216.08,
+                "confidence": 0.87,
+                "end_index": 28,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 46.35,
+                "w": 103.27,
+                "x": 351.17,
+                "y": 1216.38,
+                "confidence": 0.84,
+                "end_index": 59,
+                "label": "list",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 27.6,
+                "w": 266.28,
+                "x": 492.3,
+                "y": 1166.44,
+                "confidence": 0.52,
+                "end_index": 93,
+                "label": "list",
+                "r": null,
+                "start_index": 61
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "items": [
+              {
+                "md": "RURT Form 551 - WML 3/10/98\n52264 5832",
+                "value": "RURT Form 551 - WML 3/10/98\n52264 5832",
+                "bbox": [
+                  {
+                    "h": 124.08,
+                    "w": 948.2,
+                    "x": 60.59,
+                    "y": 1204.14,
+                    "confidence": 0.85,
+                    "end_index": 37,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "RURT Form 551 - WML 3/10/98\n52264 5832",
+            "bbox": [
+              {
+                "h": 124.08,
+                "w": 948.2,
+                "x": 60.59,
+                "y": 1204.14,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# Response Code Request Form\n\nFax # (336) 741-5327\nAttn: Bonnie Tucker\n\n**RJR Brand**: Corporate\n**RJR Program Number**: 801004\n\n**Response Code**: BJ3\n\n**Project Name**: 4/98 Corporate Spring Rescreen - Cigarette Survey - Orig. (GC II) (Blind/Long)\n\n**Description**: \"Greeting Card II\" is a blind, long screener version for the 4/98 rescreen. This is the original piece.\n\n**Distribution**:\n**Distribution Vehicle**: Direct Marketing\n\n* **Quantity**: 25,000\n\n* **Pct. Response**: 25.00 %\n**Age Verification**: YES [ ] NO [x]\n\n* **# of Responders**: 6250\n\n**Timing**:\n**Data Entry**:\n\n* **DTS**: 04/27/98\n**Supplier**: M/A/R/C\n\n* **Expiration Date**: 06/15/98\n**No. Days Turnaround**: 10\n\n* **Offer Complete**: 06/15/98\n**Incoming mail**: BRE (From 1 - 10)\n\n* **Days Offer Open**: 49\n**If M/A/R/C is supplier, do you need a M/A/R/C P.O. Box?**: Yes\n\n**Agency**: Russell Agency\n**P.O. Box Title**: National Smoker Services\n\n**Agency Name**: Betsy Hamilton\n\n**Contact Person**: (910) 727-0314\n\n**Phone #**:     \n\n**Fulfillment**:\n**Company**: M/A/R/C\n\n**Job Number**:     \n\n**Number of Items on Order Form**:     \n\n**P.O. Box**:      **City**:      **State**:      **Zip Code**:     \n\n**Comments**:\nP.O. Box 834080\nPermit # 359\n46200-46299\n\n**Marketing Person Responsible for Project**: Lisa Drum\n\n**Production Contact**: Joe Leinster\n**Code Requested By**: Jonnie Shore\n\n**Copies of Confirmation Letter To**:\n\n* Mary Cloutier\n* Lisa Drum\n\n* Joyce Bagby\n* Jonnie Shore\n\n* Bonnie Tucker\n\n* Betsy Hamilton",
+        "page_number": 1,
+        "success": true,
+        "footer": "RURT Form 551 - WML 3/10/98\n52264 5832",
+        "header": "03/12/98 THU 15:48 FAX 336 741 5327 RJR SALES/MKTG OPERATION →→→ MARC 018",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,424 @@
+{
+  "job": {
+    "id": "pjb-wfkqaujpbvbfpnbv6ahtjvhsa0uo",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:08:39.591468Z",
+    "error_message": null,
+    "name": "funsd_016.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:08:58.724233Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## COMPOUND STRUCTURE",
+            "value": "COMPOUND STRUCTURE",
+            "bbox": [
+              {
+                "h": 18.65,
+                "w": 254.96,
+                "x": 439.05,
+                "y": 116.29,
+                "confidence": 0.93,
+                "end_index": 20,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "items": [
+              {
+                "md": "**Litton Bionetics**",
+                "value": "Litton Bionetics",
+                "bbox": [
+                  {
+                    "h": 18.46,
+                    "w": 202.91,
+                    "x": 714.74,
+                    "y": 180.19,
+                    "confidence": 0.77,
+                    "end_index": 19,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Genetic Assay No.**: 6692",
+                "value": "Genetic Assay No.: 6692",
+                "bbox": [
+                  {
+                    "h": 20.27,
+                    "w": 199.49,
+                    "x": 718.93,
+                    "y": 202.21,
+                    "confidence": 0.76,
+                    "end_index": 26,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 42.35,
+                    "w": 203.44,
+                    "x": 715.14,
+                    "y": 180.06,
+                    "confidence": 0.76,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**COMPOUND CODE**: B83",
+                "value": "COMPOUND CODE: B83",
+                "bbox": [
+                  {
+                    "h": 17.9,
+                    "w": 196.55,
+                    "x": 152.74,
+                    "y": 201.63,
+                    "confidence": 0.94,
+                    "end_index": 21,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Chem Abstr #**: N/A",
+                "value": "Chem Abstr #: N/A",
+                "bbox": [
+                  {
+                    "h": 17.89,
+                    "w": 146.72,
+                    "x": 152.84,
+                    "y": 242.9,
+                    "confidence": 0.93,
+                    "end_index": 20,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Compound Name**: Proprietary Mixture",
+                "value": "Compound Name: Proprietary Mixture",
+                "bbox": [
+                  {
+                    "h": 29.91,
+                    "w": 408.54,
+                    "x": 148.85,
+                    "y": 275.37,
+                    "confidence": 1.0,
+                    "end_index": 37,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**ASSAY RESULT**: M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border-line positive with S9 activation -Technical problems with the test",
+                "value": "ASSAY RESULT: M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border-line positive with S9 activation -Technical problems with the test",
+                "bbox": [
+                  {
+                    "h": 127.63,
+                    "w": 883.57,
+                    "x": 150.16,
+                    "y": 366.35,
+                    "confidence": 0.78,
+                    "end_index": 200,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 21.83,
+                    "w": 116.76,
+                    "x": 149.67,
+                    "y": 374.26,
+                    "confidence": 1.0,
+                    "end_index": 16,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.68,
+                    "w": 699.26,
+                    "x": 303.44,
+                    "y": 362.7,
+                    "confidence": 1.0,
+                    "end_index": 72,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 18
+                  },
+                  {
+                    "h": 22.73,
+                    "w": 760.94,
+                    "x": 256.36,
+                    "y": 405.75,
+                    "confidence": 1.0,
+                    "end_index": 134,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 74
+                  },
+                  {
+                    "h": 22.73,
+                    "w": 57.34,
+                    "x": 345.35,
+                    "y": 471.54,
+                    "confidence": 1.0,
+                    "end_index": 200,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 141
+                  },
+                  {
+                    "h": 1138.52,
+                    "w": 926.86,
+                    "x": 104.53,
+                    "y": 178.85,
+                    "confidence": 0.78,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**COMPOUND STRUCTURE**:",
+                "value": "COMPOUND STRUCTURE:",
+                "bbox": [
+                  {
+                    "h": 26.11,
+                    "w": 244.28,
+                    "x": 313.44,
+                    "y": 277.42,
+                    "confidence": 0.49,
+                    "end_index": 22,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Unknown Mixture**:",
+                "value": "Unknown Mixture:",
+                "bbox": [
+                  {
+                    "h": 17.9,
+                    "w": 190.58,
+                    "x": 163.3,
+                    "y": 574.21,
+                    "confidence": 0.95,
+                    "end_index": 19,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**PH (CALCULATED 50%)**: 5.26",
+                "value": "PH (CALCULATED 50%): 5.26",
+                "bbox": [
+                  {
+                    "h": 30.820124999999962,
+                    "w": 255.2053066723018,
+                    "x": 143.2938753037667,
+                    "y": 674.7561406250001,
+                    "confidence": 0.82,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**PHYSICAL APPEARANCE**: Yellow liquid",
+                "value": "PHYSICAL APPEARANCE: Yellow liquid",
+                "bbox": [
+                  {
+                    "h": 20.82,
+                    "w": 365.29,
+                    "x": 146.54,
+                    "y": 763.12,
+                    "confidence": 0.93,
+                    "end_index": 37,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**bp/mp**: N/A °C @      mm Hg",
+                "value": "bp/mp: N/A °C @      mm Hg",
+                "bbox": null,
+                "type": "text"
+              },
+              {
+                "md": "**REGULATORY STATUS**: N/A",
+                "value": "REGULATORY STATUS: N/A",
+                "bbox": [
+                  {
+                    "h": 35.88607421874997,
+                    "w": 249.06791278175916,
+                    "x": 139.28906579338906,
+                    "y": 861.5061100260417,
+                    "confidence": 0.86,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Misc**:",
+                "value": "Misc:",
+                "bbox": [
+                  {
+                    "h": 13.67,
+                    "w": 36.41,
+                    "x": 143.4,
+                    "y": 954.81,
+                    "confidence": 0.95,
+                    "end_index": 8,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* **Litton Bionetics**\n* **Genetic Assay No.**: 6692\n* **COMPOUND CODE**: B83\n* **Chem Abstr #**: N/A\n* **Compound Name**: Proprietary Mixture\n* **ASSAY RESULT**: M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border-line positive with S9 activation -Technical problems with the test\n* **COMPOUND STRUCTURE**:\n* **Unknown Mixture**:\n* **PH (CALCULATED 50%)**: 5.26\n* **PHYSICAL APPEARANCE**: Yellow liquid\n* **bp/mp**: N/A °C @      mm Hg\n* **REGULATORY STATUS**: N/A\n* **Misc**:",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 788.29,
+                "w": 890.33,
+                "x": 143.4,
+                "y": 180.19,
+                "confidence": 0.89,
+                "end_index": 541,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "items": [
+              {
+                "md": "20\nBO2ME116",
+                "value": "20\nBO2ME116",
+                "bbox": [
+                  {
+                    "h": 128.87,
+                    "w": 28.49,
+                    "x": 922.07,
+                    "y": 1099.36,
+                    "confidence": 0.74,
+                    "end_index": 1,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 8.78,
+                    "w": 78.48,
+                    "x": 889.95,
+                    "y": 1330.51,
+                    "confidence": 0.9,
+                    "end_index": 10,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 3
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "20\nBO2ME116",
+            "bbox": [
+              {
+                "h": 239.93,
+                "w": 78.48,
+                "x": 889.95,
+                "y": 1099.36,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1393.0,
+        "page_number": 1,
+        "page_width": 1075.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## COMPOUND STRUCTURE\n\n* **Litton Bionetics**\n* **Genetic Assay No.**: 6692\n* **COMPOUND CODE**: B83\n* **Chem Abstr #**: N/A\n* **Compound Name**: Proprietary Mixture\n* **ASSAY RESULT**: M. Lymph: negative with S9 activation, positive without S9 activation; Rerun: negative without S9 activation, border-line positive with S9 activation -Technical problems with the test\n* **COMPOUND STRUCTURE**:     \n* **Unknown Mixture**:     \n* **PH (CALCULATED 50%)**: 5.26\n* **PHYSICAL APPEARANCE**: Yellow liquid\n* **bp/mp**: N/A °C @      mm Hg\n* **REGULATORY STATUS**: N/A\n* **Misc**:",
+        "page_number": 1,
+        "success": true,
+        "footer": "20\nBO2ME116",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

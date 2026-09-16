@@ -1,0 +1,1063 @@
+{
+  "job": {
+    "id": "pjb-xyn1q73m40my7il53x7cjukg5bdt",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:09:56.359783Z",
+    "error_message": null,
+    "name": "funsd_019.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:10:17.708759Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "Dec-16-97 14:32 From- +2023470505 T-128 P.01/08 F-351",
+                "value": "Dec-16-97 14:32 From- +2023470505 T-128 P.01/08 F-351",
+                "bbox": [
+                  {
+                    "h": 21.59,
+                    "w": 43.63,
+                    "x": 233.14,
+                    "y": 111.48,
+                    "confidence": 0.8,
+                    "end_index": 20,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 16
+                  },
+                  {
+                    "h": 21.15,
+                    "w": 85.06,
+                    "x": 567.64,
+                    "y": 118.09,
+                    "confidence": 0.8,
+                    "end_index": 32,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 22
+                  },
+                  {
+                    "h": 26.44,
+                    "w": 170.56,
+                    "x": 734.23,
+                    "y": 118.09,
+                    "confidence": 0.8,
+                    "end_index": 52,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 34
+                  },
+                  {
+                    "h": 18.99,
+                    "w": 194.12,
+                    "x": 80.97,
+                    "y": 111.5,
+                    "confidence": 0.8,
+                    "end_index": null,
+                    "label": "header",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "Dec-16-97 14:32 From- +2023470505 T-128 P.01/08 F-351",
+            "bbox": [
+              {
+                "h": 33.05,
+                "w": 671.65,
+                "x": 233.14,
+                "y": 111.48,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "md": "logo: Philip Morris",
+            "value": "logo: Philip Morris",
+            "bbox": [
+              {
+                "h": 98.52,
+                "w": 42.97,
+                "x": 20.54,
+                "y": 97.1,
+                "confidence": 0.69,
+                "end_index": 18,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## PHILIP MORRIS COMPANIES INC.",
+            "value": "PHILIP MORRIS COMPANIES INC.",
+            "bbox": [
+              {
+                "h": 76.23,
+                "w": 377.25,
+                "x": 323.92,
+                "y": 181.54,
+                "confidence": 0.85,
+                "end_index": 30,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 50.67,
+                "w": 377.25,
+                "x": 323.92,
+                "y": 181.54,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "120 PARK AVENUE, NEW YORK, NY 10017",
+            "value": "120 PARK AVENUE, NEW YORK, NY 10017",
+            "bbox": [
+              {
+                "h": 30.4,
+                "w": 420.44,
+                "x": 302.77,
+                "y": 253.8,
+                "confidence": 0.76,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 46.98,
+                "w": 414.73,
+                "x": 306.45,
+                "y": 235.4,
+                "confidence": 0.76,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "image: handwritten note \"PR - Documents\"",
+            "value": "image: handwritten note \"PR - Documents\"",
+            "bbox": [
+              {
+                "h": 131.31,
+                "w": 248.91,
+                "x": 742.68,
+                "y": 178.4,
+                "confidence": 0.9,
+                "end_index": 39,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## FACSIMILE TRANSMISSION",
+            "value": "FACSIMILE TRANSMISSION",
+            "bbox": [
+              {
+                "h": 19.62,
+                "w": 386.7,
+                "x": 316.55,
+                "y": 325.67,
+                "confidence": 0.9,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**STEVEN C. PARRISH**\nSenior Vice President\nCorporate Affairs",
+            "value": "STEVEN C. PARRISH\nSenior Vice President\nCorporate Affairs",
+            "bbox": [
+              {
+                "h": 68.89,
+                "w": 202.58,
+                "x": 83.63,
+                "y": 391.91,
+                "confidence": 0.92,
+                "end_index": 60,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Phone**: 212-880-3074\n**Fax**: 212-949-2395",
+            "value": "Phone: 212-880-3074\nFax: 212-949-2395",
+            "bbox": [
+              {
+                "h": 30.4,
+                "w": 204.05,
+                "x": 687.07,
+                "y": 386.87,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.4,
+                "w": 204.05,
+                "x": 687.07,
+                "y": 432.25,
+                "confidence": 0.95,
+                "end_index": 44,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 30.4,
+                "w": 121.2,
+                "x": 769.93,
+                "y": 432.25,
+                "confidence": 1.0,
+                "end_index": 44,
+                "label": "text",
+                "r": null,
+                "start_index": 33
+              },
+              {
+                "h": 27.759374999999977,
+                "w": 44.952736318407915,
+                "x": 687.0717247097845,
+                "y": 434.45624999999995,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 30.40312499999999,
+                "w": 121.19610281923713,
+                "x": 769.9257877280265,
+                "y": 432.25312499999995,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**DATE**: December 16, 1997\n**TO**: Distribution\n**PAGES TO FOLLOW**: 7",
+            "value": "DATE: December 16, 1997\nTO: Distribution\nPAGES TO FOLLOW: 7",
+            "bbox": [
+              {
+                "h": 104.34,
+                "w": 232.8,
+                "x": 300.83,
+                "y": 482.22,
+                "confidence": 0.94,
+                "end_index": 70,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.08,
+                "w": 238.43,
+                "x": 296.16,
+                "y": 477.64,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.96,
+                "w": 178.93,
+                "x": 297.48,
+                "y": 519.5,
+                "confidence": 1.0,
+                "end_index": 47,
+                "label": "text",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 28.64,
+                "w": 224.76,
+                "x": 296.6,
+                "y": 562.68,
+                "confidence": 1.0,
+                "end_index": 70,
+                "label": "text",
+                "r": null,
+                "start_index": 49
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Attached please find a letter from Sen. Grassley dated December 9, 1997, as well as previous correspondence.",
+            "value": "Attached please find a letter from Sen. Grassley dated December 9, 1997, as well as previous correspondence.",
+            "bbox": [
+              {
+                "h": 46.36,
+                "w": 829.08,
+                "x": 61.53,
+                "y": 611.39,
+                "confidence": 0.93,
+                "end_index": 107,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Distribution:",
+            "value": "Distribution:",
+            "bbox": [
+              {
+                "h": 18.65,
+                "w": 119.46,
+                "x": 61.58,
+                "y": 680.12,
+                "confidence": 0.92,
+                "end_index": 12,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"M. Berlind\",\"914-335-9374\"\n\"M. Bring\",\"212-687-1438\"\n\"P. Carlton\",\"919-827-5487\"\n\"Jocelyn Dyer\",\"WRO - Manual\"\n\"D. Donahue\",\"910-741-0671\"\n\"M. Firestone\",\"212-907-5473\"\n\"R. Fiske\",\"212-450-5566\"\n\"A. Golden\",\"212-450-5568\"\n\"T. Griscom\",\"910-741-7975\"\n\"J. Hickie\",\"202-371-6338\"\n\"B. Hirsch\",\"212-935-6801\"\n\"D. Keane\",\"212-907-5399\"\n\"M. Koplow\",\"212-403-2020\"\n\"M. McGraw\",\"502-568-7107\"\n\"S Parrish\",\"212-949-2395\"\n\"S. Patton\",\"312-861-2200\"\n\"R. Sharpe\",\"212-969-9917\"\n\"A. Stevens/R. Millstein\",\"910-335-7707\"\n\"R. Verheij\",\"203-863-7233\"\n\"H. Wachtell\",\"212-403-2216\"\n\"C. Wall\",\"212-907-5817\"\n\"S. Wise\",\"212-450-5987\"",
+            "html": "<table>\n    <tr>\n        <td>M. Berlind</td>\n        <td>914-335-9374</td>\n    </tr>\n    <tr>\n        <td>M. Bring</td>\n        <td>212-687-1438</td>\n    </tr>\n    <tr>\n        <td>P. Carlton</td>\n        <td>919-827-5487</td>\n    </tr>\n    <tr>\n        <td>Jocelyn Dyer</td>\n        <td>WRO - Manual</td>\n    </tr>\n    <tr>\n        <td>D. Donahue</td>\n        <td>910-741-0671</td>\n    </tr>\n    <tr>\n        <td>M. Firestone</td>\n        <td>212-907-5473</td>\n    </tr>\n    <tr>\n        <td>R. Fiske</td>\n        <td>212-450-5566</td>\n    </tr>\n    <tr>\n        <td>A. Golden</td>\n        <td>212-450-5568</td>\n    </tr>\n    <tr>\n        <td>T. Griscom</td>\n        <td>910-741-7975</td>\n    </tr>\n    <tr>\n        <td>J. Hickie</td>\n        <td>202-371-6338</td>\n    </tr>\n    <tr>\n        <td>B. Hirsch</td>\n        <td>212-935-6801</td>\n    </tr>\n    <tr>\n        <td>D. Keane</td>\n        <td>212-907-5399</td>\n    </tr>\n    <tr>\n        <td>M. Koplow</td>\n        <td>212-403-2020</td>\n    </tr>\n    <tr>\n        <td>M. McGraw</td>\n        <td>502-568-7107</td>\n    </tr>\n    <tr>\n        <td>S Parrish</td>\n        <td>212-949-2395</td>\n    </tr>\n    <tr>\n        <td>S. Patton</td>\n        <td>312-861-2200</td>\n    </tr>\n    <tr>\n        <td>R. Sharpe</td>\n        <td>212-969-9917</td>\n    </tr>\n    <tr>\n        <td>A. Stevens/R. Millstein</td>\n        <td>910-335-7707</td>\n    </tr>\n    <tr>\n        <td>R. Verheij</td>\n        <td>203-863-7233</td>\n    </tr>\n    <tr>\n        <td>H. Wachtell</td>\n        <td>212-403-2216</td>\n    </tr>\n    <tr>\n        <td>C. Wall</td>\n        <td>212-907-5817</td>\n    </tr>\n    <tr>\n        <td>S. Wise</td>\n        <td>212-450-5987</td>\n    </tr>\n</table>",
+            "md": "| M. Berlind              | 914-335-9374 |\n| ----------------------- | ------------ |\n| M. Bring                | 212-687-1438 |\n| P. Carlton              | 919-827-5487 |\n| Jocelyn Dyer            | WRO - Manual |\n| D. Donahue              | 910-741-0671 |\n| M. Firestone            | 212-907-5473 |\n| R. Fiske                | 212-450-5566 |\n| A. Golden               | 212-450-5568 |\n| T. Griscom              | 910-741-7975 |\n| J. Hickie               | 202-371-6338 |\n| B. Hirsch               | 212-935-6801 |\n| D. Keane                | 212-907-5399 |\n| M. Koplow               | 212-403-2020 |\n| M. McGraw               | 502-568-7107 |\n| S Parrish               | 212-949-2395 |\n| S. Patton               | 312-861-2200 |\n| R. Sharpe               | 212-969-9917 |\n| A. Stevens/R. Millstein | 910-335-7707 |\n| R. Verheij              | 203-863-7233 |\n| H. Wachtell             | 212-403-2216 |\n| C. Wall                 | 212-907-5817 |\n| S. Wise                 | 212-450-5987 |",
+            "rows": [
+              [
+                "M. Berlind",
+                "914-335-9374"
+              ],
+              [
+                "M. Bring",
+                "212-687-1438"
+              ],
+              [
+                "P. Carlton",
+                "919-827-5487"
+              ],
+              [
+                "Jocelyn Dyer",
+                "WRO - Manual"
+              ],
+              [
+                "D. Donahue",
+                "910-741-0671"
+              ],
+              [
+                "M. Firestone",
+                "212-907-5473"
+              ],
+              [
+                "R. Fiske",
+                "212-450-5566"
+              ],
+              [
+                "A. Golden",
+                "212-450-5568"
+              ],
+              [
+                "T. Griscom",
+                "910-741-7975"
+              ],
+              [
+                "J. Hickie",
+                "202-371-6338"
+              ],
+              [
+                "B. Hirsch",
+                "212-935-6801"
+              ],
+              [
+                "D. Keane",
+                "212-907-5399"
+              ],
+              [
+                "M. Koplow",
+                "212-403-2020"
+              ],
+              [
+                "M. McGraw",
+                "502-568-7107"
+              ],
+              [
+                "S Parrish",
+                "212-949-2395"
+              ],
+              [
+                "S. Patton",
+                "312-861-2200"
+              ],
+              [
+                "R. Sharpe",
+                "212-969-9917"
+              ],
+              [
+                "A. Stevens/R. Millstein",
+                "910-335-7707"
+              ],
+              [
+                "R. Verheij",
+                "203-863-7233"
+              ],
+              [
+                "H. Wachtell",
+                "212-403-2216"
+              ],
+              [
+                "C. Wall",
+                "212-907-5817"
+              ],
+              [
+                "S. Wise",
+                "212-450-5987"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 389.95,
+                "w": 296.16,
+                "x": 56.41,
+                "y": 701.47,
+                "confidence": 1.0,
+                "end_index": 987,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 389.95,
+                "w": 296.16,
+                "x": 56.41,
+                "y": 701.47,
+                "confidence": 0.89,
+                "end_index": 985,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 9
+              },
+              {
+                "h": 18.51,
+                "w": 113.7,
+                "x": 238.87,
+                "y": 701.47,
+                "confidence": 0.89,
+                "end_index": 39,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 22.03,
+                "w": 67.87,
+                "x": 59.5,
+                "y": 717.78,
+                "confidence": 0.89,
+                "end_index": 95,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 88
+              },
+              {
+                "h": 17.63,
+                "w": 112.82,
+                "x": 238.87,
+                "y": 719.98,
+                "confidence": 0.89,
+                "end_index": 125,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 114
+              },
+              {
+                "h": 20.71,
+                "w": 78.01,
+                "x": 59.94,
+                "y": 735.4,
+                "confidence": 0.89,
+                "end_index": 140,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 131
+              },
+              {
+                "h": 18.51,
+                "w": 112.38,
+                "x": 238.87,
+                "y": 737.17,
+                "confidence": 0.89,
+                "end_index": 168,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 157
+              },
+              {
+                "h": 20.27,
+                "w": 100.92,
+                "x": 59.5,
+                "y": 753.91,
+                "confidence": 0.89,
+                "end_index": 185,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 174
+              },
+              {
+                "h": 18.51,
+                "w": 109.3,
+                "x": 238.43,
+                "y": 753.91,
+                "confidence": 0.89,
+                "end_index": 211,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 200
+              },
+              {
+                "h": 19.83,
+                "w": 95.19,
+                "x": 59.94,
+                "y": 770.21,
+                "confidence": 0.89,
+                "end_index": 226,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 217
+              },
+              {
+                "h": 18.07,
+                "w": 111.94,
+                "x": 237.99,
+                "y": 771.53,
+                "confidence": 0.89,
+                "end_index": 254,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 243
+              },
+              {
+                "h": 18.51,
+                "w": 113.7,
+                "x": 237.54,
+                "y": 788.72,
+                "confidence": 0.89,
+                "end_index": 297,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 286
+              },
+              {
+                "h": 19.39,
+                "w": 64.34,
+                "x": 60.38,
+                "y": 805.46,
+                "confidence": 0.89,
+                "end_index": 310,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 303
+              },
+              {
+                "h": 16.3,
+                "w": 112.82,
+                "x": 238.43,
+                "y": 807.22,
+                "confidence": 0.89,
+                "end_index": 340,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 329
+              },
+              {
+                "h": 19.39,
+                "w": 79.77,
+                "x": 59.5,
+                "y": 823.09,
+                "confidence": 0.89,
+                "end_index": 354,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 346
+              },
+              {
+                "h": 17.63,
+                "w": 112.82,
+                "x": 237.99,
+                "y": 823.97,
+                "confidence": 0.89,
+                "end_index": 383,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 372
+              },
+              {
+                "h": 20.27,
+                "w": 82.85,
+                "x": 58.61,
+                "y": 840.27,
+                "confidence": 0.89,
+                "end_index": 398,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 389
+              },
+              {
+                "h": 17.18,
+                "w": 112.82,
+                "x": 237.99,
+                "y": 842.03,
+                "confidence": 0.89,
+                "end_index": 426,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 415
+              },
+              {
+                "h": 19.83,
+                "w": 67.43,
+                "x": 59.06,
+                "y": 858.78,
+                "confidence": 0.89,
+                "end_index": 440,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 432
+              },
+              {
+                "h": 17.63,
+                "w": 112.82,
+                "x": 237.99,
+                "y": 860.1,
+                "confidence": 0.89,
+                "end_index": 469,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 458
+              },
+              {
+                "h": 20.71,
+                "w": 71.4,
+                "x": 58.61,
+                "y": 875.52,
+                "confidence": 0.89,
+                "end_index": 483,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 475
+              },
+              {
+                "h": 17.18,
+                "w": 111.5,
+                "x": 237.54,
+                "y": 877.72,
+                "confidence": 0.89,
+                "end_index": 512,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 501
+              },
+              {
+                "h": 20.71,
+                "w": 68.31,
+                "x": 58.61,
+                "y": 893.59,
+                "confidence": 0.89,
+                "end_index": 525,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 518
+              },
+              {
+                "h": 17.63,
+                "w": 112.38,
+                "x": 237.54,
+                "y": 895.35,
+                "confidence": 0.89,
+                "end_index": 555,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 544
+              },
+              {
+                "h": 22.47,
+                "w": 83.74,
+                "x": 58.17,
+                "y": 910.77,
+                "confidence": 0.89,
+                "end_index": 569,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 561
+              },
+              {
+                "h": 17.18,
+                "w": 112.82,
+                "x": 237.1,
+                "y": 913.42,
+                "confidence": 0.89,
+                "end_index": 598,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 587
+              },
+              {
+                "h": 21.59,
+                "w": 85.06,
+                "x": 57.73,
+                "y": 928.84,
+                "confidence": 0.89,
+                "end_index": 612,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 604
+              },
+              {
+                "h": 17.63,
+                "w": 112.82,
+                "x": 237.1,
+                "y": 930.6,
+                "confidence": 0.89,
+                "end_index": 641,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 630
+              },
+              {
+                "h": 23.35,
+                "w": 78.01,
+                "x": 56.85,
+                "y": 946.02,
+                "confidence": 0.89,
+                "end_index": 655,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 647
+              },
+              {
+                "h": 17.18,
+                "w": 111.94,
+                "x": 237.1,
+                "y": 948.67,
+                "confidence": 0.89,
+                "end_index": 684,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 673
+              },
+              {
+                "h": 21.15,
+                "w": 77.12,
+                "x": 57.29,
+                "y": 964.97,
+                "confidence": 0.89,
+                "end_index": 698,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 690
+              },
+              {
+                "h": 16.74,
+                "w": 112.38,
+                "x": 237.54,
+                "y": 967.61,
+                "confidence": 0.89,
+                "end_index": 727,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 716
+              },
+              {
+                "h": 21.15,
+                "w": 78.89,
+                "x": 58.17,
+                "y": 982.15,
+                "confidence": 0.89,
+                "end_index": 741,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 733
+              },
+              {
+                "h": 16.3,
+                "w": 112.38,
+                "x": 237.1,
+                "y": 983.92,
+                "confidence": 0.89,
+                "end_index": 770,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 759
+              },
+              {
+                "h": 21.15,
+                "w": 172.76,
+                "x": 57.29,
+                "y": 999.34,
+                "confidence": 0.89,
+                "end_index": 798,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 776
+              },
+              {
+                "h": 17.63,
+                "w": 113.7,
+                "x": 235.78,
+                "y": 1001.1,
+                "confidence": 0.89,
+                "end_index": 813,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 802
+              },
+              {
+                "h": 23.79,
+                "w": 79.77,
+                "x": 56.85,
+                "y": 1016.52,
+                "confidence": 0.89,
+                "end_index": 828,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 819
+              },
+              {
+                "h": 17.18,
+                "w": 112.38,
+                "x": 236.66,
+                "y": 1019.17,
+                "confidence": 0.89,
+                "end_index": 856,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 845
+              },
+              {
+                "h": 20.27,
+                "w": 87.7,
+                "x": 56.85,
+                "y": 1036.35,
+                "confidence": 0.89,
+                "end_index": 872,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 862
+              },
+              {
+                "h": 17.63,
+                "w": 112.38,
+                "x": 236.66,
+                "y": 1037.23,
+                "confidence": 0.89,
+                "end_index": 899,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 888
+              },
+              {
+                "h": 20.71,
+                "w": 55.97,
+                "x": 56.85,
+                "y": 1053.53,
+                "confidence": 0.89,
+                "end_index": 911,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 905
+              },
+              {
+                "h": 15.86,
+                "w": 111.5,
+                "x": 236.66,
+                "y": 1055.74,
+                "confidence": 0.89,
+                "end_index": 942,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 931
+              },
+              {
+                "h": 20.27,
+                "w": 63.02,
+                "x": 56.41,
+                "y": 1071.16,
+                "confidence": 0.89,
+                "end_index": 954,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 948
+              },
+              {
+                "h": 16.3,
+                "w": 111.5,
+                "x": 236.22,
+                "y": 1072.92,
+                "confidence": 0.89,
+                "end_index": 985,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 974
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, image, key-value-region, paragraph_title, header, footer] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "stamp: RECEIVED DEC 16 1997 MARK H. BERLIND",
+            "value": "stamp: RECEIVED DEC 16 1997 MARK H. BERLIND",
+            "bbox": [
+              {
+                "h": 160.54,
+                "w": 241.57,
+                "x": 690.91,
+                "y": 923.66,
+                "confidence": 0.93,
+                "end_index": 42,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "This facsimile transmission (and/or documents accompanying it) may contain privileged and confidential information belonging to the sender. The information is intended only for the use of the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.",
+            "value": "This facsimile transmission (and/or documents accompanying it) may contain privileged and confidential information belonging to the sender. The information is intended only for the use of the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.",
+            "bbox": [
+              {
+                "h": 114.56,
+                "w": 626.69,
+                "x": 167.47,
+                "y": 1130.2,
+                "confidence": 0.98,
+                "end_index": 571,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "2065109291",
+                "value": "2065109291",
+                "bbox": [
+                  {
+                    "h": 118.31,
+                    "w": 19.97,
+                    "x": 925.93,
+                    "y": 1146.39,
+                    "confidence": 0.87,
+                    "end_index": 9,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "2065109291",
+            "bbox": [
+              {
+                "h": 118.31,
+                "w": 19.97,
+                "x": 925.93,
+                "y": 1146.39,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: Philip Morris\n\n## PHILIP MORRIS COMPANIES INC.\n120 PARK AVENUE, NEW YORK, NY 10017\n\nimage: handwritten note \"PR - Documents\"\n\n## FACSIMILE TRANSMISSION\n\n**STEVEN C. PARRISH**\nSenior Vice President\nCorporate Affairs\n\n**Phone**: 212-880-3074\n**Fax**: 212-949-2395\n\n**DATE**: December 16, 1997\n**TO**: Distribution\n**PAGES TO FOLLOW**: 7\n\nAttached please find a letter from Sen. Grassley dated December 9, 1997, as well as previous correspondence.\n\nDistribution:\n\n| M. Berlind              | 914-335-9374 |\n| ----------------------- | ------------ |\n| M. Bring                | 212-687-1438 |\n| P. Carlton              | 919-827-5487 |\n| Jocelyn Dyer            | WRO - Manual |\n| D. Donahue              | 910-741-0671 |\n| M. Firestone            | 212-907-5473 |\n| R. Fiske                | 212-450-5566 |\n| A. Golden               | 212-450-5568 |\n| T. Griscom              | 910-741-7975 |\n| J. Hickie               | 202-371-6338 |\n| B. Hirsch               | 212-935-6801 |\n| D. Keane                | 212-907-5399 |\n| M. Koplow               | 212-403-2020 |\n| M. McGraw               | 502-568-7107 |\n| S Parrish               | 212-949-2395 |\n| S. Patton               | 312-861-2200 |\n| R. Sharpe               | 212-969-9917 |\n| A. Stevens/R. Millstein | 910-335-7707 |\n| R. Verheij              | 203-863-7233 |\n| H. Wachtell             | 212-403-2216 |\n| C. Wall                 | 212-907-5817 |\n| S. Wise                 | 212-450-5987 |\n\n\nstamp: RECEIVED DEC 16 1997 MARK H. BERLIND\n\nThis facsimile transmission (and/or documents accompanying it) may contain privileged and confidential information belonging to the sender. The information is intended only for the use of the addressee or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or the taking of any action in reliance of the contents of this information is strictly prohibited by law. If you have received this transmission in error, please immediately notify us by telephone to arrange for the return of the documents.",
+        "page_number": 1,
+        "success": true,
+        "footer": "2065109291",
+        "header": "Dec-16-97 14:32 From- +2023470505 T-128 P.01/08 F-351",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

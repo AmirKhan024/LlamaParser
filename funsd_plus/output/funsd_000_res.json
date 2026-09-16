@@ -1,0 +1,309 @@
+{
+  "job": {
+    "id": "pjb-t3znginox8xo2gftukm9ln5bf6es",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:03:07.205634Z",
+    "error_message": null,
+    "name": "funsd_000.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:03:20.789027Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "items": [
+              {
+                "md": "logo: watson productions",
+                "value": "logo: watson productions",
+                "bbox": [
+                  {
+                    "h": 96.5,
+                    "w": 348.16,
+                    "x": 111.5,
+                    "y": 207.98,
+                    "confidence": 0.89,
+                    "end_index": 23,
+                    "label": "image",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 121.77,
+                    "w": 346.72,
+                    "x": 114.34,
+                    "y": 194.4,
+                    "confidence": 0.89,
+                    "end_index": null,
+                    "label": "image",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "96-59 222<sup>nd</sup> Street\nQueens Village, NY 11429",
+                "value": "96-59 222<sup>nd</sup> Street\nQueens Village, NY 11429",
+                "bbox": [
+                  {
+                    "h": 36.81,
+                    "w": 204.26,
+                    "x": 522.38,
+                    "y": 200.15,
+                    "confidence": 0.78,
+                    "end_index": 53,
+                    "label": "paragraph_title",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "t 479.0833\nf 479.0832\n2083800466",
+                "value": "t 479.0833\nf 479.0832\n2083800466",
+                "bbox": [
+                  {
+                    "h": 16.3,
+                    "w": 89.69,
+                    "x": 839.69,
+                    "y": 220.17,
+                    "confidence": 0.65,
+                    "end_index": 31,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 36.57,
+                    "w": 93.87,
+                    "x": 837.35,
+                    "y": 200.04,
+                    "confidence": 1.0,
+                    "end_index": 20,
+                    "label": "header",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "logo: watson productions\n\n96-59 222<sup>nd</sup> Street\nQueens Village, NY 11429\n\nt 479.0833\nf 479.0832\n2083800466",
+            "bbox": [
+              {
+                "h": 104.43,
+                "w": 819.72,
+                "x": 111.5,
+                "y": 200.04,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "header"
+          },
+          {
+            "level": 2,
+            "md": "## facsimile cover sheet",
+            "value": "facsimile cover sheet",
+            "bbox": [
+              {
+                "h": 19.97,
+                "w": 221.79,
+                "x": 112.8,
+                "y": 417.77,
+                "confidence": 0.93,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**date**: 5/31/2000\n**attn**: Yvette Robinson / Philip Morris USA\n**fax #** 917-663-5463\n**from**: Chuck Laws\n**re**:\\\n**no. of pages including cover** (2)",
+            "value": "date: 5/31/2000\nattn: Yvette Robinson / Philip Morris USA\nfax # 917-663-5463\nfrom: Chuck Laws\nre: no. of pages including cover (2)",
+            "bbox": [
+              {
+                "h": 27.32,
+                "w": 176.73,
+                "x": 111.06,
+                "y": 460.45,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 251.6,
+                "w": 374.61,
+                "x": 105.33,
+                "y": 460.45,
+                "confidence": 1.0,
+                "end_index": 154,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.0,
+                "w": 369.32,
+                "x": 110.62,
+                "y": 506.28,
+                "confidence": 1.0,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 20
+              },
+              {
+                "h": 26.0,
+                "w": 198.32,
+                "x": 110.62,
+                "y": 550.34,
+                "confidence": 1.0,
+                "end_index": 87,
+                "label": "text",
+                "r": null,
+                "start_index": 66
+              },
+              {
+                "h": 25.12,
+                "w": 165.71,
+                "x": 109.3,
+                "y": 597.05,
+                "confidence": 1.0,
+                "end_index": 108,
+                "label": "text",
+                "r": null,
+                "start_index": 89
+              },
+              {
+                "h": 26.44,
+                "w": 285.58,
+                "x": 107.09,
+                "y": 685.61,
+                "confidence": 1.0,
+                "end_index": 154,
+                "label": "text",
+                "r": null,
+                "start_index": 119
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**comments**:",
+            "value": "comments:",
+            "bbox": [
+              {
+                "h": 25.12,
+                "w": 104.01,
+                "x": 107.97,
+                "y": 753.47,
+                "confidence": 0.6,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "**for immediate delivery**",
+                "value": "for immediate delivery",
+                "bbox": [
+                  {
+                    "h": 24.03,
+                    "w": 232.44,
+                    "x": 109.24,
+                    "y": 1276.35,
+                    "confidence": 0.88,
+                    "end_index": 25,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "P. 01\tFAX NO.\tMAY-31-2000 WED 03:50 PM",
+                "value": "P. 01\tFAX NO.\tMAY-31-2000 WED 03:50 PM",
+                "bbox": [
+                  {
+                    "h": 22.56,
+                    "w": 849.34,
+                    "x": 106.3,
+                    "y": 1346.55,
+                    "confidence": 0.95,
+                    "end_index": 37,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "**for immediate delivery**\n\nP. 01\tFAX NO.\tMAY-31-2000 WED 03:50 PM",
+            "bbox": [
+              {
+                "h": 92.76,
+                "w": 849.34,
+                "x": 106.3,
+                "y": 1276.35,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1410.0,
+        "page_number": 1,
+        "page_width": 1063.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## facsimile cover sheet\n\n**date**: 5/31/2000\n**attn**: Yvette Robinson / Philip Morris USA\n**fax #** 917-663-5463\n**from**: Chuck Laws\n**re**:     \n**no. of pages including cover** (2)\n\n**comments**:",
+        "page_number": 1,
+        "success": true,
+        "footer": "**for immediate delivery**\n\nP. 01\tFAX NO.\tMAY-31-2000 WED 03:50 PM",
+        "header": "logo: watson productions\n\n96-59 222<sup>nd</sup> Street\nQueens Village, NY 11429\n\nt 479.0833\nf 479.0832\n2083800466",
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

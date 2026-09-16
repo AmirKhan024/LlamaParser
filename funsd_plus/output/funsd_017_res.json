@@ -1,0 +1,509 @@
+{
+  "job": {
+    "id": "pjb-dm8xum2h8uzps2qxc9lxm3md76kb",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T10:09:03.382031Z",
+    "error_message": null,
+    "name": "funsd_017.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T10:09:26.177801Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## <u>SPECIAL EVENTS</u>",
+            "value": "<u>SPECIAL EVENTS</u>",
+            "bbox": [
+              {
+                "h": 22.23,
+                "w": 167.88,
+                "x": 403.89,
+                "y": 138.59,
+                "confidence": 0.93,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "items": [
+              {
+                "md": "**State**: Illinois",
+                "value": "State: Illinois",
+                "bbox": [
+                  {
+                    "h": 116.14,
+                    "w": 231.71,
+                    "x": 72.35,
+                    "y": 251.75,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 103.36,
+                    "w": 343.23,
+                    "x": 413.85,
+                    "y": 252.91,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 111.57,
+                    "w": 519.42,
+                    "x": 413.89,
+                    "y": 520.1,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 111.14,
+                    "w": 258.83,
+                    "x": 81.11,
+                    "y": 535.49,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 149.41,
+                    "w": 770.82,
+                    "x": 86.22,
+                    "y": 725.6,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 112.34,
+                    "w": 806.07,
+                    "x": 91.99,
+                    "y": 963.69,
+                    "confidence": 0.78,
+                    "end_index": 18,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**City/Town**: Dundee",
+                "value": "City/Town: Dundee",
+                "bbox": [
+                  {
+                    "h": 27.87,
+                    "w": 262.33,
+                    "x": 494.74,
+                    "y": 252.91,
+                    "confidence": 0.8,
+                    "end_index": 20,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 27.873664062499984,
+                    "w": 128.8560104419388,
+                    "x": 494.74170546576374,
+                    "y": 252.90947493489585,
+                    "confidence": 0.8,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  },
+                  {
+                    "h": 20.905248046874988,
+                    "w": 78.58483148028552,
+                    "x": 678.491532015255,
+                    "y": 252.90947493489585,
+                    "confidence": 0.8,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Type of Event**: Beauty Contest",
+                "value": "Type of Event: Beauty Contest",
+                "bbox": [
+                  {
+                    "h": 29.04,
+                    "w": 178.55,
+                    "x": 75.82,
+                    "y": 338.85,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 23.23,
+                    "w": 166.99,
+                    "x": 413.85,
+                    "y": 333.05,
+                    "confidence": 1.0,
+                    "end_index": 32,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 19
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Estimated Attendance**: 700",
+                "value": "Estimated Attendance: 700",
+                "bbox": [
+                  {
+                    "h": 22.44,
+                    "w": 255.59,
+                    "x": 84.51,
+                    "y": 541.62,
+                    "confidence": 0.93,
+                    "end_index": 28,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Dates**: March 3<sup>rd</sup>, 4<sup>th</sup> & 5<sup>th</sup>,",
+                "value": "Dates: March 3<sup>rd</sup>, 4<sup>th</sup> & 5<sup>th</sup>,",
+                "bbox": [
+                  {
+                    "h": 27.87,
+                    "w": 260.02,
+                    "x": 673.29,
+                    "y": 524.68,
+                    "confidence": 1.0,
+                    "end_index": 57,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Name of Event**: Mrs. Illinois Beauty Pageant",
+                "value": "Name of Event: Mrs. Illinois Beauty Pageant",
+                "bbox": [
+                  {
+                    "h": 30.2,
+                    "w": 175.66,
+                    "x": 82.75,
+                    "y": 616.43,
+                    "confidence": 1.0,
+                    "end_index": 17,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 25.01,
+                    "w": 327.57,
+                    "x": 413.89,
+                    "y": 606.66,
+                    "confidence": 1.0,
+                    "end_index": 46,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 19
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Contact (Name/Telephone)**: Ms. Joy Weathers (Sales) 312/426-8000",
+                "value": "Contact (Name/Telephone): Ms. Joy Weathers (Sales) 312/426-8000",
+                "bbox": [
+                  {
+                    "h": 38.32628808593745,
+                    "w": 770.8247440786834,
+                    "x": 86.21614769692633,
+                    "y": 725.600361328125,
+                    "confidence": 0.92,
+                    "end_index": null,
+                    "label": "form",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "**Audience Concentration**: 90% White - 10% Black",
+                "value": "Audience Concentration: 90% White - 10% Black",
+                "bbox": [
+                  {
+                    "h": 25.09,
+                    "w": 277.43,
+                    "x": 93.01,
+                    "y": 817.68,
+                    "confidence": 0.81,
+                    "end_index": 23,
+                    "label": "text",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 19.81,
+                    "w": 245.52,
+                    "x": 426.32,
+                    "y": 814.01,
+                    "confidence": 0.75,
+                    "end_index": 48,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 24
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "items": [
+                  {
+                    "md": "Age category 21 yrs. to 45 yrs.",
+                    "value": "Age category 21 yrs. to 45 yrs.",
+                    "bbox": [
+                      {
+                        "h": 27.89,
+                        "w": 361.7,
+                        "x": 416.74,
+                        "y": 847.12,
+                        "confidence": 1.0,
+                        "end_index": 30,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  }
+                ],
+                "md": "* Age category 21 yrs. to 45 yrs.",
+                "ordered": false,
+                "bbox": [
+                  {
+                    "h": 27.89,
+                    "w": 361.7,
+                    "x": 416.74,
+                    "y": 847.12,
+                    "confidence": 1.0,
+                    "end_index": 32,
+                    "label": "list",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "list"
+              },
+              {
+                "md": "**Recommended Brand(s) and Promotional Activity**: BARCLAY sampling",
+                "value": "Recommended Brand(s) and Promotional Activity: BARCLAY sampling",
+                "bbox": [
+                  {
+                    "h": 105.23,
+                    "w": 575.12,
+                    "x": 97.28,
+                    "y": 972.28,
+                    "confidence": 0.91,
+                    "end_index": 66,
+                    "label": "form",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "items": [
+                  {
+                    "md": "2 - 12M cases mixed.",
+                    "value": "2 - 12M cases mixed.",
+                    "bbox": [
+                      {
+                        "h": 25.01,
+                        "w": 235.13,
+                        "x": 232.33,
+                        "y": 1011.59,
+                        "confidence": 1.0,
+                        "end_index": 19,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  },
+                  {
+                    "md": "To be placed on tables by B & W Reps.",
+                    "value": "To be placed on tables by B & W Reps.",
+                    "bbox": [
+                      {
+                        "h": 28.85,
+                        "w": 430.91,
+                        "x": 233.28,
+                        "y": 1047.18,
+                        "confidence": 1.0,
+                        "end_index": 36,
+                        "label": "form",
+                        "r": null,
+                        "start_index": 0
+                      }
+                    ],
+                    "type": "text"
+                  }
+                ],
+                "md": "* 2 - 12M cases mixed.\n* To be placed on tables by B & W Reps.",
+                "ordered": false,
+                "bbox": [
+                  {
+                    "h": 64.44,
+                    "w": 431.86,
+                    "x": 232.33,
+                    "y": 1011.59,
+                    "confidence": 1.0,
+                    "end_index": 61,
+                    "label": "list",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "list"
+              }
+            ],
+            "md": "* **State**: Illinois\n\n* **City/Town**: Dundee\n\n* **Type of Event**: Beauty Contest\n\n* **Estimated Attendance**: 700\n\n* **Dates**: March 3<sup>rd</sup>, 4<sup>th</sup> & 5<sup>th</sup>,\n\n* **Name of Event**: Mrs. Illinois Beauty Pageant\n\n* **Contact (Name/Telephone)**: Ms. Joy Weathers (Sales) 312/426-8000\n\n* **Audience Concentration**: 90% White - 10% Black\n  * Age category 21 yrs. to 45 yrs.\n\n* **Recommended Brand(s) and Promotional Activity**: BARCLAY sampling\n  * 2 - 12M cases mixed.\n  * To be placed on tables by B & W Reps.",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 825.75,
+                "w": 860.96,
+                "x": 72.35,
+                "y": 251.75,
+                "confidence": 0.88,
+                "end_index": 533,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "items": [
+              {
+                "md": "466603840",
+                "value": "466603840",
+                "bbox": [
+                  {
+                    "h": 24.76,
+                    "w": 154.19,
+                    "x": 762.7,
+                    "y": 1183.06,
+                    "confidence": 0.87,
+                    "end_index": 8,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              },
+              {
+                "md": "/lr/9349",
+                "value": "/lr/9349",
+                "bbox": [
+                  {
+                    "h": 17.83,
+                    "w": 98.17,
+                    "x": 105.55,
+                    "y": 1225.92,
+                    "confidence": 0.92,
+                    "end_index": 7,
+                    "label": "footer",
+                    "r": null,
+                    "start_index": 0
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "466603840\n\n/lr/9349",
+            "bbox": [
+              {
+                "h": 60.69,
+                "w": 811.35,
+                "x": 105.55,
+                "y": 1183.06,
+                "confidence": null,
+                "end_index": null,
+                "label": null,
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "footer"
+          }
+        ],
+        "page_height": 1403.0,
+        "page_number": 1,
+        "page_width": 1069.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## <u>SPECIAL EVENTS</u>\n\n* **State**: Illinois\n* **City/Town**: Dundee\n\n* **Type of Event**: Beauty Contest\n\n* **Estimated Attendance**: 700\n* **Dates**: March 3<sup>rd</sup>, 4<sup>th</sup> & 5<sup>th</sup>,\n\n* **Name of Event**: Mrs. Illinois Beauty Pageant\n\n* **Contact (Name/Telephone)**: Ms. Joy Weathers (Sales) 312/426-8000\n\n* **Audience Concentration**: 90% White - 10% Black\n    - Age category 21 yrs. to 45 yrs.\n\n* **Recommended Brand(s) and Promotional Activity**: BARCLAY sampling\n    - 2 - 12M cases mixed.\n    - To be placed on tables by B & W Reps.",
+        "page_number": 1,
+        "success": true,
+        "footer": "466603840\n\n/lr/9349",
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

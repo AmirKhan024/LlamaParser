@@ -1,0 +1,95 @@
+*   
+
+**TO**: 
+
+BOSTON ROUBUFFALO ROU
+*   
+
+**DATE**: 
+
+<u>7/8/97</u>
+*   
+
+**FOR**: 
+
+<u>DISSEMINATION TO ALL APPROPRIATE PERSONNEL</u>
+
+## CHAIN PROMOTIONAL INFORMATION
+
+*   
+
+**CHAIN NAME**: 
+
+<u>CHRISTY'S</u>
+*   
+
+**CID #**: 
+
+<u>0934-00-00</u>
+*   
+
+**PROMOTION TYPE**: 
+
+<u>PRICE REDUCTION</u>
+*   
+
+**SUPPLIER**:     
+*   
+
+**DESCRIPTION**: 
+
+<u>$2.00 OFF PER CARTON</u>
+
+<u>.20 ¢ OFF PER PACK</u>
+*   
+
+**BRANDS**: 
+
+<u>COURIER BRAND FAMILY</u>
+*   
+
+**AUTHORIZED LOCATIONS**: 
+
+<u>ALL STORES</u>
+*   
+
+**TIMING**: 
+
+<u>7/21/97 THROUGH 10/12/97</u>
+*   
+
+**DISPLAY METHOD**: <u>TEMPORARY COURIER DISPLAYS</u>
+*   
+
+**ACTION REQUIRED**: <u>PRICE COMMUNICATION</u>
+
+<u>MONITOR STOCK LEVELS</u>
+*   
+
+**COMMENTS**: 
+
+<u>CHRISTY'S WILL RUN CHAIN SUPPLIED ADVERTISING FOR THIS PROMOTION.</u>
+*   
+
+**AUTHORIZED BY**:     
+*   
+
+**R.J.R. REP**: J. L. Merusi
+*   
+
+**DIVISION**: 
+
+1142
+*   
+
+**CC: RM'S**
+*   
+
+**PHONE**: 
+
+508-923-0521
+*   
+
+**FAX**: 
+
+508-923-0240
