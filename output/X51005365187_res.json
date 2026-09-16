@@ -1,0 +1,994 @@
+{
+  "job": {
+    "id": "pjb-jt8475uqcf1w4m5mpch2q7v5y6q0",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:06:44.880170Z",
+    "error_message": null,
+    "name": "X51005365187.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:07:08.367856Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "3-1707067",
+            "value": "3-1707067",
+            "bbox": [
+              {
+                "h": 59.4,
+                "w": 354.4,
+                "x": 16.63,
+                "y": 33.48,
+                "confidence": 0.88,
+                "end_index": 8,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## F&P PHARMACY",
+            "value": "F&P PHARMACY",
+            "bbox": [
+              {
+                "h": 32.5,
+                "w": 287.57,
+                "x": 222.78,
+                "y": 112.53,
+                "confidence": 0.88,
+                "end_index": 14,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(002309592-P)",
+            "value": "(002309592-P)",
+            "bbox": [
+              {
+                "h": 27.37,
+                "w": 184.56,
+                "x": 273.71,
+                "y": 146.06,
+                "confidence": 0.86,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "NO.20, GROUND FLOOR,",
+            "value": "NO.20, GROUND FLOOR,",
+            "bbox": [
+              {
+                "h": 26.64,
+                "w": 322.1,
+                "x": 202.92,
+                "y": 180.78,
+                "confidence": 0.79,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "JALAN BS 10/6 TAMAN BUKIT SERDANG,",
+            "value": "JALAN BS 10/6 TAMAN BUKIT SERDANG,",
+            "bbox": [
+              {
+                "h": 27.94,
+                "w": 531.19,
+                "x": 98.82,
+                "y": 215.02,
+                "confidence": 0.77,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "SEKSYEN 10, 43300 SERI KEMBANGAN,",
+            "value": "SEKSYEN 10, 43300 SERI KEMBANGAN,",
+            "bbox": [
+              {
+                "h": 27.52,
+                "w": 508.56,
+                "x": 112.13,
+                "y": 248.15,
+                "confidence": 0.77,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "SELANGOR DARUL EHSAN",
+            "value": "SELANGOR DARUL EHSAN",
+            "bbox": [
+              {
+                "h": 27.41,
+                "w": 351.3,
+                "x": 186.09,
+                "y": 281.49,
+                "confidence": 0.79,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TEL 03-89599823",
+            "value": "TEL 03-89599823",
+            "bbox": [
+              {
+                "h": 24.13,
+                "w": 229.32,
+                "x": 254.33,
+                "y": 315.53,
+                "confidence": 0.79,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST Reg NO 001880666112",
+            "value": "GST Reg NO 001880666112",
+            "bbox": [
+              {
+                "h": 29.68,
+                "w": 369.61,
+                "x": 182.38,
+                "y": 348.1,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 28.39,
+                "w": 186.7,
+                "x": 273.38,
+                "y": 384.9,
+                "confidence": 0.86,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"S/Price\",\"(GST) S/Price\",\"(GST) Amount\",\"Tax\"\n\"Doc No : CS00110840\",,,,\"Date:\",\"02/03/2018\"\n\"Cashier : F&P\",,,,\"Time:\",\"16.46.00\"\n\"Salesperson :\",,,,\"Ref\",\n\"9557892105256<br/>HOMECARE GASCOAL 50MG\",\"1\",\"5.66\",\"6.00\",\"6.00\",\"SR\"\n\"1486<br/>P.P NAPROXEN NA 275 MG\",\"1\",\"6.00\",\"6.00\",\"6.00\",\"ZRL\"\n\"9557837400035<br/>YELLOW LOTION 30 ML\",\"1\",\"4.30\",\"4.30\",\"4.30\",\"ZRL\"\n\"1014<br/>PANADOL SOLUBLE TABLET\",\"1\",\"3.58\",\"3.80\",\"3.80\",\"SR\"\n\"1155<br/>PMS GAUZE BANDAGE 5CM X 4M\",\"1\",\"6.13\",\"6.50\",\"6.50\",\"SR\"\n\"95506104<br/>DETTOL 50 ML\",\"1\",\"5.00\",\"5.30\",\"5.30\",\"SR\"\n\"Total Qty\",\"6\",,,,\"31.90\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>S/Price</th>\n        <th>(GST) S/Price</th>\n        <th>(GST) Amount</th>\n        <th>Tax</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"6\"></td>\n    </tr>\n    <tr>\n        <td>Doc No : CS00110840</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>Date:</td>\n        <td>02/03/2018</td>\n    </tr>\n    <tr>\n        <td colspan=\"6\"></td>\n    </tr>\n    <tr>\n        <td>Cashier : F&#x26;P</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>Time:</td>\n        <td>16.46.00</td>\n    </tr>\n    <tr>\n        <td colspan=\"6\"></td>\n    </tr>\n    <tr>\n        <td>Salesperson :</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>Ref</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>9557892105256<br />HOMECARE GASCOAL 50MG</td>\n        <td>1</td>\n        <td>5.66</td>\n        <td>6.00</td>\n        <td>6.00</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td>1486<br />P.P NAPROXEN NA 275 MG</td>\n        <td>1</td>\n        <td>6.00</td>\n        <td>6.00</td>\n        <td>6.00</td>\n        <td>ZRL</td>\n    </tr>\n    <tr>\n        <td>9557837400035<br />YELLOW LOTION 30 ML</td>\n        <td>1</td>\n        <td>4.30</td>\n        <td>4.30</td>\n        <td>4.30</td>\n        <td>ZRL</td>\n    </tr>\n    <tr>\n        <td>1014<br />PANADOL SOLUBLE TABLET</td>\n        <td>1</td>\n        <td>3.58</td>\n        <td>3.80</td>\n        <td>3.80</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td>1155<br />PMS GAUZE BANDAGE 5CM X 4M</td>\n        <td>1</td>\n        <td>6.13</td>\n        <td>6.50</td>\n        <td>6.50</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td>95506104<br />DETTOL 50 ML</td>\n        <td>1</td>\n        <td>5.00</td>\n        <td>5.30</td>\n        <td>5.30</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td>Total Qty</td>\n        <td>6</td>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n        <td>31.90</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                                    | Qty | S/Price | (GST) S/Price | (GST) Amount | Tax        |\n| --------------------------------------- | --- | ------- | ------------- | ------------ | ---------- |\n|                                         |     |         |               |              |            |\n| Doc No : CS00110840                     |     |         |               | Date:        | 02/03/2018 |\n|                                         |     |         |               |              |            |\n| Cashier : F\\&P                          |     |         |               | Time:        | 16.46.00   |\n|                                         |     |         |               |              |            |\n| Salesperson :                           |     |         |               | Ref          |            |\n| 9557892105256<br/>HOMECARE GASCOAL 50MG | 1   | 5.66    | 6.00          | 6.00         | SR         |\n| 1486<br/>P.P NAPROXEN NA 275 MG         | 1   | 6.00    | 6.00          | 6.00         | ZRL        |\n| 9557837400035<br/>YELLOW LOTION 30 ML   | 1   | 4.30    | 4.30          | 4.30         | ZRL        |\n| 1014<br/>PANADOL SOLUBLE TABLET         | 1   | 3.58    | 3.80          | 3.80         | SR         |\n| 1155<br/>PMS GAUZE BANDAGE 5CM X 4M     | 1   | 6.13    | 6.50          | 6.50         | SR         |\n| 95506104<br/>DETTOL 50 ML               | 1   | 5.00    | 5.30          | 5.30         | SR         |\n| Total Qty                               | 6   |         |               |              | 31.90      |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "S/Price",
+                "(GST) S/Price",
+                "(GST) Amount",
+                "Tax"
+              ],
+              [
+                "Doc No : CS00110840",
+                "",
+                "",
+                "",
+                "Date:",
+                "02/03/2018"
+              ],
+              [
+                "Cashier : F&P",
+                "",
+                "",
+                "",
+                "Time:",
+                "16.46.00"
+              ],
+              [
+                "Salesperson :",
+                "",
+                "",
+                "",
+                "Ref",
+                ""
+              ],
+              [
+                "9557892105256<br/>HOMECARE GASCOAL 50MG",
+                "1",
+                "5.66",
+                "6.00",
+                "6.00",
+                "SR"
+              ],
+              [
+                "1486<br/>P.P NAPROXEN NA 275 MG",
+                "1",
+                "6.00",
+                "6.00",
+                "6.00",
+                "ZRL"
+              ],
+              [
+                "9557837400035<br/>YELLOW LOTION 30 ML",
+                "1",
+                "4.30",
+                "4.30",
+                "4.30",
+                "ZRL"
+              ],
+              [
+                "1014<br/>PANADOL SOLUBLE TABLET",
+                "1",
+                "3.58",
+                "3.80",
+                "3.80",
+                "SR"
+              ],
+              [
+                "1155<br/>PMS GAUZE BANDAGE 5CM X 4M",
+                "1",
+                "6.13",
+                "6.50",
+                "6.50",
+                "SR"
+              ],
+              [
+                "95506104<br/>DETTOL 50 ML",
+                "1",
+                "5.00",
+                "5.30",
+                "5.30",
+                "SR"
+              ],
+              [
+                "Total Qty",
+                "6",
+                "",
+                "",
+                "",
+                "31.90"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 902.75,
+                "w": 685.28,
+                "x": 28.19,
+                "y": 427.59,
+                "confidence": 0.6,
+                "end_index": 1558,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.89,
+                "w": 91.21,
+                "x": 35.04,
+                "y": 433.76,
+                "confidence": 1.0,
+                "end_index": 319,
+                "label": "text",
+                "r": null,
+                "start_index": 314
+              },
+              {
+                "h": 23.43,
+                "w": 161.44,
+                "x": 227.24,
+                "y": 434.77,
+                "confidence": 1.0,
+                "end_index": 332,
+                "label": "text",
+                "r": null,
+                "start_index": 323
+              },
+              {
+                "h": 22.1,
+                "w": 61.35,
+                "x": 479.26,
+                "y": 435.56,
+                "confidence": 1.0,
+                "end_index": 392,
+                "label": "text",
+                "r": null,
+                "start_index": 388
+              },
+              {
+                "h": 24.52,
+                "w": 136.52,
+                "x": 562.52,
+                "y": 435.01,
+                "confidence": 1.0,
+                "end_index": 412,
+                "label": "text",
+                "r": null,
+                "start_index": 403
+              },
+              {
+                "h": 24.04,
+                "w": 95.9,
+                "x": 33.88,
+                "y": 467.37,
+                "confidence": 1.0,
+                "end_index": 528,
+                "label": "text",
+                "r": null,
+                "start_index": 522
+              },
+              {
+                "h": 24.81,
+                "w": 51.6,
+                "x": 229.1,
+                "y": 466.84,
+                "confidence": 1.0,
+                "end_index": 535,
+                "label": "text",
+                "r": null,
+                "start_index": 532
+              },
+              {
+                "h": 23.97,
+                "w": 60.6,
+                "x": 478.47,
+                "y": 468.53,
+                "confidence": 1.0,
+                "end_index": 600,
+                "label": "text",
+                "r": null,
+                "start_index": 596
+              },
+              {
+                "h": 24.14,
+                "w": 104.31,
+                "x": 565.0,
+                "y": 468.6,
+                "confidence": 1.0,
+                "end_index": 618,
+                "label": "text",
+                "r": null,
+                "start_index": 611
+              },
+              {
+                "h": 27.62,
+                "w": 149.93,
+                "x": 34.46,
+                "y": 504.67,
+                "confidence": 1.0,
+                "end_index": 740,
+                "label": "text",
+                "r": null,
+                "start_index": 730
+              },
+              {
+                "h": 24.02,
+                "w": 43.43,
+                "x": 487.44,
+                "y": 505.65,
+                "confidence": 1.0,
+                "end_index": 806,
+                "label": "text",
+                "r": null,
+                "start_index": 804
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 4 '(GST) Amount' expects numeric, got 'Date:' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 5 'Tax' expects numeric, got '02/03/2018' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Total Sales (Excluding GST)** 30.68",
+            "value": "Total Sales (Excluding GST) 30.68",
+            "bbox": [
+              {
+                "h": 29.36,
+                "w": 497.81,
+                "x": 133.74,
+                "y": 1067.29,
+                "confidence": 0.79,
+                "end_index": 36,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.09,
+                "w": 326.99,
+                "x": 127.41,
+                "y": 1064.65,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.09432421874999,
+                "w": 326.99474165523554,
+                "x": 127.41428797170447,
+                "y": 1064.6460286458334,
+                "confidence": 0.79,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 32.38124999999991,
+                "w": 77.15976761074796,
+                "x": 558.4640522875817,
+                "y": 1064.8034375,
+                "confidence": 0.79,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Discount** 0.00",
+            "value": "Discount 0.00",
+            "bbox": [
+              {
+                "h": 22.74,
+                "w": 105.01,
+                "x": 360.8,
+                "y": 1111.53,
+                "confidence": 0.79,
+                "end_index": 16,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total GST** 1.22",
+            "value": "Total GST 1.22",
+            "bbox": [
+              {
+                "h": 24.18,
+                "w": 286.06,
+                "x": 346.24,
+                "y": 1146.73,
+                "confidence": 0.8,
+                "end_index": 17,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.09432421874999,
+                "w": 120.98805441243712,
+                "x": 335.055948922779,
+                "y": 1143.2256529947917,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.766231119791655,
+                "w": 56.406592935528124,
+                "x": 563.9522680814439,
+                "y": 1143.2256529947917,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Rounding** 0.00",
+            "value": "Rounding 0.00",
+            "bbox": [
+              {
+                "h": 29.36,
+                "w": 278.63,
+                "x": 353.67,
+                "y": 1184.72,
+                "confidence": 0.81,
+                "end_index": 16,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.766231119791655,
+                "w": 112.81318587105625,
+                "x": 343.2308174641599,
+                "y": 1181.67951171875,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.766231119791655,
+                "w": 59.67654035208045,
+                "x": 560.6823206648916,
+                "y": 1180.0076048177084,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total Sales (Inclusive of GST) : 31.90**",
+            "value": "Total Sales (Inclusive of GST) : 31.90",
+            "bbox": [
+              {
+                "h": 29.36,
+                "w": 551.31,
+                "x": 80.24,
+                "y": 1222.72,
+                "confidence": 0.81,
+                "end_index": 41,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 35.08,
+                "w": 393.89,
+                "x": 77.16,
+                "y": 1219.15,
+                "confidence": 1.0,
+                "end_index": 31,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CASH : 50.00**",
+            "value": "CASH : 50.00",
+            "bbox": [
+              {
+                "h": 24.18,
+                "w": 243.7,
+                "x": 387.85,
+                "y": 1262.44,
+                "confidence": 0.8,
+                "end_index": 15,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.30187499999988,
+                "w": 110.61365286855482,
+                "x": 384.18010167029774,
+                "y": 1257.471875,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 30.09432421874999,
+                "w": 72.75633001828987,
+                "x": 547.6025309986821,
+                "y": 1258.5872291666667,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Change : 18.10**",
+            "value": "Change : 18.10",
+            "bbox": [
+              {
+                "h": 29.36,
+                "w": 266.74,
+                "x": 364.81,
+                "y": 1296.98,
+                "confidence": 0.84,
+                "end_index": 17,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 34.000312500000064,
+                "w": 133.27596223674658,
+                "x": 360.97821350762524,
+                "y": 1293.6309374999998,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.30187500000011,
+                "w": 74.46187363834417,
+                "x": 560.6223674655047,
+                "y": 1292.5515624999998,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### GST SUMMARY",
+            "value": "GST SUMMARY",
+            "bbox": [
+              {
+                "h": 25.78,
+                "w": 205.45,
+                "x": 82.1,
+                "y": 1370.25,
+                "confidence": 0.77,
+                "end_index": 14,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"Tax Code\",\"%\",\"Amt (RM)\",\"Tax (RM)\"\n\"SR\",\"6\",\"20.38\",\"1.22\"\n\"ZRL\",\"0\",\"10.30\",\"0.00\"\n\"Total:\",,\"30.68\",\"1.22\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Tax Code</th>\n        <th>%</th>\n        <th>Amt (RM)</th>\n        <th>Tax (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"4\"></td>\n    </tr>\n    <tr>\n        <td>SR</td>\n        <td>6</td>\n        <td>20.38</td>\n        <td>1.22</td>\n    </tr>\n    <tr>\n        <td colspan=\"4\"></td>\n    </tr>\n    <tr>\n        <td>ZRL</td>\n        <td>0</td>\n        <td>10.30</td>\n        <td>0.00</td>\n    </tr>\n    <tr>\n        <td colspan=\"4\"></td>\n    </tr>\n    <tr>\n        <td>Total:</td>\n        <td> </td>\n        <td>30.68</td>\n        <td>1.22</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Tax Code | % | Amt (RM) | Tax (RM) |\n| -------- | - | -------- | -------- |\n|          |   |          |          |\n| SR       | 6 | 20.38    | 1.22     |\n|          |   |          |          |\n| ZRL      | 0 | 10.30    | 0.00     |\n|          |   |          |          |\n| Total:   |   | 30.68    | 1.22     |",
+            "rows": [
+              [
+                "Tax Code",
+                "%",
+                "Amt (RM)",
+                "Tax (RM)"
+              ],
+              [
+                "SR",
+                "6",
+                "20.38",
+                "1.22"
+              ],
+              [
+                "ZRL",
+                "0",
+                "10.30",
+                "0.00"
+              ],
+              [
+                "Total:",
+                "",
+                "30.68",
+                "1.22"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 262.99,
+                "w": 419.79,
+                "x": 77.16,
+                "y": 1064.65,
+                "confidence": 0.5,
+                "end_index": 310,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 185.42,
+                "w": 248.93,
+                "x": 74.28,
+                "y": 1367.26,
+                "confidence": 0.5,
+                "end_index": 279,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 140.44,
+                "w": 135.41,
+                "x": 366.94,
+                "y": 1412.4,
+                "confidence": 0.5,
+                "end_index": 294,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 17
+              },
+              {
+                "h": 139.69,
+                "w": 132.82,
+                "x": 545.97,
+                "y": 1414.07,
+                "confidence": 0.5,
+                "end_index": 225,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 259.05,
+                "w": 88.02,
+                "x": 547.6,
+                "y": 1064.8,
+                "confidence": 0.5,
+                "end_index": 294,
+                "label": "table",
+                "r": null,
+                "start_index": 145
+              },
+              {
+                "h": 27.89,
+                "w": 121.8,
+                "x": 378.74,
+                "y": 1417.26,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 17
+              },
+              {
+                "h": 28.44,
+                "w": 115.72,
+                "x": 559.8,
+                "y": 1417.6,
+                "confidence": 1.0,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 22.02,
+                "w": 36.73,
+                "x": 89.22,
+                "y": 1451.74,
+                "confidence": 1.0,
+                "end_index": 120,
+                "label": "text",
+                "r": null,
+                "start_index": 119
+              },
+              {
+                "h": 22.23,
+                "w": 69.0,
+                "x": 431.54,
+                "y": 1452.7,
+                "confidence": 1.0,
+                "end_index": 138,
+                "label": "text",
+                "r": null,
+                "start_index": 134
+              },
+              {
+                "h": 23.35,
+                "w": 148.81,
+                "x": 483.13,
+                "y": 1147.46,
+                "confidence": 1.0,
+                "end_index": 148,
+                "label": "text",
+                "r": null,
+                "start_index": 145
+              },
+              {
+                "h": 22.61,
+                "w": 46.02,
+                "x": 88.74,
+                "y": 1488.48,
+                "confidence": 1.0,
+                "end_index": 199,
+                "label": "text",
+                "r": null,
+                "start_index": 197
+              },
+              {
+                "h": 22.38,
+                "w": 63.83,
+                "x": 436.61,
+                "y": 1489.15,
+                "confidence": 1.0,
+                "end_index": 216,
+                "label": "text",
+                "r": null,
+                "start_index": 212
+              },
+              {
+                "h": 22.47,
+                "w": 147.86,
+                "x": 484.17,
+                "y": 1185.69,
+                "confidence": 1.0,
+                "end_index": 226,
+                "label": "text",
+                "r": null,
+                "start_index": 223
+              },
+              {
+                "h": 23.01,
+                "w": 65.26,
+                "x": 241.86,
+                "y": 1527.87,
+                "confidence": 1.0,
+                "end_index": 280,
+                "label": "text",
+                "r": null,
+                "start_index": 275
+              },
+              {
+                "h": 22.67,
+                "w": 67.58,
+                "x": 563.63,
+                "y": 1069.9,
+                "confidence": 1.0,
+                "end_index": 294,
+                "label": "text",
+                "r": null,
+                "start_index": 290
+              },
+              {
+                "h": 23.39,
+                "w": 51.73,
+                "x": 624.04,
+                "y": 1527.67,
+                "confidence": 1.0,
+                "end_index": 304,
+                "label": "text",
+                "r": null,
+                "start_index": 301
+              },
+              {
+                "h": 195.49,
+                "w": 617.56,
+                "x": 70.65,
+                "y": 1367.2,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Tax Code' expects numeric, got 'SR' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT RETURNABLE & EXCHANGABLE,\nTHANK YOU.",
+            "value": "GOODS SOLD ARE NOT RETURNABLE & EXCHANGABLE,\nTHANK YOU.",
+            "bbox": [
+              {
+                "h": 50.1,
+                "w": 636.0,
+                "x": 48.77,
+                "y": 1578.62,
+                "confidence": 0.83,
+                "end_index": 54,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1727.0,
+        "page_number": 1,
+        "page_width": 743.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "3-1707067\n\n## F&P PHARMACY\n\n(002309592-P)\n\nNO.20, GROUND FLOOR,\n\nJALAN BS 10/6 TAMAN BUKIT SERDANG,\n\nSEKSYEN 10, 43300 SERI KEMBANGAN,\n\nSELANGOR DARUL EHSAN\n\nTEL 03-89599823\n\nGST Reg NO 001880666112\n\n## TAX INVOICE\n\n| Item                                    | Qty | S/Price | (GST) S/Price | (GST) Amount | Tax        |\n| --------------------------------------- | --- | ------- | ------------- | ------------ | ---------- |\n|                                         |     |         |               |              |            |\n| Doc No : CS00110840                     |     |         |               | Date:        | 02/03/2018 |\n|                                         |     |         |               |              |            |\n| Cashier : F\\&P                          |     |         |               | Time:        | 16.46.00   |\n|                                         |     |         |               |              |            |\n| Salesperson :                           |     |         |               | Ref          |            |\n| 9557892105256<br/>HOMECARE GASCOAL 50MG | 1   | 5.66    | 6.00          | 6.00         | SR         |\n| 1486<br/>P.P NAPROXEN NA 275 MG         | 1   | 6.00    | 6.00          | 6.00         | ZRL        |\n| 9557837400035<br/>YELLOW LOTION 30 ML   | 1   | 4.30    | 4.30          | 4.30         | ZRL        |\n| 1014<br/>PANADOL SOLUBLE TABLET         | 1   | 3.58    | 3.80          | 3.80         | SR         |\n| 1155<br/>PMS GAUZE BANDAGE 5CM X 4M     | 1   | 6.13    | 6.50          | 6.50         | SR         |\n| 95506104<br/>DETTOL 50 ML               | 1   | 5.00    | 5.30          | 5.30         | SR         |\n| Total Qty                               | 6   |         |               |              | 31.90      |\n\n\n**Total Sales (Excluding GST)** 30.68\n\n**Discount** 0.00\n\n**Total GST** 1.22\n\n**Rounding** 0.00\n\n**Total Sales (Inclusive of GST) : 31.90**\n\n**CASH : 50.00**\n\n**Change : 18.10**\n\n### GST SUMMARY\n\n| Tax Code | % | Amt (RM) | Tax (RM) |\n| -------- | - | -------- | -------- |\n|          |   |          |          |\n| SR       | 6 | 20.38    | 1.22     |\n|          |   |          |          |\n| ZRL      | 0 | 10.30    | 0.00     |\n|          |   |          |          |\n| Total:   |   | 30.68    | 1.22     |\n\n\nGOODS SOLD ARE NOT RETURNABLE & EXCHANGABLE,\nTHANK YOU.",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

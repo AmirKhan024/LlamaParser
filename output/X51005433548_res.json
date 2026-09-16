@@ -1,0 +1,710 @@
+{
+  "job": {
+    "id": "pjb-n1katlneyffp0m09pc7m33szlf9i",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:08:01.763125Z",
+    "error_message": null,
+    "name": "X51005433548.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:08:17.421741Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "M03057",
+            "value": "M03057",
+            "bbox": [
+              {
+                "h": 50.1,
+                "w": 112.63,
+                "x": 584.14,
+                "y": 293.47,
+                "confidence": 0.81,
+                "end_index": 5,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "PASAR MINI JIN SENG\n379, JALAN PERMAS SATU,\nBANDAR BARU PERMAS JAYA\n81750 PLENTONG, JOHOR.\nTEL : 07-3874904\n(CO. NO. JM0195368-D)\n(GST NO. 000150511616)",
+            "value": "PASAR MINI JIN SENG\n379, JALAN PERMAS SATU,\nBANDAR BARU PERMAS JAYA\n81750 PLENTONG, JOHOR.\nTEL : 07-3874904\n(CO. NO. JM0195368-D)\n(GST NO. 000150511616)",
+            "bbox": [
+              {
+                "h": 21.95,
+                "w": 150.33,
+                "x": 482.02,
+                "y": 355.98,
+                "confidence": 0.89,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.43,
+                "w": 175.15,
+                "x": 469.13,
+                "y": 374.11,
+                "confidence": 0.89,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 20
+              },
+              {
+                "h": 23.86,
+                "w": 178.49,
+                "x": 468.65,
+                "y": 391.29,
+                "confidence": 0.89,
+                "end_index": 66,
+                "label": "text",
+                "r": null,
+                "start_index": 44
+              },
+              {
+                "h": 23.38,
+                "w": 169.42,
+                "x": 471.52,
+                "y": 409.43,
+                "confidence": 0.89,
+                "end_index": 89,
+                "label": "text",
+                "r": null,
+                "start_index": 68
+              },
+              {
+                "h": 21.95,
+                "w": 125.51,
+                "x": 495.38,
+                "y": 428.04,
+                "confidence": 1.0,
+                "end_index": 106,
+                "label": "text",
+                "r": null,
+                "start_index": 91
+              },
+              {
+                "h": 22.43,
+                "w": 160.83,
+                "x": 478.67,
+                "y": 446.17,
+                "confidence": 0.89,
+                "end_index": 128,
+                "label": "text",
+                "r": null,
+                "start_index": 108
+              },
+              {
+                "h": 23.86,
+                "w": 168.47,
+                "x": 474.38,
+                "y": 463.35,
+                "confidence": 0.89,
+                "end_index": 151,
+                "label": "text",
+                "r": null,
+                "start_index": 130
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TAXINV:001-1541798 03/03/18\nCashier : CASHIER",
+            "value": "TAXINV:001-1541798 03/03/18\nCashier : CASHIER",
+            "bbox": [
+              {
+                "h": 44.28,
+                "w": 307.8,
+                "x": 375.84,
+                "y": 499.33,
+                "confidence": 0.76,
+                "end_index": 44,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.9,
+                "w": 140.31,
+                "x": 374.64,
+                "y": 502.0,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.72,
+                "w": 309.25,
+                "x": 374.64,
+                "y": 498.18,
+                "confidence": 0.76,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.86,
+                "w": 135.06,
+                "x": 373.68,
+                "y": 520.61,
+                "confidence": 1.0,
+                "end_index": 44,
+                "label": "text",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 22.904999999999973,
+                "w": 140.30932390631898,
+                "x": 374.63543968183825,
+                "y": 502.0012499999999,
+                "confidence": 0.76,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.904999999999973,
+                "w": 65.85947856827227,
+                "x": 618.0291648254529,
+                "y": 498.1837499999999,
+                "confidence": 0.76,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"1\",\"VEGETABLES\",\"16.00\",\"ZRL\"\n\"1\",\"TELUR / TELUR MASIN\",\"2.40\",\"ZRL\"\n\"1\",\"VEGETABLES\",\"1.80\",\"ZRL\"\n\"1\",\"GL STEWED PORK 256G\",\"6.80\",\"SR\"\n\"1\",\"BOTAN IKAN SARDIN 425G\",\"6.80\",\"SR\"",
+            "html": "<table>\n    <tr>\n        <td>1</td>\n        <td>VEGETABLES</td>\n        <td>16.00</td>\n        <td>ZRL</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>TELUR / TELUR MASIN</td>\n        <td>2.40</td>\n        <td>ZRL</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>VEGETABLES</td>\n        <td>1.80</td>\n        <td>ZRL</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>GL STEWED PORK 256G</td>\n        <td>6.80</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>BOTAN IKAN SARDIN 425G</td>\n        <td>6.80</td>\n        <td>SR</td>\n    </tr>\n</table>",
+            "md": "| 1 | VEGETABLES             | 16.00 | ZRL |\n| - | ---------------------- | ----- | --- |\n| 1 | TELUR / TELUR MASIN    | 2.40  | ZRL |\n| 1 | VEGETABLES             | 1.80  | ZRL |\n| 1 | GL STEWED PORK 256G    | 6.80  | SR  |\n| 1 | BOTAN IKAN SARDIN 425G | 6.80  | SR  |",
+            "rows": [
+              [
+                "1",
+                "VEGETABLES",
+                "16.00",
+                "ZRL"
+              ],
+              [
+                "1",
+                "TELUR / TELUR MASIN",
+                "2.40",
+                "ZRL"
+              ],
+              [
+                "1",
+                "VEGETABLES",
+                "1.80",
+                "ZRL"
+              ],
+              [
+                "1",
+                "GL STEWED PORK 256G",
+                "6.80",
+                "SR"
+              ],
+              [
+                "1",
+                "BOTAN IKAN SARDIN 425G",
+                "6.80",
+                "SR"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 94.26,
+                "w": 306.91,
+                "x": 377.2,
+                "y": 556.02,
+                "confidence": 1.0,
+                "end_index": 268,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.29,
+                "w": 77.92,
+                "x": 414.66,
+                "y": 559.94,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 6
+              },
+              {
+                "h": 18.34,
+                "w": 66.51,
+                "x": 614.1,
+                "y": 556.02,
+                "confidence": 1.0,
+                "end_index": 41,
+                "label": "text",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 20.81,
+                "w": 184.04,
+                "x": 377.52,
+                "y": 576.92,
+                "confidence": 1.0,
+                "end_index": 114,
+                "label": "text",
+                "r": null,
+                "start_index": 96
+              },
+              {
+                "h": 18.45,
+                "w": 61.44,
+                "x": 620.15,
+                "y": 573.1,
+                "confidence": 1.0,
+                "end_index": 131,
+                "label": "text",
+                "r": null,
+                "start_index": 121
+              },
+              {
+                "h": 17.58,
+                "w": 115.57,
+                "x": 377.25,
+                "y": 596.75,
+                "confidence": 1.0,
+                "end_index": 150,
+                "label": "text",
+                "r": null,
+                "start_index": 141
+              },
+              {
+                "h": 19.49,
+                "w": 183.85,
+                "x": 377.2,
+                "y": 612.6,
+                "confidence": 1.0,
+                "end_index": 204,
+                "label": "text",
+                "r": null,
+                "start_index": 186
+              },
+              {
+                "h": 18.52,
+                "w": 61.23,
+                "x": 599.23,
+                "y": 609.96,
+                "confidence": 1.0,
+                "end_index": 220,
+                "label": "text",
+                "r": null,
+                "start_index": 211
+              },
+              {
+                "h": 18.58,
+                "w": 207.15,
+                "x": 377.31,
+                "y": 631.7,
+                "confidence": 1.0,
+                "end_index": 252,
+                "label": "text",
+                "r": null,
+                "start_index": 231
+              },
+              {
+                "h": 17.26,
+                "w": 61.64,
+                "x": 622.47,
+                "y": 628.31,
+                "confidence": 1.0,
+                "end_index": 265,
+                "label": "text",
+                "r": null,
+                "start_index": 256
+              },
+              {
+                "h": 516.05,
+                "w": 313.13,
+                "x": 375.59,
+                "y": 498.89,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Item Count: 5\nSUBTOTAL: 33.80\n**TL:RM 33.80**\n6% GST 0.77",
+            "value": "Item Count: 5\nSUBTOTAL: 33.80\nTL:RM 33.80\n6% GST 0.77",
+            "bbox": [
+              {
+                "h": 326.87,
+                "w": 315.46,
+                "x": 373.68,
+                "y": 661.38,
+                "confidence": 0.34,
+                "end_index": 56,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "\\--- Payment Details ---",
+            "value": "--- Payment Details ---",
+            "bbox": [
+              {
+                "h": 22.97,
+                "w": 116.25,
+                "x": 463.06,
+                "y": 803.0,
+                "confidence": 0.79,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CASH 50.00\nCASH CHANGE 16.20",
+            "value": "CASH 50.00\nCASH CHANGE 16.20",
+            "bbox": [
+              {
+                "h": 41.23,
+                "w": 306.72,
+                "x": 379.08,
+                "y": 820.0,
+                "confidence": 0.78,
+                "end_index": 27,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.15,
+                "w": 311.64,
+                "x": 376.54,
+                "y": 817.42,
+                "confidence": 0.78,
+                "end_index": 9,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.34,
+                "w": 90.68,
+                "x": 375.11,
+                "y": 839.85,
+                "confidence": 1.0,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 20.996250000000032,
+                "w": 43.42907644719389,
+                "x": 644.7547503314186,
+                "y": 817.4221874999998,
+                "confidence": 0.78,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.336562500000014,
+                "w": 90.67609368095447,
+                "x": 375.11268228015905,
+                "y": 839.8499999999999,
+                "confidence": 0.78,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.904999999999973,
+                "w": 42.95183384887309,
+                "x": 645.2319929297394,
+                "y": 834.6009374999999,
+                "confidence": 0.78,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "03/03/18 10:18 #001-1541798#\nCASHIER",
+            "value": "03/03/18 10:18 #001-1541798#\nCASHIER",
+            "bbox": [
+              {
+                "h": 38.83,
+                "w": 217.53,
+                "x": 378.53,
+                "y": 878.09,
+                "confidence": 0.84,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GST Summary\",,\"Amount(RM)\",\"Tax(RM)\"\n\"SR\",\"(@6%)\",\"13.60\",\"0.77\"\n\"ZRI.\",\"(00%)\",\"20.20\",\"0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th> </th>\n        <th>Amount(RM)</th>\n        <th>Tax(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>(@6%)</td>\n        <td>13.60</td>\n        <td>0.77</td>\n    </tr>\n    <tr>\n        <td>ZRI.</td>\n        <td>(00%)</td>\n        <td>20.20</td>\n        <td>0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary |       | Amount(RM) | Tax(RM) |\n| ----------- | ----- | ---------- | ------- |\n| SR          | (@6%) | 13.60      | 0.77    |\n| ZRI.        | (00%) | 20.20      | 0.00    |",
+            "rows": [
+              [
+                "GST Summary",
+                "",
+                "Amount(RM)",
+                "Tax(RM)"
+              ],
+              [
+                "SR",
+                "(@6%)",
+                "13.60",
+                "0.77"
+              ],
+              [
+                "ZRI.",
+                "(00%)",
+                "20.20",
+                "0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 64.9,
+                "w": 310.68,
+                "x": 378.93,
+                "y": 943.88,
+                "confidence": 1.0,
+                "end_index": 186,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.47,
+                "w": 87.81,
+                "x": 378.93,
+                "y": 950.56,
+                "confidence": 0.8,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 23.38,
+                "w": 79.22,
+                "x": 508.74,
+                "y": 946.26,
+                "confidence": 0.8,
+                "end_index": 33,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 22.9,
+                "w": 56.79,
+                "x": 631.39,
+                "y": 943.88,
+                "confidence": 0.8,
+                "end_index": 43,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 37
+              },
+              {
+                "h": 18.61,
+                "w": 39.61,
+                "x": 549.31,
+                "y": 966.78,
+                "confidence": 0.8,
+                "end_index": 122,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 118
+              },
+              {
+                "h": 23.86,
+                "w": 36.75,
+                "x": 652.39,
+                "y": 960.1,
+                "confidence": 0.8,
+                "end_index": 134,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 131
+              },
+              {
+                "h": 20.52,
+                "w": 25.29,
+                "x": 378.93,
+                "y": 988.26,
+                "confidence": 0.8,
+                "end_index": 146,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 143
+              },
+              {
+                "h": 21.47,
+                "w": 40.57,
+                "x": 455.77,
+                "y": 985.87,
+                "confidence": 0.8,
+                "end_index": 161,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 157
+              },
+              {
+                "h": 22.9,
+                "w": 44.38,
+                "x": 546.44,
+                "y": 982.53,
+                "confidence": 0.8,
+                "end_index": 169,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 165
+              },
+              {
+                "h": 21.95,
+                "w": 36.27,
+                "x": 653.35,
+                "y": 979.67,
+                "confidence": 0.8,
+                "end_index": 181,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 178
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Thank you\nPlease come again",
+            "value": "Thank you\nPlease come again",
+            "bbox": [
+              {
+                "h": 34.72,
+                "w": 134.22,
+                "x": 498.3,
+                "y": 1059.16,
+                "confidence": 0.81,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT REFUNDABLE",
+            "value": "GOODS SOLD ARE NOT REFUNDABLE",
+            "bbox": [
+              {
+                "h": 23.57,
+                "w": 223.39,
+                "x": 454.91,
+                "y": 1109.1,
+                "confidence": 0.84,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1527.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "M03057\n\nPASAR MINI JIN SENG\n379, JALAN PERMAS SATU,\nBANDAR BARU PERMAS JAYA\n81750 PLENTONG, JOHOR.\nTEL : 07-3874904\n(CO. NO. JM0195368-D)\n(GST NO. 000150511616)\n\nTAXINV:001-1541798 03/03/18\nCashier : CASHIER\n\n| 1 | VEGETABLES             | 16.00 | ZRL |\n| - | ---------------------- | ----- | --- |\n| 1 | TELUR / TELUR MASIN    | 2.40  | ZRL |\n| 1 | VEGETABLES             | 1.80  | ZRL |\n| 1 | GL STEWED PORK 256G    | 6.80  | SR  |\n| 1 | BOTAN IKAN SARDIN 425G | 6.80  | SR  |\n\n\nItem Count: 5\nSUBTOTAL: 33.80\n**TL:RM 33.80**\n6% GST 0.77\n\n--- Payment Details ---\n\nCASH 50.00\nCASH CHANGE 16.20\n\n03/03/18 10:18 #001-1541798#\nCASHIER\n\n| GST Summary |       | Amount(RM) | Tax(RM) |\n| ----------- | ----- | ---------- | ------- |\n| SR          | (@6%) | 13.60      | 0.77    |\n| ZRI.        | (00%) | 20.20      | 0.00    |\n\n\nThank you\nPlease come again\n\nGOODS SOLD ARE NOT REFUNDABLE",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

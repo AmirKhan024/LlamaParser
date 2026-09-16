@@ -1,0 +1,940 @@
+{
+  "job": {
+    "id": "pjb-kz3lrjnzv57n629sn13xu3nlcsef",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:04:17.277041Z",
+    "error_message": null,
+    "name": "X51005337867.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:04:36.875317Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "[signature: SY LEE.]",
+            "value": "[signature: SY LEE.]",
+            "bbox": [
+              {
+                "h": 59.39,
+                "w": 177.7,
+                "x": 290.75,
+                "y": 256.28,
+                "confidence": 0.82,
+                "end_index": 19,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# OLDTOWN WHITE COFFEE",
+            "value": "OLDTOWN WHITE COFFEE",
+            "bbox": [
+              {
+                "h": 32.83,
+                "w": 530.98,
+                "x": 25.9,
+                "y": 345.82,
+                "confidence": 0.81,
+                "end_index": 21,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "Old Town Kopitiam Sdn Bhd (716269-X)\nSri Rampai",
+            "value": "Old Town Kopitiam Sdn Bhd (716269-X)\nSri Rampai",
+            "bbox": [
+              {
+                "h": 34.05,
+                "w": 478.31,
+                "x": 51.65,
+                "y": 378.57,
+                "confidence": 0.77,
+                "end_index": 46,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel: 03-4148 1876",
+            "value": "Tel: 03-4148 1876",
+            "bbox": [
+              {
+                "h": 31.27,
+                "w": 232.38,
+                "x": 181.42,
+                "y": 441.8,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## THIS IS NOT A RECEIPT",
+            "value": "THIS IS NOT A RECEIPT",
+            "bbox": [
+              {
+                "h": 28.6,
+                "w": 334.1,
+                "x": 130.3,
+                "y": 541.68,
+                "confidence": 0.77,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "GST ID:000801587200",
+            "value": "GST ID:000801587200",
+            "bbox": [
+              {
+                "h": 29.62,
+                "w": 253.99,
+                "x": 157.22,
+                "y": 573.68,
+                "confidence": 0.8,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "4 COUNTER3 2009 LIZA",
+            "value": "4 COUNTER3 2009 LIZA",
+            "bbox": [
+              {
+                "h": 32.63,
+                "w": 532.34,
+                "x": 23.52,
+                "y": 669.9,
+                "confidence": 0.82,
+                "end_index": 19,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.5859375,
+                "w": 136.57409440175633,
+                "x": 22.422612513721184,
+                "y": 668.8125,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.2265625,
+                "w": 124.34357848518118,
+                "x": 433.50384193194293,
+                "y": 672.2109375,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Check:37617 Cover:1",
+            "value": "Check:37617 Cover:1",
+            "bbox": [
+              {
+                "h": 30.45,
+                "w": 529.25,
+                "x": 23.52,
+                "y": 735.15,
+                "confidence": 0.86,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.59,
+                "w": 150.16,
+                "x": 21.74,
+                "y": 733.38,
+                "confidence": 1.0,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 183.47,
+                "w": 534.38,
+                "x": 22.27,
+                "y": 670.15,
+                "confidence": 0.86,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 30.5859375,
+                "w": 150.1635565312843,
+                "x": 21.743139407244783,
+                "y": 733.3828125,
+                "confidence": 0.86,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.265625,
+                "w": 99.20307354555439,
+                "x": 458.6443468715697,
+                "y": 735.421875,
+                "confidence": 0.86,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "22 Mar 18 12:44:00 PM",
+            "value": "22 Mar 18 12:44:00 PM",
+            "bbox": [
+              {
+                "h": 31.95,
+                "w": 285.38,
+                "x": 152.2,
+                "y": 764.65,
+                "confidence": 0.75,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Table:5 / 1",
+            "value": "Table:5 / 1",
+            "bbox": [
+              {
+                "h": 51.09,
+                "w": 285.75,
+                "x": 23.42,
+                "y": 801.47,
+                "confidence": 0.83,
+                "end_index": 13,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "\\----- Dine In -----",
+            "value": "----- Dine In -----",
+            "bbox": [
+              {
+                "h": 27.05,
+                "w": 94.22,
+                "x": 222.91,
+                "y": 886.53,
+                "confidence": 0.76,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"1\",\"ST30\",\"13.87\",\"S\"\n\"1\",\"BR10 Stm Ginger R\",,\"S\"\n\"1\",\"TF2 (H) Teh Tarik\",,\"S\"\n\"1\",\"HS4\",\"12.07\",\"S\"\n\"1\",\"SN5 Curry Mee\",,\"S\"\n\"1\",\"TF7 (C) Lemon T\",,\"S\"",
+            "html": "<table>\n    <tr>\n        <td>1</td>\n        <td>ST30</td>\n        <td>13.87</td>\n        <td>S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>BR10 Stm Ginger R</td>\n        <td> </td>\n        <td>S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>TF2 (H) Teh Tarik</td>\n        <td> </td>\n        <td>S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>HS4</td>\n        <td>12.07</td>\n        <td>S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>SN5 Curry Mee</td>\n        <td> </td>\n        <td>S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>TF7 (C) Lemon T</td>\n        <td> </td>\n        <td>S</td>\n    </tr>\n</table>",
+            "md": "| 1 | ST30              | 13.87 | S |\n| - | ----------------- | ----- | - |\n| 1 | BR10 Stm Ginger R |       | S |\n| 1 | TF2 (H) Teh Tarik |       | S |\n| 1 | HS4               | 12.07 | S |\n| 1 | SN5 Curry Mee     |       | S |\n| 1 | TF7 (C) Lemon T   |       | S |",
+            "rows": [
+              [
+                "1",
+                "ST30",
+                "13.87",
+                "S"
+              ],
+              [
+                "1",
+                "BR10 Stm Ginger R",
+                "",
+                "S"
+              ],
+              [
+                "1",
+                "TF2 (H) Teh Tarik",
+                "",
+                "S"
+              ],
+              [
+                "1",
+                "HS4",
+                "12.07",
+                "S"
+              ],
+              [
+                "1",
+                "SN5 Curry Mee",
+                "",
+                "S"
+              ],
+              [
+                "1",
+                "TF7 (C) Lemon T",
+                "",
+                "S"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 191.67,
+                "w": 447.77,
+                "x": 84.93,
+                "y": 915.54,
+                "confidence": 1.0,
+                "end_index": 264,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.38,
+                "w": 99.88,
+                "x": 432.82,
+                "y": 915.54,
+                "confidence": 0.8,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 33.3,
+                "w": 232.38,
+                "x": 86.29,
+                "y": 947.48,
+                "confidence": 0.8,
+                "end_index": 98,
+                "label": "text",
+                "r": null,
+                "start_index": 82
+              },
+              {
+                "h": 32.63,
+                "w": 232.38,
+                "x": 86.29,
+                "y": 980.11,
+                "confidence": 0.8,
+                "end_index": 136,
+                "label": "text",
+                "r": null,
+                "start_index": 120
+              },
+              {
+                "h": 33.3,
+                "w": 178.02,
+                "x": 85.61,
+                "y": 1042.64,
+                "confidence": 0.8,
+                "end_index": 208,
+                "label": "text",
+                "r": null,
+                "start_index": 196
+              },
+              {
+                "h": 31.95,
+                "w": 205.88,
+                "x": 84.93,
+                "y": 1075.27,
+                "confidence": 0.8,
+                "end_index": 248,
+                "label": "text",
+                "r": null,
+                "start_index": 234
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [key-value-region, text, image, paragraph_title] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Subtotal:** 25.94",
+            "value": "Subtotal: 25.94",
+            "bbox": [
+              {
+                "h": 32.63,
+                "w": 438.25,
+                "x": 61.9,
+                "y": 1141.88,
+                "confidence": 0.81,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.625,
+                "w": 125.02305159165753,
+                "x": 57.75521405049396,
+                "y": 1138.4765625,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.9453125,
+                "w": 73.38309549945114,
+                "x": 429.4270032930845,
+                "y": 1143.234375,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**10% Srv Chg:** 2.59",
+            "value": "10% Srv Chg: 2.59",
+            "bbox": [
+              {
+                "h": 32.63,
+                "w": 437.01,
+                "x": 63.14,
+                "y": 1174.5,
+                "confidence": 0.82,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.3828125,
+                "w": 164.4324917672887,
+                "x": 58.43468715697036,
+                "y": 1170.421875,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 33.3046875,
+                "w": 63.190998902305125,
+                "x": 440.9780461031833,
+                "y": 1177.21875,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**GST @6%** 1.71",
+            "value": "GST @6% 1.71",
+            "bbox": [
+              {
+                "h": 34.8,
+                "w": 436.4,
+                "x": 61.28,
+                "y": 1207.13,
+                "confidence": 0.81,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 33.3046875,
+                "w": 101.24149286498353,
+                "x": 57.07574094401757,
+                "y": 1204.40625,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 35.34375,
+                "w": 61.832052689352395,
+                "x": 441.6575192096597,
+                "y": 1207.8046875,
+                "confidence": 0.81,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total:** 30.24",
+            "value": "Total: 30.24",
+            "bbox": [
+              {
+                "h": 30.45,
+                "w": 437.63,
+                "x": 61.28,
+                "y": 1241.93,
+                "confidence": 0.82,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.625,
+                "w": 84.25466520307354,
+                "x": 57.07574094401757,
+                "y": 1238.390625,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 38.0625,
+                "w": 76.10098792535678,
+                "x": 427.38858397365533,
+                "y": 1239.0703125,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Rounding:** 0.01",
+            "value": "Rounding: 0.01",
+            "bbox": [
+              {
+                "h": 30.45,
+                "w": 435.78,
+                "x": 60.66,
+                "y": 1274.55,
+                "confidence": 0.83,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.625,
+                "w": 122.30515916575192,
+                "x": 56.39626783754117,
+                "y": 1272.375,
+                "confidence": 0.83,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 36.703125,
+                "w": 65.22941822173436,
+                "x": 438.26015367727774,
+                "y": 1273.0546875,
+                "confidence": 0.83,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# Amount Due 30.25",
+            "value": "Amount Due 30.25",
+            "bbox": [
+              {
+                "h": 58.45,
+                "w": 432.82,
+                "x": 55.72,
+                "y": 1305.0,
+                "confidence": 0.79,
+                "end_index": 17,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "INCLUSIVE 0.00 \\*",
+            "value": "INCLUSIVE 0.00 *",
+            "bbox": [
+              {
+                "h": 32.63,
+                "w": 437.63,
+                "x": 61.28,
+                "y": 1357.2,
+                "confidence": 0.77,
+                "end_index": 16,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 31.265625,
+                "w": 124.34357848518114,
+                "x": 57.75521405049396,
+                "y": 1355.9765625,
+                "confidence": 0.77,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 35.34375,
+                "w": 63.870472008781576,
+                "x": 438.9396267837541,
+                "y": 1355.9765625,
+                "confidence": 0.77,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "\\----3004 STORED 22 Mar 18 02:13:50 PM---",
+            "value": "----3004 STORED 22 Mar 18 02:13:50 PM---",
+            "bbox": [
+              {
+                "h": 36.98,
+                "w": 487.77,
+                "x": 61.9,
+                "y": 1420.28,
+                "confidence": 0.78,
+                "end_index": 40,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "THANK YOU\nPLEASE COME AGAIN\nGST @6% included in total",
+            "value": "THANK YOU\nPLEASE COME AGAIN\nGST @6% included in total",
+            "bbox": [
+              {
+                "h": 31.95,
+                "w": 125.02,
+                "x": 229.66,
+                "y": 1487.84,
+                "confidence": 0.77,
+                "end_index": 8,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.91,
+                "w": 231.02,
+                "x": 174.62,
+                "y": 1523.18,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 28.55,
+                "w": 332.26,
+                "x": 122.98,
+                "y": 1556.48,
+                "confidence": 1.0,
+                "end_index": 52,
+                "label": "text",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 95.29,
+                "w": 328.76,
+                "x": 125.04,
+                "y": 1490.9,
+                "confidence": 0.77,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GSTSummary\",\"Amount(RM)\",\"GST(RM)\"\n\"S=GST @6%:\",\"28.53\",\"1.71\"\n\"Z=GST @0%:\",\"0.00\",\"0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GSTSummary</th>\n        <th>Amount(RM)</th>\n        <th>GST(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>S=GST @6%:</td>\n        <td>28.53</td>\n        <td>1.71</td>\n    </tr>\n    <tr>\n        <td>Z=GST @0%:</td>\n        <td>0.00</td>\n        <td>0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GSTSummary | Amount(RM) | GST(RM) |\n| ---------- | ---------- | ------- |\n| S=GST @6%: | 28.53      | 1.71    |\n| Z=GST @0%: | 0.00       | 0.00    |",
+            "rows": [
+              [
+                "GSTSummary",
+                "Amount(RM)",
+                "GST(RM)"
+              ],
+              [
+                "S=GST @6%:",
+                "28.53",
+                "1.71"
+              ],
+              [
+                "Z=GST @0%:",
+                "0.00",
+                "0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 96.52,
+                "w": 414.48,
+                "x": 55.72,
+                "y": 1621.05,
+                "confidence": 1.0,
+                "end_index": 150,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 29.23,
+                "w": 135.89,
+                "x": 56.4,
+                "y": 1623.77,
+                "confidence": 0.88,
+                "end_index": 11,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 31.27,
+                "w": 136.57,
+                "x": 214.71,
+                "y": 1621.73,
+                "confidence": 0.88,
+                "end_index": 24,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 15
+              },
+              {
+                "h": 32.63,
+                "w": 97.16,
+                "x": 373.03,
+                "y": 1621.05,
+                "confidence": 0.88,
+                "end_index": 34,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 29.91,
+                "w": 136.57,
+                "x": 55.72,
+                "y": 1655.04,
+                "confidence": 0.88,
+                "end_index": 87,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 78
+              },
+              {
+                "h": 33.98,
+                "w": 74.74,
+                "x": 212.68,
+                "y": 1651.64,
+                "confidence": 0.88,
+                "end_index": 95,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 91
+              },
+              {
+                "h": 31.95,
+                "w": 58.43,
+                "x": 374.39,
+                "y": 1653.68,
+                "confidence": 0.88,
+                "end_index": 107,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 104
+              },
+              {
+                "h": 30.59,
+                "w": 137.25,
+                "x": 55.72,
+                "y": 1686.98,
+                "confidence": 0.88,
+                "end_index": 125,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 116
+              },
+              {
+                "h": 31.95,
+                "w": 61.15,
+                "x": 213.35,
+                "y": 1685.63,
+                "confidence": 0.88,
+                "end_index": 132,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 129
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [key-value-region, text, image, paragraph_title] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "[signature: xW]",
+            "value": "[signature: xW]",
+            "bbox": [
+              {
+                "h": 45.6,
+                "w": 67.14,
+                "x": 441.39,
+                "y": 1876.43,
+                "confidence": 0.85,
+                "end_index": 14,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "logo: AFREE",
+            "value": "logo: AFREE",
+            "bbox": [
+              {
+                "h": 418.76,
+                "w": 205.66,
+                "x": 13.22,
+                "y": 1743.89,
+                "confidence": 0.74,
+                "end_index": 10,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 2175.0,
+        "page_number": 1,
+        "page_width": 619.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "[signature: SY LEE.]\n\n# OLDTOWN WHITE COFFEE\n\nOld Town Kopitiam Sdn Bhd (716269-X)\nSri Rampai\n\nTel: 03-4148 1876\n\n## THIS IS NOT A RECEIPT\n\nGST ID:000801587200\n\n4 COUNTER3 2009 LIZA\n\nCheck:37617 Cover:1\n\n22 Mar 18 12:44:00 PM\n\n## Table:5 / 1\n\n----- Dine In -----\n\n| 1 | ST30              | 13.87 | S |\n| - | ----------------- | ----- | - |\n| 1 | BR10 Stm Ginger R |       | S |\n| 1 | TF2 (H) Teh Tarik |       | S |\n| 1 | HS4               | 12.07 | S |\n| 1 | SN5 Curry Mee     |       | S |\n| 1 | TF7 (C) Lemon T   |       | S |\n\n\n**Subtotal:** 25.94\n\n**10% Srv Chg:** 2.59\n\n**GST @6%** 1.71\n\n**Total:** 30.24\n\n**Rounding:** 0.01\n\n# Amount Due 30.25\n\nINCLUSIVE 0.00 \\*\n\n----3004 STORED 22 Mar 18 02:13:50 PM---\n\nTHANK YOU\nPLEASE COME AGAIN\nGST @6% included in total\n\n| GSTSummary | Amount(RM) | GST(RM) |\n| ---------- | ---------- | ------- |\n| S=GST @6%: | 28.53      | 1.71    |\n| Z=GST @0%: | 0.00       | 0.00    |\n\n\n[signature: xW]\n\nlogo: AFREE",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

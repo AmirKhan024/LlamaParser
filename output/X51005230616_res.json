@@ -1,0 +1,573 @@
+{
+  "job": {
+    "id": "pjb-y2f61jmti1um6go7ees6cs9xlcn0",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:00:32.785990Z",
+    "error_message": null,
+    "name": "X51005230616.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:01:00.170721Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "handwritten: Q 0583.",
+            "value": "handwritten: Q 0583.",
+            "bbox": [
+              {
+                "h": 132.68,
+                "w": 262.53,
+                "x": 242.51,
+                "y": 34.31,
+                "confidence": 0.78,
+                "end_index": 19,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "190",
+            "value": "190",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "Gerbang Alaf Restaurants Sdn Bhd\n(65351-M)",
+            "value": "Gerbang Alaf Restaurants Sdn Bhd\n(65351-M)",
+            "bbox": [
+              {
+                "h": 66.44,
+                "w": 429.1,
+                "x": 42.39,
+                "y": 194.43,
+                "confidence": 0.83,
+                "end_index": 41,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "formerly known as\nGolden Arches Restaurants Sdn Bhd\nLicensee of McDonald's\nLevel 6, Bangunan TH, Damansara Uptown3\nNo.3, Jalan SS21/39, 47400 Petaling Jaya\nSelangor",
+            "value": "formerly known as\nGolden Arches Restaurants Sdn Bhd\nLicensee of McDonald's\nLevel 6, Bangunan TH, Damansara Uptown3\nNo.3, Jalan SS21/39, 47400 Petaling Jaya\nSelangor",
+            "bbox": [
+              {
+                "h": 33.11,
+                "w": 227.66,
+                "x": 136.95,
+                "y": 259.52,
+                "confidence": 0.76,
+                "end_index": 163,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "(GST ID No: 000504664064)",
+            "value": "(GST ID No: 000504664064)",
+            "bbox": [
+              {
+                "h": 33.38,
+                "w": 330.81,
+                "x": 99.02,
+                "y": 455.21,
+                "confidence": 0.8,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "McDonald's Petronas Taman Melati DT",
+            "value": "McDonald's Petronas Taman Melati DT",
+            "bbox": [
+              {
+                "h": 33.17,
+                "w": 471.3,
+                "x": 27.45,
+                "y": 487.24,
+                "confidence": 0.75,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 131.85,
+                "w": 467.66,
+                "x": 29.64,
+                "y": 453.73,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel No. : 03-4147-3107",
+            "value": "Tel No. : 03-4147-3107",
+            "bbox": [
+              {
+                "h": 31.47,
+                "w": 291.63,
+                "x": 112.51,
+                "y": 521.22,
+                "confidence": 0.76,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 29.16,
+                "w": 146.02,
+                "x": 191.74,
+                "y": 555.52,
+                "confidence": 0.77,
+                "end_index": 13,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "MFY Side 1",
+            "value": "MFY Side 1",
+            "bbox": [
+              {
+                "h": 30.48,
+                "w": 132.56,
+                "x": 203.75,
+                "y": 620.51,
+                "confidence": 0.87,
+                "end_index": 9,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"QTY\",\"ITEM\",\"TOTAL\"\n,\"INV# 141900016842\",\n,\"ORD #90 -REG #19- 18/01/2018 17:09:21\",\n\"2\",\"M SpicyDeluxe\",\"25.40\"\n,\"2 M Coke\",\n,\"2 M Fries\",\n\"1\",\"M GrilChicBgr\",\"12.50\"\n,\"1 M Coke\",\n,\"1 M Fries\",\n\"1\",\"Small Cone\",\"1.00\"\n\"TakeOut Total (incl GST)\",,\"38.90\"\n\"Total Rounded\",,\"38.90\"\n\"Cash Tendered\",,\"50.00\"\n\"Change\",,\"11.10\"\n\"TOTAL INCLUDES 6% GST\",,\"2.20\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>QTY</th>\n        <th>ITEM</th>\n        <th>TOTAL</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td> </td>\n        <td>INV# 141900016842</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>ORD #90 -REG #19- 18/01/2018 17:09:21</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>M SpicyDeluxe</td>\n        <td>25.40</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>2 M Coke</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>2 M Fries</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>M GrilChicBgr</td>\n        <td>12.50</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>1 M Coke</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>1 M Fries</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Small Cone</td>\n        <td>1.00</td>\n    </tr>\n    <tr>\n        <td>TakeOut Total (incl GST)</td><td></td>\n        <td>38.90</td>\n    </tr>\n    <tr>\n        <td>Total Rounded</td><td></td>\n        <td>38.90</td>\n    </tr>\n    <tr>\n        <td>Cash Tendered</td><td></td>\n        <td>50.00</td>\n    </tr>\n    <tr>\n        <td>Change</td><td></td>\n        <td>11.10</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>TOTAL INCLUDES 6% GST</td><td></td>\n        <td>2.20</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| QTY                      | ITEM                                  | TOTAL |\n| ------------------------ | ------------------------------------- | ----- |\n|                          | INV# 141900016842                     |       |\n|                          | ORD #90 -REG #19- 18/01/2018 17:09:21 |       |\n| 2                        | M SpicyDeluxe                         | 25.40 |\n|                          | 2 M Coke                              |       |\n|                          | 2 M Fries                             |       |\n| 1                        | M GrilChicBgr                         | 12.50 |\n|                          | 1 M Coke                              |       |\n|                          | 1 M Fries                             |       |\n| 1                        | Small Cone                            | 1.00  |\n| TakeOut Total (incl GST) |                                       | 38.90 |\n| Total Rounded            |                                       | 38.90 |\n| Cash Tendered            |                                       | 50.00 |\n| Change                   |                                       | 11.10 |\n|                          |                                       |       |\n| TOTAL INCLUDES 6% GST    |                                       | 2.20  |",
+            "rows": [
+              [
+                "QTY",
+                "ITEM",
+                "TOTAL"
+              ],
+              [
+                "",
+                "INV# 141900016842",
+                ""
+              ],
+              [
+                "",
+                "ORD #90 -REG #19- 18/01/2018 17:09:21",
+                ""
+              ],
+              [
+                "2",
+                "M SpicyDeluxe",
+                "25.40"
+              ],
+              [
+                "",
+                "2 M Coke",
+                ""
+              ],
+              [
+                "",
+                "2 M Fries",
+                ""
+              ],
+              [
+                "1",
+                "M GrilChicBgr",
+                "12.50"
+              ],
+              [
+                "",
+                "1 M Coke",
+                ""
+              ],
+              [
+                "",
+                "1 M Fries",
+                ""
+              ],
+              [
+                "1",
+                "Small Cone",
+                "1.00"
+              ],
+              [
+                "TakeOut Total (incl GST)",
+                "",
+                "38.90"
+              ],
+              [
+                "Total Rounded",
+                "",
+                "38.90"
+              ],
+              [
+                "Cash Tendered",
+                "",
+                "50.00"
+              ],
+              [
+                "Change",
+                "",
+                "11.10"
+              ],
+              [
+                "TOTAL INCLUDES 6% GST",
+                "",
+                "2.20"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 100.08,
+                "w": 436.98,
+                "x": 38.32,
+                "y": 192.72,
+                "confidence": 0.5,
+                "end_index": 1307,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 134.96,
+                "w": 471.3,
+                "x": 27.45,
+                "y": 453.5,
+                "confidence": 0.5,
+                "end_index": 1307,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 333.98,
+                "w": 528.5,
+                "x": 0.0,
+                "y": 681.68,
+                "confidence": 0.5,
+                "end_index": 842,
+                "label": "reference",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 60.62,
+                "w": 84.65,
+                "x": 242.51,
+                "y": 106.37,
+                "confidence": 0.5,
+                "end_index": 192,
+                "label": "image",
+                "r": null,
+                "start_index": 190
+              },
+              {
+                "h": 137.25,
+                "w": 324.88,
+                "x": 0.0,
+                "y": 1044.24,
+                "confidence": 0.5,
+                "end_index": 1085,
+                "label": "reference",
+                "r": null,
+                "start_index": 849
+              },
+              {
+                "h": 132.67,
+                "w": 74.36,
+                "x": 454.14,
+                "y": 1048.25,
+                "confidence": 0.5,
+                "end_index": 1151,
+                "label": "reference",
+                "r": null,
+                "start_index": 916
+              },
+              {
+                "h": 31.45,
+                "w": 283.7,
+                "x": 1.14,
+                "y": 1212.38,
+                "confidence": 0.5,
+                "end_index": 1254,
+                "label": "reference",
+                "r": null,
+                "start_index": 1234
+              },
+              {
+                "h": 33.17,
+                "w": 61.77,
+                "x": 466.72,
+                "y": 1213.52,
+                "confidence": 0.5,
+                "end_index": 1304,
+                "label": "reference",
+                "r": null,
+                "start_index": 1301
+              },
+              {
+                "h": 51.08,
+                "w": 75.07,
+                "x": 247.74,
+                "y": 111.76,
+                "confidence": 1.0,
+                "end_index": 192,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 190
+              },
+              {
+                "h": 568.01,
+                "w": 527.51,
+                "x": 0.91,
+                "y": 681.18,
+                "confidence": 1.0,
+                "end_index": 1304,
+                "label": "reference",
+                "r": null,
+                "start_index": 310
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'QTY' expects numeric, got 'TakeOut Total (incl GST)' in row 10",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [paragraph_title, reference, text, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "love to hear your feedback!",
+            "value": "love to hear your feedback!",
+            "bbox": [
+              {
+                "h": 33.81,
+                "w": 356.7,
+                "x": 112.01,
+                "y": 1311.16,
+                "confidence": 0.84,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Visit ",
+            "value": "Visit ",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "[www.mcdfeedback.com.my](http://www.mcdfeedback.com.my)",
+            "text": "www.mcdfeedback.com.my",
+            "url": "http://www.mcdfeedback.com.my",
+            "bbox": [
+              {
+                "h": 34.62,
+                "w": 375.07,
+                "x": 70.3,
+                "y": 1377.73,
+                "confidence": 0.78,
+                "end_index": 54,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "OR",
+            "value": "\nOR",
+            "bbox": [
+              {
+                "h": 36.03,
+                "w": 497.04,
+                "x": 1.14,
+                "y": 715.99,
+                "confidence": 0.41,
+                "end_index": 1,
+                "label": "reference",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Download My McD Feedback from\nGoogle Play/App Store",
+            "value": "Download My McD Feedback from\nGoogle Play/App Store",
+            "bbox": [
+              {
+                "h": 68.05,
+                "w": 391.8,
+                "x": 67.49,
+                "y": 1442.84,
+                "confidence": 1.0,
+                "end_index": 50,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 134.43,
+                "w": 390.34,
+                "x": 69.29,
+                "y": 1377.62,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "to share your experience",
+            "value": "to share your experience",
+            "bbox": [
+              {
+                "h": 32.22,
+                "w": 321.73,
+                "x": 96.78,
+                "y": 1543.55,
+                "confidence": 0.83,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Thank You and Please Come Again.",
+            "value": "Thank You and Please Come Again.",
+            "bbox": [
+              {
+                "h": 33.88,
+                "w": 425.08,
+                "x": 31.12,
+                "y": 1609.29,
+                "confidence": 0.76,
+                "end_index": 31,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Customer Service Hotline : 03-2726-5600",
+            "value": "Customer Service Hotline : 03-2726-5600",
+            "bbox": [
+              {
+                "h": 32.03,
+                "w": 515.34,
+                "x": 12.58,
+                "y": 1643.57,
+                "confidence": 0.89,
+                "end_index": 38,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 68.76,
+                "w": 509.13,
+                "x": 17.25,
+                "y": 1608.19,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1830.0,
+        "page_number": 1,
+        "page_width": 608.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "handwritten: Q 0583.\n\n190\n\nGerbang Alaf Restaurants Sdn Bhd\n(65351-M)\n\nformerly known as\nGolden Arches Restaurants Sdn Bhd\nLicensee of McDonald's\nLevel 6, Bangunan TH, Damansara Uptown3\nNo.3, Jalan SS21/39, 47400 Petaling Jaya\nSelangor\n\n(GST ID No: 000504664064)\n\nMcDonald's Petronas Taman Melati DT\n\nTel No. : 03-4147-3107\n\n## TAX INVOICE\n\nMFY Side 1\n\n| QTY                      | ITEM                                  | TOTAL |\n| ------------------------ | ------------------------------------- | ----- |\n|                          | INV# 141900016842                     |       |\n|                          | ORD #90 -REG #19- 18/01/2018 17:09:21 |       |\n| 2                        | M SpicyDeluxe                         | 25.40 |\n|                          | 2 M Coke                              |       |\n|                          | 2 M Fries                             |       |\n| 1                        | M GrilChicBgr                         | 12.50 |\n|                          | 1 M Coke                              |       |\n|                          | 1 M Fries                             |       |\n| 1                        | Small Cone                            | 1.00  |\n| TakeOut Total (incl GST) |                                       | 38.90 |\n| Total Rounded            |                                       | 38.90 |\n| Cash Tendered            |                                       | 50.00 |\n| Change                   |                                       | 11.10 |\n|                          |                                       |       |\n| TOTAL INCLUDES 6% GST    |                                       | 2.20  |\n\n\nlove to hear your feedback!\n\nVisit www.mcdfeedback.com.my\nOR\n\nDownload My McD Feedback from\nGoogle Play/App Store\n\nto share your experience\n\nThank You and Please Come Again.\n\nCustomer Service Hotline : 03-2726-5600",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,479 @@
+{
+  "job": {
+    "id": "pjb-jvcezp11z1380xx2v2uz2q63ep20",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:07:38.525622Z",
+    "error_message": null,
+    "name": "X51005433543.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:07:57.774322Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "handwritten: A03052",
+            "value": "handwritten: A03052",
+            "bbox": [
+              {
+                "h": 33.13,
+                "w": 102.91,
+                "x": 601.36,
+                "y": 330.19,
+                "confidence": 0.81,
+                "end_index": 18,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "UNIHAKKA INTERNATIONAL SDN BHD\n13 Mar 2018 18:35\n(867388-U)",
+            "value": "UNIHAKKA INTERNATIONAL SDN BHD\n13 Mar 2018 18:35\n(867388-U)",
+            "bbox": [
+              {
+                "h": 53.24,
+                "w": 290.95,
+                "x": 387.82,
+                "y": 388.09,
+                "confidence": 0.81,
+                "end_index": 58,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi. 81200 Johor Bahru, Johor\nTAX INVOICE",
+            "value": "12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi. 81200 Johor Bahru, Johor\nTAX INVOICE",
+            "bbox": [
+              {
+                "h": 48.03,
+                "w": 251.83,
+                "x": 408.75,
+                "y": 442.83,
+                "confidence": 0.77,
+                "end_index": 87,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Invoice #: OR18031302170441",
+            "value": "Invoice #: OR18031302170441",
+            "bbox": [
+              {
+                "h": 17.66,
+                "w": 179.92,
+                "x": 374.64,
+                "y": 494.84,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"Total\"\n\"SR 100100000035- 1 Meat + 3 Vege\",,\n\"$7.10\",\"1\",\"$7.10\"\n\"SR 100100000015- Vegetable\",,\n\"$1.10\",\"1\",\"$1.10\"\n,\"Total Amount:\",\"$8.20\"\n,\"GST @6%:\",\"$0.46\"\n,\"Nett Total:\",\"$8.20\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>Total</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"3\">SR 100100000035- 1 Meat + 3 Vege</td>\n    </tr>\n    <tr>\n        <td>$7.10</td>\n        <td>1</td>\n        <td>$7.10</td>\n    </tr>\n    <tr>\n        <td colspan=\"3\">SR 100100000015- Vegetable</td>\n    </tr>\n    <tr>\n        <td>$1.10</td>\n        <td>1</td>\n        <td>$1.10</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>Total Amount:</td>\n        <td>$8.20</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>GST @6%:</td>\n        <td>$0.46</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>Nett Total:</td>\n        <td>$8.20</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                             | Qty           | Total |\n| -------------------------------- | ------------- | ----- |\n| SR 100100000035- 1 Meat + 3 Vege |               |       |\n| $7.10                            | 1             | $7.10 |\n| SR 100100000015- Vegetable       |               |       |\n| $1.10                            | 1             | $1.10 |\n|                                  | Total Amount: | $8.20 |\n|                                  | GST @6%:      | $0.46 |\n|                                  | Nett Total:   | $8.20 |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "Total"
+              ],
+              [
+                "SR 100100000035- 1 Meat + 3 Vege",
+                "",
+                ""
+              ],
+              [
+                "$7.10",
+                "1",
+                "$7.10"
+              ],
+              [
+                "SR 100100000015- Vegetable",
+                "",
+                ""
+              ],
+              [
+                "$1.10",
+                "1",
+                "$1.10"
+              ],
+              [
+                "",
+                "Total Amount:",
+                "$8.20"
+              ],
+              [
+                "",
+                "GST @6%:",
+                "$0.46"
+              ],
+              [
+                "",
+                "Nett Total:",
+                "$8.20"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 313.03,
+                "w": 331.56,
+                "x": 369.36,
+                "y": 503.91,
+                "confidence": 0.84,
+                "end_index": 547,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.75,
+                "w": 34.84,
+                "x": 661.94,
+                "y": 736.78,
+                "confidence": 0.84,
+                "end_index": 133,
+                "label": "table",
+                "r": null,
+                "start_index": 131
+              },
+              {
+                "h": 16.22,
+                "w": 48.2,
+                "x": 649.05,
+                "y": 698.13,
+                "confidence": 0.84,
+                "end_index": 415,
+                "label": "table",
+                "r": null,
+                "start_index": 409
+              },
+              {
+                "h": 15.75,
+                "w": 39.13,
+                "x": 657.64,
+                "y": 637.05,
+                "confidence": 0.84,
+                "end_index": 423,
+                "label": "table",
+                "r": null,
+                "start_index": 419
+              },
+              {
+                "h": 16.56,
+                "w": 63.04,
+                "x": 596.48,
+                "y": 656.45,
+                "confidence": 1.0,
+                "end_index": 471,
+                "label": "text",
+                "r": null,
+                "start_index": 464
+              },
+              {
+                "h": 16.7,
+                "w": 51.06,
+                "x": 645.71,
+                "y": 672.36,
+                "confidence": 0.84,
+                "end_index": 545,
+                "label": "table",
+                "r": null,
+                "start_index": 532
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'Qty' expects numeric, got 'Total Amount:' in row 5",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"Payment Mode\",\"Amount\"\n\"CASH\",\"$8.20\"\n\"Change\",\"$0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Payment Mode</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>CASH</td>\n        <td>$8.20</td>\n    </tr>\n    <tr>\n        <td>Change</td>\n        <td>$0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Payment Mode | Amount |\n| ------------ | ------ |\n| CASH         | $8.20  |\n| Change       | $0.00  |",
+            "rows": [
+              [
+                "Payment Mode",
+                "Amount"
+              ],
+              [
+                "CASH",
+                "$8.20"
+              ],
+              [
+                "Change",
+                "$0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 15.49,
+                "w": 47.72,
+                "x": 379.13,
+                "y": 742.97,
+                "confidence": 1.0,
+                "end_index": 85,
+                "label": "text",
+                "r": null,
+                "start_index": 80
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount($)\",\"Tax($)\"\n\"SR = GST @6%\",\"7.74\",\"0.46\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th>Amount($)</th>\n        <th>Tax($)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR = GST @6%</td>\n        <td>7.74</td>\n        <td>0.46</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary  | Amount($) | Tax($) |\n| ------------ | --------- | ------ |\n| SR = GST @6% | 7.74      | 0.46   |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount($)",
+                "Tax($)"
+              ],
+              [
+                "SR = GST @6%",
+                "7.74",
+                "0.46"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 40.56,
+                "w": 320.71,
+                "x": 378.45,
+                "y": 780.2,
+                "confidence": 1.0,
+                "end_index": 112,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.32,
+                "w": 75.4,
+                "x": 378.93,
+                "y": 786.88,
+                "confidence": 0.76,
+                "end_index": 12,
+                "label": "table",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 15.75,
+                "w": 52.5,
+                "x": 542.62,
+                "y": 783.06,
+                "confidence": 0.76,
+                "end_index": 25,
+                "label": "table",
+                "r": null,
+                "start_index": 17
+              },
+              {
+                "h": 17.18,
+                "w": 34.84,
+                "x": 664.32,
+                "y": 780.2,
+                "confidence": 0.76,
+                "end_index": 34,
+                "label": "table",
+                "r": null,
+                "start_index": 29
+              },
+              {
+                "h": 15.27,
+                "w": 78.27,
+                "x": 378.45,
+                "y": 805.49,
+                "confidence": 0.76,
+                "end_index": 89,
+                "label": "text",
+                "r": null,
+                "start_index": 78
+              },
+              {
+                "h": 13.84,
+                "w": 25.77,
+                "x": 571.74,
+                "y": 803.11,
+                "confidence": 0.76,
+                "end_index": 96,
+                "label": "table",
+                "r": null,
+                "start_index": 93
+              },
+              {
+                "h": 14.32,
+                "w": 25.29,
+                "x": 673.87,
+                "y": 801.2,
+                "confidence": 0.76,
+                "end_index": 108,
+                "label": "table",
+                "r": null,
+                "start_index": 105
+              },
+              {
+                "h": 313.33,
+                "w": 330.78,
+                "x": 369.66,
+                "y": 504.36,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "GST REG #000656195584\nBAR WANG RICE\\@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+            "value": "GST REG #000656195584\nBAR WANG RICE@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+            "bbox": [
+              {
+                "h": 104.95,
+                "w": 206.61,
+                "x": 435.85,
+                "y": 832.13,
+                "confidence": 0.8,
+                "end_index": 153,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.75,
+                "w": 152.24,
+                "x": 461.49,
+                "y": 830.31,
+                "confidence": 0.8,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 16.7,
+                "w": 205.69,
+                "x": 435.25,
+                "y": 847.96,
+                "confidence": 0.8,
+                "end_index": 47,
+                "label": "text",
+                "r": null,
+                "start_index": 22
+              },
+              {
+                "h": 18.13,
+                "w": 138.88,
+                "x": 469.13,
+                "y": 865.14,
+                "confidence": 0.8,
+                "end_index": 72,
+                "label": "text",
+                "r": null,
+                "start_index": 49
+              },
+              {
+                "h": 15.75,
+                "w": 150.81,
+                "x": 463.4,
+                "y": 884.23,
+                "confidence": 0.8,
+                "end_index": 96,
+                "label": "text",
+                "r": null,
+                "start_index": 74
+              },
+              {
+                "h": 16.22,
+                "w": 166.56,
+                "x": 455.29,
+                "y": 920.49,
+                "confidence": 1.0,
+                "end_index": 153,
+                "label": "text",
+                "r": null,
+                "start_index": 130
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1527.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "handwritten: A03052\n\nUNIHAKKA INTERNATIONAL SDN BHD\n13 Mar 2018 18:35\n(867388-U)\n\n12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi. 81200 Johor Bahru, Johor\nTAX INVOICE\n\nInvoice #: OR18031302170441\n\n| Item                             | Qty           | Total |\n| -------------------------------- | ------------- | ----- |\n| SR 100100000035- 1 Meat + 3 Vege |               |       |\n| $7.10                            | 1             | $7.10 |\n| SR 100100000015- Vegetable       |               |       |\n| $1.10                            | 1             | $1.10 |\n|                                  | Total Amount: | $8.20 |\n|                                  | GST @6%:      | $0.46 |\n|                                  | Nett Total:   | $8.20 |\n\n\n| Payment Mode | Amount |\n| ------------ | ------ |\n| CASH         | $8.20  |\n| Change       | $0.00  |\n\n\n| GST Summary  | Amount($) | Tax($) |\n| ------------ | --------- | ------ |\n| SR = GST @6% | 7.74      | 0.46   |\n\n\nGST REG #000656195584\nBAR WANG RICE@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

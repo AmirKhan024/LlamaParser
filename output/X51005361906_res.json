@@ -1,0 +1,451 @@
+{
+  "job": {
+    "id": "pjb-opghr59mq1uuio0tn2dvw6nk1dc6",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:05:02.417337Z",
+    "error_message": null,
+    "name": "X51005361906.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:05:20.182658Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## TED HENG STATIONERY & BOOKS",
+            "value": "TED HENG STATIONERY & BOOKS",
+            "bbox": [
+              {
+                "h": 43.13,
+                "w": 480.92,
+                "x": 849.29,
+                "y": 262.41,
+                "confidence": 0.92,
+                "end_index": 29,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(007451637-M)",
+            "value": "(007451637-M)",
+            "bbox": [
+              {
+                "h": 21.93,
+                "w": 126.44,
+                "x": 1029.09,
+                "y": 304.8,
+                "confidence": 0.8,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN\nTEL : 03-3271 9872 FAX : 03-3271 4481\nGST No. : 000689913856",
+            "value": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN\nTEL : 03-3271 9872 FAX : 03-3271 4481\nGST No. : 000689913856",
+            "bbox": [
+              {
+                "h": 123.97,
+                "w": 398.61,
+                "x": 891.51,
+                "y": 315.77,
+                "confidence": 0.78,
+                "end_index": 124,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## SIMPLIFIED TAX INVOICE",
+            "value": "SIMPLIFIED TAX INVOICE",
+            "bbox": [
+              {
+                "h": 29.24,
+                "w": 399.06,
+                "x": 899.72,
+                "y": 454.64,
+                "confidence": 0.85,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "logo: Ted Heng Stationery & Books",
+            "value": "logo: Ted Heng Stationery & Books",
+            "bbox": [
+              {
+                "h": 48.06,
+                "w": 481.5,
+                "x": 849.41,
+                "y": 257.91,
+                "confidence": 0.73,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CASH",
+            "value": "CASH",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "icon: stamp",
+            "value": "icon: stamp",
+            "bbox": [
+              {
+                "h": 100.49,
+                "w": 126.2,
+                "x": 1210.39,
+                "y": 483.45,
+                "confidence": 0.69,
+                "end_index": 10,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Receipt No. : CS1801/27175 Date : 27/01/2018",
+            "value": "Receipt No. : CS1801/27175 Date : 27/01/2018",
+            "bbox": [
+              {
+                "h": 32.89,
+                "w": 551.09,
+                "x": 822.98,
+                "y": 584.75,
+                "confidence": 0.54,
+                "end_index": 43,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"ITEM\",\"QTY\",\"U/P\",\"DISC%\",\"AMOUNT (RM)\"\n\"1355<br/>- DOUBLE SIDE FOAM TAPE 18MM\",\"1\",\"3.96\",\"4.09\",\"3.80 *\"\n\"9557950605126<br/>- CAMIS SQ BOOK 200\",\"5\",\"2.74\",\"4.96\",\"13.00 *\"\n\"9557369315029<br/>- EAGLE F4 200 FOOLSCAP BOOK\",\"1\",\"5.47\",\"4.96\",\"5.20 *\"\n\"9557369305006<br/>- EAGLE F4 120 NUMBERING FOOLSCAP BOOK\",\"1\",\"3.96\",\"4.09\",\"3.80 *\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>ITEM</th>\n        <th>QTY</th>\n        <th>U/P</th>\n        <th>DISC%</th>\n        <th>AMOUNT (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>1355<br />- DOUBLE SIDE FOAM TAPE 18MM</td>\n        <td>1</td>\n        <td>3.96</td>\n        <td>4.09</td>\n        <td>3.80 *</td>\n    </tr>\n    <tr>\n        <td>9557950605126<br />- CAMIS SQ BOOK 200</td>\n        <td>5</td>\n        <td>2.74</td>\n        <td>4.96</td>\n        <td>13.00 *</td>\n    </tr>\n    <tr>\n        <td>9557369315029<br />- EAGLE F4 200 FOOLSCAP BOOK</td>\n        <td>1</td>\n        <td>5.47</td>\n        <td>4.96</td>\n        <td>5.20 *</td>\n    </tr>\n    <tr>\n        <td>9557369305006<br />- EAGLE F4 120 NUMBERING FOOLSCAP BOOK</td>\n        <td>1</td>\n        <td>3.96</td>\n        <td>4.09</td>\n        <td>3.80 *</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| ITEM                                                     | QTY | U/P  | DISC% | AMOUNT (RM) |\n| -------------------------------------------------------- | --- | ---- | ----- | ----------- |\n| 1355<br/>- DOUBLE SIDE FOAM TAPE 18MM                    | 1   | 3.96 | 4.09  | 3.80 \\*     |\n| 9557950605126<br/>- CAMIS SQ BOOK 200                    | 5   | 2.74 | 4.96  | 13.00 \\*    |\n| 9557369315029<br/>- EAGLE F4 200 FOOLSCAP BOOK           | 1   | 5.47 | 4.96  | 5.20 \\*     |\n| 9557369305006<br/>- EAGLE F4 120 NUMBERING FOOLSCAP BOOK | 1   | 3.96 | 4.09  | 3.80 \\*     |",
+            "rows": [
+              [
+                "ITEM",
+                "QTY",
+                "U/P",
+                "DISC%",
+                "AMOUNT (RM)"
+              ],
+              [
+                "1355<br/>- DOUBLE SIDE FOAM TAPE 18MM",
+                "1",
+                "3.96",
+                "4.09",
+                "3.80 *"
+              ],
+              [
+                "9557950605126<br/>- CAMIS SQ BOOK 200",
+                "5",
+                "2.74",
+                "4.96",
+                "13.00 *"
+              ],
+              [
+                "9557369315029<br/>- EAGLE F4 200 FOOLSCAP BOOK",
+                "1",
+                "5.47",
+                "4.96",
+                "5.20 *"
+              ],
+              [
+                "9557369305006<br/>- EAGLE F4 120 NUMBERING FOOLSCAP BOOK",
+                "1",
+                "3.96",
+                "4.09",
+                "3.80 *"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 510.59,
+                "w": 569.82,
+                "x": 810.62,
+                "y": 582.93,
+                "confidence": 0.79,
+                "end_index": 574,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 4 'AMOUNT (RM)' expects numeric, got '3.80 *' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 0 'ITEM': 4/4 (100%) have interior whitespace",
+                "type": "possible_merged_columns"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"Total Qty. :\",\"8\",\"25.80\"\n\"SUB-TOTAL (EX)\",\":\",\"25.80\"\n\"TOTAL TAX\",\":\",\"1.55\"\n\"ROUNDING\",\":\",\"0.00\"\n\"TOTAL\",\":\",\"27.35\"\n\"CASH\",\":\",\"27.35\"\n\"CHANGE\",\":\",\"0.00\"",
+            "html": "<table>\n    <tr>\n        <td>Total Qty. :</td>\n        <td>8</td>\n        <td>25.80</td>\n    </tr>\n    <tr>\n        <td>SUB-TOTAL (EX)</td>\n        <td>:</td>\n        <td>25.80</td>\n    </tr>\n    <tr>\n        <td>TOTAL TAX</td>\n        <td>:</td>\n        <td>1.55</td>\n    </tr>\n    <tr>\n        <td>ROUNDING</td>\n        <td>:</td>\n        <td>0.00</td>\n    </tr>\n    <tr>\n        <td><strong>TOTAL</strong></td>\n        <td>:</td>\n        <td><strong>27.35</strong></td>\n    </tr>\n    <tr>\n        <td><strong>CASH</strong></td>\n        <td>:</td>\n        <td><strong>27.35</strong></td>\n    </tr>\n    <tr>\n        <td><strong>CHANGE</strong></td>\n        <td>:</td>\n        <td><strong>0.00</strong></td>\n    </tr>\n</table>",
+            "md": "| Total Qty. :   | 8 | 25.80     |\n| -------------- | - | --------- |\n| SUB-TOTAL (EX) | : | 25.80     |\n| TOTAL TAX      | : | 1.55      |\n| ROUNDING       | : | 0.00      |\n| **TOTAL**      | : | **27.35** |\n| **CASH**       | : | **27.35** |\n| **CHANGE**     | : | **0.00**  |",
+            "rows": [
+              [
+                "Total Qty. :",
+                "8",
+                "25.80"
+              ],
+              [
+                "SUB-TOTAL (EX)",
+                ":",
+                "25.80"
+              ],
+              [
+                "TOTAL TAX",
+                ":",
+                "1.55"
+              ],
+              [
+                "ROUNDING",
+                ":",
+                "0.00"
+              ],
+              [
+                "TOTAL",
+                ":",
+                "27.35"
+              ],
+              [
+                "CASH",
+                ":",
+                "27.35"
+              ],
+              [
+                "CHANGE",
+                ":",
+                "0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 327.44,
+                "w": 569.38,
+                "x": 814.37,
+                "y": 1096.85,
+                "confidence": 0.87,
+                "end_index": 278,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 36.64,
+                "w": 115.09,
+                "x": 824.92,
+                "y": 521.97,
+                "confidence": 1.0,
+                "end_index": 219,
+                "label": "text",
+                "r": null,
+                "start_index": 212
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Total Qty. :' expects numeric, got 'SUB-TOTAL (EX)' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 3,
+            "md": "### GST SUMMARY",
+            "value": "GST SUMMARY",
+            "bbox": [
+              {
+                "h": 35.82,
+                "w": 225.11,
+                "x": 1002.78,
+                "y": 1530.58,
+                "confidence": 1.0,
+                "end_index": 14,
+                "label": "table",
+                "r": null,
+                "start_index": 4
+              },
+              {
+                "h": 266.89,
+                "w": 569.98,
+                "x": 815.58,
+                "y": 1503.31,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"TAX CODE\",\"%\",\"AMOUNT (RM)\",\"TAX (RM)\"\n\"SR\",\"6.00\",\"25.80\",\"1.55\"\n\"TOTAL :\",,\"25.80\",\"1.55\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>TAX CODE</th>\n        <th>%</th>\n        <th>AMOUNT (RM)</th>\n        <th>TAX (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6.00</td>\n        <td>25.80</td>\n        <td>1.55</td>\n    </tr>\n    <tr>\n        <td><strong>TOTAL :</strong></td>\n        <td> </td>\n        <td><strong>25.80</strong></td>\n        <td><strong>1.55</strong></td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| TAX CODE    | %    | AMOUNT (RM) | TAX (RM) |\n| ----------- | ---- | ----------- | -------- |\n| SR          | 6.00 | 25.80       | 1.55     |\n| **TOTAL :** |      | **25.80**   | **1.55** |",
+            "rows": [
+              [
+                "TAX CODE",
+                "%",
+                "AMOUNT (RM)",
+                "TAX (RM)"
+              ],
+              [
+                "SR",
+                "6.00",
+                "25.80",
+                "1.55"
+              ],
+              [
+                "TOTAL :",
+                "",
+                "25.80",
+                "1.55"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 266.89,
+                "w": 569.98,
+                "x": 815.58,
+                "y": 1503.31,
+                "confidence": 0.91,
+                "end_index": 190,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'TAX CODE' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Note: (\\*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).",
+            "value": "Note: (*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).",
+            "bbox": [
+              {
+                "h": 55.81,
+                "w": 542.54,
+                "x": 826.71,
+                "y": 1802.77,
+                "confidence": 0.92,
+                "end_index": 81,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT RETURNABLE\nTHANK YOU.",
+            "value": "GOODS SOLD ARE NOT RETURNABLE\nTHANK YOU.",
+            "bbox": [
+              {
+                "h": 55.29,
+                "w": 422.83,
+                "x": 893.14,
+                "y": 1896.44,
+                "confidence": 0.89,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 2339.0,
+        "page_number": 1,
+        "page_width": 1654.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## TED HENG STATIONERY & BOOKS\n\n(007451637-M)\n\nNO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN\nTEL : 03-3271 9872 FAX : 03-3271 4481\nGST No. : 000689913856\n\n## SIMPLIFIED TAX INVOICE\n\nlogo: Ted Heng Stationery & Books\n\nCASH\n\nicon: stamp\n\nReceipt No. : CS1801/27175 Date : 27/01/2018\n\n| ITEM                                                     | QTY | U/P  | DISC% | AMOUNT (RM) |\n| -------------------------------------------------------- | --- | ---- | ----- | ----------- |\n| 1355<br/>- DOUBLE SIDE FOAM TAPE 18MM                    | 1   | 3.96 | 4.09  | 3.80 \\*     |\n| 9557950605126<br/>- CAMIS SQ BOOK 200                    | 5   | 2.74 | 4.96  | 13.00 \\*    |\n| 9557369315029<br/>- EAGLE F4 200 FOOLSCAP BOOK           | 1   | 5.47 | 4.96  | 5.20 \\*     |\n| 9557369305006<br/>- EAGLE F4 120 NUMBERING FOOLSCAP BOOK | 1   | 3.96 | 4.09  | 3.80 \\*     |\n\n\n| Total Qty. :   | 8 | 25.80     |\n| -------------- | - | --------- |\n| SUB-TOTAL (EX) | : | 25.80     |\n| TOTAL TAX      | : | 1.55      |\n| ROUNDING       | : | 0.00      |\n| **TOTAL**      | : | **27.35** |\n| **CASH**       | : | **27.35** |\n| **CHANGE**     | : | **0.00**  |\n\n\n### GST SUMMARY\n\n| TAX CODE    | %    | AMOUNT (RM) | TAX (RM) |\n| ----------- | ---- | ----------- | -------- |\n| SR          | 6.00 | 25.80       | 1.55     |\n| **TOTAL :** |      | **25.80**   | **1.55** |\n\n\nNote: (*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).\n\nGOODS SOLD ARE NOT RETURNABLE\nTHANK YOU.",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

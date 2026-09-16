@@ -1,0 +1,665 @@
+{
+  "job": {
+    "id": "pjb-ifr559d3kar4hsjahr72ryshs7ak",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:02:51.065113Z",
+    "error_message": null,
+    "name": "X51005268275.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:03:10.242947Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "LIGHTROOM GALLERY SDN BHD\nNo: 28, JALAN ASTANA 1C,\nBANDAR BUKIT RAJA, 41050\nKLANG SELANGOR D. E, MALAYSIA\nROC No. : (1072825-A)\nGST No. : 000584089600\nTel:03-3362 4395 Fax:03-3362 4395",
+            "value": "LIGHTROOM GALLERY SDN BHD\nNo: 28, JALAN ASTANA 1C,\nBANDAR BUKIT RAJA, 41050\nKLANG SELANGOR D. E, MALAYSIA\nROC No. : (1072825-A)\nGST No. : 000584089600\nTel:03-3362 4395 Fax:03-3362 4395",
+            "bbox": [
+              {
+                "h": 56.08,
+                "w": 513.58,
+                "x": 170.6,
+                "y": 219.88,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 48.94,
+                "w": 383.15,
+                "x": 228.68,
+                "y": 258.63,
+                "confidence": 0.83,
+                "end_index": 49,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 45.88,
+                "w": 408.62,
+                "x": 222.57,
+                "y": 292.28,
+                "confidence": 0.83,
+                "end_index": 74,
+                "label": "text",
+                "r": null,
+                "start_index": 51
+              },
+              {
+                "h": 48.94,
+                "w": 472.82,
+                "x": 187.92,
+                "y": 322.86,
+                "confidence": 0.83,
+                "end_index": 104,
+                "label": "text",
+                "r": null,
+                "start_index": 76
+              },
+              {
+                "h": 45.88,
+                "w": 340.35,
+                "x": 254.16,
+                "y": 356.51,
+                "confidence": 0.83,
+                "end_index": 126,
+                "label": "text",
+                "r": null,
+                "start_index": 106
+              },
+              {
+                "h": 43.74,
+                "w": 358.07,
+                "x": 248.68,
+                "y": 392.24,
+                "confidence": 1.0,
+                "end_index": 149,
+                "label": "text",
+                "r": null,
+                "start_index": 128
+              },
+              {
+                "h": 59.14,
+                "w": 562.49,
+                "x": 145.13,
+                "y": 414.63,
+                "confidence": 1.0,
+                "end_index": 183,
+                "label": "text",
+                "r": null,
+                "start_index": 151
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## CREDIT NOTE",
+            "value": "CREDIT NOTE",
+            "bbox": [
+              {
+                "h": 37.43,
+                "w": 223.59,
+                "x": 317.12,
+                "y": 497.91,
+                "confidence": 0.95,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Station**: CASHIER\n**C/N No**: LCN00212\n**Cashier**: ANGELA\n**Cover**: 1\n**Bill Date**: 20/11/2017\n**Bill Start**: 20/11/2017 03:57:01 PM\n**Code**: 300-E0009\n**Name**: ESWARAN 012-6369400\n**Address**:\\\n**GST No.**:",
+            "value": "Station: CASHIER\nC/N No: LCN00212\nCashier: ANGELA\nCover: 1\nBill Date: 20/11/2017\nBill Start: 20/11/2017 03:57:01 PM\nCode: 300-E0009\nName: ESWARAN 012-6369400\nAddress: GST No.:",
+            "bbox": [
+              {
+                "h": 52.0,
+                "w": 285.32,
+                "x": 74.81,
+                "y": 532.91,
+                "confidence": 0.92,
+                "end_index": 19,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.91,
+                "w": 269.83,
+                "x": 466.72,
+                "y": 551.17,
+                "confidence": 1.0,
+                "end_index": 40,
+                "label": "text",
+                "r": null,
+                "start_index": 21
+              },
+              {
+                "h": 46.66,
+                "w": 258.89,
+                "x": 80.95,
+                "y": 570.13,
+                "confidence": 1.0,
+                "end_index": 60,
+                "label": "text",
+                "r": null,
+                "start_index": 42
+              },
+              {
+                "h": 36.45,
+                "w": 172.1,
+                "x": 463.81,
+                "y": 586.17,
+                "confidence": 0.92,
+                "end_index": 73,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 62
+              },
+              {
+                "h": 57.1,
+                "w": 381.11,
+                "x": 76.85,
+                "y": 599.19,
+                "confidence": 0.92,
+                "end_index": 99,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 75
+              },
+              {
+                "h": 55.41,
+                "w": 577.57,
+                "x": 79.49,
+                "y": 636.47,
+                "confidence": 1.0,
+                "end_index": 138,
+                "label": "text",
+                "r": null,
+                "start_index": 101
+              },
+              {
+                "h": 47.72,
+                "w": 359.99,
+                "x": 76.57,
+                "y": 701.36,
+                "confidence": 0.92,
+                "end_index": 158,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 140
+              },
+              {
+                "h": 46.66,
+                "w": 523.9,
+                "x": 78.76,
+                "y": 737.08,
+                "confidence": 0.92,
+                "end_index": 188,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 160
+              },
+              {
+                "h": 41.81,
+                "w": 339.33,
+                "x": 263.33,
+                "y": 741.94,
+                "confidence": 1.0,
+                "end_index": 188,
+                "label": "text",
+                "r": null,
+                "start_index": 170
+              },
+              {
+                "h": 37.91,
+                "w": 127.62,
+                "x": 80.22,
+                "y": 772.08,
+                "confidence": 0.92,
+                "end_index": 202,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 190
+              },
+              {
+                "h": 39.37,
+                "w": 116.68,
+                "x": 80.22,
+                "y": 870.5,
+                "confidence": 0.92,
+                "end_index": 215,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 204
+              },
+              {
+                "h": 369.73,
+                "w": 652.26,
+                "x": 82.2,
+                "y": 538.91,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 43.74374999999998,
+                "w": 82.40611353711792,
+                "x": 76.57205240174672,
+                "y": 701.358125,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 37.72674340420076,
+                "w": 186.4783413911416,
+                "x": 250.08328134747347,
+                "y": 711.3483728227459,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 40.827499999999986,
+                "w": 79.48908296943232,
+                "x": 78.75982532751091,
+                "y": 737.0821874999999,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 41.80531025870903,
+                "w": 339.32944089207734,
+                "x": 263.3303766375546,
+                "y": 741.9376242315574,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 37.911249999999995,
+                "w": 269.8253275109171,
+                "x": 466.72489082969435,
+                "y": 551.1712499999999,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 46.65999999999997,
+                "w": 258.8864628820961,
+                "x": 80.9475982532751,
+                "y": 570.1268749999999,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "YT51129 SR\nYE36 BK 12W WW LED TRACK LIGHT\n2 \\* RM 45.29 UNI ( 5.43)=RM 90.57\nYT52683 SR\nYE44 35W WW BK TRACK HOLDER\n1 \\* RM 155.66 UNI ( 9.34)=RM 155.66\nCH50688 SR\n1METER TRACK-BK\n1 \\* RM 16.99 UNI ( 1.01)=RM 16.79",
+            "value": "YT51129 SR\nYE36 BK 12W WW LED TRACK LIGHT\n2 * RM 45.29 UNI ( 5.43)=RM 90.57\nYT52683 SR\nYE44 35W WW BK TRACK HOLDER\n1 * RM 155.66 UNI ( 9.34)=RM 155.66\nCH50688 SR\n1METER TRACK-BK\n1 * RM 16.99 UNI ( 1.01)=RM 16.79",
+            "bbox": [
+              {
+                "h": 304.02,
+                "w": 673.56,
+                "x": 78.89,
+                "y": 976.21,
+                "confidence": 0.54,
+                "end_index": 213,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 704.96,
+                "w": 671.77,
+                "x": 79.38,
+                "y": 974.32,
+                "confidence": 0.54,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "items": [
+              {
+                "md": "SR\nRM39. 80 CONTRA W LCN00211\n0 \\* UNIT",
+                "value": "SR\nRM39. 80 CONTRA W LCN00211\n0 * UNIT",
+                "bbox": [
+                  {
+                    "h": 67.03,
+                    "w": 418.81,
+                    "x": 78.89,
+                    "y": 1310.9,
+                    "confidence": 0.44,
+                    "end_index": 38,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": 0
+                  },
+                  {
+                    "h": 34.265937500000064,
+                    "w": 73.65502183406113,
+                    "x": 413.4890829694323,
+                    "y": 1343.6621874999998,
+                    "confidence": 0.44,
+                    "end_index": null,
+                    "label": "key-value-region",
+                    "r": null,
+                    "start_index": null
+                  }
+                ],
+                "type": "text"
+              }
+            ],
+            "md": "* SR\n  RM39. 80 CONTRA W LCN00211\n  0 \\* UNIT",
+            "ordered": false,
+            "bbox": [
+              {
+                "h": 67.03,
+                "w": 418.81,
+                "x": 78.89,
+                "y": 1310.9,
+                "confidence": 0.44,
+                "end_index": 44,
+                "label": "list",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "md": "**Sub Total**: RM 263.02\n**Item Discount**: RM 0.20\n**Service Charge**: RM 0.00\n**GST/TAX 6%**: RM 15.78\n**TOT'**: RM 278.80\n**CASI,**: RM 278.80\n**CHANGE**: RM 0.00",
+            "value": "Sub Total: RM 263.02\nItem Discount: RM 0.20\nService Charge: RM 0.00\nGST/TAX 6%: RM 15.78\nTOT': RM 278.80\nCASI,: RM 278.80\nCHANGE: RM 0.00",
+            "bbox": [
+              {
+                "h": 263.54,
+                "w": 242.56,
+                "x": 76.85,
+                "y": 1411.84,
+                "confidence": 0.53,
+                "end_index": 153,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 263.98,
+                "w": 331.18,
+                "x": 421.28,
+                "y": 1407.76,
+                "confidence": 0.53,
+                "end_index": 123,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 15
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Item Count: 4\nQty Count : 4.0\nClosed Bill: 20/11/2017 04:01:23 PM",
+            "value": "Item Count: 4\nQty Count : 4.0\nClosed Bill: 20/11/2017 04:01:23 PM",
+            "bbox": [
+              {
+                "h": 33.36,
+                "w": 179.89,
+                "x": 81.48,
+                "y": 1729.15,
+                "confidence": 0.79,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 41.81,
+                "w": 231.31,
+                "x": 74.81,
+                "y": 1720.79,
+                "confidence": 0.79,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 43.84,
+                "w": 262.9,
+                "x": 72.78,
+                "y": 1754.44,
+                "confidence": 0.79,
+                "end_index": 28,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 14
+              },
+              {
+                "h": 48.85,
+                "w": 592.16,
+                "x": 77.3,
+                "y": 1799.33,
+                "confidence": 1.0,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 43
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Thank You, Please come again.\nGoods Sold are not refundable, returnable\nBANK ACC MBB 5128 4851 2118\nBANK ACC MBB 5626 4732 1744\nBANK ACC AMBANK 888 100 123 3706",
+            "value": "Thank You, Please come again.\nGoods Sold are not refundable, returnable\nBANK ACC MBB 5128 4851 2118\nBANK ACC MBB 5626 4732 1744\nBANK ACC AMBANK 888 100 123 3706",
+            "bbox": [
+              {
+                "h": 179.35,
+                "w": 673.83,
+                "x": 75.84,
+                "y": 1869.32,
+                "confidence": 0.66,
+                "end_index": 159,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 45.93,
+                "w": 481.31,
+                "x": 77.3,
+                "y": 1869.32,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 48.12,
+                "w": 672.38,
+                "x": 77.3,
+                "y": 1900.67,
+                "confidence": 1.0,
+                "end_index": 70,
+                "label": "text",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 45.93,
+                "w": 457.97,
+                "x": 76.57,
+                "y": 1935.66,
+                "confidence": 1.0,
+                "end_index": 98,
+                "label": "text",
+                "r": null,
+                "start_index": 72
+              },
+              {
+                "h": 48.85,
+                "w": 457.97,
+                "x": 75.84,
+                "y": 1966.28,
+                "confidence": 1.0,
+                "end_index": 126,
+                "label": "text",
+                "r": null,
+                "start_index": 100
+              },
+              {
+                "h": 51.03,
+                "w": 538.92,
+                "x": 75.84,
+                "y": 1997.63,
+                "confidence": 1.0,
+                "end_index": 159,
+                "label": "text",
+                "r": null,
+                "start_index": 128
+              },
+              {
+                "h": 475.1,
+                "w": 670.88,
+                "x": 76.32,
+                "y": 1725.42,
+                "confidence": 0.66,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount (RM)\",\"Tax (RM)\"\n\"SR @ 6%\",\"263.02\",\"15.78\"\n\"ZR/OS/EZ\",\"0.00\",\"0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th>Amount (RM)</th>\n        <th>Tax (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR @ 6%</td>\n        <td>263.02</td>\n        <td>15.78</td>\n    </tr>\n    <tr>\n        <td>ZR/OS/EZ</td>\n        <td>0.00</td>\n        <td>0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary | Amount (RM) | Tax (RM) |\n| ----------- | ----------- | -------- |\n| SR @ 6%     | 263.02      | 15.78    |\n| ZR/OS/EZ    | 0.00        | 0.00     |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount (RM)",
+                "Tax (RM)"
+              ],
+              [
+                "SR @ 6%",
+                "263.02",
+                "15.78"
+              ],
+              [
+                "ZR/OS/EZ",
+                "0.00",
+                "0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 132.75,
+                "w": 564.11,
+                "x": 78.11,
+                "y": 2054.31,
+                "confidence": 1.0,
+                "end_index": 162,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 46.69,
+                "w": 564.11,
+                "x": 78.11,
+                "y": 2054.31,
+                "confidence": 1.0,
+                "end_index": 37,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 30.4,
+                "w": 66.36,
+                "x": 413.78,
+                "y": 2156.67,
+                "confidence": 1.0,
+                "end_index": 142,
+                "label": "text",
+                "r": null,
+                "start_index": 139
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [paragraph_title, key-value-region, text] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          }
+        ],
+        "page_height": 2333.0,
+        "page_number": 1,
+        "page_width": 835.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "LIGHTROOM GALLERY SDN BHD\nNo: 28, JALAN ASTANA 1C,\nBANDAR BUKIT RAJA, 41050\nKLANG SELANGOR D. E, MALAYSIA\nROC No. : (1072825-A)\nGST No. : 000584089600\nTel:03-3362 4395 Fax:03-3362 4395\n\n## CREDIT NOTE\n\n**Station**: CASHIER\n**C/N No**: LCN00212\n**Cashier**: ANGELA\n**Cover**: 1\n**Bill Date**: 20/11/2017\n**Bill Start**: 20/11/2017 03:57:01 PM\n**Code**: 300-E0009\n**Name**: ESWARAN 012-6369400\n**Address**:     \n**GST No.**:     \n\nYT51129 SR\nYE36 BK 12W WW LED TRACK LIGHT\n2 * RM 45.29 UNI ( 5.43)=RM 90.57\nYT52683 SR\nYE44 35W WW BK TRACK HOLDER\n1 * RM 155.66 UNI ( 9.34)=RM 155.66\nCH50688 SR\n1METER TRACK-BK\n1 * RM 16.99 UNI ( 1.01)=RM 16.79\n- SR\nRM39. 80 CONTRA W LCN00211\n0 * UNIT\n\n**Sub Total**: RM 263.02\n**Item Discount**: RM 0.20\n**Service Charge**: RM 0.00\n**GST/TAX 6%**: RM 15.78\n**TOT'**: RM 278.80\n**CASI,**: RM 278.80\n**CHANGE**: RM 0.00\n\nItem Count: 4\nQty Count : 4.0\nClosed Bill: 20/11/2017 04:01:23 PM\n\nThank You, Please come again.\nGoods Sold are not refundable, returnable\nBANK ACC MBB 5128 4851 2118\nBANK ACC MBB 5626 4732 1744\nBANK ACC AMBANK 888 100 123 3706\n\n| GST Summary | Amount (RM) | Tax (RM) |\n| ----------- | ----------- | -------- |\n| SR @ 6%     | 263.02      | 15.78    |\n| ZR/OS/EZ    | 0.00        | 0.00     |",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

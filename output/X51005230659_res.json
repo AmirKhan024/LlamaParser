@@ -1,0 +1,580 @@
+{
+  "job": {
+    "id": "pjb-008or6r885n02ghyc66b2v6t6glk",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:02:26.694793Z",
+    "error_message": null,
+    "name": "X51005230659.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:02:43.639825Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## SWC ENTERPRISE SDN BHD",
+            "value": "SWC ENTERPRISE SDN BHD",
+            "bbox": [
+              {
+                "h": 33.6,
+                "w": 456.64,
+                "x": 57.6,
+                "y": 178.24,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 63.17,
+                "w": 454.25,
+                "x": 59.27,
+                "y": 180.33,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(1125830-V)",
+            "value": "(1125830-V)",
+            "bbox": [
+              {
+                "h": 32.32,
+                "w": 163.84,
+                "x": 205.76,
+                "y": 211.84,
+                "confidence": 0.69,
+                "end_index": 10,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "No. 5-7, Jalan Mahagoni 7/1, Sekysen 4, Bandar Utama, 44300 Batang Kali, Selangor.",
+            "value": "No. 5-7, Jalan Mahagoni 7/1, Sekysen 4, Bandar Utama, 44300 Batang Kali, Selangor.",
+            "bbox": [
+              {
+                "h": 96.54,
+                "w": 451.72,
+                "x": 61.67,
+                "y": 260.22,
+                "confidence": 0.9,
+                "end_index": 81,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel : 03-6057 1377",
+            "value": "Tel : 03-6057 1377",
+            "bbox": [
+              {
+                "h": 26.57,
+                "w": 270.61,
+                "x": 152.24,
+                "y": 360.38,
+                "confidence": 0.86,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 25.49,
+                "w": 160.09,
+                "x": 228.55,
+                "y": 398.63,
+                "confidence": 0.85,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(GST ID No. : 002017808384)",
+            "value": "(GST ID No. : 002017808384)",
+            "bbox": [
+              {
+                "h": 29.44,
+                "w": 402.24,
+                "x": 87.04,
+                "y": 430.08,
+                "confidence": 0.9,
+                "end_index": 26,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "08/01/2018\tCashier: 123",
+            "value": "08/01/2018\tCashier: 123",
+            "bbox": [
+              {
+                "h": 26.62,
+                "w": 498.74,
+                "x": 36.79,
+                "y": 473.09,
+                "confidence": 0.87,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 25.92,
+                "w": 186.24,
+                "x": 352.64,
+                "y": 472.96,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 30.298333333333346,
+                "w": 154.03675675675674,
+                "x": 35.9827027027027,
+                "y": 469.3666666666667,
+                "confidence": 0.87,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "11:07:06\tNo:0100080332",
+            "value": "11:07:06\tNo:0100080332",
+            "bbox": [
+              {
+                "h": 25.6,
+                "w": 496.4,
+                "x": 39.71,
+                "y": 508.93,
+                "confidence": 0.86,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.64,
+                "w": 199.68,
+                "x": 337.6,
+                "y": 509.44,
+                "confidence": 1.0,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 9
+              },
+              {
+                "h": 27.19999999999999,
+                "w": 127.99999999999999,
+                "x": 32.64,
+                "y": 508.47999999999996,
+                "confidence": 0.86,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item/Desc.\",\"Qty\",\"Price\",\"Amt.\"\n\"20X30 BEG 1KG(20X30)\",,,\n\"20X30 1KG\",\"1\",\"8.00\",\"8.00\"\n\"Total Qty :\",\"1\",,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item/Desc.</th>\n        <th>Qty</th>\n        <th>Price</th>\n        <th>Amt.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"4\">20X30 BEG 1KG(20X30)</td>\n    </tr>\n    <tr>\n        <td>20X30 1KG</td>\n        <td>1</td>\n        <td>8.00</td>\n        <td>8.00</td>\n    </tr>\n    <tr>\n        <td>Total Qty :</td>\n        <td>1</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item/Desc.           | Qty | Price | Amt. |\n| -------------------- | --- | ----- | ---- |\n| 20X30 BEG 1KG(20X30) |     |       |      |\n| 20X30 1KG            | 1   | 8.00  | 8.00 |\n| Total Qty :          | 1   |       |      |",
+            "rows": [
+              [
+                "Item/Desc.",
+                "Qty",
+                "Price",
+                "Amt."
+              ],
+              [
+                "20X30 BEG 1KG(20X30)",
+                "",
+                "",
+                ""
+              ],
+              [
+                "20X30 1KG",
+                "1",
+                "8.00",
+                "8.00"
+              ],
+              [
+                "Total Qty :",
+                "1",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 111.67,
+                "w": 493.02,
+                "x": 36.48,
+                "y": 556.8,
+                "confidence": 1.0,
+                "end_index": 228,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.08,
+                "w": 154.24,
+                "x": 36.48,
+                "y": 558.08,
+                "confidence": 0.84,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 32.9,
+                "w": 51.2,
+                "x": 243.37,
+                "y": 556.8,
+                "confidence": 0.84,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 29.43,
+                "w": 80.89,
+                "x": 332.44,
+                "y": 557.66,
+                "confidence": 0.84,
+                "end_index": 35,
+                "label": "text",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 30.3,
+                "w": 63.68,
+                "x": 465.82,
+                "y": 556.8,
+                "confidence": 0.84,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 39
+              },
+              {
+                "h": 32.03,
+                "w": 284.26,
+                "x": 39.11,
+                "y": 601.32,
+                "confidence": 1.0,
+                "end_index": 108,
+                "label": "text",
+                "r": null,
+                "start_index": 94
+              },
+              {
+                "h": 27.84,
+                "w": 140.8,
+                "x": 37.44,
+                "y": 639.36,
+                "confidence": 0.84,
+                "end_index": 148,
+                "label": "text",
+                "r": null,
+                "start_index": 140
+              },
+              {
+                "h": 30.3,
+                "w": 66.69,
+                "x": 349.22,
+                "y": 638.17,
+                "confidence": 0.84,
+                "end_index": 172,
+                "label": "text",
+                "r": null,
+                "start_index": 169
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [paragraph_title, text] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**TOTAL AMOUNT**\t8.00",
+            "value": "TOTAL AMOUNT\t8.00",
+            "bbox": [
+              {
+                "h": 26.62,
+                "w": 498.15,
+                "x": 37.38,
+                "y": 735.23,
+                "confidence": 0.84,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.24,
+                "w": 234.24,
+                "x": 38.08,
+                "y": 735.36,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.480000000000018,
+                "w": 76.47999999999996,
+                "x": 463.68,
+                "y": 732.4799999999999,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CASH\t10.00",
+            "value": "CASH\t10.00",
+            "bbox": [
+              {
+                "h": 27.65,
+                "w": 496.98,
+                "x": 38.54,
+                "y": 771.07,
+                "confidence": 0.82,
+                "end_index": 9,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.029666666666685,
+                "w": 83.9027027027027,
+                "x": 35.9827027027027,
+                "y": 767.1559999999998,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 27.519999999999982,
+                "w": 83.52000000000004,
+                "x": 456.32,
+                "y": 769.28,
+                "confidence": 0.82,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "CHANGE\t2.00",
+            "value": "CHANGE\t2.00",
+            "bbox": [
+              {
+                "h": 28.67,
+                "w": 498.15,
+                "x": 37.38,
+                "y": 815.1,
+                "confidence": 0.84,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 33.76099999999997,
+                "w": 139.83783783783784,
+                "x": 34.26162162162162,
+                "y": 811.3049999999998,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 29.432666666666705,
+                "w": 66.69189189189183,
+                "x": 468.8345945945946,
+                "y": 813.9019999999999,
+                "confidence": 0.84,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "G SR 6% Included In Total\t0.45",
+            "value": "G SR 6% Included In Total\t0.45",
+            "bbox": [
+              {
+                "h": 32.77,
+                "w": 499.32,
+                "x": 36.21,
+                "y": 863.23,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 27.7,
+                "w": 246.11,
+                "x": 103.1,
+                "y": 864.98,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 12
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Thank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+            "value": "Thank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+            "bbox": [
+              {
+                "h": 30.72,
+                "w": 444.8,
+                "x": 49.92,
+                "y": 902.72,
+                "confidence": 0.92,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.72,
+                "w": 410.88,
+                "x": 83.2,
+                "y": 934.4,
+                "confidence": 0.92,
+                "end_index": 58,
+                "label": "text",
+                "r": null,
+                "start_index": 32
+              },
+              {
+                "h": 33.28,
+                "w": 224.0,
+                "x": 171.2,
+                "y": 967.36,
+                "confidence": 1.0,
+                "end_index": 72,
+                "label": "text",
+                "r": null,
+                "start_index": 60
+              },
+              {
+                "h": 98.03,
+                "w": 439.28,
+                "x": 52.81,
+                "y": 903.48,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1024.0,
+        "page_number": 1,
+        "page_width": 584.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## SWC ENTERPRISE SDN BHD\n(1125830-V)\n\nNo. 5-7, Jalan Mahagoni 7/1, Sekysen 4, Bandar Utama, 44300 Batang Kali, Selangor.\n\nTel : 03-6057 1377\n\n## TAX INVOICE\n\n(GST ID No. : 002017808384)\n\n08/01/2018\tCashier: 123\n\n11:07:06\tNo:0100080332\n\n| Item/Desc.           | Qty | Price | Amt. |\n| -------------------- | --- | ----- | ---- |\n| 20X30 BEG 1KG(20X30) |     |       |      |\n| 20X30 1KG            | 1   | 8.00  | 8.00 |\n| Total Qty :          | 1   |       |      |\n\n\n**TOTAL AMOUNT**\t8.00\n\nCASH\t10.00\n\nCHANGE\t2.00\n\nG SR 6% Included In Total\t0.45\n\nThank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

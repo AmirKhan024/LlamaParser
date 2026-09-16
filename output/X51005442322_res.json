@@ -1,0 +1,567 @@
+{
+  "job": {
+    "id": "pjb-89a03sly6lxknhlupbhiy6j6z2lh",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:08:44.858284Z",
+    "error_message": null,
+    "name": "X51005442322.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:08:59.789713Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "[handwriting: A03662]",
+            "value": "[handwriting: A03662]",
+            "bbox": [
+              {
+                "h": 34.31,
+                "w": 98.69,
+                "x": 565.89,
+                "y": 85.28,
+                "confidence": 0.85,
+                "end_index": 20,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# RESTAURANT",
+            "value": "RESTAURANT",
+            "bbox": [
+              {
+                "h": 20.9,
+                "w": 172.93,
+                "x": 403.41,
+                "y": 131.28,
+                "confidence": 0.88,
+                "end_index": 11,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "TONY ROMA'S AEON TEBRAU CITY\nGRAND COMPANIONS SDN BHD (285560-H)\nLOT G112, AEON MALL TEBRAU CITY\nNO 1 JALAN DESA TEBRAU\n81100 JOHOR BAHRU",
+            "value": "TONY ROMA'S AEON TEBRAU CITY\nGRAND COMPANIONS SDN BHD (285560-H)\nLOT G112, AEON MALL TEBRAU CITY\nNO 1 JALAN DESA TEBRAU\n81100 JOHOR BAHRU",
+            "bbox": [
+              {
+                "h": 106.57,
+                "w": 305.36,
+                "x": 334.8,
+                "y": 152.06,
+                "confidence": 0.91,
+                "end_index": 136,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Tel**: 07-3510749",
+            "value": "Tel: 07-3510749",
+            "bbox": [
+              {
+                "h": 23.86,
+                "w": 134.58,
+                "x": 421.88,
+                "y": 277.25,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Website**: ",
+            "value": "Website: ",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "[www.tonyromas.com.my](http://www.tonyromas.com.my)",
+            "text": "www.tonyromas.com.my",
+            "url": "http://www.tonyromas.com.my",
+            "bbox": [
+              {
+                "h": 20.57,
+                "w": 177.02,
+                "x": 448.55,
+                "y": 302.64,
+                "confidence": 0.72,
+                "end_index": 50,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 85.27,
+                "w": 323.15,
+                "x": 337.62,
+                "y": 280.18,
+                "confidence": 0.72,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "**Facebook**: ",
+            "value": "Facebook: ",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "[www.facebook.com/TRMALAYSIA](http://www.facebook.com/TRMALAYSIA)",
+            "text": "www.facebook.com/TRMALAYSIA",
+            "url": "http://www.facebook.com/TRMALAYSIA",
+            "bbox": [
+              {
+                "h": 21.81,
+                "w": 201.0,
+                "x": 459.03,
+                "y": 320.63,
+                "confidence": 0.71,
+                "end_index": 64,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "**GST ID**: 000436699136",
+            "value": "GST ID: 000436699136",
+            "bbox": [
+              {
+                "h": 25.77,
+                "w": 167.99,
+                "x": 405.66,
+                "y": 341.67,
+                "confidence": 0.79,
+                "end_index": 23,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "2 TR1 1014 FAZLIN\nChk 65991 Guest3\n03 Mar 18 05:16:55 PM",
+            "value": "2 TR1 1014 FAZLIN\nChk 65991 Guest3\n03 Mar 18 05:16:55 PM",
+            "bbox": [
+              {
+                "h": 41.23,
+                "w": 85.32,
+                "x": 372.6,
+                "y": 282.5,
+                "confidence": 0.81,
+                "end_index": 55,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TBL43 / 1",
+            "value": "TBL43 / 1",
+            "bbox": [
+              {
+                "h": 37.02,
+                "w": 152.25,
+                "x": 323.13,
+                "y": 473.58,
+                "confidence": 0.79,
+                "end_index": 11,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"1\",\"NY STRIP<br/>Medium Well<br/>RANCH BEANS<br/>SLAW\",\"67.67 S\"\n\"1\",\"NY STRIP<br/>Medium<br/>FR ROASTED VEGE<br/>BAKED POTATO<br/>Loaded\",\"67.67 S\"\n\"1\",\"NY STRIP<br/>Medium Well<br/>FR ROASTED VEGE<br/>FF\",\"67.67 S\"\n\"1\",\"ICE LATTE\",\"9.35 S\"\n\"1\",\"7UP\",\"9.35 S\"\n\"1\",\"PEPSI\",\"9.35 S\"\n\"Subtotal\",,\"231.06\"\n\"10% Srv Chg\",,\"23.10\"\n\"GST @6%\",,\"15.25\"\n\"Total\",,\"269.40\"",
+            "html": "<table>\n    <tr>\n        <td>1</td>\n        <td>NY STRIP<br />Medium Well<br />RANCH BEANS<br />SLAW</td>\n        <td>67.67 S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>NY STRIP<br />Medium<br />FR ROASTED VEGE<br />BAKED POTATO<br />Loaded</td>\n        <td>67.67 S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>NY STRIP<br />Medium Well<br />FR ROASTED VEGE<br />FF</td>\n        <td>67.67 S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>ICE LATTE</td>\n        <td>9.35 S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>7UP</td>\n        <td>9.35 S</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>PEPSI</td>\n        <td>9.35 S</td>\n    </tr>\n    <tr>\n        <td>Subtotal</td><td></td>\n        <td>231.06</td>\n    </tr>\n    <tr>\n        <td>10% Srv Chg</td><td></td>\n        <td>23.10</td>\n    </tr>\n    <tr>\n        <td>GST @6%</td><td></td>\n        <td>15.25</td>\n    </tr>\n    <tr>\n        <td><strong>Total</strong></td><td></td>\n        <td><strong>269.40</strong></td>\n    </tr>\n</table>",
+            "md": "| 1           | NY STRIP<br/>Medium Well<br/>RANCH BEANS<br/>SLAW                   | 67.67 S    |\n| ----------- | ------------------------------------------------------------------- | ---------- |\n| 1           | NY STRIP<br/>Medium<br/>FR ROASTED VEGE<br/>BAKED POTATO<br/>Loaded | 67.67 S    |\n| 1           | NY STRIP<br/>Medium Well<br/>FR ROASTED VEGE<br/>FF                 | 67.67 S    |\n| 1           | ICE LATTE                                                           | 9.35 S     |\n| 1           | 7UP                                                                 | 9.35 S     |\n| 1           | PEPSI                                                               | 9.35 S     |\n| Subtotal    |                                                                     | 231.06     |\n| 10% Srv Chg |                                                                     | 23.10      |\n| GST @6%     |                                                                     | 15.25      |\n| **Total**   |                                                                     | **269.40** |",
+            "rows": [
+              [
+                "1",
+                "NY STRIP<br/>Medium Well<br/>RANCH BEANS<br/>SLAW",
+                "67.67 S"
+              ],
+              [
+                "1",
+                "NY STRIP<br/>Medium<br/>FR ROASTED VEGE<br/>BAKED POTATO<br/>Loaded",
+                "67.67 S"
+              ],
+              [
+                "1",
+                "NY STRIP<br/>Medium Well<br/>FR ROASTED VEGE<br/>FF",
+                "67.67 S"
+              ],
+              [
+                "1",
+                "ICE LATTE",
+                "9.35 S"
+              ],
+              [
+                "1",
+                "7UP",
+                "9.35 S"
+              ],
+              [
+                "1",
+                "PEPSI",
+                "9.35 S"
+              ],
+              [
+                "Subtotal",
+                "",
+                "231.06"
+              ],
+              [
+                "10% Srv Chg",
+                "",
+                "23.10"
+              ],
+              [
+                "GST @6%",
+                "",
+                "15.25"
+              ],
+              [
+                "Total",
+                "",
+                "269.40"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 17.0,
+                "w": 43.0,
+                "x": 563.0,
+                "y": 1391.0,
+                "confidence": 0.3,
+                "end_index": 1087,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, paragraph_title, key-value-region, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "RM 10 OFF FOR A MINIMUM OF RM 50 SPENT\nON YOUR NEXT VISIT TO TONY ROMA'S !!\nGO TO :",
+            "value": "RM 10 OFF FOR A MINIMUM OF RM 50 SPENT\nON YOUR NEXT VISIT TO TONY ROMA'S !!\nGO TO :",
+            "bbox": [
+              {
+                "h": 26.25,
+                "w": 312.12,
+                "x": 344.09,
+                "y": 1069.38,
+                "confidence": 0.53,
+                "end_index": 82,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "[WWW.TONYCARES.COM](http://WWW.TONYCARES.COM)",
+            "text": "WWW.TONYCARES.COM",
+            "url": "http://WWW.TONYCARES.COM",
+            "bbox": [
+              {
+                "h": 24.34,
+                "w": 211.9,
+                "x": 394.68,
+                "y": 1091.33,
+                "confidence": 0.48,
+                "end_index": 44,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "PLEASE TELL US HOW WE ARE DOING\nStore # 0217\nSURVEY VALIDATION CODE\\\nThis Receipt With Validation Code Is\nValid 3 Months From Date of Receipt\nOne redemption per group, per visit.",
+            "value": "\nPLEASE TELL US HOW WE ARE DOING\nStore # 0217\nSURVEY VALIDATION CODE This Receipt With Validation Code Is\nValid 3 Months From Date of Receipt\nOne redemption per group, per visit.",
+            "bbox": [
+              {
+                "h": 133.61,
+                "w": 312.59,
+                "x": 344.09,
+                "y": 1112.32,
+                "confidence": 1.0,
+                "end_index": 177,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 194.51,
+                "w": 332.19,
+                "x": 334.89,
+                "y": 1050.08,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<mark>WE'RE HIRING: ALL POSITION AVAILABLE</mark> <mark>Excellent pay, benefits & growth.</mark> <mark>Apply at ",
+            "value": "<mark>WE'RE HIRING: ALL POSITION AVAILABLE</mark>\n<mark>Excellent pay, benefits & growth.</mark>\n<mark>Apply at ",
+            "bbox": [
+              {
+                "h": 85.13,
+                "w": 347.59,
+                "x": 329.05,
+                "y": 1241.94,
+                "confidence": 0.68,
+                "end_index": 111,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<recruitment@tonyromas.com.my>",
+            "text": "recruitment@tonyromas.com.my",
+            "url": "mailto:recruitment@tonyromas.com.my",
+            "bbox": [
+              {
+                "h": 85.13,
+                "w": 347.59,
+                "x": 329.05,
+                "y": 1241.94,
+                "confidence": 0.68,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "</mark>\nGST @6% included in total",
+            "value": "</mark>\nGST @6% included in total",
+            "bbox": [
+              {
+                "h": 23.86,
+                "w": 217.62,
+                "x": 396.11,
+                "y": 1304.15,
+                "confidence": 0.53,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GSTSummary\",\"Amount(RM)\",\"GST(RM)\"\n\"S=GST @6%:\",\"254.17\",\"15.25\"\n\"Z=GST @0%:\",\"0.00\",\"0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GSTSummary</th>\n        <th>Amount(RM)</th>\n        <th>GST(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>S=GST @6%:</td>\n        <td>254.17</td>\n        <td>15.25</td>\n    </tr>\n    <tr>\n        <td>Z=GST @0%:</td>\n        <td>0.00</td>\n        <td>0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GSTSummary | Amount(RM) | GST(RM) |\n| ---------- | ---------- | ------- |\n| S=GST @6%: | 254.17     | 15.25   |\n| Z=GST @0%: | 0.00       | 0.00    |",
+            "rows": [
+              [
+                "GSTSummary",
+                "Amount(RM)",
+                "GST(RM)"
+              ],
+              [
+                "S=GST @6%:",
+                "254.17",
+                "15.25"
+              ],
+              [
+                "Z=GST @0%:",
+                "0.00",
+                "0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 70.15,
+                "w": 269.64,
+                "x": 353.64,
+                "y": 1365.71,
+                "confidence": 1.0,
+                "end_index": 150,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.43,
+                "w": 90.68,
+                "x": 353.64,
+                "y": 1371.91,
+                "confidence": 0.86,
+                "end_index": 11,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 23.86,
+                "w": 89.72,
+                "x": 455.77,
+                "y": 1368.1,
+                "confidence": 0.86,
+                "end_index": 24,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 15
+              },
+              {
+                "h": 24.34,
+                "w": 63.95,
+                "x": 559.33,
+                "y": 1365.71,
+                "confidence": 0.86,
+                "end_index": 34,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 28
+              },
+              {
+                "h": 21.0,
+                "w": 57.27,
+                "x": 455.29,
+                "y": 1391.0,
+                "confidence": 0.86,
+                "end_index": 96,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 91
+              },
+              {
+                "h": 23.86,
+                "w": 47.72,
+                "x": 561.24,
+                "y": 1386.71,
+                "confidence": 0.86,
+                "end_index": 108,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 104
+              },
+              {
+                "h": 22.9,
+                "w": 91.63,
+                "x": 353.64,
+                "y": 1412.95,
+                "confidence": 0.86,
+                "end_index": 125,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 116
+              },
+              {
+                "h": 20.04,
+                "w": 49.63,
+                "x": 446.22,
+                "y": 1412.95,
+                "confidence": 0.86,
+                "end_index": 132,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 129
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, paragraph_title, key-value-region, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          }
+        ],
+        "page_height": 1527.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "[handwriting: A03662]\n\n# RESTAURANT\n\nTONY ROMA'S AEON TEBRAU CITY\nGRAND COMPANIONS SDN BHD (285560-H)\nLOT G112, AEON MALL TEBRAU CITY\nNO 1 JALAN DESA TEBRAU\n81100 JOHOR BAHRU\n\n**Tel**: 07-3510749\n\n**Website**: www.tonyromas.com.my\n\n**Facebook**: www.facebook.com/TRMALAYSIA\n\n**GST ID**: 000436699136\n\n2 TR1 1014 FAZLIN\nChk 65991 Guest3\n03 Mar 18 05:16:55 PM\n\n## TBL43 / 1\n\n| 1           | NY STRIP<br/>Medium Well<br/>RANCH BEANS<br/>SLAW                   | 67.67 S    |\n| ----------- | ------------------------------------------------------------------- | ---------- |\n| 1           | NY STRIP<br/>Medium<br/>FR ROASTED VEGE<br/>BAKED POTATO<br/>Loaded | 67.67 S    |\n| 1           | NY STRIP<br/>Medium Well<br/>FR ROASTED VEGE<br/>FF                 | 67.67 S    |\n| 1           | ICE LATTE                                                           | 9.35 S     |\n| 1           | 7UP                                                                 | 9.35 S     |\n| 1           | PEPSI                                                               | 9.35 S     |\n| Subtotal    |                                                                     | 231.06     |\n| 10% Srv Chg |                                                                     | 23.10      |\n| GST @6%     |                                                                     | 15.25      |\n| **Total**   |                                                                     | **269.40** |\n\n\nRM 10 OFF FOR A MINIMUM OF RM 50 SPENT\nON YOUR NEXT VISIT TO TONY ROMA'S !!\nGO TO :WWW.TONYCARES.COM\nPLEASE TELL US HOW WE ARE DOING\nStore # 0217\nSURVEY VALIDATION CODE     \nThis Receipt With Validation Code Is\nValid 3 Months From Date of Receipt\nOne redemption per group, per visit.\n\n<mark>WE'RE HIRING: ALL POSITION AVAILABLE</mark>\n<mark>Excellent pay, benefits & growth.</mark>\n<mark>Apply at recruitment@tonyromas.com.my</mark>\nGST @6% included in total\n\n| GSTSummary | Amount(RM) | GST(RM) |\n| ---------- | ---------- | ------- |\n| S=GST @6%: | 254.17     | 15.25   |\n| Z=GST @0%: | 0.00       | 0.00    |",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

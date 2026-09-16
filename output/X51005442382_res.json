@@ -1,0 +1,269 @@
+{
+  "job": {
+    "id": "pjb-bjhmomn441f7i2eb5ot4m10b04a8",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:10:17.225966Z",
+    "error_message": null,
+    "name": "X51005442382.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:10:29.845412Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "A03119",
+            "value": "A03119",
+            "bbox": [
+              {
+                "h": 44.81,
+                "w": 83.23,
+                "x": 591.98,
+                "y": 252.02,
+                "confidence": 0.86,
+                "end_index": 5,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "UNIHAKKA INTERNATIONAL SDN BHD\n20 Mar 2018 17:55\n(867388-U)",
+            "value": "UNIHAKKA INTERNATIONAL SDN BHD\n20 Mar 2018 17:55\n(867388-U)",
+            "bbox": [
+              {
+                "h": 50.34,
+                "w": 289.17,
+                "x": 359.28,
+                "y": 321.7,
+                "confidence": 0.79,
+                "end_index": 58,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi, 81200 Johor Bahru, Johor\nTAX INVOICE\nInvoice # : OR18032002170471",
+            "value": "12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi, 81200 Johor Bahru, Johor\nTAX INVOICE\nInvoice # : OR18032002170471",
+            "bbox": [
+              {
+                "h": 15.82,
+                "w": 250.67,
+                "x": 379.37,
+                "y": 375.25,
+                "confidence": 0.75,
+                "end_index": 116,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"Total\"\n\"SR 100100000061- 5 Vege\",,\n\"$6.60\",\"1\",\"$6.60\"\n\"Total Amount:\",,\"$6.60\"\n\"GST @6%:\",,\"$0.37\"\n\"Nett Total:\",,\"$6.60\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>Total</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"3\">SR 100100000061- 5 Vege</td>\n    </tr>\n    <tr>\n        <td>$6.60</td>\n        <td>1</td>\n        <td>$6.60</td>\n    </tr>\n    <tr>\n        <td>Total Amount:</td><td></td>\n        <td>$6.60</td>\n    </tr>\n    <tr>\n        <td>GST @6%:</td><td></td>\n        <td>$0.37</td>\n    </tr>\n    <tr>\n        <td>Nett Total:</td><td></td>\n        <td>$6.60</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                    | Qty | Total |\n| ----------------------- | --- | ----- |\n| SR 100100000061- 5 Vege |     |       |\n| $6.60                   | 1   | $6.60 |\n| Total Amount:           |     | $6.60 |\n| GST @6%:                |     | $0.37 |\n| Nett Total:             |     | $6.60 |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "Total"
+              ],
+              [
+                "SR 100100000061- 5 Vege",
+                "",
+                ""
+              ],
+              [
+                "$6.60",
+                "1",
+                "$6.60"
+              ],
+              [
+                "Total Amount:",
+                "",
+                "$6.60"
+              ],
+              [
+                "GST @6%:",
+                "",
+                "$0.37"
+              ],
+              [
+                "Nett Total:",
+                "",
+                "$6.60"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 271.66,
+                "w": 327.23,
+                "x": 339.8,
+                "y": 434.75,
+                "confidence": 0.82,
+                "end_index": 292,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.06,
+                "w": 78.04,
+                "x": 548.69,
+                "y": 526.52,
+                "confidence": 1.0,
+                "end_index": 206,
+                "label": "text",
+                "r": null,
+                "start_index": 170
+              },
+              {
+                "h": 15.66,
+                "w": 63.55,
+                "x": 564.24,
+                "y": 543.3,
+                "confidence": 1.0,
+                "end_index": 248,
+                "label": "text",
+                "r": null,
+                "start_index": 212
+              },
+              {
+                "h": 13.53,
+                "w": 56.91,
+                "x": 570.32,
+                "y": 560.74,
+                "confidence": 1.0,
+                "end_index": 290,
+                "label": "text",
+                "r": null,
+                "start_index": 254
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"Payment Mode\",\"Amount\"\n\"CASH\",\"$6.60\"\n\"Change\",\"$0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Payment Mode</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>CASH</td>\n        <td>$6.60</td>\n    </tr>\n    <tr>\n        <td>Change</td>\n        <td>$0.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Payment Mode | Amount |\n| ------------ | ------ |\n| CASH         | $6.60  |\n| Change       | $0.00  |",
+            "rows": [
+              [
+                "Payment Mode",
+                "Amount"
+              ],
+              [
+                "CASH",
+                "$6.60"
+              ],
+              [
+                "Change",
+                "$0.00"
+              ]
+            ],
+            "bbox": null,
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount($)\",\"Tax($)\"\n\"SR = GST @6%\",\"6.23\",\"0.37\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th>Amount($)</th>\n        <th>Tax($)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR = GST @6%</td>\n        <td>6.23</td>\n        <td>0.37</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary  | Amount($) | Tax($) |\n| ------------ | --------- | ------ |\n| SR = GST @6% | 6.23      | 0.37   |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount($)",
+                "Tax($)"
+              ],
+              [
+                "SR = GST @6%",
+                "6.23",
+                "0.37"
+              ]
+            ],
+            "bbox": null,
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "GST REG #000656195584\nBAR WANG RICE\\@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+            "value": "GST REG #000656195584\nBAR WANG RICE@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+            "bbox": [
+              {
+                "h": 105.28,
+                "w": 206.33,
+                "x": 401.59,
+                "y": 718.41,
+                "confidence": 0.73,
+                "end_index": 153,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1528.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "A03119\n\nUNIHAKKA INTERNATIONAL SDN BHD\n20 Mar 2018 17:55\n(867388-U)\n\n12, Jalan Tampoi 7/4, Kawasan Perindustrian\nTampoi, 81200 Johor Bahru, Johor\nTAX INVOICE\nInvoice # : OR18032002170471\n\n| Item                    | Qty | Total |\n| ----------------------- | --- | ----- |\n| SR 100100000061- 5 Vege |     |       |\n| $6.60                   | 1   | $6.60 |\n| Total Amount:           |     | $6.60 |\n| GST @6%:                |     | $0.37 |\n| Nett Total:             |     | $6.60 |\n\n\n| Payment Mode | Amount |\n| ------------ | ------ |\n| CASH         | $6.60  |\n| Change       | $0.00  |\n\n\n| GST Summary  | Amount($) | Tax($) |\n| ------------ | --------- | ------ |\n| SR = GST @6% | 6.23      | 0.37   |\n\n\nGST REG #000656195584\nBAR WANG RICE@PERMAS JAYA\n(Price Inclusive Of GST)\nThank You & Come Again!\nLike and Follow Us on Facebook!\nFacebook.com/BarWangRice",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

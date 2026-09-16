@@ -1,0 +1,705 @@
+{
+  "job": {
+    "id": "pjb-iy41gtrazhg085ksznaiuem0enqu",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T08:58:29.340675Z",
+    "error_message": null,
+    "name": "X00016469670.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T08:58:44.019077Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 1,
+            "md": "# tan chay yee",
+            "value": "tan chay yee",
+            "bbox": [
+              {
+                "h": 38.06,
+                "w": 210.18,
+                "x": 97.65,
+                "y": 23.46,
+                "confidence": 0.88,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "\\*\\*\\* COPY \\*\\*\\*",
+            "value": "*** COPY ***",
+            "bbox": [
+              {
+                "h": 18.66,
+                "w": 130.8,
+                "x": 141.1,
+                "y": 98.47,
+                "confidence": 0.78,
+                "end_index": 17,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## OJC MARKETING SDN BHD",
+            "value": "OJC MARKETING SDN BHD",
+            "bbox": [
+              {
+                "h": 17.04,
+                "w": 236.39,
+                "x": 88.3,
+                "y": 120.41,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 62.47,
+                "w": 237.39,
+                "x": 88.34,
+                "y": 98.43,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "ROC NO: 538358-H",
+            "value": "ROC NO: 538358-H",
+            "bbox": [
+              {
+                "h": 16.09,
+                "w": 155.11,
+                "x": 130.1,
+                "y": 143.93,
+                "confidence": 0.79,
+                "end_index": 15,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "NO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR",
+            "value": "NO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR",
+            "bbox": [
+              {
+                "h": 59.86,
+                "w": 192.8,
+                "x": 110.47,
+                "y": 166.48,
+                "confidence": 0.85,
+                "end_index": 59,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel:07-388 2218 Fax:07-388 8218",
+            "value": "Tel:07-388 2218 Fax:07-388 8218",
+            "bbox": [
+              {
+                "h": 16.31,
+                "w": 255.8,
+                "x": 74.85,
+                "y": 229.17,
+                "confidence": 0.86,
+                "end_index": 30,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 41.3,
+                "w": 260.53,
+                "x": 75.74,
+                "y": 229.21,
+                "confidence": 0.86,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Email: ",
+            "value": "Email: ",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "<ng@ojcgroup.com>",
+            "text": "ng@ojcgroup.com",
+            "url": "mailto:ng@ojcgroup.com",
+            "bbox": [
+              {
+                "h": 18.92,
+                "w": 135.5,
+                "x": 164.11,
+                "y": 251.52,
+                "confidence": 0.76,
+                "end_index": 16,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 16.63,
+                "w": 115.49,
+                "x": 149.42,
+                "y": 294.32,
+                "confidence": 0.94,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Invoice No**: PEGIV-1030765\n**Date**: 15/01/2019 11:05:16 AM\n**Cashier**: NG CHUAN MIN\n**Sales Persor**: FATIN\n**Bill To**: THE PEAK QUARRY WORKS\n**Address**: .",
+            "value": "Invoice No: PEGIV-1030765\nDate: 15/01/2019 11:05:16 AM\nCashier: NG CHUAN MIN\nSales Persor: FATIN\nBill To: THE PEAK QUARRY WORKS\nAddress: .",
+            "bbox": [
+              {
+                "h": 15.92,
+                "w": 224.65,
+                "x": 28.22,
+                "y": 326.31,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.03,
+                "w": 295.6,
+                "x": 26.1,
+                "y": 346.08,
+                "confidence": 0.93,
+                "end_index": 61,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 30
+              },
+              {
+                "h": 19.03,
+                "w": 201.69,
+                "x": 120.01,
+                "y": 346.08,
+                "confidence": 1.0,
+                "end_index": 61,
+                "label": "text",
+                "r": null,
+                "start_index": 40
+              },
+              {
+                "h": 17.64,
+                "w": 219.08,
+                "x": 27.94,
+                "y": 368.73,
+                "confidence": 0.93,
+                "end_index": 87,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 63
+              },
+              {
+                "h": 16.31,
+                "w": 127.0,
+                "x": 120.01,
+                "y": 368.73,
+                "confidence": 1.0,
+                "end_index": 87,
+                "label": "text",
+                "r": null,
+                "start_index": 72
+              },
+              {
+                "h": 16.31,
+                "w": 150.26,
+                "x": 27.0,
+                "y": 390.48,
+                "confidence": 1.0,
+                "end_index": 111,
+                "label": "text",
+                "r": null,
+                "start_index": 89
+              },
+              {
+                "h": 20.17,
+                "w": 341.61,
+                "x": 26.1,
+                "y": 409.51,
+                "confidence": 0.93,
+                "end_index": 146,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 113
+              },
+              {
+                "h": 18.16,
+                "w": 246.73,
+                "x": 120.99,
+                "y": 411.52,
+                "confidence": 1.0,
+                "end_index": 146,
+                "label": "text",
+                "r": null,
+                "start_index": 122
+              },
+              {
+                "h": 17.88,
+                "w": 61.47,
+                "x": 27.1,
+                "y": 442.81,
+                "confidence": 0.93,
+                "end_index": 161,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 148
+              },
+              {
+                "h": 136.83,
+                "w": 342.97,
+                "x": 25.11,
+                "y": 325.35,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.124453125000002,
+                "w": 38.01181001594964,
+                "x": 26.102752661867406,
+                "y": 346.98200390625004,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.041875000000005,
+                "w": 56.16354858177429,
+                "x": 27.942063971031985,
+                "y": 369.33375,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.312007812499985,
+                "w": 127.00416522976118,
+                "x": 120.01428328950772,
+                "y": 368.73134765625,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.93689843750002,
+                "w": 47.850160843607206,
+                "x": 26.102752661867406,
+                "y": 409.5113671875,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.15937500000001,
+                "w": 246.72842486421243,
+                "x": 120.9891369945685,
+                "y": 411.51937499999997,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Description\",\"Qty\",\"Price\",\"Amount\"\n\"000000111<br/>KINGS SAFETY SHOES KWD B05\",\"1\",\"193.00\",\"193.00 SR\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Price</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>000000111<br />KINGS SAFETY SHOES KWD B05</td>\n        <td>1</td>\n        <td>193.00</td>\n        <td>193.00 SR</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Description                              | Qty | Price  | Amount    |\n| ---------------------------------------- | --- | ------ | --------- |\n| 000000111<br/>KINGS SAFETY SHOES KWD B05 | 1   | 193.00 | 193.00 SR |",
+            "rows": [
+              [
+                "Description",
+                "Qty",
+                "Price",
+                "Amount"
+              ],
+              [
+                "000000111<br/>KINGS SAFETY SHOES KWD B05",
+                "1",
+                "193.00",
+                "193.00 SR"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 102.95,
+                "w": 332.51,
+                "x": 24.59,
+                "y": 527.18,
+                "confidence": 1.0,
+                "end_index": 214,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.44,
+                "w": 85.22,
+                "x": 27.38,
+                "y": 527.18,
+                "confidence": 0.8,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 16.2,
+                "w": 60.91,
+                "x": 296.19,
+                "y": 528.58,
+                "confidence": 0.8,
+                "end_index": 65,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 60
+              },
+              {
+                "h": 18.72,
+                "w": 80.47,
+                "x": 24.59,
+                "y": 546.74,
+                "confidence": 0.8,
+                "end_index": 154,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 146
+              },
+              {
+                "h": 17.88,
+                "w": 231.92,
+                "x": 24.59,
+                "y": 574.12,
+                "confidence": 0.8,
+                "end_index": 185,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 160
+              },
+              {
+                "h": 17.6,
+                "w": 73.21,
+                "x": 199.79,
+                "y": 548.13,
+                "confidence": 0.8,
+                "end_index": 200,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 189
+              },
+              {
+                "h": 16.22,
+                "w": 108.6,
+                "x": 247.64,
+                "y": 613.91,
+                "confidence": 1.0,
+                "end_index": 209,
+                "label": "text",
+                "r": null,
+                "start_index": 204
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 3 'Amount' expects numeric, got '193.00 SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [text, paragraph_title, key-value-region, seal] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "col 0 'Description': 1/1 (100%) have interior whitespace",
+                "type": "possible_merged_columns"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Qty: 1**\n**Total Exclude GST**: 193.00\n**Total GST @6%**: 0.00\n**Total Inclusive GST**: 193.00\n**Round Amt**: 0.00\n**TOTAL**: **193.00**",
+            "value": "Qty: 1\nTotal Exclude GST: 193.00\nTotal GST @6%: 0.00\nTotal Inclusive GST: 193.00\nRound Amt: 0.00\nTOTAL: 193.00",
+            "bbox": [
+              {
+                "h": 105.49,
+                "w": 253.72,
+                "x": 102.32,
+                "y": 613.28,
+                "confidence": 0.85,
+                "end_index": 137,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.72,
+                "w": 143.62,
+                "x": 107.86,
+                "y": 611.27,
+                "confidence": 1.0,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 11
+              },
+              {
+                "h": 84.09,
+                "w": 94.72,
+                "x": 292.55,
+                "y": 729.73,
+                "confidence": 1.0,
+                "end_index": 39,
+                "label": "seal",
+                "r": null,
+                "start_index": 34
+              },
+              {
+                "h": 16.31,
+                "w": 147.58,
+                "x": 100.34,
+                "y": 655.1,
+                "confidence": 1.0,
+                "end_index": 88,
+                "label": "text",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 106.33,
+                "w": 125.16,
+                "x": 279.08,
+                "y": 729.41,
+                "confidence": 0.85,
+                "end_index": null,
+                "label": "seal",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.718124999999986,
+                "w": 143.6222088111044,
+                "x": 107.85636692818349,
+                "y": 611.2725,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.600624999999923,
+                "w": 126.01870850935427,
+                "x": 125.18044659022331,
+                "y": 633.6225000000001,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.312007812500042,
+                "w": 147.57526241486335,
+                "x": 100.3375816341926,
+                "y": 655.0977070312501,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.600625000000036,
+                "w": 89.97344598672302,
+                "x": 161.5051297525649,
+                "y": 675.808125,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.79124999999999,
+                "w": 48.060350030175,
+                "x": 27.103802051901027,
+                "y": 611.2725,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**VISA CARD**: 193.00\n**xxxxxxxxxxxx4318**\n**Approval Code:000**: 193.00",
+            "value": "VISA CARD: 193.00\nxxxxxxxxxxxx4318\nApproval Code:000: 193.00",
+            "bbox": [
+              {
+                "h": 109.07,
+                "w": 318.54,
+                "x": 86.12,
+                "y": 725.93,
+                "confidence": 0.78,
+                "end_index": 71,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 86.22,
+                "w": 245.35,
+                "x": 141.93,
+                "y": 727.6,
+                "confidence": 0.78,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.03,
+                "w": 140.87,
+                "x": 86.47,
+                "y": 771.09,
+                "confidence": 1.0,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 43
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "seal: handwritten 193.00 in a circle",
+            "value": "seal: handwritten 193.00 in a circle",
+            "bbox": [
+              {
+                "h": 106.33,
+                "w": 125.16,
+                "x": 279.08,
+                "y": 729.41,
+                "confidence": 0.87,
+                "end_index": 35,
+                "label": "seal",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Goods Sold Are Not Returnable & Refundable\n\\*\\*\\*\\*Thank You. Please Come Again.\\*\\*\\*\\*",
+            "value": "Goods Sold Are Not Returnable & Refundable\n****Thank You. Please Come Again.****",
+            "bbox": [
+              {
+                "h": 38.7,
+                "w": 336.17,
+                "x": 34.43,
+                "y": 846.19,
+                "confidence": 0.87,
+                "end_index": 87,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 894.0,
+        "page_number": 1,
+        "page_width": 463.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# tan chay yee\n\n\\*\\*\\* COPY \\*\\*\\*\n\n## OJC MARKETING SDN BHD\n\nROC NO: 538358-H\n\nNO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR\n\nTel:07-388 2218 Fax:07-388 8218\n\nEmail: ng@ojcgroup.com\n\n## TAX INVOICE\n\n**Invoice No**: PEGIV-1030765\n**Date**: 15/01/2019 11:05:16 AM\n**Cashier**: NG CHUAN MIN\n**Sales Persor**: FATIN\n**Bill To**: THE PEAK QUARRY WORKS\n**Address**: .\n\n| Description                              | Qty | Price  | Amount    |\n| ---------------------------------------- | --- | ------ | --------- |\n| 000000111<br/>KINGS SAFETY SHOES KWD B05 | 1   | 193.00 | 193.00 SR |\n\n\n**Qty: 1**\n**Total Exclude GST**: 193.00\n**Total GST @6%**: 0.00\n**Total Inclusive GST**: 193.00\n**Round Amt**: 0.00\n**TOTAL**: **193.00**\n\n**VISA CARD**: 193.00\n**xxxxxxxxxxxx4318**\n**Approval Code:000**: 193.00\n\nseal: handwritten 193.00 in a circle\n\nGoods Sold Are Not Returnable & Refundable\n\\*\\*\\*\\*Thank You. Please Come Again.\\*\\*\\*\\*",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

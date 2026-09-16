@@ -1,0 +1,701 @@
+{
+  "job": {
+    "id": "pjb-g7l65ow7i9cnf5199i69efsayixw",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T08:59:16.945852Z",
+    "error_message": null,
+    "name": "X51005200931.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T08:59:44.728728Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "logo: h02038",
+            "value": "logo: h02038",
+            "bbox": [
+              {
+                "h": 30.81,
+                "w": 74.92,
+                "x": 573.16,
+                "y": 190.45,
+                "confidence": 0.74,
+                "end_index": 11,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## PERNIAGAAN ZHENG HUI",
+            "value": "PERNIAGAAN ZHENG HUI",
+            "bbox": [
+              {
+                "h": 16.72,
+                "w": 223.86,
+                "x": 390.65,
+                "y": 245.6,
+                "confidence": 0.91,
+                "end_index": 22,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "JM0325955-V\nNO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81750 JOHOR BAHRU",
+            "value": "JM0325955-V\nNO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81750 JOHOR BAHRU",
+            "bbox": [
+              {
+                "h": 68.4,
+                "w": 194.63,
+                "x": 404.16,
+                "y": 267.89,
+                "confidence": 0.84,
+                "end_index": 75,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TEL : 07-386 7524 FAX : 07-388 3793\nGST NO : 000800689824",
+            "value": "TEL : 07-386 7524 FAX : 07-388 3793\nGST NO : 000800689824",
+            "bbox": [
+              {
+                "h": 15.35,
+                "w": 244.16,
+                "x": 390.58,
+                "y": 339.79,
+                "confidence": 1.0,
+                "end_index": 34,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.03,
+                "w": 154.74,
+                "x": 435.29,
+                "y": 361.71,
+                "confidence": 1.0,
+                "end_index": 56,
+                "label": "text",
+                "r": null,
+                "start_index": 36
+              },
+              {
+                "h": 35.4,
+                "w": 244.92,
+                "x": 390.77,
+                "y": 340.9,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## SIMPLIFIED TAX INVOICE",
+            "value": "SIMPLIFIED TAX INVOICE",
+            "bbox": [
+              {
+                "h": 15.35,
+                "w": 181.04,
+                "x": 421.26,
+                "y": 389.77,
+                "confidence": 0.91,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "GOGIANT ENGINEERING (M) SDN BHD",
+            "value": "GOGIANT ENGINEERING (M) SDN BHD",
+            "bbox": [
+              {
+                "h": 16.64,
+                "w": 249.68,
+                "x": 334.71,
+                "y": 415.42,
+                "confidence": 0.82,
+                "end_index": 30,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Receipt #**: CS00082258\n**Salesperson**:\\\n**Date**: 09/02/2018\n**Cashier**: USER\n**Time**: 08:32:00",
+            "value": "Receipt #: CS00082258\nSalesperson: Date: 09/02/2018\nCashier: USER\nTime: 08:32:00",
+            "bbox": [
+              {
+                "h": 17.1,
+                "w": 151.67,
+                "x": 333.59,
+                "y": 440.19,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 7
+              },
+              {
+                "h": 17.1,
+                "w": 80.22,
+                "x": 332.71,
+                "y": 459.92,
+                "confidence": 1.0,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 15.35,
+                "w": 103.89,
+                "x": 557.15,
+                "y": 465.18,
+                "confidence": 1.0,
+                "end_index": 63,
+                "label": "text",
+                "r": null,
+                "start_index": 44
+              },
+              {
+                "h": 17.1,
+                "w": 98.19,
+                "x": 332.27,
+                "y": 478.77,
+                "confidence": 1.0,
+                "end_index": 81,
+                "label": "text",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 15.35,
+                "w": 88.55,
+                "x": 556.27,
+                "y": 484.91,
+                "confidence": 1.0,
+                "end_index": 100,
+                "label": "text",
+                "r": null,
+                "start_index": 83
+              },
+              {
+                "h": 63.29,
+                "w": 338.65,
+                "x": 330.7,
+                "y": 438.04,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"(RM) RSP\",\"(RM) Amount\"\n\"6783 1809<br/>SR: CERAMIC CAP\",\"5\",\"3.50\",\"17.50\"\n\"2954 1809<br/>SR: S/STEEL 1/2\"\" STREET ELBOW\",\"30\",\"3.80\",\"114.00\"\n\"1760 GA<br/>SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD\",\"1\",\"55.00\",\"55.00\"\n\"3496 GA<br/>SR: ESICUT 4\"\" CUTTING DISC (1BOX)-50PCS\",\"3\",\"33.00\",\"99.00\"\n\"2460 GA<br/>SR: WELDRO PICKLING GEL 1KG\",\"2\",\"43.00\",\"86.00\"\n\"9428 GB<br/>SR: 13.5\"\" WELDING GLOVE - GREEN (GS)\",\"4\",\"10.00\",\"40.00\"\n\"TOT QTY: 45\",,,\"411.50\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>(RM) RSP</th>\n        <th>(RM) Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>6783 1809<br />SR: CERAMIC CAP</td>\n        <td>5</td>\n        <td>3.50</td>\n        <td>17.50</td>\n    </tr>\n    <tr>\n        <td>2954 1809<br />SR: S/STEEL 1/2\" STREET ELBOW</td>\n        <td>30</td>\n        <td>3.80</td>\n        <td>114.00</td>\n    </tr>\n    <tr>\n        <td>1760 GA<br />SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD</td>\n        <td>1</td>\n        <td>55.00</td>\n        <td>55.00</td>\n    </tr>\n    <tr>\n        <td>3496 GA<br />SR: ESICUT 4\" CUTTING DISC (1BOX)-50PCS</td>\n        <td>3</td>\n        <td>33.00</td>\n        <td>99.00</td>\n    </tr>\n    <tr>\n        <td>2460 GA<br />SR: WELDRO PICKLING GEL 1KG</td>\n        <td>2</td>\n        <td>43.00</td>\n        <td>86.00</td>\n    </tr>\n    <tr>\n        <td>9428 GB<br />SR: 13.5\" WELDING GLOVE - GREEN (GS)</td>\n        <td>4</td>\n        <td>10.00</td>\n        <td>40.00</td>\n    </tr>\n    <tr>\n        <td>TOT QTY: 45</td><td></td><td></td>\n        <td>411.50</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                                                 | Qty | (RM) RSP | (RM) Amount |\n| ---------------------------------------------------- | --- | -------- | ----------- |\n| 6783 1809<br/>SR: CERAMIC CAP                        | 5   | 3.50     | 17.50       |\n| 2954 1809<br/>SR: S/STEEL 1/2\" STREET ELBOW          | 30  | 3.80     | 114.00      |\n| 1760 GA<br/>SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD | 1   | 55.00    | 55.00       |\n| 3496 GA<br/>SR: ESICUT 4\" CUTTING DISC (1BOX)-50PCS  | 3   | 33.00    | 99.00       |\n| 2460 GA<br/>SR: WELDRO PICKLING GEL 1KG              | 2   | 43.00    | 86.00       |\n| 9428 GB<br/>SR: 13.5\" WELDING GLOVE - GREEN (GS)     | 4   | 10.00    | 40.00       |\n| TOT QTY: 45                                          |     |          | 411.50      |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "(RM) RSP",
+                "(RM) Amount"
+              ],
+              [
+                "6783 1809<br/>SR: CERAMIC CAP",
+                "5",
+                "3.50",
+                "17.50"
+              ],
+              [
+                "2954 1809<br/>SR: S/STEEL 1/2\" STREET ELBOW",
+                "30",
+                "3.80",
+                "114.00"
+              ],
+              [
+                "1760 GA<br/>SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD",
+                "1",
+                "55.00",
+                "55.00"
+              ],
+              [
+                "3496 GA<br/>SR: ESICUT 4\" CUTTING DISC (1BOX)-50PCS",
+                "3",
+                "33.00",
+                "99.00"
+              ],
+              [
+                "2460 GA<br/>SR: WELDRO PICKLING GEL 1KG",
+                "2",
+                "43.00",
+                "86.00"
+              ],
+              [
+                "9428 GB<br/>SR: 13.5\" WELDING GLOVE - GREEN (GS)",
+                "4",
+                "10.00",
+                "40.00"
+              ],
+              [
+                "TOT QTY: 45",
+                "",
+                "",
+                "411.50"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 298.21,
+                "w": 344.19,
+                "x": 325.18,
+                "y": 509.3,
+                "confidence": 0.93,
+                "end_index": 790,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.41,
+                "w": 80.98,
+                "x": 576.81,
+                "y": 903.06,
+                "confidence": 1.0,
+                "end_index": 354,
+                "label": "text",
+                "r": null,
+                "start_index": 341
+              },
+              {
+                "h": 13.2,
+                "w": 83.03,
+                "x": 577.3,
+                "y": 852.74,
+                "confidence": 1.0,
+                "end_index": 683,
+                "label": "text",
+                "r": null,
+                "start_index": 680
+              },
+              {
+                "h": 14.44,
+                "w": 81.67,
+                "x": 576.26,
+                "y": 973.39,
+                "confidence": 1.0,
+                "end_index": 694,
+                "label": "text",
+                "r": null,
+                "start_index": 691
+              },
+              {
+                "h": 15.37,
+                "w": 83.45,
+                "x": 577.62,
+                "y": 826.74,
+                "confidence": 1.0,
+                "end_index": 783,
+                "label": "text",
+                "r": null,
+                "start_index": 778
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "\\*\\* (Excluded GST) Sub Total (RM)\\*\\*: 411.50\n**Discount (RM)**: 0.00\n**Total GST (RM)**: 24.69\n**Rounding (RM)**: 0.01\n**Total (RM)**: 436.20\n**CASH**: 436.20\n**Change (RM)**: 0.00",
+            "value": "** (Excluded GST) Sub Total (RM)**: 411.50\nDiscount (RM): 0.00\nTotal GST (RM): 24.69\nRounding (RM): 0.01\nTotal (RM): 436.20\nCASH: 436.20\nChange (RM): 0.00",
+            "bbox": [
+              {
+                "h": 17.1,
+                "w": 283.62,
+                "x": 377.86,
+                "y": 826.02,
+                "confidence": 0.95,
+                "end_index": 45,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.1,
+                "w": 189.81,
+                "x": 377.86,
+                "y": 826.02,
+                "confidence": 1.0,
+                "end_index": 38,
+                "label": "text",
+                "r": null,
+                "start_index": 5
+              },
+              {
+                "h": 17.98,
+                "w": 89.42,
+                "x": 478.25,
+                "y": 850.57,
+                "confidence": 1.0,
+                "end_index": 64,
+                "label": "text",
+                "r": null,
+                "start_index": 47
+              },
+              {
+                "h": 139.42,
+                "w": 183.23,
+                "x": 478.25,
+                "y": 850.57,
+                "confidence": 0.95,
+                "end_index": 69,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 47
+              },
+              {
+                "h": 17.98,
+                "w": 107.84,
+                "x": 469.92,
+                "y": 874.24,
+                "confidence": 1.0,
+                "end_index": 89,
+                "label": "text",
+                "r": null,
+                "start_index": 71
+              },
+              {
+                "h": 17.98,
+                "w": 191.12,
+                "x": 469.92,
+                "y": 874.24,
+                "confidence": 0.95,
+                "end_index": 95,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 71
+              },
+              {
+                "h": 19.73,
+                "w": 135.89,
+                "x": 445.81,
+                "y": 900.11,
+                "confidence": 1.0,
+                "end_index": 114,
+                "label": "text",
+                "r": null,
+                "start_index": 97
+              },
+              {
+                "h": 19.73,
+                "w": 213.04,
+                "x": 445.81,
+                "y": 900.11,
+                "confidence": 0.95,
+                "end_index": 119,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 97
+              },
+              {
+                "h": 43.41,
+                "w": 178.41,
+                "x": 481.32,
+                "y": 923.35,
+                "confidence": 0.95,
+                "end_index": 142,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 121
+              },
+              {
+                "h": 16.222187500000018,
+                "w": 45.58904109589048,
+                "x": 615.8904109589041,
+                "y": 826.01625,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.975937499999986,
+                "w": 89.42465753424653,
+                "x": 478.2465753424658,
+                "y": 850.56875,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.9759375000001,
+                "w": 107.83561643835611,
+                "x": 469.9178082191781,
+                "y": 874.244375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.660624999999982,
+                "w": 36.82191780821927,
+                "x": 624.2191780821918,
+                "y": 874.244375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.729687499999955,
+                "w": 135.89041095890417,
+                "x": 445.8082191780822,
+                "y": 900.1121875000001,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.852812499999914,
+                "w": 34.63013698630141,
+                "x": 624.2191780821918,
+                "y": 900.1121875000001,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 20.168124999999918,
+                "w": 65.7534246575342,
+                "x": 517.2602739726028,
+                "y": 946.5865625000001,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.360312499999964,
+                "w": 121.8630136986302,
+                "x": 459.3972602739726,
+                "y": 969.82375,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 3,
+            "md": "### GST SUMMARY",
+            "value": "GST SUMMARY",
+            "bbox": [
+              {
+                "h": 16.25,
+                "w": 135.55,
+                "x": 327.95,
+                "y": 1024.35,
+                "confidence": 0.87,
+                "end_index": 14,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"Tax Code\",\"%\",\"Amount\",\"GST\"\n\"SR\",\"6\",\"411.50\",\"24.69\"\n\"Total :\",,\"411.50\",\"24.69\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Tax Code</th>\n        <th>%</th>\n        <th>Amount</th>\n        <th>GST</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6</td>\n        <td>411.50</td>\n        <td>24.69</td>\n    </tr>\n    <tr>\n        <td>Total :</td><td></td>\n        <td>411.50</td>\n        <td>24.69</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Tax Code | % | Amount | GST   |\n| -------- | - | ------ | ----- |\n| SR       | 6 | 411.50 | 24.69 |\n| Total :  |   | 411.50 | 24.69 |",
+            "rows": [
+              [
+                "Tax Code",
+                "%",
+                "Amount",
+                "GST"
+              ],
+              [
+                "SR",
+                "6",
+                "411.50",
+                "24.69"
+              ],
+              [
+                "Total :",
+                "",
+                "411.50",
+                "24.69"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 62.88,
+                "w": 340.19,
+                "x": 320.9,
+                "y": 1054.51,
+                "confidence": 0.9,
+                "end_index": 134,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.33,
+                "w": 84.59,
+                "x": 575.75,
+                "y": 876.45,
+                "confidence": 1.0,
+                "end_index": 98,
+                "label": "text",
+                "r": null,
+                "start_index": 94
+              },
+              {
+                "h": 14.9,
+                "w": 40.57,
+                "x": 426.97,
+                "y": 1100.27,
+                "confidence": 1.0,
+                "end_index": 108,
+                "label": "text",
+                "r": null,
+                "start_index": 104
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Tax Code' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT RETURNABLE.\nTHANK YOU.",
+            "value": "GOODS SOLD ARE NOT RETURNABLE.\nTHANK YOU.",
+            "bbox": [
+              {
+                "h": 17.1,
+                "w": 252.93,
+                "x": 363.84,
+                "y": 1139.94,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 16.22,
+                "w": 82.41,
+                "x": 449.75,
+                "y": 1160.11,
+                "confidence": 0.76,
+                "end_index": 40,
+                "label": "text",
+                "r": null,
+                "start_index": 31
+              },
+              {
+                "h": 33.97,
+                "w": 252.81,
+                "x": 364.71,
+                "y": 1139.65,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1403.0,
+        "page_number": 1,
+        "page_width": 992.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: h02038\n\n## PERNIAGAAN ZHENG HUI\n\nJM0325955-V\nNO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81750 JOHOR BAHRU\n\nTEL : 07-386 7524 FAX : 07-388 3793\nGST NO : 000800689824\n\n## SIMPLIFIED TAX INVOICE\n\nGOGIANT ENGINEERING (M) SDN BHD\n\n**Receipt #**: CS00082258\n**Salesperson**:     \n**Date**: 09/02/2018\n**Cashier**: USER\n**Time**: 08:32:00\n\n| Item                                                 | Qty | (RM) RSP | (RM) Amount |\n| ---------------------------------------------------- | --- | -------- | ----------- |\n| 6783 1809<br/>SR: CERAMIC CAP                        | 5   | 3.50     | 17.50       |\n| 2954 1809<br/>SR: S/STEEL 1/2\" STREET ELBOW          | 30  | 3.80     | 114.00      |\n| 1760 GA<br/>SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD | 1   | 55.00    | 55.00       |\n| 3496 GA<br/>SR: ESICUT 4\" CUTTING DISC (1BOX)-50PCS  | 3   | 33.00    | 99.00       |\n| 2460 GA<br/>SR: WELDRO PICKLING GEL 1KG              | 2   | 43.00    | 86.00       |\n| 9428 GB<br/>SR: 13.5\" WELDING GLOVE - GREEN (GS)     | 4   | 10.00    | 40.00       |\n| TOT QTY: 45                                          |     |          | 411.50      |\n\n\n** (Excluded GST) Sub Total (RM)**: 411.50\n**Discount (RM)**: 0.00\n**Total GST (RM)**: 24.69\n**Rounding (RM)**: 0.01\n**Total (RM)**: 436.20\n**CASH**: 436.20\n**Change (RM)**: 0.00\n\n### GST SUMMARY\n\n| Tax Code | % | Amount | GST   |\n| -------- | - | ------ | ----- |\n| SR       | 6 | 411.50 | 24.69 |\n| Total :  |   | 411.50 | 24.69 |\n\n\nGOODS SOLD ARE NOT RETURNABLE.\nTHANK YOU.",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

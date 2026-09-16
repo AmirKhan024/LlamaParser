@@ -1,0 +1,265 @@
+{
+  "job": {
+    "id": "pjb-e4kay4yd0hmm0p8b8et9yuy3l4h7",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:06:26.339093Z",
+    "error_message": null,
+    "name": "X51005361923.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:06:41.455290Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 2,
+            "md": "## SWC ENTERPRISE SDN BHD",
+            "value": "SWC ENTERPRISE SDN BHD",
+            "bbox": [
+              {
+                "h": 80.39,
+                "w": 685.16,
+                "x": 389.46,
+                "y": 760.07,
+                "confidence": 1.0,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 3
+              },
+              {
+                "h": 106.58,
+                "w": 685.24,
+                "x": 405.98,
+                "y": 774.63,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(1125830-V)",
+            "value": "(1125830-V)",
+            "bbox": [
+              {
+                "h": 55.91,
+                "w": 251.06,
+                "x": 622.72,
+                "y": 826.57,
+                "confidence": 0.67,
+                "end_index": 10,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "8 & 10, Jalan Ijok Permai 1,\nPusat Niaga Ijok Permai,\n48000 Ijok, Selangor.",
+            "value": "8 & 10, Jalan Ijok Permai 1,\nPusat Niaga Ijok Permai,\n48000 Ijok, Selangor.",
+            "bbox": [
+              {
+                "h": 157.59,
+                "w": 629.44,
+                "x": 428.73,
+                "y": 895.92,
+                "confidence": 0.94,
+                "end_index": 74,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 41.18,
+                "w": 241.93,
+                "x": 655.44,
+                "y": 1062.1,
+                "confidence": 0.86,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(GST ID No. : 002017808384)",
+            "value": "(GST ID No. : 002017808384)",
+            "bbox": [
+              {
+                "h": 65.78,
+                "w": 605.83,
+                "x": 425.52,
+                "y": 1096.25,
+                "confidence": 0.54,
+                "end_index": 26,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "02/01/2018 Cashier: 123\n10:46:55 No:0100036262",
+            "value": "02/01/2018 Cashier: 123\n10:46:55 No:0100036262",
+            "bbox": [
+              {
+                "h": 506.1,
+                "w": 764.49,
+                "x": 340.78,
+                "y": 1158.37,
+                "confidence": 0.58,
+                "end_index": 45,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item/Desc.\",\"Qty\",\"Price\",\"Amt.\"\n\"5X8 5006 (1X60)<br/>5X8 5006\",\"1\",\"4.20\",\"4.20\"\n\"Total Qty :\",\"1\",,\n\"TOTAL AMOUNT\",,,\"4.20\"\n\"CASH\",,,\"50.20\"\n\"CHANGE\",,,\"46.00\"\n\"GST @6% Included In Total\",,,\"0.24\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item/Desc.</th>\n        <th>Qty</th>\n        <th>Price</th>\n        <th>Amt.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>5X8 5006 (1X60)<br />5X8 5006</td>\n        <td>1</td>\n        <td>4.20</td>\n        <td>4.20</td>\n    </tr>\n    <tr>\n        <td>Total Qty :</td>\n        <td>1</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>TOTAL AMOUNT</td>\n        <td> </td>\n        <td> </td>\n        <td>4.20</td>\n    </tr>\n    <tr>\n        <td>CASH</td>\n        <td> </td>\n        <td> </td>\n        <td>50.20</td>\n    </tr>\n    <tr>\n        <td>CHANGE</td>\n        <td> </td>\n        <td> </td>\n        <td>46.00</td>\n    </tr>\n    <tr>\n        <td>GST @6% Included In Total</td>\n        <td> </td>\n        <td> </td>\n        <td>0.24</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item/Desc.                   | Qty | Price | Amt.  |\n| ---------------------------- | --- | ----- | ----- |\n| 5X8 5006 (1X60)<br/>5X8 5006 | 1   | 4.20  | 4.20  |\n| Total Qty :                  | 1   |       |       |\n| TOTAL AMOUNT                 |     |       | 4.20  |\n| CASH                         |     |       | 50.20 |\n| CHANGE                       |     |       | 46.00 |\n| GST @6% Included In Total    |     |       | 0.24  |",
+            "rows": [
+              [
+                "Item/Desc.",
+                "Qty",
+                "Price",
+                "Amt."
+              ],
+              [
+                "5X8 5006 (1X60)<br/>5X8 5006",
+                "1",
+                "4.20",
+                "4.20"
+              ],
+              [
+                "Total Qty :",
+                "1",
+                "",
+                ""
+              ],
+              [
+                "TOTAL AMOUNT",
+                "",
+                "",
+                "4.20"
+              ],
+              [
+                "CASH",
+                "",
+                "",
+                "50.20"
+              ],
+              [
+                "CHANGE",
+                "",
+                "",
+                "46.00"
+              ],
+              [
+                "GST @6% Included In Total",
+                "",
+                "",
+                "0.24"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 863.74,
+                "w": 761.58,
+                "x": 354.94,
+                "y": 1104.96,
+                "confidence": 0.73,
+                "end_index": 438,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 3505.8,
+                "w": 2480.81,
+                "x": 0.19,
+                "y": 2.2,
+                "confidence": 0.73,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": null,
+            "type": "table"
+          },
+          {
+            "md": "Thank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+            "value": "Thank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+            "bbox": [
+              {
+                "h": 155.27,
+                "w": 696.75,
+                "x": 374.13,
+                "y": 1813.2,
+                "confidence": 0.88,
+                "end_index": 74,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 3508.0,
+        "page_number": 1,
+        "page_width": 2481.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "## SWC ENTERPRISE SDN BHD\n(1125830-V)\n\n8 & 10, Jalan Ijok Permai 1,\nPusat Niaga Ijok Permai,\n48000 Ijok, Selangor.\n\n## TAX INVOICE\n\n(GST ID No. : 002017808384)\n\n02/01/2018 Cashier: 123\n10:46:55 No:0100036262\n\n| Item/Desc.                   | Qty | Price | Amt.  |\n| ---------------------------- | --- | ----- | ----- |\n| 5X8 5006 (1X60)<br/>5X8 5006 | 1   | 4.20  | 4.20  |\n| Total Qty :                  | 1   |       |       |\n| TOTAL AMOUNT                 |     |       | 4.20  |\n| CASH                         |     |       | 50.20 |\n| CHANGE                       |     |       | 46.00 |\n| GST @6% Included In Total    |     |       | 0.24  |\n\n\nThank You ! Please Come Again !\nGoods Sold Only Exchangable\nWithin 3 Days !",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

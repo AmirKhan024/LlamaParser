@@ -1,0 +1,445 @@
+{
+  "job": {
+    "id": "pjb-u7v6dz4z8h29t5hed8aps8doa53a",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:03:14.994829Z",
+    "error_message": null,
+    "name": "X51005268408.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:03:32.229862Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1413-SETIA ALAM 2",
+            "value": "99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1413-SETIA ALAM 2",
+            "bbox": [
+              {
+                "h": 230.73,
+                "w": 402.26,
+                "x": 139.64,
+                "y": 280.65,
+                "confidence": 0.89,
+                "end_index": 110,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST ID. NO : 000101747712",
+            "value": "GST ID. NO : 000101747712",
+            "bbox": [
+              {
+                "h": 38.46,
+                "w": 359.49,
+                "x": 177.16,
+                "y": 472.58,
+                "confidence": 0.75,
+                "end_index": 24,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "INVOICE NO : 18222/102/T0341",
+            "value": "INVOICE NO : 18222/102/T0341",
+            "bbox": [
+              {
+                "h": 52.39,
+                "w": 395.77,
+                "x": 159.86,
+                "y": 542.72,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "03:29PM 562936 20-11-17",
+            "value": "03:29PM 562936 20-11-17",
+            "bbox": [
+              {
+                "h": 49.89,
+                "w": 572.29,
+                "x": 84.14,
+                "y": 620.48,
+                "confidence": 0.88,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.51,
+                "w": 94.02,
+                "x": 322.98,
+                "y": 629.93,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 41.43,
+                "w": 119.62,
+                "x": 525.87,
+                "y": 615.83,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 45.08362076822914,
+                "w": 109.5052116805913,
+                "x": 78.91773778920309,
+                "y": 631.6652368164063,
+                "confidence": 0.88,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "2973 PEDIASURE COMPLETE 535 RM117.90 s\n069 MILO 2KG RM34.90 s\n2709 ZING HEING OAT & WHEAT RM4.10 s\n2893 DISNEY DS112 WIDE NECK RM5.89 s\n4385 JOHNSONS PH5.5 2IN1 BO RM6.99 s",
+            "value": "2973 PEDIASURE COMPLETE 535 RM117.90 s\n069 MILO 2KG RM34.90 s\n2709 ZING HEING OAT & WHEAT RM4.10 s\n2893 DISNEY DS112 WIDE NECK RM5.89 s\n4385 JOHNSONS PH5.5 2IN1 BO RM6.99 s",
+            "bbox": [
+              {
+                "h": 215.14,
+                "w": 587.45,
+                "x": 81.86,
+                "y": 701.55,
+                "confidence": 1.0,
+                "end_index": 171,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 41.41,
+                "w": 158.81,
+                "x": 511.02,
+                "y": 696.68,
+                "confidence": 1.0,
+                "end_index": 37,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 64.58,
+                "w": 565.98,
+                "x": 86.65,
+                "y": 773.01,
+                "confidence": 1.0,
+                "end_index": 97,
+                "label": "text",
+                "r": null,
+                "start_index": 62
+              },
+              {
+                "h": 42.65,
+                "w": 118.43,
+                "x": 534.2,
+                "y": 773.01,
+                "confidence": 1.0,
+                "end_index": 97,
+                "label": "text",
+                "r": null,
+                "start_index": 90
+              },
+              {
+                "h": 63.36,
+                "w": 563.59,
+                "x": 90.23,
+                "y": 812.0,
+                "confidence": 1.0,
+                "end_index": 134,
+                "label": "text",
+                "r": null,
+                "start_index": 99
+              },
+              {
+                "h": 41.9,
+                "w": 128.12,
+                "x": 546.09,
+                "y": 853.07,
+                "confidence": 1.0,
+                "end_index": 171,
+                "label": "text",
+                "r": null,
+                "start_index": 136
+              },
+              {
+                "h": 51.176001953125024,
+                "w": 382.07796684206306,
+                "x": 90.22534116926414,
+                "y": 824.1844822591145,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 42.64666829427085,
+                "w": 118.4322669806395,
+                "x": 535.3878321316678,
+                "y": 811.9997198893229,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Total Sales (Inclusive GST) RM 169.78\nRounding Adjustment RM .02\nRounding RM 169.80\nCASH RM 200.00\nCHANGE RM 30.20",
+            "value": "Total Sales (Inclusive GST) RM 169.78\nRounding Adjustment RM .02\nRounding RM 169.80\nCASH RM 200.00\nCHANGE RM 30.20",
+            "bbox": [
+              {
+                "h": 199.55,
+                "w": 553.34,
+                "x": 100.06,
+                "y": 936.96,
+                "confidence": 0.75,
+                "end_index": 113,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 200.72,
+                "w": 146.14,
+                "x": 505.17,
+                "y": 931.5,
+                "confidence": 0.75,
+                "end_index": 36,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 164.26,
+                "w": 426.71,
+                "x": 209.85,
+                "y": 967.96,
+                "confidence": 0.75,
+                "end_index": 63,
+                "label": "text",
+                "r": null,
+                "start_index": 38
+              },
+              {
+                "h": 124.05,
+                "w": 274.36,
+                "x": 365.18,
+                "y": 1008.17,
+                "confidence": 0.75,
+                "end_index": 82,
+                "label": "text",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 85.06,
+                "w": 134.37,
+                "x": 505.17,
+                "y": 1047.17,
+                "confidence": 0.75,
+                "end_index": 97,
+                "label": "text",
+                "r": null,
+                "start_index": 84
+              },
+              {
+                "h": 42.65,
+                "w": 146.5,
+                "x": 399.1,
+                "y": 1094.69,
+                "confidence": 1.0,
+                "end_index": 109,
+                "label": "text",
+                "r": null,
+                "start_index": 99
+              },
+              {
+                "h": 169.37,
+                "w": 245.2,
+                "x": 399.1,
+                "y": 967.96,
+                "confidence": 0.75,
+                "end_index": 113,
+                "label": "text",
+                "r": null,
+                "start_index": 99
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount(RM)\",\"Tax(RM)\"\n\"s = 6%\",\"160.17\",\"9.61\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th>Amount(RM)</th>\n        <th>Tax(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>s = 6%</td>\n        <td>160.17</td>\n        <td>9.61</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary | Amount(RM) | Tax(RM) |\n| ----------- | ---------- | ------- |\n| s = 6%      | 160.17     | 9.61    |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount(RM)",
+                "Tax(RM)"
+              ],
+              [
+                "s = 6%",
+                "160.17",
+                "9.61"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 91.59,
+                "w": 563.63,
+                "x": 110.58,
+                "y": 1166.81,
+                "confidence": 1.0,
+                "end_index": 115,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 45.31,
+                "w": 170.01,
+                "x": 110.58,
+                "y": 1194.1,
+                "confidence": 0.79,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 44.82,
+                "w": 149.07,
+                "x": 340.03,
+                "y": 1178.02,
+                "confidence": 0.79,
+                "end_index": 25,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 16
+              },
+              {
+                "h": 42.87,
+                "w": 105.22,
+                "x": 568.99,
+                "y": 1166.81,
+                "confidence": 0.79,
+                "end_index": 33,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 29
+              },
+              {
+                "h": 41.41,
+                "w": 94.02,
+                "x": 399.46,
+                "y": 1216.99,
+                "confidence": 0.79,
+                "end_index": 99,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 94
+              },
+              {
+                "h": 41.43,
+                "w": 64.87,
+                "x": 596.69,
+                "y": 1203.13,
+                "confidence": 0.79,
+                "end_index": 110,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 107
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, key-value-region] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Thank You. Please come again\nKeep the invoice for applicable returns",
+            "value": "Thank You. Please come again\nKeep the invoice for applicable returns",
+            "bbox": [
+              {
+                "h": 105.61,
+                "w": 560.61,
+                "x": 123.15,
+                "y": 1335.26,
+                "confidence": 0.96,
+                "end_index": 67,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1559.0,
+        "page_number": 1,
+        "page_width": 758.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1413-SETIA ALAM 2\n\nGST ID. NO : 000101747712\n\nINVOICE NO : 18222/102/T0341\n\n03:29PM 562936 20-11-17\n\n2973 PEDIASURE COMPLETE 535 RM117.90 s\n069 MILO 2KG RM34.90 s\n2709 ZING HEING OAT & WHEAT RM4.10 s\n2893 DISNEY DS112 WIDE NECK RM5.89 s\n4385 JOHNSONS PH5.5 2IN1 BO RM6.99 s\n\nTotal Sales (Inclusive GST) RM 169.78\nRounding Adjustment RM .02\nRounding RM 169.80\nCASH RM 200.00\nCHANGE RM 30.20\n\n| GST Summary | Amount(RM) | Tax(RM) |\n| ----------- | ---------- | ------- |\n| s = 6%      | 160.17     | 9.61    |\n\n\nThank You. Please come again\nKeep the invoice for applicable returns",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,1031 @@
+{
+  "job": {
+    "id": "pjb-b2s2jswbdb67x935a6cpms4i55va",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:09:21.622927Z",
+    "error_message": null,
+    "name": "X51005442343.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:09:41.060921Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "handwritten: A03677",
+            "value": "handwritten: A03677",
+            "bbox": [
+              {
+                "h": 16.02,
+                "w": 10.49,
+                "x": 467.46,
+                "y": 976.18,
+                "confidence": 0.63,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# YONG TAT HARDWARE TRADING",
+            "value": "YONG TAT HARDWARE TRADING",
+            "bbox": [
+              {
+                "h": 21.47,
+                "w": 317.37,
+                "x": 363.66,
+                "y": 324.01,
+                "confidence": 1.0,
+                "end_index": 26,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 19.089999999999975,
+                "w": 106.89999999999998,
+                "x": 469.61,
+                "y": 343.57,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 35.02,
+                "w": 317.6,
+                "x": 363.31,
+                "y": 325.77,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(JM0292487-D)",
+            "value": "(JM0292487-D)",
+            "bbox": [
+              {
+                "h": 19.09,
+                "w": 106.9,
+                "x": 469.61,
+                "y": 343.57,
+                "confidence": 0.66,
+                "end_index": 12,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "NO 4, JALAN PERJIRANAN 10,\nTAMAN AIR BIRU,\n81700 PASIR GUDANG,\nJOHOR.",
+            "value": "NO 4, JALAN PERJIRANAN 10,\nTAMAN AIR BIRU,\n81700 PASIR GUDANG,\nJOHOR.",
+            "bbox": [
+              {
+                "h": 80.26,
+                "w": 208.45,
+                "x": 416.86,
+                "y": 367.08,
+                "confidence": 0.87,
+                "end_index": 68,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TEL : 07-2514733 FAX : 07-2514733",
+            "value": "TEL : 07-2514733 FAX : 07-2514733\n",
+            "bbox": [
+              {
+                "h": 15.19,
+                "w": 81.31,
+                "x": 567.77,
+                "y": 452.41,
+                "confidence": 0.76,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 6
+              },
+              {
+                "h": 14.58,
+                "w": 32.98,
+                "x": 529.49,
+                "y": 452.14,
+                "confidence": 0.68,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 17
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<YONGTAT99@YAHOO.COM.MY>",
+            "text": "YONGTAT99@YAHOO.COM.MY",
+            "url": "mailto:YONGTAT99@YAHOO.COM.MY",
+            "bbox": [
+              {
+                "h": 56.5,
+                "w": 257.04,
+                "x": 392.04,
+                "y": 450.47,
+                "confidence": 0.56,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "GST ID : 001570349056",
+            "value": "GST ID : 001570349056",
+            "bbox": [
+              {
+                "h": 17.66,
+                "w": 161.31,
+                "x": 439.06,
+                "y": 490.55,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 56.42,
+                "w": 257.4,
+                "x": 392.12,
+                "y": 450.96,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## <u>TAX INVOICE</u>",
+            "value": "<u>TAX INVOICE</u>",
+            "bbox": [
+              {
+                "h": 16.57,
+                "w": 103.9,
+                "x": 468.42,
+                "y": 518.43,
+                "confidence": 0.91,
+                "end_index": 20,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Doc No.** : C500035862 **Date**: 13/03/2018",
+            "value": "Doc No. : C500035862 Date: 13/03/2018",
+            "bbox": [
+              {
+                "h": 16.8,
+                "w": 360.72,
+                "x": 339.12,
+                "y": 543.61,
+                "confidence": 0.93,
+                "end_index": 44,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.09,
+                "w": 101.18,
+                "x": 430.47,
+                "y": 541.13,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 12
+              },
+              {
+                "h": 18.61,
+                "w": 120.74,
+                "x": 578.9,
+                "y": 542.56,
+                "confidence": 1.0,
+                "end_index": 44,
+                "label": "text",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 18.133125000000064,
+                "w": 54.88289880689348,
+                "x": 337.41051701281486,
+                "y": 541.1306249999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.08750000000009,
+                "w": 101.1754308440124,
+                "x": 430.4728236853734,
+                "y": 541.1306249999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.610312499999964,
+                "w": 120.74237737516569,
+                "x": 578.8952717631462,
+                "y": 542.5621874999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Cashier** : USER **Time**: 12:41:00",
+            "value": "Cashier : USER Time: 12:41:00",
+            "bbox": [
+              {
+                "h": 18.32,
+                "w": 343.44,
+                "x": 339.12,
+                "y": 564.99,
+                "confidence": 0.92,
+                "end_index": 36,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.66,
+                "w": 104.04,
+                "x": 578.42,
+                "y": 564.99,
+                "confidence": 1.0,
+                "end_index": 36,
+                "label": "text",
+                "r": null,
+                "start_index": 19
+              },
+              {
+                "h": 16.22437500000001,
+                "w": 53.92841361025188,
+                "x": 337.88775961113566,
+                "y": 564.035625,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.13312499999995,
+                "w": 56.314626601855934,
+                "x": 429.9955810870526,
+                "y": 563.08125,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.65593750000005,
+                "w": 104.03888643393725,
+                "x": 578.4180291648254,
+                "y": 564.9899999999999,
+                "confidence": 0.92,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Salesperson** : **Ref.**:",
+            "value": "Salesperson : Ref.:",
+            "bbox": [
+              {
+                "h": 16.8,
+                "w": 275.4,
+                "x": 339.12,
+                "y": 589.42,
+                "confidence": 0.9,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.66,
+                "w": 97.83,
+                "x": 337.89,
+                "y": 587.42,
+                "confidence": 1.0,
+                "end_index": 14,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.655937499999936,
+                "w": 97.83473265576669,
+                "x": 337.88775961113566,
+                "y": 587.4178125,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.56468749999999,
+                "w": 34.36146707909859,
+                "x": 581.7587273530711,
+                "y": 587.4178125,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"S/Price\",\"(GST) S/Price\",\"(GST) Amount\",\"Tax\"\n\"8603\",\"1.00 SHTS\",\"67.92\",\"72.00\",\"72.00\",\"SR\"\n\"0.8MM X 50\"\" X 50\"\" AR RED GASKET GA1801\",,,,,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>S/Price</th>\n        <th>(GST) S/Price</th>\n        <th>(GST) Amount</th>\n        <th>Tax</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>8603</td>\n        <td>1.00 SHTS</td>\n        <td>67.92</td>\n        <td>72.00</td>\n        <td>72.00</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"6\">0.8MM X 50\" X 50\" AR RED GASKET GA1801</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                                   | Qty       | S/Price | (GST) S/Price | (GST) Amount | Tax |\n| -------------------------------------- | --------- | ------- | ------------- | ------------ | --- |\n| 8603                                   | 1.00 SHTS | 67.92   | 72.00         | 72.00        | SR  |\n| 0.8MM X 50\" X 50\" AR RED GASKET GA1801 |           |         |               |              |     |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "S/Price",
+                "(GST) S/Price",
+                "(GST) Amount",
+                "Tax"
+              ],
+              [
+                "8603",
+                "1.00 SHTS",
+                "67.92",
+                "72.00",
+                "72.00",
+                "SR"
+              ],
+              [
+                "0.8MM X 50\" X 50\" AR RED GASKET GA1801",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 232.78,
+                "w": 83.25,
+                "x": 576.64,
+                "y": 621.86,
+                "confidence": 1.0,
+                "end_index": 406,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 14.34,
+                "w": 35.53,
+                "x": 622.77,
+                "y": 621.86,
+                "confidence": 1.0,
+                "end_index": 69,
+                "label": "text",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 14.82,
+                "w": 81.58,
+                "x": 578.31,
+                "y": 733.68,
+                "confidence": 1.0,
+                "end_index": 263,
+                "label": "text",
+                "r": null,
+                "start_index": 259
+              },
+              {
+                "h": 14.76,
+                "w": 36.85,
+                "x": 622.91,
+                "y": 698.2,
+                "confidence": 1.0,
+                "end_index": 273,
+                "label": "text",
+                "r": null,
+                "start_index": 269
+              },
+              {
+                "h": 15.24,
+                "w": 80.24,
+                "x": 576.64,
+                "y": 839.4,
+                "confidence": 1.0,
+                "end_index": 289,
+                "label": "text",
+                "r": null,
+                "start_index": 285
+              },
+              {
+                "h": 17.178749999999923,
+                "w": 20.521431727794948,
+                "x": 680.5479452054794,
+                "y": 655.1784375,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.178750000000036,
+                "w": 216.66813963764912,
+                "x": 335.5015466195316,
+                "y": 673.3115624999999,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 172.96,
+                "w": 372.05,
+                "x": 330.31,
+                "y": 541.5,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'Qty' expects numeric, got '1.00 SHTS' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 5 'Tax' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 0 'Item': 1/2 (50%) have interior whitespace",
+                "type": "possible_merged_columns"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Total Qty**: 1 **72.00**",
+            "value": "Total Qty: 1 72.00",
+            "bbox": [
+              {
+                "h": 360.28,
+                "w": 308.78,
+                "x": 352.68,
+                "y": 653.27,
+                "confidence": 0.47,
+                "end_index": 25,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total Sales (Excluding GST)** : 67.92",
+            "value": "Total Sales (Excluding GST) : 67.92",
+            "bbox": [
+              {
+                "h": 18.32,
+                "w": 272.16,
+                "x": 387.72,
+                "y": 731.43,
+                "confidence": 0.93,
+                "end_index": 38,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.0,
+                "w": 195.67,
+                "x": 387.04,
+                "y": 729.14,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.996250000000032,
+                "w": 195.66946531153343,
+                "x": 387.0437472381794,
+                "y": 729.1424999999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.610312499999964,
+                "w": 41.52010605391081,
+                "x": 618.9836500220945,
+                "y": 731.05125,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Discount** : 0.00",
+            "value": "Discount : 0.00",
+            "bbox": [
+              {
+                "h": 16.8,
+                "w": 146.88,
+                "x": 511.92,
+                "y": 758.92,
+                "confidence": 0.9,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.655937499999936,
+                "w": 72.06363234644283,
+                "x": 510.1723376049492,
+                "y": 757.77375,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.178750000000036,
+                "w": 31.975254087494477,
+                "x": 626.6195315952275,
+                "y": 758.7281249999999,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total GST** : 4.08",
+            "value": "Total GST : 4.08",
+            "bbox": [
+              {
+                "h": 15.27,
+                "w": 155.52,
+                "x": 502.2,
+                "y": 784.88,
+                "confidence": 0.9,
+                "end_index": 19,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.08750000000009,
+                "w": 81.6084843128591,
+                "x": 500.6274856385329,
+                "y": 782.5874999999999,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.655937499999936,
+                "w": 31.020768890852878,
+                "x": 627.5740167918691,
+                "y": 784.4962499999999,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Rounding** : 0.00",
+            "value": "Rounding : 0.00",
+            "bbox": [
+              {
+                "h": 18.32,
+                "w": 151.2,
+                "x": 506.52,
+                "y": 810.84,
+                "confidence": 0.91,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.56468749999999,
+                "w": 78.7450287229342,
+                "x": 504.4454264250994,
+                "y": 809.31,
+                "confidence": 0.91,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.178750000000036,
+                "w": 31.498011489173678,
+                "x": 626.1422889969067,
+                "y": 810.7415624999999,
+                "confidence": 0.91,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total Sales (Inclusive of GST)** : 72.00",
+            "value": "Total Sales (Inclusive of GST) : 72.00",
+            "bbox": [
+              {
+                "h": 18.32,
+                "w": 299.16,
+                "x": 357.48,
+                "y": 838.32,
+                "confidence": 0.93,
+                "end_index": 41,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.0,
+                "w": 226.21,
+                "x": 356.02,
+                "y": 835.56,
+                "confidence": 1.0,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 20.996249999999918,
+                "w": 226.21299160406545,
+                "x": 356.02297834732656,
+                "y": 835.5553124999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.224374999999895,
+                "w": 39.6111356606275,
+                "x": 617.5519222271321,
+                "y": 838.4184375,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**CASH** : 102.00",
+            "value": "CASH : 102.00",
+            "bbox": [
+              {
+                "h": 15.27,
+                "w": 132.84,
+                "x": 523.8,
+                "y": 865.81,
+                "confidence": 0.91,
+                "end_index": 16,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.65593750000005,
+                "w": 59.65532479010176,
+                "x": 523.057887759611,
+                "y": 863.2321874999999,
+                "confidence": 0.91,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.70156249999991,
+                "w": 46.29253203711892,
+                "x": 609.4387980556783,
+                "y": 864.6637499999999,
+                "confidence": 0.91,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Change** : 30.00",
+            "value": "Change : 30.00",
+            "bbox": [
+              {
+                "h": 16.8,
+                "w": 145.8,
+                "x": 510.84,
+                "y": 885.66,
+                "confidence": 0.93,
+                "end_index": 17,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.133125000000064,
+                "w": 72.06363234644277,
+                "x": 509.6950950066283,
+                "y": 883.2740624999999,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.22437500000001,
+                "w": 39.6111356606275,
+                "x": 616.5974370304905,
+                "y": 884.7056249999998,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**GST SUMMARY**",
+            "value": "GST SUMMARY",
+            "bbox": [
+              {
+                "h": 19.09,
+                "w": 112.63,
+                "x": 356.02,
+                "y": 928.13,
+                "confidence": 0.83,
+                "end_index": 14,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Tax Code\",\"%\",\"Amt (RM)\",\"Tax (RM)\"\n\"SR\",\"6\",\"67.92\",\"4.08\"\n,\"Total:\",\"67.92\",\"4.08\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Tax Code</th>\n        <th>%</th>\n        <th>Amt (RM)</th>\n        <th>Tax (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6</td>\n        <td>67.92</td>\n        <td>4.08</td>\n    </tr>\n    <tr>\n        <th> </th>\n        <th>Total:</th>\n        <th>67.92</th>\n        <th>4.08</th>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Tax Code | %      | Amt (RM) | Tax (RM) |\n| -------- | ------ | -------- | -------- |\n| SR       | 6      | 67.92    | 4.08     |\n|          | Total: | 67.92    | 4.08     |",
+            "rows": [
+              [
+                "Tax Code",
+                "%",
+                "Amt (RM)",
+                "Tax (RM)"
+              ],
+              [
+                "SR",
+                "6",
+                "67.92",
+                "4.08"
+              ],
+              [
+                "",
+                "Total:",
+                "67.92",
+                "4.08"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 60.13,
+                "w": 320.71,
+                "x": 357.93,
+                "y": 954.85,
+                "confidence": 1.0,
+                "end_index": 174,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 58.69,
+                "w": 136.97,
+                "x": 541.67,
+                "y": 956.28,
+                "confidence": 0.75,
+                "end_index": 168,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 36.27,
+                "w": 68.72,
+                "x": 357.93,
+                "y": 954.85,
+                "confidence": 0.75,
+                "end_index": 168,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 38.17,
+                "w": 45.82,
+                "x": 441.45,
+                "y": 975.37,
+                "confidence": 0.75,
+                "end_index": 168,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Tax Code' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 1 '%' expects numeric, got 'Total:' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT RETURNABLE, THANK YOU.",
+            "value": "GOODS SOLD ARE NOT RETURNABLE, THANK YOU.",
+            "bbox": [
+              {
+                "h": 18.41,
+                "w": 312.58,
+                "x": 352.61,
+                "y": 1035.13,
+                "confidence": 0.9,
+                "end_index": 40,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "caption": "",
+            "md": "",
+            "url": "",
+            "bbox": [
+              {
+                "h": 49.6,
+                "w": 110.88,
+                "x": 593.71,
+                "y": 252.92,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "image",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "image"
+          }
+        ],
+        "page_height": 1527.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "handwritten: A03677\n\n# YONG TAT HARDWARE TRADING\n(JM0292487-D)\n\nNO 4, JALAN PERJIRANAN 10,\nTAMAN AIR BIRU,\n81700 PASIR GUDANG,\nJOHOR.\n\nTEL : 07-2514733 FAX : 07-2514733\nYONGTAT99@YAHOO.COM.MY\n\nGST ID : 001570349056\n\n## <u>TAX INVOICE</u>\n\n**Doc No.** : C500035862 **Date**: 13/03/2018\n\n**Cashier** : USER **Time**: 12:41:00\n\n**Salesperson** : **Ref.**:\n\n| Item                                   | Qty       | S/Price | (GST) S/Price | (GST) Amount | Tax |\n| -------------------------------------- | --------- | ------- | ------------- | ------------ | --- |\n| 8603                                   | 1.00 SHTS | 67.92   | 72.00         | 72.00        | SR  |\n| 0.8MM X 50\" X 50\" AR RED GASKET GA1801 |           |         |               |              |     |\n\n\n**Total Qty**: 1 **72.00**\n\n**Total Sales (Excluding GST)** : 67.92\n\n**Discount** : 0.00\n\n**Total GST** : 4.08\n\n**Rounding** : 0.00\n\n**Total Sales (Inclusive of GST)** : 72.00\n\n**CASH** : 102.00\n\n**Change** : 30.00\n\n**GST SUMMARY**\n\n| Tax Code | %      | Amt (RM) | Tax (RM) |\n| -------- | ------ | -------- | -------- |\n| SR       | 6      | 67.92    | 4.08     |\n|          | Total: | 67.92    | 4.08     |\n\n\nGOODS SOLD ARE NOT RETURNABLE, THANK YOU.",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

@@ -1,0 +1,424 @@
+{
+  "job": {
+    "id": "pjb-kdhlcnh1vj3ufymyo87of8z52bvt",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:05:26.578075Z",
+    "error_message": null,
+    "name": "X51005361908.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:05:53.706748Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "logo: DA",
+            "value": "logo: DA",
+            "bbox": [
+              {
+                "h": 85.52,
+                "w": 195.88,
+                "x": 969.89,
+                "y": 215.63,
+                "confidence": 0.4,
+                "end_index": 7,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TED HENG STATIONERY & BOOKS",
+            "value": "TED HENG STATIONERY & BOOKS",
+            "bbox": [
+              {
+                "h": 65.24,
+                "w": 482.44,
+                "x": 782.0,
+                "y": 308.08,
+                "confidence": 0.86,
+                "end_index": 29,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(001451637-M)\nNO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN",
+            "value": "(001451637-M)\nNO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN",
+            "bbox": [
+              {
+                "h": 111.76,
+                "w": 398.53,
+                "x": 823.93,
+                "y": 367.45,
+                "confidence": 0.75,
+                "end_index": 77,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "TEL : 03-3271 9872 FAX : 03-3271 9487\nGST No. : 000689913856",
+            "value": "TEL : 03-3271 9872 FAX : 03-3271 9487\nGST No. : 000689913856",
+            "bbox": [
+              {
+                "h": 49.12,
+                "w": 329.15,
+                "x": 855.12,
+                "y": 430.38,
+                "confidence": 0.79,
+                "end_index": 59,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## SIMPLIFIED TAX INVOICE",
+            "value": "SIMPLIFIED TAX INVOICE",
+            "bbox": [
+              {
+                "h": 34.87,
+                "w": 405.34,
+                "x": 821.52,
+                "y": 508.86,
+                "confidence": 0.91,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "level": 2,
+            "md": "## CASH",
+            "value": "CASH",
+            "bbox": [
+              {
+                "h": 38.18,
+                "w": 114.27,
+                "x": 748.63,
+                "y": 570.32,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "Receipt No. : CS1803/28617 Date : 15/03/2018",
+            "value": "Receipt No. : CS1803/28617 Date : 15/03/2018",
+            "bbox": [
+              {
+                "h": 23.47,
+                "w": 58.08,
+                "x": 1092.17,
+                "y": 647.5,
+                "confidence": 0.63,
+                "end_index": 43,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"ITEM\",\"QTY\",\"U/P\",\"DISC%\",\"AMOUNT (RM)\"\n\"4974052801334<br/>- ARTLINE 70\",\"48\",\"2.70\",\"7.41\",\"120.00 *\"\n\"Total Qty. :\",,\"48\",,\"120.00\"\n\"SUB-TOTAL (EX)\",,,,\": 120.00\"\n\"TOTAL TAX\",,,,\": 7.20\"\n\"ROUNDING\",,,,\": 0.00\"\n\"TOTAL\",,,,\": 127.20\"\n\"CASH\",,,,\": 127.20\"\n\"CHANGE\",,,,\": 0.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>ITEM</th>\n        <th>QTY</th>\n        <th>U/P</th>\n        <th>DISC%</th>\n        <th>AMOUNT (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>4974052801334<br />- ARTLINE 70</td>\n        <td>48</td>\n        <td>2.70</td>\n        <td>7.41</td>\n        <td>120.00 *</td>\n    </tr>\n    <tr>\n        <td>Total Qty. :</td><td></td>\n        <td>48</td>\n        <td> </td>\n        <td>120.00</td>\n    </tr>\n    <tr>\n        <td>SUB-TOTAL (EX)</td><td></td><td></td><td></td>\n        <td>: 120.00</td>\n    </tr>\n    <tr>\n        <td>TOTAL TAX</td><td></td><td></td><td></td>\n        <td>: 7.20</td>\n    </tr>\n    <tr>\n        <td>ROUNDING</td><td></td><td></td><td></td>\n        <td>: 0.00</td>\n    </tr>\n    <tr>\n        <td><strong>TOTAL</strong></td><td></td><td></td><td></td>\n        <td>: <strong>127.20</strong></td>\n    </tr>\n    <tr>\n        <td><strong>CASH</strong></td><td></td><td></td><td></td>\n        <td>: <strong>127.20</strong></td>\n    </tr>\n    <tr>\n        <td><strong>CHANGE</strong></td><td></td><td></td><td></td>\n        <td>: <strong>0.00</strong></td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| ITEM                           | QTY | U/P  | DISC% | AMOUNT (RM)  |\n| ------------------------------ | --- | ---- | ----- | ------------ |\n| 4974052801334<br/>- ARTLINE 70 | 48  | 2.70 | 7.41  | 120.00 \\*    |\n| Total Qty. :                   |     | 48   |       | 120.00       |\n| SUB-TOTAL (EX)                 |     |      |       | : 120.00     |\n| TOTAL TAX                      |     |      |       | : 7.20       |\n| ROUNDING                       |     |      |       | : 0.00       |\n| **TOTAL**                      |     |      |       | : **127.20** |\n| **CASH**                       |     |      |       | : **127.20** |\n| **CHANGE**                     |     |      |       | : **0.00**   |",
+            "rows": [
+              [
+                "ITEM",
+                "QTY",
+                "U/P",
+                "DISC%",
+                "AMOUNT (RM)"
+              ],
+              [
+                "4974052801334<br/>- ARTLINE 70",
+                "48",
+                "2.70",
+                "7.41",
+                "120.00 *"
+              ],
+              [
+                "Total Qty. :",
+                "",
+                "48",
+                "",
+                "120.00"
+              ],
+              [
+                "SUB-TOTAL (EX)",
+                "",
+                "",
+                "",
+                ": 120.00"
+              ],
+              [
+                "TOTAL TAX",
+                "",
+                "",
+                "",
+                ": 7.20"
+              ],
+              [
+                "ROUNDING",
+                "",
+                "",
+                "",
+                ": 0.00"
+              ],
+              [
+                "TOTAL",
+                "",
+                "",
+                "",
+                ": 127.20"
+              ],
+              [
+                "CASH",
+                "",
+                "",
+                "",
+                ": 127.20"
+              ],
+              [
+                "CHANGE",
+                "",
+                "",
+                "",
+                ": 0.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 561.71,
+                "w": 575.91,
+                "x": 726.62,
+                "y": 638.92,
+                "confidence": 0.81,
+                "end_index": 708,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 28.24,
+                "w": 323.63,
+                "x": 731.51,
+                "y": 1072.18,
+                "confidence": 1.0,
+                "end_index": 219,
+                "label": "text",
+                "r": null,
+                "start_index": 215
+              },
+              {
+                "h": 38.18,
+                "w": 114.27,
+                "x": 748.63,
+                "y": 570.32,
+                "confidence": 1.0,
+                "end_index": 577,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 570
+              },
+              {
+                "h": 30.56,
+                "w": 322.45,
+                "x": 731.02,
+                "y": 1158.31,
+                "confidence": 1.0,
+                "end_index": 650,
+                "label": "text",
+                "r": null,
+                "start_index": 641
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 4 'AMOUNT (RM)' expects numeric, got '120.00 *' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 3,
+            "md": "### GST SUMMARY",
+            "value": "GST SUMMARY",
+            "bbox": [
+              {
+                "h": 38.01,
+                "w": 230.23,
+                "x": 903.38,
+                "y": 1300.34,
+                "confidence": 1.0,
+                "end_index": 14,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 4
+              },
+              {
+                "h": 288.67,
+                "w": 578.09,
+                "x": 716.24,
+                "y": 1274.22,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "csv": "\"TAX CODE\",\"%\",\"AMOUNT (RM)\",\"TAX (RM)\"\n\"SR\",\"6.00\",\"120.00\",\"7.20\"\n\"TOTAL :\",,\"120.00\",\"7.20\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>TAX CODE</th>\n        <th>%</th>\n        <th>AMOUNT (RM)</th>\n        <th>TAX (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6.00</td>\n        <td>120.00</td>\n        <td>7.20</td>\n    </tr>\n    <tr>\n        <td>TOTAL :</td><td></td>\n        <td>120.00</td>\n        <td>7.20</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| TAX CODE | %    | AMOUNT (RM) | TAX (RM) |\n| -------- | ---- | ----------- | -------- |\n| SR       | 6.00 | 120.00      | 7.20     |\n| TOTAL :  |      | 120.00      | 7.20     |",
+            "rows": [
+              [
+                "TAX CODE",
+                "%",
+                "AMOUNT (RM)",
+                "TAX (RM)"
+              ],
+              [
+                "SR",
+                "6.00",
+                "120.00",
+                "7.20"
+              ],
+              [
+                "TOTAL :",
+                "",
+                "120.00",
+                "7.20"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 288.67,
+                "w": 578.09,
+                "x": 716.24,
+                "y": 1274.22,
+                "confidence": 0.74,
+                "end_index": 178,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'TAX CODE' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Note: (\\*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).",
+            "value": "Note: (*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).",
+            "bbox": [
+              {
+                "h": 59.43,
+                "w": 540.67,
+                "x": 723.78,
+                "y": 1571.11,
+                "confidence": 0.87,
+                "end_index": 81,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GOODS SOLD ARE NOT RETURNABLE,\nTHANK YOU",
+            "value": "GOODS SOLD ARE NOT RETURNABLE,\nTHANK YOU",
+            "bbox": [
+              {
+                "h": 56.84,
+                "w": 425.1,
+                "x": 787.14,
+                "y": 1668.94,
+                "confidence": 0.9,
+                "end_index": 39,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 2339.0,
+        "page_number": 1,
+        "page_width": 1654.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "logo: DA\n\n## TED HENG STATIONERY & BOOKS\n\n(001451637-M)\nNO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI\nSELANGOR DARUL EHSAN\n\nTEL : 03-3271 9872 FAX : 03-3271 9487\nGST No. : 000689913856\n\n## SIMPLIFIED TAX INVOICE\n\n## CASH\n\nReceipt No. : CS1803/28617 Date : 15/03/2018\n\n| ITEM                           | QTY | U/P  | DISC% | AMOUNT (RM)  |\n| ------------------------------ | --- | ---- | ----- | ------------ |\n| 4974052801334<br/>- ARTLINE 70 | 48  | 2.70 | 7.41  | 120.00 \\*    |\n| Total Qty. :                   |     | 48   |       | 120.00       |\n| SUB-TOTAL (EX)                 |     |      |       | : 120.00     |\n| TOTAL TAX                      |     |      |       | : 7.20       |\n| ROUNDING                       |     |      |       | : 0.00       |\n| **TOTAL**                      |     |      |       | : **127.20** |\n| **CASH**                       |     |      |       | : **127.20** |\n| **CHANGE**                     |     |      |       | : **0.00**   |\n\n\n### GST SUMMARY\n\n| TAX CODE | %    | AMOUNT (RM) | TAX (RM) |\n| -------- | ---- | ----------- | -------- |\n| SR       | 6.00 | 120.00      | 7.20     |\n| TOTAL :  |      | 120.00      | 7.20     |\n\n\nNote: (*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).\n\nGOODS SOLD ARE NOT RETURNABLE,\nTHANK YOU",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

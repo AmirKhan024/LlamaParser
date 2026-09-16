@@ -1,0 +1,767 @@
+{
+  "job": {
+    "id": "pjb-1h5n8d6tj7dup19ijr3cwxay73h2",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T08:58:48.238942Z",
+    "error_message": null,
+    "name": "X00016469671.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T08:59:10.093384Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "level": 1,
+            "md": "# tan chay yee",
+            "value": "tan chay yee",
+            "bbox": [
+              {
+                "h": 38.79,
+                "w": 207.98,
+                "x": 117.46,
+                "y": 54.35,
+                "confidence": 0.92,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**OJC MARKETING SDN BHD**\nROC NO: 538358-H",
+            "value": "OJC MARKETING SDN BHD\nROC NO: 538358-H",
+            "bbox": [
+              {
+                "h": 19.57,
+                "w": 239.32,
+                "x": 61.24,
+                "y": 118.48,
+                "confidence": 0.88,
+                "end_index": 24,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.7,
+                "w": 157.89,
+                "x": 102.83,
+                "y": 141.86,
+                "confidence": 1.0,
+                "end_index": 41,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 26
+              },
+              {
+                "h": 38.64,
+                "w": 237.48,
+                "x": 62.58,
+                "y": 120.97,
+                "confidence": 0.88,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "NO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR",
+            "value": "NO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR",
+            "bbox": [
+              {
+                "h": 60.84,
+                "w": 193.66,
+                "x": 84.83,
+                "y": 165.79,
+                "confidence": 0.86,
+                "end_index": 59,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel:07-388 2218 Fax:07-388 8218\nEmail: ",
+            "value": "Tel:07-388 2218 Fax:07-388 8218\nEmail: ",
+            "bbox": [
+              {
+                "h": 15.76,
+                "w": 262.42,
+                "x": 50.45,
+                "y": 229.65,
+                "confidence": 0.78,
+                "end_index": 38,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.76,
+                "w": 262.42,
+                "x": 50.45,
+                "y": 229.65,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 39.63,
+                "w": 260.84,
+                "x": 50.75,
+                "y": 230.36,
+                "confidence": 0.78,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<ng@ojcgroup.com>",
+            "text": "ng@ojcgroup.com",
+            "url": "mailto:ng@ojcgroup.com",
+            "bbox": [
+              {
+                "h": 39.63,
+                "w": 260.84,
+                "x": 50.75,
+                "y": 230.36,
+                "confidence": 0.58,
+                "end_index": 16,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "level": 2,
+            "md": "## Cash Bill",
+            "value": "Cash Bill",
+            "bbox": [
+              {
+                "h": 16.67,
+                "w": 74.2,
+                "x": 144.76,
+                "y": 293.77,
+                "confidence": 0.95,
+                "end_index": 11,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Invoice No**: PEGIV-1030531",
+            "value": "Invoice No: PEGIV-1030531",
+            "bbox": [
+              {
+                "h": 144.05,
+                "w": 211.73,
+                "x": 27.65,
+                "y": 322.77,
+                "confidence": 0.88,
+                "end_index": 28,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.46,
+                "w": 108.41,
+                "x": 130.97,
+                "y": 323.98,
+                "confidence": 1.0,
+                "end_index": 28,
+                "label": "text",
+                "r": null,
+                "start_index": 16
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Date**: 02/01/2019 2:47:14 PM",
+            "value": "Date: 02/01/2019 2:47:14 PM",
+            "bbox": [
+              {
+                "h": 17.07,
+                "w": 286.13,
+                "x": 29.17,
+                "y": 347.65,
+                "confidence": 0.94,
+                "end_index": 30,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.19,
+                "w": 184.33,
+                "x": 132.91,
+                "y": 346.29,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 18.1875,
+                "w": 38.32058669460451,
+                "x": 27.649030906233627,
+                "y": 346.2900000000001,
+                "confidence": 0.94,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Cashier**: RHYS TAN",
+            "value": "Cashier: RHYS TAN",
+            "bbox": [
+              {
+                "h": 14.74,
+                "w": 181.96,
+                "x": 28.71,
+                "y": 368.6,
+                "confidence": 0.95,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 17.21750000000003,
+                "w": 57.238344683080136,
+                "x": 27.649030906233627,
+                "y": 367.38750000000005,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.560729166666647,
+                "w": 88.80360829507286,
+                "x": 122.2021538840785,
+                "y": 366.8923958333334,
+                "confidence": 0.95,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Sales Person**: FATIN",
+            "value": "Sales Person: FATIN",
+            "bbox": [
+              {
+                "h": 15.29,
+                "w": 98.71,
+                "x": 28.77,
+                "y": 390.54,
+                "confidence": 0.94,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Description\",\"Qty\",\"Price\",\"Amount\"\n\"000000111<br/>KINGS SAFETY<br/>SHOES KWD 805\",\"1\",\"170.00\",\"170.00\"\n,\"P004\",,",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Price</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>000000111<br />KINGS SAFETY<br />SHOES KWD 805</td>\n        <td>1</td>\n        <td>170.00</td>\n        <td>170.00</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>P004</td>\n        <td> </td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Description                                  | Qty  | Price  | Amount |\n| -------------------------------------------- | ---- | ------ | ------ |\n| 000000111<br/>KINGS SAFETY<br/>SHOES KWD 805 | 1    | 170.00 | 170.00 |\n|                                              | P004 |        |        |",
+            "rows": [
+              [
+                "Description",
+                "Qty",
+                "Price",
+                "Amount"
+              ],
+              [
+                "000000111<br/>KINGS SAFETY<br/>SHOES KWD 805",
+                "1",
+                "170.00",
+                "170.00"
+              ],
+              [
+                "",
+                "P004",
+                "",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 75.42,
+                "w": 292.98,
+                "x": 24.25,
+                "y": 429.23,
+                "confidence": 1.0,
+                "end_index": 294,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 16.56,
+                "w": 76.01,
+                "x": 26.63,
+                "y": 430.12,
+                "confidence": 0.79,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 19.57,
+                "w": 26.34,
+                "x": 154.56,
+                "y": 429.37,
+                "confidence": 0.79,
+                "end_index": 51,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 49
+              },
+              {
+                "h": 16.97,
+                "w": 35.65,
+                "x": 208.1,
+                "y": 429.23,
+                "confidence": 0.79,
+                "end_index": 60,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 56
+              },
+              {
+                "h": 17.94,
+                "w": 54.57,
+                "x": 262.67,
+                "y": 429.23,
+                "confidence": 0.79,
+                "end_index": 70,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 65
+              },
+              {
+                "h": 15.76,
+                "w": 67.91,
+                "x": 24.25,
+                "y": 451.05,
+                "confidence": 0.79,
+                "end_index": 158,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 150
+              },
+              {
+                "h": 53.6,
+                "w": 107.73,
+                "x": 24.25,
+                "y": 451.05,
+                "confidence": 0.79,
+                "end_index": 193,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 150
+              },
+              {
+                "h": 17.7,
+                "w": 47.05,
+                "x": 268.24,
+                "y": 450.57,
+                "confidence": 0.79,
+                "end_index": 209,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 204
+              },
+              {
+                "h": 18.07,
+                "w": 35.37,
+                "x": 168.86,
+                "y": 470.02,
+                "confidence": 0.79,
+                "end_index": 274,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 271
+              },
+              {
+                "h": 400.27,
+                "w": 399.4,
+                "x": 11.52,
+                "y": 315.75,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 101.8,
+                "w": 129.73,
+                "x": 277.36,
+                "y": 615.66,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "image",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'Qty' expects numeric, got 'P004' in row 2",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [text, paragraph_title, image, key-value-region] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "col 0 'Description': 1/1 (100%) have interior whitespace",
+                "type": "possible_merged_columns"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**Qty: 1 Total Item Discount**: 0.00",
+            "value": "Qty: 1 Total Item Discount: 0.00",
+            "bbox": [
+              {
+                "h": 18.62,
+                "w": 286.6,
+                "x": 27.78,
+                "y": 519.92,
+                "confidence": 0.8,
+                "end_index": 35,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.82,
+                "w": 193.41,
+                "x": 26.63,
+                "y": 518.2,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.64250000000004,
+                "w": 32.742273441592374,
+                "x": 283.523834468308,
+                "y": 516.7675,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Total Amount**: 170.00",
+            "value": "Total Amount: 170.00",
+            "bbox": [
+              {
+                "h": 15.52,
+                "w": 192.61,
+                "x": 121.77,
+                "y": 541.65,
+                "confidence": 0.9,
+                "end_index": 23,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.82,
+                "w": 99.34,
+                "x": 120.7,
+                "y": 539.27,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.81901041666663,
+                "w": 99.33962961821709,
+                "x": 120.69700798077218,
+                "y": 539.2745312500001,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.57177083333329,
+                "w": 47.412095954149095,
+                "x": 268.2013065047915,
+                "y": 538.5217708333334,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Round Amt**: 0.00",
+            "value": "Round Amt: 0.00",
+            "bbox": [
+              {
+                "h": 15.52,
+                "w": 175.94,
+                "x": 138.44,
+                "y": 562.6,
+                "confidence": 0.89,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 18.81901041666663,
+                "w": 83.53559763350074,
+                "x": 136.50103996548853,
+                "y": 560.3518229166667,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 18.066249999999968,
+                "w": 33.11320987273905,
+                "x": 282.50019258620154,
+                "y": 560.3518229166667,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**TOTAL**: **170.00**",
+            "value": "TOTAL: 170.00",
+            "bbox": [
+              {
+                "h": 16.3,
+                "w": 155.57,
+                "x": 159.27,
+                "y": 588.98,
+                "confidence": 0.9,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.157500000000027,
+                "w": 64.02933473022526,
+                "x": 157.8905185961236,
+                "y": 586.8500000000001,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 17.94500000000005,
+                "w": 60.14876898899945,
+                "x": 254.6621267679413,
+                "y": 587.335,
+                "confidence": 0.9,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**VISA CARD**: 170.00",
+            "value": "VISA CARD: 170.00",
+            "bbox": [
+              {
+                "h": 13.97,
+                "w": 187.05,
+                "x": 127.33,
+                "y": 615.37,
+                "confidence": 0.8,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 15.807968749999986,
+                "w": 73.75214926200968,
+                "x": 126.71759159399747,
+                "y": 613.7978125000001,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 16.560729166666647,
+                "w": 47.412095954149095,
+                "x": 268.2013065047915,
+                "y": 613.7978125000001,
+                "confidence": 0.8,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "xxxxxxxxxxxx4318",
+            "value": "xxxxxxxxxxxx4318",
+            "bbox": [
+              {
+                "h": 14.39,
+                "w": 121.67,
+                "x": 78.88,
+                "y": 636.6,
+                "confidence": 0.81,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Approval Code**: 123",
+            "value": "Approval Code: 123",
+            "bbox": [
+              {
+                "h": 17.97,
+                "w": 97.75,
+                "x": 75.02,
+                "y": 658.24,
+                "confidence": 0.93,
+                "end_index": 21,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "[handwriting: 170.00]",
+            "value": "[handwriting: 170.00]",
+            "bbox": null,
+            "type": "text"
+          },
+          {
+            "md": "Goods Sold Are Not Returnable & Refundable\n\\*\\*\\*\\*Thank You. Please Come Again.\\*\\*\\*\\*",
+            "value": "Goods Sold Are Not Returnable & Refundable\n****Thank You. Please Come Again.****",
+            "bbox": [
+              {
+                "h": 36.46,
+                "w": 296.49,
+                "x": 33.77,
+                "y": 730.68,
+                "confidence": 0.88,
+                "end_index": 87,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 776.0,
+        "page_number": 1,
+        "page_width": 463.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "# tan chay yee\n\n**OJC MARKETING SDN BHD**\nROC NO: 538358-H\n\nNO 2 & 4, JALAN BAYU 4,\nBANDAR SERI ALAM,\n81750 MASAI, JOHOR\n\nTel:07-388 2218 Fax:07-388 8218\nEmail: ng@ojcgroup.com\n\n## Cash Bill\n\n**Invoice No**: PEGIV-1030531\n\n**Date**: 02/01/2019 2:47:14 PM\n\n**Cashier**: RHYS TAN\n\n**Sales Person**: FATIN\n\n| Description                                  | Qty  | Price  | Amount |\n| -------------------------------------------- | ---- | ------ | ------ |\n| 000000111<br/>KINGS SAFETY<br/>SHOES KWD 805 | 1    | 170.00 | 170.00 |\n|                                              | P004 |        |        |\n\n\n**Qty: 1 Total Item Discount**: 0.00\n\n**Total Amount**: 170.00\n\n**Round Amt**: 0.00\n\n**TOTAL**: **170.00**\n\n**VISA CARD**: 170.00\n\nxxxxxxxxxxxx4318\n\n**Approval Code**: 123\n\n[handwriting: 170.00]\n\nGoods Sold Are Not Returnable & Refundable\n\\*\\*\\*\\*Thank You. Please Come Again.\\*\\*\\*\\*",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

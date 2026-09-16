@@ -1,0 +1,612 @@
+{
+  "job": {
+    "id": "pjb-1cyvxewygsao6k53a2g3phuh89gv",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:01:37.909015Z",
+    "error_message": null,
+    "name": "X51005230648.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:01:59.687772Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "CROSS CHANNEL NETWORK SDN. BHD.\n47, JALAN MERANTI 1, SEK. 3,\nBANDAR UTAMA BATANG KALI,\n44300 BATANG KALI, SELANGOR.",
+            "value": "CROSS CHANNEL NETWORK SDN. BHD.\n47, JALAN MERANTI 1, SEK. 3,\nBANDAR UTAMA BATANG KALI,\n44300 BATANG KALI, SELANGOR.",
+            "bbox": [
+              {
+                "h": 101.32,
+                "w": 394.73,
+                "x": 155.19,
+                "y": 127.88,
+                "confidence": 0.8,
+                "end_index": 114,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel : 03-6057 9688 Fax : 03-6057 9678",
+            "value": "Tel : 03-6057 9688 Fax : 03-6057 9678",
+            "bbox": [
+              {
+                "h": 22.0,
+                "w": 415.99,
+                "x": 144.62,
+                "y": 231.0,
+                "confidence": 0.59,
+                "end_index": 36,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 76.6,
+                "w": 417.02,
+                "x": 143.93,
+                "y": 231.81,
+                "confidence": 0.59,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST ID : 001151500288",
+            "value": "GST ID : 001151500288",
+            "bbox": [
+              {
+                "h": 22.0,
+                "w": 217.21,
+                "x": 236.18,
+                "y": 256.3,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Tax Invoice",
+            "value": "Tax Invoice",
+            "bbox": [
+              {
+                "h": 25.47,
+                "w": 147.44,
+                "x": 269.81,
+                "y": 282.19,
+                "confidence": 0.84,
+                "end_index": 13,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "No. : BTG-052332",
+            "value": "No. : BTG-052332",
+            "bbox": [
+              {
+                "h": 19.8,
+                "w": 158.37,
+                "x": 431.11,
+                "y": 302.23,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": ",\"Qty\",\"RM\",\"Tax\"\n\"SCHNEIDER E15R 13A SWITCH<br/>SOCKET OUTLET @ 6.0000\",\"1\",\"6.36\",\"SR\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th>Qty</th>\n        <th>RM</th>\n        <th>Tax</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SCHNEIDER E15R 13A SWITCH<br />SOCKET OUTLET @ 6.0000</td>\n        <td>1</td>\n        <td>6.36</td>\n        <td>SR</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "|                                                      | Qty | RM   | Tax |\n| ---------------------------------------------------- | --- | ---- | --- |\n| SCHNEIDER E15R 13A SWITCH<br/>SOCKET OUTLET @ 6.0000 | 1   | 6.36 | SR  |",
+            "rows": [
+              [
+                "",
+                "Qty",
+                "RM",
+                "Tax"
+              ],
+              [
+                "SCHNEIDER E15R 13A SWITCH<br/>SOCKET OUTLET @ 6.0000",
+                "1",
+                "6.36",
+                "SR"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 367.07,
+                "w": 552.49,
+                "x": 57.8,
+                "y": 321.82,
+                "confidence": 0.8,
+                "end_index": 226,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.21,
+                "w": 84.69,
+                "x": 401.79,
+                "y": 442.93,
+                "confidence": 1.0,
+                "end_index": 209,
+                "label": "text",
+                "r": null,
+                "start_index": 204
+              },
+              {
+                "h": 21.34,
+                "w": 87.7,
+                "x": 402.42,
+                "y": 420.1,
+                "confidence": 1.0,
+                "end_index": 218,
+                "label": "text",
+                "r": null,
+                "start_index": 215
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 3 'Tax' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 0 '': 1/1 (100%) have interior whitespace",
+                "type": "possible_merged_columns"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "Total Amt Incl. GST @ 6% : 6.36",
+            "value": "Total Amt Incl. GST @ 6% : 6.36",
+            "bbox": [
+              {
+                "h": 252.58,
+                "w": 356.28,
+                "x": 134.72,
+                "y": 417.44,
+                "confidence": 0.85,
+                "end_index": 30,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.55,
+                "w": 263.67,
+                "x": 134.72,
+                "y": 417.45,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Rounding Adjustment : -0.01",
+            "value": "Rounding Adjustment : -0.01",
+            "bbox": [
+              {
+                "h": 24.64,
+                "w": 305.04,
+                "x": 181.66,
+                "y": 441.76,
+                "confidence": 0.87,
+                "end_index": 26,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.55,
+                "w": 215.83,
+                "x": 180.91,
+                "y": 440.55,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.55000000000001,
+                "w": 215.83148558758316,
+                "x": 180.91352549889135,
+                "y": 440.55,
+                "confidence": 0.87,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.272835553278696,
+                "w": 52.71202882483368,
+                "x": 435.47868625277164,
+                "y": 440.307543545082,
+                "confidence": 0.87,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Total Amt Payable : 6.35",
+            "value": "Total Amt Payable : 6.35",
+            "bbox": [
+              {
+                "h": 23.76,
+                "w": 274.04,
+                "x": 214.52,
+                "y": 463.76,
+                "confidence": 0.89,
+                "end_index": 23,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.87,
+                "w": 189.41,
+                "x": 213.03,
+                "y": 463.17,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 22.865714651639337,
+                "w": 189.41189024390243,
+                "x": 213.0339246119734,
+                "y": 463.17325819672135,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.976396004098376,
+                "w": 48.49506651884701,
+                "x": 441.1013026607539,
+                "y": 462.4696977459017,
+                "confidence": 0.89,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Paid Amount : 10.00",
+            "value": "Paid Amount : 10.00",
+            "bbox": [
+              {
+                "h": 22.88,
+                "w": 221.34,
+                "x": 268.46,
+                "y": 485.76,
+                "confidence": 0.87,
+                "end_index": 18,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.65,
+                "w": 134.17,
+                "x": 266.15,
+                "y": 482.9,
+                "confidence": 1.0,
+                "end_index": 10,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.649999999999977,
+                "w": 134.17294900221725,
+                "x": 266.1463414634146,
+                "y": 482.9,
+                "confidence": 0.87,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 22.549999999999955,
+                "w": 58.28824833702879,
+                "x": 431.93791574279373,
+                "y": 485.375,
+                "confidence": 0.87,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Change : 3.65",
+            "value": "Change : 3.65",
+            "bbox": [
+              {
+                "h": 23.76,
+                "w": 171.74,
+                "x": 318.68,
+                "y": 504.24,
+                "confidence": 0.88,
+                "end_index": 12,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 24.75,
+                "w": 85.50776053215071,
+                "x": 316.4611973392461,
+                "y": 502.42499999999995,
+                "confidence": 0.88,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.272835553278696,
+                "w": 48.49506651884701,
+                "x": 443.20978381374726,
+                "y": 502.5726434426231,
+                "confidence": 0.88,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Total Qty Tender : 1.00",
+            "value": "Total Qty Tender : 1.00",
+            "bbox": [
+              {
+                "h": 23.78,
+                "w": 170.37,
+                "x": 228.93,
+                "y": 524.09,
+                "confidence": 0.64,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount<br/>(RM)\",\"Tax<br/>(RM)\"\n\"SR @ A\",\"6.00\",\"0.36\"\n\"Total\",\"6.00\",\"0.36\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">GST Summary</th>\n        <th>Amount</th>\n        <th>Tax</th>\n    </tr>\n    <tr>\n        <th>(RM)</th>\n        <th>(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR @ A</td>\n        <td>6.00</td>\n        <td>0.36</td>\n    </tr>\n    <tr>\n        <td>Total</td>\n        <td>6.00</td>\n        <td>0.36</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary | Amount<br/>(RM) | Tax<br/>(RM) |\n| ----------- | --------------- | ------------ |\n| SR @ A      | 6.00            | 0.36         |\n| Total       | 6.00            | 0.36         |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount<br/>(RM)",
+                "Tax<br/>(RM)"
+              ],
+              [
+                "SR @ A",
+                "6.00",
+                "0.36"
+              ],
+              [
+                "Total",
+                "6.00",
+                "0.36"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 256.0,
+                "w": 453.0,
+                "x": 128.0,
+                "y": 416.0,
+                "confidence": 0.4,
+                "end_index": 194,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 1 'Amount' expects numeric, got '(RM)' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "**THANK YOU**",
+            "value": "THANK YOU",
+            "bbox": [
+              {
+                "h": 22.14,
+                "w": 135.49,
+                "x": 321.85,
+                "y": 674.77,
+                "confidence": 0.92,
+                "end_index": 12,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Goods sold are not refundable nor exchangeble.",
+            "value": "Goods sold are not refundable nor exchangeble.",
+            "bbox": [
+              {
+                "h": 25.57,
+                "w": 470.43,
+                "x": 129.77,
+                "y": 696.58,
+                "confidence": 1.0,
+                "end_index": 45,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "For any enquiry, please e-mail us:",
+            "value": "For any enquiry, please e-mail us:",
+            "bbox": [
+              {
+                "h": 27.09,
+                "w": 334.9,
+                "x": 198.27,
+                "y": 723.49,
+                "confidence": 0.76,
+                "end_index": 33,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 56.16,
+                "w": 472.38,
+                "x": 128.88,
+                "y": 696.85,
+                "confidence": 0.76,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "<gowa9688@gmail.com>",
+            "text": "gowa9688@gmail.com",
+            "url": "mailto:gowa9688@gmail.com",
+            "bbox": [
+              {
+                "h": 26.66,
+                "w": 223.49,
+                "x": 254.48,
+                "y": 751.63,
+                "confidence": 0.68,
+                "end_index": 19,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "link"
+          },
+          {
+            "md": "29/01/2018 4:40:40 PM",
+            "value": "29/01/2018 4:40:40 PM",
+            "bbox": [
+              {
+                "h": 29.15,
+                "w": 240.58,
+                "x": 246.08,
+                "y": 775.23,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 880.0,
+        "page_number": 1,
+        "page_width": 620.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "CROSS CHANNEL NETWORK SDN. BHD.\n47, JALAN MERANTI 1, SEK. 3,\nBANDAR UTAMA BATANG KALI,\n44300 BATANG KALI, SELANGOR.\n\nTel : 03-6057 9688 Fax : 03-6057 9678\n\nGST ID : 001151500288\n\n## Tax Invoice\n\nNo. : BTG-052332\n\n|                                                      | Qty | RM   | Tax |\n| ---------------------------------------------------- | --- | ---- | --- |\n| SCHNEIDER E15R 13A SWITCH<br/>SOCKET OUTLET @ 6.0000 | 1   | 6.36 | SR  |\n\n\nTotal Amt Incl. GST @ 6% : 6.36\n\nRounding Adjustment : -0.01\n\nTotal Amt Payable : 6.35\n\nPaid Amount : 10.00\n\nChange : 3.65\n\nTotal Qty Tender : 1.00\n\n| GST Summary | Amount<br/>(RM) | Tax<br/>(RM) |\n| ----------- | --------------- | ------------ |\n| SR @ A      | 6.00            | 0.36         |\n| Total       | 6.00            | 0.36         |\n\n\n**THANK YOU**\n\nGoods sold are not refundable nor exchangeble.\n\nFor any enquiry, please e-mail us:\n\ngowa9688@gmail.com\n\n29/01/2018 4:40:40 PM",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

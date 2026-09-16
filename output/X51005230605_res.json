@@ -1,0 +1,540 @@
+{
+  "job": {
+    "id": "pjb-upmm4cjwyeke4gkc1xnana93f7gw",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T08:59:51.039088Z",
+    "error_message": null,
+    "name": "X51005230605.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:00:29.501598Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "PETRON BKT LANJAN SB",
+            "value": "PETRON BKT LANJAN SB",
+            "bbox": [
+              {
+                "h": 26.97,
+                "w": 269.39,
+                "x": 161.43,
+                "y": 111.61,
+                "confidence": 0.87,
+                "end_index": 19,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "ALSERKAM ENTERPRISE",
+            "value": "ALSERKAM ENTERPRISE",
+            "bbox": [
+              {
+                "h": 31.31,
+                "w": 257.68,
+                "x": 159.95,
+                "y": 139.86,
+                "confidence": 1.0,
+                "end_index": 18,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 35.91000000000001,
+                "w": 278.56,
+                "x": 156.19,
+                "y": 106.46,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel: 03-6156 8757 Co No: 001083069-M\nKM 458.4 BKT LANJAN UTARA,\nL/RAYA UTARA SELATAN,SG BULOH\n47000 SUNGAI BUL",
+            "value": "Tel: 03-6156 8757 Co No: 001083069-M\nKM 458.4 BKT LANJAN UTARA,\nL/RAYA UTARA SELATAN,SG BULOH\n47000 SUNGAI BUL",
+            "bbox": [
+              {
+                "h": 126.13,
+                "w": 525.79,
+                "x": 41.76,
+                "y": 171.18,
+                "confidence": 1.0,
+                "end_index": 109,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST ID No: 001210736640",
+            "value": "GST ID No: 001210736640",
+            "bbox": [
+              {
+                "h": 30.07,
+                "w": 302.07,
+                "x": 132.46,
+                "y": 330.99,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 27.49,
+                "w": 148.59,
+                "x": 216.39,
+                "y": 396.43,
+                "confidence": 0.88,
+                "end_index": 13,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "TAX INVOICE NO: 19729058\nPOS: 1\nStore No.: 129077 Babu\n01/02/2018 4:43:17 PM",
+            "value": "TAX INVOICE NO: 19729058\nPOS: 1\nStore No.: 129077 Babu\n01/02/2018 4:43:17 PM",
+            "bbox": [
+              {
+                "h": 128.17,
+                "w": 325.75,
+                "x": 25.48,
+                "y": 489.73,
+                "confidence": 0.75,
+                "end_index": 75,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 128.82,
+                "w": 523.87,
+                "x": 27.48,
+                "y": 490.02,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 31.335984375000066,
+                "w": 239.1707305669199,
+                "x": 28.398644067796607,
+                "y": 552.329015625,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 34.884734374999994,
+                "w": 61.35878433664527,
+                "x": 482.3251198129748,
+                "y": 548.7202500000001,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 32.98249999999996,
+                "w": 139.9050847457627,
+                "x": 25.475254237288134,
+                "y": 584.9175,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 30.073046875000045,
+                "w": 135.10732320280533,
+                "x": 198.5407422559906,
+                "y": 584.8079062500001,
+                "confidence": 0.75,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "A 2 double ,mint te 3.00\nA 1 sandwich vanill 1.90",
+            "value": "A 2 double ,mint te 3.00\nA 1 sandwich vanill 1.90",
+            "bbox": [
+              {
+                "h": 65.46,
+                "w": 530.99,
+                "x": 27.1,
+                "y": 677.35,
+                "confidence": 1.0,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 62.55,
+                "w": 279.06,
+                "x": 26.85,
+                "y": 678.64,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST RM: 0.28\nTotal RM inc.GST: 4.90",
+            "value": "GST RM: 0.28\nTotal RM inc.GST: 4.90",
+            "bbox": [
+              {
+                "h": 65.46,
+                "w": 492.8,
+                "x": 66.53,
+                "y": 773.54,
+                "confidence": 1.0,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 33.68,
+                "w": 491.46,
+                "x": 66.38,
+                "y": 773.67,
+                "confidence": 1.0,
+                "end_index": 11,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 30.07,
+                "w": 220.66,
+                "x": 67.56,
+                "y": 808.55,
+                "confidence": 1.0,
+                "end_index": 29,
+                "label": "text",
+                "r": null,
+                "start_index": 13
+              },
+              {
+                "h": 33.68,
+                "w": 491.46,
+                "x": 67.56,
+                "y": 804.94,
+                "confidence": 1.0,
+                "end_index": 34,
+                "label": "text",
+                "r": null,
+                "start_index": 13
+              },
+              {
+                "h": 31.275968749999947,
+                "w": 94.98811805961424,
+                "x": 66.38336060783166,
+                "y": 776.0724843749999,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 32.47889062499996,
+                "w": 62.538760958503815,
+                "x": 495.304862653419,
+                "y": 773.6666406250001,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 33.68181249999998,
+                "w": 62.53876095850376,
+                "x": 496.4848392752775,
+                "y": 804.9426093750001,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Cash 5.00\nChange 0.10",
+            "value": "Cash 5.00\nChange 0.10",
+            "bbox": [
+              {
+                "h": 70.81,
+                "w": 494.65,
+                "x": 63.45,
+                "y": 869.74,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 34.88,
+                "w": 492.64,
+                "x": 65.2,
+                "y": 869.9,
+                "confidence": 1.0,
+                "end_index": 8,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 40.9,
+                "w": 88.5,
+                "x": 63.43,
+                "y": 899.37,
+                "confidence": 1.0,
+                "end_index": 15,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 40.9,
+                "w": 494.41,
+                "x": 63.43,
+                "y": 899.37,
+                "confidence": 1.0,
+                "end_index": 20,
+                "label": "text",
+                "r": null,
+                "start_index": 10
+              },
+              {
+                "h": 33.68181249999998,
+                "w": 60.17880771478666,
+                "x": 65.2033839859731,
+                "y": 871.1033125000001,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 32.47889062499996,
+                "w": 62.538760958503815,
+                "x": 495.304862653419,
+                "y": 869.900390625,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 33.68181249999998,
+                "w": 62.538760958503815,
+                "x": 495.304862653419,
+                "y": 901.176359375,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"GST Summary\",\"Amount (RM)\",\"Tax (RM)\"\n\"A=6.00%\",\"4.62\",\"0.28\"",
+            "html": "<table>\n    <tr>\n        <th>GST Summary</th>\n        <th>Amount (RM)</th>\n        <th>Tax (RM)</th>\n    </tr>\n    <tr>\n        <td>A=6.00%</td>\n        <td>4.62</td>\n        <td>0.28</td>\n    </tr>\n</table>",
+            "md": "| GST Summary | Amount (RM) | Tax (RM) |\n| ----------- | ----------- | -------- |\n| A=6.00%     | 4.62        | 0.28     |",
+            "rows": [
+              [
+                "GST Summary",
+                "Amount (RM)",
+                "Tax (RM)"
+              ],
+              [
+                "A=6.00%",
+                "4.62",
+                "0.28"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 37.29,
+                "w": 356.94,
+                "x": 25.67,
+                "y": 964.93,
+                "confidence": 1.0,
+                "end_index": 121,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 37.29,
+                "w": 149.86,
+                "x": 25.67,
+                "y": 964.93,
+                "confidence": 1.0,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 33.68,
+                "w": 145.73,
+                "x": 236.89,
+                "y": 966.13,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 16
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, paragraph_title, key-value-region] but no table/form",
+                "type": "layout_lvm_disagreement"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "A TOTAL INCLUDES 6.00% GST",
+            "value": "A TOTAL INCLUDES 6.00% GST",
+            "bbox": [
+              {
+                "h": 34.35,
+                "w": 321.37,
+                "x": 100.01,
+                "y": 1061.7,
+                "confidence": 1.0,
+                "end_index": 25,
+                "label": "text",
+                "r": null,
+                "start_index": 4
+              },
+              {
+                "h": 29.86,
+                "w": 387.68,
+                "x": 29.82,
+                "y": 1064.79,
+                "confidence": 1.0,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Use 3000 Petron Miles\npoints to pay for\nRM45 Fuel",
+            "value": "Use 3000 Petron Miles\npoints to pay for\nRM45 Fuel",
+            "bbox": [
+              {
+                "h": 65.24,
+                "w": 275.52,
+                "x": 146.62,
+                "y": 1162.21,
+                "confidence": 0.93,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.15000000000009,
+                "w": 124.45000000000002,
+                "x": 226.77,
+                "y": 1225.78,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "text",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1336.0,
+        "page_number": 1,
+        "page_width": 616.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "PETRON BKT LANJAN SB\n\nALSERKAM ENTERPRISE\n\nTel: 03-6156 8757 Co No: 001083069-M\nKM 458.4 BKT LANJAN UTARA,\nL/RAYA UTARA SELATAN,SG BULOH\n47000 SUNGAI BUL\n\nGST ID No: 001210736640\n\n## TAX INVOICE\n\nTAX INVOICE NO: 19729058\nPOS: 1\nStore No.: 129077 Babu\n01/02/2018 4:43:17 PM\n\nA 2 double ,mint te 3.00\nA 1 sandwich vanill 1.90\n\nGST RM: 0.28\nTotal RM inc.GST: 4.90\n\nCash 5.00\nChange 0.10\n\n| GST Summary | Amount (RM) | Tax (RM) |\n| ----------- | ----------- | -------- |\n| A=6.00%     | 4.62        | 0.28     |\n\n\nA TOTAL INCLUDES 6.00% GST\n\nUse 3000 Petron Miles\npoints to pay for\nRM45 Fuel",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

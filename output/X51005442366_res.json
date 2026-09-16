@@ -1,0 +1,312 @@
+{
+  "job": {
+    "id": "pjb-002fkh3k9ql8myk0b194cy46mnnf",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:09:45.314602Z",
+    "error_message": null,
+    "name": "X51005442366.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:09:57.363822Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "handwritten: A03103",
+            "value": "handwritten: A03103",
+            "bbox": [
+              {
+                "h": 36.07,
+                "w": 77.13,
+                "x": 624.59,
+                "y": 357.23,
+                "confidence": 0.82,
+                "end_index": 18,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Triple Six Point Enterprise 666",
+            "value": "Triple Six Point Enterprise 666",
+            "bbox": [
+              {
+                "h": 23.49,
+                "w": 242.31,
+                "x": 443.43,
+                "y": 441.99,
+                "confidence": 0.81,
+                "end_index": 33,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "No 14&16 Jalan Permas 4/3 Bandar Baru Permas Jaya",
+            "value": "No 14&16 Jalan Permas 4/3 Bandar Baru Permas Jaya",
+            "bbox": [
+              {
+                "h": 24.43,
+                "w": 353.71,
+                "x": 385.12,
+                "y": 463.13,
+                "confidence": 0.77,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Tel : 016-7574666",
+            "value": "Tel : 016-7574666",
+            "bbox": [
+              {
+                "h": 17.67,
+                "w": 122.23,
+                "x": 503.24,
+                "y": 481.8,
+                "confidence": 1.0,
+                "end_index": 16,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Receipt no: REC-0014888",
+            "value": "Receipt no: REC-0014888",
+            "bbox": [
+              {
+                "h": 18.34,
+                "w": 163.08,
+                "x": 480.6,
+                "y": 579.11,
+                "confidence": 0.76,
+                "end_index": 22,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 21.01,
+                "w": 122.71,
+                "x": 520.9,
+                "y": 577.78,
+                "confidence": 1.0,
+                "end_index": 22,
+                "label": "text",
+                "r": null,
+                "start_index": 8
+              },
+              {
+                "h": 367.41,
+                "w": 378.87,
+                "x": 355.93,
+                "y": 581.44,
+                "confidence": 0.76,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Date: 22-03-2018 04:01:20 PM",
+            "value": "Date: 22-03-2018 04:01:20 PM",
+            "bbox": [
+              {
+                "h": 19.1,
+                "w": 174.27,
+                "x": 490.34,
+                "y": 515.7,
+                "confidence": 1.0,
+                "end_index": 27,
+                "label": "text",
+                "r": null,
+                "start_index": 4
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "Payment Type: Cash",
+            "value": "Payment Type: Cash",
+            "bbox": [
+              {
+                "h": 19.18,
+                "w": 134.51,
+                "x": 495.72,
+                "y": 535.78,
+                "confidence": 0.77,
+                "end_index": 17,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 2,
+            "md": "## Receipt",
+            "value": "Receipt",
+            "bbox": [
+              {
+                "h": 23.42,
+                "w": 72.86,
+                "x": 525.96,
+                "y": 555.73,
+                "confidence": 0.86,
+                "end_index": 9,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "(Receipt No.: REC-0014888)",
+            "value": "(Receipt No.: REC-0014888)",
+            "bbox": [
+              {
+                "h": 15.8,
+                "w": 85.77,
+                "x": 558.14,
+                "y": 581.06,
+                "confidence": 0.72,
+                "end_index": 25,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"QTY\",\"ITEM\",\"PRICE (RM)\",\"TOTAL (RM)\"\n\"1x\",\"VS FUJI500ml\",\"10.00\",\"10.00\"\n\"1x\",\"Apollo cake<br/>original 30s<br/>(Disc: 0.3000)\",\"6.80\",\"6.50\"\n\"1x\",\"TG Cashew<br/>nuts mixwd<br/>Almond smoke\",\"4.20\",\"4.20\"\n\"1x\",\"TG Coated<br/>coconut<br/>peanuts\",\"1.90\",\"1.90\"\n,\"Discount\",,\"0.30\"\n,\"Total Amount\",,\"22.60\"\n,\"Tendered\",,\"22.60\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>QTY</th>\n        <th>ITEM</th>\n        <th>PRICE (RM)</th>\n        <th>TOTAL (RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>1x</td>\n        <td>VS FUJI500ml</td>\n        <td>10.00</td>\n        <td>10.00</td>\n    </tr>\n    <tr>\n        <td>1x</td>\n        <td>Apollo cake<br />original 30s<br />(Disc: 0.3000)</td>\n        <td>6.80</td>\n        <td>6.50</td>\n    </tr>\n    <tr>\n        <td>1x</td>\n        <td>TG Cashew<br />nuts mixwd<br />Almond smoke</td>\n        <td>4.20</td>\n        <td>4.20</td>\n    </tr>\n    <tr>\n        <td>1x</td>\n        <td>TG Coated<br />coconut<br />peanuts</td>\n        <td>1.90</td>\n        <td>1.90</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>Discount</td>\n        <td> </td>\n        <td>0.30</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>Total Amount</td>\n        <td> </td>\n        <td>22.60</td>\n    </tr>\n    <tr>\n        <td> </td>\n        <td>Tendered</td>\n        <td> </td>\n        <td>22.60</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| QTY | ITEM                                            | PRICE (RM) | TOTAL (RM) |\n| --- | ----------------------------------------------- | ---------- | ---------- |\n| 1x  | VS FUJI500ml                                    | 10.00      | 10.00      |\n| 1x  | Apollo cake<br/>original 30s<br/>(Disc: 0.3000) | 6.80       | 6.50       |\n| 1x  | TG Cashew<br/>nuts mixwd<br/>Almond smoke       | 4.20       | 4.20       |\n| 1x  | TG Coated<br/>coconut<br/>peanuts               | 1.90       | 1.90       |\n|     | Discount                                        |            | 0.30       |\n|     | Total Amount                                    |            | 22.60      |\n|     | Tendered                                        |            | 22.60      |",
+            "rows": [
+              [
+                "QTY",
+                "ITEM",
+                "PRICE (RM)",
+                "TOTAL (RM)"
+              ],
+              [
+                "1x",
+                "VS FUJI500ml",
+                "10.00",
+                "10.00"
+              ],
+              [
+                "1x",
+                "Apollo cake<br/>original 30s<br/>(Disc: 0.3000)",
+                "6.80",
+                "6.50"
+              ],
+              [
+                "1x",
+                "TG Cashew<br/>nuts mixwd<br/>Almond smoke",
+                "4.20",
+                "4.20"
+              ],
+              [
+                "1x",
+                "TG Coated<br/>coconut<br/>peanuts",
+                "1.90",
+                "1.90"
+              ],
+              [
+                "",
+                "Discount",
+                "",
+                "0.30"
+              ],
+              [
+                "",
+                "Total Amount",
+                "",
+                "22.60"
+              ],
+              [
+                "",
+                "Tendered",
+                "",
+                "22.60"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 367.41,
+                "w": 378.87,
+                "x": 355.93,
+                "y": 581.44,
+                "confidence": 0.91,
+                "end_index": 754,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'QTY' expects numeric, got '1x' in row 1",
+                "type": "header_value_type_mismatch"
+              }
+            ],
+            "type": "table"
+          }
+        ],
+        "page_height": 1528.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "handwritten: A03103\n\n## Triple Six Point Enterprise 666\n\nNo 14&16 Jalan Permas 4/3 Bandar Baru Permas Jaya\n\nTel : 016-7574666\n\nReceipt no: REC-0014888\n\nDate: 22-03-2018 04:01:20 PM\n\nPayment Type: Cash\n\n## Receipt\n\n(Receipt No.: REC-0014888)\n\n| QTY | ITEM                                            | PRICE (RM) | TOTAL (RM) |\n| --- | ----------------------------------------------- | ---------- | ---------- |\n| 1x  | VS FUJI500ml                                    | 10.00      | 10.00      |\n| 1x  | Apollo cake<br/>original 30s<br/>(Disc: 0.3000) | 6.80       | 6.50       |\n| 1x  | TG Cashew<br/>nuts mixwd<br/>Almond smoke       | 4.20       | 4.20       |\n| 1x  | TG Coated<br/>coconut<br/>peanuts               | 1.90       | 1.90       |\n|     | Discount                                        |            | 0.30       |\n|     | Total Amount                                    |            | 22.60      |\n|     | Tendered                                        |            | 22.60      |",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

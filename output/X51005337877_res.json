@@ -1,0 +1,767 @@
+{
+  "job": {
+    "id": "pjb-wo3frow766s6wfr6ez0d69uqhu6i",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:04:42.178641Z",
+    "error_message": null,
+    "name": "X51005337877.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:05:00.052702Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "signature: Jeff Pro Dpars.",
+            "value": "signature: Jeff Pro Dpars.",
+            "bbox": [
+              {
+                "h": 50.13,
+                "w": 112.21,
+                "x": 443.99,
+                "y": 37.56,
+                "confidence": 0.73,
+                "end_index": 25,
+                "label": "image",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# UROKO JAPANESE CUISINE SDN BHD",
+            "value": "UROKO JAPANESE CUISINE SDN BHD",
+            "bbox": [
+              {
+                "h": 25.62,
+                "w": 519.35,
+                "x": 58.25,
+                "y": 124.57,
+                "confidence": 0.92,
+                "end_index": 31,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "22A-1, JALAN 17/54,\nSECTION 17,\n46400 PETALING JAYA,\nSELANGOR.\n03-7932 1023/0191",
+            "value": "22A-1, JALAN 17/54,\nSECTION 17,\n46400 PETALING JAYA,\nSELANGOR.\n03-7932 1023/0191",
+            "bbox": [
+              {
+                "h": 155.96,
+                "w": 256.76,
+                "x": 187.46,
+                "y": 151.95,
+                "confidence": 1.0,
+                "end_index": 79,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 59.24,
+                "w": 230.98,
+                "x": 199.85,
+                "y": 151.95,
+                "confidence": 1.0,
+                "end_index": 30,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.8,
+                "w": 256.76,
+                "x": 187.46,
+                "y": 213.87,
+                "confidence": 1.0,
+                "end_index": 51,
+                "label": "text",
+                "r": null,
+                "start_index": 32
+              },
+              {
+                "h": 27.78,
+                "w": 219.27,
+                "x": 205.88,
+                "y": 280.13,
+                "confidence": 1.0,
+                "end_index": 79,
+                "label": "text",
+                "r": null,
+                "start_index": 63
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "GST Reg No: 001126838272",
+            "value": "GST Reg No: 001126838272",
+            "bbox": [
+              {
+                "h": 29.12,
+                "w": 316.01,
+                "x": 150.98,
+                "y": 312.26,
+                "confidence": 1.0,
+                "end_index": 23,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Bill No** : 01H-25029\n**Date** : 20/03/2018 6:41:02 PM\n**Cashier** : RESAN\n**Table No** : S09",
+            "value": "Bill No : 01H-25029\nDate : 20/03/2018 6:41:02 PM\nCashier : RESAN\nTable No : S09",
+            "bbox": [
+              {
+                "h": 28.78,
+                "w": 331.07,
+                "x": 53.9,
+                "y": 378.2,
+                "confidence": 0.93,
+                "end_index": 22,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 27.44,
+                "w": 436.52,
+                "x": 53.23,
+                "y": 411.67,
+                "confidence": 0.93,
+                "end_index": 55,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 24
+              },
+              {
+                "h": 26.77,
+                "w": 249.73,
+                "x": 240.02,
+                "y": 412.34,
+                "confidence": 1.0,
+                "end_index": 55,
+                "label": "text",
+                "r": null,
+                "start_index": 35
+              },
+              {
+                "h": 23.09,
+                "w": 258.77,
+                "x": 53.9,
+                "y": 445.13,
+                "confidence": 0.93,
+                "end_index": 75,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 57
+              },
+              {
+                "h": 24.77,
+                "w": 231.32,
+                "x": 52.89,
+                "y": 474.92,
+                "confidence": 0.93,
+                "end_index": 94,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 77
+              },
+              {
+                "h": 120.46,
+                "w": 434.9,
+                "x": 53.44,
+                "y": 379.81,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 27.109687500000007,
+                "w": 66.95141484249868,
+                "x": 53.89588894821143,
+                "y": 378.196875,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 27.109687500000007,
+                "w": 143.61078483715966,
+                "x": 241.35985050720768,
+                "y": 379.8703125,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 26.105624999999975,
+                "w": 53.22637479978644,
+                "x": 53.22637479978644,
+                "y": 411.665625,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 26.774999999999977,
+                "w": 249.72877736252005,
+                "x": 240.0208222103577,
+                "y": 412.335,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 21.75468749999999,
+                "w": 74.31607047517352,
+                "x": 53.89588894821143,
+                "y": 445.46906249999995,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.093437499999993,
+                "w": 70.63374265883607,
+                "x": 242.02936465563266,
+                "y": 445.134375,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 24.76687499999997,
+                "w": 92.72770955686065,
+                "x": 52.891617725573944,
+                "y": 474.9215625,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.762812499999995,
+                "w": 42.848905499199134,
+                "x": 241.35985050720768,
+                "y": 475.92562499999997,
+                "confidence": 0.93,
+                "end_index": null,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Qty\",\"Description\",\"Amount\"\n\"1\",\"KO NABE INANIWA<br/>UDON @ 24.00\",\"24.00 SR\"\n\"1\",\"GREEN TEA @ 1.00\",\"1.00 SR\"\n\"1\",\"GYOZA 5pcs @ 15.00\",\"15.00 SR\"\n\"1\",\"GARLIC CHAHAN @\",\"6.00 SR\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Qty</th>\n        <th>Description</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>1</td>\n        <td>KO NABE INANIWA<br />UDON @ 24.00</td>\n        <td>24.00 SR</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>GREEN TEA @ 1.00</td>\n        <td>1.00 SR</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>GYOZA 5pcs @ 15.00</td>\n        <td>15.00 SR</td>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>GARLIC CHAHAN @</td>\n        <td>6.00 SR</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Qty | Description                      | Amount   |\n| --- | -------------------------------- | -------- |\n| 1   | KO NABE INANIWA<br/>UDON @ 24.00 | 24.00 SR |\n| 1   | GREEN TEA @ 1.00                 | 1.00 SR  |\n| 1   | GYOZA 5pcs @ 15.00               | 15.00 SR |\n| 1   | GARLIC CHAHAN @                  | 6.00 SR  |",
+            "rows": [
+              [
+                "Qty",
+                "Description",
+                "Amount"
+              ],
+              [
+                "1",
+                "KO NABE INANIWA<br/>UDON @ 24.00",
+                "24.00 SR"
+              ],
+              [
+                "1",
+                "GREEN TEA @ 1.00",
+                "1.00 SR"
+              ],
+              [
+                "1",
+                "GYOZA 5pcs @ 15.00",
+                "15.00 SR"
+              ],
+              [
+                "1",
+                "GARLIC CHAHAN @",
+                "6.00 SR"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 193.45,
+                "w": 297.6,
+                "x": 52.56,
+                "y": 523.45,
+                "confidence": 0.5,
+                "end_index": 290,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 59.24,
+                "w": 128.55,
+                "x": 460.96,
+                "y": 523.79,
+                "confidence": 0.5,
+                "end_index": 158,
+                "label": "text",
+                "r": null,
+                "start_index": 43
+              },
+              {
+                "h": 30.46,
+                "w": 193.82,
+                "x": 52.56,
+                "y": 523.45,
+                "confidence": 0.9,
+                "end_index": 18,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 27.78,
+                "w": 102.44,
+                "x": 460.96,
+                "y": 523.79,
+                "confidence": 0.9,
+                "end_index": 48,
+                "label": "text",
+                "r": null,
+                "start_index": 43
+              },
+              {
+                "h": 57.57,
+                "w": 237.01,
+                "x": 78.33,
+                "y": 555.25,
+                "confidence": 0.9,
+                "end_index": 147,
+                "label": "text",
+                "r": null,
+                "start_index": 110
+              },
+              {
+                "h": 27.78,
+                "w": 108.46,
+                "x": 481.05,
+                "y": 555.25,
+                "confidence": 0.9,
+                "end_index": 158,
+                "label": "text",
+                "r": null,
+                "start_index": 151
+              },
+              {
+                "h": 27.78,
+                "w": 248.39,
+                "x": 78.67,
+                "y": 618.84,
+                "confidence": 0.9,
+                "end_index": 185,
+                "label": "text",
+                "r": null,
+                "start_index": 164
+              },
+              {
+                "h": 31.13,
+                "w": 274.84,
+                "x": 75.32,
+                "y": 651.64,
+                "confidence": 0.9,
+                "end_index": 241,
+                "label": "text",
+                "r": null,
+                "start_index": 218
+              },
+              {
+                "h": 29.45,
+                "w": 241.69,
+                "x": 76.99,
+                "y": 687.45,
+                "confidence": 0.9,
+                "end_index": 290,
+                "label": "text",
+                "r": null,
+                "start_index": 272
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 2 'Amount' expects numeric, got '24.00 SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"Total :\",\"46.00\"\n\"Discount :\",\"(.00)\"\n\"Service Chg 10.00% :\",\"4.00\"\n\"GST :\",\"3.00\"\n\"Grand Total:\",\"53.00\"\n\"Net Total :\",\"53.00\"",
+            "html": "<table>\n    <tr><td>Total :</td><td>46.00</td></tr>\n    <tr><td>Discount :</td><td>(.00)</td></tr>\n    <tr><td>Service Chg 10.00% :</td><td>4.00</td></tr>\n    <tr><td>GST :</td><td>3.00</td></tr>\n    <tr><td>Grand Total:</td><td>53.00</td></tr>\n    <tr><td>Net Total :</td><td>53.00</td></tr>\n</table>",
+            "md": "| Total :              | 46.00 |\n| -------------------- | ----- |\n| Discount :           | (.00) |\n| Service Chg 10.00% : | 4.00  |\n| GST :                | 3.00  |\n| Grand Total:         | 53.00 |\n| Net Total :          | 53.00 |",
+            "rows": [
+              [
+                "Total :",
+                "46.00"
+              ],
+              [
+                "Discount :",
+                "(.00)"
+              ],
+              [
+                "Service Chg 10.00% :",
+                "4.00"
+              ],
+              [
+                "GST :",
+                "3.00"
+              ],
+              [
+                "Grand Total:",
+                "53.00"
+              ],
+              [
+                "Net Total :",
+                "53.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 153.96,
+                "w": 394.68,
+                "x": 157.0,
+                "y": 751.37,
+                "confidence": 1.0,
+                "end_index": 229,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 26.77,
+                "w": 76.32,
+                "x": 315.68,
+                "y": 751.37,
+                "confidence": 0.87,
+                "end_index": 8,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 26.44,
+                "w": 67.96,
+                "x": 482.05,
+                "y": 751.71,
+                "confidence": 0.87,
+                "end_index": 29,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 25
+              },
+              {
+                "h": 28.45,
+                "w": 113.15,
+                "x": 277.85,
+                "y": 783.5,
+                "confidence": 0.87,
+                "end_index": 77,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 68
+              },
+              {
+                "h": 36.48,
+                "w": 64.27,
+                "x": 487.41,
+                "y": 781.16,
+                "confidence": 0.87,
+                "end_index": 95,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 91
+              },
+              {
+                "h": 31.13,
+                "w": 229.98,
+                "x": 157.0,
+                "y": 814.29,
+                "confidence": 0.87,
+                "end_index": 118,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 102
+              },
+              {
+                "h": 29.45,
+                "w": 55.57,
+                "x": 494.77,
+                "y": 814.29,
+                "confidence": 0.87,
+                "end_index": 127,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 124
+              },
+              {
+                "h": 27.44,
+                "w": 63.6,
+                "x": 327.06,
+                "y": 846.09,
+                "confidence": 0.87,
+                "end_index": 138,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 134
+              },
+              {
+                "h": 27.78,
+                "w": 53.9,
+                "x": 496.11,
+                "y": 846.09,
+                "confidence": 0.87,
+                "end_index": 160,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 157
+              },
+              {
+                "h": 28.78,
+                "w": 143.61,
+                "x": 243.37,
+                "y": 876.55,
+                "confidence": 0.87,
+                "end_index": 178,
+                "label": "key-value-region",
+                "r": null,
+                "start_index": 167
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Total :' expects numeric, got 'Discount :' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "csv": "\"GST Summary\",\"%\",\"Amount(RM)\",\"Tax(RM)\"\n\"SR\",\"6.00\",\"50.00\",\"3.00\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>GST Summary</th>\n        <th>%</th>\n        <th>Amount(RM)</th>\n        <th>Tax(RM)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6.00</td>\n        <td>50.00</td>\n        <td>3.00</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| GST Summary | %    | Amount(RM) | Tax(RM) |\n| ----------- | ---- | ---------- | ------- |\n| SR          | 6.00 | 50.00      | 3.00    |",
+            "rows": [
+              [
+                "GST Summary",
+                "%",
+                "Amount(RM)",
+                "Tax(RM)"
+              ],
+              [
+                "SR",
+                "6.00",
+                "50.00",
+                "3.00"
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 61.25,
+                "w": 485.06,
+                "x": 68.96,
+                "y": 972.6,
+                "confidence": 1.0,
+                "end_index": 136,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 32.8,
+                "w": 149.97,
+                "x": 68.96,
+                "y": 972.6,
+                "confidence": 0.84,
+                "end_index": 12,
+                "label": "text",
+                "r": null,
+                "start_index": 2
+              },
+              {
+                "h": 25.77,
+                "w": 121.52,
+                "x": 319.69,
+                "y": 976.28,
+                "confidence": 0.84,
+                "end_index": 32,
+                "label": "text",
+                "r": null,
+                "start_index": 23
+              },
+              {
+                "h": 30.12,
+                "w": 93.4,
+                "x": 460.63,
+                "y": 973.94,
+                "confidence": 0.84,
+                "end_index": 42,
+                "label": "text",
+                "r": null,
+                "start_index": 36
+              },
+              {
+                "h": 25.77,
+                "w": 35.82,
+                "x": 68.96,
+                "y": 1007.41,
+                "confidence": 0.84,
+                "end_index": 95,
+                "label": "text",
+                "r": null,
+                "start_index": 94
+              },
+              {
+                "h": 26.77,
+                "w": 52.22,
+                "x": 223.62,
+                "y": 1006.41,
+                "confidence": 0.84,
+                "end_index": 111,
+                "label": "text",
+                "r": null,
+                "start_index": 108
+              },
+              {
+                "h": 27.11,
+                "w": 64.27,
+                "x": 377.61,
+                "y": 1006.74,
+                "confidence": 0.84,
+                "end_index": 119,
+                "label": "text",
+                "r": null,
+                "start_index": 115
+              },
+              {
+                "h": 25.44,
+                "w": 50.88,
+                "x": 499.46,
+                "y": 1008.08,
+                "confidence": 0.84,
+                "end_index": 131,
+                "label": "text",
+                "r": null,
+                "start_index": 128
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "layout detected [text, key-value-region, paragraph_title, image] but no table/form",
+                "type": "layout_lvm_disagreement"
+              },
+              {
+                "details": "3 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "caption": "",
+            "md": "",
+            "url": "",
+            "bbox": [
+              {
+                "h": 75.64,
+                "w": 238.35,
+                "x": 166.04,
+                "y": 31.8,
+                "confidence": 0.5,
+                "end_index": null,
+                "label": "image",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "image"
+          }
+        ],
+        "page_height": 1071.0,
+        "page_number": 1,
+        "page_width": 627.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "signature: Jeff Pro Dpars.\n\n# UROKO JAPANESE CUISINE SDN BHD\n\n22A-1, JALAN 17/54,\nSECTION 17,\n46400 PETALING JAYA,\nSELANGOR.\n03-7932 1023/0191\n\nGST Reg No: 001126838272\n\n**Bill No** : 01H-25029\n**Date** : 20/03/2018 6:41:02 PM\n**Cashier** : RESAN\n**Table No** : S09\n\n| Qty | Description                      | Amount   |\n| --- | -------------------------------- | -------- |\n| 1   | KO NABE INANIWA<br/>UDON @ 24.00 | 24.00 SR |\n| 1   | GREEN TEA @ 1.00                 | 1.00 SR  |\n| 1   | GYOZA 5pcs @ 15.00               | 15.00 SR |\n| 1   | GARLIC CHAHAN @                  | 6.00 SR  |\n\n\n| Total :              | 46.00 |\n| -------------------- | ----- |\n| Discount :           | (.00) |\n| Service Chg 10.00% : | 4.00  |\n| GST :                | 3.00  |\n| Grand Total:         | 53.00 |\n| Net Total :          | 53.00 |\n\n\n| GST Summary | %    | Amount(RM) | Tax(RM) |\n| ----------- | ---- | ---------- | ------- |\n| SR          | 6.00 | 50.00      | 3.00    |",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}

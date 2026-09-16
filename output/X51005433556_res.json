@@ -1,0 +1,418 @@
+{
+  "job": {
+    "id": "pjb-x8vchzhfhkewc5yft3tq1gri5wua",
+    "project_id": "dd2fee8e-6d53-4253-ae7c-f8c6355f58f4",
+    "status": "COMPLETED",
+    "created_at": "2026-09-16T09:08:19.735712Z",
+    "error_message": null,
+    "name": "X51005433556.pdf",
+    "tier": "agentic",
+    "updated_at": "2026-09-16T09:08:36.430301Z",
+    "usage": null,
+    "user_metadata": null
+  },
+  "forms": null,
+  "images_content_metadata": null,
+  "items": {
+    "pages": [
+      {
+        "items": [
+          {
+            "md": "A03064",
+            "value": "A03064",
+            "bbox": [
+              {
+                "h": 41.38,
+                "w": 90.58,
+                "x": 520.42,
+                "y": 192.15,
+                "confidence": 0.82,
+                "end_index": 5,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "YHM Aeon Tebrau City\nS117, Second Floor,\nAeon Tebrau City,\n1, Jalan Desa Tebrau,\nTaman Desa Tebrau,\n81100 Johor Bahru, Johor.\n002105827328",
+            "value": "YHM Aeon Tebrau City\nS117, Second Floor,\nAeon Tebrau City,\n1, Jalan Desa Tebrau,\nTaman Desa Tebrau,\n81100 Johor Bahru, Johor.\n002105827328",
+            "bbox": [
+              {
+                "h": 136.2,
+                "w": 194.35,
+                "x": 347.95,
+                "y": 227.2,
+                "confidence": 0.89,
+                "end_index": 137,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "level": 1,
+            "md": "# TAX INVOICE",
+            "value": "TAX INVOICE",
+            "bbox": [
+              {
+                "h": 29.05,
+                "w": 231.76,
+                "x": 324.23,
+                "y": 362.59,
+                "confidence": 0.88,
+                "end_index": 12,
+                "label": "paragraph_title",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Order No.** 1000249 11/03/2018 07:09 PM\n**Receipt No.** :003-1220845 **Pax:** 1\n**Cashier** :Cashiar\n**Eat In**",
+            "value": "Order No. 1000249 11/03/2018 07:09 PM\nReceipt No. :003-1220845 Pax: 1\nCashier :Cashiar\nEat In",
+            "bbox": [
+              {
+                "h": 79.21,
+                "w": 312.59,
+                "x": 259.62,
+                "y": 407.04,
+                "confidence": 1.0,
+                "end_index": 112,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 23.38,
+                "w": 218.58,
+                "x": 353.64,
+                "y": 408.47,
+                "confidence": 1.0,
+                "end_index": 40,
+                "label": "text",
+                "r": null,
+                "start_index": 14
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Item\",\"Qty\",\"U.Price\",\"Amount\",\"Tax\"\n\"FG-A00019\",\"1\",\"1.50\",\"1.50\",\"SR\"\n\"Green Tea\",,,,\n\"FG-Y00030\",\"1\",\"12.80\",\"12.80\",\"SR\"\n\"Yakiniku Bowl R\",,,,\n\"FG-Y00183\",\"2\",\"15.80\",\"31.60\",\"SR\"\n\"Negi Tama Beef Bowl R\",,,,\n\"FG-Y00102\",\"1\",\"3.80\",\"3.80\",\"SR\"\n\"Miso/Wakame+Green Tea\",,,,\n\"FG-Y00264\",\"1\",\"0.00\",\"0.00\",\"SR\"\n\"Miso Soup\",,,,\n\"SubTotal\",,\":\",\"49.70\",\n\"Total\",,\":\",\"49.70\",",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Item</th>\n        <th>Qty</th>\n        <th>U.Price</th>\n        <th>Amount</th>\n        <th>Tax</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>FG-A00019</td>\n        <td>1</td>\n        <td>1.50</td>\n        <td>1.50</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"5\">Green Tea</td>\n    </tr>\n    <tr>\n        <td>FG-Y00030</td>\n        <td>1</td>\n        <td>12.80</td>\n        <td>12.80</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"5\">Yakiniku Bowl R</td>\n    </tr>\n    <tr>\n        <td>FG-Y00183</td>\n        <td>2</td>\n        <td>15.80</td>\n        <td>31.60</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"5\">Negi Tama Beef Bowl R</td>\n    </tr>\n    <tr>\n        <td>FG-Y00102</td>\n        <td>1</td>\n        <td>3.80</td>\n        <td>3.80</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"5\">Miso/Wakame+Green Tea</td>\n    </tr>\n    <tr>\n        <td>FG-Y00264</td>\n        <td>1</td>\n        <td>0.00</td>\n        <td>0.00</td>\n        <td>SR</td>\n    </tr>\n    <tr>\n        <td colspan=\"5\">Miso Soup</td>\n    </tr>\n    <tr>\n        <td>SubTotal</td>\n        <td> </td>\n        <td>:</td>\n        <td>49.70</td>\n        <td> </td>\n    </tr>\n    <tr>\n        <td>Total</td>\n        <td> </td>\n        <td>:</td>\n        <td>49.70</td>\n        <td> </td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Item                  | Qty | U.Price | Amount | Tax |\n| --------------------- | --- | ------- | ------ | --- |\n| FG-A00019             | 1   | 1.50    | 1.50   | SR  |\n| Green Tea             |     |         |        |     |\n| FG-Y00030             | 1   | 12.80   | 12.80  | SR  |\n| Yakiniku Bowl R       |     |         |        |     |\n| FG-Y00183             | 2   | 15.80   | 31.60  | SR  |\n| Negi Tama Beef Bowl R |     |         |        |     |\n| FG-Y00102             | 1   | 3.80    | 3.80   | SR  |\n| Miso/Wakame+Green Tea |     |         |        |     |\n| FG-Y00264             | 1   | 0.00    | 0.00   | SR  |\n| Miso Soup             |     |         |        |     |\n| SubTotal              |     | :       | 49.70  |     |\n| Total                 |     | :       | 49.70  |     |",
+            "rows": [
+              [
+                "Item",
+                "Qty",
+                "U.Price",
+                "Amount",
+                "Tax"
+              ],
+              [
+                "FG-A00019",
+                "1",
+                "1.50",
+                "1.50",
+                "SR"
+              ],
+              [
+                "Green Tea",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "FG-Y00030",
+                "1",
+                "12.80",
+                "12.80",
+                "SR"
+              ],
+              [
+                "Yakiniku Bowl R",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "FG-Y00183",
+                "2",
+                "15.80",
+                "31.60",
+                "SR"
+              ],
+              [
+                "Negi Tama Beef Bowl R",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "FG-Y00102",
+                "1",
+                "3.80",
+                "3.80",
+                "SR"
+              ],
+              [
+                "Miso/Wakame+Green Tea",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "FG-Y00264",
+                "1",
+                "0.00",
+                "0.00",
+                "SR"
+              ],
+              [
+                "Miso Soup",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "SubTotal",
+                "",
+                ":",
+                "49.70",
+                ""
+              ],
+              [
+                "Total",
+                "",
+                ":",
+                "49.70",
+                ""
+              ]
+            ],
+            "bbox": [
+              {
+                "h": 669.42,
+                "w": 321.28,
+                "x": 249.15,
+                "y": 411.94,
+                "confidence": 0.83,
+                "end_index": 796,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 2 'U.Price' expects numeric, got ':' in row 11",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "col 4 'Tax' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "level": 2,
+            "md": "## TOTAL:MYR 49.70",
+            "value": "TOTAL:MYR 49.70",
+            "bbox": [
+              {
+                "h": 113.2,
+                "w": 307.39,
+                "x": 248.23,
+                "y": 755.54,
+                "confidence": 0.52,
+                "end_index": 17,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "heading"
+          },
+          {
+            "md": "**Total Excluded Tax** : 46.90\n: 2.80",
+            "value": "Total Excluded Tax : 46.90\n: 2.80",
+            "bbox": [
+              {
+                "h": 16.87,
+                "w": 139.53,
+                "x": 251.14,
+                "y": 861.92,
+                "confidence": 0.74,
+                "end_index": 36,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Payment Details**\n**Cash** 50.00\n**Cash Change** 0.30",
+            "value": "Payment Details\nCash 50.00\nCash Change 0.30",
+            "bbox": [
+              {
+                "h": 64.26,
+                "w": 305.94,
+                "x": 244.84,
+                "y": 913.73,
+                "confidence": 0.4,
+                "end_index": 54,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              },
+              {
+                "h": 19.773457031250018,
+                "w": 41.630716968625734,
+                "x": 509.1457688908529,
+                "y": 939.4375400390625,
+                "confidence": 0.4,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 23.728148437499954,
+                "w": 88.10221498011487,
+                "x": 244.83912395050817,
+                "y": 952.290287109375,
+                "confidence": 0.4,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              },
+              {
+                "h": 19.773457031250018,
+                "w": 36.78993592576228,
+                "x": 513.9865499337163,
+                "y": 958.22232421875,
+                "confidence": 0.4,
+                "end_index": null,
+                "label": "table",
+                "r": null,
+                "start_index": null
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "md": "**Tax Summary**",
+            "value": "Tax Summary",
+            "bbox": [
+              {
+                "h": 23.73,
+                "w": 87.13,
+                "x": 244.84,
+                "y": 990.85,
+                "confidence": 0.4,
+                "end_index": 14,
+                "label": "table",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "csv": "\"Tax Code\",\"%\",\"Amount(MYR)\",\"Tax(MYR)\"\n\"SR\",\"6\",\"46.90\",\"2.80\"",
+            "html": "<table>\n  <thead>\n    <tr>\n        <th>Tax Code</th>\n        <th>%</th>\n        <th>Amount(MYR)</th>\n        <th>Tax(MYR)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>SR</td>\n        <td>6</td>\n        <td>46.90</td>\n        <td>2.80</td>\n    </tr>\n  </tbody>\n</table>",
+            "md": "| Tax Code | % | Amount(MYR) | Tax(MYR) |\n| -------- | - | ----------- | -------- |\n| SR       | 6 | 46.90       | 2.80     |",
+            "rows": [
+              [
+                "Tax Code",
+                "%",
+                "Amount(MYR)",
+                "Tax(MYR)"
+              ],
+              [
+                "SR",
+                "6",
+                "46.90",
+                "2.80"
+              ]
+            ],
+            "bbox": null,
+            "merged_from_pages": null,
+            "merged_into_page": null,
+            "parse_concerns": [
+              {
+                "details": "col 0 'Tax Code' expects numeric, got 'SR' in row 1",
+                "type": "header_value_type_mismatch"
+              },
+              {
+                "details": "2 tables on page",
+                "type": "multi_table_page"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "md": "\\*\\*\\*\\* Thank You \\*\\*\\*\\*\nPlease Come Again.",
+            "value": "**** Thank You ****\nPlease Come Again.",
+            "bbox": [
+              {
+                "h": 40.42,
+                "w": 147.08,
+                "x": 352.23,
+                "y": 1091.31,
+                "confidence": 0.81,
+                "end_index": 45,
+                "label": "text",
+                "r": null,
+                "start_index": 0
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "page_height": 1527.0,
+        "page_number": 1,
+        "page_width": 1080.0,
+        "success": true,
+        "revisions": null
+      }
+    ]
+  },
+  "job_metadata": null,
+  "markdown": {
+    "pages": [
+      {
+        "markdown": "A03064\n\nYHM Aeon Tebrau City\nS117, Second Floor,\nAeon Tebrau City,\n1, Jalan Desa Tebrau,\nTaman Desa Tebrau,\n81100 Johor Bahru, Johor.\n002105827328\n\n# TAX INVOICE\n\n**Order No.** 1000249 11/03/2018 07:09 PM\n**Receipt No.** :003-1220845 **Pax:** 1\n**Cashier** :Cashiar\n**Eat In**\n\n| Item                  | Qty | U.Price | Amount | Tax |\n| --------------------- | --- | ------- | ------ | --- |\n| FG-A00019             | 1   | 1.50    | 1.50   | SR  |\n| Green Tea             |     |         |        |     |\n| FG-Y00030             | 1   | 12.80   | 12.80  | SR  |\n| Yakiniku Bowl R       |     |         |        |     |\n| FG-Y00183             | 2   | 15.80   | 31.60  | SR  |\n| Negi Tama Beef Bowl R |     |         |        |     |\n| FG-Y00102             | 1   | 3.80    | 3.80   | SR  |\n| Miso/Wakame+Green Tea |     |         |        |     |\n| FG-Y00264             | 1   | 0.00    | 0.00   | SR  |\n| Miso Soup             |     |         |        |     |\n| SubTotal              |     | :       | 49.70  |     |\n| Total                 |     | :       | 49.70  |     |\n\n\n## TOTAL:MYR 49.70\n\n**Total Excluded Tax** : 46.90\n: 2.80\n\n**Payment Details**\n**Cash** 50.00\n**Cash Change** 0.30\n\n**Tax Summary**\n\n| Tax Code | % | Amount(MYR) | Tax(MYR) |\n| -------- | - | ----------- | -------- |\n| SR       | 6 | 46.90       | 2.80     |\n\n\n**** Thank You ****\nPlease Come Again.",
+        "page_number": 1,
+        "success": true,
+        "footer": null,
+        "header": null,
+        "line_numbers": null
+      }
+    ]
+  },
+  "markdown_full": null,
+  "metadata": null,
+  "raw_parameters": null,
+  "result_content_metadata": null,
+  "text": null,
+  "text_full": null,
+  "debug": null
+}
