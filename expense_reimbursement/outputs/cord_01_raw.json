@@ -1,0 +1,356 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": " J.STB PROMO     17500\n Y.B.BAT         46000\nY.BASO PROM      27500\nTOTAL      91000\nCASH       91000",
+      "md": "photo: receipt on a dark surface\n\n| J.STB PROMO | 17500 |\n| ----------- | ----- |\n| Y.B.BAT     | 46000 |\n| Y.BASO PROM | 27500 |\n| TOTAL       | 91000 |\n| CASH        | 91000 |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 307.2,
+          "width": 230.4,
+          "x": 0,
+          "y": 0,
+          "original_width": 960,
+          "original_height": 1280,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 533,
+              "y": 819,
+              "w": 284,
+              "h": 50,
+              "confidence": 1,
+              "text": "91000"
+            },
+            {
+              "x": 122,
+              "y": 765,
+              "w": 331,
+              "h": 55,
+              "confidence": 0.99,
+              "text": "Y.BASO PROM"
+            },
+            {
+              "x": 124,
+              "y": 713,
+              "w": 215,
+              "h": 54,
+              "confidence": 0.999,
+              "text": "Y.B.BAT"
+            },
+            {
+              "x": 125,
+              "y": 664,
+              "w": 328,
+              "h": 49,
+              "confidence": 0.999,
+              "text": "J.STB PROMO"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 307.196,
+          "width": 230.397,
+          "x": -0.15,
+          "y": -0.15,
+          "original_width": 960,
+          "original_height": 1280,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt on a dark surface",
+          "value": "photo: receipt on a dark surface",
+          "bBox": {
+            "x": -0.1500114440917969,
+            "y": -0.1509979248046875,
+            "w": 230.39769316963532,
+            "h": 307.1968199356742,
+            "confidence": 0.68,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 230.4,
+              "h": 307.2,
+              "startIndex": 0,
+              "endIndex": 31,
+              "confidence": 0.68,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| J.STB PROMO | 17500 |\n| ----------- | ----- |\n| Y.B.BAT     | 46000 |\n| Y.BASO PROM | 27500 |\n| TOTAL       | 91000 |\n| CASH        | 91000 |",
+          "html": "<table>\n    <tr>\n        <td>J.STB PROMO</td>\n<td>17500</td>\n    </tr>\n<tr>\n        <td>Y.B.BAT</td>\n<td>46000</td>\n    </tr>\n<tr>\n        <td>Y.BASO PROM</td>\n<td>27500</td>\n    </tr>\n<tr>\n        <td>TOTAL</td>\n<td>91000</td>\n    </tr>\n<tr>\n        <td>CASH</td>\n<td>91000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "J.STB PROMO",
+              "17500"
+            ],
+            [
+              "Y.B.BAT",
+              "46000"
+            ],
+            [
+              "Y.BASO PROM",
+              "27500"
+            ],
+            [
+              "TOTAL",
+              "91000"
+            ],
+            [
+              "CASH",
+              "91000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"J.STB PROMO\",\"17500\"\n\"Y.B.BAT\",\"46000\"\n\"Y.BASO PROM\",\"27500\"\n\"TOTAL\",\"91000\"\n\"CASH\",\"91000\"",
+          "bBox": {
+            "x": 29.721600000000002,
+            "y": 160.0512,
+            "w": 168.4224,
+            "h": 63.59040000000002,
+            "confidence": 0.82,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 30,
+              "y": 159.36,
+              "w": 78.72,
+              "h": 11.76,
+              "startIndex": 2,
+              "endIndex": 12,
+              "confidence": 0.82,
+              "label": "text"
+            },
+            {
+              "x": 28.08,
+              "y": 159.36,
+              "w": 80.64,
+              "h": 65.04,
+              "startIndex": 2,
+              "endIndex": 125,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 127.68,
+              "y": 159.6,
+              "w": 71.28,
+              "h": 62.4,
+              "startIndex": 16,
+              "endIndex": 116,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 162,
+              "y": 159.6,
+              "w": 36.96,
+              "h": 12.72,
+              "startIndex": 16,
+              "endIndex": 20,
+              "confidence": 0.82,
+              "label": "text"
+            },
+            {
+              "x": 162,
+              "y": 172.08,
+              "w": 36.72,
+              "h": 12.48,
+              "startIndex": 64,
+              "endIndex": 68,
+              "confidence": 0.82,
+              "label": "text"
+            },
+            {
+              "x": 161.76,
+              "y": 184.56,
+              "w": 36.72,
+              "h": 11.76,
+              "startIndex": 88,
+              "endIndex": 92,
+              "confidence": 0.82,
+              "label": "text"
+            },
+            {
+              "x": 127.92,
+              "y": 196.56,
+              "w": 68.16,
+              "h": 12,
+              "startIndex": 112,
+              "endIndex": 116,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, image, key-value-region] but no table/form"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 230.4,
+      "height": 307.2,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.586,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.129,
+            "y": 0.521,
+            "w": 0.343,
+            "h": 0.207
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.66,
+          "label": "image",
+          "bbox": {
+            "x": -0.001,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.63,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.129,
+            "y": 0.521,
+            "w": 0.731,
+            "h": 0.207
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.709,
+            "y": 0.565,
+            "w": 0.15,
+            "h": 0.033
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.712,
+            "y": 0.525,
+            "w": 0.145,
+            "h": 0.032
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.708,
+            "y": 0.604,
+            "w": 0.152,
+            "h": 0.034
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.559,
+            "y": 0.684,
+            "w": 0.29,
+            "h": 0.036
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.559,
+            "y": 0.643,
+            "w": 0.29,
+            "h": 0.035
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.135,
+            "y": 0.522,
+            "w": 0.336,
+            "h": 0.035
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.13,
+            "y": 0.644,
+            "w": 0.297,
+            "h": 0.084
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

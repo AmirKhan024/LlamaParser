@@ -1,0 +1,397 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "1X    @11000  11,000\nDONAT GULA 1.00xITEMs  11,000\nSUBTOTAL               11,000\nTOTAL                  11,000\nCASH",
+      "md": "logo: Dynamic Bakery & Cake Natural\n\n| 1X         | @11000 | 11,000 |\n| ---------- | ------ | ------ |\n| DONAT GULA |        |        |\n| 1.00xITEMs |        | 11,000 |\n| SUBTOTAL   |        | 11,000 |\n| TOTAL      |        | 11,000 |\n| CASH       |        | 11,000 |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 311.04,
+          "width": 207.36,
+          "x": 0,
+          "y": 0,
+          "original_width": 863,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 153,
+              "y": 854,
+              "w": 137,
+              "h": 44,
+              "confidence": 1,
+              "text": "CASH"
+            },
+            {
+              "x": 582,
+              "y": 833,
+              "w": 112,
+              "h": 53,
+              "confidence": 0.997,
+              "text": "11,000"
+            },
+            {
+              "x": 151,
+              "y": 775,
+              "w": 135,
+              "h": 42,
+              "confidence": 1,
+              "text": "SUBTOTAL"
+            },
+            {
+              "x": 576,
+              "y": 751,
+              "w": 111,
+              "h": 53,
+              "confidence": 0.999,
+              "text": "11,000"
+            },
+            {
+              "x": 327,
+              "y": 723,
+              "w": 171,
+              "h": 50,
+              "confidence": 0.983,
+              "text": "1.00xITEMs"
+            },
+            {
+              "x": 385,
+              "y": 642,
+              "w": 108,
+              "h": 49,
+              "confidence": 0.996,
+              "text": "@11000"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_2_v2.jpg",
+          "height": 40.69,
+          "width": 110.407,
+          "x": 38.375,
+          "y": 61.602,
+          "original_width": 461,
+          "original_height": 170,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 311.036,
+          "width": 207.357,
+          "x": 0.422,
+          "y": 0.12,
+          "original_width": 864,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "logo: Dynamic Bakery & Cake Natural",
+          "value": "logo: Dynamic Bakery & Cake Natural",
+          "bBox": {
+            "x": 0.42262481689453135,
+            "y": 0.12026527404785158,
+            "w": 207.35778279180116,
+            "h": 311.03689101841144,
+            "confidence": 0.63,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0.42,
+              "y": 0.12,
+              "w": 206.94,
+              "h": 310.92,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.63,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| 1X         | @11000 | 11,000 |\n| ---------- | ------ | ------ |\n| DONAT GULA |        |        |\n| 1.00xITEMs |        | 11,000 |\n| SUBTOTAL   |        | 11,000 |\n| TOTAL      |        | 11,000 |\n| CASH       |        | 11,000 |",
+          "html": "<table>\n    <tr>\n        <td>1X</td>\n<td>@11000</td>\n<td>11,000</td>\n    </tr>\n<tr>\n        <td colspan=\"3\">DONAT GULA</td>\n    </tr>\n<tr>\n        <td>1.00xITEMs</td><td></td>\n<td>11,000</td>\n    </tr>\n<tr>\n        <td>SUBTOTAL</td><td></td>\n<td>11,000</td>\n    </tr>\n<tr>\n        <td>TOTAL</td><td></td>\n<td>11,000</td>\n    </tr>\n<tr>\n        <td>CASH</td><td></td>\n<td>11,000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "1X",
+              "@11000",
+              "11,000"
+            ],
+            [
+              "DONAT GULA",
+              "",
+              ""
+            ],
+            [
+              "1.00xITEMs",
+              "",
+              "11,000"
+            ],
+            [
+              "SUBTOTAL",
+              "",
+              "11,000"
+            ],
+            [
+              "TOTAL",
+              "",
+              "11,000"
+            ],
+            [
+              "CASH",
+              "",
+              "11,000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"1X\",\"@11000\",\"11,000\"\n\"DONAT GULA\",\"\",\"\"\n\"1.00xITEMs\",\"\",\"11,000\"\n\"SUBTOTAL\",\"\",\"11,000\"\n\"TOTAL\",\"\",\"11,000\"\n\"CASH\",\"\",\"11,000\"",
+          "bBox": {
+            "x": 35.458560000000006,
+            "y": 155.83104,
+            "w": 129.80736000000002,
+            "h": 59.71968000000001,
+            "confidence": 0.77,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 34.08,
+              "y": 154.08,
+              "w": 132.48,
+              "h": 61.44,
+              "startIndex": 2,
+              "endIndex": 203,
+              "confidence": 0.77,
+              "label": "key-value-region"
+            },
+            {
+              "x": 92.4,
+              "y": 154.08,
+              "w": 25.92,
+              "h": 11.76,
+              "startIndex": 15,
+              "endIndex": 20,
+              "confidence": 0.77,
+              "label": "text"
+            },
+            {
+              "x": 35.04,
+              "y": 166.08,
+              "w": 40.56,
+              "h": 11.52,
+              "startIndex": 68,
+              "endIndex": 77,
+              "confidence": 0.77,
+              "label": "text"
+            },
+            {
+              "x": 78.48,
+              "y": 173.52,
+              "w": 41.04,
+              "h": 12,
+              "startIndex": 101,
+              "endIndex": 110,
+              "confidence": 0.77,
+              "label": "text"
+            },
+            {
+              "x": 136.8,
+              "y": 160.8,
+              "w": 26.4,
+              "h": 12,
+              "startIndex": 222,
+              "endIndex": 227,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, image, key-value-region] but no table/form"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 207.36,
+      "height": 311.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.607,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.667,
+            "y": 0.523,
+            "w": 0.115,
+            "h": 0.03
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.675,
+            "y": 0.586,
+            "w": 0.115,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.681,
+            "y": 0.65,
+            "w": 0.116,
+            "h": 0.03
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.453,
+            "y": 0.501,
+            "w": 0.114,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.679,
+            "y": 0.618,
+            "w": 0.115,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.385,
+            "y": 0.563,
+            "w": 0.188,
+            "h": 0.03
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.514,
+            "w": 0.191,
+            "h": 0.054
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.181,
+            "y": 0.602,
+            "w": 0.185,
+            "h": 0.089
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.56,
+          "label": "image",
+          "bbox": {
+            "x": 0.002,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.55,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.503,
+            "w": 0.624,
+            "h": 0.19
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_image_2_v2.jpg",
+          "confidence": 0.54,
+          "label": "image",
+          "bbox": {
+            "x": 0.185,
+            "y": 0.198,
+            "w": 0.532,
+            "h": 0.131
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.173,
+            "y": 0.54,
+            "w": 0.189,
+            "h": 0.028
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

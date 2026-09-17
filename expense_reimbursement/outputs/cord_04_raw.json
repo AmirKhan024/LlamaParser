@@ -1,0 +1,441 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": ")SC%1\nlotuki\nUn\nw\nSalo\nJias\nPg\ntle\nnowTCE BLACKCOFFE         82,000\n   AUOCADO COFFEE         61,000\nObe\n       CHIKEN KATSU FF    51,000\nBibi                      acetests\nR9      SUS TOTAL         194,000\nle.     DISCOUNT          19,400\n        TOTAL             174,600\n        CASH              200,000\n        CHANGE            28,400",
+      "md": "DSC 1\nMatuaka 1121\nRumah\nRiau\nSalo\nVias\nPiger\nLittle\nNew\nObe\nBibi\nR9\nLep\n\nphotograph: crumpled receipt on a notebook\n\n| ICE BLACKCOFFE  | 2 | 82,000  |\n| --------------- | - | ------- |\n| AVOCADO COFFEE  | 1 | 61,000  |\n| CHIKEN KATSU FF | 1 | 51,000  |\n| SUB\\_TOTAL      |   | 194,000 |\n| DISCOUNT        |   | 19,400  |\n| TOTAL           |   | 174,600 |\n| CASH            |   | 200,000 |\n| CHANGE          |   | 25,400  |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 311.04,
+          "width": 207.36,
+          "x": 0,
+          "y": 0,
+          "original_width": 864,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 616,
+              "y": 940,
+              "w": 116,
+              "h": 51,
+              "confidence": 0.968,
+              "text": "28,400"
+            },
+            {
+              "x": 237,
+              "y": 922,
+              "w": 116,
+              "h": 49,
+              "confidence": 0.998,
+              "text": "CHANGE"
+            },
+            {
+              "x": 614,
+              "y": 892,
+              "w": 133,
+              "h": 53,
+              "confidence": 0.922,
+              "text": "200,000"
+            },
+            {
+              "x": 244,
+              "y": 883,
+              "w": 123,
+              "h": 44,
+              "confidence": 0.97,
+              "text": "CASH"
+            },
+            {
+              "x": 616,
+              "y": 849,
+              "w": 129,
+              "h": 50,
+              "confidence": 0.996,
+              "text": "174,600"
+            },
+            {
+              "x": 243,
+              "y": 834,
+              "w": 150,
+              "h": 49,
+              "confidence": 0.916,
+              "text": "TOTAL"
+            },
+            {
+              "x": 0,
+              "y": 819,
+              "w": 81,
+              "h": 76,
+              "confidence": 0.788,
+              "text": "le."
+            },
+            {
+              "x": 615,
+              "y": 803,
+              "w": 120,
+              "h": 51,
+              "confidence": 0.997,
+              "text": "19,400"
+            },
+            {
+              "x": 243,
+              "y": 794,
+              "w": 140,
+              "h": 44,
+              "confidence": 0.924,
+              "text": "DISCOUNT"
+            },
+            {
+              "x": 620,
+              "y": 760,
+              "w": 121,
+              "h": 46,
+              "confidence": 0.984,
+              "text": "194,000"
+            },
+            {
+              "x": 244,
+              "y": 749,
+              "w": 157,
+              "h": 48,
+              "confidence": 0.932,
+              "text": "SUS TOTAL"
+            },
+            {
+              "x": 0,
+              "y": 741,
+              "w": 96,
+              "h": 92,
+              "confidence": 0.746,
+              "text": "R9"
+            },
+            {
+              "x": 603,
+              "y": 726,
+              "w": 133,
+              "h": 30,
+              "confidence": 0.462,
+              "text": "acetests"
+            },
+            {
+              "x": 0,
+              "y": 668,
+              "w": 100,
+              "h": 93,
+              "confidence": 0.87,
+              "text": "Bibi"
+            },
+            {
+              "x": 610,
+              "y": 633,
+              "w": 115,
+              "h": 48,
+              "confidence": 0.974,
+              "text": "51,000"
+            },
+            {
+              "x": 85,
+              "y": 615,
+              "w": 256,
+              "h": 55,
+              "confidence": 0.964,
+              "text": "CHIKEN KATSU FF"
+            },
+            {
+              "x": 1,
+              "y": 603,
+              "w": 107,
+              "h": 76,
+              "confidence": 0.595,
+              "text": "Obe"
+            },
+            {
+              "x": 617,
+              "y": 597,
+              "w": 111,
+              "h": 44,
+              "confidence": 0.975,
+              "text": "61,000"
+            },
+            {
+              "x": 99,
+              "y": 579,
+              "w": 230,
+              "h": 48,
+              "confidence": 0.906,
+              "text": "AUOCADO COFFEE"
+            },
+            {
+              "x": 614,
+              "y": 550,
+              "w": 117,
+              "h": 55,
+              "confidence": 0.907,
+              "text": "82,000"
+            },
+            {
+              "x": 9,
+              "y": 545,
+              "w": 95,
+              "h": 71,
+              "confidence": 0.583,
+              "text": "now"
+            },
+            {
+              "x": 98,
+              "y": 537,
+              "w": 231,
+              "h": 52,
+              "confidence": 0.936,
+              "text": "TCE BLACKCOFFE"
+            },
+            {
+              "x": 0,
+              "y": 468,
+              "w": 103,
+              "h": 77,
+              "confidence": 0.653,
+              "text": "tle"
+            },
+            {
+              "x": 0,
+              "y": 398,
+              "w": 94,
+              "h": 84,
+              "confidence": 0.611,
+              "text": "Pg"
+            },
+            {
+              "x": 0,
+              "y": 335,
+              "w": 84,
+              "h": 70,
+              "confidence": 0.615,
+              "text": "Jias"
+            },
+            {
+              "x": 0,
+              "y": 255,
+              "w": 77,
+              "h": 78,
+              "confidence": 0.87,
+              "text": "Salo"
+            },
+            {
+              "x": 0,
+              "y": 186,
+              "w": 77,
+              "h": 79,
+              "confidence": 0.581,
+              "text": "w"
+            },
+            {
+              "x": 0,
+              "y": 127,
+              "w": 86,
+              "h": 71,
+              "confidence": 0.578,
+              "text": "Un"
+            },
+            {
+              "x": 0,
+              "y": 41,
+              "w": 245,
+              "h": 77,
+              "confidence": 0.475,
+              "text": "lotuki"
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 104,
+              "h": 59,
+              "confidence": 0.624,
+              "text": ")SC%1"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 311.036,
+          "width": 207.357,
+          "x": -0.052,
+          "y": 0.075,
+          "original_width": 864,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "DSC 1\nMatuaka 1121\nRumah\nRiau\nSalo\nVias\nPiger\nLittle\nNew\nObe\nBibi\nR9\nLep",
+          "value": "DSC 1\nMatuaka 1121\nRumah\nRiau\nSalo\nVias\nPiger\nLittle\nNew\nObe\nBibi\nR9\nLep",
+          "bBox": {
+            "x": -0.05228118896484376,
+            "y": 0.07547401428222657,
+            "w": 207.3579246587339,
+            "h": 311.03682653344197,
+            "confidence": 0.66,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 144.72,
+              "y": 132,
+              "w": 34.56,
+              "h": 105.84,
+              "startIndex": 0,
+              "endIndex": 71,
+              "confidence": 0.66,
+              "label": "image"
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 96.24,
+              "h": 233.04,
+              "startIndex": 1,
+              "endIndex": 67,
+              "confidence": 0.66,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "photograph: crumpled receipt on a notebook",
+          "value": "photograph: crumpled receipt on a notebook"
+        },
+        {
+          "type": "table",
+          "md": "| ICE BLACKCOFFE  | 2 | 82,000  |\n| --------------- | - | ------- |\n| AVOCADO COFFEE  | 1 | 61,000  |\n| CHIKEN KATSU FF | 1 | 51,000  |\n| SUB\\_TOTAL      |   | 194,000 |\n| DISCOUNT        |   | 19,400  |\n| TOTAL           |   | 174,600 |\n| CASH            |   | 200,000 |\n| CHANGE          |   | 25,400  |",
+          "html": "<table>\n    <tr>\n        <td>ICE BLACKCOFFE</td>\n<td>2</td>\n<td>82,000</td>\n    </tr>\n<tr>\n        <td>AVOCADO COFFEE</td>\n<td>1</td>\n<td>61,000</td>\n    </tr>\n<tr>\n        <td>CHIKEN KATSU FF</td>\n<td>1</td>\n<td>51,000</td>\n    </tr>\n<tr>\n        <td>SUB_TOTAL</td><td></td>\n<td>194,000</td>\n    </tr>\n<tr>\n        <td>DISCOUNT</td><td></td>\n<td>19,400</td>\n    </tr>\n<tr>\n        <td>TOTAL</td><td></td>\n<td>174,600</td>\n    </tr>\n<tr>\n        <td>CASH</td><td></td>\n<td>200,000</td>\n    </tr>\n<tr>\n        <td>CHANGE</td><td></td>\n<td>25,400</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "ICE BLACKCOFFE",
+              "2",
+              "82,000"
+            ],
+            [
+              "AVOCADO COFFEE",
+              "1",
+              "61,000"
+            ],
+            [
+              "CHIKEN KATSU FF",
+              "1",
+              "51,000"
+            ],
+            [
+              "SUB_TOTAL",
+              "",
+              "194,000"
+            ],
+            [
+              "DISCOUNT",
+              "",
+              "19,400"
+            ],
+            [
+              "TOTAL",
+              "",
+              "174,600"
+            ],
+            [
+              "CASH",
+              "",
+              "200,000"
+            ],
+            [
+              "CHANGE",
+              "",
+              "25,400"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"ICE BLACKCOFFE\",\"2\",\"82,000\"\n\"AVOCADO COFFEE\",\"1\",\"61,000\"\n\"CHIKEN KATSU FF\",\"1\",\"51,000\"\n\"SUB_TOTAL\",\"\",\"194,000\"\n\"DISCOUNT\",\"\",\"19,400\"\n\"TOTAL\",\"\",\"174,600\"\n\"CASH\",\"\",\"200,000\"\n\"CHANGE\",\"\",\"25,400\"",
+          "bBox": {
+            "x": -0.05228118896484376,
+            "y": 0.07547401428222657,
+            "w": 207.3579246587339,
+            "h": 311.03682653344197,
+            "confidence": 0.75,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 144.72,
+              "y": 132,
+              "w": 34.56,
+              "h": 105.84,
+              "startIndex": 24,
+              "endIndex": 268,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 96.24,
+              "h": 233.04,
+              "startIndex": 104,
+              "endIndex": 279,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [image] but no table/form"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 207.36,
+      "height": 311.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.688,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

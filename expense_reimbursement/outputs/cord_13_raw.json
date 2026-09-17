@@ -1,0 +1,581 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "A\nCA\nC\n\n\n                 OD JOURNEY  CA\n\n                             C\n                             A\nBASO KUWH                    A\n BASD KUWH       148.636\n                 148.66      4,36\n A.MIERAL GELAS\nA.MIERA GEAS     1 3,000     3,000\nTOTAL                        46.636\nDFF                          46.636\nTAX 10,00 X\nGRAND TOTAL                  51,300>\n TUNAI\n KEMBALI\n\n               PUNC?",
+      "md": "photo: A FUNG receipt\n\n[illegible]\n\nOD JOURNEY\n\n| BASO KUAH       | 1 | 43.636 | 43.636 |\n| --------------- | - | ------ | ------ |\n| A.MINERAL GELAS | 1 | 3.000  | 3.000  |\n| TOTAL           |   |        | 46.636 |\n| DPP             |   |        | 46.636 |\n| TAX 10.00 %     |   |        | 4.664  |\n| GRAND TOTAL     |   |        | 51.300 |\n| TUNAI           |   |        | 52.000 |\n| KEMBALI         |   |        | 700    |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 311.04,
+          "width": 207.36,
+          "x": 0,
+          "y": 0,
+          "original_width": 681,
+          "original_height": 980,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 229,
+              "y": 933,
+              "w": 119,
+              "h": 22,
+              "confidence": 0.575,
+              "text": "PUNC?"
+            },
+            {
+              "x": 499,
+              "y": 761,
+              "w": 121,
+              "h": 37,
+              "confidence": 0.873,
+              "text": "51,300>"
+            },
+            {
+              "x": 20,
+              "y": 721,
+              "w": 175,
+              "h": 35,
+              "confidence": 0.908,
+              "text": "TAX 10,00 X"
+            },
+            {
+              "x": 501,
+              "y": 684,
+              "w": 96,
+              "h": 37,
+              "confidence": 0.914,
+              "text": "46.636"
+            },
+            {
+              "x": 15,
+              "y": 677,
+              "w": 60,
+              "h": 39,
+              "confidence": 0.843,
+              "text": "DFF"
+            },
+            {
+              "x": 501,
+              "y": 641,
+              "w": 94,
+              "h": 41,
+              "confidence": 0.876,
+              "text": "46.636"
+            },
+            {
+              "x": 20,
+              "y": 634,
+              "w": 83,
+              "h": 39,
+              "confidence": 0.992,
+              "text": "TOTAL"
+            },
+            {
+              "x": 514,
+              "y": 600,
+              "w": 80,
+              "h": 39,
+              "confidence": 0.995,
+              "text": "3,000"
+            },
+            {
+              "x": 313,
+              "y": 598,
+              "w": 128,
+              "h": 37,
+              "confidence": 0.957,
+              "text": "1 3,000"
+            },
+            {
+              "x": 20,
+              "y": 594,
+              "w": 234,
+              "h": 38,
+              "confidence": 0.949,
+              "text": "A.MIERA GEAS"
+            },
+            {
+              "x": 502,
+              "y": 560,
+              "w": 93,
+              "h": 38,
+              "confidence": 0.812,
+              "text": "4,36"
+            },
+            {
+              "x": 315,
+              "y": 557,
+              "w": 125,
+              "h": 37,
+              "confidence": 0.88,
+              "text": "148.66"
+            },
+            {
+              "x": 20,
+              "y": 552,
+              "w": 147,
+              "h": 39,
+              "confidence": 0.919,
+              "text": "BASO KUWH"
+            },
+            {
+              "x": 587,
+              "y": 547,
+              "w": 43,
+              "h": 140,
+              "confidence": 0.126,
+              "text": "A"
+            },
+            {
+              "x": 592,
+              "y": 505,
+              "w": 30,
+              "h": 47,
+              "confidence": 0.693,
+              "text": "A"
+            },
+            {
+              "x": 587,
+              "y": 456,
+              "w": 45,
+              "h": 52,
+              "confidence": 0.686,
+              "text": "C"
+            },
+            {
+              "x": 330,
+              "y": 358,
+              "w": 150,
+              "h": 22,
+              "confidence": 0.95,
+              "text": "OD JOURNEY"
+            },
+            {
+              "x": 579,
+              "y": 253,
+              "w": 52,
+              "h": 184,
+              "confidence": 0.196,
+              "text": "CA"
+            },
+            {
+              "x": 584,
+              "y": 206,
+              "w": 43,
+              "h": 56,
+              "confidence": 0.355,
+              "text": "C"
+            },
+            {
+              "x": 565,
+              "y": 49,
+              "w": 58,
+              "h": 148,
+              "confidence": 0.193,
+              "text": "CA"
+            },
+            {
+              "x": 561,
+              "y": 23,
+              "w": 53,
+              "h": 49,
+              "confidence": 0.2,
+              "text": "A"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 22.5,
+          "width": 73.374,
+          "x": 52.596,
+          "y": 197.146,
+          "original_width": 306,
+          "original_height": 94,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        },
+        {
+          "name": "page_1_image_2_v2.jpg",
+          "height": 230.486,
+          "width": 153.55,
+          "x": 31.253,
+          "y": -0.239,
+          "original_width": 640,
+          "original_height": 961,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: A FUNG receipt",
+          "value": "photo: A FUNG receipt",
+          "bBox": {
+            "x": 31.25329818062161,
+            "y": -0.23938110351562503,
+            "w": 153.55047856869905,
+            "h": 230.48618869947353,
+            "confidence": 0.57,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 31.25,
+              "y": 0,
+              "w": 153.55,
+              "h": 230.49,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.57,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "[illegible]",
+          "value": "[illegible]",
+          "bBox": {
+            "x": 36.15912119989811,
+            "y": 80.10066897184953,
+            "w": 61.22578730044158,
+            "h": 4.205445317807407,
+            "confidence": 0.75,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 36.16,
+              "y": 80.1,
+              "w": 61.23,
+              "h": 4.21,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.75,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "OD JOURNEY",
+          "value": "OD JOURNEY",
+          "bBox": {
+            "x": 105.71482750934105,
+            "y": 86.47431176227073,
+            "w": 35.308418287194286,
+            "h": 4.567257584281597,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 105.71,
+              "y": 86.47,
+              "w": 35.31,
+              "h": 4.57,
+              "startIndex": 0,
+              "endIndex": 9,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| BASO KUAH       | 1 | 43.636 | 43.636 |\n| --------------- | - | ------ | ------ |\n| A.MINERAL GELAS | 1 | 3.000  | 3.000  |\n| TOTAL           |   |        | 46.636 |\n| DPP             |   |        | 46.636 |\n| TAX 10.00 %     |   |        | 4.664  |\n| GRAND TOTAL     |   |        | 51.300 |\n| TUNAI           |   |        | 52.000 |\n| KEMBALI         |   |        | 700    |",
+          "html": "<table>\n    <tr>\n        <td>BASO KUAH</td>\n<td>1</td>\n<td>43.636</td>\n<td>43.636</td>\n    </tr>\n<tr>\n        <td>A.MINERAL GELAS</td>\n<td>1</td>\n<td>3.000</td>\n<td>3.000</td>\n    </tr>\n<tr>\n        <td>TOTAL</td><td></td><td></td>\n<td>46.636</td>\n    </tr>\n<tr>\n        <td>DPP</td><td></td><td></td>\n<td>46.636</td>\n    </tr>\n<tr>\n        <td>TAX 10.00 %</td><td></td><td></td>\n<td>4.664</td>\n    </tr>\n<tr>\n        <td>GRAND TOTAL</td><td></td><td></td>\n<td>51.300</td>\n    </tr>\n<tr>\n        <td>TUNAI</td><td></td><td></td>\n<td>52.000</td>\n    </tr>\n<tr>\n        <td>KEMBALI</td><td></td><td></td>\n<td>700</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "BASO KUAH",
+              "1",
+              "43.636",
+              "43.636"
+            ],
+            [
+              "A.MINERAL GELAS",
+              "1",
+              "3.000",
+              "3.000"
+            ],
+            [
+              "TOTAL",
+              "",
+              "",
+              "46.636"
+            ],
+            [
+              "DPP",
+              "",
+              "",
+              "46.636"
+            ],
+            [
+              "TAX 10.00 %",
+              "",
+              "",
+              "4.664"
+            ],
+            [
+              "GRAND TOTAL",
+              "",
+              "",
+              "51.300"
+            ],
+            [
+              "TUNAI",
+              "",
+              "",
+              "52.000"
+            ],
+            [
+              "KEMBALI",
+              "",
+              "",
+              "700"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"BASO KUAH\",\"1\",\"43.636\",\"43.636\"\n\"A.MINERAL GELAS\",\"1\",\"3.000\",\"3.000\"\n\"TOTAL\",\"\",\"\",\"46.636\"\n\"DPP\",\"\",\"\",\"46.636\"\n\"TAX 10.00 %\",\"\",\"\",\"4.664\"\n\"GRAND TOTAL\",\"\",\"\",\"51.300\"\n\"TUNAI\",\"\",\"\",\"52.000\"\n\"KEMBALI\",\"\",\"\",\"700\"",
+          "bBox": {
+            "x": 32.1408,
+            "y": 134.36928,
+            "w": 98.496,
+            "h": 7.4649600000000005,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 32.14,
+              "y": 134.37,
+              "w": 98.5,
+              "h": 7.46,
+              "startIndex": 0,
+              "endIndex": 376,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, image] but no table/form"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 207.36,
+      "height": 311.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.356,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.78,
+          "label": "text",
+          "bbox": {
+            "x": 0.15,
+            "y": 0.527,
+            "w": 0.055,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.151,
+            "y": 0.591,
+            "w": 0.193,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.156,
+            "y": 0.65,
+            "w": 0.117,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.156,
+            "y": 0.621,
+            "w": 0.085,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.153,
+            "y": 0.559,
+            "w": 0.193,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.498,
+            "y": 0.466,
+            "w": 0.132,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.155,
+            "y": 0.432,
+            "w": 0.158,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.496,
+            "y": 0.434,
+            "w": 0.133,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.58,
+          "label": "image",
+          "bbox": {
+            "x": 0.254,
+            "y": 0.634,
+            "w": 0.354,
+            "h": 0.072
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.51,
+            "y": 0.278,
+            "w": 0.17,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.154,
+            "y": 0.464,
+            "w": 0.261,
+            "h": 0.023
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.155,
+            "y": 0.495,
+            "w": 0.087,
+            "h": 0.023
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_image_2_v2.jpg",
+          "confidence": 0.51,
+          "label": "image",
+          "bbox": {
+            "x": 0.151,
+            "y": -0.001,
+            "w": 0.741,
+            "h": 0.741
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.174,
+            "y": 0.258,
+            "w": 0.295,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.154,
+            "y": 0.463,
+            "w": 0.261,
+            "h": 0.054
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

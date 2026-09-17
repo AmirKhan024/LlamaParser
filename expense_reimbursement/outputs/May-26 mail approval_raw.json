@@ -1,0 +1,734 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Re: May-26 Local Convayance\n\n\nSK  Sanjay K S    Yesterday\n    To You\n\n\n\nOK\n\nRegards,\nSanjay K S\n\nFrom: Nasir <nasir@coffeeday.com>\nSent: 12 June 2026 03:44 PM\nTo: Sanjay K S <sanjayks@coffeeday.com>\nSubject: May-26 Local Convayance\n\n\nDear Sir,\n\nPlease approve the same.\n\n         AMALGAMATED BEAN COFFEE TRADING CO LTD.,\n         Coffee Day Beverages Division\n\n         LOCAL CONVEYANCE REIMBURSEMENT FORM\nName     NASIR AHMED KHAN\n         K                                       →",
+      "md": "**Re: May-26 Local Convayance**\n\nlogo: SK\n\n**Sanjay K S**\nTo You\n\nYesterday\n\nOK\n\nRegards,\nSanjay K S\n\n----\n\n**From:** Nasir <nasir@coffeeday.com>\n\n**Sent:** 12 June 2026 03:44 PM\n\n**To:** Sanjay K S <sanjayks@coffeeday.com>\n\n**Subject:** May-26 Local Convayance\n\nDear Sir,\n\nPlease approve the same.\n\n|      | AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division |   |\n| ---- | -------------------------------------------------------------------------- | - |\n|      | LOCAL CONVEYANCE REIMBURSEMENT FORM                                        |   |\n| Name | NASIR AHMED KHAN                                                           |   |\n\n\n",
+      "images": [
+        {
+          "name": "img_p0_1.jpg",
+          "height": 842,
+          "width": 424.18,
+          "x": 85.41,
+          "y": 0,
+          "original_width": 1066,
+          "original_height": 2116,
+          "rotation": 0
+        },
+        {
+          "name": "page_1.jpg",
+          "height": 842,
+          "width": 595,
+          "x": 0,
+          "y": 0,
+          "original_width": 2261,
+          "original_height": 3200,
+          "rotation": 0,
+          "type": "full_page_screenshot"
+        },
+        {
+          "name": "page_1_image_2_v2.jpg",
+          "height": 50.91,
+          "width": 51.281,
+          "x": 99.926,
+          "y": 81.107,
+          "original_width": 195,
+          "original_height": 194,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 50.458,
+          "width": 157.733,
+          "x": 99.866,
+          "y": 81.4,
+          "original_width": 600,
+          "original_height": 192,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 191.796,
+          "width": 423.244,
+          "x": 87.077,
+          "y": 648.967,
+          "original_width": 1609,
+          "original_height": 729,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**Re: May-26 Local Convayance**",
+          "value": "**Re: May-26 Local Convayance**",
+          "bBox": {
+            "x": 101.77054306735162,
+            "y": 14.705008968063023,
+            "w": 255.4292734291242,
+            "h": 19.548639048700743,
+            "confidence": 0.83,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 97.37,
+              "y": 11.31,
+              "w": 263.95,
+              "h": 23.68,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "logo: SK",
+          "value": "logo: SK",
+          "bBox": {
+            "x": 99,
+            "y": 81,
+            "w": 51,
+            "h": 50,
+            "confidence": 0.54,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 99,
+              "y": 81,
+              "w": 51,
+              "h": 50,
+              "startIndex": 0,
+              "endIndex": 7,
+              "confidence": 0.54,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Sanjay K S**\nTo You",
+          "value": "**Sanjay K S**\nTo You",
+          "bBox": {
+            "x": 99.86699192420295,
+            "y": 81.40007242949113,
+            "w": 157.73365637530452,
+            "h": 50.458479155664854,
+            "confidence": 0.37,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 166.31578947368422,
+              "y": 86.56812500000001,
+              "w": 93.15789473684214,
+              "h": 42.10000000000002,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.37,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Yesterday",
+          "value": "Yesterday",
+          "bBox": {
+            "x": 427.77121751204777,
+            "y": 86.48425369677337,
+            "w": 63.51412275563114,
+            "h": 15.20867590282275,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 427.77121751204777,
+              "y": 86.48425369677337,
+              "w": 63.51412275563114,
+              "h": 15.20867590282275,
+              "startIndex": 0,
+              "endIndex": 8,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "OK",
+          "value": "OK",
+          "bBox": {
+            "x": 101.772054174672,
+            "y": 219.82782007300332,
+            "w": 27.293916474217944,
+            "h": 15.335924231487784,
+            "confidence": 0.87,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 101.772054174672,
+              "y": 219.82782007300332,
+              "w": 27.293916474217944,
+              "h": 15.335924231487784,
+              "startIndex": 0,
+              "endIndex": 1,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Regards,\nSanjay K S",
+          "value": "Regards,\nSanjay K S",
+          "bBox": {
+            "x": 102.02097980872443,
+            "y": 277.05027364647907,
+            "w": 101.45419737567072,
+            "h": 47.72607463339097,
+            "confidence": 0.61,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 102.02097980872443,
+              "y": 277.05027364647907,
+              "w": 101.45419737567072,
+              "h": 47.72607463339097,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.61,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "----",
+          "value": "----",
+          "layoutAwareBbox": []
+        },
+        {
+          "type": "text",
+          "md": "**From:** Nasir <nasir@coffeeday.com>",
+          "value": "**From:** Nasir <nasir@coffeeday.com>",
+          "bBox": {
+            "x": 150.51394949788633,
+            "y": 369.335590030836,
+            "w": 221.49109208065528,
+            "h": 17.231897271197795,
+            "confidence": 0.95,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 150.51394949788633,
+              "y": 369.335590030836,
+              "w": 221.49109208065528,
+              "h": 17.231897271197795,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 0.95,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Sent:** 12 June 2026 03:44 PM",
+          "value": "**Sent:** 12 June 2026 03:44 PM",
+          "bBox": {
+            "x": 145.2645230293274,
+            "y": 398.03235311093533,
+            "w": 173.5363171411597,
+            "h": 13.336190431014336,
+            "confidence": 0.96,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 145.2645230293274,
+              "y": 398.03235311093533,
+              "w": 173.5363171411597,
+              "h": 13.336190431014336,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 0.96,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**To:** Sanjay K S <sanjayks@coffeeday.com>",
+          "value": "**To:** Sanjay K S <sanjayks@coffeeday.com>",
+          "bBox": {
+            "x": 128.545286240785,
+            "y": 424.6224096547002,
+            "w": 283.6253333091736,
+            "h": 17.648476476254668,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 128.545286240785,
+              "y": 424.6224096547002,
+              "w": 283.6253333091736,
+              "h": 17.648476476254668,
+              "startIndex": 0,
+              "endIndex": 42,
+              "confidence": 0.78,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Subject:** May-26 Local Convayance",
+          "value": "**Subject:** May-26 Local Convayance",
+          "bBox": {
+            "x": 168.07279452033663,
+            "y": 452.38103161687434,
+            "w": 191.26225979431817,
+            "h": 16.915797026260996,
+            "confidence": 0.96,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 168.07279452033663,
+              "y": 452.38103161687434,
+              "w": 191.26225979431817,
+              "h": 16.915797026260996,
+              "startIndex": 0,
+              "endIndex": 35,
+              "confidence": 0.96,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Dear Sir,",
+          "value": "Dear Sir,",
+          "bBox": {
+            "x": 102,
+            "y": 539,
+            "w": 66,
+            "h": 17,
+            "confidence": 0.89,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 102,
+              "y": 539,
+              "w": 66,
+              "h": 17,
+              "startIndex": 0,
+              "endIndex": 8,
+              "confidence": 0.89,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Please approve the same.",
+          "value": "Please approve the same.",
+          "bBox": {
+            "x": 111.25847754271133,
+            "y": 598.268626337466,
+            "w": 207.67536474310833,
+            "h": 19.297825688901213,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 111.25847754271133,
+              "y": 598.268626337466,
+              "w": 207.67536474310833,
+              "h": 19.297825688901213,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "|      | AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division |   |\n| ---- | -------------------------------------------------------------------------- | - |\n|      | LOCAL CONVEYANCE REIMBURSEMENT FORM                                        |   |\n| Name | NASIR AHMED KHAN                                                           |   |",
+          "html": "<table>\n    <tr>\n        <td> </td>\n<td>AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br />Coffee Day Beverages Division</td>\n<td> </td>\n    </tr>\n<tr>\n        <td> </td>\n<td>LOCAL CONVEYANCE REIMBURSEMENT FORM</td>\n<td> </td>\n    </tr>\n<tr>\n        <td>Name</td>\n<td>NASIR AHMED KHAN</td>\n<td> </td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "",
+              "AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division",
+              ""
+            ],
+            [
+              "",
+              "LOCAL CONVEYANCE REIMBURSEMENT FORM",
+              ""
+            ],
+            [
+              "Name",
+              "NASIR AHMED KHAN",
+              ""
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"\",\"AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division\",\"\"\n\"\",\"LOCAL CONVEYANCE REIMBURSEMENT FORM\",\"\"\n\"Name\",\"NASIR AHMED KHAN\",\"\"",
+          "bBox": {
+            "x": 87.07702273907869,
+            "y": 648.9674188365107,
+            "w": 423.24476646340406,
+            "h": 191.79618022752842,
+            "confidence": 0.82,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 213.16,
+              "y": 663.86,
+              "w": 133.95,
+              "h": 19.21,
+              "startIndex": 9,
+              "endIndex": 82,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 217.11,
+              "y": 705.18,
+              "w": 143.16,
+              "h": 17.63,
+              "startIndex": 189,
+              "endIndex": 294,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 143.42,
+              "y": 715.17,
+              "w": 20.26,
+              "h": 9.74,
+              "startIndex": 272,
+              "endIndex": 275,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "header_value_type_mismatch",
+              "details": "col 1 'AMALGAMATED BEAN COFFEE TRADING CO LTD.,\nCoffee Day Beverages Division' expects datetime, got 'LOCAL CONVEYANCE REIMBURSEMENT FORM' in row 1"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 595,
+      "height": 842,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.83,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "text",
+          "bbox": {
+            "x": 0.282,
+            "y": 0.537,
+            "w": 0.321,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.91,
+          "label": "text",
+          "bbox": {
+            "x": 0.244,
+            "y": 0.473,
+            "w": 0.292,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.9,
+          "label": "text",
+          "bbox": {
+            "x": 0.17,
+            "y": 0.537,
+            "w": 0.103,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.9,
+          "label": "text",
+          "bbox": {
+            "x": 0.253,
+            "y": 0.439,
+            "w": 0.372,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.9,
+          "label": "text",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.44,
+            "w": 0.074,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.9,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.473,
+            "w": 0.065,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.17,
+            "y": 0.439,
+            "w": 0.522,
+            "h": 0.119
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.506,
+            "w": 0.038,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.78,
+          "label": "text",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.64,
+            "w": 0.112,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.261,
+            "w": 0.046,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.187,
+            "y": 0.711,
+            "w": 0.349,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.7,
+          "label": "image",
+          "bbox": {
+            "x": 0.168,
+            "y": 0.097,
+            "w": 0.265,
+            "h": 0.06
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.019,
+            "w": 0.043,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.66,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.017,
+            "w": 0.429,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.363,
+            "w": 0.17,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.65,
+          "label": "table",
+          "bbox": {
+            "x": 0.146,
+            "y": 0.771,
+            "w": 0.711,
+            "h": 0.228
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.719,
+            "y": 0.103,
+            "w": 0.107,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.171,
+            "y": 0.329,
+            "w": 0.171,
+            "h": 0.057
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.329,
+            "w": 0.134,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.222,
+            "y": 0.018,
+            "w": 0.377,
+            "h": 0.023
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_image_2_v2.jpg",
+          "confidence": 0.58,
+          "label": "image",
+          "bbox": {
+            "x": 0.168,
+            "y": 0.096,
+            "w": 0.086,
+            "h": 0.06
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.216,
+            "y": 0.504,
+            "w": 0.477,
+            "h": 0.021
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

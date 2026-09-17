@@ -1,0 +1,117 @@
+{
+  "index": 6,
+  "success": true,
+  "error": null,
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Tous Les Jours",
+    "date": null,
+    "amount": "46000",
+    "currency": "INR",
+    "additional_fields": {
+      "item_1_name": "EGG TART",
+      "item_1_quantity": "1",
+      "item_1_price": "13,000",
+      "item_2_name": "CHOCO CUSTARD PASTRY",
+      "item_2_quantity": "2",
+      "item_2_price": "24,500",
+      "item_3_name": "REDBEAN BREAD",
+      "item_3_quantity": "1",
+      "item_3_price": "9,000",
+      "cash": "50,000",
+      "change": "4,000"
+    },
+    "extraction_notes": [],
+    "confidence": 0.6,
+    "restaurant_gstin": null,
+    "subtotal": null,
+    "cgst": null,
+    "sgst": null,
+    "grand_total": null
+  },
+  "ground_truth": {
+    "grand_total": "46,000",
+    "subtotal": null,
+    "tax_total": null,
+    "line_items": [
+      {
+        "nm": "EGG TART",
+        "price": "13,000",
+        "cnt": "1"
+      },
+      {
+        "nm": "CHOCO CUS ARD PASTRY",
+        "price": "24,000",
+        "cnt": "2"
+      },
+      {
+        "nm": "REDBEAN BREAD",
+        "price": "9,000",
+        "cnt": "1"
+      }
+    ],
+    "vendor_name": null
+  },
+  "field_scores": {
+    "vendor_name": "not_in_ground_truth",
+    "grand_total": "match",
+    "subtotal": "both_absent",
+    "tax_total": "both_absent"
+  },
+  "line_item_score": {
+    "matched": 3,
+    "missed": 0,
+    "extra": 0,
+    "total_gt": 3,
+    "matched_detail": [
+      {
+        "gt": {
+          "nm": "EGG TART",
+          "price": "13,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "nm": "EGG TART",
+          "price": "13,000",
+          "cnt": "1"
+        },
+        "name_ratio": 1.0
+      },
+      {
+        "gt": {
+          "nm": "CHOCO CUS ARD PASTRY",
+          "price": "24,000",
+          "cnt": "2"
+        },
+        "extracted": {
+          "nm": "CHOCO CUSTARD PASTRY",
+          "price": "24,500",
+          "cnt": "2"
+        },
+        "name_ratio": 0.95
+      },
+      {
+        "gt": {
+          "nm": "REDBEAN BREAD",
+          "price": "9,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "nm": "REDBEAN BREAD",
+          "price": "9,000",
+          "cnt": "1"
+        },
+        "name_ratio": 1.0
+      }
+    ],
+    "missed_detail": [],
+    "extra_detail": []
+  },
+  "duration_seconds": 1.702999999979511,
+  "tokens": {
+    "prompt": 1416,
+    "completion": 646,
+    "total": 2062
+  }
+}

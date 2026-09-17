@@ -1,0 +1,476 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Bumbu Kaldu Ayam 1  36000\n36000\n\nSub Total\nSub Tofal           36000\nDiscount (0 %)\nTunai               50000\n\nKembalian           14000",
+      "md": "photo: receipt on a purple surface\n\n| Bumbu Kaldu Ayam 1<br/>36000 | 36000 |\n| ---------------------------- | ----- |\n\n\n| Sub Total      | 36000 |\n| -------------- | ----- |\n| Discount (0 %) |       |\n| Tunai          | 50000 |\n\n\n| Kembalian | 14000 |\n| --------- | ----- |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 207.36,
+          "width": 138.24,
+          "x": 0,
+          "y": 0,
+          "original_width": 576,
+          "original_height": 863,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 264,
+              "y": 568,
+              "w": 64,
+              "h": 26,
+              "confidence": 1,
+              "text": "14000"
+            },
+            {
+              "x": 262,
+              "y": 493,
+              "w": 65,
+              "h": 26,
+              "confidence": 0.998,
+              "text": "50000"
+            },
+            {
+              "x": 29,
+              "y": 482,
+              "w": 59,
+              "h": 27,
+              "confidence": 0.999,
+              "text": "Tunai"
+            },
+            {
+              "x": 29,
+              "y": 445,
+              "w": 145,
+              "h": 28,
+              "confidence": 0.997,
+              "text": "Discount (0 %)"
+            },
+            {
+              "x": 262,
+              "y": 420,
+              "w": 65,
+              "h": 25,
+              "confidence": 1,
+              "text": "36000"
+            },
+            {
+              "x": 30,
+              "y": 408,
+              "w": 95,
+              "h": 25,
+              "confidence": 0.979,
+              "text": "Sub Tofal"
+            },
+            {
+              "x": 262,
+              "y": 334,
+              "w": 66,
+              "h": 26,
+              "confidence": 0.998,
+              "text": "36000"
+            },
+            {
+              "x": 31,
+              "y": 321,
+              "w": 207,
+              "h": 27,
+              "confidence": 0.995,
+              "text": "Bumbu Kaldu Ayam 1"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 207.357,
+          "width": 138.238,
+          "x": -0.072,
+          "y": 0.009,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt on a purple surface",
+          "value": "photo: receipt on a purple surface",
+          "bBox": {
+            "x": -0.07201950073242189,
+            "y": 0.009047241210937501,
+            "w": 138.23838626364005,
+            "h": 207.35786554751195,
+            "confidence": 0.66,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0,
+              "y": 0.01,
+              "w": 138.24,
+              "h": 207.35,
+              "startIndex": 0,
+              "endIndex": 33,
+              "confidence": 0.66,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Bumbu Kaldu Ayam 1<br/>36000 | 36000 |\n| ---------------------------- | ----- |",
+          "html": "<table>\n    <tr>\n        <td>Bumbu Kaldu Ayam 1<br />36000</td>\n<td>36000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Bumbu Kaldu Ayam 1<br/>36000",
+              "36000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Bumbu Kaldu Ayam 1<br/>36000\",\"36000\"",
+          "bBox": {
+            "x": 8.01792,
+            "y": 77.96736,
+            "w": 70.50240000000001,
+            "h": 10.990080000000006,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.44,
+              "y": 77.04,
+              "w": 49.68,
+              "h": 12,
+              "startIndex": 2,
+              "endIndex": 29,
+              "confidence": 0.77,
+              "label": "text"
+            },
+            {
+              "x": 62.88,
+              "y": 80.16,
+              "w": 15.84,
+              "h": 6.24,
+              "startIndex": 33,
+              "endIndex": 37,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, key-value-region, image] but no table/form"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "3 tables on page"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Sub Total      | 36000 |\n| -------------- | ----- |\n| Discount (0 %) |       |\n| Tunai          | 50000 |",
+          "html": "<table>\n    <tr>\n        <td>Sub Total</td>\n<td>36000</td>\n    </tr>\n<tr>\n        <td colspan=\"2\">Discount (0 %)</td>\n    </tr>\n<tr>\n        <td>Tunai</td>\n<td>50000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Sub Total",
+              "36000"
+            ],
+            [
+              "Discount (0 %)",
+              ""
+            ],
+            [
+              "Tunai",
+              "50000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Sub Total\",\"36000\"\n\"Discount (0 %)\",\"\"\n\"Tunai\",\"50000\"",
+          "bBox": {
+            "x": 7.4649600000000005,
+            "y": 98.91072,
+            "w": 70.50240000000001,
+            "h": 25.50528,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 62.88,
+              "y": 100.8,
+              "w": 15.6,
+              "h": 6,
+              "startIndex": 19,
+              "endIndex": 23,
+              "confidence": 0.8,
+              "label": "text"
+            },
+            {
+              "x": 6.96,
+              "y": 106.8,
+              "w": 34.8,
+              "h": 6.72,
+              "startIndex": 56,
+              "endIndex": 69,
+              "confidence": 0.8,
+              "label": "text"
+            },
+            {
+              "x": 6.96,
+              "y": 115.68,
+              "w": 14.16,
+              "h": 6.48,
+              "startIndex": 83,
+              "endIndex": 87,
+              "confidence": 0.8,
+              "label": "text"
+            },
+            {
+              "x": 62.88,
+              "y": 118.32,
+              "w": 15.6,
+              "h": 6.24,
+              "startIndex": 100,
+              "endIndex": 104,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "header_value_type_mismatch",
+              "details": "col 0 'Sub Total' expects numeric, got 'Discount (0 %)' in row 1"
+            },
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, key-value-region, image] but no table/form"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "3 tables on page"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Kembalian | 14000 |\n| --------- | ----- |",
+          "html": "<table>\n    <tr>\n        <td>Kembalian</td>\n<td>14000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Kembalian",
+              "14000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Kembalian\",\"14000\"",
+          "bBox": {
+            "x": 7.32672,
+            "y": 134.99136000000001,
+            "w": 70.64064,
+            "h": 7.464959999999991,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.52,
+              "y": 132.96,
+              "w": 27.6,
+              "h": 8.16,
+              "startIndex": 2,
+              "endIndex": 10,
+              "confidence": 0.82,
+              "label": "text"
+            },
+            {
+              "x": 63.36,
+              "y": 136.32,
+              "w": 15.36,
+              "h": 6.24,
+              "startIndex": 14,
+              "endIndex": 18,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, key-value-region, image] but no table/form"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "3 tables on page"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 138.24,
+      "height": 207.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.556,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.464,
+            "y": 0.663,
+            "w": 0.1,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.462,
+            "y": 0.391,
+            "w": 0.106,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.66,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.475,
+            "w": 0.512,
+            "h": 0.127
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.651,
+            "w": 0.181,
+            "h": 0.025
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.463,
+            "y": 0.576,
+            "w": 0.101,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.52,
+            "w": 0.247,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.463,
+            "y": 0.492,
+            "w": 0.1,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "image",
+          "bbox": {
+            "x": -0.001,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.055,
+            "y": 0.564,
+            "w": 0.094,
+            "h": 0.023
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.056,
+            "y": 0.477,
+            "w": 0.158,
+            "h": 0.024
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.058,
+            "y": 0.376,
+            "w": 0.352,
+            "h": 0.053
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

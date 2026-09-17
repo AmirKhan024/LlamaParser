@@ -1,0 +1,7 @@
+photo: receipt on a surface
+
+1 BANABERRY FRESH CREAM CAK 230,000
+
+**TOTAL** 230,000
+CASH 230,000
+**CHANGE** 0

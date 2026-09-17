@@ -1,0 +1,329 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "  AuntieAnnes\n\n\n\n\n\n  CINNAMON SUGAR\n   x 17,000     17,000\nSUB TOTAL       17,000\n\nGRANDTOTAL      17,000\nCASHIDR         20,000\nCHANGE DUE      3,000",
+      "md": "logo: Auntie Anne's\n\n[illegible]\n[illegible]\n[illegible]\n\n[illegible]\n\n| ITEM           | TOTAL  |\n| -------------- | ------ |\n| CINNAMON SUGAR |        |\n| 1 x 17,000     | 17,000 |\n| SUB TOTAL      | 17,000 |\n| GRAND TOTAL    | 17,000 |\n| CASH IDR       | 20,000 |\n| CHANGE DUE     | 3,000  |\n\n\n[illegible]\n[illegible]\n[illegible]",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 207.36,
+          "width": 138.24,
+          "x": 0,
+          "y": 0,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 459,
+              "y": 679,
+              "w": 62,
+              "h": 23,
+              "confidence": 0.994,
+              "text": "3,000"
+            },
+            {
+              "x": 18,
+              "y": 668,
+              "w": 149,
+              "h": 29,
+              "confidence": 0.986,
+              "text": "CHANGE DUE"
+            },
+            {
+              "x": 447,
+              "y": 633,
+              "w": 78,
+              "h": 26,
+              "confidence": 0.999,
+              "text": "20,000"
+            },
+            {
+              "x": 15,
+              "y": 619,
+              "w": 109,
+              "h": 29,
+              "confidence": 1,
+              "text": "CASHIDR"
+            },
+            {
+              "x": 449,
+              "y": 581,
+              "w": 78,
+              "h": 29,
+              "confidence": 0.997,
+              "text": "17,000"
+            },
+            {
+              "x": 17,
+              "y": 571,
+              "w": 157,
+              "h": 28,
+              "confidence": 1,
+              "text": "GRANDTOTAL"
+            },
+            {
+              "x": 449,
+              "y": 509,
+              "w": 78,
+              "h": 29,
+              "confidence": 0.998,
+              "text": "17,000"
+            },
+            {
+              "x": 18,
+              "y": 503,
+              "w": 124,
+              "h": 27,
+              "confidence": 0.996,
+              "text": "SUB TOTAL"
+            },
+            {
+              "x": 448,
+              "y": 461,
+              "w": 79,
+              "h": 29,
+              "confidence": 0.999,
+              "text": "17,000"
+            },
+            {
+              "x": 80,
+              "y": 456,
+              "w": 116,
+              "h": 28,
+              "confidence": 0.985,
+              "text": "x 17,000"
+            },
+            {
+              "x": 45,
+              "y": 424,
+              "w": 203,
+              "h": 27,
+              "confidence": 0.982,
+              "text": "CINNAMON SUGAR"
+            },
+            {
+              "x": 108,
+              "y": 161,
+              "w": 438,
+              "h": 81,
+              "confidence": 0.969,
+              "text": "AuntieAnnes"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 207.357,
+          "width": 138.238,
+          "x": -0.098,
+          "y": 0.046,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "logo: Auntie Anne's",
+          "value": "logo: Auntie Anne's"
+        },
+        {
+          "type": "text",
+          "md": "[illegible]\n[illegible]\n[illegible]",
+          "value": "[illegible]\n[illegible]\n[illegible]",
+          "bBox": {
+            "x": -0.09876571655273439,
+            "y": 0.04655868530273439,
+            "w": 138.23861626003102,
+            "h": 207.35789295362392,
+            "confidence": 0.5,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 25.92,
+              "y": 38.64,
+              "w": 105.12,
+              "h": 19.44,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.5,
+              "label": "table"
+            },
+            {
+              "x": 3.6,
+              "y": 101.76,
+              "w": 55.92,
+              "h": 65.52,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.5,
+              "label": "table"
+            },
+            {
+              "x": 107.28,
+              "y": 110.64,
+              "w": 19.2,
+              "h": 57.84,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.5,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "[illegible]",
+          "value": "[illegible]"
+        },
+        {
+          "type": "table",
+          "md": "| ITEM           | TOTAL  |\n| -------------- | ------ |\n| CINNAMON SUGAR |        |\n| 1 x 17,000     | 17,000 |\n| SUB TOTAL      | 17,000 |\n| GRAND TOTAL    | 17,000 |\n| CASH IDR       | 20,000 |\n| CHANGE DUE     | 3,000  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>ITEM</th>\n        <th>TOTAL</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td colspan=\"2\">CINNAMON SUGAR</td>\n    </tr>\n<tr>\n        <td>1 x 17,000</td>\n<td>17,000</td>\n    </tr>\n<tr>\n        <td>SUB TOTAL</td>\n<td>17,000</td>\n    </tr>\n<tr>\n        <td>GRAND TOTAL</td>\n<td>17,000</td>\n    </tr>\n<tr>\n        <td>CASH IDR</td>\n<td>20,000</td>\n    </tr>\n<tr>\n        <td>CHANGE DUE</td>\n<td>3,000</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "ITEM",
+              "TOTAL"
+            ],
+            [
+              "CINNAMON SUGAR",
+              ""
+            ],
+            [
+              "1 x 17,000",
+              "17,000"
+            ],
+            [
+              "SUB TOTAL",
+              "17,000"
+            ],
+            [
+              "GRAND TOTAL",
+              "17,000"
+            ],
+            [
+              "CASH IDR",
+              "20,000"
+            ],
+            [
+              "CHANGE DUE",
+              "3,000"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"ITEM\",\"TOTAL\"\n\"CINNAMON SUGAR\",\"\"\n\"1 x 17,000\",\"17,000\"\n\"SUB TOTAL\",\"17,000\"\n\"GRAND TOTAL\",\"17,000\"\n\"CASH IDR\",\"20,000\"\n\"CHANGE DUE\",\"3,000\"",
+          "bBox": {
+            "x": -0.09876571655273439,
+            "y": 0.04655868530273439,
+            "w": 138.23861626003102,
+            "h": 207.35789295362392,
+            "confidence": 0.66,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 25.92,
+              "y": 38.64,
+              "w": 105.12,
+              "h": 19.44,
+              "startIndex": 0,
+              "endIndex": 222,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 4.32,
+              "y": 101.76,
+              "w": 55.2,
+              "h": 25.44,
+              "startIndex": 58,
+              "endIndex": 122,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 107.52,
+              "y": 110.64,
+              "w": 18.96,
+              "h": 18.48,
+              "startIndex": 90,
+              "endIndex": 95,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 107.28,
+              "y": 139.44,
+              "w": 19.2,
+              "h": 29.04,
+              "startIndex": 90,
+              "endIndex": 219,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 3.6,
+              "y": 137.04,
+              "w": 38.16,
+              "h": 30.24,
+              "startIndex": 142,
+              "endIndex": 207,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "[illegible]\n[illegible]\n[illegible]",
+          "value": "[illegible]\n[illegible]\n[illegible]"
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 138.24,
+      "height": 207.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.354,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.59,
+          "label": "table",
+          "bbox": {
+            "x": -0.001,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

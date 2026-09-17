@@ -1,0 +1,92 @@
+{
+  "file": "may26_mobile.pdf",
+  "document_type": "telecom_bill",
+  "clean_json": {
+    "document_type": "telecom_bill",
+    "vendor_name": "Vodafone Idea Limited",
+    "date": "25.05.26",
+    "amount": "1417.18",
+    "currency": "INR",
+    "additional_fields": {
+      "invoice_no": "MHI1505645306000",
+      "plan": "Vi Max Family 1201",
+      "bill_cycle_date": "25.05.26",
+      "credit_limit": "Rs. 8,000",
+      "security_deposit": "Rs. 150",
+      "customer_gst_no": "-",
+      "due_date": "04 Jun 2026",
+      "previous_balance": "Rs. 1,535.18",
+      "payments_last_1_month": "- Rs. 1,535.18",
+      "adjustments": "+ Rs. 0.00",
+      "current_bill_charges": "+ Rs. 1,417.18",
+      "current_payable_amount": "= Rs. 1,417.18",
+      "payable_after": "Rs. 1,517.18"
+    },
+    "extraction_notes": [
+      "used Total Payable Amount Rs. 1,417.18 as the main amount field"
+    ],
+    "confidence": 0.92,
+    "account_number": "102287496",
+    "billing_period": "25.04.26 to 24.05.26",
+    "subtotal": "1201.00",
+    "tax": "216.18",
+    "total": "1417.18"
+  },
+  "additional_fields": {
+    "invoice_no": "MHI1505645306000",
+    "plan": "Vi Max Family 1201",
+    "bill_cycle_date": "25.05.26",
+    "credit_limit": "Rs. 8,000",
+    "security_deposit": "Rs. 150",
+    "customer_gst_no": "-",
+    "due_date": "04 Jun 2026",
+    "previous_balance": "Rs. 1,535.18",
+    "payments_last_1_month": "- Rs. 1,535.18",
+    "adjustments": "+ Rs. 0.00",
+    "current_bill_charges": "+ Rs. 1,417.18",
+    "current_payable_amount": "= Rs. 1,417.18",
+    "payable_after": "Rs. 1,517.18"
+  },
+  "extraction_notes": [
+    "used Total Payable Amount Rs. 1,417.18 as the main amount field"
+  ],
+  "validation": [
+    {
+      "name": "subtotal + tax == total",
+      "passed": true,
+      "detail": "1201.00 + 216.18 = 1417.18, printed total = 1417.18 (diff 0.00, tolerance 0.5)"
+    },
+    {
+      "name": "gstin_format:customer_gst_no",
+      "passed": false,
+      "detail": "'-' does not match GSTIN format (14 chars: 2 digits, 5 letters, 4 digits, 1 letter, 1 alphanumeric, 'Z', 1 alphanumeric)"
+    }
+  ],
+  "completeness_warnings": [],
+  "review_view": {
+    "vendor_name": "Vodafone Idea Limited",
+    "date": "25.05.26",
+    "billing_period": "25.04.26 to 24.05.26",
+    "subtotal": "1201.00",
+    "tax": "216.18",
+    "total": "1417.18",
+    "currency": "INR",
+    "_document_type": "telecom_bill",
+    "_editable_fields": [
+      "date",
+      "total"
+    ],
+    "_flagged_checks": [
+      "gstin_format:customer_gst_no"
+    ],
+    "_ai_corrections": [],
+    "_needs_review": true
+  },
+  "duration_seconds": 2.35999999998603,
+  "tokens": {
+    "prompt": 2350,
+    "completion": 838,
+    "total": 3188
+  },
+  "estimated_cost_usd": "0.00098100"
+}

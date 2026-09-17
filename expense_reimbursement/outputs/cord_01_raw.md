@@ -1,0 +1,10 @@
+photo: receipt on a dark surface
+
+| J.STB PROMO | 17500 |
+| ----------- | ----- |
+| Y.B.BAT     | 46000 |
+| Y.BASO PROM | 27500 |
+| TOTAL       | 91000 |
+| CASH        | 91000 |
+
+

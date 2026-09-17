@@ -1,0 +1,334 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                       27\n0571-1854 BLUS WANITA  120,000\n8120,000           0%\n1002-0060 SHOPPING BAG\n1  @880 100%           0\n TOTAL (2 item)        120,000\nCC.Visa.BCA            120,000\nTotal Kembalian              0",
+      "md": "photo: receipt showing clothing purchase\n\n27\n\n| 0571-1854 BLUS WANITA  | 1 | @120,000 | 0%   | 120,000 |\n| ---------------------- | - | -------- | ---- | ------- |\n| 1002-0060 SHOPPING BAG | 1 | @880     | 100% | 0       |\n\n\n| TOTAL (2 item)  | 120,000 |\n| --------------- | ------- |\n| CC.Visa.BCA     | 120,000 |\n| Total Kembalian | 0       |\n\n\n",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 207.36,
+          "width": 138.24,
+          "x": 0,
+          "y": 0,
+          "original_width": 576,
+          "original_height": 863,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 414,
+              "y": 547,
+              "w": 18,
+              "h": 25,
+              "confidence": 0.974,
+              "text": "0"
+            },
+            {
+              "x": 50,
+              "y": 542,
+              "w": 170,
+              "h": 33,
+              "confidence": 0.95,
+              "text": "Total Kembalian"
+            },
+            {
+              "x": 53,
+              "y": 512,
+              "w": 131,
+              "h": 35,
+              "confidence": 0.941,
+              "text": "CC.Visa.BCA"
+            },
+            {
+              "x": 207,
+              "y": 434,
+              "w": 103,
+              "h": 32,
+              "confidence": 0.919,
+              "text": "@880 100%"
+            },
+            {
+              "x": 413,
+              "y": 432,
+              "w": 17,
+              "h": 23,
+              "confidence": 0.96,
+              "text": "0"
+            },
+            {
+              "x": 122,
+              "y": 431,
+              "w": 16,
+              "h": 23,
+              "confidence": 0.946,
+              "text": "1"
+            },
+            {
+              "x": 65,
+              "y": 394,
+              "w": 250,
+              "h": 49,
+              "confidence": 0.9,
+              "text": "1002-0060 SHOPPING BAG"
+            },
+            {
+              "x": 279,
+              "y": 386,
+              "w": 31,
+              "h": 26,
+              "confidence": 0.94,
+              "text": "0%"
+            },
+            {
+              "x": 170,
+              "y": 383,
+              "w": 94,
+              "h": 30,
+              "confidence": 0.916,
+              "text": "8120,000"
+            },
+            {
+              "x": 341,
+              "y": 369,
+              "w": 87,
+              "h": 40,
+              "confidence": 0.99,
+              "text": "120,000"
+            },
+            {
+              "x": 69,
+              "y": 348,
+              "w": 231,
+              "h": 43,
+              "confidence": 0.991,
+              "text": "0571-1854 BLUS WANITA"
+            },
+            {
+              "x": 410,
+              "y": 264,
+              "w": 67,
+              "h": 68,
+              "confidence": 0.928,
+              "text": "27"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 207.357,
+          "width": 138.238,
+          "x": 0.005,
+          "y": 0.016,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt showing clothing purchase",
+          "value": "photo: receipt showing clothing purchase"
+        },
+        {
+          "type": "text",
+          "md": "27",
+          "value": "27",
+          "bBox": {
+            "x": 0,
+            "y": 0,
+            "w": 138,
+            "h": 207,
+            "confidence": 0.44,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 98.4,
+              "y": 63.36,
+              "w": 16.08,
+              "h": 16.32,
+              "startIndex": 0,
+              "endIndex": 1,
+              "confidence": 0.44,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| 0571-1854 BLUS WANITA  | 1 | @120,000 | 0%   | 120,000 |\n| ---------------------- | - | -------- | ---- | ------- |\n| 1002-0060 SHOPPING BAG | 1 | @880     | 100% | 0       |",
+          "html": "<table>\n    <tr>\n        <td>0571-1854 BLUS WANITA</td>\n<td>1</td>\n<td>@120,000</td>\n<td>0%</td>\n<td>120,000</td>\n    </tr>\n<tr>\n        <td>1002-0060 SHOPPING BAG</td>\n<td>1</td>\n<td>@880</td>\n<td>100%</td>\n<td>0</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "0571-1854 BLUS WANITA",
+              "1",
+              "@120,000",
+              "0%",
+              "120,000"
+            ],
+            [
+              "1002-0060 SHOPPING BAG",
+              "1",
+              "@880",
+              "100%",
+              "0"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"0571-1854 BLUS WANITA\",\"1\",\"@120,000\",\"0%\",\"120,000\"\n\"1002-0060 SHOPPING BAG\",\"1\",\"@880\",\"100%\",\"0\"",
+          "bBox": {
+            "x": 0.005108642578125,
+            "y": 0.016252899169921876,
+            "w": 138.2386171556556,
+            "h": 207.35793379410458,
+            "confidence": 0.75,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0.01,
+              "y": 0.02,
+              "w": 138.23,
+              "h": 207.34,
+              "startIndex": 0,
+              "endIndex": 175,
+              "confidence": 0.75,
+              "label": "image"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [image, text] but no table/form"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "2 tables on page"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| TOTAL (2 item)  | 120,000 |\n| --------------- | ------- |\n| CC.Visa.BCA     | 120,000 |\n| Total Kembalian | 0       |",
+          "html": "<table>\n    <tr>\n        <td>TOTAL (2 item)</td>\n<td>120,000</td>\n    </tr>\n<tr>\n        <td>CC.Visa.BCA</td>\n<td>120,000</td>\n    </tr>\n<tr>\n        <td>Total Kembalian</td>\n<td>0</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "TOTAL (2 item)",
+              "120,000"
+            ],
+            [
+              "CC.Visa.BCA",
+              "120,000"
+            ],
+            [
+              "Total Kembalian",
+              "0"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"TOTAL (2 item)\",\"120,000\"\n\"CC.Visa.BCA\",\"120,000\"\n\"Total Kembalian\",\"0\"",
+          "bBox": {
+            "x": 13.271040000000001,
+            "y": 116.12160000000002,
+            "w": 89.99424,
+            "h": 21.7728,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 13.27,
+              "y": 116.12,
+              "w": 89.99,
+              "h": 21.77,
+              "startIndex": 0,
+              "endIndex": 118,
+              "confidence": 0.76,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "header_value_type_mismatch",
+              "details": "col 0 'TOTAL (2 item)' expects numeric, got 'CC.Visa.BCA' in row 1"
+            },
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [image, text] but no table/form"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "2 tables on page"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 138.24,
+      "height": 207.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "27",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.775,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.096,
+            "y": 0.56,
+            "w": 0.285,
+            "h": 0.104
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.6,
+            "y": 0.564,
+            "w": 0.147,
+            "h": 0.065
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

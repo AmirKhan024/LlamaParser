@@ -1,0 +1,245 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "AERRY FEH EAM CA\nTOTAL     230,000\nCASH      230,000\nCHANGE    0",
+      "md": "photo: receipt on a surface\n\n1 BANABERRY FRESH CREAM CAK 230,000\n\n**TOTAL** 230,000\nCASH 230,000\n**CHANGE** 0",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 207.36,
+          "width": 138.24,
+          "x": 0,
+          "y": 0,
+          "original_width": 576,
+          "original_height": 863,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 124,
+              "y": 461,
+              "w": 110,
+              "h": 43,
+              "confidence": 0.97,
+              "text": "CHANGE"
+            },
+            {
+              "x": 386,
+              "y": 454,
+              "w": 26,
+              "h": 33,
+              "confidence": 0.976,
+              "text": "0"
+            },
+            {
+              "x": 128,
+              "y": 452,
+              "w": 39,
+              "h": 19,
+              "confidence": 1,
+              "text": "CASH"
+            },
+            {
+              "x": 343,
+              "y": 435,
+              "w": 64,
+              "h": 25,
+              "confidence": 0.976,
+              "text": "230,000"
+            },
+            {
+              "x": 126,
+              "y": 417,
+              "w": 88,
+              "h": 42,
+              "confidence": 1,
+              "text": "TOTAL"
+            },
+            {
+              "x": 113,
+              "y": 369,
+              "w": 286,
+              "h": 37,
+              "confidence": 0.722,
+              "text": "AERRY FEH EAM CA"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 207.357,
+          "width": 138.238,
+          "x": -0.01,
+          "y": 0.098,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt on a surface",
+          "value": "photo: receipt on a surface",
+          "bBox": {
+            "x": -0.0104974365234375,
+            "y": 0.09860504150390627,
+            "w": 138.23862073815388,
+            "h": 207.35789886474615,
+            "confidence": 0.74,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0,
+              "y": 0.1,
+              "w": 138.24,
+              "h": 207.26,
+              "startIndex": 0,
+              "endIndex": 26,
+              "confidence": 0.74,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "1 BANABERRY FRESH CREAM CAK 230,000",
+          "value": "1 BANABERRY FRESH CREAM CAK 230,000",
+          "bBox": {
+            "x": 31.242240000000002,
+            "y": 99.53280000000001,
+            "w": 66.90816000000001,
+            "h": 20.736000000000004,
+            "confidence": 0.66,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 31.24,
+              "y": 99.53,
+              "w": 66.91,
+              "h": 20.74,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.66,
+              "label": "text"
+            },
+            {
+              "x": 68.4,
+              "y": 97.92,
+              "w": 29.28,
+              "h": 12.48,
+              "startIndex": 28,
+              "endIndex": 34,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**TOTAL** 230,000\nCASH 230,000\n**CHANGE** 0",
+          "value": "**TOTAL** 230,000\nCASH 230,000\n**CHANGE** 0",
+          "bBox": {
+            "x": 29.760000000000005,
+            "y": 97.92,
+            "w": 67.92,
+            "h": 23.04000000000002,
+            "confidence": 0.44,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 29.76,
+              "y": 97.92,
+              "w": 69.12,
+              "h": 23.04,
+              "startIndex": 0,
+              "endIndex": 42,
+              "confidence": 1,
+              "label": "image"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 138.24,
+      "height": 207.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.675,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.226,
+            "y": 0.491,
+            "w": 0.173,
+            "h": 0.089
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.504,
+            "y": 0.48,
+            "w": 0.201,
+            "h": 0.051
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.504,
+            "y": 0.48,
+            "w": 0.206,
+            "h": 0.084
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

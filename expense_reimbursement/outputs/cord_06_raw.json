@@ -1,0 +1,422 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "tu #us\n\n\n\n\n\n\n\n 1 EGG TART              13,000\n 1 EUG TAKT\n 2 CHOCO CUS ARD PASTRY  24,500\n 1 REDBEAN BREAD\n   DEDREAN BUEAD         9,000\n\n   TOTAL           46,000\n   CASH            50,000\n   CHANGE                4,000",
+      "md": "Tous Les Jours\n[illegible]\n[illegible]\n[illegible]\n[illegible]\n[illegible]\n\n--------------------------------------------------\n[illegible]\n[illegible]\n==================================================\n\n| 1 | EGG TART             | 13,000 |\n| - | -------------------- | ------ |\n| 2 | CHOCO CUSTARD PASTRY | 24,500 |\n| 1 | REDBEAN BREAD        | 9,000  |\n\n\n--------------------------------------------------\n\n| TOTAL  | 46,000 |\n| ------ | ------ |\n| CASH   | 50,000 |\n| CHANGE | 4,000  |\n\n\n[illegible]\n__________________________________________________\n[illegible]\n[illegible]\n[illegible]",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 311.04,
+          "width": 207.36,
+          "x": 0,
+          "y": 0,
+          "original_width": 863,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 574,
+              "y": 821,
+              "w": 180,
+              "h": 84,
+              "confidence": 0.999,
+              "text": "4,000"
+            },
+            {
+              "x": 641,
+              "y": 782,
+              "w": 110,
+              "h": 44,
+              "confidence": 0.998,
+              "text": "50,000"
+            },
+            {
+              "x": 543,
+              "y": 718,
+              "w": 208,
+              "h": 76,
+              "confidence": 0.999,
+              "text": "46,000"
+            },
+            {
+              "x": 190,
+              "y": 716,
+              "w": 164,
+              "h": 82,
+              "confidence": 1,
+              "text": "TOTAL"
+            },
+            {
+              "x": 658,
+              "y": 647,
+              "w": 94,
+              "h": 40,
+              "confidence": 0.999,
+              "text": "9,000"
+            },
+            {
+              "x": 159,
+              "y": 603,
+              "w": 360,
+              "h": 41,
+              "confidence": 0.979,
+              "text": "2 CHOCO CUS ARD PASTRY"
+            },
+            {
+              "x": 362,
+              "y": 128,
+              "w": 303,
+              "h": 78,
+              "confidence": 0.518,
+              "text": "#us"
+            },
+            {
+              "x": 208,
+              "y": 126,
+              "w": 142,
+              "h": 69,
+              "confidence": 0.56,
+              "text": "tu"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 311.027,
+          "width": 207.357,
+          "x": -0.12,
+          "y": 0.087,
+          "original_width": 864,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "Tous Les Jours\n[illegible]\n[illegible]\n[illegible]\n[illegible]\n[illegible]",
+          "value": "Tous Les Jours\n[illegible]\n[illegible]\n[illegible]\n[illegible]\n[illegible]",
+          "bBox": {
+            "x": -0.12031471252441407,
+            "y": 0.08719093322753907,
+            "w": 207.35793083854347,
+            "h": 311.02704416357955,
+            "confidence": 0.6,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 37.68,
+              "y": 134.4,
+              "w": 144,
+              "h": 83.28,
+              "startIndex": 0,
+              "endIndex": 73,
+              "confidence": 0.6,
+              "label": "table"
+            },
+            {
+              "x": 49.92,
+              "y": 30.24,
+              "w": 109.68,
+              "h": 19.2,
+              "startIndex": 2,
+              "endIndex": 3,
+              "confidence": 0.6,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "--------------------------------------------------\n[illegible]\n[illegible]\n==================================================",
+          "value": "--------------------------------------------------\n[illegible]\n[illegible]\n=================================================="
+        },
+        {
+          "type": "table",
+          "md": "| 1 | EGG TART             | 13,000 |\n| - | -------------------- | ------ |\n| 2 | CHOCO CUSTARD PASTRY | 24,500 |\n| 1 | REDBEAN BREAD        | 9,000  |",
+          "html": "<table>\n    <tr>\n        <td>1</td>\n<td>EGG TART</td>\n<td>13,000</td>\n    </tr>\n<tr>\n        <td>2</td>\n<td>CHOCO CUSTARD PASTRY</td>\n<td>24,500</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>REDBEAN BREAD</td>\n<td>9,000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "1",
+              "EGG TART",
+              "13,000"
+            ],
+            [
+              "2",
+              "CHOCO CUSTARD PASTRY",
+              "24,500"
+            ],
+            [
+              "1",
+              "REDBEAN BREAD",
+              "9,000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"1\",\"EGG TART\",\"13,000\"\n\"2\",\"CHOCO CUSTARD PASTRY\",\"24,500\"\n\"1\",\"REDBEAN BREAD\",\"9,000\"",
+          "bBox": {
+            "x": -0.12031471252441407,
+            "y": 0.08719093322753907,
+            "w": 207.35793083854347,
+            "h": 311.02704416357955,
+            "confidence": 0.6,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 37.68,
+              "y": 134.4,
+              "w": 144,
+              "h": 83.28,
+              "startIndex": 2,
+              "endIndex": 147,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 49.92,
+              "y": 30.24,
+              "w": 109.68,
+              "h": 19.2,
+              "startIndex": 89,
+              "endIndex": 90,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "multi_table_page",
+              "details": "2 tables on page"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "--------------------------------------------------",
+          "value": "--------------------------------------------------",
+          "layoutAwareBbox": []
+        },
+        {
+          "type": "table",
+          "md": "| TOTAL  | 46,000 |\n| ------ | ------ |\n| CASH   | 50,000 |\n| CHANGE | 4,000  |",
+          "html": "<table>\n    <tr>\n        <td>TOTAL</td>\n<td>46,000</td>\n    </tr>\n<tr>\n        <td>CASH</td>\n<td>50,000</td>\n    </tr>\n<tr>\n        <td>CHANGE</td>\n<td>4,000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "TOTAL",
+              "46,000"
+            ],
+            [
+              "CASH",
+              "50,000"
+            ],
+            [
+              "CHANGE",
+              "4,000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"TOTAL\",\"46,000\"\n\"CASH\",\"50,000\"\n\"CHANGE\",\"4,000\"",
+          "bBox": {
+            "x": 47.07072,
+            "y": 174.18240000000003,
+            "w": 132.29568,
+            "h": 41.99040000000001,
+            "confidence": 0.55,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 47.07,
+              "y": 174.18,
+              "w": 132.3,
+              "h": 41.99,
+              "startIndex": 0,
+              "endIndex": 78,
+              "confidence": 0.55,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "header_value_type_mismatch",
+              "details": "col 0 'TOTAL' expects numeric, got 'CASH' in row 1"
+            },
+            {
+              "type": "multi_table_page",
+              "details": "2 tables on page"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "[illegible]\n__________________________________________________\n[illegible]\n[illegible]\n[illegible]",
+          "value": "[illegible]\n__________________________________________________\n[illegible]\n[illegible]\n[illegible]"
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 207.36,
+      "height": 311.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.469,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.636,
+            "y": 0.56,
+            "w": 0.229,
+            "h": 0.134
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.19,
+            "y": 0.439,
+            "w": 0.188,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.193,
+            "y": 0.499,
+            "w": 0.277,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.754,
+            "y": 0.442,
+            "w": 0.115,
+            "h": 0.027
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.227,
+            "y": 0.562,
+            "w": 0.222,
+            "h": 0.133
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.769,
+            "y": 0.503,
+            "w": 0.098,
+            "h": 0.025
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.189,
+            "y": 0.469,
+            "w": 0.411,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.6,
+          "label": "table",
+          "bbox": {
+            "x": -0.001,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.749,
+            "y": 0.473,
+            "w": 0.12,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.749,
+            "y": 0.442,
+            "w": 0.12,
+            "h": 0.087
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.676,
+            "y": 0.641,
+            "w": 0.187,
+            "h": 0.053
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "RedVelvet Cheese Slc     38,000\nChicken Baked Rice      55,,000\nFishn Chips              655,00\n[ Eish r\nMushroom Soup            35,000\n                         25,000\ni Iced Tea               20,000\nSUBTOTAL                238,000\nService                 17,850\nPB1                     25,585\n TOTAL                  281-435\n Coupon                 100,000\n CASH                   200,000\n Change                 18,565",
+      "md": "photo: receipt on a marble surface\n\n| 1        | RedVelvet Cheese Slc | 38,000  |\n| -------- | -------------------- | ------- |\n| 1        | Chicken Baked Rice   | 55,000  |\n| 1        | Fish n Chips         | 65,000  |\n| 1        | Mushroom Soup        | 35,000  |\n| 1        | Chamomile            | 25,000  |\n| 1        | Iced Tea             | 20,000  |\n| SUBTOTAL |                      | 238,000 |\n| Service  |                      | 17,850  |\n| PB1      |                      | 25,585  |\n\n\n**TOTAL** **281,435**\n\n**Coupon**: 100,000\n**CASH**: 200,000\n**Change**: 18,565",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 783.36,
+          "width": 440.64,
+          "x": 0,
+          "y": 0,
+          "original_width": 1799,
+          "original_height": 3200,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 538,
+              "y": 1740,
+              "w": 157,
+              "h": 63,
+              "confidence": 1,
+              "text": "Change"
+            },
+            {
+              "x": 1207,
+              "y": 1687,
+              "w": 175,
+              "h": 60,
+              "confidence": 0.994,
+              "text": "200,000"
+            },
+            {
+              "x": 548,
+              "y": 1557,
+              "w": 225,
+              "h": 50,
+              "confidence": 0.999,
+              "text": "TOTAL"
+            },
+            {
+              "x": 1217,
+              "y": 1460,
+              "w": 155,
+              "h": 63,
+              "confidence": 0.989,
+              "text": "25,585"
+            },
+            {
+              "x": 532,
+              "y": 1463,
+              "w": 90,
+              "h": 57,
+              "confidence": 0.971,
+              "text": "PB1"
+            },
+            {
+              "x": 535,
+              "y": 1420,
+              "w": 183,
+              "h": 57,
+              "confidence": 0.994,
+              "text": "Service"
+            },
+            {
+              "x": 1217,
+              "y": 1413,
+              "w": 155,
+              "h": 60,
+              "confidence": 0.993,
+              "text": "17,850"
+            },
+            {
+              "x": 1197,
+              "y": 1370,
+              "w": 172,
+              "h": 60,
+              "confidence": 0.851,
+              "text": "238,000"
+            },
+            {
+              "x": 535,
+              "y": 1370,
+              "w": 195,
+              "h": 60,
+              "confidence": 0.998,
+              "text": "SUBTOTAL"
+            },
+            {
+              "x": 1213,
+              "y": 1280,
+              "w": 152,
+              "h": 60,
+              "confidence": 0.982,
+              "text": "20,000"
+            },
+            {
+              "x": 482,
+              "y": 1277,
+              "w": 260,
+              "h": 67,
+              "confidence": 0.954,
+              "text": "i Iced Tea"
+            },
+            {
+              "x": 1217,
+              "y": 1233,
+              "w": 148,
+              "h": 63,
+              "confidence": 0.996,
+              "text": "25,000"
+            },
+            {
+              "x": 532,
+              "y": 1190,
+              "w": 318,
+              "h": 67,
+              "confidence": 0.965,
+              "text": "Mushroom Soup"
+            },
+            {
+              "x": 1213,
+              "y": 1190,
+              "w": 152,
+              "h": 60,
+              "confidence": 0.99,
+              "text": "35,000"
+            },
+            {
+              "x": 460,
+              "y": 1163,
+              "w": 327,
+              "h": 167,
+              "confidence": 0.537,
+              "text": "[ Eish r"
+            },
+            {
+              "x": 532,
+              "y": 1147,
+              "w": 295,
+              "h": 57,
+              "confidence": 0.902,
+              "text": "Fishn Chips"
+            },
+            {
+              "x": 1208,
+              "y": 1138,
+              "w": 158,
+              "h": 73,
+              "confidence": 0.626,
+              "text": "655,00"
+            },
+            {
+              "x": 538,
+              "y": 1103,
+              "w": 420,
+              "h": 57,
+              "confidence": 0.983,
+              "text": "Chicken Baked Rice"
+            },
+            {
+              "x": 1213,
+              "y": 1100,
+              "w": 148,
+              "h": 60,
+              "confidence": 0.77,
+              "text": "55,,000"
+            },
+            {
+              "x": 535,
+              "y": 1063,
+              "w": 460,
+              "h": 47,
+              "confidence": 0.986,
+              "text": "RedVelvet Cheese Slc"
+            },
+            {
+              "x": 1213,
+              "y": 1053,
+              "w": 148,
+              "h": 60,
+              "confidence": 0.996,
+              "text": "38,000"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 190.383,
+          "width": 225.607,
+          "x": 110.922,
+          "y": 253.201,
+          "original_width": 922,
+          "original_height": 778,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 783.351,
+          "width": 440.635,
+          "x": 0.044,
+          "y": 0.334,
+          "original_width": 1800,
+          "original_height": 3200,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt on a marble surface",
+          "value": "photo: receipt on a marble surface",
+          "bBox": {
+            "x": 0.04475418090820312,
+            "y": 0.33431396484375003,
+            "w": 440.63558761596676,
+            "h": 783.3519933551291,
+            "confidence": 0.66,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0.04,
+              "y": 0.33,
+              "w": 440.6,
+              "h": 783.03,
+              "startIndex": 0,
+              "endIndex": 33,
+              "confidence": 0.66,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| 1        | RedVelvet Cheese Slc | 38,000  |\n| -------- | -------------------- | ------- |\n| 1        | Chicken Baked Rice   | 55,000  |\n| 1        | Fish n Chips         | 65,000  |\n| 1        | Mushroom Soup        | 35,000  |\n| 1        | Chamomile            | 25,000  |\n| 1        | Iced Tea             | 20,000  |\n| SUBTOTAL |                      | 238,000 |\n| Service  |                      | 17,850  |\n| PB1      |                      | 25,585  |",
+          "html": "<table>\n    <tr>\n        <td>1</td>\n<td>RedVelvet Cheese Slc</td>\n<td>38,000</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>Chicken Baked Rice</td>\n<td>55,000</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>Fish n Chips</td>\n<td>65,000</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>Mushroom Soup</td>\n<td>35,000</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>Chamomile</td>\n<td>25,000</td>\n    </tr>\n<tr>\n        <td>1</td>\n<td>Iced Tea</td>\n<td>20,000</td>\n    </tr>\n<tr>\n        <td>SUBTOTAL</td><td></td>\n<td>238,000</td>\n    </tr>\n<tr>\n        <td>Service</td><td></td>\n<td>17,850</td>\n    </tr>\n<tr>\n        <td>PB1</td><td></td>\n<td>25,585</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "1",
+              "RedVelvet Cheese Slc",
+              "38,000"
+            ],
+            [
+              "1",
+              "Chicken Baked Rice",
+              "55,000"
+            ],
+            [
+              "1",
+              "Fish n Chips",
+              "65,000"
+            ],
+            [
+              "1",
+              "Mushroom Soup",
+              "35,000"
+            ],
+            [
+              "1",
+              "Chamomile",
+              "25,000"
+            ],
+            [
+              "1",
+              "Iced Tea",
+              "20,000"
+            ],
+            [
+              "SUBTOTAL",
+              "",
+              "238,000"
+            ],
+            [
+              "Service",
+              "",
+              "17,850"
+            ],
+            [
+              "PB1",
+              "",
+              "25,585"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"1\",\"RedVelvet Cheese Slc\",\"38,000\"\n\"1\",\"Chicken Baked Rice\",\"55,000\"\n\"1\",\"Fish n Chips\",\"65,000\"\n\"1\",\"Mushroom Soup\",\"35,000\"\n\"1\",\"Chamomile\",\"25,000\"\n\"1\",\"Iced Tea\",\"20,000\"\n\"SUBTOTAL\",\"\",\"238,000\"\n\"Service\",\"\",\"17,850\"\n\"PB1\",\"\",\"25,585\"",
+          "bBox": {
+            "x": 110.92241976530654,
+            "y": 253.20140656844433,
+            "w": 225.6076073555324,
+            "h": 190.38367452870241,
+            "confidence": 0.75,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 110.92,
+              "y": 253.2,
+              "w": 225.61,
+              "h": 190.38,
+              "startIndex": 0,
+              "endIndex": 458,
+              "confidence": 0.75,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**TOTAL** **281,435**",
+          "value": "**TOTAL** **281,435**",
+          "bBox": {
+            "x": 135.27648,
+            "y": 381.49632,
+            "w": 199.60992,
+            "h": 12.533759999999972,
+            "confidence": 0.76,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 135.28,
+              "y": 381.5,
+              "w": 199.61,
+              "h": 12.53,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.76,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Coupon**: 100,000\n**CASH**: 200,000\n**Change**: 18,565",
+          "value": "**Coupon**: 100,000\n**CASH**: 200,000\n**Change**: 18,565",
+          "bBox": {
+            "x": 130.74232500000002,
+            "y": 313.344,
+            "w": 207.57127500000004,
+            "h": 128.11199999999997,
+            "confidence": 0.33,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 293.06,
+              "y": 401.96,
+              "w": 45.26,
+              "h": 37.7,
+              "startIndex": 0,
+              "endIndex": 55,
+              "confidence": 1,
+              "label": "key-value-region"
+            },
+            {
+              "x": 130.74,
+              "y": 403.19,
+              "w": 38.66,
+              "h": 38.27,
+              "startIndex": 0,
+              "endIndex": 55,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 440.64,
+      "height": 783.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.644,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.61,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.585,
+            "y": 0.487,
+            "w": 0.176,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.57,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.302,
+            "y": 0.515,
+            "w": 0.464,
+            "h": 0.047
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.674,
+            "y": 0.516,
+            "w": 0.091,
+            "h": 0.045
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.303,
+            "y": 0.517,
+            "w": 0.079,
+            "h": 0.046
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.52,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.307,
+            "y": 0.488,
+            "w": 0.124,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.5,
+          "label": "table",
+          "bbox": {
+            "x": 0.252,
+            "y": 0.323,
+            "w": 0.512,
+            "h": 0.243
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

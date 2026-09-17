@@ -1,0 +1,111 @@
+Loading naver-clova-ix/cord-v2 test split...
+Dataset has 100 samples; evaluating the first 15.
+
+[1/15] Processing sample 0...
+Started parsing the file under job_id 559d6afe-95c2-40ed-8900-614efdc4260e
+  document_type=generic_receipt  grand_total=match  line_items matched=0/1
+
+[2/15] Processing sample 1...
+Started parsing the file under job_id 5222b42f-80bb-48de-b1f3-656ae161cf8d
+  document_type=generic_receipt  grand_total=match  line_items matched=0/3
+
+[3/15] Processing sample 2...
+Started parsing the file under job_id 5b2d0bf4-e049-4310-8834-af58ccf5b9b4
+  document_type=generic_receipt  grand_total=match  line_items matched=0/2
+
+[4/15] Processing sample 3...
+Started parsing the file under job_id 6131cbc3-228e-4695-a93d-a5a1cf5f3678
+  document_type=generic_receipt  grand_total=match  line_items matched=0/1
+
+[5/15] Processing sample 4...
+Started parsing the file under job_id d489f4d9-0e58-4a4b-8b19-6b7eaed8a8b1
+  document_type=generic_receipt  grand_total=match  line_items matched=0/3
+
+[6/15] Processing sample 5...
+Started parsing the file under job_id a5182985-0ae9-4cbd-a321-e9010f34130d
+  document_type=restaurant_bill  grand_total=match  line_items matched=0/1
+
+[7/15] Processing sample 6...
+Started parsing the file under job_id 3302bd9f-b904-4980-9da8-4a3d47013910
+  document_type=restaurant_bill  grand_total=match  line_items matched=0/3
+
+[8/15] Processing sample 7...
+Started parsing the file under job_id 35a1ec14-5891-466a-ba64-15c8c112ef17
+  document_type=generic_receipt  grand_total=match  line_items matched=0/2
+
+[9/15] Processing sample 8...
+Started parsing the file under job_id b5d7a375-fdfc-4cfd-89d7-0604bd986600
+  document_type=generic_receipt  grand_total=match  line_items matched=0/3
+
+[10/15] Processing sample 9...
+Started parsing the file under job_id 48a0a0fa-2f55-4a31-b543-07b344310b11
+  document_type=restaurant_bill  grand_total=mismatch  line_items matched=0/1
+
+[11/15] Processing sample 10...
+Started parsing the file under job_id 0836132c-49ac-4494-9154-04f4ba61b4a4
+  document_type=restaurant_bill  grand_total=match  line_items matched=0/1
+
+[12/15] Processing sample 11...
+Started parsing the file under job_id 79448b94-db98-4a3c-b789-0becacaeba76
+  document_type=generic_receipt  grand_total=match  line_items matched=0/1
+
+[13/15] Processing sample 12...
+Started parsing the file under job_id e4ea772d-3262-4a7d-a4ba-f4accb54e48b
+  document_type=generic_receipt  grand_total=match  line_items matched=0/2
+
+[14/15] Processing sample 13...
+Started parsing the file under job_id 1473a4b5-d871-4884-8c22-7cacf6afd220
+  document_type=restaurant_bill  grand_total=match  line_items matched=0/2
+
+[15/15] Processing sample 14...
+Started parsing the file under job_id 64cef17d-6731-46ea-bf6f-35a62823c431
+  document_type=restaurant_bill  grand_total=match  line_items matched=0/6
+
+====================================================================================================
+Per-sample summary
+====================================================================================================
+ #  doc_type                grand_total   subtotal      tax_total     items (m/gt/extra)  
+------------------------------------------------------------------------------------------
+ 0  generic_receipt         match         match         match         0/1/0               
+ 1  generic_receipt         match         both_absent   both_absent   0/3/0               
+ 2  generic_receipt         match         mismatch      both_absent   0/2/0               
+ 3  generic_receipt         match         match         both_absent   0/1/0               
+ 4  generic_receipt         match         match         both_absent   0/3/0               
+ 5  restaurant_bill         match         match         match         0/1/0               
+ 6  restaurant_bill         match         both_absent   both_absent   0/3/0               
+ 7  generic_receipt         match         match         mismatch      0/2/0               
+ 8  generic_receipt         match         mismatch      mismatch      0/3/0               
+ 9  restaurant_bill         mismatch      match         both_absent   0/1/0               
+10  restaurant_bill         match         match         both_absent   0/1/0               
+11  generic_receipt         match         both_absent   both_absent   0/1/0               
+12  generic_receipt         match         both_absent   both_absent   0/2/0               
+13  restaurant_bill         match         mismatch      match         0/2/0               
+14  restaurant_bill         match         match         mismatch      0/6/0               
+
+====================================================================================================
+Aggregate
+====================================================================================================
+Samples: 15 total, 15 succeeded, 0 failed (pipeline error, not scored)
+
+Field-level accuracy (match / scoreable, i.e. excluding samples where ground truth lacks the field):
+  grand_total : 14/15 (93%)
+  subtotal    : 8/11 (73%)
+  tax_total   : 3/6 (50%)
+  vendor_name : ground truth had this field in 0/15 samples
+
+Line items, combined across all samples:
+  matched=0 missed=32 extra=0
+  precision = n/a (nothing extracted)
+  recall    = matched/(matched+missed) = 0.00
+  samples with ZERO extracted line items: 15/15
+
+document_type classification (heuristic -- CORD has no ground truth for this field):
+  plausible fit for a retail receipt: 15/15
+  looks like a forced/wrong-category fit: 0/15
+    generic_receipt: 9
+    restaurant_bill: 6
+
+Average per document (Groq call only, successful samples): 1.79s, 1948 tokens
+(LlamaParse time/cost not included above -- see per-sample files for markdown/JSON parse artifacts)
+
+Per-sample raw results saved under: C:\Users\Amir Khan\Desktop\ds_Amir\expense_reimbursement\outputs\cord_eval

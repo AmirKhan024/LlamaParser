@@ -1,0 +1,341 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "          SMINE MT (L)        24,000\n          CUCONUT JELLY (L)    4,000\n\nSUB TOTAI                      28,000\n\nTOTAL SALES                    28.000\nTOTAL ITMS                          1\nCASH                           100,000\nCHANGE                         72,000\n               Queue No: 102",
+      "md": "photo: receipt on a dark surface\n\n1 JASMINE MT ( L ) 24,000\nCOCONUT JELLY ( L ) 4,000\n\nSUB TOTAL 28,000\n\nTOTAL SALES 28,000\nTOTAL ITEMS 1\nCASH 100,000\nCHANGE 72,000\n\nQueue No: 102",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 311.04,
+          "width": 207.36,
+          "x": 0,
+          "y": 0,
+          "original_width": 864,
+          "original_height": 1296,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 380,
+              "y": 1007,
+              "w": 170,
+              "h": 49,
+              "confidence": 0.951,
+              "text": "Queue No: 102"
+            },
+            {
+              "x": 96,
+              "y": 971,
+              "w": 81,
+              "h": 35,
+              "confidence": 0.993,
+              "text": "CHANGE"
+            },
+            {
+              "x": 695,
+              "y": 960,
+              "w": 77,
+              "h": 36,
+              "confidence": 0.972,
+              "text": "72,000"
+            },
+            {
+              "x": 97,
+              "y": 929,
+              "w": 58,
+              "h": 34,
+              "confidence": 1,
+              "text": "CASH"
+            },
+            {
+              "x": 679,
+              "y": 918,
+              "w": 90,
+              "h": 38,
+              "confidence": 0.933,
+              "text": "100,000"
+            },
+            {
+              "x": 98,
+              "y": 881,
+              "w": 149,
+              "h": 39,
+              "confidence": 0.876,
+              "text": "TOTAL ITMS"
+            },
+            {
+              "x": 751,
+              "y": 886,
+              "w": 12,
+              "h": 21,
+              "confidence": 0.999,
+              "text": "1"
+            },
+            {
+              "x": 98,
+              "y": 837,
+              "w": 151,
+              "h": 41,
+              "confidence": 0.968,
+              "text": "TOTAL SALES"
+            },
+            {
+              "x": 684,
+              "y": 840,
+              "w": 77,
+              "h": 31,
+              "confidence": 0.933,
+              "text": "28.000"
+            },
+            {
+              "x": 679,
+              "y": 761,
+              "w": 74,
+              "h": 31,
+              "confidence": 0.972,
+              "text": "28,000"
+            },
+            {
+              "x": 102,
+              "y": 754,
+              "w": 114,
+              "h": 39,
+              "confidence": 0.914,
+              "text": "SUB TOTAI"
+            },
+            {
+              "x": 684,
+              "y": 687,
+              "w": 61,
+              "h": 27,
+              "confidence": 0.994,
+              "text": "4,000"
+            },
+            {
+              "x": 211,
+              "y": 683,
+              "w": 226,
+              "h": 24,
+              "confidence": 0.895,
+              "text": "CUCONUT JELLY (L)"
+            },
+            {
+              "x": 670,
+              "y": 648,
+              "w": 75,
+              "h": 31,
+              "confidence": 0.94,
+              "text": "24,000"
+            },
+            {
+              "x": 215,
+              "y": 645,
+              "w": 199,
+              "h": 29,
+              "confidence": 0.934,
+              "text": "SMINE MT (L)"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 255.813,
+          "width": 207.073,
+          "x": 0.04,
+          "y": 1.77,
+          "original_width": 863,
+          "original_height": 1066,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photo: receipt on a dark surface",
+          "value": "photo: receipt on a dark surface",
+          "bBox": {
+            "x": 0.0401378631591797,
+            "y": 1.7703856658935548,
+            "w": 207.073839081474,
+            "h": 255.81399931202765,
+            "confidence": 0.54,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 23.04,
+              "y": 154.8,
+              "w": 108.96,
+              "h": 98.64,
+              "startIndex": 0,
+              "endIndex": 31,
+              "confidence": 0.54,
+              "label": "image"
+            },
+            {
+              "x": 160.8,
+              "y": 155.52,
+              "w": 24.48,
+              "h": 83.52,
+              "startIndex": 0,
+              "endIndex": 31,
+              "confidence": 0.54,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "1 JASMINE MT ( L ) 24,000\nCOCONUT JELLY ( L ) 4,000",
+          "value": "1 JASMINE MT ( L ) 24,000\nCOCONUT JELLY ( L ) 4,000",
+          "bBox": {
+            "x": 51.60000000000001,
+            "y": 154.8,
+            "w": 127.20000000000003,
+            "h": 16.560000000000002,
+            "confidence": 0.57,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 51.6,
+              "y": 154.8,
+              "w": 127.2,
+              "h": 16.56,
+              "startIndex": 0,
+              "endIndex": 50,
+              "confidence": 0.57,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "SUB TOTAL 28,000",
+          "value": "SUB TOTAL 28,000",
+          "bBox": {
+            "x": 162.96000000000004,
+            "y": 182.64000000000001,
+            "w": 19.680000000000007,
+            "h": 26.400000000000006,
+            "confidence": 0.53,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 162.96,
+              "y": 182.64,
+              "w": 19.68,
+              "h": 26.4,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.53,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "TOTAL SALES 28,000\nTOTAL ITEMS 1\nCASH 100,000\nCHANGE 72,000",
+          "value": "TOTAL SALES 28,000\nTOTAL ITEMS 1\nCASH 100,000\nCHANGE 72,000",
+          "bBox": {
+            "x": 23.040000000000003,
+            "y": 182.64000000000001,
+            "w": 162.24000000000004,
+            "h": 58.80000000000001,
+            "confidence": 0.59,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 23.04,
+              "y": 180.96,
+              "w": 36.72,
+              "h": 60.48,
+              "startIndex": 0,
+              "endIndex": 51,
+              "confidence": 0.59,
+              "label": "image"
+            },
+            {
+              "x": 162.96,
+              "y": 182.64,
+              "w": 22.32,
+              "h": 56.4,
+              "startIndex": 12,
+              "endIndex": 58,
+              "confidence": 0.59,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Queue No: 102",
+          "value": "Queue No: 102",
+          "bBox": {
+            "x": 91.20000000000002,
+            "y": 241.68000000000004,
+            "w": 40.80000000000001,
+            "h": 11.759999999999991,
+            "confidence": 0.52,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 91.2,
+              "y": 241.68,
+              "w": 40.8,
+              "h": 11.76,
+              "startIndex": 0,
+              "endIndex": 12,
+              "confidence": 0.52,
+              "label": "image"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 207.36,
+      "height": 311.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.8,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.67,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0.006,
+            "w": 0.999,
+            "h": 0.822
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

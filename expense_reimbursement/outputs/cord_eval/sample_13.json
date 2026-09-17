@@ -1,0 +1,86 @@
+{
+  "index": 13,
+  "success": true,
+  "error": null,
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "A FUNG",
+    "date": null,
+    "amount": "51.300",
+    "currency": "INR",
+    "additional_fields": {
+      "BASO KUAH_quantity": "1",
+      "BASO KUAH_price": "43.636",
+      "A.MINERAL GELAS_quantity": "1",
+      "A.MINERAL GELAS_price": "3.000",
+      "DPP": "46.636",
+      "TAX_10.00_%": "4.664",
+      "TUNAI": "52.000",
+      "KEMBALI": "700"
+    },
+    "extraction_notes": [
+      "Inferred vendor name from photo caption 'A FUNG receipt'",
+      "Mapped subtotal to DPP and grand_total to GRAND TOTAL fields"
+    ],
+    "confidence": 0.6,
+    "restaurant_gstin": null,
+    "subtotal": "46.636",
+    "cgst": null,
+    "sgst": null,
+    "grand_total": "51.300"
+  },
+  "ground_truth": {
+    "grand_total": "51.300",
+    "subtotal": [
+      "46.636",
+      "46.636"
+    ],
+    "tax_total": "4.664",
+    "line_items": [
+      {
+        "nm": "BASO KUAH",
+        "price": "43.636",
+        "cnt": "1"
+      },
+      {
+        "nm": "A.MINERAL GELAS",
+        "price": "3,000",
+        "cnt": "1"
+      }
+    ],
+    "vendor_name": null
+  },
+  "field_scores": {
+    "vendor_name": "not_in_ground_truth",
+    "grand_total": "match",
+    "subtotal": "mismatch",
+    "tax_total": "match"
+  },
+  "line_item_score": {
+    "matched": 0,
+    "missed": 2,
+    "extra": 0,
+    "total_gt": 2,
+    "matched_detail": [],
+    "missed_detail": [
+      {
+        "nm": "BASO KUAH",
+        "price": "43.636",
+        "cnt": "1"
+      },
+      {
+        "nm": "A.MINERAL GELAS",
+        "price": "3,000",
+        "cnt": "1"
+      }
+    ],
+    "extra_detail": []
+  },
+  "duration_seconds": 2.5160000000614673,
+  "tokens": {
+    "prompt": 1414,
+    "completion": 963,
+    "total": 2377
+  }
+}

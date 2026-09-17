@@ -1,0 +1,84 @@
+{
+  "index": 8,
+  "success": true,
+  "error": null,
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": null,
+    "date": null,
+    "amount": "50000",
+    "currency": "INR",
+    "additional_fields": {
+      "1 [REG] BLACK SAKURA": "45,455",
+      "1 COOKIE DOH SAUCES": "0",
+      "1 NATA DE COCO": "0",
+      "Sub Total": "45,455",
+      "PB1 (10%)": "4,545",
+      "Rounding": "0",
+      "Card Payment": "50,000"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "ground_truth": {
+    "grand_total": "50,000",
+    "subtotal": "45,455",
+    "tax_total": "4,545",
+    "line_items": [
+      {
+        "nm": "[REG] BLACK SAKURA",
+        "price": "45,455",
+        "cnt": "1"
+      },
+      {
+        "nm": "COOKIE DOH SAUCES",
+        "price": "0",
+        "cnt": "1"
+      },
+      {
+        "nm": "NATA DE COCO",
+        "price": "0",
+        "cnt": "1"
+      }
+    ],
+    "vendor_name": null
+  },
+  "field_scores": {
+    "vendor_name": "not_in_ground_truth",
+    "grand_total": "match",
+    "subtotal": "mismatch",
+    "tax_total": "mismatch"
+  },
+  "line_item_score": {
+    "matched": 0,
+    "missed": 3,
+    "extra": 0,
+    "total_gt": 3,
+    "matched_detail": [],
+    "missed_detail": [
+      {
+        "nm": "[REG] BLACK SAKURA",
+        "price": "45,455",
+        "cnt": "1"
+      },
+      {
+        "nm": "COOKIE DOH SAUCES",
+        "price": "0",
+        "cnt": "1"
+      },
+      {
+        "nm": "NATA DE COCO",
+        "price": "0",
+        "cnt": "1"
+      }
+    ],
+    "extra_detail": []
+  },
+  "duration_seconds": 1.562000000034459,
+  "tokens": {
+    "prompt": 1364,
+    "completion": 434,
+    "total": 1798
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Kupon 15              100,000\nADD CHICKEN BOX           909\nSubtotal           100,909\nPB1 (107)          10,091\nTotal              111,000\nCash               Rp.111,000",
+      "md": "photograph: receipt showing transaction details\n\nKupon 15      100,000\nADD CHICKEN BOX      909\n\nSubtotal      100,909\nPB1 (10%)      10,091\n\n**Total**      **111,000**\n\nCash      Rp.111,000",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 207.36,
+          "width": 138.24,
+          "x": 0,
+          "y": 0,
+          "original_width": 576,
+          "original_height": 863,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 381,
+              "y": 755,
+              "w": 114,
+              "h": 38,
+              "confidence": 0.961,
+              "text": "Rp.111,000"
+            },
+            {
+              "x": 54,
+              "y": 753,
+              "w": 53,
+              "h": 33,
+              "confidence": 0.988,
+              "text": "Cash"
+            },
+            {
+              "x": 413,
+              "y": 702,
+              "w": 80,
+              "h": 35,
+              "confidence": 0.998,
+              "text": "111,000"
+            },
+            {
+              "x": 428,
+              "y": 649,
+              "w": 69,
+              "h": 31,
+              "confidence": 0.987,
+              "text": "10,091"
+            },
+            {
+              "x": 62,
+              "y": 606,
+              "w": 89,
+              "h": 34,
+              "confidence": 0.937,
+              "text": "Subtotal"
+            },
+            {
+              "x": 416,
+              "y": 529,
+              "w": 83,
+              "h": 34,
+              "confidence": 0.993,
+              "text": "100,000"
+            },
+            {
+              "x": 66,
+              "y": 520,
+              "w": 91,
+              "h": 33,
+              "confidence": 0.966,
+              "text": "Kupon 15"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 207.357,
+          "width": 138.238,
+          "x": -0.037,
+          "y": 0.247,
+          "original_width": 576,
+          "original_height": 864,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photograph: receipt showing transaction details",
+          "value": "photograph: receipt showing transaction details",
+          "bBox": {
+            "x": -0.03784927368164063,
+            "y": 0.247489013671875,
+            "w": 138.23860802028491,
+            "h": 207.35793218198035,
+            "confidence": 0.74,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 12.96,
+              "y": 124.8,
+              "w": 40.8,
+              "h": 63.84,
+              "startIndex": 0,
+              "endIndex": 46,
+              "confidence": 0.74,
+              "label": "image"
+            },
+            {
+              "x": 91.44,
+              "y": 126.96,
+              "w": 28.32,
+              "h": 63.36,
+              "startIndex": 0,
+              "endIndex": 46,
+              "confidence": 0.74,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Kupon 15      100,000\nADD CHICKEN BOX      909",
+          "value": "Kupon 15      100,000\nADD CHICKEN BOX      909",
+          "bBox": {
+            "x": 15.840000000000002,
+            "y": 124.80000000000001,
+            "w": 103.92000000000002,
+            "h": 16.32000000000002,
+            "confidence": 0.37,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 15.84,
+              "y": 124.8,
+              "w": 103.92,
+              "h": 16.32,
+              "startIndex": 0,
+              "endIndex": 45,
+              "confidence": 0.37,
+              "label": "image"
+            },
+            {
+              "x": 15.84,
+              "y": 124.8,
+              "w": 103.92,
+              "h": 10.32,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.37,
+              "label": "image"
+            },
+            {
+              "x": 16.32,
+              "y": 132,
+              "w": 37.44,
+              "h": 7.68,
+              "startIndex": 22,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 16.32,
+              "y": 132,
+              "w": 103.44,
+              "h": 9.12,
+              "startIndex": 22,
+              "endIndex": 45,
+              "confidence": 0.37,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Subtotal      100,909\nPB1 (10%)      10,091",
+          "value": "Subtotal      100,909\nPB1 (10%)      10,091",
+          "bBox": {
+            "x": 16.03584,
+            "y": 147.01824,
+            "w": 102.29759999999999,
+            "h": 15.759360000000015,
+            "confidence": 0.9,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 16.04,
+              "y": 147.02,
+              "w": 102.3,
+              "h": 15.76,
+              "startIndex": 0,
+              "endIndex": 42,
+              "confidence": 0.9,
+              "label": "text"
+            },
+            {
+              "x": 14.88,
+              "y": 145.44,
+              "w": 21.36,
+              "h": 8.16,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 100.56,
+              "y": 148.56,
+              "w": 18.24,
+              "h": 7.44,
+              "startIndex": 14,
+              "endIndex": 20,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 102.72,
+              "y": 155.76,
+              "w": 16.56,
+              "h": 7.44,
+              "startIndex": 22,
+              "endIndex": 42,
+              "confidence": 0.9,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**      **111,000**",
+          "value": "**Total**      **111,000**",
+          "bBox": {
+            "x": 15.2064,
+            "y": 167.75424,
+            "w": 102.15935999999999,
+            "h": 8.294399999999968,
+            "confidence": 0.87,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 15.21,
+              "y": 167.75,
+              "w": 102.16,
+              "h": 8.29,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Cash      Rp.111,000",
+          "value": "Cash      Rp.111,000",
+          "bBox": {
+            "x": 14.37696,
+            "y": 182.47680000000003,
+            "w": 102.98880000000001,
+            "h": 7.2575999999999965,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 14.38,
+              "y": 182.48,
+              "w": 102.99,
+              "h": 7.26,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 138.24,
+      "height": 207.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.656,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.116,
+            "y": 0.709,
+            "w": 0.157,
+            "h": 0.062
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.735,
+            "y": 0.621,
+            "w": 0.128,
+            "h": 0.06
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.11,
+            "y": 0.809,
+            "w": 0.088,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.125,
+            "y": 0.61,
+            "w": 0.262,
+            "h": 0.063
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.7,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0.001,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.104,
+            "y": 0.88,
+            "w": 0.076,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.672,
+            "y": 0.885,
+            "w": 0.177,
+            "h": 0.03
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.726,
+            "y": 0.822,
+            "w": 0.123,
+            "h": 0.027
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.733,
+            "y": 0.722,
+            "w": 0.123,
+            "h": 0.063
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.673,
+            "y": 0.821,
+            "w": 0.177,
+            "h": 0.094
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

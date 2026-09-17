@@ -1,0 +1,68 @@
+{
+  "index": 0,
+  "success": true,
+  "error": null,
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": null,
+    "date": null,
+    "amount": "60.000",
+    "currency": "INR",
+    "additional_fields": {
+      "item_code": "901016",
+      "description": "-TICKET CP",
+      "quantity": "2",
+      "line_amount": "60.000",
+      "line_total": "60.000",
+      "total_discount": "-60.000",
+      "tax": "5.455",
+      "subtotal": "60.000",
+      "total": "60.000",
+      "edc_cimb_niaga_no": "xx7730",
+      "edc_amount": "60.000"
+    },
+    "extraction_notes": [],
+    "confidence": 0.85
+  },
+  "ground_truth": {
+    "grand_total": "60.000",
+    "subtotal": "60.000",
+    "tax_total": "5.455",
+    "line_items": [
+      {
+        "nm": "-TICKET CP",
+        "price": "60.000",
+        "cnt": "2"
+      }
+    ],
+    "vendor_name": null
+  },
+  "field_scores": {
+    "vendor_name": "not_in_ground_truth",
+    "grand_total": "match",
+    "subtotal": "match",
+    "tax_total": "match"
+  },
+  "line_item_score": {
+    "matched": 0,
+    "missed": 1,
+    "extra": 0,
+    "total_gt": 1,
+    "matched_detail": [],
+    "missed_detail": [
+      {
+        "nm": "-TICKET CP",
+        "price": "60.000",
+        "cnt": "2"
+      }
+    ],
+    "extra_detail": []
+  },
+  "duration_seconds": 2.1869999999180436,
+  "tokens": {
+    "prompt": 1385,
+    "completion": 762,
+    "total": 2147
+  }
+}

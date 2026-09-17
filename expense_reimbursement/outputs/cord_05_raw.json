@@ -1,0 +1,362 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "TRAD KY TOAST CARTE     28.182\n            ITEMS 1.00\nSUBTTL                  28.182\nPB-1 10%                2.818\nTOTAL                  31.000\nCASH                   31.000",
+      "md": "photograph: a hand holding a receipt\n\nTRAD KY TOAST CARTE\t28.182\nITEMS 1.00\n\n**SUBTTL**\t28.182\n\nPB-1 10%\t2.818\n\n**TOTAL**\t**31.000**\n\n**CASH**\t**31.000**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 983.04,
+          "width": 552.96,
+          "x": 0,
+          "y": 0,
+          "original_width": 1800,
+          "original_height": 3200,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 533,
+              "y": 1743,
+              "w": 218,
+              "h": 60,
+              "confidence": 1,
+              "text": "CASH"
+            },
+            {
+              "x": 1283,
+              "y": 1627,
+              "w": 157,
+              "h": 63,
+              "confidence": 1,
+              "text": "2.818"
+            },
+            {
+              "x": 533,
+              "y": 1620,
+              "w": 225,
+              "h": 63,
+              "confidence": 0.964,
+              "text": "PB-1 10%"
+            },
+            {
+              "x": 537,
+              "y": 1563,
+              "w": 317,
+              "h": 60,
+              "confidence": 1,
+              "text": "SUBTTL"
+            },
+            {
+              "x": 768,
+              "y": 1507,
+              "w": 270,
+              "h": 60,
+              "confidence": 0.998,
+              "text": "ITEMS 1.00"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 983.029,
+          "width": 552.954,
+          "x": 0.071,
+          "y": 1.163,
+          "original_width": 1800,
+          "original_height": 3200,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "photograph: a hand holding a receipt",
+          "value": "photograph: a hand holding a receipt",
+          "bBox": {
+            "x": 0.071883544921875,
+            "y": 1.16390625,
+            "w": 552.9544241996433,
+            "h": 983.029952445652,
+            "confidence": 0.78,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 0.07,
+              "y": 1.16,
+              "w": 552.89,
+              "h": 981.88,
+              "startIndex": 0,
+              "endIndex": 35,
+              "confidence": 0.78,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "TRAD KY TOAST CARTE\t28.182\nITEMS 1.00",
+          "value": "TRAD KY TOAST CARTE\t28.182\nITEMS 1.00",
+          "bBox": {
+            "x": 165.5808,
+            "y": 443.904,
+            "w": 276.4800000000001,
+            "h": 75.26400000000001,
+            "confidence": 0.45,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 165.58,
+              "y": 443.9,
+              "w": 276.48,
+              "h": 75.26,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 0.45,
+              "label": "image"
+            },
+            {
+              "x": 165.58,
+              "y": 443.9,
+              "w": 153.91,
+              "h": 19.35,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 234.3,
+              "y": 462.85,
+              "w": 82.33,
+              "h": 18.43,
+              "startIndex": 27,
+              "endIndex": 36,
+              "confidence": 0.45,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**SUBTTL**\t28.182",
+          "value": "**SUBTTL**\t28.182"
+        },
+        {
+          "type": "text",
+          "md": "PB-1 10%\t2.818",
+          "value": "PB-1 10%\t2.818",
+          "bBox": {
+            "x": 398.1324252717391,
+            "y": 503.5421331521738,
+            "w": 41.58554857336956,
+            "h": 14.132608695652218,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 398.13,
+              "y": 503.54,
+              "w": 41.59,
+              "h": 14.13,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**TOTAL**\t**31.000**",
+          "value": "**TOTAL**\t**31.000**",
+          "bBox": {
+            "x": 341.9273488451087,
+            "y": 521.0567527173912,
+            "w": 96.43072010869571,
+            "h": 15.708872282608736,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 341.93,
+              "y": 521.06,
+              "w": 96.43,
+              "h": 15.71,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.78,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**CASH**\t**31.000**",
+          "value": "**CASH**\t**31.000**",
+          "bBox": {
+            "x": 341.69336871603264,
+            "y": 539.3048641304347,
+            "w": 96.94864045516304,
+            "h": 15.804945652173924,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 341.69,
+              "y": 539.3,
+              "w": 96.95,
+              "h": 15.8,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.76,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 552.96,
+      "height": 983.04,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.657,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "image",
+          "bbox": {
+            "x": 0,
+            "y": 0.001,
+            "w": 1,
+            "h": 1
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.707,
+            "y": 0.456,
+            "w": 0.088,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.707,
+            "y": 0.493,
+            "w": 0.088,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.72,
+            "y": 0.512,
+            "w": 0.075,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.299,
+            "y": 0.453,
+            "w": 0.278,
+            "h": 0.111
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.618,
+            "y": 0.53,
+            "w": 0.174,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.302,
+            "y": 0.453,
+            "w": 0.275,
+            "h": 0.036
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.618,
+            "y": 0.549,
+            "w": 0.175,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.298,
+            "y": 0.491,
+            "w": 0.175,
+            "h": 0.073
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

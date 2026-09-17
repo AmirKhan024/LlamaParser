@@ -1,0 +1,11 @@
+photograph: receipt showing transaction details
+
+Kupon 15      100,000
+ADD CHICKEN BOX      909
+
+Subtotal      100,909
+PB1 (10%)      10,091
+
+**Total**      **111,000**
+
+Cash      Rp.111,000

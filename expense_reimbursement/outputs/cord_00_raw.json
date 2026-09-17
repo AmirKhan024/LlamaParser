@@ -1,0 +1,488 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "901016  -TICKET CP\n2       60,000           E0.000\n        TOTAL DISC S    -60,000\n                        -h0.000\n               TAX        5.455\n          Subtotal             60.000\n        (aty 2.0\nTOTAL (Qty2.00 60,000\n\n- EDC CIMB NIAGA NO: Xx7730    60.000\n\nCUSTOMER INEO",
+      "md": "\n\n| 901016          | -TICKET CP   |        |         |\n| --------------- | ------------ | ------ | ------- |\n| 2               |              | 60.000 | 60.000  |\n|                 | TOTAL DISC $ |        | -60.000 |\n|                 | TAX          |        | 5.455   |\n|                 | Subtotal     |        | 60.000  |\n| TOTAL (Qty 2.00 |              |        | 60.000  |\n\n\n**- EDC CIMB NIAGA No: xx7730**: 60.000\n\nCUSTOMER INFO",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 155.52,
+          "width": 103.68,
+          "x": 0,
+          "y": 0,
+          "original_width": 359,
+          "original_height": 280,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 21,
+              "y": 266,
+              "w": 100,
+              "h": 14,
+              "confidence": 0.918,
+              "text": "CUSTOMER INEO"
+            },
+            {
+              "x": 23,
+              "y": 213,
+              "w": 201,
+              "h": 27,
+              "confidence": 0.947,
+              "text": "- EDC CIMB NIAGA NO: Xx7730"
+            },
+            {
+              "x": 20,
+              "y": 167,
+              "w": 76,
+              "h": 22,
+              "confidence": 0.999,
+              "text": "TOTAL"
+            },
+            {
+              "x": 254,
+              "y": 164,
+              "w": 90,
+              "h": 22,
+              "confidence": 0.969,
+              "text": "60,000"
+            },
+            {
+              "x": 110,
+              "y": 163,
+              "w": 132,
+              "h": 25,
+              "confidence": 0.941,
+              "text": "(Qty2.00"
+            },
+            {
+              "x": 280,
+              "y": 140,
+              "w": 50,
+              "h": 21,
+              "confidence": 0.969,
+              "text": "60.000"
+            },
+            {
+              "x": 151,
+              "y": 137,
+              "w": 62,
+              "h": 25,
+              "confidence": 0.996,
+              "text": "Subtotal"
+            },
+            {
+              "x": 288,
+              "y": 114,
+              "w": 41,
+              "h": 22,
+              "confidence": 0.999,
+              "text": "5.455"
+            },
+            {
+              "x": 273,
+              "y": 87,
+              "w": 56,
+              "h": 25,
+              "confidence": 0.837,
+              "text": "-60,000"
+            },
+            {
+              "x": 62,
+              "y": 47,
+              "w": 13,
+              "h": 18,
+              "confidence": 0.998,
+              "text": "2"
+            },
+            {
+              "x": 151,
+              "y": 42,
+              "w": 46,
+              "h": 19,
+              "confidence": 0.992,
+              "text": "60,000"
+            },
+            {
+              "x": 278,
+              "y": 38,
+              "w": 50,
+              "h": 25,
+              "confidence": 0.867,
+              "text": "E0.000"
+            },
+            {
+              "x": 16,
+              "y": 20,
+              "w": 53,
+              "h": 25,
+              "confidence": 0.999,
+              "text": "901016"
+            },
+            {
+              "x": 122,
+              "y": 18,
+              "w": 76,
+              "h": 21,
+              "confidence": 0.987,
+              "text": "-TICKET CP"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "table",
+          "md": "| 901016          | -TICKET CP   |        |         |\n| --------------- | ------------ | ------ | ------- |\n| 2               |              | 60.000 | 60.000  |\n|                 | TOTAL DISC $ |        | -60.000 |\n|                 | TAX          |        | 5.455   |\n|                 | Subtotal     |        | 60.000  |\n| TOTAL (Qty 2.00 |              |        | 60.000  |",
+          "html": "<table>\n    <tr><td>901016</td><td>-TICKET CP</td><td></td><td> </td></tr>\n<tr>\n        <td>2</td>\n<td> </td>\n<td>60.000</td>\n<td>60.000</td>\n    </tr>\n<tr>\n        <td> </td>\n<td>TOTAL DISC $</td><td></td>\n<td>-60.000</td>\n    </tr>\n<tr>\n        <td> </td>\n<td>TAX</td><td></td>\n<td>5.455</td>\n    </tr>\n<tr>\n        <td> </td>\n<td>Subtotal</td><td></td>\n<td>60.000</td>\n    </tr>\n<tr>\n        <td>TOTAL (Qty 2.00</td><td></td><td></td>\n<td>60.000</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "901016",
+              "-TICKET CP",
+              "",
+              ""
+            ],
+            [
+              "2",
+              "",
+              "60.000",
+              "60.000"
+            ],
+            [
+              "",
+              "TOTAL DISC $",
+              "",
+              "-60.000"
+            ],
+            [
+              "",
+              "TAX",
+              "",
+              "5.455"
+            ],
+            [
+              "",
+              "Subtotal",
+              "",
+              "60.000"
+            ],
+            [
+              "TOTAL (Qty 2.00",
+              "",
+              "",
+              "60.000"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"901016\",\"-TICKET CP\",\"\",\"\"\n\"2\",\"\",\"60.000\",\"60.000\"\n\"\",\"TOTAL DISC $\",\"\",\"-60.000\"\n\"\",\"TAX\",\"\",\"5.455\"\n\"\",\"Subtotal\",\"\",\"60.000\"\n\"TOTAL (Qty 2.00\",\"\",\"\",\"60.000\"",
+          "bBox": {
+            "x": 35.75457275390625,
+            "y": 110.40730224609376,
+            "w": 20.926695556640627,
+            "h": 4.36777587890625,
+            "confidence": 0.64,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 35.75,
+              "y": 110.41,
+              "w": 20.93,
+              "h": 4.37,
+              "startIndex": 0,
+              "endIndex": 376,
+              "confidence": 0.64,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**- EDC CIMB NIAGA No: xx7730**: 60.000",
+          "value": "**- EDC CIMB NIAGA No: xx7730**: 60.000",
+          "bBox": {
+            "x": 11.50844970703125,
+            "y": 140.1234521484375,
+            "w": 75.64393066406251,
+            "h": 5.21888671875,
+            "confidence": 0.76,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.51,
+              "y": 140.12,
+              "w": 75.64,
+              "h": 5.22,
+              "startIndex": 0,
+              "endIndex": 38,
+              "confidence": 0.76,
+              "label": "key-value-region"
+            },
+            {
+              "x": 11.28,
+              "y": 139.2,
+              "w": 48.24,
+              "h": 6.48,
+              "startIndex": 4,
+              "endIndex": 31,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "CUSTOMER INFO",
+          "value": "CUSTOMER INFO",
+          "bBox": {
+            "x": 11.45461395263672,
+            "y": 152.78384765625,
+            "w": 23.430083312988284,
+            "h": 2.8218750000000004,
+            "confidence": 0.75,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.45,
+              "y": 152.78,
+              "w": 23.43,
+              "h": 2.74,
+              "startIndex": 0,
+              "endIndex": 12,
+              "confidence": 0.75,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 103.68,
+      "height": 155.52,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.797,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.112,
+            "y": 0.903,
+            "w": 0.335,
+            "h": 0.031
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.737,
+            "y": 0.902,
+            "w": 0.102,
+            "h": 0.027
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.467,
+            "y": 0.901,
+            "w": 0.102,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.104,
+            "y": 0.606,
+            "w": 0.104,
+            "h": 0.025
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.346,
+            "y": 0.599,
+            "w": 0.163,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.709,
+            "y": 0.634,
+            "w": 0.1,
+            "h": 0.025
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.208,
+            "y": 0.643,
+            "w": 0.016,
+            "h": 0.023
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.345,
+            "y": 0.71,
+            "w": 0.202,
+            "h": 0.028
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.499,
+            "y": 0.748,
+            "w": 0.048,
+            "h": 0.024
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.697,
+            "y": 0.71,
+            "w": 0.115,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.52,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.111,
+            "y": 0.901,
+            "w": 0.73,
+            "h": 0.034
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.731,
+            "y": 0.748,
+            "w": 0.084,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.41,
+            "y": 0.636,
+            "w": 0.1,
+            "h": 0.024
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.716,
+            "y": 0.787,
+            "w": 0.101,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.414,
+            "y": 0.786,
+            "w": 0.131,
+            "h": 0.026
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.11,
+            "y": 0.982,
+            "w": 0.226,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

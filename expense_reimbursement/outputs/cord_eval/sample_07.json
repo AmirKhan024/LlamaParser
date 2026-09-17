@@ -1,0 +1,73 @@
+{
+  "index": 7,
+  "success": true,
+  "error": null,
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": null,
+    "date": null,
+    "amount": "111000",
+    "currency": "Rp",
+    "additional_fields": {
+      "Kupon 15": "100,000",
+      "ADD CHICKEN BOX": "909",
+      "Subtotal": "100,909",
+      "PB1 (10%)": "10,091",
+      "Total": "111,000",
+      "Cash": "Rp.111,000"
+    },
+    "extraction_notes": [],
+    "confidence": 0.85
+  },
+  "ground_truth": {
+    "grand_total": "111,000",
+    "subtotal": "100,909",
+    "tax_total": "10,091",
+    "line_items": [
+      {
+        "nm": "Kupon 15",
+        "price": "100,000",
+        "cnt": null
+      },
+      {
+        "nm": "ADD CHICKEN BOX",
+        "price": "909",
+        "cnt": null
+      }
+    ],
+    "vendor_name": null
+  },
+  "field_scores": {
+    "vendor_name": "not_in_ground_truth",
+    "grand_total": "match",
+    "subtotal": "match",
+    "tax_total": "mismatch"
+  },
+  "line_item_score": {
+    "matched": 0,
+    "missed": 2,
+    "extra": 0,
+    "total_gt": 2,
+    "matched_detail": [],
+    "missed_detail": [
+      {
+        "nm": "Kupon 15",
+        "price": "100,000",
+        "cnt": null
+      },
+      {
+        "nm": "ADD CHICKEN BOX",
+        "price": "909",
+        "cnt": null
+      }
+    ],
+    "extra_detail": []
+  },
+  "duration_seconds": 1.312999999965541,
+  "tokens": {
+    "prompt": 1316,
+    "completion": 506,
+    "total": 1822
+  }
+}
