@@ -3,7 +3,7 @@
     {
       "page": 1,
       "text": "Re: May-26 Local Convayance\n\n\nSK  Sanjay K S    Yesterday\n    To You\n\n\n\nOK\n\nRegards,\nSanjay K S\n\nFrom: Nasir <nasir@coffeeday.com>\nSent: 12 June 2026 03:44 PM\nTo: Sanjay K S <sanjayks@coffeeday.com>\nSubject: May-26 Local Convayance\n\n\nDear Sir,\n\nPlease approve the same.\n\n         AMALGAMATED BEAN COFFEE TRADING CO LTD.,\n         Coffee Day Beverages Division\n\n         LOCAL CONVEYANCE REIMBURSEMENT FORM\nName     NASIR AHMED KHAN\n         K                                       →",
-      "md": "**Re: May-26 Local Convayance**\n\nlogo: SK\n\n**Sanjay K S**\nTo You\n\nYesterday\n\nOK\n\nRegards,\nSanjay K S\n\n----\n\n**From:** Nasir <nasir@coffeeday.com>\n\n**Sent:** 12 June 2026 03:44 PM\n\n**To:** Sanjay K S <sanjayks@coffeeday.com>\n\n**Subject:** May-26 Local Convayance\n\nDear Sir,\n\nPlease approve the same.\n\n|      | AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division |   |\n| ---- | -------------------------------------------------------------------------- | - |\n|      | LOCAL CONVEYANCE REIMBURSEMENT FORM                                        |   |\n| Name | NASIR AHMED KHAN                                                           |   |\n\n\n",
+      "md": "## Re: May-26 Local Convayance\n\nlogo: Sanjay K S profile icon\n\nYesterday\n\nOK\n\nRegards,\nSanjay K S\n\n----\n\n**From:** Nasir <nasir@coffeeday.com>\n\n**Sent:** 12 June 2026 03:44 PM\n\n**To:** Sanjay K S <sanjayks@coffeeday.com>\n\n**Subject:** May-26 Local Convayance\n\nDear Sir,\n\nPlease approve the same.\n\n| AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM | AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM |\n| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |\n| Name                                                                                                          | NASIR AHMED KHAN                                                                                              |\n\n\n",
       "images": [
         {
           "name": "img_p0_1.jpg",
@@ -63,9 +63,10 @@
       "charts": [],
       "items": [
         {
-          "type": "text",
-          "md": "**Re: May-26 Local Convayance**",
-          "value": "**Re: May-26 Local Convayance**",
+          "type": "heading",
+          "md": "## Re: May-26 Local Convayance",
+          "value": "Re: May-26 Local Convayance",
+          "lvl": 2,
           "bBox": {
             "x": 101.77054306735162,
             "y": 14.705008968063023,
@@ -80,8 +81,8 @@
               "y": 11.31,
               "w": 263.95,
               "h": 23.68,
-              "startIndex": 0,
-              "endIndex": 30,
+              "startIndex": 3,
+              "endIndex": 29,
               "confidence": 1,
               "label": "text"
             }
@@ -89,51 +90,26 @@
         },
         {
           "type": "text",
-          "md": "logo: SK",
-          "value": "logo: SK",
+          "md": "logo: Sanjay K S profile icon",
+          "value": "logo: Sanjay K S profile icon",
           "bBox": {
-            "x": 99,
-            "y": 81,
-            "w": 51,
-            "h": 50,
-            "confidence": 0.54,
-            "label": "image"
+            "x": 101.9291291547858,
+            "y": 305.63357021497643,
+            "w": 101.2787485640982,
+            "h": 19.3036910347316,
+            "confidence": 0.73,
+            "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 99,
-              "y": 81,
-              "w": 51,
-              "h": 50,
+              "x": 101.93,
+              "y": 305.63,
+              "w": 101.28,
+              "h": 19.3,
               "startIndex": 0,
-              "endIndex": 7,
-              "confidence": 0.54,
-              "label": "image"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "md": "**Sanjay K S**\nTo You",
-          "value": "**Sanjay K S**\nTo You",
-          "bBox": {
-            "x": 99.86699192420295,
-            "y": 81.40007242949113,
-            "w": 157.73365637530452,
-            "h": 50.458479155664854,
-            "confidence": 0.37,
-            "label": "image"
-          },
-          "layoutAwareBbox": [
-            {
-              "x": 166.31578947368422,
-              "y": 86.56812500000001,
-              "w": 93.15789473684214,
-              "h": 42.10000000000002,
-              "startIndex": 0,
-              "endIndex": 20,
-              "confidence": 0.37,
-              "label": "image"
+              "endIndex": 28,
+              "confidence": 0.73,
+              "label": "text"
             }
           ]
         },
@@ -151,10 +127,10 @@
           },
           "layoutAwareBbox": [
             {
-              "x": 427.77121751204777,
-              "y": 86.48425369677337,
-              "w": 63.51412275563114,
-              "h": 15.20867590282275,
+              "x": 427.77,
+              "y": 86.48,
+              "w": 63.51,
+              "h": 15.21,
               "startIndex": 0,
               "endIndex": 8,
               "confidence": 0.82,
@@ -176,10 +152,10 @@
           },
           "layoutAwareBbox": [
             {
-              "x": 101.772054174672,
-              "y": 219.82782007300332,
-              "w": 27.293916474217944,
-              "h": 15.335924231487784,
+              "x": 101.77,
+              "y": 219.83,
+              "w": 27.29,
+              "h": 15.34,
               "startIndex": 0,
               "endIndex": 1,
               "confidence": 0.87,
@@ -192,22 +168,22 @@
           "md": "Regards,\nSanjay K S",
           "value": "Regards,\nSanjay K S",
           "bBox": {
-            "x": 102.02097980872443,
-            "y": 277.05027364647907,
-            "w": 101.45419737567072,
-            "h": 47.72607463339097,
-            "confidence": 0.61,
+            "x": 101.745,
+            "y": 277.01800000000003,
+            "w": 101.745,
+            "h": 47.99400000000003,
+            "confidence": 0.82,
             "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 102.02097980872443,
-              "y": 277.05027364647907,
-              "w": 101.45419737567072,
-              "h": 47.72607463339097,
+              "x": 101.75,
+              "y": 277.02,
+              "w": 101.75,
+              "h": 47.99,
               "startIndex": 0,
               "endIndex": 18,
-              "confidence": 0.61,
+              "confidence": 0.82,
               "label": "text"
             }
           ]
@@ -223,23 +199,23 @@
           "md": "**From:** Nasir <nasir@coffeeday.com>",
           "value": "**From:** Nasir <nasir@coffeeday.com>",
           "bBox": {
-            "x": 150.51394949788633,
-            "y": 369.335590030836,
-            "w": 221.49109208065528,
-            "h": 17.231897271197795,
-            "confidence": 0.95,
-            "label": "text"
+            "x": 101.15,
+            "y": 369.638,
+            "w": 310.59000000000003,
+            "h": 100.19799999999998,
+            "confidence": 0.94,
+            "label": "key-value-region"
           },
           "layoutAwareBbox": [
             {
-              "x": 150.51394949788633,
-              "y": 369.335590030836,
-              "w": 221.49109208065528,
-              "h": 17.231897271197795,
+              "x": 99.47,
+              "y": 365.22,
+              "w": 273.68,
+              "h": 23.68,
               "startIndex": 0,
               "endIndex": 36,
-              "confidence": 0.95,
-              "label": "text"
+              "confidence": 0.94,
+              "label": "key-value-region"
             }
           ]
         },
@@ -248,22 +224,22 @@
           "md": "**Sent:** 12 June 2026 03:44 PM",
           "value": "**Sent:** 12 June 2026 03:44 PM",
           "bBox": {
-            "x": 145.2645230293274,
-            "y": 398.03235311093533,
-            "w": 173.5363171411597,
-            "h": 13.336190431014336,
+            "x": 101.745,
+            "y": 398.26599999999996,
+            "w": 217.17499999999995,
+            "h": 13.47199999999998,
             "confidence": 0.96,
             "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 145.2645230293274,
-              "y": 398.03235311093533,
-              "w": 173.5363171411597,
-              "h": 13.336190431014336,
+              "x": 99.74,
+              "y": 394.16,
+              "w": 221.05,
+              "h": 21.31,
               "startIndex": 0,
               "endIndex": 30,
-              "confidence": 0.96,
+              "confidence": 1,
               "label": "text"
             }
           ]
@@ -273,22 +249,22 @@
           "md": "**To:** Sanjay K S <sanjayks@coffeeday.com>",
           "value": "**To:** Sanjay K S <sanjayks@coffeeday.com>",
           "bBox": {
-            "x": 128.545286240785,
-            "y": 424.6224096547002,
-            "w": 283.6253333091736,
-            "h": 17.648476476254668,
+            "x": 101.745,
+            "y": 424.368,
+            "w": 310.59000000000003,
+            "h": 17.682000000000016,
             "confidence": 0.78,
             "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 128.545286240785,
-              "y": 424.6224096547002,
-              "w": 283.6253333091736,
-              "h": 17.648476476254668,
+              "x": 99.21,
+              "y": 421,
+              "w": 313.42,
+              "h": 22.63,
               "startIndex": 0,
-              "endIndex": 42,
-              "confidence": 0.78,
+              "endIndex": 17,
+              "confidence": 1,
               "label": "text"
             }
           ]
@@ -298,22 +274,22 @@
           "md": "**Subject:** May-26 Local Convayance",
           "value": "**Subject:** May-26 Local Convayance",
           "bBox": {
-            "x": 168.07279452033663,
-            "y": 452.38103161687434,
-            "w": 191.26225979431817,
-            "h": 16.915797026260996,
+            "x": 101.15,
+            "y": 452.15400000000005,
+            "w": 258.23,
+            "h": 17.682000000000016,
             "confidence": 0.96,
             "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 168.07279452033663,
-              "y": 452.38103161687434,
-              "w": 191.26225979431817,
-              "h": 16.915797026260996,
+              "x": 99.47,
+              "y": 447.84,
+              "w": 262.11,
+              "h": 23.94,
               "startIndex": 0,
               "endIndex": 35,
-              "confidence": 0.96,
+              "confidence": 1,
               "label": "text"
             }
           ]
@@ -323,19 +299,19 @@
           "md": "Dear Sir,",
           "value": "Dear Sir,",
           "bBox": {
-            "x": 102,
-            "y": 539,
-            "w": 66,
-            "h": 17,
+            "x": 102.51128170801245,
+            "y": 539.0167980194092,
+            "w": 66.5690204889878,
+            "h": 17.348471019578945,
             "confidence": 0.89,
             "label": "text"
           },
           "layoutAwareBbox": [
             {
-              "x": 102,
-              "y": 539,
-              "w": 66,
-              "h": 17,
+              "x": 102.51,
+              "y": 539.02,
+              "w": 66.57,
+              "h": 17.35,
               "startIndex": 0,
               "endIndex": 8,
               "confidence": 0.89,
@@ -357,10 +333,10 @@
           },
           "layoutAwareBbox": [
             {
-              "x": 111.25847754271133,
-              "y": 598.268626337466,
-              "w": 207.67536474310833,
-              "h": 19.297825688901213,
+              "x": 111.26,
+              "y": 598.27,
+              "w": 207.68,
+              "h": 19.3,
               "startIndex": 0,
               "endIndex": 23,
               "confidence": 0.86,
@@ -370,33 +346,26 @@
         },
         {
           "type": "table",
-          "md": "|      | AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division |   |\n| ---- | -------------------------------------------------------------------------- | - |\n|      | LOCAL CONVEYANCE REIMBURSEMENT FORM                                        |   |\n| Name | NASIR AHMED KHAN                                                           |   |",
-          "html": "<table>\n    <tr>\n        <td> </td>\n<td>AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br />Coffee Day Beverages Division</td>\n<td> </td>\n    </tr>\n<tr>\n        <td> </td>\n<td>LOCAL CONVEYANCE REIMBURSEMENT FORM</td>\n<td> </td>\n    </tr>\n<tr>\n        <td>Name</td>\n<td>NASIR AHMED KHAN</td>\n<td> </td>\n    </tr>\n</table>",
+          "md": "| AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM | AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM |\n| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |\n| Name                                                                                                          | NASIR AHMED KHAN                                                                                              |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th colspan=\"2\">AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br />Coffee Day Beverages Division</th>\n    </tr>\n<tr>\n        <th colspan=\"2\">LOCAL CONVEYANCE REIMBURSEMENT FORM</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Name</td>\n<td>NASIR AHMED KHAN</td>\n    </tr>\n  </tbody>\n</table>",
           "rows": [
             [
-              "",
-              "AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division",
-              ""
-            ],
-            [
-              "",
-              "LOCAL CONVEYANCE REIMBURSEMENT FORM",
-              ""
+              "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM",
+              "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM"
             ],
             [
               "Name",
-              "NASIR AHMED KHAN",
-              ""
+              "NASIR AHMED KHAN"
             ]
           ],
           "isPerfectTable": false,
-          "csv": "\"\",\"AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division\",\"\"\n\"\",\"LOCAL CONVEYANCE REIMBURSEMENT FORM\",\"\"\n\"Name\",\"NASIR AHMED KHAN\",\"\"",
+          "csv": "\"AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM\",\"AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM\"\n\"Name\",\"NASIR AHMED KHAN\"",
           "bBox": {
             "x": 87.07702273907869,
             "y": 648.9674188365107,
             "w": 423.24476646340406,
             "h": 191.79618022752842,
-            "confidence": 0.82,
+            "confidence": 0.76,
             "label": "table"
           },
           "layoutAwareBbox": [
@@ -405,8 +374,8 @@
               "y": 663.86,
               "w": 133.95,
               "h": 19.21,
-              "startIndex": 9,
-              "endIndex": 82,
+              "startIndex": 2,
+              "endIndex": 70,
               "confidence": 0.5,
               "label": "text"
             },
@@ -415,8 +384,8 @@
               "y": 705.18,
               "w": 143.16,
               "h": 17.63,
-              "startIndex": 189,
-              "endIndex": 294,
+              "startIndex": 76,
+              "endIndex": 581,
               "confidence": 0.5,
               "label": "text"
             },
@@ -425,8 +394,8 @@
               "y": 715.17,
               "w": 20.26,
               "h": 9.74,
-              "startIndex": 272,
-              "endIndex": 275,
+              "startIndex": 454,
+              "endIndex": 457,
               "confidence": 0.5,
               "label": "text"
             }
@@ -434,7 +403,7 @@
           "parseConcerns": [
             {
               "type": "header_value_type_mismatch",
-              "details": "col 1 'AMALGAMATED BEAN COFFEE TRADING CO LTD.,\nCoffee Day Beverages Division' expects datetime, got 'LOCAL CONVEYANCE REIMBURSEMENT FORM' in row 1"
+              "details": "col 0 'AMALGAMATED BEAN COFFEE TRADING CO LTD.,\nCoffee Day Beverages Division' expects datetime, got 'LOCAL CONVEYANCE REIMBURSEMENT FORM' in row 1"
             }
           ]
         }
@@ -454,7 +423,7 @@
       "printedPageNumber": "",
       "slideSpeakerNotes": null,
       "slideSectionName": null,
-      "confidence": 0.83,
+      "confidence": 0.794,
       "layout": [
         {
           "image": "page_1_text_1_v2.jpg",

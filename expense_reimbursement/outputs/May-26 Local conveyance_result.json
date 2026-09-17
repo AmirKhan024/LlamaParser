@@ -7,13 +7,9 @@
     "date": null,
     "amount": null,
     "currency": "INR",
-    "additional_fields": {
-      "type_of_vehicle": "FOUR WHEELER",
-      "designation": "SENIOR MANAGER"
-    },
+    "additional_fields": {},
     "extraction_notes": [
-      "extracted total_kms from second value in 'Total Conveyance Amount' row",
-      "mapped 'Type of Vehicle' from header to additional_fields"
+      "Mapped total conveyance amount from column 5 and total kms from column 6 based on context"
     ],
     "confidence": 0.93,
     "employee_name": "NASIR AHMED KHAN",
@@ -24,104 +20,91 @@
         "place_of_visit": "GOREGAON",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "SNOW WHITE TECH",
-        "kms": "78",
-        "amount": ""
+        "kms": "78"
       },
       {
         "date": "05 May 2026",
         "place_of_visit": "BORIVALI",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "SENCO GOLD LTD",
-        "kms": "75",
-        "amount": ""
+        "kms": "75"
       },
       {
         "date": "07 May 2026",
         "place_of_visit": "BHIWANDI",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "ZOMATO",
-        "kms": "78",
-        "amount": ""
+        "kms": "78"
       },
       {
         "date": "08 May 2026",
         "place_of_visit": "LOWER PAREL",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "TRANS UNION",
-        "kms": "79",
-        "amount": ""
+        "kms": "79"
       },
       {
         "date": "11 May 2026",
         "place_of_visit": "VILE PARLE",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "HONG KONG BANK",
-        "kms": "85",
-        "amount": ""
+        "kms": "85"
       },
       {
         "date": "13 May 2026",
         "place_of_visit": "PANVEL",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "TODAY GROUP",
-        "kms": "76",
-        "amount": ""
+        "kms": "76"
       },
       {
         "date": "14 May 2026",
         "place_of_visit": "KURLA W",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "THE CLEARING CORP",
-        "kms": "80",
-        "amount": ""
+        "kms": "80"
       },
       {
         "date": "18 May 2026",
         "place_of_visit": "ANDHERI E",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "APTECH LTD",
-        "kms": "74",
-        "amount": ""
+        "kms": "74"
       },
       {
         "date": "19 May 2026",
         "place_of_visit": "MALAD",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "OSIAN FINANCIAL SOLN",
-        "kms": "73",
-        "amount": ""
+        "kms": "73"
       },
       {
         "date": "21 May 2026",
         "place_of_visit": "AHNDHERI",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "ANB CONSULTING",
-        "kms": "65",
-        "amount": ""
+        "kms": "65"
       },
       {
         "date": "22 May 2026",
         "place_of_visit": "THANE",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "INSTA CART SERVICES",
-        "kms": "66",
-        "amount": ""
+        "kms": "66"
       },
       {
         "date": "25 May 2026",
         "place_of_visit": "TURBHE",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "CAE SIMULATION",
-        "kms": "75",
-        "amount": ""
+        "kms": "75"
       },
       {
         "date": "29 May 2026",
         "place_of_visit": "MALAD",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "SIMPLY WORK OFFICES",
-        "kms": "77",
-        "amount": ""
+        "kms": "77"
       }
     ],
     "total_kms": "981",
@@ -131,13 +114,9 @@
     "mobile_allowance_amount": "750",
     "total_claimed": "8110"
   },
-  "additional_fields": {
-    "type_of_vehicle": "FOUR WHEELER",
-    "designation": "SENIOR MANAGER"
-  },
+  "additional_fields": {},
   "extraction_notes": [
-    "extracted total_kms from second value in 'Total Conveyance Amount' row",
-    "mapped 'Type of Vehicle' from header to additional_fields"
+    "Mapped total conveyance amount from column 5 and total kms from column 6 based on context"
   ],
   "validation": [
     {
@@ -162,104 +141,91 @@
         "place_of_visit": "GOREGAON",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "SNOW WHITE TECH",
-        "kms": "78",
-        "amount": ""
+        "kms": "78"
       },
       {
         "date": "05 May 2026",
         "place_of_visit": "BORIVALI",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "SENCO GOLD LTD",
-        "kms": "75",
-        "amount": ""
+        "kms": "75"
       },
       {
         "date": "07 May 2026",
         "place_of_visit": "BHIWANDI",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "ZOMATO",
-        "kms": "78",
-        "amount": ""
+        "kms": "78"
       },
       {
         "date": "08 May 2026",
         "place_of_visit": "LOWER PAREL",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "TRANS UNION",
-        "kms": "79",
-        "amount": ""
+        "kms": "79"
       },
       {
         "date": "11 May 2026",
         "place_of_visit": "VILE PARLE",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "HONG KONG BANK",
-        "kms": "85",
-        "amount": ""
+        "kms": "85"
       },
       {
         "date": "13 May 2026",
         "place_of_visit": "PANVEL",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "TODAY GROUP",
-        "kms": "76",
-        "amount": ""
+        "kms": "76"
       },
       {
         "date": "14 May 2026",
         "place_of_visit": "KURLA W",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "THE CLEARING CORP",
-        "kms": "80",
-        "amount": ""
+        "kms": "80"
       },
       {
         "date": "18 May 2026",
         "place_of_visit": "ANDHERI E",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "APTECH LTD",
-        "kms": "74",
-        "amount": ""
+        "kms": "74"
       },
       {
         "date": "19 May 2026",
         "place_of_visit": "MALAD",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "OSIAN FINANCIAL SOLN",
-        "kms": "73",
-        "amount": ""
+        "kms": "73"
       },
       {
         "date": "21 May 2026",
         "place_of_visit": "AHNDHERI",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "ANB CONSULTING",
-        "kms": "65",
-        "amount": ""
+        "kms": "65"
       },
       {
         "date": "22 May 2026",
         "place_of_visit": "THANE",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "INSTA CART SERVICES",
-        "kms": "66",
-        "amount": ""
+        "kms": "66"
       },
       {
         "date": "25 May 2026",
         "place_of_visit": "TURBHE",
         "purpose_of_travel": "INSTALLATION",
         "client_name": "CAE SIMULATION",
-        "kms": "75",
-        "amount": ""
+        "kms": "75"
       },
       {
         "date": "29 May 2026",
         "place_of_visit": "MALAD",
         "purpose_of_travel": "BREAKDOWN VISIT",
         "client_name": "SIMPLY WORK OFFICES",
-        "kms": "77",
-        "amount": ""
+        "kms": "77"
       }
     ],
     "total_kms": "981",
@@ -277,11 +243,11 @@
     "_ai_corrections": [],
     "_needs_review": true
   },
-  "duration_seconds": 5.688000000081956,
+  "duration_seconds": 6.842999999993481,
   "tokens": {
-    "prompt": 2202,
-    "completion": 2229,
-    "total": 4431
+    "prompt": 2299,
+    "completion": 2130,
+    "total": 4429
   },
-  "estimated_cost_usd": "0.00200205"
+  "estimated_cost_usd": "0.00194235"
 }

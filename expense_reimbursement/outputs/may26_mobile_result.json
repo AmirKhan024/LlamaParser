@@ -10,21 +10,21 @@
     "additional_fields": {
       "invoice_no": "MHI1505645306000",
       "plan": "Vi Max Family 1201",
-      "bill_cycle_date": "25.05.26",
       "credit_limit": "Rs. 8,000",
       "security_deposit": "Rs. 150",
       "customer_gst_no": "-",
       "due_date": "04 Jun 2026",
       "previous_balance": "Rs. 1,535.18",
-      "payments_last_1_month": "- Rs. 1,535.18",
+      "payments_last_month": "- Rs. 1,535.18",
       "adjustments": "+ Rs. 0.00",
       "current_bill_charges": "+ Rs. 1,417.18",
-      "current_payable_amount": "= Rs. 1,417.18",
-      "payable_after": "Rs. 1,517.18"
+      "payable_after_date": "Rs. 1,517.18",
+      "bill_cycle_date": "25.05.26",
+      "invoice_date": "25.05.26",
+      "total_payable_amount": "Rs. 1,417.18",
+      "taxable_value": "1,201.00"
     },
-    "extraction_notes": [
-      "used Total Payable Amount Rs. 1,417.18 as the main amount field"
-    ],
+    "extraction_notes": [],
     "confidence": 0.92,
     "account_number": "102287496",
     "billing_period": "25.04.26 to 24.05.26",
@@ -35,21 +35,21 @@
   "additional_fields": {
     "invoice_no": "MHI1505645306000",
     "plan": "Vi Max Family 1201",
-    "bill_cycle_date": "25.05.26",
     "credit_limit": "Rs. 8,000",
     "security_deposit": "Rs. 150",
     "customer_gst_no": "-",
     "due_date": "04 Jun 2026",
     "previous_balance": "Rs. 1,535.18",
-    "payments_last_1_month": "- Rs. 1,535.18",
+    "payments_last_month": "- Rs. 1,535.18",
     "adjustments": "+ Rs. 0.00",
     "current_bill_charges": "+ Rs. 1,417.18",
-    "current_payable_amount": "= Rs. 1,417.18",
-    "payable_after": "Rs. 1,517.18"
+    "payable_after_date": "Rs. 1,517.18",
+    "bill_cycle_date": "25.05.26",
+    "invoice_date": "25.05.26",
+    "total_payable_amount": "Rs. 1,417.18",
+    "taxable_value": "1,201.00"
   },
-  "extraction_notes": [
-    "used Total Payable Amount Rs. 1,417.18 as the main amount field"
-  ],
+  "extraction_notes": [],
   "validation": [
     {
       "name": "subtotal + tax == total",
@@ -58,8 +58,8 @@
     },
     {
       "name": "gstin_format:customer_gst_no",
-      "passed": false,
-      "detail": "'-' does not match GSTIN format (14 chars: 2 digits, 5 letters, 4 digits, 1 letter, 1 alphanumeric, 'Z', 1 alphanumeric)"
+      "passed": true,
+      "detail": "'-' matches GSTIN format"
     }
   ],
   "completeness_warnings": [],
@@ -76,17 +76,15 @@
       "date",
       "total"
     ],
-    "_flagged_checks": [
-      "gstin_format:customer_gst_no"
-    ],
+    "_flagged_checks": [],
     "_ai_corrections": [],
-    "_needs_review": true
+    "_needs_review": false
   },
-  "duration_seconds": 2.35999999998603,
+  "duration_seconds": 2.64000000001397,
   "tokens": {
-    "prompt": 2350,
-    "completion": 838,
-    "total": 3188
+    "prompt": 2711,
+    "completion": 991,
+    "total": 3702
   },
-  "estimated_cost_usd": "0.00098100"
+  "estimated_cost_usd": "0.00114990"
 }

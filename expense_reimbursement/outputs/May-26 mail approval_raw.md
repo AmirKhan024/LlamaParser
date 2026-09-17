@@ -1,9 +1,6 @@
-**Re: May-26 Local Convayance**
+## Re: May-26 Local Convayance
 
-logo: SK
-
-**Sanjay K S**
-To You
+logo: Sanjay K S profile icon
 
 Yesterday
 
@@ -26,9 +23,8 @@ Dear Sir,
 
 Please approve the same.
 
-|      | AMALGAMATED BEAN COFFEE TRADING CO LTD.,<br/>Coffee Day Beverages Division |   |
-| ---- | -------------------------------------------------------------------------- | - |
-|      | LOCAL CONVEYANCE REIMBURSEMENT FORM                                        |   |
-| Name | NASIR AHMED KHAN                                                           |   |
+| AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM | AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division<br/>LOCAL CONVEYANCE REIMBURSEMENT FORM |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Name                                                                                                          | NASIR AHMED KHAN                                                                                              |
 
 

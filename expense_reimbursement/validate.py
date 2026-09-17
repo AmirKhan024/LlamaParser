@@ -24,13 +24,21 @@ _GSTIN_FIELD_HINT = re.compile(r"gstin|gst_no", re.IGNORECASE)
 
 CURRENCY_MAP = {"rs.": "INR", "rs": "INR", "₹": "INR", "inr": "INR", "rupees": "INR"}
 
+# Real placeholder values a bill prints when a customer has no GST
+# registration -- e.g. "Customer GST No.: -" -- these are legitimately
+# absent, not malformed. Without this, "-" fell through to the regex and
+# was reported as an invalid GSTIN, which is a false positive (a format
+# complaint about a value that was never claiming to be a GSTIN in the
+# first place), not a real data quality issue.
+_GSTIN_PLACEHOLDER_VALUES = {"-", "n/a", "na", "none", "nil", "null", ""}
+
 
 def validate_gstin(value: Optional[str]) -> dict:
     """Returns {'valid': bool, 'reason': str | None}. Does not attempt to
     correct a malformed value (e.g. an OCR'd 0/O mix-up) -- there's no
     second source to correct it against here; it only flags the shape
     as wrong so it doesn't silently pass through unnoticed."""
-    if not value:
+    if not value or value.strip().lower() in _GSTIN_PLACEHOLDER_VALUES:
         return {"valid": True, "reason": None}  # absence isn't a format error
     cleaned = value.replace(" ", "").upper()
     if not GSTIN_PATTERN.match(cleaned):
