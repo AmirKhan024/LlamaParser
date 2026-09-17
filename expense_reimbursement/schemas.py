@@ -29,6 +29,13 @@ class DocumentType(str, Enum):
     APPROVAL_CORRESPONDENCE = "approval_correspondence"
 
 
+class LineItem(BaseModel):
+    name: Optional[str] = None
+    quantity: Optional[str] = None
+    unit_price: Optional[Decimal] = None
+    total: Optional[Decimal] = None
+
+
 class BaseClaim(BaseModel):
     document_type: DocumentType
     vendor_name: Optional[str] = None
@@ -66,6 +73,7 @@ class RestaurantBill(BaseClaim):
     cgst: Optional[Decimal] = None
     sgst: Optional[Decimal] = None
     grand_total: Optional[Decimal] = None
+    line_items: list[LineItem] = Field(default_factory=list)
 
 
 class ApprovalCorrespondence(BaseClaim):
@@ -83,19 +91,26 @@ class ApprovalCorrespondence(BaseClaim):
 
 
 class GenericClaim(BaseClaim):
-    pass  # fallback for anything that doesn't match a known type well
+    line_items: list[LineItem] = Field(default_factory=list)
 
 
-# document_type -> schema class. Only the types with an actual subclass
-# above are listed here; anything else (TAXI_RECEIPT, HOTEL_INVOICE,
-# FUEL_RECEIPT, GENERIC_RECEIPT, UNSTRUCTURED_PROOF) falls back to
-# GenericClaim, since there's no test data yet motivating a dedicated
-# schema for them.
+# document_type -> schema class, used both to pick which schema to
+# validate against (schema_for, below) AND to tell the model what
+# fields exist for each type (extract.py's prompt lists every schema in
+# this dict; a type left out only ever gets the base fields described).
+# GENERIC_RECEIPT is listed explicitly -- not because it has its own
+# subclass (it still uses GenericClaim), but because GenericClaim
+# stopped being just the base fields once it gained `line_items`; left
+# out of this dict, the model would never be told that field exists for
+# a document classified generic_receipt. TAXI_RECEIPT, HOTEL_INVOICE,
+# FUEL_RECEIPT and UNSTRUCTURED_PROOF still fall back to GenericClaim
+# with no test data motivating anything more for them yet.
 SCHEMA_BY_TYPE: dict[DocumentType, type[BaseClaim]] = {
     DocumentType.TELECOM_BILL: TelecomBill,
     DocumentType.LOCAL_CONVEYANCE_FORM: LocalConveyanceForm,
     DocumentType.RESTAURANT_BILL: RestaurantBill,
     DocumentType.APPROVAL_CORRESPONDENCE: ApprovalCorrespondence,
+    DocumentType.GENERIC_RECEIPT: GenericClaim,
 }
 
 

@@ -10,19 +10,33 @@
     "amount": "174600",
     "currency": "INR",
     "additional_fields": {
-      "ICE_BLACKCOFFE_quantity": "2",
-      "ICE_BLACKCOFFE_price": "82,000",
-      "AVOCADO_COFFEE_quantity": "1",
-      "AVOCADO_COFFEE_price": "61,000",
-      "CHIKEN_KATSU_FF_quantity": "1",
-      "CHIKEN_KATSU_FF_price": "51,000",
-      "SUB_TOTAL": "194,000",
-      "DISCOUNT": "19,400",
-      "CASH": "200,000",
-      "CHANGE": "25,400"
+      "subtotal": "194,000",
+      "discount": "19,400",
+      "cash": "200,000",
+      "change": "25,400"
     },
     "extraction_notes": [],
-    "confidence": 0.7
+    "confidence": 0.7,
+    "line_items": [
+      {
+        "name": "ICE BLACKCOFFE",
+        "quantity": "2",
+        "unit_price": null,
+        "total": "82000"
+      },
+      {
+        "name": "AVOCADO COFFEE",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "61000"
+      },
+      {
+        "name": "CHIKEN KATSU FF",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "51000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "174,600",
@@ -54,34 +68,61 @@
     "tax_total": "both_absent"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 3,
+    "matched": 3,
+    "missed": 0,
     "extra": 0,
     "total_gt": 3,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "ICE BLACKCOFFE",
-        "price": "82,000",
-        "cnt": "2"
+        "gt": {
+          "nm": "ICE BLACKCOFFE",
+          "price": "82,000",
+          "cnt": "2"
+        },
+        "extracted": {
+          "name": "ICE BLACKCOFFE",
+          "quantity": "2",
+          "unit_price": null,
+          "total": "82000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "AVOCADO COFFEE",
-        "price": "61,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "AVOCADO COFFEE",
+          "price": "61,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "AVOCADO COFFEE",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "61000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "CHIKEN KATSU FF",
-        "price": "51,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "CHIKEN KATSU FF",
+          "price": "51,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "CHIKEN KATSU FF",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "51000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 2.218999999924563,
+  "duration_seconds": 2.875,
   "tokens": {
-    "prompt": 1430,
-    "completion": 757,
-    "total": 2187
+    "prompt": 1637,
+    "completion": 564,
+    "total": 2201
   }
 }

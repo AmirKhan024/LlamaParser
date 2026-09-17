@@ -10,25 +10,38 @@
     "amount": "46000",
     "currency": "INR",
     "additional_fields": {
-      "item_1_name": "EGG TART",
-      "item_1_quantity": "1",
-      "item_1_price": "13,000",
-      "item_2_name": "CHOCO CUSTARD PASTRY",
-      "item_2_quantity": "2",
-      "item_2_price": "24,500",
-      "item_3_name": "REDBEAN BREAD",
-      "item_3_quantity": "1",
-      "item_3_price": "9,000",
       "cash": "50,000",
       "change": "4,000"
     },
-    "extraction_notes": [],
-    "confidence": 0.6,
+    "extraction_notes": [
+      "extracted amount from TOTAL line as 46,000; currency not specified in document"
+    ],
+    "confidence": 0.78,
     "restaurant_gstin": null,
     "subtotal": null,
     "cgst": null,
     "sgst": null,
-    "grand_total": null
+    "grand_total": null,
+    "line_items": [
+      {
+        "name": "EGG TART",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "13000"
+      },
+      {
+        "name": "CHOCO CUSTARD PASTRY",
+        "quantity": "2",
+        "unit_price": null,
+        "total": "24500"
+      },
+      {
+        "name": "REDBEAN BREAD",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "9000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "46,000",
@@ -72,9 +85,10 @@
           "cnt": "1"
         },
         "extracted": {
-          "nm": "EGG TART",
-          "price": "13,000",
-          "cnt": "1"
+          "name": "EGG TART",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "13000"
         },
         "name_ratio": 1.0
       },
@@ -85,9 +99,10 @@
           "cnt": "2"
         },
         "extracted": {
-          "nm": "CHOCO CUSTARD PASTRY",
-          "price": "24,500",
-          "cnt": "2"
+          "name": "CHOCO CUSTARD PASTRY",
+          "quantity": "2",
+          "unit_price": null,
+          "total": "24500"
         },
         "name_ratio": 0.95
       },
@@ -98,9 +113,10 @@
           "cnt": "1"
         },
         "extracted": {
-          "nm": "REDBEAN BREAD",
-          "price": "9,000",
-          "cnt": "1"
+          "name": "REDBEAN BREAD",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "9000"
         },
         "name_ratio": 1.0
       }
@@ -108,10 +124,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.702999999979511,
+  "duration_seconds": 1.5,
   "tokens": {
-    "prompt": 1416,
-    "completion": 646,
-    "total": 2062
+    "prompt": 1623,
+    "completion": 492,
+    "total": 2115
   }
 }

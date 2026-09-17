@@ -5,30 +5,40 @@
   "document_type": "restaurant_bill",
   "clean_json": {
     "document_type": "restaurant_bill",
-    "vendor_name": "A FUNG",
+    "vendor_name": null,
     "date": null,
     "amount": "51.300",
     "currency": "INR",
     "additional_fields": {
-      "BASO KUAH_quantity": "1",
-      "BASO KUAH_price": "43.636",
-      "A.MINERAL GELAS_quantity": "1",
-      "A.MINERAL GELAS_price": "3.000",
-      "DPP": "46.636",
-      "TAX_10.00_%": "4.664",
-      "TUNAI": "52.000",
-      "KEMBALI": "700"
+      "receipt_title": "A FUNG receipt",
+      "document_title": "OD JOURNEY",
+      "cash_paid": "52.000",
+      "change_returned": "700"
     },
     "extraction_notes": [
-      "Inferred vendor name from photo caption 'A FUNG receipt'",
-      "Mapped subtotal to DPP and grand_total to GRAND TOTAL fields"
+      "mapped DPP to subtotal",
+      "mapped TAX 10.00 % to tax in additional_fields"
     ],
     "confidence": 0.6,
     "restaurant_gstin": null,
     "subtotal": "46.636",
     "cgst": null,
     "sgst": null,
-    "grand_total": "51.300"
+    "grand_total": "51.300",
+    "line_items": [
+      {
+        "name": "BASO KUAH",
+        "quantity": "1",
+        "unit_price": "43.636",
+        "total": "43.636"
+      },
+      {
+        "name": "A.MINERAL GELAS",
+        "quantity": "1",
+        "unit_price": "3.000",
+        "total": "3.000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "51.300",
@@ -55,32 +65,50 @@
     "vendor_name": "not_in_ground_truth",
     "grand_total": "match",
     "subtotal": "mismatch",
-    "tax_total": "match"
+    "tax_total": "mismatch"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 2,
+    "matched": 2,
+    "missed": 0,
     "extra": 0,
     "total_gt": 2,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "BASO KUAH",
-        "price": "43.636",
-        "cnt": "1"
+        "gt": {
+          "nm": "BASO KUAH",
+          "price": "43.636",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "BASO KUAH",
+          "quantity": "1",
+          "unit_price": "43.636",
+          "total": "43.636"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "A.MINERAL GELAS",
-        "price": "3,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "A.MINERAL GELAS",
+          "price": "3,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "A.MINERAL GELAS",
+          "quantity": "1",
+          "unit_price": "3.000",
+          "total": "3.000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 2.5160000000614673,
+  "duration_seconds": 6.592999999993481,
   "tokens": {
-    "prompt": 1414,
-    "completion": 963,
-    "total": 2377
+    "prompt": 1621,
+    "completion": 933,
+    "total": 2554
   }
 }

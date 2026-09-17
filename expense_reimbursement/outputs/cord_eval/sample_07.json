@@ -8,17 +8,28 @@
     "vendor_name": null,
     "date": null,
     "amount": "111000",
-    "currency": "Rp",
+    "currency": "Rp.",
     "additional_fields": {
-      "Kupon 15": "100,000",
-      "ADD CHICKEN BOX": "909",
-      "Subtotal": "100,909",
-      "PB1 (10%)": "10,091",
-      "Total": "111,000",
-      "Cash": "Rp.111,000"
+      "subtotal": "100,909",
+      "tax": "10,091",
+      "cash": "Rp.111,000"
     },
     "extraction_notes": [],
-    "confidence": 0.85
+    "confidence": 0.66,
+    "line_items": [
+      {
+        "name": "Kupon 15",
+        "quantity": null,
+        "unit_price": null,
+        "total": "100000"
+      },
+      {
+        "name": "ADD CHICKEN BOX",
+        "quantity": null,
+        "unit_price": null,
+        "total": "909"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "111,000",
@@ -42,32 +53,50 @@
     "vendor_name": "not_in_ground_truth",
     "grand_total": "match",
     "subtotal": "match",
-    "tax_total": "mismatch"
+    "tax_total": "match"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 2,
+    "matched": 2,
+    "missed": 0,
     "extra": 0,
     "total_gt": 2,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "Kupon 15",
-        "price": "100,000",
-        "cnt": null
+        "gt": {
+          "nm": "Kupon 15",
+          "price": "100,000",
+          "cnt": null
+        },
+        "extracted": {
+          "name": "Kupon 15",
+          "quantity": null,
+          "unit_price": null,
+          "total": "100000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "ADD CHICKEN BOX",
-        "price": "909",
-        "cnt": null
+        "gt": {
+          "nm": "ADD CHICKEN BOX",
+          "price": "909",
+          "cnt": null
+        },
+        "extracted": {
+          "name": "ADD CHICKEN BOX",
+          "quantity": null,
+          "unit_price": null,
+          "total": "909"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.312999999965541,
+  "duration_seconds": 10.51500000001397,
   "tokens": {
-    "prompt": 1316,
-    "completion": 506,
-    "total": 1822
+    "prompt": 1523,
+    "completion": 631,
+    "total": 2154
   }
 }

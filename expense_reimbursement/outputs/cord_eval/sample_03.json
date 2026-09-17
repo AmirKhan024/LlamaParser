@@ -10,16 +10,22 @@
     "amount": "11000",
     "currency": "INR",
     "additional_fields": {
-      "quantity": "1X",
-      "unit_price": "@11000",
-      "item": "DONAT GULA",
-      "line_total": "11,000",
-      "subtotal": "11,000",
-      "total": "11,000",
-      "cash": "11,000"
+      "SUBTOTAL": "11,000",
+      "TOTAL": "11,000",
+      "CASH": "11,000"
     },
-    "extraction_notes": [],
-    "confidence": 0.6
+    "extraction_notes": [
+      "could not parse amount '@11000' (unexpected characters)"
+    ],
+    "confidence": 0.85,
+    "line_items": [
+      {
+        "name": "DONAT GULA",
+        "quantity": "1X",
+        "unit_price": null,
+        "total": "11000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "11,000",
@@ -41,24 +47,33 @@
     "tax_total": "both_absent"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 1,
+    "matched": 1,
+    "missed": 0,
     "extra": 0,
     "total_gt": 1,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "DONAT GULA",
-        "price": "11,000",
-        "cnt": "1X"
+        "gt": {
+          "nm": "DONAT GULA",
+          "price": "11,000",
+          "cnt": "1X"
+        },
+        "extracted": {
+          "name": "DONAT GULA",
+          "quantity": "1X",
+          "unit_price": null,
+          "total": "11000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.672000000020489,
+  "duration_seconds": 1.797000000020489,
   "tokens": {
-    "prompt": 1345,
-    "completion": 442,
-    "total": 1787
+    "prompt": 1552,
+    "completion": 593,
+    "total": 2145
   }
 }

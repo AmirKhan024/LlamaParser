@@ -3,6 +3,7 @@ checks appropriate to each document type. All checks run in plain code,
 never asked of the LLM -- the model's job stopped at Step 2.
 """
 
+import json
 import re
 from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
@@ -123,6 +124,54 @@ def _decimal_field_names(schema_cls: type[BaseClaim]) -> set[str]:
     return names
 
 
+def _preprocess_line_items(raw_items: Any, notes: list) -> Any:
+    """`LineItem.unit_price`/`total` are Decimal, but the model is
+    instructed to copy every amount exactly as printed (e.g. "24,000"),
+    same as every other amount field -- so each item needs the same
+    `parse_amount` treatment before validation. Skipping this would let
+    a comma-formatted line-item price raise a pydantic decimal_parsing
+    error and take the whole document down (verified directly: Pydantic
+    rejects "24,000" as an invalid Decimal, it does not strip commas).
+    """
+    if not isinstance(raw_items, list):
+        return raw_items
+    processed_items = []
+    for item in raw_items:
+        if not isinstance(item, dict):
+            processed_items.append(item)
+            continue
+        new_item = dict(item)
+        for key in ("unit_price", "total"):
+            value = new_item.get(key)
+            if isinstance(value, str):
+                parsed, warning = parse_amount(value)
+                new_item[key] = parsed
+                if warning:
+                    notes.append(warning)
+            elif isinstance(value, (int, float)):
+                new_item[key] = Decimal(str(value))
+        processed_items.append(new_item)
+    return processed_items
+
+
+def _coerce_additional_fields(value: Any) -> Dict[str, str]:
+    """additional_fields is typed dict[str, str], but the model
+    occasionally puts a non-string value there (e.g. a nested
+    "line_items" list, for a document_type whose schema has no
+    line_items field of its own to put it in instead). JSON-encoding
+    the value keeps the data instead of crashing validation -- and a
+    JSON-stringified list is exactly the shape
+    eval_cord.find_extracted_line_items already knows how to recover."""
+    if not isinstance(value, dict):
+        return {}
+    coerced = {}
+    for k, v in value.items():
+        if v is None:
+            continue
+        coerced[k] = v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)
+    return coerced
+
+
 def _coerce_notes(value: Any) -> list[str]:
     """`extraction_notes` is typed `list[str]`, but the model sometimes
     returns one long string instead of a JSON array despite the prompt
@@ -153,6 +202,8 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any]) -> Base
     schema_cls = schema_for(document_type)
     processed = dict(raw_fields)
     notes = _coerce_notes(processed.get("extraction_notes"))
+    if "additional_fields" in processed:
+        processed["additional_fields"] = _coerce_additional_fields(processed["additional_fields"])
 
     for field_name in _decimal_field_names(schema_cls):
         value = processed.get(field_name)
@@ -164,9 +215,19 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any]) -> Base
         elif isinstance(value, (int, float)):
             processed[field_name] = Decimal(str(value))
 
+    if "line_items" in processed:
+        processed["line_items"] = _preprocess_line_items(processed["line_items"], notes)
+
     processed["extraction_notes"] = notes
-    if "currency" in processed:
+    # currency is a required string (default "INR") -- if the model
+    # returns an explicit null (seen on real documents with no legible
+    # currency indicator), leave the key out entirely so the schema
+    # default applies, rather than letting normalize_currency(None)
+    # pass None through and fail validation on a required field.
+    if processed.get("currency"):
         processed["currency"] = normalize_currency(processed["currency"])
+    else:
+        processed.pop("currency", None)
 
     try:
         return schema_cls.model_validate(processed)

@@ -10,22 +10,59 @@
     "amount": "281435",
     "currency": "INR",
     "additional_fields": {
-      "service": "17,850",
+      "Service": "17,850",
       "PB1": "25,585",
       "Coupon": "100,000",
       "CASH": "200,000",
       "Change": "18,565"
     },
     "extraction_notes": [
-      "mapped SUBTOTAL to subtotal field",
-      "used TOTAL as amount and grand_total"
+      "Inferred line item total equals unit price because quantity is 1"
     ],
     "confidence": 0.85,
     "restaurant_gstin": null,
     "subtotal": "238000",
     "cgst": null,
     "sgst": null,
-    "grand_total": "281435"
+    "grand_total": "281435",
+    "line_items": [
+      {
+        "name": "RedVelvet Cheese Slc",
+        "quantity": "1",
+        "unit_price": "38000",
+        "total": "38000"
+      },
+      {
+        "name": "Chicken Baked Rice",
+        "quantity": "1",
+        "unit_price": "55000",
+        "total": "55000"
+      },
+      {
+        "name": "Fish n Chips",
+        "quantity": "1",
+        "unit_price": "65000",
+        "total": "65000"
+      },
+      {
+        "name": "Mushroom Soup",
+        "quantity": "1",
+        "unit_price": "35000",
+        "total": "35000"
+      },
+      {
+        "name": "Chamomile",
+        "quantity": "1",
+        "unit_price": "25000",
+        "total": "25000"
+      },
+      {
+        "name": "Iced Tea",
+        "quantity": "1",
+        "unit_price": "20000",
+        "total": "20000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "281,435",
@@ -72,49 +109,103 @@
     "tax_total": "mismatch"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 6,
+    "matched": 6,
+    "missed": 0,
     "extra": 0,
     "total_gt": 6,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "RedVelvet Cheese Slc",
-        "price": "38,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "RedVelvet Cheese Slc",
+          "price": "38,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "RedVelvet Cheese Slc",
+          "quantity": "1",
+          "unit_price": "38000",
+          "total": "38000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "Chicken Baked Rice",
-        "price": "55,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "Chicken Baked Rice",
+          "price": "55,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "Chicken Baked Rice",
+          "quantity": "1",
+          "unit_price": "55000",
+          "total": "55000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "Fish n Chips",
-        "price": "65,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "Fish n Chips",
+          "price": "65,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "Fish n Chips",
+          "quantity": "1",
+          "unit_price": "65000",
+          "total": "65000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "Mushroom Soup",
-        "price": "35,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "Mushroom Soup",
+          "price": "35,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "Mushroom Soup",
+          "quantity": "1",
+          "unit_price": "35000",
+          "total": "35000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "Chamomile",
-        "price": "25,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "Chamomile",
+          "price": "25,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "Chamomile",
+          "quantity": "1",
+          "unit_price": "25000",
+          "total": "25000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "Iced Tea",
-        "price": "20,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "Iced Tea",
+          "price": "20,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "Iced Tea",
+          "quantity": "1",
+          "unit_price": "20000",
+          "total": "20000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.6570000000065193,
+  "duration_seconds": 15.125,
   "tokens": {
-    "prompt": 1440,
-    "completion": 541,
-    "total": 1981
+    "prompt": 1647,
+    "completion": 772,
+    "total": 2419
   }
 }

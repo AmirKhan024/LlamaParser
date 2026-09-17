@@ -10,20 +10,27 @@
     "amount": "60.000",
     "currency": "INR",
     "additional_fields": {
-      "item_code": "901016",
-      "description": "-TICKET CP",
-      "quantity": "2",
-      "line_amount": "60.000",
-      "line_total": "60.000",
-      "total_discount": "-60.000",
-      "tax": "5.455",
-      "subtotal": "60.000",
-      "total": "60.000",
-      "edc_cimb_niaga_no": "xx7730",
-      "edc_amount": "60.000"
+      "Ticket Number": "901016",
+      "Description": "-TICKET CP",
+      "Discount": "-60.000",
+      "Tax": "5.455",
+      "Subtotal": "60.000",
+      "TOTAL (Qty 2.00)": "60.000",
+      "EDC CIMB NIAGA No": "xx7730",
+      "Payment Amount": "60.000"
     },
-    "extraction_notes": [],
-    "confidence": 0.85
+    "extraction_notes": [
+      "interpreted first column as ticket number, second column as description, third column as unit price, fourth column as total; mapped discount, tax, subtotal and total values to additional_fields"
+    ],
+    "confidence": 0.797,
+    "line_items": [
+      {
+        "name": "-TICKET CP",
+        "quantity": "2",
+        "unit_price": "60.000",
+        "total": "60.000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "60.000",
@@ -45,24 +52,33 @@
     "tax_total": "match"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 1,
+    "matched": 1,
+    "missed": 0,
     "extra": 0,
     "total_gt": 1,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "-TICKET CP",
-        "price": "60.000",
-        "cnt": "2"
+        "gt": {
+          "nm": "-TICKET CP",
+          "price": "60.000",
+          "cnt": "2"
+        },
+        "extracted": {
+          "name": "-TICKET CP",
+          "quantity": "2",
+          "unit_price": "60.000",
+          "total": "60.000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 2.1869999999180436,
+  "duration_seconds": 2.5780000000959262,
   "tokens": {
-    "prompt": 1385,
-    "completion": 762,
-    "total": 2147
+    "prompt": 1592,
+    "completion": 860,
+    "total": 2452
   }
 }

@@ -10,18 +10,26 @@
     "amount": "17000",
     "currency": "IDR",
     "additional_fields": {
-      "ITEM": "CINNAMON SUGAR",
-      "QUANTITY": "1 x 17,000",
-      "CASH": "20,000",
-      "CHANGE DUE": "3,000"
+      "cash_idr": "20,000",
+      "change_due": "3,000"
     },
-    "extraction_notes": [],
+    "extraction_notes": [
+      "interpreted line item: CINNAMON SUGAR quantity 1 unit_price 17,000 total 17,000 based on table rows"
+    ],
     "confidence": 0.6,
     "restaurant_gstin": null,
     "subtotal": "17000",
     "cgst": null,
     "sgst": null,
-    "grand_total": "17000"
+    "grand_total": "17000",
+    "line_items": [
+      {
+        "name": "CINNAMON SUGAR",
+        "quantity": "1",
+        "unit_price": "17000",
+        "total": "17000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "17,000",
@@ -43,24 +51,33 @@
     "tax_total": "both_absent"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 1,
+    "matched": 1,
+    "missed": 0,
     "extra": 0,
     "total_gt": 1,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "CINNAMON SUGAR",
-        "price": "17,000",
-        "cnt": "1 x"
+        "gt": {
+          "nm": "CINNAMON SUGAR",
+          "price": "17,000",
+          "cnt": "1 x"
+        },
+        "extracted": {
+          "name": "CINNAMON SUGAR",
+          "quantity": "1",
+          "unit_price": "17000",
+          "total": "17000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.797000000020489,
+  "duration_seconds": 17.57799999997951,
   "tokens": {
-    "prompt": 1377,
-    "completion": 474,
-    "total": 1851
+    "prompt": 1584,
+    "completion": 661,
+    "total": 2245
   }
 }

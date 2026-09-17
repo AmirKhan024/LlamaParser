@@ -10,17 +10,26 @@
     "amount": "36000",
     "currency": "INR",
     "additional_fields": {
-      "item": "Bumbu Kaldu Ayam 1",
-      "cash_paid": "50000",
-      "change": "14000"
+      "Tunai": "50000",
+      "Kembalian": "14000"
     },
-    "extraction_notes": [],
-    "confidence": 0.6,
+    "extraction_notes": [
+      "Set amount to Sub Total value as total amount due; no explicit total provided."
+    ],
+    "confidence": 0.7,
     "restaurant_gstin": null,
     "subtotal": "36000",
     "cgst": null,
     "sgst": null,
-    "grand_total": null
+    "grand_total": null,
+    "line_items": [
+      {
+        "name": "Bumbu Kaldu Ayam 1",
+        "quantity": null,
+        "unit_price": null,
+        "total": "36000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": null,
@@ -42,24 +51,33 @@
     "tax_total": "both_absent"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 1,
+    "matched": 1,
+    "missed": 0,
     "extra": 0,
     "total_gt": 1,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "Bumbu Kaldu Ayam 1",
-        "price": "36000",
-        "cnt": null
+        "gt": {
+          "nm": "Bumbu Kaldu Ayam 1",
+          "price": "36000",
+          "cnt": null
+        },
+        "extracted": {
+          "name": "Bumbu Kaldu Ayam 1",
+          "quantity": null,
+          "unit_price": null,
+          "total": "36000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.797000000020489,
+  "duration_seconds": 10.938000000081956,
   "tokens": {
-    "prompt": 1336,
-    "completion": 623,
-    "total": 1959
+    "prompt": 1543,
+    "completion": 733,
+    "total": 2276
   }
 }

@@ -10,25 +10,27 @@
     "amount": "120000",
     "currency": "INR",
     "additional_fields": {
-      "photo_description": "receipt showing clothing purchase",
-      "item_1_description": "0571-1854 BLUS WANITA",
-      "item_1_quantity": "1",
-      "item_1_unit_price": "@120,000",
-      "item_1_discount": "0%",
-      "item_1_line_total": "120,000",
-      "item_2_description": "1002-0060 SHOPPING BAG",
-      "item_2_quantity": "1",
-      "item_2_unit_price": "@880",
-      "item_2_discount": "100%",
-      "item_2_line_total": "0",
-      "total_items": "2",
-      "total_amount": "120,000",
       "payment_method": "CC.Visa.BCA",
-      "total_kembalian": "0",
-      "page_footer": "27"
+      "change_returned": "0"
     },
-    "extraction_notes": [],
-    "confidence": 0.85
+    "extraction_notes": [
+      "extracted unit_price from '@' prefixed values"
+    ],
+    "confidence": 0.85,
+    "line_items": [
+      {
+        "name": "0571-1854 BLUS WANITA",
+        "quantity": "1",
+        "unit_price": "120000",
+        "total": "120000"
+      },
+      {
+        "name": "1002-0060 SHOPPING BAG",
+        "quantity": "1",
+        "unit_price": "880",
+        "total": "0"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "120,000",
@@ -67,9 +69,10 @@
           "cnt": "1"
         },
         "extracted": {
-          "nm": "0571-1854 BLUS WANITA",
-          "price": null,
-          "cnt": "1"
+          "name": "0571-1854 BLUS WANITA",
+          "quantity": "1",
+          "unit_price": "120000",
+          "total": "120000"
         },
         "name_ratio": 0.69
       },
@@ -80,9 +83,10 @@
           "cnt": "1"
         },
         "extracted": {
-          "nm": "1002-0060 SHOPPING BAG",
-          "price": null,
-          "cnt": "1"
+          "name": "1002-0060 SHOPPING BAG",
+          "quantity": "1",
+          "unit_price": "880",
+          "total": "0"
         },
         "name_ratio": 0.71
       }
@@ -90,10 +94,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.875,
+  "duration_seconds": 6.561999999918044,
   "tokens": {
-    "prompt": 1378,
-    "completion": 731,
-    "total": 2109
+    "prompt": 1585,
+    "completion": 481,
+    "total": 2066
   }
 }

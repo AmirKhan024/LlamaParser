@@ -89,6 +89,16 @@ vehicle maintenance and mobile allowance amounts belong in \
 vehicle_maintenance_amount / mobile_allowance_amount, not additional_fields.
 
 CRITICAL RULES:
+- If the document has line items (menu items, products, services -- a \
+row-per-item table with a name and a price) AND the target schema has a \
+"line_items" field, populate line_items as a proper JSON array of \
+objects, one per item: {{"name": ..., "quantity": ..., "unit_price": ..., \
+"total": ...}}. Omit a sub-field on an item if that item doesn't show it \
+(e.g. no explicit unit_price when only a line total is printed). Do NOT \
+flatten line items into additional_fields (e.g. as "item_1_name" / \
+"item_1_price" keys, or the item name used as a key) when a line_items \
+array field is available -- that scatters one logical list across many \
+unrelated keys and makes it unusable downstream.
 - Copy every numeric value EXACTLY as printed in the source text -- \
 including commas, periods, and spacing (e.g. "1,201.00" stays the \
 string "1,201.00", do NOT strip commas or reformat it yourself). Python \

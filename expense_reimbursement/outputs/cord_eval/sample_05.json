@@ -2,24 +2,30 @@
   "index": 5,
   "success": true,
   "error": null,
-  "document_type": "restaurant_bill",
+  "document_type": "generic_receipt",
   "clean_json": {
-    "document_type": "restaurant_bill",
-    "vendor_name": "TRAD KY TOAST CARTE",
+    "document_type": "generic_receipt",
+    "vendor_name": null,
     "date": null,
     "amount": "31.000",
     "currency": "INR",
     "additional_fields": {
-      "items": "1.00",
-      "tax_label": "PB-1 10%"
+      "subtotal": "28.182",
+      "tax": "2.818",
+      "cash": "31.000"
     },
-    "extraction_notes": [],
+    "extraction_notes": [
+      "extracted line item from receipt entry TRAD KY TOAST CARTE with price 28.182 and quantity 1.00"
+    ],
     "confidence": 0.78,
-    "restaurant_gstin": null,
-    "subtotal": "28.182",
-    "cgst": "2.818",
-    "sgst": null,
-    "grand_total": "31.000"
+    "line_items": [
+      {
+        "name": "TRAD KY TOAST CARTE",
+        "quantity": "1.00",
+        "unit_price": null,
+        "total": "28.182"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "31.000",
@@ -41,24 +47,33 @@
     "tax_total": "match"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 1,
+    "matched": 1,
+    "missed": 0,
     "extra": 0,
     "total_gt": 1,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "TRAD KY TOAST CARTE",
-        "price": "28.182",
-        "cnt": null
+        "gt": {
+          "nm": "TRAD KY TOAST CARTE",
+          "price": "28.182",
+          "cnt": null
+        },
+        "extracted": {
+          "name": "TRAD KY TOAST CARTE",
+          "quantity": "1.00",
+          "unit_price": null,
+          "total": "28.182"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.797000000020489,
+  "duration_seconds": 3.672000000020489,
   "tokens": {
-    "prompt": 1321,
-    "completion": 570,
-    "total": 1891
+    "prompt": 1528,
+    "completion": 539,
+    "total": 2067
   }
 }

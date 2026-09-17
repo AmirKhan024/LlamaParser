@@ -10,17 +10,29 @@
     "amount": "28000",
     "currency": "INR",
     "additional_fields": {
-      "JASMINE MT ( L )": "24,000",
-      "COCONUT JELLY ( L )": "4,000",
-      "SUB TOTAL": "28,000",
-      "TOTAL SALES": "28,000",
-      "TOTAL ITEMS": "1",
-      "CASH": "100,000",
-      "CHANGE": "72,000",
-      "Queue No": "102"
+      "sub_total": "28,000",
+      "total_sales": "28,000",
+      "total_items": "1",
+      "cash": "100,000",
+      "change": "72,000",
+      "queue_no": "102"
     },
     "extraction_notes": [],
-    "confidence": 0.85
+    "confidence": 0.9,
+    "line_items": [
+      {
+        "name": "JASMINE MT ( L )",
+        "quantity": null,
+        "unit_price": null,
+        "total": "24000"
+      },
+      {
+        "name": "COCONUT JELLY ( L )",
+        "quantity": null,
+        "unit_price": null,
+        "total": "4000"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "28,000",
@@ -43,33 +55,51 @@
   "field_scores": {
     "vendor_name": "not_in_ground_truth",
     "grand_total": "match",
-    "subtotal": "mismatch",
+    "subtotal": "match",
     "tax_total": "both_absent"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 2,
+    "matched": 2,
+    "missed": 0,
     "extra": 0,
     "total_gt": 2,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "JASMINE MT ( L )",
-        "price": "24,000",
-        "cnt": "1"
+        "gt": {
+          "nm": "JASMINE MT ( L )",
+          "price": "24,000",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "JASMINE MT ( L )",
+          "quantity": null,
+          "unit_price": null,
+          "total": "24000"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "COCONUT JELLY ( L )",
-        "price": "4,000",
-        "cnt": null
+        "gt": {
+          "nm": "COCONUT JELLY ( L )",
+          "price": "4,000",
+          "cnt": null
+        },
+        "extracted": {
+          "name": "COCONUT JELLY ( L )",
+          "quantity": null,
+          "unit_price": null,
+          "total": "4000"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.827999999979511,
+  "duration_seconds": 2.0,
   "tokens": {
-    "prompt": 1327,
-    "completion": 423,
-    "total": 1750
+    "prompt": 1534,
+    "completion": 403,
+    "total": 1937
   }
 }

@@ -10,16 +10,33 @@
     "amount": "50000",
     "currency": "INR",
     "additional_fields": {
-      "1 [REG] BLACK SAKURA": "45,455",
-      "1 COOKIE DOH SAUCES": "0",
-      "1 NATA DE COCO": "0",
       "Sub Total": "45,455",
       "PB1 (10%)": "4,545",
       "Rounding": "0",
       "Card Payment": "50,000"
     },
     "extraction_notes": [],
-    "confidence": 0.95
+    "confidence": 0.95,
+    "line_items": [
+      {
+        "name": "[REG] BLACK SAKURA",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "45455"
+      },
+      {
+        "name": "COOKIE DOH SAUCES",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "0"
+      },
+      {
+        "name": "NATA DE COCO",
+        "quantity": "1",
+        "unit_price": null,
+        "total": "0"
+      }
+    ]
   },
   "ground_truth": {
     "grand_total": "50,000",
@@ -51,34 +68,61 @@
     "tax_total": "mismatch"
   },
   "line_item_score": {
-    "matched": 0,
-    "missed": 3,
+    "matched": 3,
+    "missed": 0,
     "extra": 0,
     "total_gt": 3,
-    "matched_detail": [],
-    "missed_detail": [
+    "matched_detail": [
       {
-        "nm": "[REG] BLACK SAKURA",
-        "price": "45,455",
-        "cnt": "1"
+        "gt": {
+          "nm": "[REG] BLACK SAKURA",
+          "price": "45,455",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "[REG] BLACK SAKURA",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "45455"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "COOKIE DOH SAUCES",
-        "price": "0",
-        "cnt": "1"
+        "gt": {
+          "nm": "COOKIE DOH SAUCES",
+          "price": "0",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "COOKIE DOH SAUCES",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "0"
+        },
+        "name_ratio": 1.0
       },
       {
-        "nm": "NATA DE COCO",
-        "price": "0",
-        "cnt": "1"
+        "gt": {
+          "nm": "NATA DE COCO",
+          "price": "0",
+          "cnt": "1"
+        },
+        "extracted": {
+          "name": "NATA DE COCO",
+          "quantity": "1",
+          "unit_price": null,
+          "total": "0"
+        },
+        "name_ratio": 1.0
       }
     ],
+    "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.562000000034459,
+  "duration_seconds": 6.875,
   "tokens": {
-    "prompt": 1364,
-    "completion": 434,
-    "total": 1798
+    "prompt": 1571,
+    "completion": 608,
+    "total": 2179
   }
 }
