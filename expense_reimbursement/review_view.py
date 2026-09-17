@@ -31,12 +31,17 @@ REVIEW_CONFIG = {
         "editable": ["travel_entries", "total_claimed"],
     },
     "restaurant_bill": {
-        "show": ["vendor_name", "date", "subtotal", "cgst", "sgst", "grand_total", "currency"],
-        "editable": ["date", "grand_total"],
+        "show": ["vendor_name", "date", "subtotal", "cgst", "sgst", "grand_total",
+                 "currency", "line_items"],
+        "editable": ["date", "grand_total", "line_items"],
     },
     "approval_correspondence": {
         "show": ["sender", "recipient", "sent_date", "approval_status", "related_form_title"],
         "editable": [],
+    },
+    "generic_receipt": {
+        "show": ["vendor_name", "date", "amount", "currency", "line_items"],
+        "editable": ["amount", "line_items"],
     },
 }
 DEFAULT_CONFIG = {"show": ["vendor_name", "date", "amount", "currency"], "editable": []}
