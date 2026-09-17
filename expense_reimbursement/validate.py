@@ -283,11 +283,13 @@ def check_gstin_format(claim: BaseClaim) -> list[CheckResult]:
     results = []
     for field_name, value in _find_gstin_like_fields(claim):
         outcome = validate_gstin(value)
-        results.append(CheckResult(
-            f"gstin_format:{field_name}",
-            outcome["valid"],
-            outcome["reason"] or f"'{value}' matches GSTIN format",
-        ))
+        is_placeholder = bool(value) and value.strip().lower() in _GSTIN_PLACEHOLDER_VALUES
+        detail = outcome["reason"] or (
+            f"'{value}' recognized as a placeholder for no GST registration -- not treated as a GSTIN"
+            if is_placeholder
+            else f"'{value}' matches GSTIN format"
+        )
+        results.append(CheckResult(f"gstin_format:{field_name}", outcome["valid"], detail))
     return results
 
 
