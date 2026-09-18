@@ -1,0 +1,48 @@
+{
+  "examples": [
+    {
+      "text": "Client: Meridian Retail\n4 attend ers\nBill No : 12345\nDate: 12-03-2024\nTotal: INR 25,000",
+      "vendor": "Sapphire Canteen"
+    },
+    {
+      "text": "CLIENT: GlobalTech Ltd.\nAttendees: 5\nReceipt No: GTR-789\nDate: 2024/04/05\nAmount: $1,200",
+      "vendor": "BlueSky Hospitality"
+    },
+    {
+      "text": "Client: Nova Solutions\nAttendees: 3\nDate: 23 Mar 2024\nVenue: The Grand Hall\nTotal: €3,500",
+      "vendor": "Elite Events"
+    },
+    {
+      "text": "Client: Quantum Dynamics\nAttendees: 6\nDate: 15/04/2024\nBill# QD-2024\nTotal: INR 45,000",
+      "vendor": "Prime Banquet"
+    },
+    {
+      "text": "Client: Infinity Corp\nAttendees: 2\nDate: 01 Apr 2024\nVenue: Riverside\nTotal: £850",
+      "vendor": "Riverfront Dining"
+    },
+    {
+      "text": "Client: Zenith Holdings\nAttendees: 8\nDate: 2024-04-07\nBill No: ZH-2024\nTotal: 60,000 INR",
+      "vendor": "Sunset Resto"
+    },
+    {
+      "text": "Client: Apex Industries\nAttendees: 4\nDate: 2024/04/10\nInvoice: AI-101\nAmount: $3,500",
+      "vendor": "Crown Catering"
+    },
+    {
+      "text": "Client: Stellar Labs\nAttendees: 5\nDate: 20-04-2024\nVenue: Sky Lounge\nTotal: €2,800",
+      "vendor": "Luxe Lounge"
+    },
+    {
+      "text": "Client: Orion Ltd.\nAttende s: 7\nDate: 2024/04/12\nBill# OR-12\nTotal: 78,000 INR",
+      "vendor": "Desi Delight"
+    },
+    {
+      "text": "Client: Aurora Co.\nAttendees: 3\nDate: 2024-04-15\nReceipt # AU-15\nTotal: £950",
+      "vendor": "Highland Bistro"
+    },
+    {
+      "text": "Client: Pacific Partners\nAttendees: 6\nDate: 2024/04/18\nInvoice No: PP-18\nTotal: $4,200",
+      "vendor": "Oceanic Events"
+    }
+  ]
+}

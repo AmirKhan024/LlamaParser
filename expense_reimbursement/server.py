@@ -44,6 +44,8 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 import repository
+from categories import CATEGORIES, is_categorizable
+from categorize import CategorizerUnavailable, build_input as build_categorization_input, categorize as run_categorizer
 from db import get_db, get_sessionmaker
 from extract import MODEL as GROQ_MODEL
 from extract import extract_claim_with_repair
@@ -473,6 +475,40 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
     return {"claim": claim, "clean_json": clean_json, "checks": checks_as_dicts, "view": view}
 
 
+# Read once at import time, same convention as extract.py's
+# SELF_REPAIR_ENABLED -- which categorizer runs in the pipeline until the
+# Stage 2 eval (eval/categorization/RESULTS.md) picks a production default.
+CATEGORIZER = os.environ.get("CATEGORIZER", "llm")
+
+
+def _categorize_document(
+    document_type: str, fields: dict, markdown_text: str, *, method: Optional[str] = None
+) -> tuple[Optional[str], Optional[float], str]:
+    """category, category_confidence, category_method -- never raises. A
+    categorization failure must never fail the whole document, so any
+    exception here (a missing API key, a down-for-maintenance model, a
+    missing classifier model file) falls back to the free `rules`
+    categorizer, which cannot itself fail on well-formed input.
+
+    `method` overrides CATEGORIZER -- used by the PIPELINE_MODE=fake path
+    (see _run_pipeline) to force `rules`, so the test suite and offline
+    dev never make a real Groq call for categorization even when
+    CATEGORIZER=llm/hybrid in .env.
+    """
+    if not is_categorizable(document_type):
+        return None, None, "rules"
+    inp = build_categorization_input(fields, markdown_text)
+    try:
+        result = run_categorizer(inp, method or CATEGORIZER)
+        return result.category, result.confidence, result.method
+    except Exception:  # noqa: BLE001 -- see docstring; rules is the guaranteed-safe fallback
+        try:
+            fallback = run_categorizer(inp, "rules")
+            return fallback.category, fallback.confidence, "rules"
+        except Exception:  # noqa: BLE001 -- rules itself should never raise, but never fail the document over it
+            return None, None, "rules"
+
+
 def _document_summary(document: Document, claim: Claim) -> dict:
     return {
         "id": str(document.id),
@@ -484,6 +520,32 @@ def _document_summary(document: Document, claim: Claim) -> dict:
         "error_message": document.error_message,
         "uploaded_at": document.uploaded_at.isoformat(),
         "updated_at": document.updated_at.isoformat(),
+    }
+
+
+_CATEGORY_OPTIONS = [{"id": c.id, "label": c.label} for c in CATEGORIES.values()]
+_CATEGORY_LOW_CONFIDENCE_THRESHOLD = 0.6
+
+
+def _category_view(extraction: Extraction) -> Optional[dict]:
+    """Never includes the confidence number, method, or rationale --
+    only what the employee is allowed to see: the current value, the
+    fixed option list, and a plain needs_check flag (never the raw
+    confidence number itself -- see tests.test_api.test_never_show_forbidden_fields).
+    None entirely
+    for a document_type that isn't an expense (approval_correspondence)
+    -- "Supporting documents show no category" per spec."""
+    if not is_categorizable(extraction.document_type):
+        return None
+    category_id = extraction.category
+    return {
+        "value": category_id,
+        "label": CATEGORIES[category_id].label if category_id in CATEGORIES else None,
+        "options": _CATEGORY_OPTIONS,
+        "needs_check": (
+            extraction.category_confidence is not None
+            and extraction.category_confidence < _CATEGORY_LOW_CONFIDENCE_THRESHOLD
+        ),
     }
 
 
@@ -520,6 +582,7 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
     # (docRowHtml: "<type label> · <amount>") doesn't need its own
     # type-keyed field lookup on the client.
     summary["review"]["amount"] = _money(extraction.amount)
+    summary["review"]["category"] = _category_view(extraction)
     ai_extraction = _find_ai_extraction(document)
     summary["review"]["reason_required"] = (
         document.status != "confirmed"
@@ -689,6 +752,15 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
             claim = evaluated["claim"]
             clean_json = evaluated["clean_json"]
             view = evaluated["view"]
+            # Categorization runs on a worker thread too -- categorize_llm
+            # makes its own Groq call; categorize_classifier/hybrid load a
+            # local sentence-transformers model, also worth keeping off
+            # the event loop. Forced to `rules` in fake mode regardless of
+            # CATEGORIZER, so tests/offline dev never hit the network.
+            category_method_override = "rules" if pipeline_mode == "fake" else None
+            category, category_confidence, category_method = await asyncio.to_thread(
+                _categorize_document, document_type_value, clean_json, markdown_text, method=category_method_override
+            )
 
             repository.update_document_status_if_processing(
                 session, document_id, status="processing", raw_markdown=markdown_text
@@ -708,6 +780,9 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
                 bill_date=clean_json.get("date") or clean_json.get("sent_date"),
                 amount=_extraction_amount(document_type_value, clean_json),
                 currency=_extraction_currency(clean_json),
+                category=category,
+                category_confidence=category_confidence,
+                category_method=category_method,
                 check_results=evaluated["checks"],
                 audit_action="extracted",
                 repair_attempted=repair_attempted,
@@ -758,6 +833,10 @@ class UpdateClaimBody(BaseModel):
 class EditsBody(BaseModel):
     edits: dict[str, Any] = {}
     reason: Optional[str] = None  # only consulted by confirm; see _reason_required_for
+    # None means "unchanged" -- category lives outside the claim schema
+    # (categories.py, not schemas.py), so it's never part of `edits`.
+    # No reason is ever required for a category change; it isn't money.
+    category: Optional[str] = None
 
 
 @app.post("/api/claims")
@@ -976,15 +1055,43 @@ def _tag_suggestion_applied_corrections(corrections: list[dict[str, Any]], extra
             correction["change_type"] = "suggestion_applied"
 
 
+def _category_correction(ai_extraction: Optional[Extraction], previous_category: Optional[str], new_category: str) -> Optional[dict[str, Any]]:
+    """A category edit is diffed against the AI's own original category,
+    same convention as every other field's correction (Correction is
+    diffed against the AI version specifically, not the previous save) --
+    see models.Correction's docstring. No reason/direction: it's not
+    money (models.Correction.direction is nullable; "none" fits a
+    non-numeric field, same as a text field edit elsewhere)."""
+    ai_category = ai_extraction.category if ai_extraction else previous_category
+    if new_category == ai_category:
+        return None
+    return {"field_path": "category", "ai_value": ai_category, "employee_value": new_category, "direction": "none"}
+
+
 def _save_edits(
-    session: Session, document: Document, edits: dict[str, Any], actor_id: uuid.UUID, *, commit: bool = True
+    session: Session,
+    document: Document,
+    edits: dict[str, Any],
+    actor_id: uuid.UUID,
+    *,
+    category: Optional[str] = None,
+    commit: bool = True,
 ) -> Extraction:
     """commit=False lets a caller (confirm_document) fold this into a
     single larger transaction -- see repository.update_document_status's
-    docstring (item 5d)."""
+    docstring (item 5d). `category` is None when the employee didn't
+    touch the category dropdown this save -- carries the previous
+    extraction's category forward unchanged, same as every other
+    untouched field."""
     extraction = repository.latest_extraction(session, document.id)
     if extraction is None:
         raise HTTPException(409, "This document is still being processed.")
+
+    if category is not None:
+        if category not in CATEGORIES:
+            raise HTTPException(422, f"Unknown category: {category!r}")
+        if not is_categorizable(extraction.document_type):
+            raise HTTPException(422, "This document type has no category to set.")
 
     current_review = build_review_view(
         {
@@ -1005,6 +1112,14 @@ def _save_edits(
     corrections = _with_direction(_corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, edits))
     _tag_suggestion_applied_corrections(corrections, extraction, document)
 
+    new_category = category if category is not None else extraction.category
+    new_category_confidence = extraction.category_confidence if category is None else None
+    new_category_method = extraction.category_method if category is None else "employee"
+    if category is not None:
+        category_correction = _category_correction(ai_extraction, extraction.category, category)
+        if category_correction is not None:
+            corrections.append(category_correction)
+
     new_extraction = repository.add_extraction(
         session,
         document_id=document.id,
@@ -1017,6 +1132,9 @@ def _save_edits(
         bill_date=clean_json.get("date") or clean_json.get("sent_date"),
         amount=_extraction_amount(extraction.document_type, clean_json),
         currency=_extraction_currency(clean_json),
+        category=new_category,
+        category_confidence=new_category_confidence,
+        category_method=new_category_method,
         check_results=evaluated["checks"],
         corrections=corrections,
         audit_action="edited",
@@ -1037,12 +1155,12 @@ def save_document_fields(
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
     _require_not_confirmed(document)
-    if not body.edits:
+    if not body.edits and body.category is None:
         raise HTTPException(400, "No edits were sent.")
     # Item 5d: save + recompute as one transaction, one commit -- a
     # failure between the two steps must not leave the new extraction
     # saved with claims.total_amount still reflecting the old one.
-    _save_edits(session, document, body.edits, employee.id, commit=False)
+    _save_edits(session, document, body.edits, employee.id, category=body.category, commit=False)
     repository.recompute_claim_total(session, claim.id, commit=False)
     session.commit()
     refreshed = repository.get_document(session, document.id)
@@ -1064,8 +1182,8 @@ def confirm_document(
     # is durable until the single session.commit() at the end, so a
     # failure partway through (e.g. the reason-required 422) leaves no
     # trace at all, not a half-saved edit or a confirm with a stale total.
-    if body.edits:
-        _save_edits(session, document, body.edits, employee.id, commit=False)
+    if body.edits or body.category is not None:
+        _save_edits(session, document, body.edits, employee.id, category=body.category, commit=False)
 
     extraction = repository.latest_extraction(session, document.id)
     ai_extraction = _find_ai_extraction(document)
@@ -1136,6 +1254,9 @@ def revert_document(
         bill_date=evaluated["clean_json"].get("date") or evaluated["clean_json"].get("sent_date"),
         amount=_extraction_amount(ai_extraction.document_type, evaluated["clean_json"]),
         currency=_extraction_currency(evaluated["clean_json"]),
+        category=ai_extraction.category,
+        category_confidence=ai_extraction.category_confidence,
+        category_method=ai_extraction.category_method,
         check_results=evaluated["checks"],
         corrections=[],
         audit_action="edited",

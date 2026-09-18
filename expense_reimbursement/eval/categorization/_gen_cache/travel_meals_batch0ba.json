@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "RECEIPT\nHotel Suryam\nBreakfast 08:30\nAmount: ₹ 520\nGST 18%: ₹ 93.60\nTotal: ₹ 613.60",
+      "vendor": "Hotel Suryam"
+    },
+    {
+      "text": "RECEIPT\nBistro Le Petit\nLunch 12:45\nAmount: ₹ 780\nTotal: ₹ 780",
+      "vendor": "Bistro Le Petit"
+    },
+    {
+      "text": "RECEIPT\nCafé Continental\nDinner 19:00\nAmount: $45.00\nTotal: $45.00",
+      "vendor": "Café Continental"
+    },
+    {
+      "text": "RCEIPT\n\nVesna's Diner\nBf 500\nAmout: ₹ 500\nTtal: ₹ 500",
+      "vendor": "Vesna's Diner"
+    },
+    {
+      "text": "RECEIPT\nSaffron Grill\nBreakfast 07:30\nDate: 2023-07-16\nAmount: ₹ 650\nTotal: ₹ 650",
+      "vendor": "Saffron Grill"
+    },
+    {
+      "text": "RECEIPT\nThe Olive Tree\nLunch 13:20\nGSTIN: 27AAAAA1234A1Z5\nAmount: ₹ 920\nGST 18%: ₹ 165.60\nTotal: ₹ 1085.60",
+      "vendor": "The Olive Tree"
+    }
+  ]
+}

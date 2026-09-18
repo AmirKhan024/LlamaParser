@@ -1,0 +1,36 @@
+{
+  "examples": [
+    {
+      "text": "Ticket No: 987654\nFlight: SP-200\nFrom: MUM\nTo: BLR\nDate: 05/10/2024\nAmount: ₹ 15,200",
+      "vendor": "AirFly Express"
+    },
+    {
+      "text": "Train No: 12345\nClass: AC 2 Tier\nRoute: MUM-BLR\nDate: 11-10-2024\nFare: ₹ 5,750",
+      "vendor": "RoyalRailways"
+    },
+    {
+      "text": "Bus Ticket\nRoute: CHENNAI - HYDERABAD\nSeat: 12\nDate: 15/10/2024\nCharge: ₹ 1,800",
+      "vendor": "BusLines Ltd"
+    },
+    {
+      "text": "Airline Invoice\nBooking Ref: ABCD123\nFlight: BA123\nFrom: London\nTo: Mumbai\nDate: 20-10-2024\nService Fee: $45.00",
+      "vendor": "SkyBlue Airlines"
+    },
+    {
+      "text": "Intercity Bus\nRoute: PUNE - NASHIK\nDate: 22/10/2024\nAmount: ₹ 950",
+      "vendor": "QuickBus"
+    },
+    {
+      "text": "Train Fare\nTrain No: 56789\nClass: Sleeper\nRoute: DEL-AGRA\nDate: 25-10-2024\nFare: ₹ 2,500",
+      "vendor": "StarTrain"
+    },
+    {
+      "text": "Flight Change Fee\nAirline: SKYTRAVEL\nTicket No: 45678\nChange Date: 30/10/2024\nFee: ₹ 3,300",
+      "vendor": "JetLink"
+    },
+    {
+      "text": "International Upgrade\nInvoice No: 8765\nFlight: UA456\nFrom: New York\nTo: Mumbai\nUpgrade Fee: €120",
+      "vendor": "EuroAir"
+    }
+  ]
+}

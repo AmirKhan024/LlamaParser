@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Client: Zenith Corp\nAttendees: 5\nDate: 15/04/2024\nTotal: INR 12,500",
+      "vendor": "The Royal Bistro"
+    },
+    {
+      "text": "Client: Oceanic Ltd\nAttendees 3\nBill No: 2024/07\nAmount: $225.00",
+      "vendor": "Café Lumière"
+    },
+    {
+      "text": "Event for: Global Tech\nAttendees: 8\nVenue: Sapphire Hall\nGSTIN: 22AAAAA0000A1Z5\nTotal: INR 45,000",
+      "vendor": "Sapphire Banquet Hall"
+    },
+    {
+      "text": "Client: Stellar Innovations\nAttendees: 4\nDate: 30 Mar 2024\nAmount: 1,200.00 GBP",
+      "vendor": "The Velvet Room"
+    },
+    {
+      "text": "Client: Horizon Group\nAttendees 6\nReceipt #: 0001-2024\nTotal: €3,400",
+      "vendor": "Luna Lounge"
+    },
+    {
+      "text": "Client: Apex Industries\nAttendees: 2\nDate: 2024-02-28\nBill: INR 8,750",
+      "vendor": "Sunset Grill"
+    },
+    {
+      "text": "Client: Orion Enterprises\nAttendees: 7\nDate: 12/05/2024\nGSTIN: 07BBBBB0000B2Y7\nAmount: INR 27,300",
+      "vendor": "Bistro 24"
+    },
+    {
+      "text": "Client: Nimbus Holdings\nAttendees 5\nDate: 1 Apr 2024\nTotal: 2,500.00 USD",
+      "vendor": "The Grand Plaza"
+    },
+    {
+      "text": "Client: Nova Labs\nAttendees: 3\nDate: 28-03-2024\nAmount: 5,000.00 GBP",
+      "vendor": "Garden Terrace"
+    },
+    {
+      "text": "Client: Aurora Solutions\nAttendees: 4\nBill No: 2024/09\nTotal: INR 10,200",
+      "vendor": "Crown Diner"
+    },
+    {
+      "text": "Client: Radiant Corp\nAttendees 6\nDate: 07/04/2024\nTotal: €2,850",
+      "vendor": "The Golden Fork"
+    },
+    {
+      "text": "Client: Quantum Dynamics\nAttendees 2\nDate: 15/04/2024\nGSTIN: 14CCCCC0000C3Z4\nAmount: INR 5,600",
+      "vendor": "Blue Horizon"
+    },
+    {
+      "text": "Client: Infinite Tech\nAttendees: 9\nDate: 2024-05-01\nBill: 1,500.00 EUR",
+      "vendor": "Starlight Eatery"
+    }
+  ]
+}

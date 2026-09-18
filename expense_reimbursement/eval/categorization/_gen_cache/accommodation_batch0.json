@@ -1,0 +1,100 @@
+{
+  "examples": [
+    {
+      "text": "Hotel Zenith Pvt.\n2023-09-12 to 2023-09-15\nRoom 101: 4 nights @ ₹3,200/night\nTax 12%: ₹1,152\nTotal: ₹6,864",
+      "vendor": "Hotel Zenith Pvt. Ltd."
+    },
+    {
+      "text": "Sunrise Suites\n09/12/23 – 09/15/23\nRoom: 4×₹3,200\nMinibar ₹512\nLaundry ₹256\nTotal ₹6,968",
+      "vendor": "Sunrise Suites Ltd."
+    },
+    {
+      "text": "“Grand Palace”\n2023/09/12‑15\nRoom 202: 4n @ €150\nTax 18%: €108\nBeverage: €20\nTotal €378",
+      "vendor": "Grand Palace Hotels"
+    },
+    {
+      "text": "Hotel Aurora\n09/12‑09/15\nRoom 305: 4 nights x ₹3,500\nTax 12%: ₹1,680\nRoom service ₹800\nTotal ₹13,480",
+      "vendor": "Aurora Hospitality"
+    },
+    {
+      "text": "Starlight Inn\n09/12/23 – 09/15/23\nRoom 110: 4×₹3,100\nTax 12%: ₹1,488\nMinibar ₹400\nTotal ₹12,388",
+      "vendor": "Starlight Inn Co."
+    },
+    {
+      "text": "\n\nHotel Marigold\n2023-09-12 to 2023-09-15\nRoom 207: 4 nights @ ₹3,000\nTax 12%: ₹1,440\nLaundry ₹320\nTotal ₹9,760",
+      "vendor": "Marigold Hotels"
+    },
+    {
+      "text": "Oceanview Resort\n09/12 – 09/15\nRoom 404: 4×€170\nTax 20%: €136\nSpa ₹50\nTotal €536",
+      "vendor": "Oceanview Resorts"
+    },
+    {
+      "text": "Mountain Lodge\n2023-09-12 to 2023-09-15\nRoom 8: 4n @ ₹4,200\nTax 12%: ₹2,016\nMinibar ₹600\nTotal ₹9,816",
+      "vendor": "Mountain Lodge Pvt. Ltd."
+    },
+    {
+      "text": "\n\nGrand Vista\n09/12/23 – 09/15/23\nRoom 12: 4×₹3,800\nTax 12%: ₹1,824\nLaundry ₹500\nTotal ₹12,622",
+      "vendor": "Grand Vista Hotels"
+    },
+    {
+      "text": "\n\nHotel Serenity\n2023-09-12 to 2023-09-15\nRoom 310: 4n @ ₹3,400\nTax 12%: ₹1,632\nBeverages ₹250\nTotal ₹9,282",
+      "vendor": "Serenity Hospitality"
+    },
+    {
+      "text": "\n\nRenaissance Inn\n09/12–09/15\nRoom 210: 4×€160\nTax 18%: €115\nMinibar ₹45\nTotal €635",
+      "vendor": "Renaissance Inns"
+    },
+    {
+      "text": "\n\nSkyline Suites\n2023-09-12 to 2023-09-15\nRoom 220: 4n @ ₹3,600\nTax 12%: ₹1,728\nLaundry ₹400\nTotal ₹10,728",
+      "vendor": "Skyline Suites Ltd."
+    },
+    {
+      "text": "\n\nPalace Hotel\n09/12 – 09/15\nRoom 305: 4×€180\nTax 20%: €144\nRoom service €30\nTotal €594",
+      "vendor": "Palace Hotels"
+    },
+    {
+      "text": "\n\nLakeside Lodge\n2023/09/12‑15\nRoom 101: 4n @ ₹3,700\nTax 12%: ₹1,776\nMinibar ₹300\nTotal ₹9,676",
+      "vendor": "Lakeside Lodges"
+    },
+    {
+      "text": "\n\nSeaside Resort\n09/12/23 – 09/15/23\nRoom 210: 4×€155\nTax 18%: €111\nSpa €40\nTotal €546",
+      "vendor": "Seaside Resorts"
+    },
+    {
+      "text": "\n\nThe Royal\n2023-09-12 to 2023-09-15\nRoom 5: 4n @ ₹4,500\nTax 12%: ₹2,160\nLaundry ₹350\nTotal ₹10,910",
+      "vendor": "Royal Hospitality"
+    },
+    {
+      "text": "\n\nHotel Sapphire\n09/12–09/15\nRoom 310: 4×€165\nTax 20%: €132\nMinibar €20\nTotal €577",
+      "vendor": "Sapphire Hotels"
+    },
+    {
+      "text": "\n\nVista Vista\n2023-09-12 to 2023-09-15\nRoom 210: 4n @ ₹3,200\nTax 12%: ₹1,152\nBeverage ₹200\nTotal ₹8,552",
+      "vendor": "Vista Vista Ltd."
+    },
+    {
+      "text": "\n\nCrown Hotel\n09/12 – 09/15\nRoom 101: 4×€140\nTax 18%: €100\nRoom service €15\nTotal €555",
+      "vendor": "Crown Hotels"
+    },
+    {
+      "text": "\n\nEclipse Lodge\n2023-09-12 to 2023-09-15\nRoom 8: 4n @ ₹3,900\nTax 12%: ₹1,488\nLaundry ₹250\nTotal ₹9,638",
+      "vendor": "Eclipse Lodges"
+    },
+    {
+      "text": "\n\nBlue Horizon\n09/12–09/15\nRoom 120: 4×€150\nTax 20%: €120\nMinibar €25\nTotal €545",
+      "vendor": "Blue Horizon Hotels"
+    },
+    {
+      "text": "\n\nGrand Central\n2023/09/12‑15\nRoom 305: 4n @ ₹4,000\nTax 12%: ₹1,920\nBeverage ₹350\nTotal ₹10,270",
+      "vendor": "Grand Central Corp."
+    },
+    {
+      "text": "\n\nSilver Inn\n09/12/23 – 09/15/23\nRoom 210: 4×€160\nTax 18%: €115\nSpa €35\nTotal €570",
+      "vendor": "Silver Inn Ltd."
+    },
+    {
+      "text": "\n\nGarden View\n2023-09-12 to 2023-09-15\nRoom 401: 4n @ ₹3,300\nTax 12%: ₹1,576\nMinibar ₹400\nTotal ₹8,376",
+      "vendor": "Garden View Hospitality"
+    }
+  ]
+}

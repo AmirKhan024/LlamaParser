@@ -1,0 +1,20 @@
+{
+  "examples": [
+    {
+      "text": "Business Gift Co.\nDate: 12-07-2024\nItem: Premium Mug\nQty: 2\nTotal: ₹4,000",
+      "vendor": "Business Gift Co."
+    },
+    {
+      "text": "Courier Express\nInvoice No: 23456\nDate: 05/08/24\nParcel Weight: 3.2kg\nAmount: ₹650",
+      "vendor": "Courier Express"
+    },
+    {
+      "text": "Printify India\nGSTIN: 29ABCDE1234F1Z5\nInvoice No: 56789\nDate: 2024-07-20\nTotal: ₹12,750",
+      "vendor": "Printify India"
+    },
+    {
+      "text": "Giftify Ltd.\nInvoice # 7890\nDate: 20 Aug 2024\nGift: Leather Wallet\nQty: 1\nTotal: $55.00",
+      "vendor": "Giftify Ltd."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12-08-2024\nClient: ABC Corp\nPurpose: Site visit\nDistance: 35 km\nRate: ₹10/km\nTotal: ₹350",
+      "vendor": "Local Conveyance Ltd."
+    },
+    {
+      "text": "Trip Log\nDay: 20 Aug 2024\nFrom: Office\nTo: Client HQ\nKm: 28\nRate: $0.08/km\nTotal: $2.24",
+      "vendor": "CityRide Services"
+    },
+    {
+      "text": "Da te: 05/07/2024\nCli e nt: 1stTech\nPr o p o r t: 5 mth meeting\nKm 12,5\nRate: ₹9/km\nTotal: ₹112.5",
+      "vendor": "MetroMover Co."
+    },
+    {
+      "text": "Monthly Mileage Claim\nEmployee: R. Kumar\nPeriod: Jul 2024\nTotal km: 480\nRate: ₹12/km\nClaimed: ₹5760",
+      "vendor": "RideNGo Pvt Ltd."
+    },
+    {
+      "text": "Log Sheet\nDate: 15/09/2024\nFrom: HQ\nTo: Client Site\nDistance: 18.4 km\nRate: €0.10/km\nAmount: €1.84",
+      "vendor": "EuroDrive Ltd."
+    },
+    {
+      "text": "Trip: 3rd Sep 2024\nKm: 22\nRate: ₹11/km\nTotal: ₹242",
+      "vendor": "FastWheel"
+    },
+    {
+      "text": "Date: 08-10-2024\nCl ient: GreenTech\nPurpose: 1 hr\nKm: 15\nRate: ₹10/km\nTot al: ₹150",
+      "vendor": "GreenRide Solutions"
+    },
+    {
+      "text": "Local Conveyance Form\nDate: 01-09-2024\nClient: XYZ Ltd\nPurpose: Project discussion\nFrom: Office\nTo: Client Office\nKm: 30\nRate: ₹10/km\nTotal: ₹300",
+      "vendor": "TransitPro"
+    },
+    {
+      "text": "Mileage Log\nDate: 12/09/2024\nFrom: Office\nTo: Client\nKm: 25\nRate: £0.07/km\nAmount: £1.75",
+      "vendor": "BritRide"
+    },
+    {
+      "text": "Trip Log\nDate: 18 Aug 2024\nClient: HealthPlus\nPurpose: Consultation\nKm: 40\nRate: ₹11/km\nTotal: ₹440",
+      "vendor": "HealthDrive"
+    },
+    {
+      "text": "Monthly Claim\nEmployee: S. Reddy\nMonth: Aug 2024\nKm: 520\nRate: ₹9/km\nAmount: ₹4680",
+      "vendor": "MotoTrack"
+    },
+    {
+      "text": "Da te: 21-10-2024\nClient: 2ndVentures\nPurpose: 3 hrs\nKm: 27\nRate: ₹10/km\nTotal: ₹270",
+      "vendor": "VentureRide"
+    }
+  ]
+}

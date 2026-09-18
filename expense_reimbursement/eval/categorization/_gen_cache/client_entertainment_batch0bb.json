@@ -1,0 +1,32 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12/08/2024\nClient: Horizon Tech\nAttendees: 3\nTotal: ₹5,200",
+      "vendor": "Saffron Bistro"
+    },
+    {
+      "text": "INV-0456\nClient: Greenfield Co.\n#Attendees: 5\nItems: Beef, Wine, Dessert\nGrand Total: 1,850.00 USD",
+      "vendor": "Oakwood Hall"
+    },
+    {
+      "text": "2024-09-01\nClient: Stellar Dynamics\nAttendees: 2\nBill No: 2024/09/001\nAmount: 3,750 INR",
+      "vendor": "The Spice Kitchen"
+    },
+    {
+      "text": "Client: Novatek Industries\nAttendees: 6\nVenue: The Grand Plaza\nServices: Catering, Drinks\nTotal: 7,000.00 GBP",
+      "vendor": "Grand Plaza Events"
+    },
+    {
+      "text": "12.07.2024\nClient: Apex Solutions\nAttendees: 4\nInvoice: APX-202407\nTotal: 4,900.00 EUR",
+      "vendor": "Luna Lounge"
+    },
+    {
+      "text": "Date 08/15/24\nClient: Vortex Labs\nAttendees 3\nBill No: 15/08/24\nTotal: 5,500 INR",
+      "vendor": "Curry Corner"
+    },
+    {
+      "text": "INV 2024-08-30\nClient: Zenith Corp\n#Attendees: 2\nBill: 30-08-2024\nAmount: $2,200.00",
+      "vendor": "Blue Horizon Catering"
+    }
+  ]
+}

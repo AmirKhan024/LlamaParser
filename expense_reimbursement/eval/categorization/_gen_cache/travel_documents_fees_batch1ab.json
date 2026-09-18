@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "VISA APPLICATION FEES\nAmount: INR 15,000\nDate: 12/03/2024\nGSTIN: 27AAAAA1234A1Z5",
+      "vendor": "Consular Services Pvt Ltd"
+    },
+    {
+      "text": "TRAVEL INSURANCE POLICY\nPolicy No: TI-2024-5678\nPremium: USD 120.00\nEffective: 01-04-2024 to 30-04-2024",
+      "vendor": "GlobalCover International"
+    },
+    {
+      "text": "FX CONVERSION FEE\nFrom: USD\nTo: EUR\nRate: 0.85\nFee: €5.00",
+      "vendor": "EuroFX Corp"
+    },
+    {
+      "text": "PASSPORT APPLICATION FEE\nApplicant: Ravi Kumar\nAmount: INR 5,000\nDate: 05/02/2024\nGSTIN: 07BBBBB5678B2Z8",
+      "vendor": "Passport Services & Co"
+    },
+    {
+      "text": "FLIGHT BOOKING FEE\nBooking No: AB1234\nService Charge: GBP 30.00\nDate: 28/01/2024",
+      "vendor": "SkyTravel UK Ltd"
+    },
+    {
+      "text": "V I S A F E E\nAmt: 12 000 INR\nD a t e: 2024/04/10\nG S T I N : 29CCCCC9876C3Z9",
+      "vendor": "VisaAssist"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "Client: Meridian Retail, 4 attendees\nDinner bill - 4 pax\nTotal INR 12,500",
+      "vendor": "Café Luminare"
+    },
+    {
+      "text": "Client: GlobalTech Ltd.\nLunch for 3 attendees\n$350.00",
+      "vendor": "Bistro Noir"
+    },
+    {
+      "text": "Client: 0bservatory Ltd.\nEvnt at 3:00pm\nAttndee count: 5\nTotal £1,200.00",
+      "vendor": "The Royal Hall"
+    },
+    {
+      "text": "Client: Innovatech Pvt. Ltd.\n4 Attendees\nGSTIN: 27ABCDE1234F1Z5\nTotal INR 9,250",
+      "vendor": "Spice Bazaar"
+    },
+    {
+      "text": "Client: Zenith Partners\nMeal for 2 attendees\n€420.00",
+      "vendor": "Le Bistro"
+    },
+    {
+      "text": "Client: Apex Industries\nDinner\nAttendees: 6\nTotal: $1,080",
+      "vendor": "Sky Lounge"
+    }
+  ]
+}

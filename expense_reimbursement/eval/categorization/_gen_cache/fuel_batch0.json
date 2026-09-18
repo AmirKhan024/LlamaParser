@@ -1,0 +1,92 @@
+{
+  "examples": [
+    {
+      "text": "Petrol Pump\nVishal Fuel\nQty: 40 L\nRate: ₹90/L\nTotal: ₹3600\nGSTIN: 29ABCDE1234F1Z5",
+      "vendor": "Vishal Fuel"
+    },
+    {
+      "text": "CNG\nBangalore CNG\nQty: 2000 L\nRate: ₹5.20/L\nTotal: ₹10400\nGST: 18%",
+      "vendor": "Bangalore CNG"
+    },
+    {
+      "text": "Fuel\nRural Fuel Co.\nQty: 30 L\nTotal: $90\nDate: 12-08-2023\nVAT: 15%",
+      "vendor": "Rural Fuel Co."
+    },
+    {
+      "text": "Diesel\nNagar Diesel\nQty: 50 L\nRate: ₹88/L\nTotal: ₹4400\nGSTIN: 19XYZEF5678G2H7",
+      "vendor": "Nagar Diesel"
+    },
+    {
+      "text": "Petrol\nDelhi Fuel\nQty: 25 L\nRate: ₹92/L\nTotal: ₹2300\nGST: 18%",
+      "vendor": "Delhi Fuel"
+    },
+    {
+      "text": "Fuel\nMumbai Petro\nQty: 20 L\nTotal: ₹1800\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "Mumbai Petro"
+    },
+    {
+      "text": "CNG\nHyderabad CNG\nQty: 2500 L\nRate: ₹5.25/L\nTotal: ₹13125\nVAT: 10%",
+      "vendor": "Hyderabad CNG"
+    },
+    {
+      "text": "Fuel\nKolkata Fuel\nQty: 35 L\nTotal: ₹3000\nDate: 23/07/2023",
+      "vendor": "Kolkata Fuel"
+    },
+    {
+      "text": "Petrol\nChennai Fuel\nQty: 45 L\nRate: ₹91/L\nTotal: ₹4095\nGST: 18%",
+      "vendor": "Chennai Fuel"
+    },
+    {
+      "text": "Diesel\nPune Diesel\nQty: 55 L\nTotal: ₹4840\nGSTIN: 27XYZEF5678G2H7",
+      "vendor": "Pune Diesel"
+    },
+    {
+      "text": "Fuel\nBhopal Petrol\nQty: 60 L\nRate: ₹89/L\nTotal: ₹5340\nVAT: 15%",
+      "vendor": "Bhopal Petrol"
+    },
+    {
+      "text": "CNG\nLucknow CNG\nQty: 3000 L\nRate: ₹5.10/L\nTotal: ₹15300\nGST: 18%",
+      "vendor": "Lucknow CNG"
+    },
+    {
+      "text": "Fuel\nSurat Fuel\nQty: 25 L\nTotal: ₹2250\nGST: 18%",
+      "vendor": "Surat Fuel"
+    },
+    {
+      "text": "Petrol\nAhmedabad Petrol\nQty: 30 L\nRate: ₹90/L\nTotal: ₹2700\nGSTIN: 24ABCDE1234F1Z5",
+      "vendor": "Ahmedabad Petrol"
+    },
+    {
+      "text": "Diesel\nIndore Diesel\nQty: 40 L\nRate: ₹87/L\nTotal: ₹3480\nVAT: 15%",
+      "vendor": "Indore Diesel"
+    },
+    {
+      "text": "Fuel\nKochi Fuel\nQty: 50 L\nTotal: ₹4600\nGSTIN: 33XYZEF5678G2H7",
+      "vendor": "Kochi Fuel"
+    },
+    {
+      "text": "Petrol\nJaipur Fuel\nQty: 20 L\nRate: ₹88/L\nTotal: ₹1760\nGST: 18%",
+      "vendor": "Jaipur Fuel"
+    },
+    {
+      "text": "CNG\nNagpur CNG\nQty: 1800 L\nRate: ₹5.15/L\nTotal: ₹9270\nVAT: 10%",
+      "vendor": "Nagpur CNG"
+    },
+    {
+      "text": "Fuel\nChandigarh Fuel\nQty: 30 L\nTotal: ₹2700\nDate: 05-09-2023",
+      "vendor": "Chandigarh Fuel"
+    },
+    {
+      "text": "Diesel\nGurgaon Diesel\nQty: 25 L\nRate: ₹89/L\nTotal: ₹2225\nGSTIN: 19XYZEF5678G2H7",
+      "vendor": "Gurgaon Diesel"
+    },
+    {
+      "text": "Fuel\nLucknow Fuel\nQty: 40 L\nTotal: ₹3600\nGST: 18%",
+      "vendor": "Lucknow Fuel"
+    },
+    {
+      "text": "Petrol\nThiruvananthapuram Fuel\nQty: 35 L\nRate: ₹92/L\nTotal: ₹3220\nGST: 18%",
+      "vendor": "Thiruvananthapuram Fuel"
+    }
+  ]
+}

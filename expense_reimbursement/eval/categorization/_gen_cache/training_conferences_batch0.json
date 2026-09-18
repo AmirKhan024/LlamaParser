@@ -1,0 +1,44 @@
+{
+  "examples": [
+    {
+      "text": "TechLearn Academy\nDate: 15-09-2024\nOnline Course: Advanced Python\nFee: INR 12,000\nThank you for enrolling!",
+      "vendor": "TechLearn Academy"
+    },
+    {
+      "text": "Global Certify Ltd.\nInvoice No: GC-2024-07\nCertification Exam: PMP\nFee: USD 550\nPayment Received: 07-10-2024",
+      "vendor": "Global Certify Ltd."
+    },
+    {
+      "text": "EduCon International\nEvent: International Data Science Conference\nPass: Gold\nAmount: EUR 1,200\nDate: 01-11-2024",
+      "vendor": "EduCon International"
+    },
+    {
+      "text": "Learnify\nCourse: Machine Learning Fundamentals\nEnrollment: INR 8,500\nDate: 12-08-2024\nThank you!",
+      "vendor": "Learnify"
+    },
+    {
+      "text": "ProTech Conferences\nConference: AI & Robotics Summit\nPass: Silver\nAmount: GBP 300\nDate: 20-09-2024",
+      "vendor": "ProTech Conferences"
+    },
+    {
+      "text": "SkillUp Corp.\nExam: AWS Certified Solutions Architect\nFee: INR 9,000\nInvoice Date: 05-09-2024",
+      "vendor": "SkillUp Corp."
+    },
+    {
+      "text": "FutureLearn Inc.\nCourse: Data Analytics with R\nFee: USD 400\nDate: 14-09-2024\nThank you!",
+      "vendor": "FutureLearn Inc."
+    },
+    {
+      "text": "ConferPro\nConference: Global Cybersecurity Forum\nPas: Platinum\nAmount: INR 20,000\nDate: 23-09-2024",
+      "vendor": "ConferPro"
+    },
+    {
+      "text": "CertifyHub\nExam: CISSP\nFee: EUR 650\nDate: 02-10-2024",
+      "vendor": "CertifyHub"
+    },
+    {
+      "text": "EduSphere\nOnline Course: Cloud Computing Basics\nFee: INR 6,000\nDate: 30-08-2024",
+      "vendor": "EduSphere"
+    }
+  ]
+}

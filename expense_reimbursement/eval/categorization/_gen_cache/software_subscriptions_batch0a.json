@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "ZyraSoft Inc.\nInvoice #2024-07\nProject Management Tool\nQty: 1\nSubtotal: $49.99",
+      "vendor": "ZyraSoft Inc."
+    },
+    {
+      "text": "Nimss Cloud Co.\nMonthly Cloud Storage\n01-08-2024\nQty: 5TB\nTotal: 5,000 INR",
+      "vendor": "Nimbus Cloud Co."
+    },
+    {
+      "text": "AppStore: iOS App\nRenewal\nQty: 1\nAmount: 12.99 USD\nDate: 07/02/2024",
+      "vendor": "AppStore"
+    },
+    {
+      "text": "SoftWare 360\nAnnual Licence\nQty: 1\nTotal: 2,499.00 EUR",
+      "vendor": "SoftWare 360"
+    },
+    {
+      "text": "TechGuru Pvt Ltd\nSoftware Subscription\n02 Aug 2024\nQty: 1\nTotal: 1,200.00 INR\nGSTIN: 27AAECS12 34Z1ZQ",
+      "vendor": "TechGuru Pvt Ltd"
+    },
+    {
+      "text": "  Cloud   Services  Ltd\n  Q3 2024  \n   SaaS  Subsciption\nQty: 1\n   $299.00",
+      "vendor": "Cloud Services Ltd"
+    },
+    {
+      "text": "FinTrack Ltd.\nInvoice #FT-2024-08\nFinancial Analysis Tool\nQty: 1\nTotal: £89.95",
+      "vendor": "FinTrack Ltd."
+    },
+    {
+      "text": "5oftCloud\nMonthly Subscription\nInvoice No: 56789\nQty: 1\nTotal: 399.00 USD",
+      "vendor": "5oftCloud"
+    },
+    {
+      "text": "CodeMate\nLicense Renewal\n$59.99",
+      "vendor": "CodeMate"
+    },
+    {
+      "text": "DevOps Suite\nInvoice\n2024-08-01\nQty: 1\nTotal: 1,200.00 INR\nGST: 18%\nGSTIN: 07ABCD1234E5F6",
+      "vendor": "DevOps Suite"
+    },
+    {
+      "text": "NetWork Solutions\nSubscription\nQty: 1\nTotal: 1,099.00 EUR",
+      "vendor": "NetWork Solutions"
+    },
+    {
+      "text": "CloudX\nSaaS Subsciption\nInvoice\n2024-08-03\nQty: 1\nTotal: $199.99",
+      "vendor": "CloudX"
+    }
+  ]
+}

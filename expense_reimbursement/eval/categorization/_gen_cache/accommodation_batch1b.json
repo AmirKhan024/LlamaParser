@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "GRAND VISTA HOTELS\nInvoice No: 2026-078\nRoom 305, 2 nights @ 3500\nTotal: 7000 + 10% GST = 7700",
+      "vendor": "Grand Vista Hotels"
+    },
+    {
+      "text": "Suryaprastha Lodge\nDate: 15-07-2026\nRoom 12, 3 nights @ 1500\nMinibar 200\nLaundry 100\nGrand Total: 5200",
+      "vendor": "Suryaprastha Lodge"
+    },
+    {
+      "text": "Nimbus Retreats\nInvoice #NR-5678\nStay: 5 days\nRoom: 2500 per day\n+ Tax 12% = 1500\nTotal: 13750",
+      "vendor": "Nimbus Retreats"
+    },
+    {
+      "text": "Eagle Tower Suites\nInv No: 2026/09/23\nRoom 210, 1 night @ 4000\n+ Minibar: 300\n+ Laundry: 200\n+ Service Charge: 150\nTotal: 4850",
+      "vendor": "Eagle Tower Suites"
+    },
+    {
+      "text": "Luxe Stay Co.\nDate: 22/08/26\nRoom 401, 4 nights @ 2800\n+ Taxes 18% = 2016\n+ Room Service 500\n+ Minibar 400\nTotal: 11416",
+      "vendor": "Luxe Stay Co."
+    },
+    {
+      "text": "Blue Horizon Resorts\nInv: 2026-09-01\nStays: 3 nights\nRoom: 2000 per night\nMinibar: 350\nLaundry: 150\nGST 5% = 120\nGrand Totl: 7390",
+      "vendor": "Blue Horizon Resorts"
+    },
+    {
+      "text": "Sunrise Inn\nInv No 2026/07/05\nRoom 101, 2 nights @ 1700\n+ Minibar 150\n+ Laundry 50\nTotal: 3600",
+      "vendor": "Sunrise Inn"
+    },
+    {
+      "text": "Crown Plaza\nInvoice No: 2026-08-12\nRoom 302, 3 nights @ 2600\nMinibar 250\nLaundry 200\nTax 12% = 920\nTotal: 10470",
+      "vendor": "Crown Plaza"
+    },
+    {
+      "text": "Aurora Guesthouse\nDate 18-09-2026\nRoom 5, 2 nights @ 900\n+ Minibar: 100\n+ Laundry: 50\n+ Service 50\nTotal: 2150",
+      "vendor": "Aurora Guesthouse"
+    },
+    {
+      "text": "Sapphire Suites\nInvoice #S-9876\nStay: 7 days\nRoom: 3000 per day\nMinibar: 700\nLaundry: 300\nGST 18% = 7380\nTotal: 20280",
+      "vendor": "Sapphire Suites"
+    },
+    {
+      "text": "Royal Residency\nInv No: 2026/09/15\nRoom 210, 2 nights @ 3500\n+ Minibar 200\n+ Laundry 150\n+ Service 100\nGST 5% = 1925\nTotal: 10875",
+      "vendor": "Royal Residency"
+    },
+    {
+      "text": "Maple Leaf Stay\nInvoice 2026-07-23\nRoom 12, 5 nights @ 2200\n+ Minibar 400\n+ Laundry 200\n+ Service 150\nTax 18% = 1380\nTotal: 13920",
+      "vendor": "Maple Leaf Stay"
+    }
+  ]
+}

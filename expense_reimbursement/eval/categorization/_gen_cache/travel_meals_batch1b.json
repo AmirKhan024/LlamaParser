@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Date: 2024-09-12\nItem: Breakfast - 2 Eggs & Toast\nQty: 1\nTotal: ₹450",
+      "vendor": "Sunrise Bistro"
+    },
+    {
+      "text": "Hotel Lux\nLunch at 12:30 PM\nAmount: 65.00 USD",
+      "vendor": "Hotel Lux"
+    },
+    {
+      "text": "2024/09/13\nRoadside Diner\n- Grilled Sandwich 1\n- Cola 1\nSubtotal: ₹1,200\nGST 18%: ₹216\nTotal: ₹1,416",
+      "vendor": "Roadside Diner"
+    },
+    {
+      "text": "Gourmet Eats\nDinner ₹780",
+      "vendor": "Gourmet Eats"
+    },
+    {
+      "text": "Date: 12-09-24\nVendor: City Café\nItem 1: Croissant\nQty 1\nPrice ₹150\nItem 2: Coffee\nQty 1\nPrice ₹80\nGrand Total ₹230",
+      "vendor": "City Café"
+    },
+    {
+      "text": "Bistro & Co.\nLunch 12:45\n€12.50",
+      "vendor": "Bistro & Co."
+    },
+    {
+      "text": "2024-09-14\nHotel Vista\nBreakfast\n£25.00",
+      "vendor": "Hotel Vista"
+    },
+    {
+      "text": "Vegan Delight\n  2024-09-15\nLunch: Veg Bowl\nQty 1\nTotal: ₹950",
+      "vendor": "Vegan Delight"
+    },
+    {
+      "text": "Taj Restaurant\nDinner 7:30 PM\n₹1,500",
+      "vendor": "Taj Restaurant"
+    },
+    {
+      "text": "Cafe 123\nBreakfast 8:15\n$18.00\nThank you",
+      "vendor": "Cafe 123"
+    },
+    {
+      "text": "2024-09-16\nRoadside Grill\n- Burger 1\n- Fries 1\n- Shake 1\nSubtotal: €18.75\nTax 5%: €0.94\nTotal: €19.69",
+      "vendor": "Roadside Grill"
+    },
+    {
+      "text": "Gourmet Bistro\nLunch ₹1,100",
+      "vendor": "Gourmet Bistro"
+    },
+    {
+      "text": "Date 2024/09/17\nHotel Plaza\n- Continental Breakfast\nQty 1\nPrice £20\nSubtotal £20\nTax 0%",
+      "vendor": "Hotel Plaza"
+    }
+  ]
+}

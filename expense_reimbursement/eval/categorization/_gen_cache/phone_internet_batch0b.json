@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Invoice No: 1023\nDate: 12-03-2024\nMobile: 9876543210\nPlan: Unlimited 10GB\nAmount: ₹ 1,299.00",
+      "vendor": "AquaTel Services"
+    },
+    {
+      "text": "BROADBAND BILL\nSerial: BND-56789\nPeriod: Mar 2024\nData: 50GB\nTotal: 3,500 INR",
+      "vendor": "GlobeNet Ltd."
+    },
+    {
+      "text": "Roaming Pack\nTrip: New York\nDuration: 7 days\nCharge: 75 USD\nVAT: 5%",
+      "vendor": "TransWorld Roam"
+    },
+    {
+      "text": "MOBILE INVOICE\nVendor: Zenith Mobile\nPlan: 20GB 3-Month\nMobile No: 9123456789\nTotal: ₹ 899.00",
+      "vendor": "Zenith Mobile"
+    },
+    {
+      "text": "INTERNATIONAL DATA\nUsage: 2GB\nCountry: UK\nRate: 15 GBP\nTax: 20%\nTotal: 18 GBP",
+      "vendor": "EuroData Services"
+    },
+    {
+      "text": "Mobile Bill\nInvoice# 0456\nDate: 2024-02-28\nPlan: 5GB\nCharges: ₹ 499.00",
+      "vendor": "Sirius Tel"
+    },
+    {
+      "text": "Broadband Invoice\nAccount: 12345\nPeriod: 01-03-2024 to 31-03-2024\nBandwidth: 100Mbps\nAmount: 4,250 INR",
+      "vendor": "SpeedWave Broadband"
+    },
+    {
+      "text": "Roaming Charge\nLocation: Tokyo\nDays: 5\nRate: 12 USD/day\nTotal: 60 USD",
+      "vendor": "AsiaRoam"
+    },
+    {
+      "text": "MOBILE\nBill No 7890\nPlan: 15GB\nDate: 15/03/2024\nTotal: ₹ 1,149.00",
+      "vendor": "Vivid Mobile"
+    },
+    {
+      "text": "BROADBAND\nInvoice\nPeriod: March 2024\nData Used: 70GB\nBase Fee: 3,000 INR\nAdditional: 1,200 INR\nTotal: 4,200 INR",
+      "vendor": "NetSpeed India"
+    },
+    {
+      "text": "International Pack\nDestination: Berlin\nDuration: 10 days\nCharge: 90 EUR\nService Tax: 18%\nTotal: 107.4 EUR",
+      "vendor": "GlobalRoam"
+    },
+    {
+      "text": "Mobile Bill\nInvoice# 3210\nPlan: 8GB\nPeriod: 01-03-2024 to 31-03-2024\nAmount: ₹ 799.00",
+      "vendor": "PulseTel"
+    },
+    {
+      "text": "Broadband Receipt\nSerial: BRD-001\nMonth: March 2024\nData: 30GB\nFee: 2,500 INR\nGST: 18%\nTotal: 2,950 INR",
+      "vendor": "WaveNet"
+    }
+  ]
+}

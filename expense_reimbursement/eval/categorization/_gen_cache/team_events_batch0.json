@@ -1,0 +1,100 @@
+{
+  "examples": [
+    {
+      "text": "Sunrise Bites\nTeam Lunch for 6\nTotal: ₹4,200\nGSTIN: 29AAAAA0000A1Z5",
+      "vendor": "Sunrise Bites"
+    },
+    {
+      "text": "Café Nisha\nBirthday celebration for Team\nItems: Cake, Drinks\nAmount: ₹3,750\nGSTIN: 19BBBBB1111B2Z7",
+      "vendor": "Café Nisha"
+    },
+    {
+      "text": "Global Tech Catering\nOffsite venue and catering\n6 pax\n₹5,600\nGSTIN: 07CCCCCC2222C3Z9",
+      "vendor": "Global Tech Catering"
+    },
+    {
+      "text": "Kokila Foods\nTeam Dinner\n₹4,500\nGSTIN: 12DDDDDD3333D4Z3",
+      "vendor": "Kokila Foods"
+    },
+    {
+      "text": "Mohan's Kitchen\nTeam Lunch\nQty 6\n₹3,900\nGSTIN: 28EEEEEE4444E5Z2",
+      "vendor": "Mohan's Kitchen"
+    },
+    {
+      "text": "Bistro 24/7\nCelebration: Team Anniversary\n₹6,200\nGSTIN: 20FFFFF5555F6Z8",
+      "vendor": "Bistro 24/7"
+    },
+    {
+      "text": "Delight Dine\nTeam offsite\nCatering + Venue\n₹7,500\nGSTIN: 16GGGGGG6666G7Z1",
+      "vendor": "Delight Dine"
+    },
+    {
+      "text": "Puri Palace\nTeam lunch\n₹3,200\nGSTIN: 21HHHHHH7777H8Z4",
+      "vendor": "Puri Palace"
+    },
+    {
+      "text": "Chef's Corner\nTeam birthday\n₹4,800\nGSTIN: 11IIIII8888I9Z5",
+      "vendor": "Chef's Corner"
+    },
+    {
+      "text": "Saffron Spice\nTeam dinner\n₹5,100\nGSTIN: 23JJJJJ9999J0Z3",
+      "vendor": "Saffron Spice"
+    },
+    {
+      "text": "Oasis Bistro\nTeam celebration\n₹6,000\nGSTIN: 18KKKKK0000K1Z2",
+      "vendor": "Oasis Bistro"
+    },
+    {
+      "text": "The Spice Hub\nTeam offsite\nCatering & Venue\n₹8,300\nGSTIN: 15LLLLL1111L2Z4",
+      "vendor": "The Spice Hub"
+    },
+    {
+      "text": "Veda's Kitchen\nTeam lunch\n₹3,500\nGSTIN: 27MMMMM2222M3Z6",
+      "vendor": "Veda's Kitchen"
+    },
+    {
+      "text": "Nirvana Dine\nTeam birthday\n₹4,400\nGSTIN: 14NNNNN3333N4Z7",
+      "vendor": "Nirvana Dine"
+    },
+    {
+      "text": "Madhur's Eatery\nTeam offsite\n₹7,000\nGSTIN: 19OOOOO4444O5Z9",
+      "vendor": "Madhur's Eatery"
+    },
+    {
+      "text": "Desi Bites\nTeam lunch\n₹4,050\nGSTIN: 22PPPPP5555P6Z1",
+      "vendor": "Desi Bites"
+    },
+    {
+      "text": "Royal Feast\nTeam celebration\n₹6,500\nGSTIN: 17QQQQQ6666Q7Z2",
+      "vendor": "Royal Feast"
+    },
+    {
+      "text": "Gourmet Hub\nTeam offsite\nCatering\n₹7,800\nGSTIN: 13RRRRR7777R8Z3",
+      "vendor": "Gourmet Hub"
+    },
+    {
+      "text": "Sanjeev's Kitchen\nTeam birthday\n₹5,200\nGSTIN: 26SSSSS8888S9Z4",
+      "vendor": "Sanjeev's Kitchen"
+    },
+    {
+      "text": "Taste of India\nTeam lunch\n₹3,850\nGSTIN: 24TTTTT9999T0Z5",
+      "vendor": "Taste of India"
+    },
+    {
+      "text": "Chef's Delight\nTeam offsite\n₹8,000\nGSTIN: 12UUUUU0000U1Z6",
+      "vendor": "Chef's Delight"
+    },
+    {
+      "text": "Curry Corner\nTeam celebration\n₹6,200\nGSTIN: 29VVVVV1111V2Z7",
+      "vendor": "Curry Corner"
+    },
+    {
+      "text": "Bistro Bliss\nTeam lunch\n₹4,300\nGSTIN: 20WWWWW2222W3Z8",
+      "vendor": "Bistro Bliss"
+    },
+    {
+      "text": "Savory Kitchen\nTeam birthday\n₹5,500\nGSTIN: 21XXXXX3333X4Z9",
+      "vendor": "Savory Kitchen"
+    }
+  ]
+}

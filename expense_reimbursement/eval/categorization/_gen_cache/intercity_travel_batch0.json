@@ -1,0 +1,100 @@
+{
+  "examples": [
+    {
+      "text": "Ticket No: 1234567890\nFlight: AI 102\nFrom: BOMBAY\nTo: BANGALORE\nDate: 15-09-2024\nAmount: ₹ 12,345\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "AirJet Express"
+    },
+    {
+      "text": "Ticket ID: 987654321\nTrain: 2244 Rajdhani Express\nFrom: NEW DELHI\nTo: MUMBAI\nDate: 22/09/2024\nClass: AC 2-Tier\nFare: ₹ 4,560\nGSTIN: 07LMNOP5678G1X6",
+      "vendor": "TransRail Co."
+    },
+    {
+      "text": "Bus No: 45A\nRoute: MUMBAI – HYDERABAD\nDate: 18-09-2024\nDeparture: 07:00\nArrival: 21:30\nFare: ₹ 1,200\nGSTIN: 29XYZAB9876C1D2",
+      "vendor": "Bangalore Intercity Bus Service"
+    },
+    {
+      "text": "Flight Change Fee\nAirline: SkyFly Ltd.\nTicket No: 112233\nDate of Change: 20-09-2024\nFee: USD 120.00",
+      "vendor": "SkyFly Ltd."
+    },
+    {
+      "text": "Upgrade Charge\nAirline: AirJet Express\nTicket No: 556677\nUpgrade: Business Class\nDate: 16-09-2024\nAmount: USD 250.00",
+      "vendor": "AirJet Express"
+    },
+    {
+      "text": "Ticket No: 334455\nTrain: 1287 Shatabdi Express\nFrom: CHENNAI\nTo: KOLKATA\nDate: 25-09-2024\nClass: AC 3-Tier\nFare: ₹ 2,400\nGSTIN: 33PQRST3456K1L7",
+      "vendor": "ExpressRail"
+    },
+    {
+      "text": "T ic ket No: 778899\nFlight: BA 215\nFrom: LON\nTo: DEL\nDate: 12/09/24\nFee: £ 180",
+      "vendor": "TransGlobal Airways"
+    },
+    {
+      "text": "Ticket: 1122334455\nIntercity Bus\nMUMBAI – CHENNAI\nDate: 23-09-2024\nDeparture: 05:45\nArrival: 19:30\nFare: ₹ 1,500\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "CityLink Buses"
+    },
+    {
+      "text": "Ticket No: 1234-5678\nFlight: AF 301\nFrom: PARIS\nTo: DEL\nDate: 19-09-2024\nUpgrade fee: € 140.00",
+      "vendor": "Air France International"
+    },
+    {
+      "text": "Ticket ID: 555666\nTrain: 2258 Gatimaan Express\nFrom: NEW DELHI\nTo: BANGALORE\nDate: 20-09-2024\nClass: AC 1-Tier\nFare: ₹ 6,800\nGSTIN: 07LMNOP5678G1X6",
+      "vendor": "Gatimaan Rail"
+    },
+    {
+      "text": "Ticket No: 999888\nIntercity Bus\nCHENNAI – MUMBAI\nDate: 21-09-2024\nDeparture: 06:15\nArrival: 18:45\nFare: ₹ 1,300\nGSTIN: 33PQRST3456K1L7",
+      "vendor": "SouthStar Travels"
+    },
+    {
+      "text": "Ticket No: 321654\nFlight: QF 1023\nFrom: SYD\nTo: DEL\nDate: 17-09-2024\nChange Fee: AUD 90.00",
+      "vendor": "Qantas Airways"
+    },
+    {
+      "text": "Ticket No: 777555\nTrain: 1234 Shatabdi Express\nFrom: KOLKATA\nTo: MUMBAI\nDate: 24-09-2024\nClass: AC 2-Tier\nFare: ₹ 3,200\nGSTIN: 29XYZAB9876C1D2",
+      "vendor": "Shatabdi Express Co."
+    },
+    {
+      "text": "T ic ket No: 444555\nFlight: DL 101\nFrom: JFK\nTo: DEL\nDate: 18-09-2024\nUpgrade Fee: $ 180.00",
+      "vendor": "Delta Airlines"
+    },
+    {
+      "text": "Ticket No: 666777\nIntercity Bus\nBANGALORE – MUMBAI\nDate: 22-09-2024\nDeparture: 04:30\nArrival: 18:00\nFare: ₹ 1,400\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "Royal Buses"
+    },
+    {
+      "text": "Ticket ID: 888999\nFlight: UA 777\nFrom: ORD\nTo: DEL\nDate: 23-09-2024\nChange Fee: USD 110.00",
+      "vendor": "United Airlines"
+    },
+    {
+      "text": "Ticket No: 444333\nTrain: 2150 Rajdhani Express\nFrom: MUMBAI\nTo: NEW DELHI\nDate: 19-09-2024\nClass: AC 1-Tier\nFare: ₹ 5,500\nGSTIN: 07LMNOP5678G1X6",
+      "vendor": "Rajdhani Railways"
+    },
+    {
+      "text": "Ticket No: 111222\nFlight: EK 208\nFrom: DOH\nTo: DEL\nDate: 20-09-2024\nUpgrade: First Class\nAmount: AED 450.00",
+      "vendor": "Emirates Airlines"
+    },
+    {
+      "text": "Ticket No: 222333\nIntercity Bus\nDELHI – BANGALORE\nDate: 24-09-2024\nDeparture: 07:00\nArrival: 20:30\nFare: ₹ 1,250\nGSTIN: 33PQRST3456K1L7",
+      "vendor": "Express Travels"
+    },
+    {
+      "text": "Ticket No: 555444\nFlight: BA 152\nFrom: LON\nTo: MUMBAI\nDate: 25-09-2024\nChange Fee: £ 140",
+      "vendor": "British Airways"
+    },
+    {
+      "text": "Ticket No: 999777\nTrain: 1011 Shatabdi Express\nFrom: BANGALORE\nTo: KOLKATA\nDate: 21-09-2024\nClass: AC 2-Tier\nFare: ₹ 3,900\nGSTIN: 29XYZAB9876C1D2",
+      "vendor": "Shatabdi Express Co."
+    },
+    {
+      "text": "T ic ket No: 333444\nFlight: LH 800\nFrom: FRA\nTo: DEL\nDate: 17-09-2024\nUpgrade: Business Class\nAmount: € 200.00",
+      "vendor": "Lufthansa"
+    },
+    {
+      "text": "Ticket No: 123123\nIntercity Bus\nMUMBAI – CHENNAI\nDate: 19-09-2024\nDeparture: 05:00\nArrival: 18:30\nFare: ₹ 1,100\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "Metro Buses"
+    },
+    {
+      "text": "Ticket ID: 444555\nFlight: QF 202\nFrom: SYD\nTo: DEL\nDate: 22-09-2024\nChange Fee: AUD 120.00",
+      "vendor": "Qantas Airways"
+    }
+  ]
+}

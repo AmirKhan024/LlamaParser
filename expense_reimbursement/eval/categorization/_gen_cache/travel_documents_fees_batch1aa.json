@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "VISA FEE RECEIPT\nDate: 12-07-2024\nAmount: ₹5,200.00\nGSTIN: 33AAAAA0000A1Z5",
+      "vendor": "VisaHub Pvt. Ltd."
+    },
+    {
+      "text": "PASSPORT\nRenewal\nFee: 3,500\nReceipt No: 987654\nDate 20/06/24",
+      "vendor": "Passport Services Inc."
+    },
+    {
+      "text": "TRAVEL INSURANCE\nPolicy No: TI-2024-001\nPremium: USD 75.00\nExpiry: 31/12/2025\nInsurer: SkyCover",
+      "vendor": "SkyCover Insurance"
+    },
+    {
+      "text": "FOREX CARD\nLoading Fee\n₹200.00\nConverted to USD: 2.70\nDate: 15/07/24",
+      "vendor": "ForexBank Ltd."
+    },
+    {
+      "text": "VISA APPLICAON\nFee\n₹ 5,200\nGstIN: 33BBBBB1111B2Z6\nDate: 13-07-24",
+      "vendor": "VISA APP Co."
+    },
+    {
+      "text": "TRAVEL INSURANe\nPolicy: 2024-TRAVEL-02\nPremium: £120.00\nProvider: GlobeSecure\nDate: 05/07/24",
+      "vendor": "GlobeSecure Ltd."
+    }
+  ]
+}

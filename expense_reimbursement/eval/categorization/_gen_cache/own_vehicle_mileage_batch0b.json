@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12/09/2024\nClient: ABC Corp\nPurpose: Meeting\nKm Traveled: 15\nRate: ₹10/km\nTotal: ₹150",
+      "vendor": "Local Conveyance Pvt Ltd"
+    },
+    {
+      "text": "Trip Log\nFrom: Mumbai\nTo: Pune\nDate: 01-10-2024\nKm: 230\nPer km: ₹12\nAmount: ₹2760",
+      "vendor": "RoadTrip Solutions"
+    },
+    {
+      "text": "Monthly Mileage Claim\nEmployee: Rajesh Kumar\nVehicle: 2022 Suzuki\nTotal km: 1200\nRate ₹9/km\nTotal ₹10800",
+      "vendor": "Transport Office"
+    },
+    {
+      "text": "Conveyance Form\nDate\n15-10-2024\nClient\nXYZ Ltd\nPurpose\nSite visit\nKm\n45\nRate\n₹11/km\nTotal\n₹495",
+      "vendor": "TravelEase"
+    },
+    {
+      "text": "Own Vehicle Claim\nDate: 05/10/2024\nPurpose: Client\nKm: 80\nRate: ₹10\nAmount: ₹800",
+      "vendor": "MotoMovers"
+    },
+    {
+      "text": "Trip Summary\nFrom: Delhi\nTo: Chandigarh\nDate: 07 Oct 2024\nKm: 200\nRate: ₹10\nTotal: ₹2000",
+      "vendor": "RoadRunner"
+    },
+    {
+      "text": "Mileage Claim\nEmp: Anil S.\nVehicle: 2019 Honda\nKm: 950\nRate ₹9/km\nAmount ₹8550",
+      "vendor": "FleetCorp"
+    },
+    {
+      "text": "Local Conveyance\nDate: 10-10-2024\nClient: LMN Pvt\nPurpose: Interview\nKm: 30\nRate: ₹10\nTotal: ₹300",
+      "vendor": "DriveNow"
+    },
+    {
+      "text": "Trip Log\nDay: 12 Oct 2024\nFrom: Bangalore\nTo: Mysore\nKm: 140\nRate ₹11/km\nTotal ₹1540",
+      "vendor": "Vroom"
+    },
+    {
+      "text": "Monthly Mileage\nEmployee: Pooja\nVehicle: 2023 Yamaha\nKm: 1100\nRate ₹10/km\nAmount ₹11000",
+      "vendor": "Speedy Transport"
+    },
+    {
+      "text": "Own Vehicle Claim\nDate: 14-10-2024\nPurpose: Meeting\nKm: 25\nRate: ₹10\nTotal: ₹250",
+      "vendor": "WheelWorks"
+    },
+    {
+      "text": "Conveyance\nDate\n13 Oct\nClient\nTechCo\nPurpose\nDemo\nKm\n55\nRate\n₹10/km\nTotal\n₹550",
+      "vendor": "Roads & Co"
+    },
+    {
+      "text": "Trip Log\nFrom\nHyderabad\nTo\nWarangal\nDate\n09-10-2024\nKm\n90\nRate\n₹12/km\nAmount\n₹1080",
+      "vendor": "AutoExpress"
+    }
+  ]
+}

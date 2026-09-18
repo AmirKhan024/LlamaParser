@@ -1,0 +1,104 @@
+{
+  "examples": [
+    {
+      "text": "2023-11-15\nPencil Pal Ltd.\nPens 5\nNotebooks 3\nTotal: ₹1,200\nGSTIN: 27AAAAA1234F1Z5",
+      "vendor": "Pencil Pal Ltd."
+    },
+    {
+      "text": "01/12/23\nStationery World\nWireless Mouse\nUSB-C Hub\nTotal: $45.99",
+      "vendor": "Stationery World"
+    },
+    {
+      "text": "2023/10/05\nOfficeGear Int'l\nDesk Organizer\nSticky Notes\nTotal: €32.50",
+      "vendor": "OfficeGear Int'l"
+    },
+    {
+      "text": "2023-09-20\nPaperPlus\nA4 Ream x10\nBinder 2\nTotal: £18.75",
+      "vendor": "PaperPlus"
+    },
+    {
+      "text": "2023-12-01\nTechStation\nBluetooth Headset\nTotal: ₹2,350",
+      "vendor": "TechStation"
+    },
+    {
+      "text": "12-10-23\nPrintify\nInk Cartridge\nPrinter Paper\nTotal: $120.00",
+      "vendor": "Printify"
+    },
+    {
+      "text": "2023-08-15\nOffice Supplies Co.\nStapler 5\nPaper Clips 200\nTotal: ₹850",
+      "vendor": "Office Supplies Co."
+    },
+    {
+      "text": "2023-07-30\nQuickStation\nDesk Lamp\nTotal: €27.00",
+      "vendor": "QuickStation"
+    },
+    {
+      "text": "2023-06-25\nGadgetShop\nKeyboard\nTotal: £39.99",
+      "vendor": "GadgetShop"
+    },
+    {
+      "text": "2023-05-10\nStationery Hub\nMarker Set\nTotal: ₹1,050",
+      "vendor": "Stationery Hub"
+    },
+    {
+      "text": "2023-04-18\nOfficeGear Int'l\nPortable Charger\nTotal: €22.45",
+      "vendor": "OfficeGear Int'l"
+    },
+    {
+      "text": "2023-03-12\nPrintPro\nHigh‑res Printer\nTotal: ₹4,500",
+      "vendor": "PrintPro"
+    },
+    {
+      "text": "2023-02-08\nPaperWorld\nA3 Paper\nTotal: £15.30",
+      "vendor": "PaperWorld"
+    },
+    {
+      "text": "2023-01-30\nTechStation\nUSB Flash Drive\nTotal: ₹650",
+      "vendor": "TechStation"
+    },
+    {
+      "text": "2022-12-22\nOfficeGear Int'l\nDesk Calendar\nTotal: €18.00",
+      "vendor": "OfficeGear Int'l"
+    },
+    {
+      "text": "2022-11-15\nStationery Express\nNotebook 10\nTotal: $29.99",
+      "vendor": "Stationery Express"
+    },
+    {
+      "text": "2022-10-05\nPaperPlus\nPrinter Cartridge\nTotal: £12.50",
+      "vendor": "PaperPlus"
+    },
+    {
+      "text": "2022-09-12\nPrintify\nPrinter Ink\nTotal: ₹2,200",
+      "vendor": "Printify"
+    },
+    {
+      "text": "2022-08-20\nQuickStation\nDesk Mat\nTotal: €9.75",
+      "vendor": "QuickStation"
+    },
+    {
+      "text": "2022-07-25\nGadgetShop\nWireless Charger\nTotal: £24.99",
+      "vendor": "GadgetShop"
+    },
+    {
+      "text": "2022-06-18\nStationery Hub\nPen Set\nTotal: ₹1,300",
+      "vendor": "Stationery Hub"
+    },
+    {
+      "text": "2022-05-10\nOffice Supplies Co.\nPaper Clips 500\nTotal: ₹400",
+      "vendor": "Office Supplies Co."
+    },
+    {
+      "text": "2022-04-08\nPaperWorld\nFiling Folders\nTotal: £20.00",
+      "vendor": "PaperWorld"
+    },
+    {
+      "text": "2022-03-15\nPrintPro\nInk Cartridge\nTotal: ₹1,800",
+      "vendor": "PrintPro"
+    },
+    {
+      "text": "2022-02-12\nTechStation\nDesk Phone\nTotal: €35.60",
+      "vendor": "TechStation"
+    }
+  ]
+}

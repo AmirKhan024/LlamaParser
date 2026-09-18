@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12-08-2024\nPlan: Premium Voice & Data 5GB\nCall Minutes: 1200 min\nData Used: 4.2 GB\nTotal Amount: INR 1,599.00",
+      "vendor": "Telcom India Ltd"
+    },
+    {
+      "text": "INVOICE #HBN-2024-08\nProvider: HomeNet Solutions\nPlan: Unlimited Home Broadband 200 Mbps\nAmount: INR 3,250.00",
+      "vendor": "HomeNet Solutions"
+    },
+    {
+      "text": "WorldRoam International\nRoaming Pack: 30 days Global Data 5GB\nAmount: USD 49.99",
+      "vendor": "WorldRoam International"
+    }
+  ]
+}

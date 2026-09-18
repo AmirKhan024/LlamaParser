@@ -1,0 +1,100 @@
+{
+  "examples": [
+    {
+      "text": "Ola Cabs\nDate: 12-09-2024\nPickup: Koramangala\nDrop: Kempegowda Intl Airport\nFare: ₹ 450",
+      "vendor": "Ola Cabs"
+    },
+    {
+      "text": "Auto Rickshaw Raja\nRoute: MG Road to Indiranagar\nDistance: 5 km\nFare: ₹ 120\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "Auto Rickshaw Raja"
+    },
+    {
+      "text": "Bengaluru Bus Co.\nRoute: City Center to Whitefield\nFare: ₹ 70\nTime: 08:30\nTicket No: 5678",
+      "vendor": "Bengaluru Bus Co."
+    },
+    {
+      "text": "Airport Parking Pvt Ltd.\nDate: 10-09-2024\nDuration: 3 hrs\nRate: ₹ 200\nTotal: ₹ 200",
+      "vendor": "Airport Parking Pvt Ltd."
+    },
+    {
+      "text": "Metro Transport\nRte: 123\nFare: ₹ 90",
+      "vendor": "Metro Transport"
+    },
+    {
+      "text": "TAXI Co.\nDate 02/08/24\nFrom: City\nTo: Airport\nFare: ₹ 520\nGST: 18%",
+      "vendor": "TAXI Co."
+    },
+    {
+      "text": "City Taxi London\nTrip: 12:00-13:30\nDistance: 8.5 km\nFare: £30.00",
+      "vendor": "City Taxi London"
+    },
+    {
+      "text": "Uber India\nTrip ID: 9876543\nDistance: 12.5 km\nCost: $18.50",
+      "vendor": "Uber India"
+    },
+    {
+      "text": "Metro Bus Service\nRoute: 5A\nFare: ₹ 60\nTime: 09:15",
+      "vendor": "Metro Bus Service"
+    },
+    {
+      "text": "Auto Rickshaw \"Gopi\"\nRoute: 3rd Cross to 4th Main\nFare: ₹ 95\nGSTIN: 29XYZ1234B2Y7",
+      "vendor": "Auto Rickshaw Gopi"
+    },
+    {
+      "text": "BSL Taxi\nTrip No: 2345\nFrom: UB City\nTo: MG Road\nFare: ₹ 300",
+      "vendor": "BSL Taxi"
+    },
+    {
+      "text": "Delhi Metro\nLine: Red\nStation: Connaught Place\nFare: ₹ 30",
+      "vendor": "Delhi Metro"
+    },
+    {
+      "text": "Bangalore Auto\nRide ID: 112233\nDistance: 4 km\nFare: ₹ 110",
+      "vendor": "Bangalore Auto"
+    },
+    {
+      "text": "Uber US\nTrip: 18:20-19:45\nDistance: 15 km\nFare: $27.00",
+      "vendor": "Uber US"
+    },
+    {
+      "text": "City Bus\nRoute 22B\nFare: ₹ 45",
+      "vendor": "City Bus"
+    },
+    {
+      "text": "Taxi India\nTrip ID: 556677\nDistance: 6 km\nFare: ₹ 250",
+      "vendor": "Taxi India"
+    },
+    {
+      "text": "Metro London\nLine: Piccadilly\nStation: Oxford Circus\nFare: £2.50",
+      "vendor": "Metro London"
+    },
+    {
+      "text": "Auto Rickshaw \"Mohan\"\nRoute: 1st Main to 2nd Cross\nFare: ₹ 80\nGSTIN: 29LMN9876C3X2",
+      "vendor": "Auto Rickshaw Mohan"
+    },
+    {
+      "text": "Airport Shuttle\nDate: 11-09-2024\nPickup: Hotel\nDrop: Airport\nFare: ₹ 350",
+      "vendor": "Airport Shuttle"
+    },
+    {
+      "text": "Bus Express\nRoute: 10A\nFare: ₹ 75\nTime: 07:45",
+      "vendor": "Bus Express"
+    },
+    {
+      "text": "RideShare\nTrip: 14:00-15:30\nDistance: 9 km\nFare: €22.00",
+      "vendor": "RideShare"
+    },
+    {
+      "text": "Metro Delhi\nLine: Blue\nStation: Janpath\nFare: ₹ 25",
+      "vendor": "Metro Delhi"
+    },
+    {
+      "text": "Taxi 24/7\nTrip No: 998877\nFrom: Indiranagar\nTo: Koramangala\nFare: ₹ 320",
+      "vendor": "Taxi 24/7"
+    },
+    {
+      "text": "City Auto\nRoute: 5th Main to 7th Cross\nFare: ₹ 90",
+      "vendor": "City Auto"
+    }
+  ]
+}

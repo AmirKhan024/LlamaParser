@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "2024-08-15\nHotel Sunshine\nBreakfast\n$12.50\nGST: 0.00\nTotal: $12.50",
+      "vendor": "Sunrise Bistro"
+    },
+    {
+      "text": "08/14/24\nCafé Del Sol\nLunch\n₹350\nGST 18%\nGrand Total ₹ 419",
+      "vendor": "Café Del Sol"
+    },
+    {
+      "text": "2024-07-20\nRavi's Diner\nDinner\n$25.00\nGST 5%\nTotal $26.25",
+      "vendor": "Ravi's Diner"
+    },
+    {
+      "text": "2024-09-01\nM & M\nBreakfast\nR 1 00\nG 4 5\nT 1 45",
+      "vendor": "M & M"
+    },
+    {
+      "text": "2024-10-05\nHotel Grande\nLunch\nEUR 18.30\nVAT 20%\nTotal EUR 21.96",
+      "vendor": "Hotel Grande"
+    },
+    {
+      "text": "2024-06-22\nPuri Palace\nDinner\n₹ 1,200\nGST 18%\nTotal ₹ 1,416",
+      "vendor": "Puri Palace"
+    },
+    {
+      "text": "2024-08-12\nThe Traveller's Café\nLunch\n$ 13.75\nTax 5%\nGrand Total $ 14.44",
+      "vendor": "Traveller's Café"
+    },
+    {
+      "text": "2024-07-18\nShree Biryani\nBreakfast\n₹ 400\nGST 12%\nTotal ₹ 448",
+      "vendor": "Shree Biryani"
+    },
+    {
+      "text": "2024-09-30\nBistro 42\nDinner\n£30.00\nVAT 20%\nTotal £36.00",
+      "vendor": "Bistro 42"
+    },
+    {
+      "text": "2024-07-25\nThe Roadside Eatery\nLunch\n$ 19.20\nTax 5%\nTotal $ 20.16",
+      "vendor": "Roadside Eatery"
+    },
+    {
+      "text": "2024-06-30\nDum Dum Kitchen\nBreakfast\n₹ 750\nGST 18%\nTotal ₹ 891",
+      "vendor": "Dum Dum Kitchen"
+    },
+    {
+      "text": "2024-08-02\nNoble Eats\nDinner\nEUR 27.50\nVAT 20%\nTotal EUR 33.00",
+      "vendor": "Noble Eats"
+    }
+  ]
+}

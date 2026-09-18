@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "PROMANAGE SUBSCRIPTION\nMonthly Plan: $49.99\nInvoice #PM-2023-08-12",
+      "vendor": "ProManage SaaS Solutions"
+    },
+    {
+      "text": "CloudShield Pvt. Ltd.\nGSTIN: 27ABCDE1234FZ5\nMonthly Cloud Storage 100GB ₹5,000\nTotal ₹5,000 (incl. 18% GST)",
+      "vendor": "CloudShield Pvt. Ltd."
+    },
+    {
+      "text": "CODEFORGE INTRN.\nSubscription: Annual Developer License\nUSD 199.00\nInvoice ID: CF-2024-03-01\nDue 2024-04-01",
+      "vendor": "CodeForge International"
+    },
+    {
+      "text": "TASKMASTER INC.\n12-Month SaaS Subscription £129.99",
+      "vendor": "TaskMaster Inc."
+    },
+    {
+      "text": "DataPulse\nInvoice Date: 10/07/2023\nItem: Data Analytics Suite\nQty: 1\nUnit Price: 8,750 INR\nSubtotal: 8,750 INR",
+      "vendor": "DataPulse"
+    },
+    {
+      "text": "NETFLOW SYS\nAnnual Cloud Backup 5TB  ₹9,999\nGST 18% ₹1,799.82",
+      "vendor": "NetFlow Systems"
+    },
+    {
+      "text": "ALPHASOFT\nSaaS Licences\nUSD 75.00\nPayment Date: 2023-09-15",
+      "vendor": "AlphaSoft"
+    },
+    {
+      "text": "ByteBridge\nSubscription: Premium Plan\nEUR 59,50\nInvoice No: BB-2023-11-05\nDue: 2023-11-30",
+      "vendor": "ByteBridge"
+    },
+    {
+      "text": "DEVOPS HUB\nMonthly Plan 1,200 INR\nGST 18% 216 INR\nTotal 1,416 INR",
+      "vendor": "DevOpsHub"
+    },
+    {
+      "text": "ZenithApps\nAnnual Subscription 1500 USD\nInvoice #ZA-2024-01",
+      "vendor": "ZenithApps"
+    },
+    {
+      "text": "Skyline Cloud\nDate: 05-12-2023\nService: Cloud Infrastructure\nQty: 12\nUnit Cost: €3.50\nTotal: €42.00",
+      "vendor": "Skyline Cloud"
+    },
+    {
+      "text": "NEXATECH\nGSTIN: 07XYZ7890M1234\nMonthly SaaS ₹3,500\nIncl. 18% GST ₹630",
+      "vendor": "NexaTech"
+    }
+  ]
+}

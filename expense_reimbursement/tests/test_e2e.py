@@ -910,3 +910,46 @@ def test_image_preview_scrolls_to_show_the_full_receipt(live_server):
         page.wait_for_selector(".preview-scroll.fit-mode")
 
         browser.close()
+
+
+def test_category_dropdown_change_survives_reload(live_server):
+    """Stage 2: the Category dropdown at the top of the review fields is
+    editable, saved through its own top-level `category` key (never the
+    per-field `edits`), and survives a reload -- the same "does it
+    actually persist" bar every other field in this suite is held to."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+        page.click("#new-claim")
+        page.wait_for_url("**/#/claims/*")
+        page.wait_for_selector("#dropzone")
+
+        # may26_mobile.pdf classifies as telecom_bill -> phone_internet
+        # by the `rules` categorizer (PIPELINE_MODE=fake forces `rules`).
+        page.set_input_files("#file-input", str(UPLOADS_DIR / "may26_mobile.pdf"))
+        page.wait_for_selector(".doc-row")
+        page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
+        page.click(".doc-row")
+        page.wait_for_selector("#fields-container")
+
+        category_select = page.locator("#f-category")
+        assert category_select.count() == 1
+        assert category_select.input_value() == "phone_internet"
+
+        category_select.select_option("software_subscriptions")
+        page.wait_for_selector("text=Unsaved changes")
+        page.click("#btn-save")
+        page.wait_for_selector("text=Saved")
+
+        page.reload()
+        page.wait_for_selector("#fields-container")
+        assert page.locator("#f-category").input_value() == "software_subscriptions"
+
+        # and it shows up on the claim page's document row too
+        page.click("text=Back to claim")
+        page.wait_for_selector(".doc-row")
+        assert page.locator(".doc-row .name").inner_text() == "Phone bill · Software and Subscriptions · ₹1,417.18"
+
+        browser.close()

@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "HOTEL SHIKHAR\nRoom 402, 3 nights @ 4500 INR\nMinibar 200 INR\nGST 18% 900 INR\nTOTAL 5600 INR",
+      "vendor": "Hotel Shikhar"
+    },
+    {
+      "text": "Grand Plaza Hotel\nRoom 101, 2 nights x $150 = $300\nRoom Service $45\nTax 10% $37.5\nTotal $437.5",
+      "vendor": "The Grand Plaza"
+    },
+    {
+      "text": "SREE 5 STAR\nRoom 202 4 NIGHTS 6,000 INR\nMINIBAR 500INR\nLaundry 1,200 INR\nGST 18% 1,260 INR\nTOTAL 8,460 INR",
+      "vendor": "Sree 5 Star"
+    },
+    {
+      "text": "Sunrise Suites\nRoom 5, 3 NIGHTS 240€\nMini bar 30€\nRoom Serv 25€\nTax 12% 42€\nTotal 337€",
+      "vendor": "Sunrise Suites"
+    },
+    {
+      "text": "RAJASTHAN ROYAL\nRoom 301, 2 nights @ 5500 INR\nMinibar 300 INR\nLaundry 800 INR\nGSTIN: 27ABCDE1234F1Z5\nGST 18% 1,200 INR\nTotal 10,500 INR",
+      "vendor": "Rajasthan Royal"
+    },
+    {
+      "text": "Breezeway  Hotel\nRoom 12 5 nights  $200 per night = $1000\nMinibar 50$\nSpa 120$\nTax 15% 207$\nTOTAL $ 1,777",
+      "vendor": "Breezeway Hotel"
+    }
+  ]
+}

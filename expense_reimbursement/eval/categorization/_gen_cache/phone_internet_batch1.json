@@ -1,0 +1,24 @@
+{
+  "examples": [
+    {
+      "text": "ABC Mobile\nBill No: 12345\nAmount: ₹ 1,234.56\nDate: 12/09/2024",
+      "vendor": "ABC Mobile"
+    },
+    {
+      "text": "NetLink Broadband\nInvoice No: NL-2024-09\nTotal: ₹ 3,500.00\nGSTIN: 29ABCDE1234F1Z5\nDate: 10/09/2024",
+      "vendor": "NetLink Broadband"
+    },
+    {
+      "text": "GlobalComm\nBill # 9876\nAmount: $45.67\nDate: 05-10-24",
+      "vendor": "GlobalComm"
+    },
+    {
+      "text": "MobileHub\nBill No: 5678\nAmt: ₹ 2,000.00\nDate: 01/09/2024",
+      "vendor": "MobileHub"
+    },
+    {
+      "text": "BroadBandCo\nInvoice: 2024-08-31\nTotal: ₹ 4,750.00\nGSTIN 29XYZDE5678G2H9\nDate: 31/08/2024",
+      "vendor": "BroadBandCo"
+    }
+  ]
+}

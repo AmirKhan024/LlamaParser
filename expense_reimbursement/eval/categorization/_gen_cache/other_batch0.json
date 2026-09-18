@@ -1,0 +1,36 @@
+{
+  "examples": [
+    {
+      "text": "Receipt No: 54321\nDate: 12/08/2023\nCourier Service: FastShip\nTotal: ₹3,200.00\nGSTIN: 27AAAAA1234A1Z5\nThank you for choosing FastShip.",
+      "vendor": "FastShip Logistics"
+    },
+    {
+      "text": "Invoice # 2023-08-15\nClient: Acme Corp\nPrinting Services\nPages: 150\nTotal: $120.75\nPaid via credit card.",
+      "vendor": "Printify Solutions"
+    },
+    {
+      "text": "GSTIN: 19BBBBB5678C1Z8\nBill No: 9876\nDate: 2023-08-01\nBusiness Gifts\nItem: Premium Mug\nQty: 5\nTotal: ₹12,500.00",
+      "vendor": "GiftCraft Co."
+    },
+    {
+      "text": "CORP POSTAGE\nInvoice No: 112233\nDate: 08/02/23\nWeight: 0.5 kg\nPostage: £15.00\nAddress: 45 High Street",
+      "vendor": "Corporate Post"
+    },
+    {
+      "text": "Receipt\n2023-08-03\nVendor: QuickPrint\nService: Brochure Printing\nCopies: 200\nAmount: ₹8,000.00\nGST 18%",
+      "vendor": "QuickPrint"
+    },
+    {
+      "text": "Invoice\nNo: 001\nDate: 2023-08-04\nGift Voucher\nAmount: €250.00\nRecipient: Mr. Sharma",
+      "vendor": "VoucherPlus"
+    },
+    {
+      "text": "INVOICE\nDATE: 2023-08-05\nVENDOR: ShipFast Ltd.\nService: Overnight Courier\nWeight: 2 kg\nCharge: ₹2,750.00",
+      "vendor": "ShipFast Ltd."
+    },
+    {
+      "text": "Receipt\n2023-08-06\nPrintHub\nBusiness Card Printing\nQty: 500\nCost: ₹4,200.00\nGST 18%",
+      "vendor": "PrintHub"
+    }
+  ]
+}

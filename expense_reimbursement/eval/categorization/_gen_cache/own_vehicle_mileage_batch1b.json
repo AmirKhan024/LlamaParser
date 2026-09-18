@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Date: 2024-08-12\nKm Traveled: 120\nPurpose: Client Meeting\nPer Km Rate: ₹8.00\nTotal: ₹960.00",
+      "vendor": "Rahul Mehta"
+    },
+    {
+      "text": "Trip Log\nFrom: Home\nTo: Office\nKm: 25\nReturn Km: 25\nClient: AC Corp\nRate: ₹7.50\nTotal: ₹375.00",
+      "vendor": "Priya Singh"
+    },
+    {
+      "text": "Mileage Claim\nDate: 05/09/2024\nVehicle: 4W\nKm: 180\nClient Visit\nRate: ₹8.00\nAmount: ₹1440.00",
+      "vendor": "Kavita Deshmukh"
+    },
+    {
+      "text": "Own Vehicle Log\nDate: 2024/09/07\nStart Km: 12400\nEnd Km: 12580\nTotal Km: 180\nRate: ₹8.00\nTotal: ₹1440.00",
+      "vendor": "Vikas Rao"
+    },
+    {
+      "text": "Trip Record\nDate: 2024-08-30\nKm Out: 40\nKm Return: 40\nClient: XYZ Ltd\nRate per Km ₹7.80\nSubtotal: ₹630.00",
+      "vendor": "Ananya Gupta"
+    },
+    {
+      "text": "Mileage Form\nDriver: S. Patel\nKm: 200\nDate: 2024-09-01\nPurpose: Site Inspection\nRate ₹8.00\nTotal ₹1600.00",
+      "vendor": "Sandeep Kumar"
+    },
+    {
+      "text": "Vehicle Usage Log\nDate: 08/28/2024\nKm Start: 56000\nKm End: 56200\nKm Traveled: 200\nRate: ₹8.00\nTotal: ₹1600.00",
+      "vendor": "Rohit Sharma"
+    },
+    {
+      "text": "Local Conveyance Claim\nDate: 2024-09-04\nKm: 90\nClient: Laxmi Traders\nRate ₹7.50\nAmount ₹675.00\nNotes: Round trip",
+      "vendor": "Maya Reddy"
+    },
+    {
+      "text": "Trip Sheet\nDate: 2024-09-03\nKm Out: 30\nKm Return: 30\nClient: Green Tech\nRate ₹8.00\nTotal ₹480.00",
+      "vendor": "Nikhil Joshi"
+    },
+    {
+      "text": "Own Vehicle Log\nDate: 2024-09-02\nKm: 150\nClient: ABC Services\nRate ₹8.00\nAmount ₹1200.00",
+      "vendor": "Sanjay Patel"
+    },
+    {
+      "text": "Mileage Claim Form\nDate: 2024-08-29\nKm: 220\nClient: Sunshine Co\nRate ₹8.00\nTotal ₹1760.00",
+      "vendor": "Leena Desai"
+    },
+    {
+      "text": "Trip Record\nDate: 2024-09-06\nKm: 75\nClient: Blue Horizon\nRate ₹7.80\nTotal ₹585.00",
+      "vendor": "Arun Mehta"
+    },
+    {
+      "text": "Vehicle Usage Log\nDate: 2024-09-05\nKm Start: 30000\nKm End: 30180\nKm Traveled: 180\nRate ₹8.00\nTotal ₹1440.00",
+      "vendor": "Divya Kumar"
+    }
+  ]
+}

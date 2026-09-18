@@ -1,0 +1,36 @@
+{
+  "examples": [
+    {
+      "text": "TASTE BUDS CATERING\nInvoice # 2026-07-01\nTeam lunch for 6\nTotal: ₹ 12,750\nGSTIN: 29ABCDE1234F1Z5",
+      "vendor": "TasteBuds Catering"
+    },
+    {
+      "text": "KOKANE EVENTS\nBill No. 0456\nTeam offsite venue hire\nDate: 15/06/2026\nAmount: € 3,200",
+      "vendor": "Kokanee Events"
+    },
+    {
+      "text": "MASTI MEALS\nInvoice: 2026-06-25\nCelebration dinner for team\nTotal: ₹ 9,500\nGSTIN: 27XYZAB1234C2D6",
+      "vendor": "Masti Meals"
+    },
+    {
+      "text": "VIVEK'S VEDA\nInv No. 078\nTeam birthday party\n₹ 5,200\nGSTIN: 30LMNOP5678Q1R2",
+      "vendor": "Vivek's Veda"
+    },
+    {
+      "text": "SAFFRON SOIREE\nInv# 112\nTeam outing catering\nAmount: £ 1,650\nDate: 23/07/26",
+      "vendor": "Saffron Soiree"
+    },
+    {
+      "text": "PANDA BISTRO\nInvoice 2026/07/02\nTeam lunch\n6 plates\n₹ 11,250\nGSTIN: 29ABCDE1234F1Z5",
+      "vendor": "Panda Bistro"
+    },
+    {
+      "text": "NIRVANA NIGHT\nBill No: 34\nTeam festival celebration\n₹ 7,800\nGSTIN: 28FGHIJ2345K3L7",
+      "vendor": "Nirvana Night"
+    },
+    {
+      "text": "BLUE SKY RETREAT\nInvoice 2026-07-03\nTeam offsite\nVenue fee: $ 1,200\nDate: 20-07-26",
+      "vendor": "BlueSky Retreat"
+    }
+  ]
+}

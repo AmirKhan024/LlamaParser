@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "Invoice No: 1023\nClient: Meridian Retail\n4 attendees\nTotal: ₹12,340",
+      "vendor": "Ravi's Restaurant"
+    },
+    {
+      "text": "Receipt\nClient: Global Tech Solutions\nAttendees: 3\nBill: 250.00 USD",
+      "vendor": "BlueSky Catering"
+    },
+    {
+      "text": "Bill No 87\nClient: Oceanic Industries\n5 persons\nTotal: €1,200",
+      "vendor": "SeaView Bistro"
+    },
+    {
+      "text": "Client: Stellar Corp\nAttendees 6\nFood & drinks\n£3,450.00",
+      "vendor": "Grand Hall Ltd."
+    },
+    {
+      "text": "Receipt\nClient: Apex Holdings\n4 attendees\n₹8,500",
+      "vendor": "Saffron Deli"
+    },
+    {
+      "text": "INV-456\nClient: Zenith Energy\nAttendees: 2\nTotal: 350 GBP",
+      "vendor": "Peak Services"
+    },
+    {
+      "text": "Invoice\nClient: Nova Labs\n6 attendees\nTotal: $1,800",
+      "vendor": "Innovation Eatery"
+    },
+    {
+      "text": "Bill\nClient: Horizon Ventures\n3 attendees\nTotal: ₹7,200",
+      "vendor": "Crown Restaurant"
+    },
+    {
+      "text": "Client: Luminous Inc\nAttendees 7\nAlc. inluded\nTotal: €2,800",
+      "vendor": "Lumina Lounge"
+    },
+    {
+      "text": "Receipt\nClient: Quantum Systems\n4 attendees\nTotal: 5000 INR",
+      "vendor": "Quantum Diner"
+    },
+    {
+      "text": "INV 321\nClient: Orion Foods\n5 attendees\nTotal: 200.00 USD",
+      "vendor": "Orion Catering"
+    },
+    {
+      "text": "Bill No. 99\nClient: Aurora Tech\nAttendees 2\nTotal: 3,500.00 GBP",
+      "vendor": "Aurora Banquet"
+    }
+  ]
+}

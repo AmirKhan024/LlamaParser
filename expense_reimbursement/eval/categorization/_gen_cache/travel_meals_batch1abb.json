@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12-07-2024\nCafé Saffron\nSolo Lunch\n₹ 1,200",
+      "vendor": "Café Saffron"
+    },
+    {
+      "text": "09/08/24\nTravel Eats Ltd.\nQuick dinner – 5:30pm\nUSD 45.00",
+      "vendor": "Travel Eats Ltd."
+    },
+    {
+      "text": "2024-09-10\nLuxe Bistro\nB  l  u  s  t  o  r  -  d e  n  n  e r\n£ 82.50",
+      "vendor": "Luxe Bistro"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "Date: 2026-09-05\nHotel Palace\nQty: 1\nItem: Breakfast Buffet\nTotal: ₹ 1,200.00\nGSTIN: 07ABCDE1234F1Z5",
+      "vendor": "Hotel Palace"
+    },
+    {
+      "text": "2026/08/23\nSaffroN Bisto\n1  Paneer Tikka\n₹ 850\nGSTIN: 07ABCDE1234F1Z5",
+      "vendor": "SaffroN Bisto"
+    },
+    {
+      "text": "09-14-26\nCafe Horizon\nQty 1\nLunch: Veg Biryani\n$12.50",
+      "vendor": "Cafe Horizon"
+    },
+    {
+      "text": "2026-07-12\nRoadside Diner\nQty 1\nBurger & Fries\nUSD 8.75\nGSTIN: 07ABCDE1234F1Z5",
+      "vendor": "Roadside Diner"
+    },
+    {
+      "text": "Date: 2026-08-01\nHotel Palace\nBreakfast\n₹ 950.00",
+      "vendor": "Hotel Palace"
+    },
+    {
+      "text": "08/30/26\nGourmet Express\nLunch: Chicken Sandwich\nEUR 10.20\nGSTIN: 07ABCDE1234F1Z5",
+      "vendor": "Gourmet Express"
+    }
+  ]
+}

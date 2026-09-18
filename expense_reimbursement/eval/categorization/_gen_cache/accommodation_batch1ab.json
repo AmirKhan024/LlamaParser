@@ -1,0 +1,28 @@
+{
+  "examples": [
+    {
+      "text": "Hotel Sunrise\nInvoice No: 2023-07-01\nRoom 402, 3 nights @ 8500 INR\nTotal: 25500 INR",
+      "vendor": "Hotel Sunrise"
+    },
+    {
+      "text": "Serviced Apt. Bliss\nBill for Jan 15-22\nRent 7 days 12500 USD\nUtilities 500 USD\nTotal 13000 USD",
+      "vendor": "Serviced Apt. Bliss"
+    },
+    {
+      "text": "The Grand Palace\nFolio # 987654\nRoom 301\nRoom Charge 12,000 INR\nMinibar 3,500 INR\nLaundry 1,200 INR\nTotal 16,700 INR",
+      "vendor": "The Grand Palace"
+    },
+    {
+      "text": "Luxe Stay Ltd.\nReceipt\nStay: 2024-03-05 to 2024-03-07\nRoom 505 650 EUR\nSpa 150 EUR\nTotal 800 EUR",
+      "vendor": "Luxe Stay Ltd."
+    },
+    {
+      "text": "Sunset Lodge\nInvoice\nDate: 2024-02-28\nNightly: 3,200 GBP\nParking 200 GBP\nTotal: 3,400 GBP",
+      "vendor": "Sunset Lodge"
+    },
+    {
+      "text": "Hotel Echo\nFolio 2024/05/15\nRoom 210\nRoom Charge 4,500 INR\nMinibar 1,200 INR\nTotal 5,700 INR",
+      "vendor": "Hotel Echo"
+    }
+  ]
+}

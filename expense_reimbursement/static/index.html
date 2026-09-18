@@ -747,8 +747,13 @@ function docRowHtml(d) {
 function docRowLabel(d) {
   if (!d.review) return d.original_name;
   const typeLabel = documentTypeLabel(d.review.document_type);
-  if (d.review.amount === null || d.review.amount === undefined) return typeLabel;
-  return `${typeLabel} · ${fmtMoney(d.review.amount, d.review.currency)}`;
+  const categoryLabel = d.review.category && d.review.category.label;
+  const parts = [typeLabel];
+  if (categoryLabel) parts.push(categoryLabel);
+  if (d.review.amount !== null && d.review.amount !== undefined) {
+    parts.push(fmtMoney(d.review.amount, d.review.currency));
+  }
+  return parts.join(" · ");
 }
 
 function renderClaimActionBar(claim, submitDisabled, submitReason) {
@@ -833,7 +838,7 @@ async function renderDocumentPage(documentId) {
     return;
   }
 
-  docPageState = { doc, edits: {}, dirty: false, saving: false, reason: "" };
+  docPageState = { doc, edits: {}, dirty: false, saving: false, reason: "", categoryEdit: undefined };
 
   activeGuard = async () => {
     if (!docPageState || !docPageState.dirty) return true;
@@ -1034,7 +1039,7 @@ function fieldChangeInfo(key, currentSavedValue) {
 }
 
 function markDirty() {
-  docPageState.dirty = Object.keys(docPageState.edits).length > 0;
+  docPageState.dirty = Object.keys(docPageState.edits).length > 0 || docPageState.categoryEdit !== undefined;
   updateActionBarState();
 }
 
@@ -1048,6 +1053,7 @@ function isFieldsLocked() {
 function renderFields(review) {
   const container = document.getElementById("fields-container");
   let html = "";
+  html += categoryFieldHtml(review.category);
   for (const field of review.fields) {
     if (field.key === "travel_entries") {
       html += tripsTableHtml(field);
@@ -1060,6 +1066,34 @@ function renderFields(review) {
   }
   container.innerHTML = html;
   wireFieldInputs();
+}
+
+/* Category isn't a claim field (schemas.py) -- it lives on its own
+   Extraction columns (categories.py) and is saved via a top-level
+   `category` key, never inside `edits`. No reason required (not money).
+   Supporting documents (approval emails) get `category: null` from the
+   server and show no row at all here. */
+function categoryFieldHtml(category) {
+  if (!category) return "";
+  const currentValue = docPageState.categoryEdit !== undefined ? docPageState.categoryEdit : category.value;
+  const note = category.needs_check && docPageState.categoryEdit === undefined
+    ? `<div class="ai-was">Please check the category.</div>` : "";
+  if (isFieldsLocked()) {
+    const label = (category.options.find((o) => o.id === currentValue) || {}).label || "–";
+    return `<div class="field-row"><label>Category</label><div class="field-value">${escapeHtml(label)}</div></div>`;
+  }
+  const options = category.options
+    .map((opt) => `<option value="${escapeHtml(opt.id)}" ${opt.id === currentValue ? "selected" : ""}>${escapeHtml(opt.label)}</option>`)
+    .join("");
+  return `
+    <div class="field-row">
+      <label for="f-category">Category</label>
+      <select id="f-category">
+        <option value="" ${!currentValue ? "selected" : ""}>Choose…</option>
+        ${options}
+      </select>
+      ${note}
+    </div>`;
 }
 
 function simpleFieldHtml(field) {
@@ -1217,6 +1251,13 @@ function wireFieldInputs() {
       debouncedValidate();
     });
   });
+  const categorySelect = document.getElementById("f-category");
+  if (categorySelect) {
+    categorySelect.addEventListener("change", (e) => {
+      docPageState.categoryEdit = e.target.value;
+      markDirty();
+    });
+  }
   document.querySelectorAll("#trips-table .cell-text").forEach(wireTripCell);
   document.querySelectorAll("#items-table input[data-item-index]").forEach((input) => {
     input.addEventListener("input", (e) => {
@@ -1362,6 +1403,7 @@ async function reopenDocument() {
     const updated = await api("POST", `/api/documents/${docPageState.doc.id}/reopen`);
     docPageState.doc = updated;
     docPageState.edits = {};
+    docPageState.categoryEdit = undefined;
     docPageState.dirty = false;
     drawDocumentPage();
   } catch (err) {
@@ -1395,13 +1437,17 @@ function setButtonsBusy(busy) {
 }
 
 async function saveDocumentEdits() {
-  if (docPageState.saving || Object.keys(docPageState.edits).length === 0) return;
+  const hasCategoryEdit = docPageState.categoryEdit !== undefined;
+  if (docPageState.saving || (Object.keys(docPageState.edits).length === 0 && !hasCategoryEdit)) return;
   docPageState.saving = true;
   setButtonsBusy(true);
   try {
-    const updated = await api("PUT", `/api/documents/${docPageState.doc.id}/fields`, { edits: docPageState.edits });
+    const body = { edits: docPageState.edits };
+    if (hasCategoryEdit) body.category = docPageState.categoryEdit;
+    const updated = await api("PUT", `/api/documents/${docPageState.doc.id}/fields`, body);
     docPageState.doc = updated;
     docPageState.edits = {};
+    docPageState.categoryEdit = undefined;
     docPageState.dirty = false;
     drawDocumentPage();
     setDocActionBarStatus("Saved", false);
@@ -1419,6 +1465,7 @@ async function undoDocumentChanges() {
     const updated = await api("POST", `/api/documents/${docPageState.doc.id}/revert`);
     docPageState.doc = updated;
     docPageState.edits = {};
+    docPageState.categoryEdit = undefined;
     docPageState.dirty = false;
     drawDocumentPage();
     setDocActionBarStatus("Reverted to the AI values", false);
@@ -1431,12 +1478,12 @@ async function undoDocumentChanges() {
 async function confirmDocument() {
   setButtonsBusy(true);
   try {
-    const updated = await api("POST", `/api/documents/${docPageState.doc.id}/confirm`, {
-      edits: docPageState.edits,
-      reason: docPageState.reason || null,
-    });
+    const body = { edits: docPageState.edits, reason: docPageState.reason || null };
+    if (docPageState.categoryEdit !== undefined) body.category = docPageState.categoryEdit;
+    const updated = await api("POST", `/api/documents/${docPageState.doc.id}/confirm`, body);
     docPageState.doc = updated;
     docPageState.edits = {};
+    docPageState.categoryEdit = undefined;
     docPageState.dirty = false;
     docPageState.reason = "";
     navigate(`#/claims/${updated.claim_id}`);

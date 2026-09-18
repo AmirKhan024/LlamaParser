@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "Acme Project Manager\nInvoice No: 2023-07-01\nAmount: $49.99\nPaid on 2023-07-01\nGSTIN: 27AAECS1234F1Z5",
+      "vendor": "Acme Project Manager"
+    },
+    {
+      "text": "Nimob Cloud Servic3\nMonthly Subscri1ption\nJuly 2023\nUSD 120.00\nPaid via Str1pe",
+      "vendor": "Nimbus Cloud Services"
+    },
+    {
+      "text": "TechGuru Software\nInvoice 2023-08-15\nQty 1\nLicense Renewal\n₹ 12,345.00\nGST 18% included\nGSTIN: 07AAHSC1234C1Z2",
+      "vendor": "TechGuru Software"
+    },
+    {
+      "text": "Glb0Soft\nAnnual Licence 2024\nEUR 1,200.00\nInvoice #GL-2024\nPaid 31 Jul 2023",
+      "vendor": "GloboSoft"
+    },
+    {
+      "text": "ByteWave\nSubscription Fee\n$ 29.99 per user\nTotal: $ 89.97\nInvoice: 0005678\nDate: 2023-08-01",
+      "vendor": "ByteWave"
+    },
+    {
+      "text": "InfraStack\nCloud Storage\n2023-08\nUSD 75.50\nSubtotal\nGST 18%\nTotal: USD 88.29",
+      "vendor": "InfraStack"
+    },
+    {
+      "text": "ViroS0ft\nLicensing Agreement\nInvoice 2023-06-30\nQty 3\nCost per unit: ₹ 4,000.00\nSubtotal: ₹ 12,000.00",
+      "vendor": "ViroSoft"
+    },
+    {
+      "text": "SoftPulse\nMonthly SaaS\nJuly 2023\nUSD 199.99\nPaid via PayPal",
+      "vendor": "SoftPulse"
+    },
+    {
+      "text": "DataForge\nAnnual Subscription\n2023\nGBP 2,500.00\nInvoice #DF-2023-01",
+      "vendor": "DataForge"
+    },
+    {
+      "text": "EvolveApps\nApp Store Renewal\n2023-07-01\nUS8 9.99",
+      "vendor": "EvolveApps"
+    },
+    {
+      "text": "CodeNest\nProject Management Tool\nInvoice 2023-07-15\nQty 5\nUnit: $ 12.50\nTotal: $ 62.50",
+      "vendor": "CodeNest"
+    },
+    {
+      "text": "DevLink\nDeveloper Tools\n2023-07\nUSD 250.0\nInvoice #DL-2023-07",
+      "vendor": "DevLink"
+    },
+    {
+      "text": "InnoSoft\nLicense Renewal\n₹ 5,500.00\nGST 18%\nTotal ₹ 6,430.00\nInvoice: 2023-07",
+      "vendor": "InnoSoft"
+    }
+  ]
+}

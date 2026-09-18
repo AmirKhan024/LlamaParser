@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "ABC Learning Center\nInvoice No: 2024-INV-001\nDate: 15 Jan 2024\nAmount: INR 12,500\nGSTIN: 27ABCDE1234F1Z5",
+      "vendor": "ABC Learning Center"
+    },
+    {
+      "text": "Online Course: Advanced Python\nReceipt #OC-2024-05\nTotal: USD 350.00\nPaid via PayPal\nThank you!",
+      "vendor": "TechEd Online"
+    },
+    {
+      "text": "Conference Pass - Data Science Summit\nDate: 22-24 Mar 2024\nTotal: €1,200\nVAT 20%",
+      "vendor": "DataSci Conferences"
+    },
+    {
+      "text": "CERTIFICATION EXAM - AWS Cloud Practitioner\nInvoice No: 2024/EXAM/01\nAmount: ₹8,999\nGSTIN: 29XYZAB1234C1Z6",
+      "vendor": "Amazon Web Services India Pvt Ltd"
+    },
+    {
+      "text": "Workshops & Seminars\nInvoice: 2024-WS-07\nAmount: £650.00\nVAT 20%",
+      "vendor": "Global Learning Ltd."
+    },
+    {
+      "text": "E‑Learning Platform: Mastering R\nInvoice No: INV-2024-003\nTotal: INR 9,000\nGST: 18%",
+      "vendor": "StatMasters"
+    },
+    {
+      "text": "Conference Ticket: AI & Ethics Forum\nInvoice No: 2024-CE-15\nTotal: USD 520\nPayment: Credit Card",
+      "vendor": "Ethical AI Consortium"
+    },
+    {
+      "text": "Training Session: Cybersecurity Basics\nInvoice #TRN-2024-09\nAmount: ₹6,500\nGSTIN: 33ABCDE5678F1Z7",
+      "vendor": "SecureFuture Solutions"
+    },
+    {
+      "text": "Certification Exam Fee – PMP\nInvoice No: PMP-2024-01\nAmount: €1,100\nVAT 20%",
+      "vendor": "PMI Global"
+    },
+    {
+      "text": "Online Course: Digital Marketing\nInvoice No: 2024-OM-04\nTotal: INR 7,250\nGSTIN: 16ABCDE1234F1Z8",
+      "vendor": "MarketPro Academy"
+    },
+    {
+      "text": "Conference Registration – Cloud Native Conf\nInvoice: 2024-CC-202\nTotal: $1,050\nPaid via Stripe",
+      "vendor": "Cloud Native Association"
+    },
+    {
+      "text": "Work‑Related Book Purchase\nInvoice No: 2024-BOOK-12\nAmount: ₹1,200\nGSTIN: 19XYZAB2345F1Z9",
+      "vendor": "BookWorld"
+    },
+    {
+      "text": "Training Program: Agile Methodologies\nInvoice No: 2024-AGILE-08\nTotal: £780.00\nVAT 20%",
+      "vendor": "Agile Minds"
+    }
+  ]
+}

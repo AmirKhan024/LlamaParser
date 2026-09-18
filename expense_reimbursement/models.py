@@ -153,6 +153,17 @@ class Extraction(Base):
     # from the raw markdown either -- see validate.build_claim.
     currency: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
+    # What the expense was FOR (categories.py), separate from
+    # `document_type` (what kind of paper it is) above. Null for a
+    # document_type that isn't an expense at all (approval_correspondence)
+    # -- see categories.is_categorizable. category_method is "rules" /
+    # "llm" / "classifier" / "hybrid" (categorize.py) for an AI-assigned
+    # category, or "employee" once the employee has edited it; never
+    # shown to the employee (see review_view/server.py).
+    category: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    category_confidence: Mapped[Optional[float]] = mapped_column(nullable=True)
+    category_method: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+
     document: Mapped["Document"] = relationship(back_populates="extractions")
     check_results: Mapped[list["CheckResultRow"]] = relationship(
         back_populates="extraction", cascade="all, delete-orphan"

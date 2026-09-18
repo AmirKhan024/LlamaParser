@@ -1,0 +1,100 @@
+{
+  "examples": [
+    {
+      "text": "Trip from 8:15 AM\nBengaluru City\nDistance 12 km\nFare INR 350\nGST 18% INR 63\nTotal INR 413",
+      "vendor": "Uber India Pvt Ltd"
+    },
+    {
+      "text": "Auto-rickshaw fare\nFrom MG Road to Koramangala\nDistance 5 km\nFare INR 150\nGST 18% INR 27\nTotal INR 177",
+      "vendor": "AutoCabs Ltd"
+    },
+    {
+      "text": "Cab to Kempegowda International Airport\nPickup 11:30 AM\nDistance 18 km\nFare INR 500\nGST 18% INR 90\nTotal INR 590",
+      "vendor": "SkyRide Cabs"
+    },
+    {
+      "text": "Parking at Infosys Campus\nDate 2024-09-15\nDuration 2 hrs\nRate INR 50/hr\nTotal INR 100",
+      "vendor": "Infosys Parking Services"
+    },
+    {
+      "text": "Toll at NH 44\nDate 2024-09-14\nEntry 5:20 PM\nExit 5:45 PM\nAmount INR 30",
+      "vendor": "National Highway Authority"
+    },
+    {
+      "text": "Metro fare Bengaluru\nLine: Green\nTrip 12:00-12:20\nFare INR 25\nGST 18% INR 4.5\nTotal INR 29.5",
+      "vendor": "Bengaluru Metro"
+    },
+    {
+      "text": "Airport transfer from 3rd Street\nLondon\nDate 2024-09-10\nFare GBP 45",
+      "vendor": "London Airport Transfers"
+    },
+    {
+      "text": "Ride-hailing in Paris\nDate 2024-09-12\nFare EUR 30",
+      "vendor": "Paris RideShare"
+    },
+    {
+      "text": "Taxi from hotel to airport\nMumbai\nDate 2024-09-18\nFare INR 800\nGST 18% INR 144\nTotal INR 944",
+      "vendor": "Mumbai Taxi Co"
+    },
+    {
+      "text": "Auto-rickshaw in Jaipur\nFrom City Hall to Jantar Mantar\nFare INR 120\nGST 18% INR 21.6\nTotal INR 141.6",
+      "vendor": "Jaipur Auto Rides"
+    },
+    {
+      "text": "Parking at Mall of India\nDate 2024-09-20\nDuration 4 hrs\nRate INR 60/hr\nTotal INR 240",
+      "vendor": "Mall of India Parking"
+    },
+    {
+      "text": "Toll charge at Ghat Road\nDate 2024-09-22\nAmount INR 45",
+      "vendor": "Ghat Road Toll"
+    },
+    {
+      "text": "Cab ride to IT Hub\nHyderabad\nTrip 9:00-9:30\nFare INR 280\nGST 18% INR 50.4\nTotal INR 330.4",
+      "vendor": "Hyderabad Cabs"
+    },
+    {
+      "text": "Auto-rickshaw fare in Kochi\nFrom Fort to Marine Drive\nFare INR 200\nGST 18% INR 36\nTotal INR 236",
+      "vendor": "Kochi Auto Co"
+    },
+    {
+      "text": "Airport transfer Bangalore\nDate 2024-09-25\nFare INR 450\nGST 18% INR 81\nTotal INR 531",
+      "vendor": "Bangalore Airport Shuttles"
+    },
+    {
+      "text": "Parking at Railway Station\nDate 2024-09-27\nDuration 3 hrs\nRate INR 70/hr\nTotal INR 210",
+      "vendor": "Railway Station Parking"
+    },
+    {
+      "text": "Toll at 5th Street\nDate 2024-09-28\nAmount INR 35",
+      "vendor": "5th Street Authority"
+    },
+    {
+      "text": "Ride-hailing in Delhi\nDate 2024-09-29\nFare INR 600",
+      "vendor": "Delhi RideNow"
+    },
+    {
+      "text": "Metro fare Mumbai\nLine: Blue\nTrip 6:30-7:00\nFare INR 20",
+      "vendor": "Mumbai Metro"
+    },
+    {
+      "text": "Auto-rickshaw in Pune\nFrom Shaniwar Wada to Viman Nagar\nFare INR 250\nGST 18% INR 45\nTotal INR 295",
+      "vendor": "Pune Auto Services"
+    },
+    {
+      "text": "Parking at City Hall\nDate 2024-10-01\nDuration 5 hrs\nRate INR 80/hr\nTotal INR 400",
+      "vendor": "City Hall Parking"
+    },
+    {
+      "text": "Toll at Expressway 12\nDate 2024-10-02\nAmount INR 55",
+      "vendor": "Expressway 12 Toll"
+    },
+    {
+      "text": "Cab to Conference Center\nChennai\nTrip 10:00-10:25\nFare INR 350\nGST 18% INR 63\nTotal INR 413",
+      "vendor": "Chennai City Cabs"
+    },
+    {
+      "text": "Ride-hailing in Berlin\nDate 2024-10-05\nFare EUR 25",
+      "vendor": "Berlin RideShare"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "text": "Bistro Del Mar\n12:45 12-08-2024\n$18.50",
+      "vendor": "Bistro Del Mar"
+    },
+    {
+      "text": "Le Gourmet Bistro\n08/07/24 20:15\nRoom 5\n£45.00",
+      "vendor": "Le Gourmet Bistro"
+    },
+    {
+      "text": "Hotel Sunrise\nRoom 101\nBfast\n12-07-24\nINR 1,200",
+      "vendor": "Hotel Sunrise"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "examples": [
+    {
+      "text": "STATIONERY\n3 PENS\n2 NOTEPADS\nTOTAL ₹ 450",
+      "vendor": "Pencil Palace"
+    },
+    {
+      "text": "Wired Headset\nSerial No: 12345\nPrice: $39.99",
+      "vendor": "AudioGear Ltd"
+    },
+    {
+      "text": "Desk Organizer\nQty: 1\nPrice: ₹ 1,200",
+      "vendor": "HomeOffice Essentials"
+    },
+    {
+      "text": "Wireless Mouse\nModel: M-300\n$25.00",
+      "vendor": "TechTronics"
+    },
+    {
+      "text": "Paper Pack\n500 Sheets\n₹ 800",
+      "vendor": "PaperWorld"
+    },
+    {
+      "text": "Office Chair\nQty 1\n$129.50",
+      "vendor": "ComfortSeats"
+    },
+    {
+      "text": "Notebook\n5\n₹ 1500",
+      "vendor": "WriteWell Stationery"
+    },
+    {
+      "text": "USB Flash Drive\n8GB\n₹ 950",
+      "vendor": "DataVault"
+    },
+    {
+      "text": "Pen Set\n3 Colors\n$12.75",
+      "vendor": "InkMasters"
+    },
+    {
+      "text": "Desk Lamp\nLED 60W\n₹ 2,350",
+      "vendor": "BrightLights Co"
+    },
+    {
+      "text": "Printer Ink\nBlack Ink\n₹ 1,850",
+      "vendor": "PrintPro Supplies"
+    },
+    {
+      "text": "Stapler\nQty: 2\n$3.50",
+      "vendor": "Staples & More"
+    },
+    {
+      "text": "File Folders\nPack of 10\n₹ 400",
+      "vendor": "FolderMart"
+    },
+    {
+      "text": "Stationery Pack\nPens, Notebooks, Stamps\n$55.00",
+      "vendor": "OfficeHub"
+    },
+    {
+      "text": "Microphone\nUSB\n$49.99",
+      "vendor": "SoundWave"
+    },
+    {
+      "text": "Paper Clip Box\n₹ 250",
+      "vendor": "ClipIt"
+    },
+    {
+      "text": "Desk Calendar\n2025\n₹ 1,100",
+      "vendor": "TimeKeeper"
+    },
+    {
+      "text": "Whiteboard Marker\nBlue\n$8.25",
+      "vendor": "WriteRight"
+    },
+    {
+      "text": "Desk Pad\nSize: 30x20\n₹ 3,200",
+      "vendor": "ComfortDesk"
+    },
+    {
+      "text": "Laptop Stand\nAdjustable\n$45.00",
+      "vendor": "LiftIT"
+    },
+    {
+      "text": "Binder Clips\nPack of 50\n₹ 650",
+      "vendor": "ClipPro"
+    },
+    {
+      "text": "Notebook\nA5\n$7.80",
+      "vendor": "PaperTime"
+    },
+    {
+      "text": "Desk Organizer\n3 Compartments\n₹ 1,500",
+      "vendor": "OrganizeIt"
+    }
+  ]
+}

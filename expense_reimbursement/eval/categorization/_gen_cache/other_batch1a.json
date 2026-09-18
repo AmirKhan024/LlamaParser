@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "Date: 12/03/2024\nClient: Mr. Arun Sharma\nGift: Premium Coffee Set\nAmount: 5,000 INR",
+      "vendor": "CocoTee Gifts Pvt Ltd"
+    },
+    {
+      "text": "Ship No: 987654321\nFrom: 10th Floor, Office Park, Delhi\nTo: 12, Maple Street, London\nCost: 35.00 USD",
+      "vendor": "ExpressShip International"
+    },
+    {
+      "text": "Invoice# 1023\nBusiness Cards (200 pcs)\nTotal: 2,200 INR",
+      "vendor": "PrintWorks Studio"
+    },
+    {
+      "text": "Date 05-04-24\nRecipient: Ms. Priya Patel\nItem: Succulent Plant\nCost: 750 INR",
+      "vendor": "GreenLeaf Gifts"
+    },
+    {
+      "text": "Tracking No: QM-456\nSender: Rahul K. Patel\nRecipient: 5th Avenue, New York\nPostage: 18.50 EUR",
+      "vendor": "QuickMail"
+    },
+    {
+      "text": "Order# 777\nFlyers (500 pcs)\nPrice: 4,500 INR",
+      "vendor": "PaperPlus Ltd"
+    },
+    {
+      "text": "Gift: Marble Pen\nValued: 1,200 INR\nClient: Dr. S. Gupta",
+      "vendor": "Sculpture Artisans"
+    },
+    {
+      "text": "Package ID: 123-456-789\nFrom: Bengaluru\nTo: Mumbai\nFee: 1,200 INR",
+      "vendor": "FedEx"
+    },
+    {
+      "text": "Invoice 88-99\nBrochure Printing (300 pcs)\nTotal: 7,800 INR",
+      "vendor": "Ink & Ink"
+    },
+    {
+      "text": "Gift Box: Premium Chocolates\nClient: Mr. L. Mehra\nAmount: 2,500 INR",
+      "vendor": "Gourmet Bites"
+    },
+    {
+      "text": "Postage Receipt\nSender: A. Kumar\nRecipient: 3rd Floor, Office Tower, Chennai\nCost: 300 INR",
+      "vendor": "LocalPost"
+    },
+    {
+      "text": "Invoice No: CP-2024-03\nBusiness Letterheads (100 pcs)\nCharge: 3,200 INR",
+      "vendor": "Creative Prints"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "examples": [
+    {
+      "text": "VISA APPLICATION\nFee: ₹ 12,000\nDate: 21/03/2024\nGSTIN: 27AAECS1234F1Z5",
+      "vendor": "Consular Services Ltd."
+    },
+    {
+      "text": "TRAVEL INSURANCE\nPolicy No: 2024-TRV-001\nAmount: USD 350.00\nEffective: 01 Apr 2024 – 30 Apr 2024\nIssuer: SafeTravels Inc.",
+      "vendor": "SafeTravels Inc."
+    },
+    {
+      "text": "FOREX CARD LOAD\nFee: € 10.00\nDate: 12/04/2024\nTransaction ID: FX1234567890\nVendor: EuroCard Solutions",
+      "vendor": "EuroCard Solutions"
+    },
+    {
+      "text": "PASSPORT RENEWAL\nFee:  ₹ 5,000\nDate: 15/02/2024\nGovt. ID: 1234567890\nGSTIN: 27AAECS1234F1Z5",
+      "vendor": "Ministry of External Affairs"
+    },
+    {
+      "text": "VISA STAMPING\nFee: £ 100\nDate: 25/04/2024\nStamping ID: VS987654321\nIssuer: UK Visa Services",
+      "vendor": "UK Visa Services"
+    }
+  ]
+}

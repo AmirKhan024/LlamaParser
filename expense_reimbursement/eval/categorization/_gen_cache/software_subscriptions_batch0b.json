@@ -1,0 +1,56 @@
+{
+  "examples": [
+    {
+      "text": "PROJTRACKER\nInvoice #2023-07-01\nMonthly Subscription: $49.99\nGSTIN: 29ABCDE1234F1Z5",
+      "vendor": "ProjTracker Inc."
+    },
+    {
+      "text": "CloudMate\nBill Date: 05/08/2023\nAnnual License: 12,000 INR\nTax 18%: 2160 INR",
+      "vendor": "CloudMate Solutions"
+    },
+    {
+      "text": "SaaSify\nSubscription No: 987654\nPlan: Premium\nUSD 89.00\nPayment Due: 2023-09-30",
+      "vendor": "SaaSify Ltd."
+    },
+    {
+      "text": "DevOpsHub\nInvoice 2023-07\nService: Cloud Build\n€150.00\nVAT 20%",
+      "vendor": "DevOpsHub GmbH"
+    },
+    {
+      "text": "TeamSync\nInvoice# TS-2023-08\nMonthly: 4999 INR\nGST: 18% 899.82 INR",
+      "vendor": "TeamSync Pvt."
+    },
+    {
+      "text": "CodeCraft\nBILL#20230715\nAnnual License 499 USD\nTax 15% 74.85 USD",
+      "vendor": "CodeCraft LLC"
+    },
+    {
+      "text": "WorkFlowPro\n2023-08-01\nMonthly Plan: 29.99 GBP\nNo VAT",
+      "vendor": "WorkFlowPro Ltd."
+    },
+    {
+      "text": "AppStoreRenewal\nInvoice 2023-08\nApp: PhotoEditor\n$4.99\nGST 18%",
+      "vendor": "AppStoreRenewal Inc."
+    },
+    {
+      "text": "DataGuard\nInvoice 2023-08-05\nSubscription: 8,000 INR\nGST 18% 1440 INR",
+      "vendor": "DataGuard Technologies"
+    },
+    {
+      "text": "NetSecure\nBill No: 456\nAnnual Subscription: 1,200 USD\nVAT 10% 120 USD",
+      "vendor": "NetSecure Inc."
+    },
+    {
+      "text": "FinancePlus\n2023-08-10\nMonthly Fee: 2000 INR\nGST 18% 360 INR",
+      "vendor": "FinancePlus Pvt."
+    },
+    {
+      "text": "InsightSuite\nInvoice #202307\nPlan: Enterprise\nEUR 750.00\nVAT 21%",
+      "vendor": "InsightSuite SA"
+    },
+    {
+      "text": "QuickPay\nInvoice 2023-08-12\nSubscription: 2999 INR\nGST 18% 539.82 INR",
+      "vendor": "QuickPay Solutions"
+    }
+  ]
+}

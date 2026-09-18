@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "text": "Trip Log – 2024-08-12\nClient: Acme Corp\nKm: 35\nRate: ₹15/km\nTotal: ₹525",
+      "vendor": "Local Conveyance Services"
+    },
+    {
+      "text": "Own-vehicle mileage claim\nDate: 2024-07-01\nTotal km: 28\nPer km rate: ₹12\nTotal amount: ₹336",
+      "vendor": "Metro Taxi Solutions"
+    },
+    {
+      "text": "Mileage Claim Form\nEmployee: R. Sharma\nClient: XYZ Ltd.\nKm driven: 45\nRate ₹14\nAmount: ₹630",
+      "vendor": "CityRide Logistics"
+    },
+    {
+      "text": "Trip Log\n2024-06-15 12 km  ₹18/km",
+      "vendor": "QuickMove"
+    },
+    {
+      "text": "Personal Vehicle Usage\nTrip Log\nFrom: Office to Client A\nDate: 2024-05-20\nKm: 15\nRate: ₹10/km\nTotal: ₹150",
+      "vendor": "RoadRunner Transport"
+    },
+    {
+      "text": "Own-vehicle mileage\n2024-04-30\nTotal km 20\n₹11/km\nTotal ₹220",
+      "vendor": "Vroom Transport"
+    },
+    {
+      "text": "Mileage Claim\nClient: GlobalTech\nKm: 60\nRate: ₹13\nAmount: ₹780",
+      "vendor": "SwiftMove"
+    },
+    {
+      "text": "Trip log 2024-03-10 30km @₹12",
+      "vendor": "Gears & Wheels"
+    },
+    {
+      "text": "Own vehicle\nDate: 2024-02-14\nKm: 25\nRate ₹15/km\nAmount ₹375\nSignature: ______",
+      "vendor": "RideNow"
+    },
+    {
+      "text": "Mileage claim form\nEmployee: S. Patel\nClient: Beta Inc\nKm: 38\nRate ₹12\nTotal ₹456",
+      "vendor": "TravelEase"
+    },
+    {
+      "text": "Trip Log\n2024-01-05\nKm 18\n₹13/km\nTotal ₹234",
+      "vendor": "Speedy Conveyance"
+    },
+    {
+      "text": "Own Vehicle Mileage\nLog Entry\nDate: 2023-12-31\nClient: Omega Ltd\nKm: 50\nRate ₹14/km\nAmount ₹700\nNotes: Client meeting",
+      "vendor": "RapidRoad"
+    }
+  ]
+}

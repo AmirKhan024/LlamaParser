@@ -1,0 +1,48 @@
+{
+  "examples": [
+    {
+      "text": "VISA APPLICATION FEE\nReceipt\nAmt: ₹ 4,500\nDate: 01/07/2024\nGSTIN: 29ABCDE1234F1Z9",
+      "vendor": "Consular Services Ltd."
+    },
+    {
+      "text": "TRAVEL INSURANCE POLICY\nInvoice\nPolicy No: T-INV-2024-001\nPremium: USD 350.00\nIssue Date: 15/06/2024",
+      "vendor": "GlobeCover Insurance"
+    },
+    {
+      "text": "FOREX CARD LOADING\nFee Receipt\nLoaded: € 1,000\nFee: € 10.00\nDate: 20/06/2024",
+      "vendor": "EuroExchange"
+    },
+    {
+      "text": "Passport Renewal Fee\nInvoice\nAmount: ₹ 2,000\nDate: 05/07/2024\nGSTIN: 27FGHIJ5678K2L3",
+      "vendor": "National Passport Office"
+    },
+    {
+      "text": "Visa Application\nReceipt\nAmount: £ 300.00\nDate: 30/06/2024\nTax: 20%",
+      "vendor": "UK Visa Services"
+    },
+    {
+      "text": "Travl Insuranc Policy\nInvoice\nPol# 2024-TRV-005\nPremium: USD 275\nIssue: 10/07/2024",
+      "vendor": "TravelSafe"
+    },
+    {
+      "text": "FOREX CONVERSION FEE\nReceipt\nAmount: ₹ 200\nDate: 12/07/2024\nGST: 18%",
+      "vendor": "IndiaForex"
+    },
+    {
+      "text": "Passport Fee\nInvoice\nAmt:  ₹ 1,500\nDate: 08/07/2024\nGSTIN: 30KLMNO3456P4Q2",
+      "vendor": "Central Passport Agency"
+    },
+    {
+      "text": "Visa Fees\nReceipt\nAmount: $ 450.00\nDate: 18/06/2024\nVAT: 5%",
+      "vendor": "US Consular"
+    },
+    {
+      "text": "FOREX CARD LOAD\nFee\n€ 500.00\nFee: € 8.00\nDate: 22/06/2024",
+      "vendor": "EuroCard"
+    },
+    {
+      "text": "Travel Insurance\nInvoice\nPolicy No: 2024-TR-1001\nPremium: USD 400\nDate: 03/07/2024",
+      "vendor": "SecureTrip"
+    }
+  ]
+}

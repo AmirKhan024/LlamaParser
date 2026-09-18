@@ -1,0 +1,32 @@
+{
+  "examples": [
+    {
+      "text": "Café Lumière\nDate: 12/04/2024\nQty 1\nItem: Breakfast Combo\nTotal: $12.50\nGSTIN: 27AAECS1234F1Z5",
+      "vendor": "Café Lumière"
+    },
+    {
+      "text": "Tiffin Corner\n2024-05-02\nQty: 2\nVeg Thali\nRs. 350\nGSTIN: 07AABCD5678F1Z4",
+      "vendor": "Tiffin Corner"
+    },
+    {
+      "text": "Seafood Bistro\n08-10-2024\nQty 1\nGrilled Salmon\n$45.00\nTax: 5%",
+      "vendor": "Seafood Bistro"
+    },
+    {
+      "text": "Hotel Grand Inn\n 15 02 2024\nRoom 305\nBreakfast\n₹ 780\nGST: 18%",
+      "vendor": "Hotel Grand Inn"
+    },
+    {
+      "text": "Resto Vino\n2024/03/28\nQty 1\nSpaghetti\n$28.75\nGST 7%",
+      "vendor": "Resto Vino"
+    },
+    {
+      "text": "Kebab House\n2024-06-01\nQty: 3\nChicken Kebab\nRs. 1,200\nGSTIN: 33AABCD9876F1Z2",
+      "vendor": "Kebab House"
+    },
+    {
+      "text": "Bistro du Soleil\nDate: 04/11/2024\nQty 1\nPancakes & Coffee\n$15.20\nTax: 10%",
+      "vendor": "Bistro du Soleil"
+    }
+  ]
+}

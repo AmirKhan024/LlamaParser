@@ -1,0 +1,64 @@
+{
+  "examples": [
+    {
+      "text": "PQR Petrol Pump\nDate: 12-08-2024\nQty: 35.2 L\nRate: ₹70.00/L\nTotal: ₹2456.00\nGSTIN: 27AAAAA0000A1Z5",
+      "vendor": "PQR Petrol Pump"
+    },
+    {
+      "text": "ABC Fuel\n08/09/2024\nLitres: 40\nPrice/L: 68.5\nAmount: ₹2740\nGST 18%",
+      "vendor": "ABC Fuel"
+    },
+    {
+      "text": "XYZ CNG\nDate 10-09-24\nQty: 45.6 kWh\nRate: ₹30/kWh\nTotal: ₹1368\nGSTIN 12BBBBB1111B2C3",
+      "vendor": "XYZ CNG"
+    },
+    {
+      "text": "MNO Petrol\n12-08-2024\nQty 30L\nRate ₹69\nTotal ₹2070\nGST 18%",
+      "vendor": "MNO Petrol"
+    },
+    {
+      "text": "FuelX\n09/08/2024\nLitre 50.0\nUnit ₹68\nTotal ₹3400\nGST 18%",
+      "vendor": "FuelX"
+    },
+    {
+      "text": "PQR Fuel\n10/09/24\nQty: 38 L\nRate: ₹70.00\nTotal: ₹2660\nGST 18%",
+      "vendor": "PQR Fuel"
+    },
+    {
+      "text": "SRT Diesel\n08-09-24\nQty: 42 L\nRate: ₹71.00/L\nTotal: ₹2982\nGST 18%",
+      "vendor": "SRT Diesel"
+    },
+    {
+      "text": "GHI CNG\n10/09/24\nQty: 50 kWh\nRate: ₹29.5/kWh\nTotal: ₹1475\nGST 18%",
+      "vendor": "GHI CNG"
+    },
+    {
+      "text": "VWX Petrol\n12/08/24\nQty: 32 L\nRate: ₹70\nTotal: ₹2240\nGST 18%",
+      "vendor": "VWX Petrol"
+    },
+    {
+      "text": "FuelCo\n09/08/24\nLitres 45\nRate ₹69\nTotal ₹3105\nGST 18%",
+      "vendor": "FuelCo"
+    },
+    {
+      "text": "KLM Diesel\n12-08-24\nQty: 37 L\nRate: ₹70.5\nTotal: ₹2614.5\nGST 18%",
+      "vendor": "KLM Diesel"
+    },
+    {
+      "text": "ABC Petrol\n08/09/24\nQty: 36 L\nRate: ₹70\nTotal: ₹2520\nGST 18%",
+      "vendor": "ABC Petrol"
+    },
+    {
+      "text": "CNG Hub\n10-09-24\nQty: 55 kWh\nRate: ₹30\nTotal: ₹1650\nGST 18%",
+      "vendor": "CNG Hub"
+    },
+    {
+      "text": "PQR Fuel\n12-08-24\nQty: 28 L\nRate: ₹69.5\nTotal: ₹1946\nGST 18%",
+      "vendor": "PQR Fuel"
+    },
+    {
+      "text": "XYZ Diesel\n09/09/24\nQty: 40 L\nRate: ₹71\nTotal: ₹2840\nGST 18%",
+      "vendor": "XYZ Diesel"
+    }
+  ]
+}
