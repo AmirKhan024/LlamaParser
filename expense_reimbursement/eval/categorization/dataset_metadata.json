@@ -1,0 +1,11 @@
+{
+  "reviewed_at": "2026-09-18T18:04:20.856596+00:00",
+  "reviewer": "project owner",
+  "review_method": "reviewed silver labels with the label visible",
+  "total_rows": 134,
+  "overrides_applied": 0,
+  "silver_gold_agreement": 1.0,
+  "silver_gold_agreements": 134,
+  "silver_gold_disagreements": 0,
+  "anchoring_risk_note": "The reviewer saw each row's silver label while reviewing it, which can anchor the reviewer toward agreeing with what's already shown rather than forming an independent judgment -- a 100% (or near-100%) agreement rate under this method should not be read as proof the silver labels are error-free. A blind relabel of a sample (reviewer sees the document only, not the silver label) would test this properly and is the recommended follow-up before leaning heavily on this eval set."
+}
