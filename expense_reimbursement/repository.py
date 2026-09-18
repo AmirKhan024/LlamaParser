@@ -137,8 +137,13 @@ def create_document(
     file_key: str,
     file_sha256: str,
     mime_type: str,
+    document_id: Optional[uuid.UUID] = None,
 ) -> Document:
+    """`document_id` can be supplied by the caller so the storage path
+    (storage/<claim_id>/<document_id><ext>) can be computed and the file
+    written to disk before this row exists."""
     document = Document(
+        id=document_id or uuid.uuid4(),
         claim_id=claim_id,
         original_name=original_name,
         file_key=file_key,
