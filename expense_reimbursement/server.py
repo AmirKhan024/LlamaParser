@@ -421,6 +421,11 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
         # check_results/completeness stay in the DB for finance and later
         # stages -- only what's SHOWN to the employee changes.
         summary["review"]["warnings"] = []
+    # The same figure already denormalized onto the extraction row (see
+    # _extraction_amount) -- reused here so the claim page's document row
+    # (docRowHtml: "<type label> · <amount>") doesn't need its own
+    # type-keyed field lookup on the client.
+    summary["review"]["amount"] = _money(extraction.amount)
     ai_extraction = _find_ai_extraction(document)
     summary["review"]["reason_required"] = (
         document.status != "confirmed"

@@ -138,6 +138,9 @@ def test_edit_after_submit_rejected(client):
     r = client.delete(f"/api/documents/{doc['id']}")
     assert r.status_code == 409
 
+    r = client.patch(f"/api/claims/{claim['id']}", json={"note_to_approver": "too late"})
+    assert r.status_code == 409
+
     r = client.patch(f"/api/claims/{claim['id']}", json={"title": "renamed"})
     assert r.status_code == 409
 

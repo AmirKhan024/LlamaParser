@@ -265,14 +265,41 @@ async function uploadFile(claimId, file) {
 /* ------------------------------------------------------------- helpers */
 
 // Explicit allowlist, not a substring match on the field key -- "total_kms"
-// contains "total" too, and a distance is not an amount.
+// contains "total" too, and a distance is not an amount. Extended with
+// unit_price for the corrections table below, since a line-item edit's
+// field_path leaf is "unit_price"/"total" (e.g. "line_items[2].total"),
+// not a bare top-level key.
 const MONEY_FIELD_KEYS = new Set([
   "amount", "total", "subtotal", "tax", "cgst", "sgst", "grand_total",
   "total_conveyance_amount", "daily_allowance_amount", "vehicle_maintenance_amount",
-  "mobile_allowance_amount", "total_claimed",
+  "mobile_allowance_amount", "total_claimed", "unit_price",
 ]);
 
+function isMoneyFieldPath(fieldPath) {
+  const parts = fieldPath.split(/[.[]/).map((p) => p.replace(/\]$/, ""));
+  return MONEY_FIELD_KEYS.has(parts[parts.length - 1]);
+}
+
 const CURRENCY_SYMBOLS = { USD: "$", EUR: "€", GBP: "£", INR: "₹" };
+
+// Human labels for document_type -- the raw type strings (telecom_bill,
+// hotel_invoice, ...) must never reach the employee directly, on the
+// claim page's document rows same as everywhere else in the review UI.
+const DOCUMENT_TYPE_LABELS = {
+  telecom_bill: "Phone bill",
+  restaurant_bill: "Restaurant bill",
+  local_conveyance_form: "Conveyance form",
+  approval_correspondence: "Approval email",
+  hotel_invoice: "Hotel receipt",
+  taxi_receipt: "Taxi receipt",
+  fuel_receipt: "Fuel receipt",
+  unstructured_proof: "Receipt",
+  generic_receipt: "Receipt",
+};
+
+function documentTypeLabel(docType) {
+  return DOCUMENT_TYPE_LABELS[docType] || "Document";
+}
 
 function fmtMoney(value, currency) {
   if (value === null || value === undefined || value === "") return "–";
@@ -507,9 +534,27 @@ function drawClaimPage(claim) {
   const submittedBanner = !isDraft ? `
     <div class="card" style="border-color:var(--ok);">
       <strong>Submitted on ${fmtDate(claim.submitted_at)}</strong>
+      <div>Waiting for your manager's approval</div>
       <div style="margin-top:4px;">Total: <strong>${fmtTotals(claim)}</strong></div>
       ${correctionsSummaryHtml(claim)}
     </div>` : "";
+
+  // Draft: an editable textarea, always shown (even empty, as a prompt
+  // to fill it in). Submitted: plain read-only text, and the whole
+  // section is left out entirely when there's nothing to show -- never
+  // an empty box, and never an <input>/<textarea> a submitted claim's
+  // page must not contain at all.
+  const noteSection = isDraft
+    ? `<div class="card" style="margin-top:16px;">
+        <label for="note-field" style="font-weight:600;font-size:13px;color:var(--ink-muted);">Note to approver</label>
+        <textarea id="note-field" placeholder="Explain anything unusual about this claim (optional)">${escapeHtml(claim.note_to_approver || "")}</textarea>
+      </div>`
+    : claim.note_to_approver
+      ? `<div class="card" style="margin-top:16px;">
+          <div style="font-weight:600;font-size:13px;color:var(--ink-muted);">Note to approver</div>
+          <div style="margin-top:6px;white-space:pre-wrap;">${escapeHtml(claim.note_to_approver)}</div>
+        </div>`
+      : "";
 
   body.innerHTML = `
     ${isDraft
@@ -524,14 +569,11 @@ function drawClaimPage(claim) {
     <div class="doc-list">
       ${claim.documents.length === 0 ? `<div class="empty-state">No documents yet.</div>` : claim.documents.map(docRowHtml).join("")}
     </div>
-    <div class="card" style="margin-top:16px;">
-      <label for="note-field" style="font-weight:600;font-size:13px;color:var(--ink-muted);">Note to approver</label>
-      <textarea id="note-field" ${isDraft ? "" : "readonly"} placeholder="Explain anything unusual about this claim (optional)">${escapeHtml(claim.note_to_approver || "")}</textarea>
-    </div>
-    <div class="claim-total-row">
+    ${noteSection}
+    ${isDraft ? `<div class="claim-total-row">
       <span>Total</span>
       <span class="amount">${fmtTotals(claim)}</span>
-    </div>
+    </div>` : ""}
   `;
 
   renderClaimActionBar(claim, submitDisabled, submitReason);
@@ -560,11 +602,53 @@ function drawClaimPage(claim) {
   }
 }
 
+// Column headers for the two array-shaped fields -- kept separate from
+// the review screen's own <table> headers (tripsTableHtml/
+// collapsibleHtml) since this needs them by key, not as rendered HTML.
+const ITEM_COLUMN_LABELS = { name: "Item", quantity: "Qty", unit_price: "Unit price", total: "Amount" };
+const TRIP_COLUMN_LABELS = { date: "Date", place: "Place", purpose: "Purpose", client: "Client", kms: "Km" };
+
+/* Same label a field shows on the review screen, extended to array
+   cell paths (e.g. "line_items[2].total" -> "Items, row 3, Amount")
+   the review screen doesn't have a single label for since it renders
+   those as table cells, not field rows. */
+function humanFieldLabel(doc, fieldPath) {
+  const arrayMatch = fieldPath.match(/^(line_items|travel_entries)\[(\d+)\](?:\.(.+))?$/);
+  if (arrayMatch) {
+    const [, root, indexStr, subKey] = arrayMatch;
+    const rowLabel = root === "line_items" ? "Items" : "Trips";
+    const rowNumber = Number(indexStr) + 1;
+    if (!subKey) return `${rowLabel}, row ${rowNumber}`;
+    const columnLabels = root === "line_items" ? ITEM_COLUMN_LABELS : TRIP_COLUMN_LABELS;
+    return `${rowLabel}, row ${rowNumber}, ${columnLabels[subKey] || subKey}`;
+  }
+  const field = (doc.review && doc.review.fields || []).find((f) => f.key === fieldPath);
+  if (field) return field.label;
+  if (fieldPath === "currency") return "Currency";
+  return fieldPath;
+}
+
+function formatCorrectionValue(value, fieldPath, currency) {
+  if (value === null || value === undefined) return "–";
+  if (typeof value === "object") {
+    return Object.entries(value).map(([k, v]) => `${k}: ${v}`).join(", ");
+  }
+  if (isMoneyFieldPath(fieldPath)) return fmtMoney(value, currency);
+  return String(value);
+}
+
 function correctionsSummaryHtml(claim) {
   const rows = [];
   for (const doc of claim.documents) {
+    const currency = doc.review ? doc.review.currency : null;
     for (const c of doc.corrections || []) {
-      rows.push({ doc: doc.original_name, field: c.field_path, ai: c.ai_value, you: c.employee_value, reason: c.reason });
+      rows.push({
+        doc: doc.original_name,
+        field: humanFieldLabel(doc, c.field_path),
+        ai: formatCorrectionValue(c.ai_value, c.field_path, currency),
+        you: formatCorrectionValue(c.employee_value, c.field_path, currency),
+        reason: c.reason,
+      });
     }
   }
   if (rows.length === 0) return "";
@@ -584,9 +668,22 @@ function docRowHtml(d) {
   const chip = chipFor(d);
   return `
     <a class="doc-row" href="#/documents/${d.id}">
-      <span class="name">${escapeHtml(d.original_name)}</span>
+      <span class="name">${escapeHtml(docRowLabel(d))}</span>
       <span class="chip ${chip.cls}">${chip.label}</span>
     </a>`;
+}
+
+/* "<type label> · <amount>" once the document has been read (e.g.
+   "Hotel receipt · $780.70") -- falls back to the uploaded filename
+   while still processing/failed, before there's a type or amount to
+   show. Amount is omitted for a type with none to report (e.g. an
+   approval email). Same on the claim page whether it's still a draft
+   or already submitted -- this doesn't depend on claim/document status. */
+function docRowLabel(d) {
+  if (!d.review) return d.original_name;
+  const typeLabel = documentTypeLabel(d.review.document_type);
+  if (d.review.amount === null || d.review.amount === undefined) return typeLabel;
+  return `${typeLabel} · ${fmtMoney(d.review.amount, d.review.currency)}`;
 }
 
 function renderClaimActionBar(claim, submitDisabled, submitReason) {

@@ -192,6 +192,10 @@ def test_full_ui_flow_every_button(live_server):
         page.wait_for_selector(".chip-confirmed")
         page.reload()
         page.wait_for_selector(".chip-confirmed")
+        # prior-prompt item 5: document rows show "<type label> · <amount>",
+        # not the raw uploaded filename
+        assert page.locator(".doc-row", has_text="Phone bill").count() == 1
+        assert page.locator(".doc-row .name", has_text="₹1,417.18").count() == 1
         shot(page, "06_claim_page_confirmed_desktop.png")
 
         # ---- Upload a second (throwaway) doc and remove it ----
@@ -199,7 +203,7 @@ def test_full_ui_flow_every_button(live_server):
         page.wait_for_selector(".doc-row >> nth=1")
         page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
         doc_rows_before = page.locator(".doc-row").count()
-        page.locator(".doc-row", has_text="Local conveyance").click()
+        page.locator(".doc-row", has_text="Conveyance form").click()
         page.wait_for_selector("#btn-remove")
         page.click("#btn-remove")
         page.wait_for_selector("#inline-remove #confirm-remove")  # inline confirm, no browser dialog
@@ -214,7 +218,7 @@ def test_full_ui_flow_every_button(live_server):
         # ---- Upload the approval correspondence (read-only, no Confirm) ----
         page.set_input_files("#file-input", str(UPLOADS_DIR / "May-26 mail approval.pdf"))
         page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
-        page.locator(".doc-row", has_text="mail approval").click()
+        page.locator(".doc-row", has_text="Approval email").click()
         page.wait_for_selector("#fields-container")
         assert page.locator("#btn-confirm").count() == 0  # no Confirm button for a read-only doc
         assert page.locator(".read-only-note").count() == 1
@@ -241,9 +245,27 @@ def test_full_ui_flow_every_button(live_server):
         assert_no_horizontal_overflow(page)
         shot(page, "07_claim_page_submitted_desktop.png")
 
-        # a submitted claim has no dropzone / editable note
+        # a submitted claim has no dropzone, and the note (set above,
+        # while still a draft) now shows as plain read-only text -- not
+        # an editable control at all, not even a readonly one
         assert page.locator("#dropzone").count() == 0
-        assert page.get_attribute("#note-field", "readonly") is not None
+        assert page.locator("#note-field").count() == 0
+        assert page.get_by_text("Daily allowance line explained separately.").count() == 1
+        assert page.get_by_text("Waiting for your manager's approval").count() == 1
+
+        # the total is shown exactly once on a submitted claim (the
+        # draft-only bottom total row must be gone)
+        assert page.locator(".claim-total-row").count() == 0
+        assert page.get_by_text("Total:").count() == 1
+
+        # prior-prompt item 5: no input/textarea/button anywhere on a
+        # submitted claim page except plain <a> navigation links
+        assert page.locator("input, textarea, button").count() == 0
+
+        # ...and the same holds on a submitted claim's own document page
+        page.locator(".doc-row").first.click()
+        page.wait_for_selector("#fields-container")
+        assert page.locator("input, textarea, button").count() == 0
 
         browser.close()
 
