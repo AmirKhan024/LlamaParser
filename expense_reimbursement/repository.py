@@ -21,6 +21,10 @@ from models import (
 
 SEED_EMPLOYEE_NAME = "Nasir Ahmed Khan"
 SEED_EMPLOYEE_EMAIL = "nasir.khan@example.com"
+# Senior Manager per policy/company.md -- see policy/expense_policy.md
+# section 2.1 for what grade L4 means for travel/accommodation caps.
+SEED_EMPLOYEE_GRADE = "L4"
+SEED_EMPLOYEE_BASE_CITY = "Mumbai"
 
 
 # ---------------------------------------------------------------- employees
@@ -29,7 +33,13 @@ def get_or_create_seed_employee(session: Session) -> Employee:
     employee = session.scalar(select(Employee).where(Employee.email == SEED_EMPLOYEE_EMAIL))
     if employee is not None:
         return employee
-    employee = Employee(name=SEED_EMPLOYEE_NAME, email=SEED_EMPLOYEE_EMAIL, role="employee")
+    employee = Employee(
+        name=SEED_EMPLOYEE_NAME,
+        email=SEED_EMPLOYEE_EMAIL,
+        role="employee",
+        grade=SEED_EMPLOYEE_GRADE,
+        base_city=SEED_EMPLOYEE_BASE_CITY,
+    )
     session.add(employee)
     session.commit()
     session.refresh(employee)

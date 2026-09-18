@@ -44,6 +44,11 @@ class Employee(Base):
         UUID(as_uuid=True), ForeignKey("employees.id"), nullable=True
     )
     department: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # Grade (L1-L6) and base city, per policy/expense_policy.md section 2 --
+    # unused by Stage 1/2 logic, provisioned for Stage 3's policy engine
+    # (per-grade/city caps need to know who's claiming).
+    grade: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    base_city: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     claims: Mapped[list["Claim"]] = relationship(back_populates="employee")
 
