@@ -12,7 +12,42 @@ from typing import Any, Dict, Optional, Tuple, get_args
 from schemas import BaseClaim, DocumentType, GenericClaim, LocalConveyanceForm, RestaurantBill, TelecomBill, schema_for
 
 _CURRENCY_WORDS = re.compile(r"Rs\.?|INR|₹|\$", re.IGNORECASE)
-TOLERANCE = Decimal("0.5")
+
+# 0.5 was loose enough that a real employee edit (780.75 -> 780.70, a
+# $0.05 change) still passed every check -- an absolute 0.5 tolerance is
+# right for genuine rupee round-off, but wrong as a default: it also
+# hides a $0.05-$0.49 typo or a deliberately padded amount. 0.01 is the
+# default; 1.00 is only used when the document itself gives evidence of
+# a round-off line (see _has_roundoff_evidence) -- never assumed.
+TOLERANCE_DEFAULT = Decimal("0.01")
+TOLERANCE_WITH_ROUNDOFF = Decimal("1.00")
+TOLERANCE = TOLERANCE_DEFAULT  # kept for anything still importing the old name directly
+
+_ROUNDOFF_PATTERN = re.compile(r"round[\s\-]?off|rounding", re.IGNORECASE)
+
+
+def _has_roundoff_evidence(markdown_text: str, claim: Optional[BaseClaim] = None) -> bool:
+    """True only when the document's own markdown, or a field/
+    additional_field the model actually extracted, mentions round-off --
+    never inferred from the check itself being off by less than a rupee,
+    which would make this circular (any small mismatch "explained" by
+    assuming round-off)."""
+    if markdown_text and _ROUNDOFF_PATTERN.search(markdown_text):
+        return True
+    if claim is not None:
+        additional = getattr(claim, "additional_fields", None) or {}
+        for key in additional:
+            if _ROUNDOFF_PATTERN.search(key):
+                return True
+    return False
+
+
+def _tolerance_for(markdown_text: str, claim: Optional[BaseClaim] = None) -> Decimal:
+    return TOLERANCE_WITH_ROUNDOFF if _has_roundoff_evidence(markdown_text, claim) else TOLERANCE_DEFAULT
+
+
+def _tolerance_note(tolerance: Decimal) -> str:
+    return " (round-off line found on the document)" if tolerance == TOLERANCE_WITH_ROUNDOFF else ""
 
 GSTIN_PATTERN = re.compile(r'^\d{2}[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$')
 
@@ -330,55 +365,57 @@ def check_gstin_format(claim: BaseClaim) -> list[CheckResult]:
     return results
 
 
-def validate_claim(claim: BaseClaim) -> list[CheckResult]:
+def validate_claim(claim: BaseClaim, markdown_text: str = "") -> list[CheckResult]:
     checks: list[CheckResult] = []
     if isinstance(claim, TelecomBill):
-        checks.extend(_validate_telecom_bill(claim))
+        checks.extend(_validate_telecom_bill(claim, markdown_text))
     elif isinstance(claim, RestaurantBill):
-        checks.extend(_validate_restaurant_bill(claim))
+        checks.extend(_validate_restaurant_bill(claim, markdown_text))
     elif isinstance(claim, LocalConveyanceForm):
-        checks.extend(_validate_local_conveyance_form(claim))
+        checks.extend(_validate_local_conveyance_form(claim, markdown_text))
     elif isinstance(claim, GenericClaim):
         # ApprovalCorrespondence is a BaseClaim sibling, not a GenericClaim
         # subclass, so it's naturally excluded here -- an email has no
         # subtotal/tax/line-item totals to check.
-        checks.extend(_validate_generic_claim(claim))
+        checks.extend(_validate_generic_claim(claim, markdown_text))
     checks.extend(check_gstin_format(claim))
     return checks
 
 
-def _validate_telecom_bill(claim: TelecomBill) -> list[CheckResult]:
+def _validate_telecom_bill(claim: TelecomBill, markdown_text: str = "") -> list[CheckResult]:
     if claim.subtotal is None or claim.tax is None or claim.total is None:
         return [CheckResult(
             "subtotal + tax == total", False,
             f"cannot check: subtotal={claim.subtotal}, tax={claim.tax}, total={claim.total} (one or more missing)",
         )]
+    tolerance = _tolerance_for(markdown_text, claim)
     computed = claim.subtotal + claim.tax
-    passed = _isclose(computed, claim.total)
+    passed = _isclose(computed, claim.total, tolerance)
     return [CheckResult(
         "subtotal + tax == total", passed,
         f"{claim.subtotal} + {claim.tax} = {computed}, printed total = {claim.total} "
-        f"(diff {abs(computed - claim.total)}, tolerance {TOLERANCE})",
+        f"(diff {abs(computed - claim.total)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
     )]
 
 
-def _validate_restaurant_bill(claim: RestaurantBill) -> list[CheckResult]:
+def _validate_restaurant_bill(claim: RestaurantBill, markdown_text: str = "") -> list[CheckResult]:
     if claim.subtotal is None or claim.cgst is None or claim.sgst is None or claim.grand_total is None:
         return [CheckResult(
             "subtotal + cgst + sgst == grand_total", False,
             f"cannot check: subtotal={claim.subtotal}, cgst={claim.cgst}, "
             f"sgst={claim.sgst}, grand_total={claim.grand_total} (one or more missing)",
         )]
+    tolerance = _tolerance_for(markdown_text, claim)
     computed = claim.subtotal + claim.cgst + claim.sgst
-    passed = _isclose(computed, claim.grand_total)
+    passed = _isclose(computed, claim.grand_total, tolerance)
     return [CheckResult(
         "subtotal + cgst + sgst == grand_total", passed,
         f"{claim.subtotal} + {claim.cgst} + {claim.sgst} = {computed}, printed grand_total = {claim.grand_total} "
-        f"(diff {abs(computed - claim.grand_total)}, tolerance {TOLERANCE})",
+        f"(diff {abs(computed - claim.grand_total)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
     )]
 
 
-def _validate_local_conveyance_form(claim: LocalConveyanceForm) -> list[CheckResult]:
+def _validate_local_conveyance_form(claim: LocalConveyanceForm, markdown_text: str = "") -> list[CheckResult]:
     results = []
 
     kms_values = []
@@ -426,12 +463,12 @@ def _validate_local_conveyance_form(claim: LocalConveyanceForm) -> list[CheckRes
             f"total_kms ({claim.total_kms}) NOR total_conveyance_amount ({claim.total_conveyance_amount})",
         ))
 
-    results.append(_check_conveyance_total(claim))
+    results.append(_check_conveyance_total(claim, markdown_text))
 
     return results
 
 
-def _check_conveyance_total(claim: LocalConveyanceForm) -> CheckResult:
+def _check_conveyance_total(claim: LocalConveyanceForm, markdown_text: str = "") -> CheckResult:
     """The real balancing identity (verified manually against the source
     PDF), now that vehicle/mobile amounts are named schema fields rather
     than living in additional_fields -- replaces the old loose ">="
@@ -456,13 +493,14 @@ def _check_conveyance_total(claim: LocalConveyanceForm) -> CheckResult:
             f"mobile_allowance_amount={claim.mobile_allowance_amount}, "
             f"total_claimed={claim.total_claimed} (nothing to sum, or total_claimed missing)",
         )
+    tolerance = _tolerance_for(markdown_text, claim)
     computed = sum(present, Decimal("0"))
-    passed = _isclose(computed, claim.total_claimed)
+    passed = _isclose(computed, claim.total_claimed, tolerance)
     return CheckResult(
         name, passed,
         f"{' + '.join(str(p) for p in present)} = {computed}, "
         f"printed total_claimed = {claim.total_claimed} "
-        f"(diff {abs(computed - claim.total_claimed)}, tolerance {TOLERANCE})",
+        f"(diff {abs(computed - claim.total_claimed)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
     )
 
 
@@ -485,7 +523,7 @@ def _find_amount_in_additional_fields(claim: GenericClaim, pattern: re.Pattern) 
     return None
 
 
-def _validate_generic_claim(claim: GenericClaim) -> list[CheckResult]:
+def _validate_generic_claim(claim: GenericClaim, markdown_text: str = "") -> list[CheckResult]:
     """Opportunistic, unlike the other per-type checks: a generic
     receipt may not print a subtotal/tax breakdown at all (a simple taxi
     fare, say), and that's not a data quality problem -- so this returns
@@ -494,6 +532,7 @@ def _validate_generic_claim(claim: GenericClaim) -> list[CheckResult]:
     receipt for review.
     """
     results: list[CheckResult] = []
+    tolerance = _tolerance_for(markdown_text, claim)
 
     subtotal = _find_amount_in_additional_fields(claim, _SUBTOTAL_FIELD_HINT)
     tax = _find_amount_in_additional_fields(claim, _TAX_FIELD_HINT)
@@ -502,11 +541,11 @@ def _validate_generic_claim(claim: GenericClaim) -> list[CheckResult]:
 
     if subtotal is not None and tax is not None and target is not None:
         computed = subtotal + tax
-        passed = _isclose(computed, target)
+        passed = _isclose(computed, target, tolerance)
         results.append(CheckResult(
             "subtotal + tax == amount", passed,
             f"{subtotal} + {tax} = {computed}, amount = {target} "
-            f"(diff {abs(computed - target)}, tolerance {TOLERANCE})",
+            f"(diff {abs(computed - target)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
         ))
 
     item_totals = [item.total for item in claim.line_items if item.total is not None]
@@ -515,11 +554,11 @@ def _validate_generic_claim(claim: GenericClaim) -> list[CheckResult]:
         compare_to = subtotal if subtotal is not None else claim.amount
         compare_label = "subtotal" if subtotal is not None else "amount"
         if compare_to is not None:
-            passed = _isclose(items_sum, compare_to)
+            passed = _isclose(items_sum, compare_to, tolerance)
             results.append(CheckResult(
                 f"sum(line items) == {compare_label}", passed,
                 f"sum of {len(item_totals)} item totals = {items_sum}, {compare_label} = {compare_to} "
-                f"(diff {abs(items_sum - compare_to)}, tolerance {TOLERANCE})",
+                f"(diff {abs(items_sum - compare_to)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
             ))
 
     return results

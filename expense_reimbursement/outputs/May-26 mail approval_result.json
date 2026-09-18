@@ -4,30 +4,32 @@
   "clean_json": {
     "document_type": "approval_correspondence",
     "vendor_name": null,
-    "date": null,
+    "date": "12 June 2026",
     "amount": null,
     "currency": null,
     "additional_fields": {
-      "form_name": "NASIR AHMED KHAN"
+      "form_name": "NASIR AHMED KHAN",
+      "company": "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division"
     },
     "extraction_notes": [
-      "extracted approval_status as pending because the email is a request for approval",
-      "captured form title from table header as related_form_title"
+      "Set approval_status to pending based on request email",
+      "Extracted sender and recipient names from email headers"
     ],
-    "confidence": 0.85,
-    "sender": "Nasir <nasir@coffeeday.com>",
-    "recipient": "Sanjay K S <sanjayks@coffeeday.com>",
+    "confidence": 0.79,
+    "sender": "Nasir",
+    "recipient": "Sanjay K S",
     "sent_date": "12 June 2026 03:44 PM",
-    "subject": "May-26 Local Convayance",
+    "subject": "May-26 Local Convayence",
     "approval_status": "pending",
     "related_form_title": "LOCAL CONVEYANCE REIMBURSEMENT FORM"
   },
   "additional_fields": {
-    "form_name": "NASIR AHMED KHAN"
+    "form_name": "NASIR AHMED KHAN",
+    "company": "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division"
   },
   "extraction_notes": [
-    "extracted approval_status as pending because the email is a request for approval",
-    "captured form title from table header as related_form_title"
+    "Set approval_status to pending based on request email",
+    "Extracted sender and recipient names from email headers"
   ],
   "validation": [],
   "completeness_warnings": [],
@@ -38,7 +40,7 @@
       {
         "key": "sender",
         "label": "From",
-        "value": "Nasir <nasir@coffeeday.com>",
+        "value": "Nasir",
         "editable": false
       },
       {
@@ -60,11 +62,11 @@
     "needs_confirm": false,
     "needs_review": false
   },
-  "duration_seconds": 10.233999999938533,
+  "duration_seconds": 16.844000000040978,
   "tokens": {
     "prompt": 1795,
-    "completion": 753,
-    "total": 2548
+    "completion": 995,
+    "total": 2790
   },
-  "estimated_cost_usd": "0.00083400"
+  "estimated_cost_usd": "0.00101550"
 }

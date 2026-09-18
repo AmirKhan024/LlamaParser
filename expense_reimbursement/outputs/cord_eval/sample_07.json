@@ -8,14 +8,14 @@
     "vendor_name": null,
     "date": null,
     "amount": "111000",
-    "currency": "Rp.",
+    "currency": "Rp",
     "additional_fields": {
       "subtotal": "100,909",
-      "tax": "10,091",
+      "pb1_tax": "10,091",
       "cash": "Rp.111,000"
     },
     "extraction_notes": [],
-    "confidence": 0.66,
+    "confidence": 0.85,
     "line_items": [
       {
         "name": "Kupon 15",
@@ -93,10 +93,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 10.51500000001397,
+  "duration_seconds": 1.25,
   "tokens": {
-    "prompt": 1523,
-    "completion": 631,
-    "total": 2154
+    "prompt": 1673,
+    "completion": 430,
+    "total": 2103
   }
 }

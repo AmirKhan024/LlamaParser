@@ -220,6 +220,35 @@ running app -- browser or a live `uvicorn` process -- not by inspection):
     than the CLI (`run.py`), which never has this problem since nothing
     else's event loop is running alongside it.
 
+## Second bug-fix pass: found by using the app after that
+
+**Tolerance was too loose.** `TOLERANCE = Decimal("0.5")` was right for
+genuine rupee round-off but meant any employee edit within ±0.49 of the
+AI value passed every check silently -- reported directly: editing
+Hotel-Receipt.png's amount from 780.75 to 780.70 (a $0.05 change) went
+through with no flag at all. Default tightened to 0.01; 1.00 is only
+used when the document's own markdown (or an extracted field) actually
+mentions "round off"/"rounding" -- never inferred from the check itself
+being off by less than a rupee, which would make the exception
+circular. Verified before changing anything else, per instruction:
+re-ran the CORD eval and all 4 real documents fresh.
+
+- **CORD eval**: `grand_total 14/15 (93%)`, unchanged from the
+  documented baseline -- expected, since `eval_cord.py`'s field-value
+  scoring never calls `_isclose`/`TOLERANCE` at all (confirmed by
+  reading it), so this tolerance change literally cannot affect it. The
+  subtotal (64% vs the previous run's 82-91%) and tax_total (33% vs 50%)
+  numbers moved, but that's the same run-to-run LLM variance already
+  documented above, not this change -- nothing here is tolerance-driven.
+- **The 4 real documents**: no previously-passing check now fails.
+  `may26_mobile.pdf` (diff 0.00) and `May-26 Local conveyance.pdf`
+  (diff 0) both still pass at the tight 0.01 tolerance because they were
+  already exact matches. `Hotel-Receipt.png`'s one failing check
+  (items-sum vs the tax-inclusive amount, diff 86.75) was already
+  failing by two orders of magnitude more than even the *old* 0.5
+  tolerance allowed -- unrelated to this change, same limitation
+  documented in the first bug-fix pass above.
+
 ## Bug-fix pass: 8 bugs found by actually using the app
 
 After stage 1 shipped, using it for real (uploading a real dollar hotel

@@ -8,16 +8,14 @@
     "vendor_name": null,
     "date": null,
     "amount": "281435",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "Service": "17,850",
-      "PB1": "25,585",
       "Coupon": "100,000",
       "CASH": "200,000",
       "Change": "18,565"
     },
     "extraction_notes": [
-      "Inferred line item total equals unit price because quantity is 1"
+      "currency not specified in document"
     ],
     "confidence": 0.85,
     "restaurant_gstin": null,
@@ -29,38 +27,50 @@
       {
         "name": "RedVelvet Cheese Slc",
         "quantity": "1",
-        "unit_price": "38000",
+        "unit_price": null,
         "total": "38000"
       },
       {
         "name": "Chicken Baked Rice",
         "quantity": "1",
-        "unit_price": "55000",
+        "unit_price": null,
         "total": "55000"
       },
       {
         "name": "Fish n Chips",
         "quantity": "1",
-        "unit_price": "65000",
+        "unit_price": null,
         "total": "65000"
       },
       {
         "name": "Mushroom Soup",
         "quantity": "1",
-        "unit_price": "35000",
+        "unit_price": null,
         "total": "35000"
       },
       {
         "name": "Chamomile",
         "quantity": "1",
-        "unit_price": "25000",
+        "unit_price": null,
         "total": "25000"
       },
       {
         "name": "Iced Tea",
         "quantity": "1",
-        "unit_price": "20000",
+        "unit_price": null,
         "total": "20000"
+      },
+      {
+        "name": "Service",
+        "quantity": null,
+        "unit_price": null,
+        "total": "17850"
+      },
+      {
+        "name": "PB1",
+        "quantity": null,
+        "unit_price": null,
+        "total": "25585"
       }
     ]
   },
@@ -111,7 +121,7 @@
   "line_item_score": {
     "matched": 6,
     "missed": 0,
-    "extra": 0,
+    "extra": 2,
     "total_gt": 6,
     "matched_detail": [
       {
@@ -123,7 +133,7 @@
         "extracted": {
           "name": "RedVelvet Cheese Slc",
           "quantity": "1",
-          "unit_price": "38000",
+          "unit_price": null,
           "total": "38000"
         },
         "name_ratio": 1.0
@@ -137,7 +147,7 @@
         "extracted": {
           "name": "Chicken Baked Rice",
           "quantity": "1",
-          "unit_price": "55000",
+          "unit_price": null,
           "total": "55000"
         },
         "name_ratio": 1.0
@@ -151,7 +161,7 @@
         "extracted": {
           "name": "Fish n Chips",
           "quantity": "1",
-          "unit_price": "65000",
+          "unit_price": null,
           "total": "65000"
         },
         "name_ratio": 1.0
@@ -165,7 +175,7 @@
         "extracted": {
           "name": "Mushroom Soup",
           "quantity": "1",
-          "unit_price": "35000",
+          "unit_price": null,
           "total": "35000"
         },
         "name_ratio": 1.0
@@ -179,7 +189,7 @@
         "extracted": {
           "name": "Chamomile",
           "quantity": "1",
-          "unit_price": "25000",
+          "unit_price": null,
           "total": "25000"
         },
         "name_ratio": 1.0
@@ -193,19 +203,32 @@
         "extracted": {
           "name": "Iced Tea",
           "quantity": "1",
-          "unit_price": "20000",
+          "unit_price": null,
           "total": "20000"
         },
         "name_ratio": 1.0
       }
     ],
     "missed_detail": [],
-    "extra_detail": []
+    "extra_detail": [
+      {
+        "name": "Service",
+        "quantity": null,
+        "unit_price": null,
+        "total": "17850"
+      },
+      {
+        "name": "PB1",
+        "quantity": null,
+        "unit_price": null,
+        "total": "25585"
+      }
+    ]
   },
-  "duration_seconds": 15.125,
+  "duration_seconds": 2.297000000020489,
   "tokens": {
-    "prompt": 1647,
-    "completion": 772,
-    "total": 2419
+    "prompt": 1797,
+    "completion": 856,
+    "total": 2653
   }
 }

@@ -8,13 +8,13 @@
     "vendor_name": null,
     "date": null,
     "amount": "230000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "payment_method": "CASH",
-      "change": "0"
+      "CASH": "230,000",
+      "CHANGE": "0"
     },
     "extraction_notes": [
-      "vendor_name not found in document"
+      "Inferred quantity 1 from leading '1' before item name"
     ],
     "confidence": 0.7,
     "line_items": [
@@ -69,10 +69,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 5.75,
+  "duration_seconds": 6.608999999938533,
   "tokens": {
-    "prompt": 1504,
-    "completion": 512,
-    "total": 2016
+    "prompt": 1654,
+    "completion": 463,
+    "total": 2117
   }
 }

@@ -8,7 +8,7 @@
     "vendor_name": null,
     "date": null,
     "amount": "28000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
       "sub_total": "28,000",
       "total_sales": "28,000",
@@ -18,7 +18,7 @@
       "queue_no": "102"
     },
     "extraction_notes": [],
-    "confidence": 0.9,
+    "confidence": 0.85,
     "line_items": [
       {
         "name": "JASMINE MT ( L )",
@@ -96,10 +96,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 2.0,
+  "duration_seconds": 1.9380000000819564,
   "tokens": {
-    "prompt": 1534,
-    "completion": 403,
-    "total": 1937
+    "prompt": 1684,
+    "completion": 673,
+    "total": 2357
   }
 }

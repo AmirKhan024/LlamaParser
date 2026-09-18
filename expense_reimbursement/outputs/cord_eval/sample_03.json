@@ -8,21 +8,20 @@
     "vendor_name": "Dynamic Bakery & Cake Natural",
     "date": null,
     "amount": "11000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "SUBTOTAL": "11,000",
-      "TOTAL": "11,000",
-      "CASH": "11,000"
+      "subtotal": "11,000",
+      "cash": "11,000"
     },
     "extraction_notes": [
-      "could not parse amount '@11000' (unexpected characters)"
+      "interpreted the first row as quantity 1, unit price 11,000, total 11,000 for item DONAT GULA"
     ],
-    "confidence": 0.85,
+    "confidence": 0.78,
     "line_items": [
       {
         "name": "DONAT GULA",
-        "quantity": "1X",
-        "unit_price": null,
+        "quantity": "1",
+        "unit_price": "11000",
         "total": "11000"
       }
     ]
@@ -60,8 +59,8 @@
         },
         "extracted": {
           "name": "DONAT GULA",
-          "quantity": "1X",
-          "unit_price": null,
+          "quantity": "1",
+          "unit_price": "11000",
           "total": "11000"
         },
         "name_ratio": 1.0
@@ -70,10 +69,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.797000000020489,
+  "duration_seconds": 1.6089999999385327,
   "tokens": {
-    "prompt": 1552,
-    "completion": 593,
-    "total": 2145
+    "prompt": 1702,
+    "completion": 527,
+    "total": 2229
   }
 }

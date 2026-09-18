@@ -8,18 +8,17 @@
     "vendor_name": null,
     "date": null,
     "amount": "51.300",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "receipt_title": "A FUNG receipt",
-      "document_title": "OD JOURNEY",
       "cash_paid": "52.000",
       "change_returned": "700"
     },
     "extraction_notes": [
-      "mapped DPP to subtotal",
-      "mapped TAX 10.00 % to tax in additional_fields"
+      "inferred subtotal from DPP line",
+      "inferred tax amount from TAX 10.00 % line and recorded as additional field",
+      "cash paid and change returned captured from TUNAI and KEMBALI lines"
     ],
-    "confidence": 0.6,
+    "confidence": 0.4,
     "restaurant_gstin": null,
     "subtotal": "46.636",
     "cgst": null,
@@ -105,10 +104,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 6.592999999993481,
+  "duration_seconds": 8.797000000020489,
   "tokens": {
-    "prompt": 1621,
-    "completion": 933,
-    "total": 2554
+    "prompt": 1771,
+    "completion": 690,
+    "total": 2461
   }
 }

@@ -8,18 +8,16 @@
     "amount": "780.75",
     "currency": "USD",
     "additional_fields": {
-      "guest_name": "John Smith",
-      "room_number": "412",
       "check_in": "11/15/2024",
       "check_out": "11/18/2024",
-      "time": "10:52:41 PM",
+      "guest_name": "John Smith",
+      "room_number": "412",
       "payment_method": "AMEX",
-      "card_masked": "****9876",
-      "bar_code": "5556247758110959",
-      "logo": "hotel icon"
+      "card_number": "****9876",
+      "bar_code": "5556247758110959"
     },
     "extraction_notes": [],
-    "confidence": 0.85,
+    "confidence": 0.9,
     "line_items": [
       {
         "name": "ROOM - KING SUITE",
@@ -48,22 +46,20 @@
     ]
   },
   "additional_fields": {
-    "guest_name": "John Smith",
-    "room_number": "412",
     "check_in": "11/15/2024",
     "check_out": "11/18/2024",
-    "time": "10:52:41 PM",
+    "guest_name": "John Smith",
+    "room_number": "412",
     "payment_method": "AMEX",
-    "card_masked": "****9876",
-    "bar_code": "5556247758110959",
-    "logo": "hotel icon"
+    "card_number": "****9876",
+    "bar_code": "5556247758110959"
   },
   "extraction_notes": [],
   "validation": [
     {
       "name": "sum(line items) == amount",
       "passed": false,
-      "detail": "sum of 4 item totals = 694.00, amount = 780.75 (diff 86.75, tolerance 0.5)"
+      "detail": "sum of 4 item totals = 694.00, amount = 780.75 (diff 86.75, tolerance 0.01)"
     }
   ],
   "completeness_warnings": [],
@@ -135,11 +131,11 @@
     "needs_confirm": true,
     "needs_review": true
   },
-  "duration_seconds": 14.25,
+  "duration_seconds": 13.795999999972992,
   "tokens": {
     "prompt": 1888,
-    "completion": 961,
-    "total": 2849
+    "completion": 916,
+    "total": 2804
   },
-  "estimated_cost_usd": "0.00100395"
+  "estimated_cost_usd": "0.00097020"
 }

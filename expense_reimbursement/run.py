@@ -86,7 +86,7 @@ def process_one(pdf_path: Path) -> dict:
         print("  (none)")
 
     print("\nValidation:")
-    checks = validate_claim(claim)
+    checks = validate_claim(claim, markdown)
     _print_checks(checks)
     checks_as_dicts = [{"name": c.name, "passed": c.passed, "detail": c.detail} for c in checks]
 

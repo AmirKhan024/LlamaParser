@@ -8,20 +8,22 @@
     "vendor_name": null,
     "date": null,
     "amount": "36000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
+      "Discount": "0 %",
       "Tunai": "50000",
       "Kembalian": "14000"
     },
     "extraction_notes": [
-      "Set amount to Sub Total value as total amount due; no explicit total provided."
+      "vendor name not found",
+      "date not found"
     ],
-    "confidence": 0.7,
+    "confidence": 0.56,
     "restaurant_gstin": null,
     "subtotal": "36000",
     "cgst": null,
     "sgst": null,
-    "grand_total": null,
+    "grand_total": "36000",
     "line_items": [
       {
         "name": "Bumbu Kaldu Ayam 1",
@@ -74,10 +76,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 10.938000000081956,
+  "duration_seconds": 2.125,
   "tokens": {
-    "prompt": 1543,
-    "completion": 733,
-    "total": 2276
+    "prompt": 1693,
+    "completion": 753,
+    "total": 2446
   }
 }

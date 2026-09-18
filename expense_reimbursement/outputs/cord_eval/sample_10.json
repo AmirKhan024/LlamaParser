@@ -10,13 +10,14 @@
     "amount": "17000",
     "currency": "IDR",
     "additional_fields": {
-      "cash_idr": "20,000",
+      "cash": "20,000",
       "change_due": "3,000"
     },
     "extraction_notes": [
-      "interpreted line item: CINNAMON SUGAR quantity 1 unit_price 17,000 total 17,000 based on table rows"
+      "inferred currency IDR from 'CASH IDR' label",
+      "combined item name, quantity and unit price into a single line item"
     ],
-    "confidence": 0.6,
+    "confidence": 0.7,
     "restaurant_gstin": null,
     "subtotal": "17000",
     "cgst": null,
@@ -74,10 +75,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 17.57799999997951,
+  "duration_seconds": 2.844000000040978,
   "tokens": {
-    "prompt": 1584,
-    "completion": 661,
-    "total": 2245
+    "prompt": 1734,
+    "completion": 610,
+    "total": 2344
   }
 }

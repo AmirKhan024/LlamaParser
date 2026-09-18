@@ -2,27 +2,31 @@
   "index": 5,
   "success": true,
   "error": null,
-  "document_type": "generic_receipt",
+  "document_type": "restaurant_bill",
   "clean_json": {
-    "document_type": "generic_receipt",
+    "document_type": "restaurant_bill",
     "vendor_name": null,
     "date": null,
     "amount": "31.000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "subtotal": "28.182",
-      "tax": "2.818",
-      "cash": "31.000"
+      "tax": "2.818"
     },
     "extraction_notes": [
-      "extracted line item from receipt entry TRAD KY TOAST CARTE with price 28.182 and quantity 1.00"
+      "inferred line item quantity from \"ITEMS 1.00\" entry",
+      "mapped subtotal and grand total to respective fields"
     ],
-    "confidence": 0.78,
+    "confidence": 0.71,
+    "restaurant_gstin": null,
+    "subtotal": "28.182",
+    "cgst": null,
+    "sgst": null,
+    "grand_total": "31.000",
     "line_items": [
       {
         "name": "TRAD KY TOAST CARTE",
         "quantity": "1.00",
-        "unit_price": null,
+        "unit_price": "28.182",
         "total": "28.182"
       }
     ]
@@ -61,7 +65,7 @@
         "extracted": {
           "name": "TRAD KY TOAST CARTE",
           "quantity": "1.00",
-          "unit_price": null,
+          "unit_price": "28.182",
           "total": "28.182"
         },
         "name_ratio": 1.0
@@ -70,10 +74,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 3.672000000020489,
+  "duration_seconds": 2.125,
   "tokens": {
-    "prompt": 1528,
-    "completion": 539,
-    "total": 2067
+    "prompt": 1678,
+    "completion": 749,
+    "total": 2427
   }
 }

@@ -8,15 +8,15 @@
     "vendor_name": null,
     "date": null,
     "amount": "91000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
       "TOTAL": "91000",
       "CASH": "91000"
     },
     "extraction_notes": [
-      "Inferred overall amount from TOTAL row"
+      "Set amount to TOTAL value 91000 as the overall receipt amount"
     ],
-    "confidence": 0.78,
+    "confidence": 0.85,
     "line_items": [
       {
         "name": "J.STB PROMO",
@@ -119,10 +119,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.827999999979511,
+  "duration_seconds": 1.3589999999385327,
   "tokens": {
-    "prompt": 1525,
-    "completion": 595,
-    "total": 2120
+    "prompt": 1675,
+    "completion": 390,
+    "total": 2065
   }
 }

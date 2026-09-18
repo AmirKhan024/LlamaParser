@@ -306,7 +306,7 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
     doc_type = DocumentType(document_type_value)
     claim = build_claim(doc_type, fields, markdown_text or "")
     clean_json = claim.model_dump(mode="json")
-    checks = validate_claim(claim)
+    checks = validate_claim(claim, markdown_text or "")
     checks_as_dicts = [{"name": c.name, "passed": c.passed, "detail": c.detail} for c in checks]
     completeness_warnings = check_completeness(markdown_text or "", clean_json, claim.document_type.value)
     review_input = {**clean_json, "validation": checks_as_dicts, "completeness_warnings": completeness_warnings}

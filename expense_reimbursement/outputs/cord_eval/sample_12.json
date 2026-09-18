@@ -8,13 +8,15 @@
     "vendor_name": null,
     "date": null,
     "amount": "120000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
       "payment_method": "CC.Visa.BCA",
-      "change_returned": "0"
+      "total_kembalian": "0",
+      "total_items": "2",
+      "footer_page_number": "27"
     },
     "extraction_notes": [
-      "extracted unit_price from '@' prefixed values"
+      "extracted total amount from TOTAL (2 item) row"
     ],
     "confidence": 0.85,
     "line_items": [
@@ -94,10 +96,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 6.561999999918044,
+  "duration_seconds": 2.077999999979511,
   "tokens": {
-    "prompt": 1585,
-    "completion": 481,
-    "total": 2066
+    "prompt": 1735,
+    "completion": 626,
+    "total": 2361
   }
 }

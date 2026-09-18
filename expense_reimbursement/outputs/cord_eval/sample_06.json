@@ -8,20 +8,22 @@
     "vendor_name": "Tous Les Jours",
     "date": null,
     "amount": "46000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
       "cash": "50,000",
       "change": "4,000"
     },
     "extraction_notes": [
-      "extracted amount from TOTAL line as 46,000; currency not specified in document"
+      "date not found in document",
+      "GSTIN not present",
+      "currency not identified"
     ],
-    "confidence": 0.78,
+    "confidence": 0.7,
     "restaurant_gstin": null,
     "subtotal": null,
     "cgst": null,
     "sgst": null,
-    "grand_total": null,
+    "grand_total": "46000",
     "line_items": [
       {
         "name": "EGG TART",
@@ -124,10 +126,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 1.5,
+  "duration_seconds": 1.875,
   "tokens": {
-    "prompt": 1623,
-    "completion": 492,
-    "total": 2115
+    "prompt": 1773,
+    "completion": 703,
+    "total": 2476
   }
 }

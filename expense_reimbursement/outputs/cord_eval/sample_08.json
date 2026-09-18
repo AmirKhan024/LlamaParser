@@ -8,12 +8,13 @@
     "vendor_name": null,
     "date": null,
     "amount": "50000",
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
       "Sub Total": "45,455",
       "PB1 (10%)": "4,545",
       "Rounding": "0",
-      "Card Payment": "50,000"
+      "Card Payment": "50,000",
+      "Total": "50,000"
     },
     "extraction_notes": [],
     "confidence": 0.95,
@@ -119,10 +120,10 @@
     "missed_detail": [],
     "extra_detail": []
   },
-  "duration_seconds": 6.875,
+  "duration_seconds": 2.344000000040978,
   "tokens": {
-    "prompt": 1571,
-    "completion": 608,
-    "total": 2179
+    "prompt": 1721,
+    "completion": 638,
+    "total": 2359
   }
 }
