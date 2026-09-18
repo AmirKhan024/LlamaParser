@@ -14,7 +14,6 @@ psycopg-binary==3.3.4
 fastapi==0.115.0
 uvicorn==0.30.0
 python-multipart==0.0.9
-nest-asyncio==1.6.0
 
 # Tests (Phase 5)
 pytest==9.0.2

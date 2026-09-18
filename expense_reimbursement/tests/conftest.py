@@ -44,7 +44,15 @@ def clean_db():
 
 @pytest.fixture
 def client():
-    return TestClient(server.app)
+    # Must be entered as a context manager: that's what starts (and
+    # keeps alive) TestClient's own background event loop, which the
+    # pipeline's asyncio.create_task() background tasks need in order to
+    # actually run to completion between requests -- without it, a
+    # scheduled task never gets scheduled and every upload stays
+    # "processing" forever (confirmed directly: only the entered form
+    # let a task make any progress at all).
+    with TestClient(server.app) as c:
+        yield c
 
 
 @pytest.fixture

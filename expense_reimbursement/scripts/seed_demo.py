@@ -4,6 +4,7 @@ the cached outputs/*_result.json for each -- no LlamaParse/Groq calls,
 no API keys needed). Forces fake mode regardless of .env's own setting,
 since the whole point of this script is to work without credits."""
 
+import asyncio
 import hashlib
 import os
 import sys
@@ -50,7 +51,7 @@ def main() -> None:
                 mime_type="application/pdf",
             )
 
-        _run_pipeline(document_id, full_path, employee.id)
+        asyncio.run(_run_pipeline(document_id, full_path, employee.id))  # _run_pipeline is now async (item 7)
 
         with get_sessionmaker()() as session:
             refreshed = repository.get_document(session, document_id)

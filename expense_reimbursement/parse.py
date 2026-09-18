@@ -45,3 +45,34 @@ def parse_pdf(pdf_path: Path) -> Tuple[str, Dict[str, Any]]:
     )
 
     return markdown, raw_json
+
+
+async def aparse_pdf(pdf_path: Path) -> Tuple[str, Dict[str, Any]]:
+    """Async sibling of parse_pdf -- same behavior, same on-disk output,
+    via LlamaParse's own aparse() instead of parse(). Used by server.py's
+    background pipeline so it can run as a real asyncio task on the same
+    event loop uvicorn already owns, instead of a separate thread.
+
+    Uses JobResult.aget_markdown()/aget_json(), not the sync
+    get_markdown()/get_json() the rest of this module uses -- those are
+    thin wrappers that call asyncio_run() internally, which is exactly
+    the "nested async" trap this function exists to avoid; confirmed
+    directly (this raised the exact same "Detected nested async" error
+    parse_pdf's sync path did, even though the parse itself already
+    correctly went through aparse()) before switching to these.
+    """
+    OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+    stem = pdf_path.stem
+
+    parser = _get_parser()
+    result = await parser.aparse(str(pdf_path))
+
+    markdown = await result.aget_markdown()
+    raw_json = await result.aget_json()
+
+    (OUTPUTS_DIR / f"{stem}_raw.md").write_text(markdown, encoding="utf-8")
+    (OUTPUTS_DIR / f"{stem}_raw.json").write_text(
+        json.dumps(raw_json, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+    return markdown, raw_json

@@ -2,27 +2,29 @@
 
 Pipeline per uploaded document: parse_pdf -> extract_claim -> evaluate()
 (build_claim -> validate_claim -> check_completeness -> build_review_view,
-the same sequence run.py uses) -> stored as an `extractions` row. Runs on
-a plain background thread (not FastAPI's BackgroundTasks, which schedules
-onto anyio's pooled worker threads) so the upload endpoint returns
-immediately; the UI polls GET /api/documents/{id} while status stays
-"processing". The plain-thread choice isn't cosmetic: LlamaParse's SDK
-does its own internal asyncio.get_event_loop() bookkeeping, and running
-it on one of anyio's reused pool threads raises "Detected nested async"
--- confirmed against a real uvicorn process, not just TestClient. A
-thread this module starts and owns outright doesn't carry that history.
+the same sequence run.py uses) -> stored as an `extractions` row. Runs as
+a real asyncio task on the same event loop uvicorn already owns (parsing
+via LlamaParse's own async aparse(), the Groq call via
+asyncio.to_thread since that client is sync-only) so the upload endpoint
+returns immediately; the UI polls GET /api/documents/{id} while status
+stays "processing". This replaced an earlier plain-thread +
+nest_asyncio.apply() approach: it worked, but a document whose pipeline
+thread died with the process on a restart stayed "processing" forever
+with nothing to resume it. The startup hook below (_recover_stuck_
+processing_documents) covers exactly that case now.
 
 PIPELINE_MODE=fake (see .env.example) skips LlamaParse/Groq entirely and
 replays a cached outputs/*_result.json matched by the upload's sha256,
 so the UI and the test suite work with no API keys or credits spent.
 """
 
+import asyncio
 import hashlib
 import os
 import re
-import threading
 import uuid
-from datetime import datetime
+from contextlib import asynccontextmanager
+from datetime import datetime, timedelta
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
@@ -44,10 +46,12 @@ from db import get_db, get_sessionmaker
 from extract import MODEL as GROQ_MODEL
 from extract import extract_claim
 from models import Claim, Document, Employee, Extraction
-from parse import parse_pdf
+from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
 from validate import build_claim, check_completeness, validate_claim
+
+STUCK_PROCESSING_TIMEOUT = timedelta(minutes=5)
 
 BASE_DIR = Path(__file__).resolve().parent
 STORAGE_DIR = BASE_DIR / "storage"
@@ -74,7 +78,21 @@ _AMOUNT_FIELD_BY_TYPE = {
     "local_conveyance_form": "total_claimed",
 }
 
-app = FastAPI(title="Expense Reimbursement")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    session = get_sessionmaker()()
+    try:
+        cutoff = datetime.utcnow() - STUCK_PROCESSING_TIMEOUT
+        recovered = repository.recover_stuck_processing_documents(session, cutoff)
+        if recovered:
+            print(f"Startup: recovered {len(recovered)} document(s) stuck in 'processing' -> failed")
+    finally:
+        session.close()
+    yield
+
+
+app = FastAPI(title="Expense Reimbursement", lifespan=lifespan)
 
 
 # ------------------------------------------------------------------ auth
@@ -439,31 +457,22 @@ def _fake_pipeline_result(file_path: Path) -> tuple[str, dict, str, Optional[int
 
 # -------------------------------------------------------------- pipeline
 
-def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) -> None:
+async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) -> None:
     session = get_sessionmaker()()
     try:
         pipeline_mode = os.environ.get("PIPELINE_MODE", "real")
         try:
-            if pipeline_mode != "fake":
-                # LlamaParse's sync .parse() wraps its own asyncio.run()-style
-                # call; even on a thread this module owns outright, it still
-                # detects uvicorn's main-thread loop as "already running" and
-                # refuses to nest. nest_asyncio patches asyncio to allow that
-                # reentrancy -- applying it here (not in parse.py, which this
-                # task must not touch) rather than globally at import time,
-                # since it's only ever needed on this pipeline thread.
-                import nest_asyncio
-
-                nest_asyncio.apply()
-
             if pipeline_mode == "fake":
-                document_type_value, fields, markdown_text, total_tokens, duration_ms = _fake_pipeline_result(
-                    file_path
+                document_type_value, fields, markdown_text, total_tokens, duration_ms = await asyncio.to_thread(
+                    _fake_pipeline_result, file_path
                 )
                 model_name = f"fake:{document_type_value}"
             else:
-                markdown, raw_json = parse_pdf(file_path)
-                result = extract_claim(markdown, raw_json)
+                markdown, raw_json = await aparse_pdf(file_path)
+                # extract_claim (Groq) has no async client here -- run it
+                # on a worker thread instead of blocking the event loop
+                # every other request/pipeline is sharing.
+                result = await asyncio.to_thread(extract_claim, markdown, raw_json)
                 document_type_value = result.document_type.value
                 fields = result.raw_fields
                 markdown_text = markdown
@@ -509,8 +518,17 @@ def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) 
         session.close()
 
 
+# asyncio.create_task() doesn't keep its own Task alive -- a task with no
+# other reference can be garbage-collected mid-run ("Task was destroyed
+# but it is pending"). This set is that reference; each task removes
+# itself when done.
+_running_pipeline_tasks: set[asyncio.Task] = set()
+
+
 def _start_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) -> None:
-    threading.Thread(target=_run_pipeline, args=(document_id, file_path, actor_id), daemon=True).start()
+    task = asyncio.create_task(_run_pipeline(document_id, file_path, actor_id))
+    _running_pipeline_tasks.add(task)
+    task.add_done_callback(_running_pipeline_tasks.discard)
 
 
 # ---------------------------------------------------------------- claims
@@ -859,7 +877,7 @@ def revert_document(
 
 
 @app.post("/api/documents/{document_id}/retry")
-def retry_document(
+async def retry_document(
     document_id: str,
     session: Session = Depends(get_db),
     employee: Employee = Depends(get_current_employee),

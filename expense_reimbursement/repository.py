@@ -3,6 +3,7 @@ writes commits its own transaction; every multi-table write (e.g. a
 status change plus its audit event) happens inside that one commit."""
 
 import uuid
+from datetime import datetime
 from decimal import Decimal
 from typing import Any, Optional
 
@@ -245,6 +246,24 @@ def update_document_status(
     session.commit()
     session.refresh(document)
     return document
+
+
+def recover_stuck_processing_documents(session: Session, cutoff: datetime) -> list[Document]:
+    """A document still "processing" from before a server restart has
+    no pipeline task running for it anymore -- it would otherwise show
+    "Reading..." forever. Called on startup for anything last updated
+    before `cutoff` (the caller decides the age threshold)."""
+    stuck = list(
+        session.scalars(
+            select(Document).where(Document.status == "processing", Document.updated_at < cutoff)
+        )
+    )
+    for document in stuck:
+        document.status = "failed"
+        document.error_message = "Processing was interrupted. Retry."
+    if stuck:
+        session.commit()
+    return stuck
 
 
 def delete_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> None:

@@ -489,3 +489,55 @@ def test_diff_values_row_added_and_row_removed():
         "field_path": "line_items[1]", "ai_value": {"name": "Tea", "total": "150.00"},
         "employee_value": None, "change_type": "row_removed",
     }
+
+
+def test_stuck_processing_document_recovered_on_startup(client, db_session):
+    """Bug 7: a document still "processing" from before a restart had
+    nothing left to resume it and stayed "Reading..." forever. The
+    startup hook (repository.recover_stuck_processing_documents) must
+    fail it out with a message pointing at Retry, and Retry must then
+    actually work."""
+    import uuid
+    from datetime import datetime, timedelta
+
+    from models import Document
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    doc_uuid = uuid.UUID(doc["id"])
+    wait_until_processed(client, doc["id"])  # let the real pipeline finish first
+
+    # simulate a server restart mid-pipeline: forced back to processing,
+    # with an updated_at old enough to look abandoned
+    document = db_session.get(Document, doc_uuid)
+    document.status = "processing"
+    document.error_message = None
+    document.updated_at = datetime.utcnow() - timedelta(minutes=10)
+    db_session.commit()
+
+    cutoff = datetime.utcnow() - timedelta(minutes=5)
+    recovered = repository.recover_stuck_processing_documents(db_session, cutoff)
+    assert [d.id for d in recovered] == [doc_uuid]
+
+    detail = client.get(f"/api/documents/{doc['id']}").json()
+    assert detail["status"] == "failed"
+    assert detail["error_message"] == "Processing was interrupted. Retry."
+
+    # a document that's merely BEEN processing for under 5 minutes must
+    # not be touched
+    document.status = "processing"
+    document.error_message = None
+    document.updated_at = datetime.utcnow()
+    db_session.commit()
+    still_running = repository.recover_stuck_processing_documents(db_session, cutoff)
+    assert still_running == []
+
+    # Retry must actually work afterward, not just flip the status
+    document.status = "failed"
+    document.error_message = "Processing was interrupted. Retry."
+    db_session.commit()
+    r = client.post(f"/api/documents/{doc['id']}/retry")
+    assert r.status_code == 200
+    final = wait_until_processed(client, doc["id"])
+    assert final["status"] == "ready"
+    assert final["error_message"] is None
