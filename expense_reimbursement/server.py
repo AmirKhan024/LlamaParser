@@ -2,9 +2,15 @@
 
 Pipeline per uploaded document: parse_pdf -> extract_claim -> evaluate()
 (build_claim -> validate_claim -> check_completeness -> build_review_view,
-the same sequence run.py uses) -> stored as an `extractions` row. Runs in
-a FastAPI background task so the upload endpoint returns immediately;
-the UI polls GET /api/documents/{id} while status stays "processing".
+the same sequence run.py uses) -> stored as an `extractions` row. Runs on
+a plain background thread (not FastAPI's BackgroundTasks, which schedules
+onto anyio's pooled worker threads) so the upload endpoint returns
+immediately; the UI polls GET /api/documents/{id} while status stays
+"processing". The plain-thread choice isn't cosmetic: LlamaParse's SDK
+does its own internal asyncio.get_event_loop() bookkeeping, and running
+it on one of anyio's reused pool threads raises "Detected nested async"
+-- confirmed against a real uvicorn process, not just TestClient. A
+thread this module starts and owns outright doesn't carry that history.
 
 PIPELINE_MODE=fake (see .env.example) skips LlamaParse/Groq entirely and
 replays a cached outputs/*_result.json matched by the upload's sha256,
@@ -14,6 +20,7 @@ so the UI and the test suite work with no API keys or credits spent.
 import hashlib
 import os
 import re
+import threading
 import uuid
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
@@ -26,7 +33,7 @@ load_dotenv()
 
 import json
 
-from fastapi import BackgroundTasks, Depends, FastAPI, File, HTTPException, UploadFile
+from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -330,6 +337,18 @@ def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) 
     try:
         pipeline_mode = os.environ.get("PIPELINE_MODE", "real")
         try:
+            if pipeline_mode != "fake":
+                # LlamaParse's sync .parse() wraps its own asyncio.run()-style
+                # call; even on a thread this module owns outright, it still
+                # detects uvicorn's main-thread loop as "already running" and
+                # refuses to nest. nest_asyncio patches asyncio to allow that
+                # reentrancy -- applying it here (not in parse.py, which this
+                # task must not touch) rather than globally at import time,
+                # since it's only ever needed on this pipeline thread.
+                import nest_asyncio
+
+                nest_asyncio.apply()
+
             if pipeline_mode == "fake":
                 document_type_value, fields, markdown_text, total_tokens, duration_ms = _fake_pipeline_result(
                     file_path
@@ -373,9 +392,17 @@ def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) 
             final_status = "needs_review" if view["needs_review"] else "ready"
             repository.update_document_status(session, document_id, status=final_status)
         except Exception as e:  # noqa: BLE001 -- any pipeline failure must land the document in "failed", not crash the worker
-            repository.update_document_status(session, document_id, status="failed", error_message=str(e))
+            session.rollback()
+            try:
+                repository.update_document_status(session, document_id, status="failed", error_message=str(e))
+            except LookupError:
+                pass  # the document was removed while this ran -- nothing left to mark failed
     finally:
         session.close()
+
+
+def _start_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) -> None:
+    threading.Thread(target=_run_pipeline, args=(document_id, file_path, actor_id), daemon=True).start()
 
 
 # ---------------------------------------------------------------- claims
@@ -471,7 +498,6 @@ def _needs_confirm(session: Session, document: Document) -> bool:
 @app.post("/api/claims/{claim_id}/documents")
 async def upload_document(
     claim_id: str,
-    background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
     session: Session = Depends(get_db),
     employee: Employee = Depends(get_current_employee),
@@ -511,7 +537,7 @@ async def upload_document(
         file_sha256=sha256,
         mime_type=content_type,
     )
-    background_tasks.add_task(_run_pipeline, document.id, full_path, employee.id)
+    _start_pipeline(document.id, full_path, employee.id)
     return _document_summary(document)
 
 
@@ -702,7 +728,6 @@ def revert_document(
 @app.post("/api/documents/{document_id}/retry")
 def retry_document(
     document_id: str,
-    background_tasks: BackgroundTasks,
     session: Session = Depends(get_db),
     employee: Employee = Depends(get_current_employee),
 ):
@@ -714,7 +739,7 @@ def retry_document(
     if not full_path.exists():
         raise HTTPException(404, "The original file is no longer on disk.")
     repository.update_document_status(session, document.id, status="processing", error_message=None)
-    background_tasks.add_task(_run_pipeline, document.id, full_path, employee.id)
+    _start_pipeline(document.id, full_path, employee.id)
     return _document_summary(document)
 
 

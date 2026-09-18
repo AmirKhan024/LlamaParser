@@ -723,6 +723,18 @@ function currentFieldValue(field) {
   return Object.prototype.hasOwnProperty.call(docPageState.edits, field.key) ? docPageState.edits[field.key] : field.value;
 }
 
+/* A field counts as "changed" either because of an unsaved local edit
+   this session, or because a correction was already saved to the server
+   on a previous save -- the AI-value-struck-through marker must survive
+   a reload, so it can't rely on docPageState.edits alone (session-only). */
+function fieldChangeInfo(key, currentSavedValue) {
+  const localEdit = Object.prototype.hasOwnProperty.call(docPageState.edits, key);
+  const correction = (docPageState.doc.corrections || []).find((c) => c.field_path === key);
+  if (localEdit) return { changed: true, aiValue: currentSavedValue };
+  if (correction) return { changed: true, aiValue: correction.ai_value };
+  return { changed: false, aiValue: null };
+}
+
 function markDirty() {
   docPageState.dirty = Object.keys(docPageState.edits).length > 0;
   updateActionBarState();
@@ -747,7 +759,7 @@ function renderFields(review) {
 
 function simpleFieldHtml(field) {
   const value = currentFieldValue(field);
-  const changed = Object.prototype.hasOwnProperty.call(docPageState.edits, field.key);
+  const { changed, aiValue } = fieldChangeInfo(field.key, field.value);
   const displayAsMoney = /amount|total|subtotal|tax|cgst|sgst|grand_total/i.test(field.key) && typeof field.value !== "object";
   if (!field.editable) {
     const shown = field.key === "amount" || displayAsMoney ? fmtMoney(value, "INR") : escapeHtml(value ?? "–");
@@ -758,13 +770,13 @@ function simpleFieldHtml(field) {
       <label for="f-${field.key}">${escapeHtml(field.label)}</label>
       <input type="text" id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}"
              value="${escapeHtml(value ?? "")}" inputmode="${displayAsMoney ? "decimal" : "text"}">
-      ${changed ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(field.value ?? "–")}</span></div>` : ""}
+      ${changed ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(aiValue ?? "–")}</span></div>` : ""}
     </div>`;
 }
 
 function tripsTableHtml(field) {
   const trips = currentFieldValue(field) || [];
-  const changed = Object.prototype.hasOwnProperty.call(docPageState.edits, field.key);
+  const { changed } = fieldChangeInfo(field.key, field.value);
   const cols = [["date", "Date"], ["place", "Place"], ["purpose", "Purpose"], ["client", "Client"], ["kms", "Km"]];
   const rows = trips.map((trip, i) => `
     <tr>
@@ -784,8 +796,8 @@ function tripsTableHtml(field) {
 }
 
 function collapsibleHtml(collapsible) {
-  const items = currentFieldValue({ key: collapsible.key === "line_items" ? "line_items" : collapsible.key, value: collapsible.line_items }) || collapsible.line_items || [];
-  const itemsChanged = Object.prototype.hasOwnProperty.call(docPageState.edits, "line_items");
+  const items = currentFieldValue({ key: "line_items", value: collapsible.line_items }) || collapsible.line_items || [];
+  const { changed: itemsChanged } = fieldChangeInfo("line_items", collapsible.line_items);
   const cols = [["name", "Item"], ["quantity", "Qty"], ["unit_price", "Unit price"], ["total", "Total"]];
   const rows = items.map((item, i) => `
     <tr>
