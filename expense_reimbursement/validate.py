@@ -436,6 +436,9 @@ def _find_line_with_label(markdown_text: str, label: str) -> Optional[str]:
     return None
 
 
+_DATE_LIKE = re.compile(r"\b\d{1,4}[-/]\d{1,2}[-/]\d{1,4}\b")
+
+
 def check_completeness(markdown_text: str, claim: Dict[str, Any], doc_type: str) -> list[str]:
     """Local-conveyance-specific, intentionally crude pattern match: for
     each known totals-section label, does every number sitting on that
@@ -449,9 +452,15 @@ def check_completeness(markdown_text: str, claim: Dict[str, Any], doc_type: str)
     Not a general solution -- it doesn't understand table structure, so
     it can both miss things (numbers on a different line than the
     label) and over-flag (an unrelated number that happens to share the
-    label's line). Good enough to catch the one class of bug that
-    already happened once; a document type without this wired in just
-    gets an empty list back.
+    label's line). Two classes of over-flagging are filtered out
+    explicitly: a number that's really a component of a date sitting on
+    the same line (e.g. "01-06-2026" splits into "01"/"06"/"2026",
+    none of which are amounts), and a number that IS captured but under
+    different comma grouping than the line prints it in -- comparison
+    happens after stripping commas from both sides, not just the
+    candidate. Good enough to catch the one class of bug that already
+    happened once; a document type without this wired in just gets an
+    empty list back.
     """
     warnings: list[str] = []
     if doc_type != DocumentType.LOCAL_CONVEYANCE_FORM.value:
@@ -469,6 +478,7 @@ def check_completeness(markdown_text: str, claim: Dict[str, Any], doc_type: str)
         if isinstance(entry, dict):
             for value in entry.values():
                 captured_values.add(str(value))
+    captured_stripped = {v.replace(",", "") for v in captured_values}
 
     labels = [
         "Total Conveyance Amount", "Daily Allowance", "Vehicle Maintenance",
@@ -478,12 +488,15 @@ def check_completeness(markdown_text: str, claim: Dict[str, Any], doc_type: str)
         line = _find_line_with_label(markdown_text, label)
         if not line:
             continue
-        numbers_on_line = re.findall(r"[\d,]+\.?\d*", line)
-        for num in numbers_on_line:
+        date_spans = [m.span() for m in _DATE_LIKE.finditer(line)]
+        for match in re.finditer(r"[\d,]+\.?\d*", line):
+            if any(match.start() >= start and match.end() <= end for start, end in date_spans):
+                continue
+            num = match.group()
             stripped = num.replace(",", "")
             if not stripped or not re.search(r"\d", stripped):
                 continue
-            if stripped not in captured_values and num not in captured_values:
+            if stripped not in captured_stripped and num not in captured_values:
                 warnings.append(
                     f"Possible dropped value '{num}' near label '{label}' -- "
                     "not found in clean_json or additional_fields"
