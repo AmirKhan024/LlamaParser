@@ -568,3 +568,148 @@ From the most recent real runs:
 Dollar estimates in `run.py`'s output use an unverified, approximate Groq
 per-token rate (see the comment there) -- treat as order-of-magnitude, not
 a billing figure.
+
+# Stage 2: Expense categorization
+
+**Resume later.** Once Groq's daily quota has reset, run:
+```bash
+python scripts/eval_categorization.py --final --methods llm
+python scripts/eval_categorization.py --final --methods hybrid
+```
+Each is standalone (doesn't touch `rules`/`classifier`/each other), uses its own
+`eval/categorization/_predictions_cache/<method>.jsonl` for any row already
+predicted (nothing already done gets re-spent), and appends its section into
+`RESULTS.md` via `_final_results_state.json` without rerunning anything already
+there. Then redo Part B step 4's comparison across all four methods -- the
+current default (`rules`) was picked from only two of the four, and may change.
+
+## What was built
+
+- **Fictional company + policy** (`policy/company.md`, `policy/expense_policy.md`):
+  Konkan Digital Systems Private Limited, an Indian IT services company, HQ
+  Mumbai. 24 numbered clauses with tables by grade x city-tier x zone, written
+  so later clauses cite by number. Employee grades (`employees.grade`) and base
+  city (`employees.base_city`) added to the schema; the seeded employee is L4
+  (Senior Manager), Mumbai.
+- **14 expense categories** (`categories.py`): id, label, definition, 3+
+  include/exclude examples, policy-clause mapping, and explicit tie-break
+  rules for the ambiguous cases (restaurant bill vs client/team, hotel folio
+  extras, fuel vs mileage, airport cab vs flight, etc.) -- a different axis
+  from `document_type` (what kind of paper it is, Stage 1) vs category (what
+  the money was for).
+- **Four categorizer implementations** (`categorize.py`): `rules`
+  (document_type default + keyword tie-break, free), `llm` (Groq
+  `openai/gpt-oss-20b`, zero-shot, retry-with-backoff), `classifier`
+  (sentence-transformers `all-MiniLM-L6-v2` embeddings + scikit-learn
+  LogisticRegression, trained on 540 synthetic examples generated from the
+  category definitions alone), `hybrid` (classifier first, falls back to
+  `llm` below a confidence threshold tuned on a held-out synthetic split).
+- **Product integration**: `extractions.category`/`category_confidence`/
+  `category_method` columns; the pipeline categorizes every new document
+  (`CATEGORIZER` env var, falls back to `rules` on any failure -- never fails
+  the document itself); a Category dropdown on the review page and on the
+  claim page's document rows; `scripts/backfill_categories.py` and
+  `scripts/export_category_corrections.py` for existing documents and future
+  retraining data.
+- **Eval pipeline**: `scripts/build_eval_dataset.py`,
+  `scripts/generate_silver_labels.py` (Groq-based, batched, model-agnostic --
+  kept for when quota allows), `scripts/apply_manual_silver_labels.py` (the
+  one actually used this time, see below), `scripts/promote_to_gold.py`,
+  `scripts/eval_categorization.py`, `scripts/generate_review_html.py`.
+
+## Eval methodology
+
+**Silver labels, by hand, not by another LLM call.** Every reachable Groq
+model on this account (`openai/gpt-oss-120b`, `openai/gpt-oss-20b`,
+`qwen/qwen3.8-27b`, and `groq/compound-mini`'s underlying
+`llama-3.3-70b-versatile`) hit its own daily token quota in turn while
+building this eval set -- a real constraint from one day's heavy usage, not
+a design choice (see "Limitations" below). Per instruction, all 134 rows
+were labeled directly: reading each document's `extracted_fields` and full
+markdown against `categories.py`'s definitions and tie-break rules,
+`silver_model="claude-code"` -- which incidentally serves the eval's own
+goal better than a Groq-based labeler would have, since the categorizers
+being measured are themselves Groq-based.
+
+**Silver -> gold.** The project owner reviewed all 134 rows in
+`review.html` and agreed with every label, including the ones flagged
+ambiguous -- 100% agreement, 0 overrides (`gold_overrides.yaml` empty).
+`dataset_metadata.json` records this, including an explicit anchoring-risk
+note: the reviewer saw each row's silver label while reviewing it, which
+can pull the reviewer toward agreeing with what's already shown rather than
+an independent judgment. 100% here is not proof the labels are error-free;
+a blind relabel of a sample (document only, no visible silver label) is the
+documented follow-up to test that properly.
+
+**Leakage rule.** The `classifier`'s training data (540 synthetic examples,
+generated from category definitions alone, before the eval set existed) was
+checked against the eval set by embedding cosine similarity
+(`scripts/train_categorizer.py`, threshold 0.95) and retrained through the
+filter once the eval set existed -- 0 training rows were within threshold of
+an eval document, so nothing was dropped, but the check is real and reruns
+automatically if training data changes.
+
+**Synthetic-train / real-test split.** The classifier never trains on eval
+documents (enforced by the leakage check above); the eval set itself mixes
+25 SROIE + 15 CORD + 4 real Stage 1 documents (44 real, minus 1
+non-categorizable) with 90 synthetic images, reported separately in
+`RESULTS.md` specifically so a synthetic-heavy overall number is never
+mistaken for a real-world one.
+
+## RESULTS.md (gold labels, `rules` and `classifier` -- see "Resume later")
+
+| method | all (n=133) | real-only (n=43, 7/14 categories) | synthetic-only (n=90) |
+|---|---|---|---|
+| `rules` | 87.2% acc, macro-F1 0.894 | 83.7% acc, macro-F1 0.805 | 88.9% acc, macro-F1 0.856 |
+| `classifier` | 70.7% acc, macro-F1 0.706 | 46.5% acc, macro-F1 0.357 | 82.2% acc, macro-F1 0.776 |
+
+`llm`/`hybrid`: not yet run (Groq quota). The real-only macro-F1 above is
+averaged over only the 7 categories that slice actually contains
+(accommodation, local_transport, office_supplies_equipment, other,
+own_vehicle_mileage, phone_internet, travel_meals) -- not all 14.
+
+`rules`' 17 misclassifications (its error-analysis section in `RESULTS.md`)
+are mostly `other` swallowing two categories its keyword list doesn't cover
+yet (`training_conferences`, `travel_documents_fees` vendor names) and one
+real document (`cat-sroie-011`, a parking receipt) where the keyword list
+has `"parking receipt"` but the actual text is `"Parking Fee"` -- a literal
+string-match gap, not a conceptual one.
+
+## Production default
+
+`CATEGORIZER=rules`. Rule as specified: pick the higher macro-F1 on all
+documents unless its real-only accuracy is more than 5 points worse than
+the other's. `rules` has both the higher macro-F1 (0.894 vs 0.706) and the
+better real-only accuracy (83.7% vs 46.5%) -- it wins outright on the
+numbers actually measured, no tiebreak needed. This is a two-method
+comparison, not a four-method one, and may change once `llm`/`hybrid` are
+benchmarked (see "Resume later" above).
+
+## Limitations, stated plainly
+
+- **`llm` and `hybrid` are built and cached-ready but not yet benchmarked**
+  (Groq daily quota exhausted while building this eval set) -- this is the
+  single biggest open item before Stage 2's comparison is actually complete.
+  The production default above reflects only `rules` vs `classifier`.
+- **90 of 134 eval documents are synthetic**, generated and labeled in the
+  same session as the categorizers being measured -- results are likely
+  optimistic versus real-world documents the categorizers have never seen
+  described in their own construction.
+- **The real-only slice covers only 7 of the 14 categories** -- there is no
+  real-document evidence at all for `client_entertainment`, `fuel`,
+  `intercity_travel`, `software_subscriptions`, `team_events`,
+  `training_conferences`, or `travel_documents_fees`.
+- **`rules`' keywords were written in the same session as the eval set** --
+  it may be partly tuned to documents it's now being scored against, rather
+  than independently validated.
+- **100% silver -> gold agreement with the label visible to the reviewer**
+  -- a real risk of anchoring, not independent confirmation; see "Silver ->
+  gold" above.
+- **`team_events` has 6 examples, not 8** -- 2 of its synthetic documents
+  were deliberately ambiguous (2 diners, no client/team wording) and were
+  honestly relabeled `travel_meals` on review rather than kept as
+  `team_events` to hit the floor, which is itself informative about how
+  blurry that category boundary is.
+- **Single category per document** -- a hotel bill with a minibar line item
+  is filed entirely under `accommodation`; there is no per-line-item
+  categorization.
