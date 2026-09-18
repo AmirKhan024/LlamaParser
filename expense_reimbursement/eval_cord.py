@@ -315,7 +315,7 @@ def run_one_sample(index: int, image, gt_parse: Dict[str, Any]) -> SampleResult:
     try:
         markdown, raw_json = parse_pdf(image_path)
         result = extract_claim(markdown, raw_json)
-        claim = build_claim(result.document_type, result.raw_fields)
+        claim = build_claim(result.document_type, result.raw_fields, markdown)
         validate_claim(claim)  # exercised for parity with run.py; not scored against CORD
     except Exception as e:
         return SampleResult(index=index, success=False, error=f"{type(e).__name__}: {e}")

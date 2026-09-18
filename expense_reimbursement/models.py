@@ -54,7 +54,9 @@ class Claim(Base):
     status: Mapped[str] = mapped_column(Text, nullable=False, default="draft")
     note_to_approver: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     total_amount: Mapped[Optional[Decimal]] = mapped_column(Numeric(12, 2), nullable=True)
-    currency: Mapped[str] = mapped_column(Text, nullable=False, default="INR")
+    # Nullable: a claim whose confirmed documents mix currencies has no
+    # single currency to report -- see repository.compute_claim_totals.
+    currency: Mapped[Optional[str]] = mapped_column(Text, nullable=True, default="INR")
     created_at: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(
         server_default=func.now(), onupdate=func.now(), nullable=False
@@ -118,6 +120,9 @@ class Extraction(Base):
     vendor_name: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     bill_date: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     amount: Mapped[Optional[Decimal]] = mapped_column(Numeric(12, 2), nullable=True)
+    # Null when the model gave none and exactly one couldn't be detected
+    # from the raw markdown either -- see validate.build_claim.
+    currency: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     document: Mapped["Document"] = relationship(back_populates="extractions")
     check_results: Mapped[list["CheckResultRow"]] = relationship(

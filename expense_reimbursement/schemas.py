@@ -41,7 +41,7 @@ class BaseClaim(BaseModel):
     vendor_name: Optional[str] = None
     date: Optional[str] = None  # kept as string at extraction time; parsed/validated later
     amount: Optional[Decimal] = None
-    currency: str = "INR"
+    currency: Optional[str] = "INR"  # None when it couldn't be determined -- see validate.build_claim
     additional_fields: dict[str, str] = Field(default_factory=dict)
     extraction_notes: list[str] = Field(default_factory=list)
     confidence: float = 1.0

@@ -48,7 +48,7 @@
     outline:2px solid var(--blue);
     outline-offset:2px;
   }
-  input[type=text], input[type=search], textarea{
+  input[type=text], input[type=search], textarea, select{
     font-family:inherit;
     font-size:14px;
     padding:8px 10px;
@@ -59,7 +59,7 @@
     color:var(--ink);
   }
   textarea{resize:vertical;min-height:64px;}
-  input.field-changed, textarea.field-changed{
+  input.field-changed, textarea.field-changed, select.field-changed{
     border-color:var(--blue);
     background:var(--blue-light);
   }
@@ -262,14 +262,35 @@ const MONEY_FIELD_KEYS = new Set([
   "mobile_allowance_amount", "total_claimed",
 ]);
 
+const CURRENCY_SYMBOLS = { USD: "$", EUR: "€", GBP: "£", INR: "₹" };
+
 function fmtMoney(value, currency) {
   if (value === null || value === undefined || value === "") return "–";
   const num = Number(value);
   if (Number.isNaN(num)) return String(value);
-  if (!currency || currency === "INR") {
+  if (currency === "INR") {
     return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 2 }).format(num);
   }
-  return `${num.toFixed(2)} ${currency}`;
+  if (!currency) {
+    // currency is only ever null/absent when it's genuinely ambiguous
+    // (see validate.detect_currency_from_markdown) -- never assume INR.
+    return `${num.toFixed(2)} (currency unknown)`;
+  }
+  const symbol = CURRENCY_SYMBOLS[currency] || "";
+  return `${symbol}${num.toFixed(2)} ${currency}`;
+}
+
+// A claim's total across ALL its currencies, never added together --
+// one figure when everything confirmed shares a currency, a per-currency
+// breakdown otherwise.
+function fmtTotals(claim) {
+  const entries = Object.entries(claim.totals_by_currency || {});
+  if (entries.length <= 1) {
+    return fmtMoney(claim.total_amount, claim.currency);
+  }
+  return entries
+    .map(([currency, amount]) => fmtMoney(amount, currency === "unknown" ? null : currency))
+    .join(" + ");
 }
 
 function fmtDate(iso) {
@@ -403,7 +424,7 @@ function claimRowHtml(c) {
         <div class="meta">${c.document_count} document${c.document_count === 1 ? "" : "s"} &middot; updated ${fmtDate(c.updated_at)}</div>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
-        <span class="amount">${fmtMoney(c.total_amount, c.currency)}</span>
+        <span class="amount">${fmtTotals(c)}</span>
         <span class="status-pill ${pillClass}">${pillLabel}</span>
       </div>
     </a>`;
@@ -476,7 +497,7 @@ function drawClaimPage(claim) {
   const submittedBanner = !isDraft ? `
     <div class="card" style="border-color:var(--ok);">
       <strong>Submitted on ${fmtDate(claim.submitted_at)}</strong>
-      <div style="margin-top:4px;">Total: <strong>${fmtMoney(claim.total_amount, claim.currency)}</strong></div>
+      <div style="margin-top:4px;">Total: <strong>${fmtTotals(claim)}</strong></div>
       ${correctionsSummaryHtml(claim)}
     </div>` : "";
 
@@ -499,7 +520,7 @@ function drawClaimPage(claim) {
     </div>
     <div class="claim-total-row">
       <span>Total</span>
-      <span class="amount">${fmtMoney(claim.total_amount, claim.currency)}</span>
+      <span class="amount">${fmtTotals(claim)}</span>
     </div>
   `;
 
@@ -780,12 +801,27 @@ function simpleFieldHtml(field) {
   const value = currentFieldValue(field);
   const { changed, aiValue } = fieldChangeInfo(field.key, field.value);
   const displayAsMoney = MONEY_FIELD_KEYS.has(field.key) && typeof field.value !== "object";
+  const docCurrency = docPageState.doc.review.currency;
   const changedMarker = changed
     ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(aiValue ?? "–")}</span></div>`
     : "";
   if (!field.editable || isFieldsLocked()) {
-    const shown = displayAsMoney ? fmtMoney(value, "INR") : escapeHtml(value ?? "–");
+    const shown = displayAsMoney ? fmtMoney(value, docCurrency) : escapeHtml(value ?? "–");
     return `<div class="field-row"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
+  }
+  if (field.type === "select") {
+    const options = (field.options || [])
+      .map((opt) => `<option value="${escapeHtml(opt)}" ${opt === value ? "selected" : ""}>${escapeHtml(opt)}</option>`)
+      .join("");
+    return `
+      <div class="field-row">
+        <label for="f-${field.key}">${escapeHtml(field.label)}</label>
+        <select id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}">
+          <option value="" ${!value ? "selected" : ""}>Choose…</option>
+          ${options}
+        </select>
+        ${changedMarker}
+      </div>`;
   }
   return `
     <div class="field-row">
@@ -851,7 +887,7 @@ function collapsibleHtml(collapsible) {
 const debouncedValidate = debounce(runValidate, 400);
 
 function wireFieldInputs() {
-  document.querySelectorAll("#fields-container input[data-path]").forEach((input) => {
+  document.querySelectorAll("#fields-container input[data-path], #fields-container select[data-path]").forEach((input) => {
     input.addEventListener("input", (e) => {
       docPageState.edits[e.target.dataset.path] = e.target.value;
       markDirty();

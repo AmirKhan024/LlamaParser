@@ -22,7 +22,40 @@ GSTIN_PATTERN = re.compile(r'^\d{2}[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$')
 # ever show up in additional_fields), not just the types tested so far.
 _GSTIN_FIELD_HINT = re.compile(r"gstin|gst_no", re.IGNORECASE)
 
-CURRENCY_MAP = {"rs.": "INR", "rs": "INR", "₹": "INR", "inr": "INR", "rupees": "INR"}
+CURRENCY_MAP = {
+    "rs.": "INR", "rs": "INR", "₹": "INR", "inr": "INR", "rupees": "INR",
+    "$": "USD", "usd": "USD",
+    "€": "EUR", "eur": "EUR",
+    "£": "GBP", "gbp": "GBP",
+}
+
+# Used only when the model gave no currency at all (build_claim below) --
+# scans the document's own markdown for a symbol/code and infers the
+# currency from that instead of silently assuming INR. Order matters
+# only in that each pattern maps to exactly one currency; a document
+# is ambiguous (currency left as None) if this finds zero or 2+ distinct
+# currencies, never guessed at.
+_CURRENCY_DETECTION_PATTERNS: list[Tuple[re.Pattern, str]] = [
+    (re.compile(r"\$"), "USD"),
+    (re.compile(r"\bUSD\b", re.IGNORECASE), "USD"),
+    (re.compile(r"€"), "EUR"),
+    (re.compile(r"\bEUR\b", re.IGNORECASE), "EUR"),
+    (re.compile(r"£"), "GBP"),
+    (re.compile(r"\bGBP\b", re.IGNORECASE), "GBP"),
+    (re.compile(r"₹"), "INR"),
+    (re.compile(r"\bRs\.?\b"), "INR"),
+    (re.compile(r"\bINR\b", re.IGNORECASE), "INR"),
+]
+
+
+def detect_currency_from_markdown(markdown_text: str) -> Optional[str]:
+    """None means "couldn't tell" -- either nothing matched, or more
+    than one distinct currency showed up (e.g. an FX conversion note),
+    and this deliberately doesn't guess between them."""
+    found = {code for pattern, code in _CURRENCY_DETECTION_PATTERNS if pattern.search(markdown_text)}
+    if len(found) == 1:
+        return found.pop()
+    return None
 
 # Real placeholder values a bill prints when a customer has no GST
 # registration -- e.g. "Customer GST No.: -" -- these are legitimately
@@ -196,7 +229,7 @@ def _coerce_notes(value: Any) -> list[str]:
     return [str(value)]
 
 
-def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any]) -> BaseClaim:
+def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any], markdown_text: str = "") -> BaseClaim:
     """Turn the model's raw output (amounts as printed strings, per the
     extraction prompt) into a typed claim: every Decimal-typed field is
     parsed with `parse_amount` first, then the result is validated
@@ -206,6 +239,15 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any]) -> Base
     genuinely isn't numeric), falls back to GenericClaim rather than
     crashing the run -- additional_fields still preserves everything
     the model reported.
+
+    `markdown_text` (the document's own parsed text) is only consulted
+    when the model gave no currency at all: previously an absent
+    currency silently defaulted to "INR" via the schema's own default,
+    which is how a dollar bill quietly became a rupee claim. Now a
+    missing model currency is inferred from the document itself
+    (`detect_currency_from_markdown`) and left `None` -- not defaulted
+    to INR -- when that's ambiguous too; `check_completeness` turns that
+    `None` into a warning the employee actually sees.
     """
     schema_cls = schema_for(document_type)
     processed = dict(raw_fields)
@@ -227,15 +269,10 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any]) -> Base
         processed["line_items"] = _preprocess_line_items(processed["line_items"], notes)
 
     processed["extraction_notes"] = notes
-    # currency is a required string (default "INR") -- if the model
-    # returns an explicit null (seen on real documents with no legible
-    # currency indicator), leave the key out entirely so the schema
-    # default applies, rather than letting normalize_currency(None)
-    # pass None through and fail validation on a required field.
     if processed.get("currency"):
         processed["currency"] = normalize_currency(processed["currency"])
     else:
-        processed.pop("currency", None)
+        processed["currency"] = detect_currency_from_markdown(markdown_text)
 
     try:
         return schema_cls.model_validate(processed)
@@ -461,8 +498,20 @@ def check_completeness(markdown_text: str, claim: Dict[str, Any], doc_type: str)
     candidate. Good enough to catch the one class of bug that already
     happened once; a document type without this wired in just gets an
     empty list back.
+
+    Also carries one near-universal, non-local-conveyance-specific
+    check: a claim whose currency build_claim couldn't determine (see
+    detect_currency_from_markdown) gets a plain-language warning here,
+    on every document type that has an amount to be ambiguous about --
+    not gated behind the local_conveyance_form check below. Excluded for
+    approval_correspondence: it's an email, not a bill, so "which
+    currency" is meaningless noise there even though the schema
+    technically inherits an (always-empty) currency field from BaseClaim.
     """
     warnings: list[str] = []
+    if claim.get("currency") is None and doc_type != DocumentType.APPROVAL_CORRESPONDENCE.value:
+        warnings.append("Couldn't tell which currency this bill is in.")
+
     if doc_type != DocumentType.LOCAL_CONVEYANCE_FORM.value:
         return warnings
 

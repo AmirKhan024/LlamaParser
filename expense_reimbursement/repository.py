@@ -56,7 +56,11 @@ def list_claims(session: Session, employee_id: uuid.UUID) -> list[Claim]:
     return list(
         session.scalars(
             select(Claim)
-            .options(selectinload(Claim.documents))
+            # extractions eager-loaded too (not just documents): the list
+            # view computes each claim's per-currency totals live from
+            # them (server._claim_totals_by_currency), not from the
+            # possibly-stale total_amount/currency columns.
+            .options(selectinload(Claim.documents).selectinload(Document.extractions))
             .where(Claim.employee_id == employee_id)
             .order_by(Claim.updated_at.desc())
         )
@@ -90,20 +94,50 @@ def update_claim(
     return claim
 
 
-def recompute_claim_total(session: Session, claim_id: uuid.UUID) -> Decimal:
+def compute_claim_totals(session: Session, claim_id: uuid.UUID) -> dict[str, Decimal]:
+    """Per-currency totals across confirmed documents only -- never
+    summed together, since a Decimal can't represent "$10 + Rs 10".
+    A document whose currency couldn't be determined (see
+    validate.check_completeness's currency warning) is bucketed under
+    "unknown" rather than dropped or guessed into an existing bucket."""
     claim = session.get(Claim, claim_id)
     if claim is None:
         raise LookupError(f"claim {claim_id} not found")
-    total = Decimal("0")
+    totals: dict[str, Decimal] = {}
     for document in claim.documents:
         if document.status != "confirmed":
             continue
         extraction = latest_extraction(session, document.id)
-        if extraction is not None and extraction.amount is not None:
-            total += extraction.amount
-    claim.total_amount = total
+        if extraction is None or extraction.amount is None:
+            continue
+        currency = extraction.currency or "unknown"
+        totals[currency] = totals.get(currency, Decimal("0")) + extraction.amount
+    return totals
+
+
+def recompute_claim_total(session: Session, claim_id: uuid.UUID) -> dict[str, Decimal]:
+    """Updates claims.total_amount/currency -- a best-effort single
+    figure, only meaningful when every confirmed document shares one
+    currency. Cleared to None/None when there are none or several;
+    server.py's API responses compute the full per-currency breakdown
+    live instead of trusting this cached pair for anything but the
+    common single-currency case."""
+    claim = session.get(Claim, claim_id)
+    if claim is None:
+        raise LookupError(f"claim {claim_id} not found")
+    totals = compute_claim_totals(session, claim_id)
+    if len(totals) == 1:
+        currency, amount = next(iter(totals.items()))
+        claim.total_amount = amount
+        claim.currency = currency
+    elif len(totals) == 0:
+        claim.total_amount = Decimal("0")
+        claim.currency = "INR"
+    else:
+        claim.total_amount = None
+        claim.currency = None
     session.commit()
-    return total
+    return totals
 
 
 def submit_claim(session: Session, claim_id: uuid.UUID, actor_id: uuid.UUID) -> Claim:
@@ -114,13 +148,25 @@ def submit_claim(session: Session, claim_id: uuid.UUID, actor_id: uuid.UUID) -> 
 
     claim.status = "submitted"
     claim.submitted_at = sa_func.now()
-    total = Decimal("0")
-    for document in claim.documents:
-        extraction = latest_extraction(session, document.id)
-        if extraction is not None and extraction.amount is not None:
-            total += extraction.amount
-    claim.total_amount = total
-    session.add(AuditEvent(claim_id=claim.id, actor_id=actor_id, action="submitted", payload={"total_amount": str(total)}))
+    totals = compute_claim_totals(session, claim_id)
+    if len(totals) == 1:
+        currency, amount = next(iter(totals.items()))
+        claim.total_amount = amount
+        claim.currency = currency
+    elif len(totals) == 0:
+        claim.total_amount = Decimal("0")
+        claim.currency = "INR"
+    else:
+        claim.total_amount = None
+        claim.currency = None
+    session.add(
+        AuditEvent(
+            claim_id=claim.id,
+            actor_id=actor_id,
+            action="submitted",
+            payload={"totals_by_currency": {k: str(v) for k, v in totals.items()}},
+        )
+    )
     session.commit()
     session.refresh(claim)
     return claim
@@ -279,6 +325,7 @@ def add_extraction(
     vendor_name: Optional[str] = None,
     bill_date: Optional[str] = None,
     amount: Optional[Decimal] = None,
+    currency: Optional[str] = None,
     check_results: Optional[list[dict[str, Any]]] = None,
     corrections: Optional[list[dict[str, Any]]] = None,
     audit_action: str = "edited",
@@ -301,6 +348,7 @@ def add_extraction(
         vendor_name=vendor_name,
         bill_date=bill_date,
         amount=amount,
+        currency=currency,
     )
     session.add(extraction)
     session.flush()

@@ -342,3 +342,45 @@ def test_reopen_on_submitted_claim_rejected(client):
 
     r = client.post(f"/api/documents/{doc['id']}/reopen")
     assert r.status_code == 409
+
+
+def test_claim_total_never_sums_different_currencies(client, db_session):
+    """Bug 3: the claim total used to add every confirmed document's
+    amount together regardless of currency. A USD document and an INR
+    document confirmed on the same claim must show a per-currency
+    breakdown, never one combined (and currency-blind) number."""
+    import uuid
+    from decimal import Decimal
+
+    claim = client.post("/api/claims", json={}).json()
+
+    inr_doc = upload(client, claim["id"], MOBILE_PDF).json()
+    wait_until_processed(client, inr_doc["id"])
+    client.post(f"/api/documents/{inr_doc['id']}/confirm", json={"edits": {}})
+
+    # a second document, injected directly with a USD extraction --
+    # the fake-mode cached results are all INR, so this simulates what
+    # a real dollar bill (e.g. Hotel-Receipt.png) would produce.
+    usd_doc = upload(client, claim["id"], CONVEYANCE_PDF, filename="hotel.pdf").json()
+    wait_until_processed(client, usd_doc["id"])
+    repository.add_extraction(
+        db_session,
+        document_id=uuid.UUID(usd_doc["id"]),
+        actor_id=repository.get_or_create_seed_employee(db_session).id,
+        source="employee",
+        document_type="generic_receipt",
+        fields={"document_type": "generic_receipt", "vendor_name": "Grand Plaza Hotel", "amount": "780.75", "currency": "USD"},
+        amount=Decimal("780.75"),
+        currency="USD",
+        audit_action="edited",
+    )
+    client.post(f"/api/documents/{usd_doc['id']}/confirm", json={"edits": {}})
+
+    claim_detail = client.get(f"/api/claims/{claim['id']}").json()
+    assert claim_detail["total_amount"] is None, "a mixed-currency claim has no single total"
+    assert claim_detail["currency"] is None
+    assert claim_detail["totals_by_currency"] == {"INR": "1417.18", "USD": "780.75"}
+
+    # the claims list must show the same breakdown, not a stale/summed figure
+    listed = next(c for c in client.get("/api/claims").json() if c["id"] == claim["id"])
+    assert listed["totals_by_currency"] == {"INR": "1417.18", "USD": "780.75"}

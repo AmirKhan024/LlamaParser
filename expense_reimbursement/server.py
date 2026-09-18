@@ -63,11 +63,15 @@ ALLOWED_CONTENT_TYPES = {
     "image/webp": ".webp",
 }
 
+# A type not listed here defaults to "amount" (BaseClaim's own field,
+# see below) -- covers every GenericClaim fallback type uniformly
+# (generic_receipt, taxi_receipt, hotel_invoice, fuel_receipt,
+# unstructured_proof), the same class of bug as SUMMARY.md's bug #2:
+# a fallback type silently missing from a type-keyed dict.
 _AMOUNT_FIELD_BY_TYPE = {
     "telecom_bill": "total",
     "restaurant_bill": "grand_total",
     "local_conveyance_form": "total_claimed",
-    "generic_receipt": "amount",
 }
 
 app = FastAPI(title="Expense Reimbursement")
@@ -198,9 +202,7 @@ def _corrections_for_edits(ai_fields: dict, edits: dict[str, Any]) -> list[dict[
 
 
 def _extraction_amount(document_type: str, clean_json: dict) -> Optional[Decimal]:
-    field = _AMOUNT_FIELD_BY_TYPE.get(document_type)
-    if field is None:
-        return None
+    field = _AMOUNT_FIELD_BY_TYPE.get(document_type, "amount")
     value = clean_json.get(field)
     if value is None:
         return None
@@ -210,13 +212,17 @@ def _extraction_amount(document_type: str, clean_json: dict) -> Optional[Decimal
         return None
 
 
+def _extraction_currency(clean_json: dict) -> Optional[str]:
+    return clean_json.get("currency")
+
+
 def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict:
     """build_claim -> validate_claim -> check_completeness ->
     build_review_view, the same sequence run.py's process_one uses.
     Reused for the extraction pipeline, for a dry-run /validate, and for
     re-evaluating after an employee save or revert."""
     doc_type = DocumentType(document_type_value)
-    claim = build_claim(doc_type, fields)
+    claim = build_claim(doc_type, fields, markdown_text or "")
     clean_json = claim.model_dump(mode="json")
     checks = validate_claim(claim)
     checks_as_dicts = [{"name": c.name, "passed": c.passed, "detail": c.detail} for c in checks]
@@ -274,15 +280,40 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
     return summary
 
 
+def _claim_totals_by_currency(claim: Claim) -> dict[str, Decimal]:
+    """Never sums different currencies together -- computed live from
+    eager-loaded documents/extractions (not the claims.total_amount/
+    currency columns, which can only ever hold one figure and are best-
+    effort -- see repository.recompute_claim_total)."""
+    totals: dict[str, Decimal] = {}
+    for document in claim.documents:
+        if document.status != "confirmed" or not document.extractions:
+            continue
+        extraction = document.extractions[-1]  # relationship is order_by=Extraction.version
+        if extraction.amount is None:
+            continue
+        currency = extraction.currency or "unknown"
+        totals[currency] = totals.get(currency, Decimal("0")) + extraction.amount
+    return totals
+
+
 def _claim_summary(claim: Claim) -> dict:
+    totals = _claim_totals_by_currency(claim)
+    if len(totals) == 1:
+        currency, total_amount = next(iter(totals.items()))
+    elif len(totals) == 0:
+        currency, total_amount = "INR", Decimal("0.00")
+    else:
+        currency, total_amount = None, None
     return {
         "id": str(claim.id),
         "title": claim.title,
         "status": claim.status,
         "note_to_approver": claim.note_to_approver,
         "document_count": len(claim.documents),
-        "total_amount": _money(claim.total_amount),
-        "currency": claim.currency,
+        "total_amount": _money(total_amount),
+        "currency": currency,
+        "totals_by_currency": {k: _money(v) for k, v in totals.items()},
         "created_at": claim.created_at.isoformat(),
         "updated_at": claim.updated_at.isoformat(),
         "submitted_at": claim.submitted_at.isoformat() if claim.submitted_at else None,
@@ -397,6 +428,7 @@ def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.UUID) 
                 vendor_name=clean_json.get("vendor_name"),
                 bill_date=clean_json.get("date") or clean_json.get("sent_date"),
                 amount=_extraction_amount(document_type_value, clean_json),
+                currency=_extraction_currency(clean_json),
                 check_results=evaluated["checks"],
                 audit_action="extracted",
             )
@@ -656,6 +688,7 @@ def _save_edits(session: Session, document: Document, edits: dict[str, Any], act
         vendor_name=clean_json.get("vendor_name"),
         bill_date=clean_json.get("date") or clean_json.get("sent_date"),
         amount=_extraction_amount(extraction.document_type, clean_json),
+        currency=_extraction_currency(clean_json),
         check_results=evaluated["checks"],
         corrections=corrections,
         audit_action="edited",
@@ -748,6 +781,7 @@ def revert_document(
         vendor_name=evaluated["clean_json"].get("vendor_name"),
         bill_date=evaluated["clean_json"].get("date") or evaluated["clean_json"].get("sent_date"),
         amount=_extraction_amount(ai_extraction.document_type, evaluated["clean_json"]),
+        currency=_extraction_currency(evaluated["clean_json"]),
         check_results=evaluated["checks"],
         corrections=[],
         audit_action="edited",

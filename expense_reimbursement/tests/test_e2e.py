@@ -354,3 +354,76 @@ def test_confirmed_document_hides_warnings_and_reopens(live_server):
         assert api_status == "needs_review"
 
         browser.close()
+
+
+def test_currency_display_and_dropdown(live_server):
+    """Bug 3: currency silently defaulted to INR and was never shown to
+    the employee. An ambiguous currency (None) must render as an
+    editable dropdown with the "couldn't tell" warning; a known,
+    non-INR currency must show formatted with its symbol and code
+    (e.g. "$780.75 USD"), never silently as rupees."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1100, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+
+        ambiguous_doc = {
+            "id": "fake-1", "claim_id": "fake-claim", "claim_status": "draft",
+            "original_name": "hotel.png", "status": "needs_review", "mime_type": "image/png",
+            "corrections": [],
+            "review": {
+                "document_type": "generic_receipt",
+                "currency": None,
+                "fields": [
+                    {"key": "vendor_name", "label": "Vendor", "value": "Grand Plaza Hotel", "editable": True},
+                    {"key": "date", "label": "Date", "value": "2026-03-18", "editable": True},
+                    {"key": "amount", "label": "Amount", "value": "780.75", "editable": True},
+                    {
+                        "key": "currency", "label": "Currency", "value": None, "editable": True,
+                        "type": "select", "options": ["INR", "USD", "EUR", "GBP"],
+                    },
+                ],
+                "collapsible": None,
+                "warnings": ["Couldn't tell which currency this bill is in."],
+                "editable_fields": ["vendor_name", "date", "amount", "currency"],
+                "needs_confirm": True,
+                "needs_review": True,
+            },
+        }
+        page.evaluate(
+            """(doc) => {
+                document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
+                docPageState = { doc, edits: {}, dirty: false, saving: false };
+                drawDocumentPage();
+            }""",
+            ambiguous_doc,
+        )
+        page.wait_for_selector("#fields-container")
+
+        assert page.locator("text=Couldn't tell which currency this bill is in.").count() == 1
+        assert page.locator('select[data-path="currency"]').count() == 1, "currency must be an editable dropdown when ambiguous"
+
+        # a known, non-INR currency: shown formatted, no dropdown (confirmed/locked here too)
+        known_doc = {
+            **ambiguous_doc,
+            "status": "confirmed",
+            "review": {
+                **ambiguous_doc["review"],
+                "currency": "USD",
+                "fields": [f for f in ambiguous_doc["review"]["fields"] if f["key"] != "currency"],
+                "editable_fields": [],
+                "warnings": [],
+                "needs_review": False,
+            },
+        }
+        page.evaluate(
+            """(doc) => { docPageState = { doc, edits: {}, dirty: false, saving: false }; drawDocumentPage(); }""",
+            known_doc,
+        )
+        page.wait_for_selector("#fields-container")
+        assert page.locator('select[data-path="currency"]').count() == 0
+        amount_value = page.locator(".field-value", has_text="780.75").inner_text()
+        assert amount_value.strip() == "$780.75 USD", amount_value
+
+        browser.close()

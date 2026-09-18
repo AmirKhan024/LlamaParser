@@ -63,7 +63,7 @@ def process_one(pdf_path: Path) -> dict:
 
     print("Classifying + extracting via Groq...")
     result = extract_claim(markdown, raw_json)
-    claim = build_claim(result.document_type, result.raw_fields)
+    claim = build_claim(result.document_type, result.raw_fields, markdown)
 
     print(f"\ndocument_type: {claim.document_type.value}")
 

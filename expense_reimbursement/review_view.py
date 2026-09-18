@@ -37,6 +37,20 @@ def _field(key: str, label: str, value: Any, editable: bool) -> Dict[str, Any]:
     return {"key": key, "label": label, "value": value, "editable": editable}
 
 
+_CURRENCY_OPTIONS = ["INR", "USD", "EUR", "GBP"]
+
+
+def _currency_select_field(value: Optional[str]) -> Dict[str, Any]:
+    return {
+        "key": "currency",
+        "label": "Currency",
+        "value": value,
+        "editable": True,
+        "type": "select",
+        "options": _CURRENCY_OPTIONS,
+    }
+
+
 def _checks_by_name(validation: List[Dict[str, Any]]) -> Dict[str, bool]:
     return {c["name"]: c.get("passed", True) for c in validation}
 
@@ -182,9 +196,18 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
     builder = _BUILDERS.get(doc_type, _build_generic_receipt)
     built = builder(claim, checks)
 
-    fields = built["fields"]
+    fields = list(built["fields"])
     collapsible = built.get("collapsible")
     needs_confirm = built.get("needs_confirm", True)
+    currency = claim.get("currency")
+
+    # Currency is only ever a distinct, editable field when it's genuinely
+    # ambiguous (build_claim couldn't determine it) -- otherwise it's
+    # conveyed by how amounts are formatted (fmtMoney on the client),
+    # not a separate row. Doesn't apply to read-only types (approval
+    # correspondence has no amount to be ambiguous about).
+    if currency is None and needs_confirm:
+        fields.append(_currency_select_field(currency))
 
     editable_fields = [f["key"] for f in fields if f["editable"]]
     if collapsible and collapsible.get("editable"):
@@ -206,6 +229,7 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
 
     return {
         "document_type": doc_type,
+        "currency": currency,
         "fields": fields,
         "collapsible": collapsible,
         "warnings": warnings,
