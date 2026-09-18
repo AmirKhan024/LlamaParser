@@ -465,6 +465,7 @@ def test_currency_display_and_dropdown(live_server):
         }
         page.evaluate(
             """(doc) => {
+                document.getElementById('app').classList.add('wide');
                 document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
                 docPageState = { doc, edits: {}, dirty: false, saving: false };
                 drawDocumentPage();
@@ -539,6 +540,7 @@ def test_empty_items_shows_add_item_not_an_empty_table(live_server):
         doc = _generic_receipt_doc([])
         page.evaluate(
             """(doc) => {
+                document.getElementById('app').classList.add('wide');
                 document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
                 docPageState = { doc, edits: {}, dirty: false, saving: false };
                 drawDocumentPage();
@@ -584,6 +586,7 @@ def test_items_table_fits_desktop_width_without_horizontal_scroll(live_server):
         doc["review"]["collapsible"]["auto_expand"] = True
         page.evaluate(
             """(doc) => {
+                document.getElementById('app').classList.add('wide');
                 document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
                 docPageState = { doc, edits: {}, dirty: false, saving: false };
                 drawDocumentPage();
@@ -619,6 +622,7 @@ def test_money_edit_reason_box_gates_confirm(live_server):
         doc["review"]["reason_required"] = True
         page.evaluate(
             """(doc) => {
+                document.getElementById('app').classList.add('wide');
                 document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
                 docPageState = { doc, edits: {}, dirty: false, saving: false, reason: "" };
                 drawDocumentPage();
@@ -741,5 +745,114 @@ def test_suggestion_apply_fixes_the_swap_and_unlocks_confirm(live_server):
         confirm_btn.click()
         page.wait_for_url("**/#/claims/*")
         page.wait_for_selector(".chip-confirmed")
+
+        browser.close()
+
+
+def test_review_page_uses_the_full_width_and_trips_table_fits_at_1280(live_server):
+    """Item 4: document ~55% (sticky) / form the rest, #app widened up
+    to 1600px on this page only, and the trips table shows every
+    column -- including Km -- with no horizontal scrollbar at
+    >=1280px wide."""
+    doc_id, _claim_id = _seed_unfixable_conveyance_mismatch(live_server)
+    SCREENSHOTS_DIR.mkdir(exist_ok=True)
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1440, "height": 900})
+        page.goto(f"{live_server}/#/documents/{doc_id}")
+        page.wait_for_selector("#trips-table")
+        shot(page, "11_review_page_wide_1440_before.png")
+
+        assert "wide" in (page.get_attribute("#app", "class") or "")
+        review_layout = page.locator(".review-layout")
+        doc_preview = page.locator(".doc-preview")
+        fields_col = page.locator(".review-layout > div").nth(1)
+        layout_box = review_layout.bounding_box()
+        preview_box = doc_preview.bounding_box()
+        fields_box = fields_col.bounding_box()
+        # ~55% document / ~45% form, not the old 50/50 split
+        assert preview_box["width"] > fields_box["width"]
+        assert abs(preview_box["width"] / layout_box["width"] - 0.55) < 0.05
+
+        # sticky: still visible after scrolling the (taller) form column
+        page.mouse.wheel(0, 600)
+        page.wait_for_timeout(100)
+        assert doc_preview.is_visible(), "doc preview must stay on screen while scrolled, not scroll away"
+        assert doc_preview.bounding_box()["y"] > -50, "doc preview must stay pinned near the top, not scroll away"
+
+        browser.close()
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/documents/{doc_id}")
+        page.wait_for_selector("#trips-table")
+
+        headers = [h.strip() for h in page.locator("#trips-table th").all_inner_texts()]
+        assert headers == ["Date", "Place", "Purpose", "Client", "Km"], "every trips column must be shown, including Km"
+
+        table_scroll = page.locator("#trips-table").locator("xpath=ancestor::div[contains(@class,'table-scroll')]")
+        table_box = page.locator("#trips-table").bounding_box()
+        scroll_box = table_scroll.bounding_box()
+        assert table_box["width"] <= scroll_box["width"] + 1, "trips table itself must not need to scroll at >=1280px wide"
+
+        browser.close()
+
+
+def test_trips_table_km_and_total_km_highlighted_when_check_fails(live_server):
+    """Item 4: a failing trips check highlights the Km column header and
+    the Total km field -- both, together, since that's the one field on
+    the form the bad total actually shows up in."""
+    doc_id, _claim_id = _seed_unfixable_conveyance_mismatch(live_server)
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/documents/{doc_id}")
+        page.wait_for_selector("#trips-table")
+
+        km_header = page.locator("#trips-table th", has_text="Km")
+        assert "field-highlight" in (km_header.get_attribute("class") or "")
+
+        total_km_row = page.locator(".field-row", has=page.locator("label", has_text="Total km"))
+        assert "field-highlight" in (total_km_row.get_attribute("class") or "")
+
+        browser.close()
+
+
+def test_trips_table_cell_click_to_edit_and_keyboard_reachable(live_server):
+    """Item 4: trips cells render as plain text (no bordered input)
+    until clicked or focused (Tab reaches them, Enter activates them),
+    and commit back to plain text on blur."""
+    doc_id, _claim_id = _seed_unfixable_conveyance_mismatch(live_server)
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/documents/{doc_id}")
+        page.wait_for_selector("#trips-table")
+
+        # no bordered inputs sitting in the table before any interaction
+        assert page.locator("#trips-table input").count() == 0
+        first_cell = page.locator("#trips-table .cell-text").first
+        assert first_cell.get_attribute("tabindex") == "0"
+
+        # click activates it
+        first_cell.click()
+        active_input = page.locator("#trips-table td.cell-editable input")
+        assert active_input.count() == 1
+        active_input.fill("Changed Place")
+        active_input.blur()
+        page.wait_for_function("() => document.querySelector('#trips-table input') === null")
+        assert page.locator("#trips-table .cell-text").first.inner_text() == "Changed Place"
+        assert page.locator("text=Unsaved changes").count() == 1
+
+        # keyboard: Tab to a cell, Enter activates it
+        kms_cell = page.locator('#trips-table td[data-trip-key="kms"] .cell-text').first
+        kms_cell.focus()
+        page.wait_for_selector('#trips-table td[data-trip-key="kms"] input')
+        page.keyboard.press("Escape")
+        page.wait_for_function("() => document.querySelector('#trips-table input') === null")
 
         browser.close()

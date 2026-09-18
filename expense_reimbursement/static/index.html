@@ -19,6 +19,7 @@
     --warn-light:#fffbeb;
     --ok:#15803d;
     --radius:10px;
+    --action-bar-height:88px;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -26,7 +27,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     background:var(--bg);
     color:var(--ink);
-    padding-bottom:88px;
+    padding-bottom:var(--action-bar-height);
   }
   a{color:var(--blue);}
   button{
@@ -75,6 +76,9 @@
   .topbar .brand{display:flex;align-items:center;gap:8px;}
   .topbar .brand a{color:var(--ink);text-decoration:none;font-weight:600;}
   #app{max-width:900px;margin:0 auto;padding:20px 16px 40px;}
+  /* The document review page opts into this (item 4: use the full
+     width) -- every other page keeps the narrower 900px reading width. */
+  #app.wide{max-width:1600px;}
   .empty-state{
     text-align:center;
     padding:60px 20px;
@@ -149,16 +153,29 @@
   textarea#note-field{margin-top:6px;}
   .claim-total-row{display:flex;justify-content:space-between;align-items:center;margin:16px 0;font-size:16px;}
   .claim-total-row .amount{font-weight:700;font-variant-numeric:tabular-nums;}
-  .review-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+  /* Document ~55%, form the rest, per item 4 -- doc-preview is sticky
+     and fills the viewport height minus the fixed action bar, so it
+     stays visible while the (often much taller) form column scrolls. */
+  .review-layout{display:grid;grid-template-columns:55% 1fr;gap:20px;align-items:start;}
   .review-layout > div{min-width:0;}
-  @media (max-width: 800px){
+  @media (max-width: 900px){
     .review-layout{grid-template-columns:1fr;}
+    .review-layout .doc-preview{position:static;height:auto;max-height:480px;}
   }
-  .doc-preview{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:320px;display:flex;flex-direction:column;}
+  .doc-preview{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    overflow:hidden;min-height:320px;display:flex;flex-direction:column;
+    position:sticky;top:16px;height:calc(100vh - 32px - var(--action-bar-height));
+  }
   .doc-preview iframe, .doc-preview img{width:100%;flex:1;border:0;display:block;object-fit:contain;background:#525659;}
   .field-row{margin-bottom:14px;}
   .field-row label{display:block;font-size:13px;color:var(--ink-muted);margin-bottom:4px;font-weight:600;}
   .field-value{font-size:15px;padding:8px 10px;}
+  /* A check about the trips failing highlights the Km column header
+     (table.trips-table th.field-highlight, above) and this field --
+     the one place on the form the resulting bad total actually shows. */
+  .field-row.field-highlight{background:var(--warn-light);border-radius:8px;padding:8px 10px;margin-left:-10px;margin-right:-10px;}
+  .field-row.field-highlight label{color:var(--warn);}
   .ai-was{font-size:12px;color:var(--ink-muted);margin-top:3px;}
   .ai-was .old-val{text-decoration:line-through;color:#9ca3af;}
   .ai-was .pen{color:var(--blue);}
@@ -174,20 +191,46 @@
   details.collapsible{border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:14px;}
   details.collapsible summary{cursor:pointer;font-weight:600;font-size:14px;}
   table.items-table, table.trips-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;}
-  /* trips-table has 5 columns (Date/Place/Purpose/Client/Km) and
-     genuinely needs more room than a desktop review column comfortably
-     gives it -- scrolls inside .table-scroll by design. items-table
-     has only 4 (Item/Qty/Unit price/Amount) and must fit without a
+  /* items-table (Item/Qty/Unit price/Amount) must fit without a
      horizontal scrollbar at desktop width; only 390px needs it to
      scroll (table-scroll's overflow-x:auto still applies there). */
-  table.trips-table{min-width:560px;}
   table.items-table{min-width:380px;}
+  /* trips-table (Date/Place/Purpose/Client/Km) uses table-layout:fixed
+     with explicit column widths summing to 100% -- item 4: must show
+     every column, including Km, with no horizontal scrollbar at
+     >=1280px wide, so it deliberately does NOT get a min-width past
+     its container the way items-table's free-form layout does; long
+     text wraps instead of forcing overflow. */
+  table.trips-table{table-layout:fixed;}
+  table.trips-table col.col-date{width:16%;}
+  table.trips-table col.col-place{width:24%;}
+  table.trips-table col.col-purpose{width:24%;}
+  table.trips-table col.col-client{width:20%;}
+  table.trips-table col.col-kms{width:16%;}
   table.items-table th, table.items-table td, table.trips-table th, table.trips-table td{
     padding:6px 6px;text-align:left;border-bottom:1px solid var(--border);
   }
-  table.trips-table td:first-child, table.trips-table th:first-child{min-width:110px;}
+  table.trips-table th, table.trips-table td{word-wrap:break-word;overflow-wrap:break-word;}
+  table.trips-table th.col-num, table.trips-table td.col-num{text-align:right;}
+  table.trips-table th.field-highlight{background:var(--warn-light);color:var(--warn);}
   .table-scroll{overflow-x:auto;}
-  table.items-table input, table.trips-table input{font-size:13px;padding:5px 6px;width:100%;min-width:64px;}
+  table.items-table input{font-size:13px;padding:5px 6px;width:100%;min-width:64px;}
+  /* Click/focus-to-edit trips cell: plain text until activated (never
+     a bordered input sitting there unedited), replaced with a real
+     <input> on click, focus, or Enter -- and back to text on blur or
+     Enter/Escape inside it. Tab reaches every cell in DOM order since
+     .cell-text is a normal tabbable element. */
+  table.trips-table td.cell-editable{padding:0;}
+  table.trips-table .cell-text{
+    display:block;padding:6px 6px;cursor:text;min-height:1.2em;
+    border:1px solid transparent;border-radius:4px;
+  }
+  table.trips-table .cell-text:hover{background:var(--bg);}
+  table.trips-table .cell-text:focus-visible{outline:2px solid var(--blue);outline-offset:-2px;}
+  table.trips-table td.cell-editable input{
+    font-size:13px;padding:5px 6px;width:100%;border:1px solid var(--blue);border-radius:4px;
+  }
+  table.trips-table td.col-num .cell-text, table.trips-table td.col-num input{text-align:right;}
   .empty-items{padding:14px 0;color:var(--ink-muted);font-size:14px;}
   .empty-items button{margin-top:8px;}
   .action-bar{
@@ -394,6 +437,11 @@ let activeGuard = null; // async () => boolean (true = allow navigation)
 
 async function router() {
   const hash = location.hash || "#/";
+  // Only the document review page opts into the wider layout (item 4);
+  // every other page keeps #app's normal 900px width. Reset here, not
+  // in each non-document handler, so it can't be forgotten on a route
+  // added later.
+  document.getElementById("app").classList.remove("wide");
   if (activeGuard) {
     const guard = activeGuard;
     activeGuard = null;
@@ -757,6 +805,7 @@ let docPageState = null; // { doc, edits: {path: value}, dirty: bool, saving: bo
 
 async function renderDocumentPage(documentId) {
   const app = document.getElementById("app");
+  app.classList.add("wide");
   app.innerHTML = `<div id="doc-body">Loading…</div>`;
 
   let doc;
@@ -975,16 +1024,20 @@ function simpleFieldHtml(field) {
   const changedMarker = changed
     ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(aiValue ?? "–")}</span></div>`
     : "";
+  // item 4: a failing trips check highlights this field too, alongside
+  // the trips table's own Km column header.
+  const highlight = field.key === "total_kms" && docPageState.doc.review.trips_check_failed;
+  const rowClass = `field-row${highlight ? " field-highlight" : ""}`;
   if (!field.editable || isFieldsLocked()) {
     const shown = displayAsMoney ? fmtMoney(value, docCurrency) : escapeHtml(value ?? "–");
-    return `<div class="field-row"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
+    return `<div class="${rowClass}"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
   }
   if (field.type === "select") {
     const options = (field.options || [])
       .map((opt) => `<option value="${escapeHtml(opt)}" ${opt === value ? "selected" : ""}>${escapeHtml(opt)}</option>`)
       .join("");
     return `
-      <div class="field-row">
+      <div class="${rowClass}">
         <label for="f-${field.key}">${escapeHtml(field.label)}</label>
         <select id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}">
           <option value="" ${!value ? "selected" : ""}>Choose…</option>
@@ -994,7 +1047,7 @@ function simpleFieldHtml(field) {
       </div>`;
   }
   return `
-    <div class="field-row">
+    <div class="${rowClass}">
       <label for="f-${field.key}">${escapeHtml(field.label)}</label>
       <input type="text" id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}"
              value="${escapeHtml(value ?? "")}" inputmode="${displayAsMoney ? "decimal" : "text"}">
@@ -1002,16 +1055,25 @@ function simpleFieldHtml(field) {
     </div>`;
 }
 
+const TRIP_COLS = [
+  ["date", "Date", "col-date"],
+  ["place", "Place", "col-place"],
+  ["purpose", "Purpose", "col-purpose"],
+  ["client", "Client", "col-client"],
+  ["kms", "Km", "col-kms col-num"],
+];
+
 function tripsTableHtml(field) {
   const trips = currentFieldValue(field) || [];
   const { changed } = fieldChangeInfo(field.key, field.value);
   const locked = isFieldsLocked();
-  const cols = [["date", "Date"], ["place", "Place"], ["purpose", "Purpose"], ["client", "Client"], ["kms", "Km"]];
+  const kmHeaderHighlight = docPageState.doc.review.trips_check_failed ? " field-highlight" : "";
   const rows = trips.map((trip, i) => `
     <tr>
-      ${cols.map(([key, _label]) => locked
-        ? `<td>${escapeHtml(trip[key] ?? "")}</td>`
-        : `<td><input type="text" data-trip-index="${i}" data-trip-key="${key}" value="${escapeHtml(trip[key] ?? "")}"></td>`
+      ${TRIP_COLS.map(([key, _label, cls]) => locked
+        ? `<td class="${cls}">${escapeHtml(trip[key] ?? "")}</td>`
+        : `<td class="cell-editable ${cls}" data-trip-index="${i}" data-trip-key="${key}">`
+          + `<span class="cell-text" tabindex="0">${escapeHtml(trip[key] ?? "")}</span></td>`
       ).join("")}
     </tr>`).join("");
   return `
@@ -1019,7 +1081,10 @@ function tripsTableHtml(field) {
       <label>Trips</label>
       <div class="table-scroll">
         <table class="trips-table" id="trips-table">
-          <thead><tr>${cols.map(([, label]) => `<th>${label}</th>`).join("")}</tr></thead>
+          <colgroup>${TRIP_COLS.map(([, , cls]) => `<col class="${cls.split(" ")[0]}">`).join("")}</colgroup>
+          <thead><tr>${TRIP_COLS.map(([key, label, cls]) =>
+            `<th class="${cls}${key === "kms" ? kmHeaderHighlight : ""}">${label}</th>`
+          ).join("")}</tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>
@@ -1093,13 +1158,7 @@ function wireFieldInputs() {
       debouncedValidate();
     });
   });
-  document.querySelectorAll("#trips-table input[data-trip-index]").forEach((input) => {
-    input.addEventListener("input", (e) => {
-      applyTableEdit("travel_entries", Number(e.target.dataset.tripIndex), e.target.dataset.tripKey, e.target.value);
-      markDirty();
-      debouncedValidate();
-    });
-  });
+  document.querySelectorAll("#trips-table .cell-text").forEach(wireTripCell);
   document.querySelectorAll("#items-table input[data-item-index]").forEach((input) => {
     input.addEventListener("input", (e) => {
       applyTableEdit("line_items", Number(e.target.dataset.itemIndex), e.target.dataset.itemKey, e.target.value);
@@ -1109,6 +1168,57 @@ function wireFieldInputs() {
   });
   const addItemBtn = document.getElementById("btn-add-item");
   if (addItemBtn) addItemBtn.addEventListener("click", addBlankLineItem);
+}
+
+/* Item 4: trips-table cells are plain text until clicked, focused
+   (Tab reaches them, since .cell-text is a normal tabbable element),
+   or activated with Enter -- never a bordered input sitting there
+   unedited. Enter or blur commits; Escape reverts without marking the
+   document dirty. */
+function wireTripCell(span) {
+  if (!span) return;
+  span.addEventListener("click", () => activateTripCell(span));
+  span.addEventListener("focus", () => activateTripCell(span));
+  span.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); activateTripCell(span); }
+  });
+}
+
+function activateTripCell(span) {
+  const td = span.closest("td");
+  if (!td || td.querySelector("input")) return;
+  const index = Number(td.dataset.tripIndex);
+  const key = td.dataset.tripKey;
+  const currentValue = span.textContent;
+  const isNumeric = td.classList.contains("col-num");
+
+  td.innerHTML = "";
+  const input = document.createElement("input");
+  input.type = "text";
+  input.value = currentValue;
+  if (isNumeric) input.inputMode = "decimal";
+  td.appendChild(input);
+  input.focus();
+  input.select();
+
+  const revert = () => {
+    input.removeEventListener("blur", commit);
+    td.innerHTML = `<span class="cell-text" tabindex="0">${escapeHtml(currentValue)}</span>`;
+    wireTripCell(td.querySelector(".cell-text"));
+  };
+  const commit = () => {
+    const newValue = input.value;
+    applyTableEdit("travel_entries", index, key, newValue);
+    markDirty();
+    debouncedValidate();
+    td.innerHTML = `<span class="cell-text" tabindex="0">${escapeHtml(newValue)}</span>`;
+    wireTripCell(td.querySelector(".cell-text"));
+  };
+  input.addEventListener("blur", commit, { once: true });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); input.blur(); }
+    else if (e.key === "Escape") { e.preventDefault(); revert(); }
+  });
 }
 
 function applyTableEdit(rootKey, index, key, value) {
@@ -1131,6 +1241,7 @@ async function runValidate() {
       reason_required: result.review.reason_required,
       suggestions: result.review.suggestions,
       suggestion_sentence: result.review.suggestion_sentence,
+      trips_check_failed: result.review.trips_check_failed,
     };
     renderWarningsAndReasonBox();
   } catch (err) {

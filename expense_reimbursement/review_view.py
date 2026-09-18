@@ -203,7 +203,12 @@ def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool],
             "The amounts don't add up: conveyance, daily allowance, vehicle maintenance and mobile "
             "allowance should sum to the total claimed."
         )
-    return {"fields": fields, "collapsible": None, "warnings": warnings, "needs_confirm": True}
+    return {
+        "fields": fields, "collapsible": None, "warnings": warnings, "needs_confirm": True,
+        # item 4: highlights the Km column header and the Total km field
+        # on the client when the trips themselves are the problem.
+        "trips_check_failed": not kms_ok,
+    }
 
 
 def _build_approval_correspondence(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
@@ -335,4 +340,5 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
         "needs_review": needs_review,
         "suggestions": suggestions,
         "suggestion_sentence": suggestion_sentence,
+        "trips_check_failed": built.get("trips_check_failed", False),
     }
