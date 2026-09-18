@@ -2,19 +2,26 @@
 
 Bug 3: BaseClaim.currency defaulted to "INR" whenever the model gave
 none at all, so a dollar bill silently became a rupee claim with no
-warning. Now a missing currency is inferred from the document's own
-markdown (detect_currency_from_markdown) when unambiguous, and left
-None -- with a warning, via check_completeness -- when it can't be
-told (zero or several currency symbols found).
+warning. A missing currency is inferred from the document's own
+markdown (detect_currency_from_markdown) when unambiguous.
+
+Prior-prompt item 3: the fix above was itself too noisy -- a document
+with NO currency marker at all (e.g. a plain INR conveyance form that
+never prints "Rs." or "INR") also came out None and warned on every
+such document. resolve_currency now treats that case as "the company's
+own currency, no warning" (COMPANY_CURRENCY, default INR) and reserves
+the None-plus-warning outcome for a genuine conflict: two or more
+distinct currency markers found in the same document.
 """
 
+import importlib
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from schemas import DocumentType
-from validate import build_claim, check_completeness, detect_currency_from_markdown
+from validate import build_claim, check_completeness, detect_currency_from_markdown, resolve_currency
 
 
 def test_detect_currency_single_symbol_or_code():
@@ -43,10 +50,55 @@ def test_build_claim_infers_currency_from_markdown_when_model_gives_none():
     assert claim.currency == "USD"
 
 
-def test_build_claim_leaves_currency_null_when_markdown_is_ambiguous_too():
+def test_build_claim_defaults_to_company_currency_when_no_marker_found():
+    """No currency marker anywhere in the document (e.g. a plain INR
+    conveyance form) is not ambiguous -- it's the common case, and must
+    default to COMPANY_CURRENCY with no warning, not null."""
     raw_fields = {"document_type": "generic_receipt", "amount": "780.75"}
     claim = build_claim(DocumentType.GENERIC_RECEIPT, raw_fields, "no currency symbols in here at all")
+    assert claim.currency == "INR"
+
+
+def test_build_claim_leaves_currency_null_only_on_a_genuine_conflict():
+    raw_fields = {"document_type": "generic_receipt", "amount": "780.75"}
+    claim = build_claim(DocumentType.GENERIC_RECEIPT, raw_fields, "Was $50, now Rs. 4000 after conversion")
     assert claim.currency is None
+
+
+def test_resolve_currency_model_value_wins_over_markdown():
+    assert resolve_currency("$", "Total: Rs. 500") == "USD"
+
+
+def test_resolve_currency_respects_company_currency_env_var(monkeypatch):
+    import validate
+
+    monkeypatch.setenv("COMPANY_CURRENCY", "EUR")
+    importlib.reload(validate)
+    try:
+        assert validate.resolve_currency(None, "no currency markers here") == "EUR"
+    finally:
+        monkeypatch.delenv("COMPANY_CURRENCY", raising=False)
+        importlib.reload(validate)
+
+
+def test_conveyance_form_markdown_has_no_currency_marker_and_gets_no_warning():
+    """The real repro: a plain INR conveyance form with zero currency
+    symbols anywhere must show no currency warning at all."""
+    markdown = "Local Conveyance Form\nEmployee: Nasir Khan\nTotal Claimed: 8110\nDate: 26 May 2026"
+    raw_fields = {"document_type": "local_conveyance_form", "total_claimed": "8110"}
+    claim = build_claim(DocumentType.LOCAL_CONVEYANCE_FORM, raw_fields, markdown)
+    assert claim.currency == "INR"
+    warnings = check_completeness(markdown, claim.model_dump(mode="json"), "local_conveyance_form")
+    assert "Couldn't tell which currency this bill is in." not in warnings
+
+
+def test_currency_renormalized_on_re_evaluation():
+    """A stored raw "$" (from before normalization existed, or from an
+    employee-saved field) must come out normalized every time build_claim
+    runs again -- re-evaluation is not a one-time migration."""
+    raw_fields = {"document_type": "generic_receipt", "amount": "780.75", "currency": "$"}
+    claim = build_claim(DocumentType.GENERIC_RECEIPT, raw_fields, "")
+    assert claim.currency == "USD"
 
 
 def test_build_claim_normalizes_an_explicit_dollar_sign_from_the_model():

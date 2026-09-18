@@ -4,6 +4,7 @@ never asked of the LLM -- the model's job stopped at Step 2.
 """
 
 import json
+import os
 import re
 from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
@@ -12,6 +13,12 @@ from typing import Any, Dict, Optional, Tuple, get_args
 from schemas import BaseClaim, DocumentType, GenericClaim, LocalConveyanceForm, RestaurantBill, TelecomBill, schema_for
 
 _CURRENCY_WORDS = re.compile(r"Rs\.?|INR|₹|\$", re.IGNORECASE)
+
+# The currency assumed when a document has no currency marker at all
+# (see resolve_currency below) -- read once at import time, same as
+# every other env-driven constant in this codebase (e.g. server.py's
+# PIPELINE_MODE).
+COMPANY_CURRENCY = os.environ.get("COMPANY_CURRENCY", "INR")
 
 # 0.5 was loose enough that a real employee edit (780.75 -> 780.70, a
 # $0.05 change) still passed every check -- an absolute 0.5 tolerance is
@@ -83,14 +90,40 @@ _CURRENCY_DETECTION_PATTERNS: list[Tuple[re.Pattern, str]] = [
 ]
 
 
+def _currency_candidates(markdown_text: str) -> set[str]:
+    return {code for pattern, code in _CURRENCY_DETECTION_PATTERNS if pattern.search(markdown_text)}
+
+
 def detect_currency_from_markdown(markdown_text: str) -> Optional[str]:
     """None means "couldn't tell" -- either nothing matched, or more
     than one distinct currency showed up (e.g. an FX conversion note),
-    and this deliberately doesn't guess between them."""
-    found = {code for pattern, code in _CURRENCY_DETECTION_PATTERNS if pattern.search(markdown_text)}
+    and this deliberately doesn't guess between them. Only used when the
+    model gave no currency of its own -- see resolve_currency below for
+    what build_claim actually puts on the claim, which treats "nothing
+    matched" differently from "several matched"."""
+    found = _currency_candidates(markdown_text)
     if len(found) == 1:
         return found.pop()
     return None
+
+
+def resolve_currency(model_currency: Optional[str], markdown_text: str) -> Optional[str]:
+    """The model's own currency wins when it gave one (normalized, e.g.
+    a bare "$" becomes "USD"). Otherwise: exactly one currency marker
+    in the document's own text -> use it; two or more (e.g. an FX
+    conversion note) -> genuinely ambiguous, left None so check_
+    completeness warns; none at all -> COMPANY_CURRENCY, not a warning-
+    worthy situation -- most bills in the company's own currency never
+    print a symbol at all (e.g. a plain INR conveyance form), and
+    warning on every one of them was pure noise."""
+    if model_currency:
+        return normalize_currency(model_currency)
+    candidates = _currency_candidates(markdown_text)
+    if len(candidates) == 1:
+        return candidates.pop()
+    if len(candidates) >= 2:
+        return None
+    return COMPANY_CURRENCY
 
 # Real placeholder values a bill prints when a customer has no GST
 # registration -- e.g. "Customer GST No.: -" -- these are legitimately
@@ -276,13 +309,11 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any], markdow
     the model reported.
 
     `markdown_text` (the document's own parsed text) is only consulted
-    when the model gave no currency at all: previously an absent
-    currency silently defaulted to "INR" via the schema's own default,
-    which is how a dollar bill quietly became a rupee claim. Now a
-    missing model currency is inferred from the document itself
-    (`detect_currency_from_markdown`) and left `None` -- not defaulted
-    to INR -- when that's ambiguous too; `check_completeness` turns that
-    `None` into a warning the employee actually sees.
+    when the model gave no currency at all -- see resolve_currency: a
+    single unambiguous marker in the text wins, conflicting markers
+    leave the currency `None` (check_completeness warns on that), and
+    no marker at all falls back to COMPANY_CURRENCY with no warning
+    (most bills in the company's own currency never print a symbol).
     """
     schema_cls = schema_for(document_type)
     processed = dict(raw_fields)
@@ -304,10 +335,7 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any], markdow
         processed["line_items"] = _preprocess_line_items(processed["line_items"], notes)
 
     processed["extraction_notes"] = notes
-    if processed.get("currency"):
-        processed["currency"] = normalize_currency(processed["currency"])
-    else:
-        processed["currency"] = detect_currency_from_markdown(markdown_text)
+    processed["currency"] = resolve_currency(processed.get("currency"), markdown_text)
 
     try:
         return schema_cls.model_validate(processed)
