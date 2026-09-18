@@ -213,7 +213,12 @@ def test_ai_extraction_version_never_modified(client, db_session):
     client.put(f"/api/documents/{doc['id']}/fields", json={"edits": {"total": "1420.00"}})
     client.put(f"/api/documents/{doc['id']}/fields", json={"edits": {"vendor_name": "Jio"}})
     client.post(f"/api/documents/{doc['id']}/revert")
-    client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {"total": "9.99"}})
+    # item 5d: confirm+save is now one transaction -- this edit breaks
+    # the subtotal+tax==total check with no reason given, so the whole
+    # attempt (including the would-be new extraction version) rolls
+    # back, not just the confirm step.
+    r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {"total": "9.99"}})
+    assert r.status_code == 422
 
     db_session.expire_all()
     ai_rows = db_session.scalars(
@@ -226,7 +231,18 @@ def test_ai_extraction_version_never_modified(client, db_session):
     all_versions = db_session.scalars(
         select(Extraction.version).where(Extraction.document_id == doc_uuid).order_by(Extraction.version)
     ).all()
-    assert all_versions == [1, 2, 3, 4, 5]  # ai, edit, edit, revert, confirm-with-edit
+    assert all_versions == [1, 2, 3, 4]  # ai, edit, edit, revert -- the rejected confirm added nothing
+
+    # the same edit succeeds, and creates exactly one new version, once
+    # a reason is actually given
+    r = client.post(
+        f"/api/documents/{doc['id']}/confirm", json={"edits": {"total": "9.99"}, "reason": "corrected per manager"}
+    )
+    assert r.status_code == 200
+    all_versions = db_session.scalars(
+        select(Extraction.version).where(Extraction.document_id == doc_uuid).order_by(Extraction.version)
+    ).all()
+    assert all_versions == [1, 2, 3, 4, 5]
 
 
 def test_never_show_forbidden_fields(client):
@@ -258,6 +274,52 @@ def test_remove_document_from_draft_claim(client):
 
     r = client.get(f"/api/documents/{doc['id']}")
     assert r.status_code == 404
+
+
+def test_removed_document_is_soft_deleted_not_actually_deleted(client, db_session):
+    """Item 5e: "Remove document" sets status='removed' -- extractions,
+    corrections and the uploaded file are all kept, not deleted, and
+    the document is excluded from the claim's document list/count/
+    totals and from the duplicate-sha check (re-uploading the exact
+    same file afterward is allowed)."""
+    import uuid
+
+    import server
+    from models import Document, Extraction
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    doc_uuid = uuid.UUID(doc["id"])
+    wait_until_processed(client, doc["id"])
+    client.put(f"/api/documents/{doc['id']}/fields", json={"edits": {"vendor_name": "Jio"}})
+
+    document = db_session.get(Document, doc_uuid)
+    full_path = server.STORAGE_DIR / document.file_key
+    assert full_path.exists(), "sanity check: the uploaded file is really on disk"
+
+    r = client.delete(f"/api/documents/{doc['id']}")
+    assert r.status_code == 200
+
+    db_session.expire_all()
+    document = db_session.get(Document, doc_uuid)
+    assert document is not None, "the row itself must still exist -- this is a soft delete"
+    assert document.status == "removed"
+
+    extractions = db_session.scalars(select(Extraction).where(Extraction.document_id == doc_uuid)).all()
+    assert len(extractions) == 2, "the AI extraction and the employee edit must both still be there"
+    corrections = repository.list_corrections(db_session, doc_uuid)
+    assert len(corrections) == 1, "the correction row must still be there"
+    assert full_path.exists(), "the uploaded file itself must be kept, not unlinked"
+
+    # excluded from the claim's document list and totals
+    claim_detail = client.get(f"/api/claims/{claim['id']}").json()
+    assert claim_detail["document_count"] == 0
+    assert claim_detail["documents"] == []
+
+    # excluded from the duplicate-sha check -- the exact same file can
+    # be uploaded again
+    r = upload(client, claim["id"], MOBILE_PDF)
+    assert r.status_code == 200, "re-uploading the same file after removing it must be allowed"
 
 
 def test_retry_failed_document(client, db_session):
@@ -331,6 +393,121 @@ def test_confirmed_document_hides_warnings_but_keeps_check_results(client, db_se
 
     extraction = repository.latest_extraction(db_session, uuid.UUID(doc["id"]))
     assert len(extraction.check_results) > 0, "check_results must still be in the DB, only the employee view changes"
+
+
+def test_confirm_only_allowed_on_ready_or_needs_review(client, db_session):
+    """Item 5b: Confirm must 409 on a document that's processing, failed,
+    or already confirmed -- not silently confirm a document with no real
+    extraction on it (the previous code only ever checked for
+    'confirmed', so a 'processing' or 'failed' document could be marked
+    confirmed with nothing behind it)."""
+    import uuid
+
+    from models import Document
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    doc_uuid = uuid.UUID(doc["id"])
+    wait_until_processed(client, doc["id"])
+
+    document = db_session.get(Document, doc_uuid)
+    for forced_status in ("processing", "failed"):
+        document.status = forced_status
+        document.error_message = "boom" if forced_status == "failed" else None
+        db_session.commit()
+        r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+        assert r.status_code == 409, f"confirm must reject a '{forced_status}' document"
+        assert forced_status in r.json()["detail"]
+
+    # back to a real, confirmable state -- confirm now succeeds
+    document.status = "ready"
+    document.error_message = None
+    db_session.commit()
+    r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+    assert r.status_code == 200
+    assert r.json()["status"] == "confirmed"
+
+    # and now that it's confirmed, confirming again also 409s
+    r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+    assert r.status_code == 409
+
+
+def test_late_finishing_pipeline_cannot_overwrite_confirmed_or_removed(client, db_session):
+    """Item 5c: repository.update_document_status_if_processing is what
+    server._run_pipeline uses for its own terminal status writes -- an
+    atomic UPDATE ... WHERE status = 'processing', so a pipeline that's
+    still running when the employee confirms or removes the document
+    (slow LlamaParse/Groq call racing a fast employee click) can never
+    flip a 'confirmed' or 'removed' document back to 'ready'/
+    'needs_review'/'failed' once it finally completes."""
+    import uuid
+
+    from models import Document
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    doc_uuid = uuid.UUID(doc["id"])
+    wait_until_processed(client, doc["id"])
+    client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+
+    document = db_session.get(Document, doc_uuid)
+    assert document.status == "confirmed"
+
+    updated = repository.update_document_status_if_processing(db_session, doc_uuid, status="ready")
+    assert updated is False
+    db_session.refresh(document)
+    assert document.status == "confirmed", "a late-finishing pipeline must not un-confirm the document"
+
+    updated = repository.update_document_status_if_processing(db_session, doc_uuid, status="failed", error_message="late")
+    assert updated is False
+    db_session.refresh(document)
+    assert document.status == "confirmed"
+
+    # the positive case: it DOES write when the document really is
+    # still "processing"
+    document.status = "processing"
+    document.error_message = None
+    db_session.commit()
+    updated = repository.update_document_status_if_processing(db_session, doc_uuid, status="ready")
+    assert updated is True
+    db_session.refresh(document)
+    assert document.status == "ready"
+
+
+def test_confirm_edits_and_recompute_are_one_transaction(client, db_session):
+    """Item 5d: a rejected confirm (missing reason) must leave NOTHING
+    behind -- not a half-saved extraction, not a bumped extraction
+    version, not a stale claim total -- because save+confirm+recompute
+    now share one session and commit exactly once."""
+    import uuid
+
+    from models import Document, Extraction
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    doc_uuid = uuid.UUID(doc["id"])
+    wait_until_processed(client, doc["id"])
+
+    before_versions = db_session.scalars(
+        select(Extraction.version).where(Extraction.document_id == doc_uuid)
+    ).all()
+    before_claim = client.get(f"/api/claims/{claim['id']}").json()
+
+    # a money edit that breaks the arithmetic check, no reason given
+    r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {"total": "1.00"}})
+    assert r.status_code == 422
+
+    db_session.expire_all()
+    after_versions = db_session.scalars(
+        select(Extraction.version).where(Extraction.document_id == doc_uuid)
+    ).all()
+    assert after_versions == before_versions, "the rejected confirm must not have created a new extraction version"
+
+    after_claim = client.get(f"/api/claims/{claim['id']}").json()
+    assert after_claim["total_amount"] == before_claim["total_amount"], "claim total must not have moved either"
+
+    document = db_session.get(Document, doc_uuid)
+    assert document.status != "confirmed"
 
 
 def test_confirmed_document_is_locked_until_reopened(client):
@@ -528,13 +705,14 @@ def test_diff_values_row_added_and_row_removed():
 
 
 def test_stuck_processing_document_recovered_on_startup(client, db_session):
-    """Bug 7: a document still "processing" from before a restart had
-    nothing left to resume it and stayed "Reading..." forever. The
-    startup hook (repository.recover_stuck_processing_documents) must
-    fail it out with a message pointing at Retry, and Retry must then
-    actually work."""
+    """Bug 7 (item 5a): a document still "processing" from before a
+    restart had nothing left to resume it and stayed "Reading..."
+    forever. This is a single-process server, so EVERY document still
+    "processing" at startup gets failed out unconditionally -- not just
+    ones stuck past some age -- with a message pointing at Retry, and
+    Retry must then actually work."""
     import uuid
-    from datetime import datetime, timedelta
+    from datetime import UTC, datetime
 
     from models import Document
 
@@ -544,29 +722,26 @@ def test_stuck_processing_document_recovered_on_startup(client, db_session):
     wait_until_processed(client, doc["id"])  # let the real pipeline finish first
 
     # simulate a server restart mid-pipeline: forced back to processing,
-    # with an updated_at old enough to look abandoned
+    # with an updated_at just now -- no age threshold exempts it anymore
     document = db_session.get(Document, doc_uuid)
     document.status = "processing"
     document.error_message = None
-    document.updated_at = datetime.utcnow() - timedelta(minutes=10)
+    document.updated_at = datetime.now(UTC)
     db_session.commit()
 
-    cutoff = datetime.utcnow() - timedelta(minutes=5)
-    recovered = repository.recover_stuck_processing_documents(db_session, cutoff)
+    recovered = repository.recover_stuck_processing_documents(db_session)
     assert [d.id for d in recovered] == [doc_uuid]
 
     detail = client.get(f"/api/documents/{doc['id']}").json()
     assert detail["status"] == "failed"
     assert detail["error_message"] == "Processing was interrupted. Retry."
 
-    # a document that's merely BEEN processing for under 5 minutes must
-    # not be touched
-    document.status = "processing"
+    # a document NOT "processing" must not be touched
+    document.status = "ready"
     document.error_message = None
-    document.updated_at = datetime.utcnow()
     db_session.commit()
-    still_running = repository.recover_stuck_processing_documents(db_session, cutoff)
-    assert still_running == []
+    untouched = repository.recover_stuck_processing_documents(db_session)
+    assert untouched == []
 
     # Retry must actually work afterward, not just flip the status
     document.status = "failed"

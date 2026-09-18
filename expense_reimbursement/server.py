@@ -26,7 +26,7 @@ import os
 import re
 import uuid
 from contextlib import asynccontextmanager
-from datetime import datetime, timedelta
+from datetime import datetime
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
@@ -52,8 +52,6 @@ from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
 from validate import build_claim, check_completeness, suggest_fixes, validate_claim
-
-STUCK_PROCESSING_TIMEOUT = timedelta(minutes=5)
 
 BASE_DIR = Path(__file__).resolve().parent
 STORAGE_DIR = BASE_DIR / "storage"
@@ -83,10 +81,13 @@ _AMOUNT_FIELD_BY_TYPE = {
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # A single-process server: every in-flight pipeline task dies with
+    # the process on restart, unconditionally, not just ones stuck past
+    # some age threshold -- there is no "still legitimately running"
+    # case for a document still "processing" at the moment this starts.
     session = get_sessionmaker()()
     try:
-        cutoff = datetime.utcnow() - STUCK_PROCESSING_TIMEOUT
-        recovered = repository.recover_stuck_processing_documents(session, cutoff)
+        recovered = repository.recover_stuck_processing_documents(session)
         if recovered:
             print(f"Startup: recovered {len(recovered)} document(s) stuck in 'processing' -> failed")
     finally:
@@ -129,7 +130,11 @@ def _get_owned_document(session: Session, document_id: str, employee: Employee) 
     except ValueError:
         raise HTTPException(404, "Document not found")
     document = repository.get_document(session, doc_uuid)
-    if document is None:
+    if document is None or document.status == "removed":
+        # Item 5e: a soft-removed document is hidden from the employee
+        # entirely, including direct access by id (e.g. a stale
+        # bookmark/back-button) -- 404, same as if the row didn't
+        # exist, even though it's kept in the DB.
         raise HTTPException(404, "Document not found")
     claim = repository.get_claim(session, document.claim_id)
     if claim is None or claim.employee_id != employee.id:
@@ -145,6 +150,19 @@ def _require_draft(claim: Claim) -> None:
 def _require_not_confirmed(document: Document) -> None:
     if document.status == "confirmed":
         raise HTTPException(409, "This document is confirmed. Click 'Edit again' first.")
+
+
+# Item 5b: Confirm has real, hard preconditions of its own -- a document
+# still "processing" has no extraction to confirm, a "failed" one has
+# nothing usable, and a "confirmed" one is already done (use "Edit
+# again" instead). "removed" is excluded implicitly: a removed document
+# is never reachable by id through _get_owned_document's normal query.
+_CONFIRMABLE_STATUSES = ("ready", "needs_review")
+
+
+def _require_confirmable(document: Document) -> None:
+    if document.status not in _CONFIRMABLE_STATUSES:
+        raise HTTPException(409, f"This document is '{document.status}' and cannot be confirmed right now.")
 
 
 def _decimal_default(obj: Any):
@@ -469,13 +487,23 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
     return summary
 
 
+def _visible_documents(claim: Claim) -> list[Document]:
+    """Item 5e: a soft-removed document (status="removed") is hidden
+    from the employee entirely -- from the document list, the count,
+    totals, and submit's confirmed-check -- while its row, extractions,
+    corrections and file are all kept (see repository.delete_document).
+    Every place that used to iterate claim.documents directly for
+    something employee-facing goes through this instead."""
+    return [d for d in claim.documents if d.status != "removed"]
+
+
 def _claim_totals_by_currency(claim: Claim) -> dict[str, Decimal]:
     """Never sums different currencies together -- computed live from
     eager-loaded documents/extractions (not the claims.total_amount/
     currency columns, which can only ever hold one figure and are best-
     effort -- see repository.recompute_claim_total)."""
     totals: dict[str, Decimal] = {}
-    for document in claim.documents:
+    for document in _visible_documents(claim):
         if document.status != "confirmed" or not document.extractions:
             continue
         extraction = document.extractions[-1]  # relationship is order_by=Extraction.version
@@ -499,7 +527,7 @@ def _claim_summary(claim: Claim) -> dict:
         "title": claim.title,
         "status": claim.status,
         "note_to_approver": claim.note_to_approver,
-        "document_count": len(claim.documents),
+        "document_count": len(_visible_documents(claim)),
         "total_amount": _money(total_amount),
         "currency": currency,
         "totals_by_currency": {k: _money(v) for k, v in totals.items()},
@@ -511,7 +539,7 @@ def _claim_summary(claim: Claim) -> dict:
 
 def _claim_detail(session: Session, claim: Claim) -> dict:
     summary = _claim_summary(claim)
-    summary["documents"] = [_document_detail(session, d, claim) for d in claim.documents]
+    summary["documents"] = [_document_detail(session, d, claim) for d in _visible_documents(claim)]
     return summary
 
 
@@ -604,7 +632,7 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
             clean_json = evaluated["clean_json"]
             view = evaluated["view"]
 
-            repository.update_document_status(
+            repository.update_document_status_if_processing(
                 session, document_id, status="processing", raw_markdown=markdown_text
             )
             repository.add_extraction(
@@ -630,13 +658,17 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
                 repair_attempt_tokens=repair_attempt_tokens,
             )
             final_status = "needs_review" if view["needs_review"] else "ready"
-            repository.update_document_status(session, document_id, status=final_status)
+            # Item 5c: only if the document is STILL "processing" at this
+            # exact moment -- a late-finishing pipeline (slow LlamaParse/
+            # Groq call) must never overwrite a document the employee
+            # already confirmed or removed while it was running.
+            repository.update_document_status_if_processing(session, document_id, status=final_status)
         except Exception as e:  # noqa: BLE001 -- any pipeline failure must land the document in "failed", not crash the worker
             session.rollback()
-            try:
-                repository.update_document_status(session, document_id, status="failed", error_message=str(e))
-            except LookupError:
-                pass  # the document was removed while this ran -- nothing left to mark failed
+            # A no-op (not a LookupError) if the document was confirmed or
+            # removed while this ran, or no longer exists -- an atomic
+            # UPDATE ... WHERE, not a read-then-write.
+            repository.update_document_status_if_processing(session, document_id, status="failed", error_message=str(e))
     finally:
         session.close()
 
@@ -720,9 +752,10 @@ def submit_claim(
 ):
     claim = _get_owned_claim(session, claim_id, employee)
     _require_draft(claim)
-    if not claim.documents:
+    visible_documents = _visible_documents(claim)
+    if not visible_documents:
         raise HTTPException(400, "Add at least one document before submitting.")
-    not_confirmed = [d.original_name for d in claim.documents if d.status not in ("confirmed",) and _needs_confirm(session, d)]
+    not_confirmed = [d.original_name for d in visible_documents if d.status not in ("confirmed",) and _needs_confirm(session, d)]
     if not_confirmed:
         raise HTTPException(400, f"Confirm every document before submitting: {', '.join(not_confirmed)}")
     submitted = repository.submit_claim(session, claim.id, employee.id)
@@ -884,7 +917,12 @@ def _tag_suggestion_applied_corrections(corrections: list[dict[str, Any]], extra
             correction["change_type"] = "suggestion_applied"
 
 
-def _save_edits(session: Session, document: Document, edits: dict[str, Any], actor_id: uuid.UUID) -> Extraction:
+def _save_edits(
+    session: Session, document: Document, edits: dict[str, Any], actor_id: uuid.UUID, *, commit: bool = True
+) -> Extraction:
+    """commit=False lets a caller (confirm_document) fold this into a
+    single larger transaction -- see repository.update_document_status's
+    docstring (item 5d)."""
     extraction = repository.latest_extraction(session, document.id)
     if extraction is None:
         raise HTTPException(409, "This document is still being processed.")
@@ -923,9 +961,10 @@ def _save_edits(session: Session, document: Document, edits: dict[str, Any], act
         check_results=evaluated["checks"],
         corrections=corrections,
         audit_action="edited",
+        commit=commit,
     )
     final_status = "needs_review" if view["needs_review"] else "ready"
-    repository.update_document_status(session, document.id, status=final_status)
+    repository.update_document_status(session, document.id, status=final_status, commit=commit)
     return new_extraction
 
 
@@ -941,8 +980,12 @@ def save_document_fields(
     _require_not_confirmed(document)
     if not body.edits:
         raise HTTPException(400, "No edits were sent.")
-    _save_edits(session, document, body.edits, employee.id)
-    repository.recompute_claim_total(session, claim.id)
+    # Item 5d: save + recompute as one transaction, one commit -- a
+    # failure between the two steps must not leave the new extraction
+    # saved with claims.total_amount still reflecting the old one.
+    _save_edits(session, document, body.edits, employee.id, commit=False)
+    repository.recompute_claim_total(session, claim.id, commit=False)
+    session.commit()
     refreshed = repository.get_document(session, document.id)
     return _document_detail(session, refreshed, claim)
 
@@ -956,9 +999,14 @@ def confirm_document(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
-    _require_not_confirmed(document)
+    _require_confirmable(document)
+    # Item 5d: save edits + confirm + recompute total as ONE transaction,
+    # one commit -- every repository call below is commit=False; nothing
+    # is durable until the single session.commit() at the end, so a
+    # failure partway through (e.g. the reason-required 422) leaves no
+    # trace at all, not a half-saved edit or a confirm with a stale total.
     if body.edits:
-        _save_edits(session, document, body.edits, employee.id)
+        _save_edits(session, document, body.edits, employee.id, commit=False)
 
     extraction = repository.latest_extraction(session, document.id)
     ai_extraction = _find_ai_extraction(document)
@@ -969,10 +1017,11 @@ def confirm_document(
                 raise HTTPException(
                     422, "This doesn't match the bill's own numbers. Why is it different?"
                 )
-            repository.set_reason_for_corrections(session, extraction.id, reason)
+            repository.set_reason_for_corrections(session, extraction.id, reason, commit=False)
 
-    repository.confirm_document(session, document.id, employee.id)
-    repository.recompute_claim_total(session, claim.id)
+    repository.confirm_document(session, document.id, employee.id, commit=False)
+    repository.recompute_claim_total(session, claim.id, commit=False)
+    session.commit()
     refreshed = repository.get_document(session, document.id)
     return _document_detail(session, refreshed, claim)
 
@@ -990,8 +1039,10 @@ def reopen_document(
     _require_draft(claim)
     if document.status != "confirmed":
         raise HTTPException(409, "Only a confirmed document can be reopened for editing.")
-    repository.reopen_document(session, document.id, employee.id)
-    repository.recompute_claim_total(session, claim.id)
+    # Item 5d: one transaction, one commit.
+    repository.reopen_document(session, document.id, employee.id, commit=False)
+    repository.recompute_claim_total(session, claim.id, commit=False)
+    session.commit()
     refreshed = repository.get_document(session, document.id)
     return _document_detail(session, refreshed, claim)
 
@@ -1013,6 +1064,7 @@ def revert_document(
     claim_obj = evaluated["claim"]
     view = evaluated["view"]
 
+    # Item 5d: one transaction, one commit.
     repository.add_extraction(
         session,
         document_id=document.id,
@@ -1028,10 +1080,12 @@ def revert_document(
         check_results=evaluated["checks"],
         corrections=[],
         audit_action="edited",
+        commit=False,
     )
     final_status = "needs_review" if view["needs_review"] else "ready"
-    repository.update_document_status(session, document.id, status=final_status)
-    repository.recompute_claim_total(session, claim.id)
+    repository.update_document_status(session, document.id, status=final_status, commit=False)
+    repository.recompute_claim_total(session, claim.id, commit=False)
+    session.commit()
     refreshed = repository.get_document(session, document.id)
     return _document_detail(session, refreshed, claim)
 
@@ -1062,11 +1116,11 @@ def delete_document(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
-    full_path = STORAGE_DIR / document.file_key
-    repository.delete_document(session, document.id, employee.id)
-    if full_path.exists():
-        full_path.unlink()
-    repository.recompute_claim_total(session, claim.id)
+    # Item 5e: soft delete -- extractions, corrections and the file are
+    # all kept, only the status changes (and one transaction, per 5d).
+    repository.delete_document(session, document.id, employee.id, commit=False)
+    repository.recompute_claim_total(session, claim.id, commit=False)
+    session.commit()
     return {"deleted": True}
 
 

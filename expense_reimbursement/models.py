@@ -16,12 +16,14 @@ from typing import Any, Optional
 from sqlalchemy import (
     Boolean,
     ForeignKey,
+    Index,
     Integer,
     Numeric,
     Text,
     UniqueConstraint,
     false,
     func,
+    text,
 )
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
@@ -74,7 +76,19 @@ class Claim(Base):
 
 class Document(Base):
     __tablename__ = "documents"
-    __table_args__ = (UniqueConstraint("claim_id", "file_sha256", name="uq_document_claim_sha256"),)
+    __table_args__ = (
+        # Item 5e: a partial index, not a plain UniqueConstraint -- a
+        # soft-removed document (status="removed") keeps its row (and
+        # file_sha256) forever, so re-uploading the same file after
+        # removing it must not collide with the old, now-invisible row.
+        # Only ever one non-removed document per (claim, sha256).
+        Index(
+            "uq_document_claim_sha256_active",
+            "claim_id", "file_sha256",
+            unique=True,
+            postgresql_where=text("status != 'removed'"),
+        ),
+    )
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     claim_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("claims.id"), nullable=False)

@@ -3,11 +3,10 @@ writes commits its own transaction; every multi-table write (e.g. a
 status change plus its audit event) happens inside that one commit."""
 
 import uuid
-from datetime import datetime
 from decimal import Decimal
 from typing import Any, Optional
 
-from sqlalchemy import select
+from sqlalchemy import select, update
 from sqlalchemy.orm import Session, selectinload
 
 from models import (
@@ -116,13 +115,15 @@ def compute_claim_totals(session: Session, claim_id: uuid.UUID) -> dict[str, Dec
     return totals
 
 
-def recompute_claim_total(session: Session, claim_id: uuid.UUID) -> dict[str, Decimal]:
+def recompute_claim_total(session: Session, claim_id: uuid.UUID, *, commit: bool = True) -> dict[str, Decimal]:
     """Updates claims.total_amount/currency -- a best-effort single
     figure, only meaningful when every confirmed document shares one
     currency. Cleared to None/None when there are none or several;
     server.py's API responses compute the full per-currency breakdown
     live instead of trusting this cached pair for anything but the
-    common single-currency case."""
+    common single-currency case. `commit=False` for composing into a
+    larger single-transaction action (item 5d) -- see
+    update_document_status's docstring."""
     claim = session.get(Claim, claim_id)
     if claim is None:
         raise LookupError(f"claim {claim_id} not found")
@@ -137,7 +138,8 @@ def recompute_claim_total(session: Session, claim_id: uuid.UUID) -> dict[str, De
     else:
         claim.total_amount = None
         claim.currency = None
-    session.commit()
+    if commit:
+        session.commit()
     return totals
 
 
@@ -215,8 +217,15 @@ def create_document(
 
 
 def find_document_by_sha256(session: Session, claim_id: uuid.UUID, file_sha256: str) -> Optional[Document]:
+    """Item 5e: a removed document is excluded, so re-uploading the same
+    file after removing it is allowed -- not blocked by a stale
+    duplicate that's no longer visible to the employee at all."""
     return session.scalar(
-        select(Document).where(Document.claim_id == claim_id, Document.file_sha256 == file_sha256)
+        select(Document).where(
+            Document.claim_id == claim_id,
+            Document.file_sha256 == file_sha256,
+            Document.status != "removed",
+        )
     )
 
 
@@ -235,7 +244,14 @@ def update_document_status(
     status: str,
     error_message: Optional[str] = None,
     raw_markdown: Optional[str] = None,
+    commit: bool = True,
 ) -> Document:
+    """`commit=False` lets a caller compose this with other writes into
+    one transaction (item 5d) -- e.g. server.confirm_document, which
+    saves edits, confirms, and recomputes the claim total as a single
+    user action and must not leave the DB half-updated if any step
+    after the first raises. The caller is then responsible for calling
+    session.commit() itself, exactly once, after every step succeeds."""
     document = session.get(Document, document_id)
     if document is None:
         raise LookupError(f"document {document_id} not found")
@@ -243,21 +259,53 @@ def update_document_status(
     document.error_message = error_message
     if raw_markdown is not None:
         document.raw_markdown = raw_markdown
-    session.commit()
+    if commit:
+        session.commit()
+    else:
+        # Without a commit, refresh() below would otherwise re-SELECT
+        # and silently discard this change if it were never sent to the
+        # DB at all -- flush() sends it within the still-open
+        # transaction without ending it.
+        session.flush()
     session.refresh(document)
     return document
 
 
-def recover_stuck_processing_documents(session: Session, cutoff: datetime) -> list[Document]:
-    """A document still "processing" from before a server restart has
-    no pipeline task running for it anymore -- it would otherwise show
-    "Reading..." forever. Called on startup for anything last updated
-    before `cutoff` (the caller decides the age threshold)."""
-    stuck = list(
-        session.scalars(
-            select(Document).where(Document.status == "processing", Document.updated_at < cutoff)
-        )
+def update_document_status_if_processing(
+    session: Session,
+    document_id: uuid.UUID,
+    *,
+    status: str,
+    error_message: Optional[str] = None,
+    raw_markdown: Optional[str] = None,
+) -> bool:
+    """Item 5c: every status write the background pipeline itself makes
+    (server._run_pipeline) goes through this instead of the plain
+    update above -- an atomic UPDATE ... WHERE status = 'processing',
+    not a read-then-write, so a pipeline that's still running when the
+    employee confirms or removes the document (or another request
+    already failed/finished it) can never overwrite that outcome once
+    it finally completes. Returns whether the row was actually updated.
+    Callers that already know their own precondition holds (an
+    employee save, a revert, a retry -- each behind its own status
+    guard in server.py) keep using the plain update_document_status."""
+    values: dict[str, Any] = {"status": status, "error_message": error_message}
+    if raw_markdown is not None:
+        values["raw_markdown"] = raw_markdown
+    result = session.execute(
+        update(Document).where(Document.id == document_id, Document.status == "processing").values(**values)
     )
+    session.commit()
+    return result.rowcount > 0
+
+
+def recover_stuck_processing_documents(session: Session) -> list[Document]:
+    """Every document still "processing" has no pipeline task running
+    for it anymore -- this is a single-process server, so a restart
+    kills every in-flight pipeline unconditionally, not just ones
+    stuck past some age. Called once from server.py's startup hook, so
+    there's no "legitimately still running" document to exempt by age."""
+    stuck = list(session.scalars(select(Document).where(Document.status == "processing")))
     for document in stuck:
         document.status = "failed"
         document.error_message = "Processing was interrupted. Retry."
@@ -266,25 +314,36 @@ def recover_stuck_processing_documents(session: Session, cutoff: datetime) -> li
     return stuck
 
 
-def delete_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> None:
+def delete_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID, *, commit: bool = True) -> Document:
+    """Soft delete (item 5e): sets status="removed" instead of deleting
+    the row. Extractions, corrections, the audit trail and the
+    uploaded file are all kept -- only what's shown to the employee and
+    counted in totals changes (server._visible_documents), and the
+    document's file_sha256 stops blocking a re-upload of the same file
+    (find_document_by_sha256, and the partial unique index in
+    models.py that backs it at the DB level too)."""
     document = session.get(Document, document_id)
     if document is None:
         raise LookupError(f"document {document_id} not found")
-    claim_id = document.claim_id
+    document.status = "removed"
     session.add(
         AuditEvent(
-            claim_id=claim_id,
-            document_id=None,
+            claim_id=document.claim_id,
+            document_id=document.id,
             actor_id=actor_id,
             action="removed",
-            payload={"document_id": str(document_id), "original_name": document.original_name},
+            payload={"original_name": document.original_name},
         )
     )
-    session.delete(document)
-    session.commit()
+    if commit:
+        session.commit()
+    else:
+        session.flush()
+    session.refresh(document)
+    return document
 
 
-def confirm_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> Document:
+def confirm_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID, *, commit: bool = True) -> Document:
     document = session.get(Document, document_id)
     if document is None:
         raise LookupError(f"document {document_id} not found")
@@ -292,12 +351,19 @@ def confirm_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UU
     session.add(
         AuditEvent(claim_id=document.claim_id, document_id=document.id, actor_id=actor_id, action="confirmed")
     )
-    session.commit()
+    if commit:
+        session.commit()
+    else:
+        # Without a commit, refresh() below would otherwise re-SELECT
+        # and silently discard this change if it were never sent to the
+        # DB at all -- flush() sends it within the still-open
+        # transaction without ending it.
+        session.flush()
     session.refresh(document)
     return document
 
 
-def reopen_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> Document:
+def reopen_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID, *, commit: bool = True) -> Document:
     """"Edit again": unconditionally back to needs_review (not
     recomputed from checks) so the employee's edit screen reappears."""
     document = session.get(Document, document_id)
@@ -307,7 +373,14 @@ def reopen_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUI
     session.add(
         AuditEvent(claim_id=document.claim_id, document_id=document.id, actor_id=actor_id, action="reopened")
     )
-    session.commit()
+    if commit:
+        session.commit()
+    else:
+        # Without a commit, refresh() below would otherwise re-SELECT
+        # and silently discard this change if it were never sent to the
+        # DB at all -- flush() sends it within the still-open
+        # transaction without ending it.
+        session.flush()
     session.refresh(document)
     return document
 
@@ -352,6 +425,7 @@ def add_extraction(
     repair_accepted: Optional[bool] = None,
     first_attempt_tokens: Optional[int] = None,
     repair_attempt_tokens: Optional[int] = None,
+    commit: bool = True,
 ) -> Extraction:
     document = session.get(Document, document_id)
     if document is None:
@@ -412,7 +486,10 @@ def add_extraction(
             payload={"extraction_id": str(extraction.id), "version": version, "source": source},
         )
     )
-    session.commit()
+    if commit:
+        session.commit()
+    else:
+        session.flush()
     session.refresh(extraction)
     return extraction
 
@@ -425,7 +502,7 @@ def list_corrections(session: Session, document_id: uuid.UUID) -> list[Correctio
     )
 
 
-def set_reason_for_corrections(session: Session, extraction_id: uuid.UUID, reason: str) -> int:
+def set_reason_for_corrections(session: Session, extraction_id: uuid.UUID, reason: str, *, commit: bool = True) -> int:
     """Attaches `reason` to every correction row belonging to
     `extraction_id` -- called from server.confirm_document when a money
     edit (whether saved in this request or an earlier one, either way
@@ -438,7 +515,7 @@ def set_reason_for_corrections(session: Session, extraction_id: uuid.UUID, reaso
     rows = list(session.scalars(select(Correction).where(Correction.extraction_id == extraction_id)))
     for row in rows:
         row.reason = reason
-    if rows:
+    if rows and commit:
         session.commit()
     return len(rows)
 
