@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-expense_app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-expense_app_password}
+      POSTGRES_DB: ${POSTGRES_DB:-expense_db}
+    ports:
+      # Host port 5433, not 5432: a native Postgres service already owns
+      # 5432 on this machine, and we don't touch existing infrastructure.
+      - "5433:5432"
+    volumes:
+      - expense_pgdata:/var/lib/postgresql/data
+      - ./docker/init-test-db.sh:/docker-entrypoint-initdb.d/init-test-db.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-expense_app} -d ${POSTGRES_DB:-expense_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  expense_pgdata:

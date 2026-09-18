@@ -1,0 +1,346 @@
+"""All database access goes through these functions. Each function that
+writes commits its own transaction; every multi-table write (e.g. a
+status change plus its audit event) happens inside that one commit."""
+
+import uuid
+from decimal import Decimal
+from typing import Any, Optional
+
+from sqlalchemy import select
+from sqlalchemy.orm import Session, selectinload
+
+from models import (
+    AuditEvent,
+    CheckResultRow,
+    Claim,
+    Correction,
+    Document,
+    Employee,
+    Extraction,
+)
+
+SEED_EMPLOYEE_NAME = "Nasir Ahmed Khan"
+SEED_EMPLOYEE_EMAIL = "nasir.khan@example.com"
+
+
+# ---------------------------------------------------------------- employees
+
+def get_or_create_seed_employee(session: Session) -> Employee:
+    employee = session.scalar(select(Employee).where(Employee.email == SEED_EMPLOYEE_EMAIL))
+    if employee is not None:
+        return employee
+    employee = Employee(name=SEED_EMPLOYEE_NAME, email=SEED_EMPLOYEE_EMAIL, role="employee")
+    session.add(employee)
+    session.commit()
+    session.refresh(employee)
+    return employee
+
+
+def get_employee(session: Session, employee_id: uuid.UUID) -> Optional[Employee]:
+    return session.get(Employee, employee_id)
+
+
+# ------------------------------------------------------------------ claims
+
+def create_claim(session: Session, employee_id: uuid.UUID, title: str) -> Claim:
+    claim = Claim(employee_id=employee_id, title=title, status="draft")
+    session.add(claim)
+    session.flush()
+    session.add(AuditEvent(claim_id=claim.id, actor_id=employee_id, action="created"))
+    session.commit()
+    session.refresh(claim)
+    return claim
+
+
+def list_claims(session: Session, employee_id: uuid.UUID) -> list[Claim]:
+    return list(
+        session.scalars(
+            select(Claim)
+            .options(selectinload(Claim.documents))
+            .where(Claim.employee_id == employee_id)
+            .order_by(Claim.updated_at.desc())
+        )
+    )
+
+
+def get_claim(session: Session, claim_id: uuid.UUID) -> Optional[Claim]:
+    return session.scalar(
+        select(Claim)
+        .options(selectinload(Claim.documents).selectinload(Document.extractions).selectinload(Extraction.check_results))
+        .where(Claim.id == claim_id)
+    )
+
+
+def update_claim(
+    session: Session,
+    claim_id: uuid.UUID,
+    *,
+    title: Optional[str] = None,
+    note_to_approver: Optional[str] = None,
+) -> Claim:
+    claim = session.get(Claim, claim_id)
+    if claim is None:
+        raise LookupError(f"claim {claim_id} not found")
+    if title is not None:
+        claim.title = title
+    if note_to_approver is not None:
+        claim.note_to_approver = note_to_approver
+    session.commit()
+    session.refresh(claim)
+    return claim
+
+
+def recompute_claim_total(session: Session, claim_id: uuid.UUID) -> Decimal:
+    claim = session.get(Claim, claim_id)
+    if claim is None:
+        raise LookupError(f"claim {claim_id} not found")
+    total = Decimal("0")
+    for document in claim.documents:
+        if document.status != "confirmed":
+            continue
+        extraction = latest_extraction(session, document.id)
+        if extraction is not None and extraction.amount is not None:
+            total += extraction.amount
+    claim.total_amount = total
+    session.commit()
+    return total
+
+
+def submit_claim(session: Session, claim_id: uuid.UUID, actor_id: uuid.UUID) -> Claim:
+    claim = session.get(Claim, claim_id)
+    if claim is None:
+        raise LookupError(f"claim {claim_id} not found")
+    from sqlalchemy import func as sa_func
+
+    claim.status = "submitted"
+    claim.submitted_at = sa_func.now()
+    total = Decimal("0")
+    for document in claim.documents:
+        extraction = latest_extraction(session, document.id)
+        if extraction is not None and extraction.amount is not None:
+            total += extraction.amount
+    claim.total_amount = total
+    session.add(AuditEvent(claim_id=claim.id, actor_id=actor_id, action="submitted", payload={"total_amount": str(total)}))
+    session.commit()
+    session.refresh(claim)
+    return claim
+
+
+# --------------------------------------------------------------- documents
+
+def create_document(
+    session: Session,
+    *,
+    claim_id: uuid.UUID,
+    actor_id: uuid.UUID,
+    original_name: str,
+    file_key: str,
+    file_sha256: str,
+    mime_type: str,
+) -> Document:
+    document = Document(
+        claim_id=claim_id,
+        original_name=original_name,
+        file_key=file_key,
+        file_sha256=file_sha256,
+        mime_type=mime_type,
+        status="processing",
+    )
+    session.add(document)
+    session.flush()
+    session.add(
+        AuditEvent(
+            claim_id=claim_id,
+            document_id=document.id,
+            actor_id=actor_id,
+            action="uploaded",
+            payload={"original_name": original_name},
+        )
+    )
+    session.commit()
+    session.refresh(document)
+    return document
+
+
+def find_document_by_sha256(session: Session, claim_id: uuid.UUID, file_sha256: str) -> Optional[Document]:
+    return session.scalar(
+        select(Document).where(Document.claim_id == claim_id, Document.file_sha256 == file_sha256)
+    )
+
+
+def get_document(session: Session, document_id: uuid.UUID) -> Optional[Document]:
+    return session.scalar(
+        select(Document)
+        .options(selectinload(Document.extractions).selectinload(Extraction.check_results))
+        .where(Document.id == document_id)
+    )
+
+
+def update_document_status(
+    session: Session,
+    document_id: uuid.UUID,
+    *,
+    status: str,
+    error_message: Optional[str] = None,
+    raw_markdown: Optional[str] = None,
+) -> Document:
+    document = session.get(Document, document_id)
+    if document is None:
+        raise LookupError(f"document {document_id} not found")
+    document.status = status
+    document.error_message = error_message
+    if raw_markdown is not None:
+        document.raw_markdown = raw_markdown
+    session.commit()
+    session.refresh(document)
+    return document
+
+
+def delete_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> None:
+    document = session.get(Document, document_id)
+    if document is None:
+        raise LookupError(f"document {document_id} not found")
+    claim_id = document.claim_id
+    session.add(
+        AuditEvent(
+            claim_id=claim_id,
+            document_id=None,
+            actor_id=actor_id,
+            action="removed",
+            payload={"document_id": str(document_id), "original_name": document.original_name},
+        )
+    )
+    session.delete(document)
+    session.commit()
+
+
+def confirm_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> Document:
+    document = session.get(Document, document_id)
+    if document is None:
+        raise LookupError(f"document {document_id} not found")
+    document.status = "confirmed"
+    session.add(
+        AuditEvent(claim_id=document.claim_id, document_id=document.id, actor_id=actor_id, action="confirmed")
+    )
+    session.commit()
+    session.refresh(document)
+    return document
+
+
+# -------------------------------------------------------------- extractions
+
+def latest_extraction(session: Session, document_id: uuid.UUID) -> Optional[Extraction]:
+    return session.scalar(
+        select(Extraction)
+        .options(selectinload(Extraction.check_results))
+        .where(Extraction.document_id == document_id)
+        .order_by(Extraction.version.desc())
+        .limit(1)
+    )
+
+
+def next_extraction_version(session: Session, document_id: uuid.UUID) -> int:
+    current = latest_extraction(session, document_id)
+    return 1 if current is None else current.version + 1
+
+
+def add_extraction(
+    session: Session,
+    *,
+    document_id: uuid.UUID,
+    actor_id: uuid.UUID,
+    source: str,
+    document_type: str,
+    fields: dict[str, Any],
+    confidence: Optional[float] = None,
+    model: Optional[str] = None,
+    total_tokens: Optional[int] = None,
+    duration_ms: Optional[int] = None,
+    vendor_name: Optional[str] = None,
+    bill_date: Optional[str] = None,
+    amount: Optional[Decimal] = None,
+    check_results: Optional[list[dict[str, Any]]] = None,
+    corrections: Optional[list[dict[str, Any]]] = None,
+    audit_action: str = "edited",
+) -> Extraction:
+    document = session.get(Document, document_id)
+    if document is None:
+        raise LookupError(f"document {document_id} not found")
+
+    version = next_extraction_version(session, document_id)
+    extraction = Extraction(
+        document_id=document_id,
+        version=version,
+        source=source,
+        document_type=document_type,
+        fields=fields,
+        confidence=confidence,
+        model=model,
+        total_tokens=total_tokens,
+        duration_ms=duration_ms,
+        vendor_name=vendor_name,
+        bill_date=bill_date,
+        amount=amount,
+    )
+    session.add(extraction)
+    session.flush()
+
+    for result in check_results or []:
+        session.add(
+            CheckResultRow(
+                extraction_id=extraction.id,
+                check_name=result["name"],
+                passed=result["passed"],
+                detail=result.get("detail"),
+            )
+        )
+
+    for correction in corrections or []:
+        session.add(
+            Correction(
+                document_id=document_id,
+                extraction_id=extraction.id,
+                field_path=correction["field_path"],
+                ai_value=correction.get("ai_value"),
+                employee_value=correction.get("employee_value"),
+            )
+        )
+
+    session.add(
+        AuditEvent(
+            claim_id=document.claim_id,
+            document_id=document_id,
+            actor_id=actor_id,
+            action=audit_action,
+            payload={"extraction_id": str(extraction.id), "version": version, "source": source},
+        )
+    )
+    session.commit()
+    session.refresh(extraction)
+    return extraction
+
+
+def list_corrections(session: Session, document_id: uuid.UUID) -> list[Correction]:
+    return list(
+        session.scalars(
+            select(Correction).where(Correction.document_id == document_id).order_by(Correction.created_at)
+        )
+    )
+
+
+# --------------------------------------------------------------------- misc
+
+def add_audit_event(
+    session: Session,
+    *,
+    claim_id: uuid.UUID,
+    actor_id: uuid.UUID,
+    action: str,
+    document_id: Optional[uuid.UUID] = None,
+    payload: Optional[dict[str, Any]] = None,
+) -> AuditEvent:
+    event = AuditEvent(claim_id=claim_id, document_id=document_id, actor_id=actor_id, action=action, payload=payload)
+    session.add(event)
+    session.commit()
+    session.refresh(event)
+    return event
