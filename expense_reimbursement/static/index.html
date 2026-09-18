@@ -173,13 +173,23 @@
   }
   details.collapsible{border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:14px;}
   details.collapsible summary{cursor:pointer;font-weight:600;font-size:14px;}
-  table.items-table, table.trips-table{width:100%;min-width:560px;border-collapse:collapse;margin-top:10px;font-size:13px;}
+  table.items-table, table.trips-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;}
+  /* trips-table has 5 columns (Date/Place/Purpose/Client/Km) and
+     genuinely needs more room than a desktop review column comfortably
+     gives it -- scrolls inside .table-scroll by design. items-table
+     has only 4 (Item/Qty/Unit price/Amount) and must fit without a
+     horizontal scrollbar at desktop width; only 390px needs it to
+     scroll (table-scroll's overflow-x:auto still applies there). */
+  table.trips-table{min-width:560px;}
+  table.items-table{min-width:380px;}
   table.items-table th, table.items-table td, table.trips-table th, table.trips-table td{
     padding:6px 6px;text-align:left;border-bottom:1px solid var(--border);
   }
   table.trips-table td:first-child, table.trips-table th:first-child{min-width:110px;}
   .table-scroll{overflow-x:auto;}
   table.items-table input, table.trips-table input{font-size:13px;padding:5px 6px;width:100%;min-width:64px;}
+  .empty-items{padding:14px 0;color:var(--ink-muted);font-size:14px;}
+  .empty-items button{margin-top:8px;}
   .action-bar{
     position:fixed;left:0;right:0;bottom:0;
     background:var(--card);
@@ -861,27 +871,56 @@ function collapsibleHtml(collapsible) {
   const items = currentFieldValue({ key: "line_items", value: collapsible.line_items }) || collapsible.line_items || [];
   const { changed: itemsChanged } = fieldChangeInfo("line_items", collapsible.line_items);
   const locked = isFieldsLocked();
-  const cols = [["name", "Item"], ["quantity", "Qty"], ["unit_price", "Unit price"], ["total", "Total"]];
-  const rows = items.map((item, i) => `
-    <tr>
-      ${cols.map(([key]) => locked
-        ? `<td>${escapeHtml(item[key] ?? "")}</td>`
-        : `<td><input type="text" data-item-index="${i}" data-item-key="${key}" value="${escapeHtml(item[key] ?? "")}"></td>`
-      ).join("")}
-    </tr>`).join("");
+  const cols = [["name", "Item"], ["quantity", "Qty"], ["unit_price", "Unit price"], ["total", "Amount"]];
   const extra = (collapsible.extra_fields || []).map((f) => simpleFieldHtml(f)).join("");
+
+  const body = items.length === 0
+    ? `<div class="empty-items">
+        No items found on this document.
+        ${locked ? "" : `<div><button type="button" id="btn-add-item">Add item</button></div>`}
+      </div>`
+    : `<div class="table-scroll">
+        <table class="items-table" id="items-table">
+          <thead><tr>${cols.map(([, label]) => `<th>${label}</th>`).join("")}</tr></thead>
+          <tbody>${items.map((item, i) => `
+            <tr>
+              ${cols.map(([key]) => locked
+                ? `<td>${escapeHtml(item[key] ?? "")}</td>`
+                : `<td><input type="text" data-item-index="${i}" data-item-key="${key}" value="${escapeHtml(item[key] ?? "")}"></td>`
+              ).join("")}
+            </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+      ${locked ? "" : `<button type="button" id="btn-add-item" style="margin-top:8px;">Add item</button>`}`;
+
   return `
     <details class="collapsible" ${collapsible.auto_expand ? "open" : ""}>
       <summary>${escapeHtml(collapsible.label)}</summary>
       ${extra}
-      <div class="table-scroll">
-        <table class="items-table" id="items-table">
-          <thead><tr>${cols.map(([, label]) => `<th>${label}</th>`).join("")}</tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>
+      ${body}
       ${itemsChanged ? `<div class="ai-was"><span class="pen">✎</span> Items edited</div>` : ""}
     </details>`;
+}
+
+function addBlankLineItem() {
+  // renderFields() below fully replaces the <details> element, which
+  // would otherwise reset to auto_expand's value and collapse right
+  // back on the employee after they just opened it to click this.
+  const wasOpen = document.querySelector("#fields-container details.collapsible")?.open;
+  const collapsible = docPageState.doc.review.collapsible;
+  const current = Object.prototype.hasOwnProperty.call(docPageState.edits, "line_items")
+    ? docPageState.edits["line_items"]
+    : JSON.parse(JSON.stringify(collapsible.line_items || []));
+  current.push({ name: "", quantity: "", unit_price: "", total: "" });
+  docPageState.edits["line_items"] = current;
+  markDirty();
+  renderFields(docPageState.doc.review);
+  if (wasOpen) {
+    const details = document.querySelector("#fields-container details.collapsible");
+    if (details) details.open = true;
+  }
+  debouncedValidate();
 }
 
 const debouncedValidate = debounce(runValidate, 400);
@@ -908,6 +947,8 @@ function wireFieldInputs() {
       debouncedValidate();
     });
   });
+  const addItemBtn = document.getElementById("btn-add-item");
+  if (addItemBtn) addItemBtn.addEventListener("click", addBlankLineItem);
 }
 
 function applyTableEdit(rootKey, index, key, value) {

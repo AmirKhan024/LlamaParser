@@ -427,3 +427,103 @@ def test_currency_display_and_dropdown(live_server):
         assert amount_value.strip() == "$780.75 USD", amount_value
 
         browser.close()
+
+
+def _generic_receipt_doc(line_items, needs_review=False, warnings=None):
+    return {
+        "id": "fake-2", "claim_id": "fake-claim", "claim_status": "draft",
+        "original_name": "receipt.png", "status": "needs_review" if needs_review else "ready",
+        "mime_type": "image/png", "corrections": [],
+        "review": {
+            "document_type": "generic_receipt",
+            "currency": "INR",
+            "fields": [
+                {"key": "vendor_name", "label": "Vendor", "value": "Corner Store", "editable": True},
+                {"key": "date", "label": "Date", "value": "2026-03-01", "editable": True},
+                {"key": "amount", "label": "Amount", "value": "30.00", "editable": True},
+            ],
+            "collapsible": {
+                "key": "items", "label": f"Show items ({len(line_items)})",
+                "auto_expand": needs_review, "line_items": line_items, "extra_fields": [], "editable": True,
+            },
+            "warnings": warnings or [],
+            "editable_fields": ["vendor_name", "date", "amount", "line_items"],
+            "needs_confirm": True,
+            "needs_review": needs_review,
+        },
+    }
+
+
+def test_empty_items_shows_add_item_not_an_empty_table(live_server):
+    """Bug 5: 0 line items rendered an empty <table> with just headers.
+    Must show a plain message and an Add item button instead, and the
+    button must actually add an editable row."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1100, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+
+        doc = _generic_receipt_doc([])
+        page.evaluate(
+            """(doc) => {
+                document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
+                docPageState = { doc, edits: {}, dirty: false, saving: false };
+                drawDocumentPage();
+            }""",
+            doc,
+        )
+        page.wait_for_selector("#fields-container")
+
+        # collapsed by default (0 items, no failing check)
+        assert page.locator("details.collapsible").get_attribute("open") is None
+        page.click("summary")
+        assert page.locator("#items-table").count() == 0, "must not render an empty table"
+        assert page.locator("text=No items found on this document.").count() == 1
+        add_btn = page.locator("#btn-add-item")
+        assert add_btn.count() == 1
+
+        add_btn.click()
+        page.wait_for_selector("#items-table")
+        assert page.locator("details.collapsible").get_attribute("open") is not None, "adding an item must not re-collapse the section"
+        assert page.locator("#items-table input").count() == 4, "one new editable row (4 columns)"
+
+        browser.close()
+
+
+def test_items_table_fits_desktop_width_without_horizontal_scroll(live_server):
+    """Bug 5: all 4 columns (Item, Qty, Unit price, Amount) must fit at
+    desktop width without a horizontal scrollbar; scrolling is only
+    acceptable at 390px."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1100, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+
+        doc = _generic_receipt_doc(
+            [
+                {"name": "Widget", "quantity": "2", "unit_price": "10.00", "total": "20.00"},
+                {"name": "Gadget", "quantity": "1", "unit_price": "10.00", "total": "10.00"},
+            ],
+            needs_review=True,
+            warnings=[],
+        )
+        doc["review"]["collapsible"]["auto_expand"] = True
+        page.evaluate(
+            """(doc) => {
+                document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
+                docPageState = { doc, edits: {}, dirty: false, saving: false };
+                drawDocumentPage();
+            }""",
+            doc,
+        )
+        page.wait_for_selector("#items-table")
+        assert_no_horizontal_overflow(page)
+
+        table_scroll = page.locator("#items-table").locator("xpath=ancestor::div[contains(@class,'table-scroll')]")
+        table_box = page.locator("#items-table").bounding_box()
+        scroll_box = table_scroll.bounding_box()
+        assert table_box["width"] <= scroll_box["width"] + 1, "items table itself must not need to scroll at desktop width"
+
+        browser.close()
