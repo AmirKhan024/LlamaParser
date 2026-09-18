@@ -58,8 +58,8 @@ def main() -> None:
             print(f"  added {source_path.name} -> status={refreshed.status}")
 
     with get_sessionmaker()() as session:
-        total = repository.recompute_claim_total(session, claim.id)
-        print(f"Demo claim created: {claim.id} (total {total})")
+        totals_by_currency = repository.recompute_claim_total(session, claim.id)
+        print(f"Demo claim created: {claim.id} (totals by currency: {totals_by_currency or 'none confirmed yet'})")
 
 
 if __name__ == "__main__":

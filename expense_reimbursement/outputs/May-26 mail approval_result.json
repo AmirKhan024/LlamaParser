@@ -4,54 +4,67 @@
   "clean_json": {
     "document_type": "approval_correspondence",
     "vendor_name": null,
-    "date": "12 June 2026",
+    "date": null,
     "amount": null,
-    "currency": "INR",
+    "currency": null,
     "additional_fields": {
-      "company": "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division",
-      "form_name": "LOCAL CONVEYANCE REIMBURSEMENT FORM",
-      "employee_name": "NASIR AHMED KHAN"
+      "form_name": "NASIR AHMED KHAN"
     },
     "extraction_notes": [
-      "Set approval_status to \"requested\" based on email body asking for approval",
-      "Extracted related_form_title from form header within email"
+      "extracted approval_status as pending because the email is a request for approval",
+      "captured form title from table header as related_form_title"
     ],
-    "confidence": 0.78,
+    "confidence": 0.85,
     "sender": "Nasir <nasir@coffeeday.com>",
     "recipient": "Sanjay K S <sanjayks@coffeeday.com>",
     "sent_date": "12 June 2026 03:44 PM",
     "subject": "May-26 Local Convayance",
-    "approval_status": "requested",
+    "approval_status": "pending",
     "related_form_title": "LOCAL CONVEYANCE REIMBURSEMENT FORM"
   },
   "additional_fields": {
-    "company": "AMALGAMATED BEAN COFFEE TRADING CO LTD.,Coffee Day Beverages Division",
-    "form_name": "LOCAL CONVEYANCE REIMBURSEMENT FORM",
-    "employee_name": "NASIR AHMED KHAN"
+    "form_name": "NASIR AHMED KHAN"
   },
   "extraction_notes": [
-    "Set approval_status to \"requested\" based on email body asking for approval",
-    "Extracted related_form_title from form header within email"
+    "extracted approval_status as pending because the email is a request for approval",
+    "captured form title from table header as related_form_title"
   ],
   "validation": [],
   "completeness_warnings": [],
   "review_view": {
-    "sender": "Nasir <nasir@coffeeday.com>",
-    "recipient": "Sanjay K S <sanjayks@coffeeday.com>",
-    "sent_date": "12 June 2026 03:44 PM",
-    "approval_status": "requested",
-    "related_form_title": "LOCAL CONVEYANCE REIMBURSEMENT FORM",
-    "_document_type": "approval_correspondence",
-    "_editable_fields": [],
-    "_flagged_checks": [],
-    "_ai_corrections": [],
-    "_needs_review": true
+    "document_type": "approval_correspondence",
+    "currency": null,
+    "fields": [
+      {
+        "key": "sender",
+        "label": "From",
+        "value": "Nasir <nasir@coffeeday.com>",
+        "editable": false
+      },
+      {
+        "key": "sent_date",
+        "label": "Date",
+        "value": "12 June 2026 03:44 PM",
+        "editable": false
+      },
+      {
+        "key": "approval_status",
+        "label": "Status",
+        "value": "Approval requested",
+        "editable": false
+      }
+    ],
+    "collapsible": null,
+    "warnings": [],
+    "editable_fields": [],
+    "needs_confirm": false,
+    "needs_review": false
   },
-  "duration_seconds": 2.093999999924563,
+  "duration_seconds": 10.233999999938533,
   "tokens": {
-    "prompt": 1645,
-    "completion": 754,
-    "total": 2399
+    "prompt": 1795,
+    "completion": 753,
+    "total": 2548
   },
-  "estimated_cost_usd": "0.00081225"
+  "estimated_cost_usd": "0.00083400"
 }

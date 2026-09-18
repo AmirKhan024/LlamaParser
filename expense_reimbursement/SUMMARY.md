@@ -220,6 +220,98 @@ running app -- browser or a live `uvicorn` process -- not by inspection):
     than the CLI (`run.py`), which never has this problem since nothing
     else's event loop is running alongside it.
 
+## Bug-fix pass: 8 bugs found by actually using the app
+
+After stage 1 shipped, using it for real (uploading a real dollar hotel
+receipt among other things) surfaced 8 more bugs, fixed in this order,
+each with its own commit and test: confirmed documents still showing AI
+warnings and staying editable; line items never extracted for the
+`GenericClaim` fallback types (the same class of bug as #2/#8 above, now
+for `hotel_invoice`/`taxi_receipt`/`fuel_receipt`/`unstructured_proof`);
+currency silently defaulting to INR; no arithmetic check at all for
+generic receipts; an empty/non-fitting items table; corrections
+collapsed to one row per whole array instead of per cell; background
+processing not surviving a server restart; and this section itself --
+a broader real-document check.
+
+Two more real bugs surfaced incidentally while fixing the above, fixed
+in the same commits: the Trips table's Place/Purpose/Client columns
+have been silently blank for every `local_conveyance_form` document
+ever shown, because the model's actual field names
+(`place_of_visit`/`purpose_of_travel`/`client_name`) never matched what
+`review_view.py` assumed (`place`/`purpose`/`client`) -- fixed by
+normalizing known aliases on display and before diffing corrections,
+not by changing the extraction prompt. And the money-vs-plain-value
+display regex matched any field key containing "total", so a confirmed
+conveyance form showed "Total km: 981" as "₹981.00" -- fixed with an
+explicit allowlist of money field keys.
+
+### Real-document check: the real pipeline, run fresh, on all 4 documents
+
+`test_documents/Hotel-Receipt.png` (copied from `storage/` -- it's the
+exact file uploaded through the running app earlier, sha256-verified
+against the `documents` row already in the database) plus the 3 PDFs in
+`uploads/`, all four run through the real (non-`fake`) pipeline in one
+sitting -- fresh LlamaParse + Groq calls, not the cached results:
+
+| Document | document_type | Currency | Amount | Line items | Checks |
+|---|---|---|---|---|---|
+| `may26_mobile.pdf` | `telecom_bill` | INR | 1417.18 | n/a | 2/3 |
+| `May-26 Local conveyance.pdf` | `local_conveyance_form` | **null** | 8110 | n/a | **0/2** |
+| `May-26 mail approval.pdf` | `approval_correspondence` | n/a | n/a | n/a | 0/0 (none apply) |
+| `Hotel-Receipt.png` | `hotel_invoice` | USD | 780.75 | **4** | 0/1 |
+
+Line items for the hotel receipt: 4/4 extracted (Room King Suite ×3
+nights $567.00, Room Service $45.00, Parking ×2 $50.00, Mini Bar
+$32.00) -- confirms bug 2's fix; this document type returned `Items (0)`
+before it.
+
+### Honest state after this run
+
+- **The local conveyance form's real, still-unfixed extraction problem**:
+  its markdown table has *two* number columns for both "Total Conveyance
+  Amount" (5200 and 981) and "Daily Allowance" (1560 and 5886), and the
+  model still only ever captures the first one. `check_completeness`
+  correctly caught *both* drops this run (not just the original 5886) --
+  but catching it isn't fixing it, and there's no schema field to put a
+  second, unexplained number in. This is the same limitation
+  `check_completeness` was always documented as having (a warning the
+  employee explains via `note_to_approver`, not a correction), just now
+  visibly happening twice on one document instead of once.
+- **This exposed a real trade-off in the currency fix (bug 3) worth
+  flagging, not just a bug**: the conveyance form's raw markdown has *no*
+  currency symbol anywhere -- it's an internal Indian company form that
+  prints bare numbers on the assumption everyone reading it knows it's
+  rupees. `detect_currency_from_markdown` correctly returns null here
+  (nothing to detect), exactly as designed -- but the practical
+  consequence is that this exact, very ordinary style of document will
+  show "Couldn't tell which currency this bill is in." on every single
+  submission, not just the rare genuinely-ambiguous one. The alternative
+  (assume INR when nothing else is found) is exactly the silent-default
+  behavior bug 3 was written to eliminate, so this wasn't changed without
+  asking -- flagging it as a real UX cost of the fix as specified.
+- **The extraction is not perfectly reproducible run to run**, even at
+  temperature 0. Re-running `may26_mobile.pdf` fresh surfaced a `gst_no`
+  additional_field (a likely OCR "O"-for-"0" misread, `27AAACB210OP1ZX`)
+  that an earlier run never extracted at all, failing a `gstin_format`
+  check that previously didn't exist for this document -- invisible to
+  the employee either way (GSTIN is never shown, and non-actionable
+  checks don't drive `needs_review`), but a genuine difference in what's
+  in the database depending on which run produced it. Likewise,
+  Hotel-Receipt.png's subtotal/tax additional_fields (present in the
+  cached result from the original bug report, used throughout this
+  summary's other examples) were simply absent from this run's
+  extraction -- which is why the items-sum check compared against
+  `amount` (the tax-inclusive total) instead of `subtotal`, and legitimately
+  failed (items sum to $694.00, pre-tax; amount is $780.75). **This is a
+  real limitation of bug 4's "opportunistic" design**: when the model
+  doesn't happen to extract a subtotal into `additional_fields` on a
+  given run, the items-sum check falls back to comparing against the
+  tax-inclusive total and will read as "wrong" for any receipt with tax,
+  even though nothing is actually wrong. Not fixed here -- flagging it
+  honestly rather than papering over it with a heuristic guess at what
+  the tax rate might be.
+
 ## Explicitly NOT done -- out of scope for stage 1
 
 - **No auth.** Every request runs as one seeded employee
@@ -245,10 +337,19 @@ running app -- browser or a live `uvicorn` process -- not by inspection):
 - No dynamic field-name generation, canonicalization/ontology layer, or
   fuzzy cross-schema matching -- deliberately out of scope from stage 1's
   original brief, still true.
-- Editing a table field (a trip row, a line item) only supports
-  replacing the whole array in one PUT; there's no per-cell field_path
-  edit endpoint, so a correction against a table edit is recorded as one
-  row against the table's root key, not per cell.
+- Editing a table field (a trip row, a line item) still only supports
+  replacing the whole array in one PUT -- there's no per-cell field_path
+  edit endpoint. Corrections are per-cell now (diff_values), but only
+  because the edited array is diffed against the AI version server-side;
+  there's still no way for the client to send a single-cell edit
+  directly.
+- No stable identity (id/UUID) per trip or line item, only array index.
+  Editing row 2 of a 3-row array and appending a 4th produces sensible
+  per-cell/row_added corrections (see diff_values); replacing row 2 with
+  an entirely different row while the array stays the same length is
+  indistinguishable, from the server's side, from editing every field of
+  row 2 in place -- there's no "this row was swapped for a different
+  one" signal, since nothing tracks row identity across a save.
 
 ## Current cost and latency (Groq call only; LlamaParse not included)
 

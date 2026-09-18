@@ -10,19 +10,24 @@
     "additional_fields": {
       "invoice_no": "MHI1505645306000",
       "plan": "Vi Max Family 1201",
+      "bill_cycle_date": "25.05.26",
+      "due_date": "04 Jun 2026",
       "credit_limit": "Rs. 8,000",
       "security_deposit": "Rs. 150",
       "customer_gst_no": "-",
-      "due_date": "04 Jun 2026",
       "previous_balance": "Rs. 1,535.18",
       "payments_last_month": "- Rs. 1,535.18",
       "adjustments": "+ Rs. 0.00",
       "current_bill_charges": "+ Rs. 1,417.18",
-      "payable_after_date": "Rs. 1,517.18",
-      "bill_cycle_date": "25.05.26",
-      "invoice_date": "25.05.26",
-      "total_payable_amount": "Rs. 1,417.18",
-      "taxable_value": "1,201.00"
+      "payable_amount": "Rs. 1,417.18",
+      "payable_after": "Rs. 1,517.18",
+      "payable_on_or_before": "04 Jun 2026",
+      "late_payment_charges_included": "Rs. 100",
+      "address": "C/203 Gularaj Tower 2nd Flr Nrbilal Masjid Nehru Nagar Nr Railway St, Shetty Bldg Kurla East Mumbai-400024, Maharashtra",
+      "vendor_address": "86/92 1st & 2nd Floor, Skyline, Andheri Kurla road, Marol naka, Andheri east, Mumbai, Maharashtra - 400059",
+      "gst_no": "27AAACB210OP1ZX",
+      "hsn_code": "998413",
+      "cin": "L32100GJ1996PLC030976"
     },
     "extraction_notes": [],
     "confidence": 0.92,
@@ -35,19 +40,24 @@
   "additional_fields": {
     "invoice_no": "MHI1505645306000",
     "plan": "Vi Max Family 1201",
+    "bill_cycle_date": "25.05.26",
+    "due_date": "04 Jun 2026",
     "credit_limit": "Rs. 8,000",
     "security_deposit": "Rs. 150",
     "customer_gst_no": "-",
-    "due_date": "04 Jun 2026",
     "previous_balance": "Rs. 1,535.18",
     "payments_last_month": "- Rs. 1,535.18",
     "adjustments": "+ Rs. 0.00",
     "current_bill_charges": "+ Rs. 1,417.18",
-    "payable_after_date": "Rs. 1,517.18",
-    "bill_cycle_date": "25.05.26",
-    "invoice_date": "25.05.26",
-    "total_payable_amount": "Rs. 1,417.18",
-    "taxable_value": "1,201.00"
+    "payable_amount": "Rs. 1,417.18",
+    "payable_after": "Rs. 1,517.18",
+    "payable_on_or_before": "04 Jun 2026",
+    "late_payment_charges_included": "Rs. 100",
+    "address": "C/203 Gularaj Tower 2nd Flr Nrbilal Masjid Nehru Nagar Nr Railway St, Shetty Bldg Kurla East Mumbai-400024, Maharashtra",
+    "vendor_address": "86/92 1st & 2nd Floor, Skyline, Andheri Kurla road, Marol naka, Andheri east, Mumbai, Maharashtra - 400059",
+    "gst_no": "27AAACB210OP1ZX",
+    "hsn_code": "998413",
+    "cin": "L32100GJ1996PLC030976"
   },
   "extraction_notes": [],
   "validation": [
@@ -59,32 +69,60 @@
     {
       "name": "gstin_format:customer_gst_no",
       "passed": true,
-      "detail": "'-' matches GSTIN format"
+      "detail": "'-' recognized as a placeholder for no GST registration -- not treated as a GSTIN"
+    },
+    {
+      "name": "gstin_format:gst_no",
+      "passed": false,
+      "detail": "'27AAACB210OP1ZX' does not match GSTIN format (14 chars: 2 digits, 5 letters, 4 digits, 1 letter, 1 alphanumeric, 'Z', 1 alphanumeric)"
     }
   ],
   "completeness_warnings": [],
   "review_view": {
-    "vendor_name": "Vodafone Idea Limited",
-    "date": "25.05.26",
-    "billing_period": "25.04.26 to 24.05.26",
-    "subtotal": "1201.00",
-    "tax": "216.18",
-    "total": "1417.18",
+    "document_type": "telecom_bill",
     "currency": "INR",
-    "_document_type": "telecom_bill",
-    "_editable_fields": [
+    "fields": [
+      {
+        "key": "vendor_name",
+        "label": "Provider",
+        "value": "Vodafone Idea Limited",
+        "editable": true
+      },
+      {
+        "key": "date",
+        "label": "Bill date",
+        "value": "25.05.26",
+        "editable": true
+      },
+      {
+        "key": "billing_period",
+        "label": "Billing period",
+        "value": "25.04.26 to 24.05.26",
+        "editable": true
+      },
+      {
+        "key": "total",
+        "label": "Amount",
+        "value": "1417.18",
+        "editable": true
+      }
+    ],
+    "collapsible": null,
+    "warnings": [],
+    "editable_fields": [
+      "vendor_name",
       "date",
+      "billing_period",
       "total"
     ],
-    "_flagged_checks": [],
-    "_ai_corrections": [],
-    "_needs_review": false
+    "needs_confirm": true,
+    "needs_review": false
   },
-  "duration_seconds": 2.64000000001397,
+  "duration_seconds": 3.1570000000065193,
   "tokens": {
-    "prompt": 2711,
-    "completion": 991,
-    "total": 3702
+    "prompt": 2861,
+    "completion": 1204,
+    "total": 4065
   },
-  "estimated_cost_usd": "0.00114990"
+  "estimated_cost_usd": "0.00133215"
 }

@@ -1,0 +1,943 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "              H\n              E\n\n      GRAND PLAZA HOTEL\n      500 Luxury Avenue\n     Downtown, USA 10001\n        (555) 800-1234\n\nDATE: 03/18/2026  TIME: 10:52:41 PM\nGUEST: John Smith\nROOM: 412\nR0OM: 412\nCHECK-IN: 11/15/2024\nCHECK-0UT: 11/18/2024\n\n3 x ROOM - KING SUITE @     $567.00\n$189.00\nROOM SERVICE                 $45.00\n2 x PARKING (DAILY) @ $25.00 $50.00\nMINI BAR                     $32.00\n\nSUBTOTAL                    $694.00\nTAX (12.5%)                  $86.75\n\nTOTAL                       $780.75\nPAYMENT                      AMEX\nCARD #                     ****9876\nAMOUNT                       $780.75\nTHANK YOU FOR STAYING WITH US!\n   WE HOPE TO SEE YOU AGAIN\n\n\n\n   5556247758110959",
+      "md": "logo: hotel icon\n\n# GRAND PLAZA HOTEL\n\n500 Luxury Avenue\nDowntown, USA 10001\n(555) 800-1234\n\n**DATE**: 03/18/2026 **TIME**: 10:52:41 PM\n\n**GUEST**: John Smith\n\n**ROOM**: 412\n\n**CHECK-IN**: 11/15/2024\n**CHECK-OUT**: 11/18/2024\n\n| 3 x ROOM - KING SUITE @ $189.00 | $567.00      |\n| ------------------------------- | ------------ |\n| ROOM SERVICE                    | $45.00       |\n| 2 x PARKING (DAILY) @ $25.00    | $50.00       |\n| MINI BAR                        | $32.00       |\n| SUBTOTAL                        | $694.00      |\n| TAX (12.5%)                     | $86.75       |\n| **TOTAL**                       | **$780.75**  |\n| PAYMENT                         | AMEX         |\n| CARD #                          | \\*\\*\\*\\*9876 |\n| AMOUNT                          | $780.75      |\n\n\nTHANK YOU FOR STAYING WITH US!\nWE HOPE TO SEE YOU AGAIN\n\nbar_code: 5556247758110959\n\n5556247758110959",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 303.36,
+          "width": 134.4,
+          "x": 0,
+          "y": 0,
+          "original_width": 555,
+          "original_height": 1216,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 178,
+              "y": 1173,
+              "w": 196,
+              "h": 21,
+              "confidence": 1,
+              "text": "5556247758110959"
+            },
+            {
+              "x": 61,
+              "y": 1002,
+              "w": 431,
+              "h": 23,
+              "confidence": 0.999,
+              "text": "THANK YOU FOR STAYING WITH US!"
+            },
+            {
+              "x": 19,
+              "y": 955,
+              "w": 90,
+              "h": 28,
+              "confidence": 1,
+              "text": "AMOUNT"
+            },
+            {
+              "x": 414,
+              "y": 915,
+              "w": 120,
+              "h": 26,
+              "confidence": 1,
+              "text": "****9876"
+            },
+            {
+              "x": 17,
+              "y": 915,
+              "w": 93,
+              "h": 26,
+              "confidence": 0.999,
+              "text": "CARD #"
+            },
+            {
+              "x": 472,
+              "y": 875,
+              "w": 66,
+              "h": 28,
+              "confidence": 1,
+              "text": "AMEX"
+            },
+            {
+              "x": 19,
+              "y": 875,
+              "w": 105,
+              "h": 27,
+              "confidence": 1,
+              "text": "PAYMENT"
+            },
+            {
+              "x": 430,
+              "y": 827,
+              "w": 105,
+              "h": 28,
+              "confidence": 1,
+              "text": "$780.75"
+            },
+            {
+              "x": 20,
+              "y": 774,
+              "w": 157,
+              "h": 27,
+              "confidence": 1,
+              "text": "TAX (12.5%)"
+            },
+            {
+              "x": 20,
+              "y": 732,
+              "w": 119,
+              "h": 27,
+              "confidence": 1,
+              "text": "SUBTOTAL"
+            },
+            {
+              "x": 17,
+              "y": 675,
+              "w": 123,
+              "h": 27,
+              "confidence": 0.995,
+              "text": "MINI BAR"
+            },
+            {
+              "x": 446,
+              "y": 637,
+              "w": 88,
+              "h": 24,
+              "confidence": 1,
+              "text": "$50.00"
+            },
+            {
+              "x": 19,
+              "y": 636,
+              "w": 401,
+              "h": 26,
+              "confidence": 0.991,
+              "text": "2 x PARKING (DAILY) @ $25.00"
+            },
+            {
+              "x": 20,
+              "y": 595,
+              "w": 177,
+              "h": 27,
+              "confidence": 0.996,
+              "text": "ROOM SERVICE"
+            },
+            {
+              "x": 20,
+              "y": 524,
+              "w": 329,
+              "h": 27,
+              "confidence": 0.958,
+              "text": "3 x ROOM - KING SUITE @"
+            },
+            {
+              "x": 431,
+              "y": 523,
+              "w": 104,
+              "h": 28,
+              "confidence": 1,
+              "text": "$567.00"
+            },
+            {
+              "x": 19,
+              "y": 404,
+              "w": 132,
+              "h": 27,
+              "confidence": 0.914,
+              "text": "ROOM: 412"
+            },
+            {
+              "x": 20,
+              "y": 374,
+              "w": 248,
+              "h": 26,
+              "confidence": 0.998,
+              "text": "GUEST: John Smith"
+            },
+            {
+              "x": 287,
+              "y": 336,
+              "w": 247,
+              "h": 22,
+              "confidence": 0.991,
+              "text": "TIME: 10:52:41 PM"
+            },
+            {
+              "x": 21,
+              "y": 336,
+              "w": 230,
+              "h": 22,
+              "confidence": 0.999,
+              "text": "DATE: 03/18/2026"
+            },
+            {
+              "x": 177,
+              "y": 267,
+              "w": 203,
+              "h": 27,
+              "confidence": 0.991,
+              "text": "(555) 800-1234"
+            },
+            {
+              "x": 140,
+              "y": 238,
+              "w": 274,
+              "h": 23,
+              "confidence": 0.996,
+              "text": "Downtown, USA 10001"
+            },
+            {
+              "x": 134,
+              "y": 168,
+              "w": 287,
+              "h": 27,
+              "confidence": 0.993,
+              "text": "GRAND PLAZA HOTEL"
+            },
+            {
+              "x": 251,
+              "y": 52,
+              "w": 53,
+              "h": 61,
+              "confidence": 0.668,
+              "text": "E"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 29.637,
+          "width": 28.992,
+          "x": 52.782,
+          "y": 8.218,
+          "original_width": 121,
+          "original_height": 124,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        },
+        {
+          "name": "page_1_image_2_v2.jpg",
+          "height": 25.991,
+          "width": 89.377,
+          "x": 22.446,
+          "y": 264.189,
+          "original_width": 373,
+          "original_height": 109,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "logo: hotel icon",
+          "value": "logo: hotel icon",
+          "bBox": {
+            "x": 52.78216075067936,
+            "y": 8.218912353515625,
+            "w": 28.992134160580846,
+            "h": 29.637223205566407,
+            "confidence": 0.74,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 52.78,
+              "y": 8.22,
+              "w": 28.99,
+              "h": 29.64,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.74,
+              "label": "image"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "md": "# GRAND PLAZA HOTEL",
+          "value": "GRAND PLAZA HOTEL",
+          "lvl": 1,
+          "bBox": {
+            "x": 32.90795049252718,
+            "y": 43.72376793902854,
+            "w": 68.74895284901497,
+            "h": 6.01965673032014,
+            "confidence": 0.83,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 32.91,
+              "y": 43.72,
+              "w": 68.75,
+              "h": 6.02,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.83,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "500 Luxury Avenue\nDowntown, USA 10001\n(555) 800-1234",
+          "value": "500 Luxury Avenue\nDowntown, USA 10001\n(555) 800-1234",
+          "bBox": {
+            "x": 34.27157513162364,
+            "y": 52.86383892556896,
+            "w": 65.83413510529893,
+            "h": 21.05306436289911,
+            "confidence": 0.87,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 34.27,
+              "y": 52.86,
+              "w": 65.83,
+              "h": 21.05,
+              "startIndex": 0,
+              "endIndex": 51,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**DATE**: 03/18/2026 **TIME**: 10:52:41 PM",
+          "value": "**DATE**: 03/18/2026 **TIME**: 10:52:41 PM",
+          "bBox": {
+            "x": 5.644800000000001,
+            "y": 83.72736,
+            "w": 122.976,
+            "h": 38.52672000000001,
+            "confidence": 0.81,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.52,
+              "y": 83.76,
+              "w": 123.12,
+              "h": 5.28,
+              "startIndex": 0,
+              "endIndex": 41,
+              "confidence": 0.81,
+              "label": "key-value-region"
+            },
+            {
+              "x": 5.52,
+              "y": 83.76,
+              "w": 55.2,
+              "h": 5.28,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**GUEST**: John Smith",
+          "value": "**GUEST**: John Smith",
+          "bBox": {
+            "x": 30.09152288022249,
+            "y": 93.71528248662536,
+            "w": 34.568952344811485,
+            "h": 5.193777465820313,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 30.09,
+              "y": 93.72,
+              "w": 34.57,
+              "h": 5.19,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**ROOM**: 412",
+          "value": "**ROOM**: 412",
+          "bBox": {
+            "x": 26,
+            "y": 101,
+            "w": 10,
+            "h": 4,
+            "confidence": 0.63,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 26,
+              "y": 101,
+              "w": 10,
+              "h": 4,
+              "startIndex": 0,
+              "endIndex": 12,
+              "confidence": 0.63,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**CHECK-IN**: 11/15/2024\n**CHECK-OUT**: 11/18/2024",
+          "value": "**CHECK-IN**: 11/15/2024\n**CHECK-OUT**: 11/18/2024",
+          "bBox": {
+            "x": 5.894444772471553,
+            "y": 101.64127186650816,
+            "w": 16.086809473452362,
+            "h": 4.864615690811821,
+            "confidence": 0.74,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.89,
+              "y": 101.64,
+              "w": 16.09,
+              "h": 4.86,
+              "startIndex": 0,
+              "endIndex": 49,
+              "confidence": 0.74,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| 3 x ROOM - KING SUITE @ $189.00 | $567.00      |\n| ------------------------------- | ------------ |\n| ROOM SERVICE                    | $45.00       |\n| 2 x PARKING (DAILY) @ $25.00    | $50.00       |\n| MINI BAR                        | $32.00       |\n| SUBTOTAL                        | $694.00      |\n| TAX (12.5%)                     | $86.75       |\n| **TOTAL**                       | **$780.75**  |\n| PAYMENT                         | AMEX         |\n| CARD #                          | \\*\\*\\*\\*9876 |\n| AMOUNT                          | $780.75      |",
+          "html": "<table>\n    <tr>\n        <td>3 x ROOM - KING SUITE @ $189.00</td>\n<td>$567.00</td>\n    </tr>\n<tr>\n        <td>ROOM SERVICE</td>\n<td>$45.00</td>\n    </tr>\n<tr>\n        <td>2 x PARKING (DAILY) @ $25.00</td>\n<td>$50.00</td>\n    </tr>\n<tr>\n        <td>MINI BAR</td>\n<td>$32.00</td>\n    </tr>\n<tr>\n        <td>SUBTOTAL</td>\n<td>$694.00</td>\n    </tr>\n<tr>\n        <td>TAX (12.5%)</td>\n<td>$86.75</td>\n    </tr>\n<tr>\n        <td><strong>TOTAL</strong></td>\n<td><strong>$780.75</strong></td>\n    </tr>\n<tr>\n        <td>PAYMENT</td>\n<td>AMEX</td>\n    </tr>\n<tr>\n        <td>CARD #</td>\n<td>****9876</td>\n    </tr>\n<tr>\n        <td>AMOUNT</td>\n<td>$780.75</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "3 x ROOM - KING SUITE @ $189.00",
+              "$567.00"
+            ],
+            [
+              "ROOM SERVICE",
+              "$45.00"
+            ],
+            [
+              "2 x PARKING (DAILY) @ $25.00",
+              "$50.00"
+            ],
+            [
+              "MINI BAR",
+              "$32.00"
+            ],
+            [
+              "SUBTOTAL",
+              "$694.00"
+            ],
+            [
+              "TAX (12.5%)",
+              "$86.75"
+            ],
+            [
+              "TOTAL",
+              "$780.75"
+            ],
+            [
+              "PAYMENT",
+              "AMEX"
+            ],
+            [
+              "CARD #",
+              "****9876"
+            ],
+            [
+              "AMOUNT",
+              "$780.75"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"3 x ROOM - KING SUITE @ $189.00\",\"$567.00\"\n\"ROOM SERVICE\",\"$45.00\"\n\"2 x PARKING (DAILY) @ $25.00\",\"$50.00\"\n\"MINI BAR\",\"$32.00\"\n\"SUBTOTAL\",\"$694.00\"\n\"TAX (12.5%)\",\"$86.75\"\n\"TOTAL\",\"$780.75\"\n\"PAYMENT\",\"AMEX\"\n\"CARD #\",\"****9876\"\n\"AMOUNT\",\"$780.75\"",
+          "bBox": {
+            "x": 5.667345826522165,
+            "y": 83.02730147652004,
+            "w": 123.4139418560526,
+            "h": 173.8213982092816,
+            "confidence": 0.84,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.04,
+              "y": 83.76,
+              "w": 123.6,
+              "h": 38.4,
+              "startIndex": 0,
+              "endIndex": 559,
+              "confidence": 0.5,
+              "label": "key-value-region"
+            },
+            {
+              "x": 4.56,
+              "y": 128.64,
+              "w": 124.56,
+              "h": 43.68,
+              "startIndex": 2,
+              "endIndex": 245,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 5.28,
+              "y": 178.8,
+              "w": 37.68,
+              "h": 16.56,
+              "startIndex": 257,
+              "endIndex": 316,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 5.04,
+              "y": 201.84,
+              "w": 18.24,
+              "h": 6.24,
+              "startIndex": 260,
+              "endIndex": 264,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 103.92,
+              "y": 179.04,
+              "w": 25.2,
+              "h": 17.04,
+              "startIndex": 292,
+              "endIndex": 347,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 103.68,
+              "y": 201.6,
+              "w": 25.2,
+              "h": 6.72,
+              "startIndex": 396,
+              "endIndex": 401,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 4.56,
+              "y": 213.12,
+              "w": 125.04,
+              "h": 43.68,
+              "startIndex": 396,
+              "endIndex": 517,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "header_value_type_mismatch",
+              "details": "col 1 '$567.00' expects numeric, got 'AMEX' in row 7"
+            },
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [image, text, key-value-region, paragraph_title] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "THANK YOU FOR STAYING WITH US!\nWE HOPE TO SEE YOU AGAIN",
+          "value": "THANK YOU FOR STAYING WITH US!\nWE HOPE TO SEE YOU AGAIN",
+          "bBox": {
+            "x": 15.019866147248644,
+            "y": 243.26935037364134,
+            "w": 103.35028023097827,
+            "h": 13.296432574728243,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 15.02,
+              "y": 243.27,
+              "w": 103.35,
+              "h": 13.3,
+              "startIndex": 0,
+              "endIndex": 54,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "bar_code: 5556247758110959",
+          "value": "bar_code: 5556247758110959",
+          "bBox": {
+            "x": 44.20504959769872,
+            "y": 285.4115166440218,
+            "w": 46.02711301057236,
+            "h": 4.545963293987788,
+            "confidence": 0.71,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 44.21,
+              "y": 285.41,
+              "w": 46.03,
+              "h": 4.55,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.71,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "5556247758110959",
+          "value": "5556247758110959",
+          "bBox": {
+            "x": 44.20504959769872,
+            "y": 285.4115166440218,
+            "w": 46.02711301057236,
+            "h": 4.545963293987788,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 43.2,
+              "y": 284.64,
+              "w": 47.04,
+              "h": 5.04,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "image"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 134.4,
+      "height": 303.36,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.81,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "image",
+          "bbox": {
+            "x": 0.393,
+            "y": 0.027,
+            "w": 0.216,
+            "h": 0.098
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_image_2_v2.jpg",
+          "confidence": 0.76,
+          "label": "image",
+          "bbox": {
+            "x": 0.167,
+            "y": 0.871,
+            "w": 0.665,
+            "h": 0.086
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.255,
+            "y": 0.174,
+            "w": 0.49,
+            "h": 0.069
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.69,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.042,
+            "y": 0.274,
+            "w": 0.918,
+            "h": 0.573
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.67,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.245,
+            "y": 0.144,
+            "w": 0.512,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.278,
+            "w": 0.12,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.309,
+            "w": 0.146,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.62,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.042,
+            "y": 0.276,
+            "w": 0.915,
+            "h": 0.127
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.335,
+            "w": 0.12,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.112,
+            "y": 0.802,
+            "w": 0.769,
+            "h": 0.044
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.224,
+            "y": 0.309,
+            "w": 0.257,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.36,
+            "w": 0.224,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.385,
+            "w": 0.249,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.198,
+            "y": 0.335,
+            "w": 0.075,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.199,
+            "y": 0.278,
+            "w": 0.257,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.328,
+            "y": 0.385,
+            "w": 0.256,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.303,
+            "y": 0.359,
+            "w": 0.256,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.329,
+            "y": 0.941,
+            "w": 0.342,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.853,
+            "y": 0.707,
+            "w": 0.105,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.518,
+            "y": 0.278,
+            "w": 0.121,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.045,
+            "y": 0.706,
+            "w": 0.179,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.778,
+            "y": 0.77,
+            "w": 0.178,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.044,
+            "y": 0.739,
+            "w": 0.156,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

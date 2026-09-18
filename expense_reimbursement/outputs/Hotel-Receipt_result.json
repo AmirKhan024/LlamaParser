@@ -1,0 +1,145 @@
+{
+  "file": "Hotel-Receipt.png",
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "GRAND PLAZA HOTEL",
+    "date": "03/18/2026",
+    "amount": "780.75",
+    "currency": "USD",
+    "additional_fields": {
+      "guest_name": "John Smith",
+      "room_number": "412",
+      "check_in": "11/15/2024",
+      "check_out": "11/18/2024",
+      "time": "10:52:41 PM",
+      "payment_method": "AMEX",
+      "card_masked": "****9876",
+      "bar_code": "5556247758110959",
+      "logo": "hotel icon"
+    },
+    "extraction_notes": [],
+    "confidence": 0.85,
+    "line_items": [
+      {
+        "name": "ROOM - KING SUITE",
+        "quantity": "3",
+        "unit_price": "189.00",
+        "total": "567.00"
+      },
+      {
+        "name": "ROOM SERVICE",
+        "quantity": null,
+        "unit_price": null,
+        "total": "45.00"
+      },
+      {
+        "name": "PARKING (DAILY)",
+        "quantity": "2",
+        "unit_price": "25.00",
+        "total": "50.00"
+      },
+      {
+        "name": "MINI BAR",
+        "quantity": null,
+        "unit_price": null,
+        "total": "32.00"
+      }
+    ]
+  },
+  "additional_fields": {
+    "guest_name": "John Smith",
+    "room_number": "412",
+    "check_in": "11/15/2024",
+    "check_out": "11/18/2024",
+    "time": "10:52:41 PM",
+    "payment_method": "AMEX",
+    "card_masked": "****9876",
+    "bar_code": "5556247758110959",
+    "logo": "hotel icon"
+  },
+  "extraction_notes": [],
+  "validation": [
+    {
+      "name": "sum(line items) == amount",
+      "passed": false,
+      "detail": "sum of 4 item totals = 694.00, amount = 780.75 (diff 86.75, tolerance 0.5)"
+    }
+  ],
+  "completeness_warnings": [],
+  "review_view": {
+    "document_type": "hotel_invoice",
+    "currency": "USD",
+    "fields": [
+      {
+        "key": "vendor_name",
+        "label": "Vendor",
+        "value": "GRAND PLAZA HOTEL",
+        "editable": true
+      },
+      {
+        "key": "date",
+        "label": "Date",
+        "value": "03/18/2026",
+        "editable": true
+      },
+      {
+        "key": "amount",
+        "label": "Amount",
+        "value": "780.75",
+        "editable": true
+      }
+    ],
+    "collapsible": {
+      "key": "items",
+      "label": "Show items (4)",
+      "auto_expand": true,
+      "line_items": [
+        {
+          "name": "ROOM - KING SUITE",
+          "quantity": "3",
+          "unit_price": "189.00",
+          "total": "567.00"
+        },
+        {
+          "name": "ROOM SERVICE",
+          "quantity": null,
+          "unit_price": null,
+          "total": "45.00"
+        },
+        {
+          "name": "PARKING (DAILY)",
+          "quantity": "2",
+          "unit_price": "25.00",
+          "total": "50.00"
+        },
+        {
+          "name": "MINI BAR",
+          "quantity": null,
+          "unit_price": null,
+          "total": "32.00"
+        }
+      ],
+      "extra_fields": [],
+      "editable": true
+    },
+    "warnings": [
+      "The amounts don't add up: the items don't add up to the subtotal or total."
+    ],
+    "editable_fields": [
+      "vendor_name",
+      "date",
+      "amount",
+      "line_items"
+    ],
+    "needs_confirm": true,
+    "needs_review": true
+  },
+  "duration_seconds": 14.25,
+  "tokens": {
+    "prompt": 1888,
+    "completion": 961,
+    "total": 2849
+  },
+  "estimated_cost_usd": "0.00100395"
+}
