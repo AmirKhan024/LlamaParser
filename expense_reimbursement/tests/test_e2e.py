@@ -531,3 +531,44 @@ def test_items_table_fits_desktop_width_without_horizontal_scroll(live_server):
         assert table_box["width"] <= scroll_box["width"] + 1, "items table itself must not need to scroll at desktop width"
 
         browser.close()
+
+
+def test_money_edit_reason_box_gates_confirm(live_server):
+    """Prior-prompt item 2: when the server reports reason_required (a
+    money edit that leaves an arithmetic check failing), the review
+    screen must show one inline reason box under the warnings and keep
+    Confirm disabled until at least 5 characters are typed -- no
+    browser dialogs. The server-side 422 enforcement itself is covered
+    by tests/test_reason_required.py against the real API; this only
+    checks what actually renders on screen."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1100, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+
+        doc = _generic_receipt_doc([], needs_review=True, warnings=["The amounts don't add up: subtotal plus tax should equal the total."])
+        doc["review"]["reason_required"] = True
+        page.evaluate(
+            """(doc) => {
+                document.getElementById('app').innerHTML = '<div id="doc-body">Loading</div>';
+                docPageState = { doc, edits: {}, dirty: false, saving: false, reason: "" };
+                drawDocumentPage();
+            }""",
+            doc,
+        )
+        page.wait_for_selector("#reason-box")
+        assert page.locator("#reason-box", has_text="This doesn't match the bill's own numbers").count() == 1
+        assert page.locator("#btn-confirm").is_disabled(), "Confirm must start disabled when a reason is required"
+
+        page.fill("#reason-input", "ok")
+        assert page.locator("#btn-confirm").is_disabled(), "a reason under 5 characters must not enable Confirm"
+
+        page.fill("#reason-input", "rechecked the printed receipt")
+        assert not page.locator("#btn-confirm").is_disabled(), "a real reason must enable Confirm"
+
+        # dropping back under 5 chars disables it again -- live, no reload
+        page.fill("#reason-input", "no")
+        assert page.locator("#btn-confirm").is_disabled()
+
+        browser.close()

@@ -64,7 +64,10 @@ def test_full_flow_create_upload_edit_confirm_submit(client, db_session):
     saved = r.json()
     assert next(f["value"] for f in saved["review"]["fields"] if f["key"] == "total") == "1420.00"
     assert saved["corrections"] == [
-        {"field_path": "total", "ai_value": "1417.18", "employee_value": "1420.00", "change_type": None}
+        {
+            "field_path": "total", "ai_value": "1417.18", "employee_value": "1420.00",
+            "change_type": None, "reason": None, "direction": "increase",
+        }
     ]
     assert saved["extraction_version"] == 2
 

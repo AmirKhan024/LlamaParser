@@ -283,6 +283,81 @@ def _corrections_for_edits(ai_fields: dict, edits: dict[str, Any]) -> list[dict[
     return corrections
 
 
+def _with_direction(corrections: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Adds the "increase"/"decrease"/"none" `direction` key used only
+    when a correction is actually persisted (repository.add_extraction) --
+    not on the /validate dry-run preview, which stays the lighter
+    ai_value/employee_value shape the UI already relies on."""
+    result = []
+    for correction in corrections:
+        correction = dict(correction)
+        correction["direction"] = _compute_direction(correction.get("ai_value"), correction.get("employee_value"))
+        result.append(correction)
+    return result
+
+
+# Money fields an employee edit to which, if it leaves an arithmetic
+# check failing, requires a typed reason before Confirm -- mirrors
+# MONEY_FIELD_KEYS in static/index.html, extended with the line-item
+# leaf keys (unit_price/total), since those arrive as e.g.
+# "line_items[2].total" rather than a bare top-level key.
+MONEY_FIELD_KEYS = {
+    "amount", "total", "subtotal", "tax", "cgst", "sgst", "grand_total",
+    "total_conveyance_amount", "daily_allowance_amount",
+    "vehicle_maintenance_amount", "mobile_allowance_amount", "total_claimed",
+    "unit_price",
+}
+
+
+def _is_money_field_path(field_path: str) -> bool:
+    tokens = _parse_field_path(field_path)
+    leaf = tokens[-1]
+    return isinstance(leaf, str) and leaf in MONEY_FIELD_KEYS
+
+
+def _compute_direction(ai_value: Any, employee_value: Any) -> str:
+    try:
+        ai_num = Decimal(str(ai_value))
+        employee_num = Decimal(str(employee_value))
+    except (InvalidOperation, TypeError, ValueError):
+        return "none"
+    if employee_num > ai_num:
+        return "increase"
+    if employee_num < ai_num:
+        return "decrease"
+    return "none"
+
+
+def _has_failing_arithmetic_check(checks: Any) -> bool:
+    """`checks` is either the list[dict] evaluate() produces (name/passed)
+    or a document's ORM check_results (check_name/passed) -- both shapes
+    are used by the two callers below. gstin_format:* is excluded: a bad
+    GSTIN checksum is a format check, not the kind of arithmetic mismatch
+    a money-edit reason is about."""
+    for c in checks:
+        if isinstance(c, dict):
+            name, passed = c.get("name"), c.get("passed")
+        else:
+            name, passed = getattr(c, "check_name", None), getattr(c, "passed", None)
+        if name and name.startswith("gstin_format"):
+            continue
+        if passed is False:
+            return True
+    return False
+
+
+def _reason_required_for(ai_fields: dict, current_fields: dict, checks: Any) -> bool:
+    """A reason is required exactly when the current (latest) fields
+    differ from the AI's own fields on at least one money field AND at
+    least one arithmetic check still fails on the current fields. An
+    edit that FIXES a previously-failing check needs no reason -- that's
+    the employee correcting an AI misread, not contradicting the bill."""
+    money_edits = [d for d in diff_values(ai_fields, current_fields) if _is_money_field_path(d["field_path"])]
+    if not money_edits:
+        return False
+    return _has_failing_arithmetic_check(checks)
+
+
 def _extraction_amount(document_type: str, clean_json: dict) -> Optional[Decimal]:
     field = _AMOUNT_FIELD_BY_TYPE.get(document_type, "amount")
     value = clean_json.get(field)
@@ -346,6 +421,12 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
         # check_results/completeness stay in the DB for finance and later
         # stages -- only what's SHOWN to the employee changes.
         summary["review"]["warnings"] = []
+    ai_extraction = _find_ai_extraction(document)
+    summary["review"]["reason_required"] = (
+        document.status != "confirmed"
+        and ai_extraction is not None
+        and _reason_required_for(ai_extraction.fields, extraction.fields, checks_as_dicts)
+    )
     summary["extraction_version"] = extraction.version
     # Only the latest extraction's corrections -- after a revert, the new
     # version has none (fields equal the AI version again), even though
@@ -357,6 +438,8 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
             "ai_value": c.ai_value,
             "employee_value": c.employee_value,
             "change_type": c.change_type,
+            "reason": c.reason,
+            "direction": c.direction,
         }
         for c in corrections
     ]
@@ -544,6 +627,7 @@ class UpdateClaimBody(BaseModel):
 
 class EditsBody(BaseModel):
     edits: dict[str, Any] = {}
+    reason: Optional[str] = None  # only consulted by confirm; see _reason_required_for
 
 
 @app.post("/api/claims")
@@ -726,6 +810,9 @@ def validate_document(
 
     ai_extraction = _find_ai_extraction(document)
     corrections_preview = _corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, body.edits)
+    evaluated["view"]["reason_required"] = (
+        _reason_required_for(ai_extraction.fields, new_fields, evaluated["checks"]) if ai_extraction else False
+    )
 
     return {"review": evaluated["view"], "corrections_preview": corrections_preview}
 
@@ -758,7 +845,7 @@ def _save_edits(session: Session, document: Document, edits: dict[str, Any], act
     view = evaluated["view"]
 
     ai_extraction = _find_ai_extraction(document)
-    corrections = _corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, edits)
+    corrections = _with_direction(_corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, edits))
 
     new_extraction = repository.add_extraction(
         session,
@@ -811,6 +898,18 @@ def confirm_document(
     _require_not_confirmed(document)
     if body.edits:
         _save_edits(session, document, body.edits, employee.id)
+
+    extraction = repository.latest_extraction(session, document.id)
+    ai_extraction = _find_ai_extraction(document)
+    if extraction is not None and ai_extraction is not None:
+        if _reason_required_for(ai_extraction.fields, extraction.fields, extraction.check_results):
+            reason = (body.reason or "").strip()
+            if len(reason) < 5:
+                raise HTTPException(
+                    422, "This doesn't match the bill's own numbers. Why is it different?"
+                )
+            repository.set_reason_for_corrections(session, extraction.id, reason)
+
     repository.confirm_document(session, document.id, employee.id)
     repository.recompute_claim_total(session, claim.id)
     refreshed = repository.get_document(session, document.id)

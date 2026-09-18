@@ -164,6 +164,14 @@ class Correction(Base):
     # for a whole array element (a trip, a line item) added/removed
     # wholesale rather than edited -- see server.diff_values.
     change_type: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # Employee's own explanation, only ever required (and collected) for
+    # a money-field edit that leaves an arithmetic check failing -- see
+    # server._reason_required_for. Null otherwise.
+    reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # "increase"/"decrease"/"none", computed from ai_value vs
+    # employee_value at correction-creation time (numeric comparison;
+    # "none" when either side isn't a number, e.g. a text field).
+    direction: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
 
 

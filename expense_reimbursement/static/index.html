@@ -564,7 +564,7 @@ function correctionsSummaryHtml(claim) {
   const rows = [];
   for (const doc of claim.documents) {
     for (const c of doc.corrections || []) {
-      rows.push({ doc: doc.original_name, field: c.field_path, ai: c.ai_value, you: c.employee_value });
+      rows.push({ doc: doc.original_name, field: c.field_path, ai: c.ai_value, you: c.employee_value, reason: c.reason });
     }
   }
   if (rows.length === 0) return "";
@@ -572,9 +572,9 @@ function correctionsSummaryHtml(claim) {
     <div class="corrections-summary">
       <div style="font-weight:600;margin-top:10px;margin-bottom:4px;">Values you corrected</div>
       <table>
-        <thead><tr><th>Document</th><th>Field</th><th>AI read</th><th>You entered</th></tr></thead>
+        <thead><tr><th>Document</th><th>Field</th><th>AI read</th><th>You entered</th><th>Reason</th></tr></thead>
         <tbody>
-          ${rows.map((r) => `<tr><td>${escapeHtml(r.doc)}</td><td>${escapeHtml(r.field)}</td><td>${escapeHtml(r.ai)}</td><td>${escapeHtml(r.you)}</td></tr>`).join("")}
+          ${rows.map((r) => `<tr><td>${escapeHtml(r.doc)}</td><td>${escapeHtml(r.field)}</td><td>${escapeHtml(r.ai)}</td><td>${escapeHtml(r.you)}</td><td>${r.reason ? escapeHtml(r.reason) : "–"}</td></tr>`).join("")}
         </tbody>
       </table>
     </div>`;
@@ -670,7 +670,7 @@ async function renderDocumentPage(documentId) {
     return;
   }
 
-  docPageState = { doc, edits: {}, dirty: false, saving: false };
+  docPageState = { doc, edits: {}, dirty: false, saving: false, reason: "" };
 
   activeGuard = async () => {
     if (!docPageState || !docPageState.dirty) return true;
@@ -744,14 +744,47 @@ function drawDocumentPage() {
     <div class="review-layout">
       <div class="doc-preview">${previewHtml(doc)}</div>
       <div>
-        ${review.warnings.map((w) => `<div class="warning-line">${escapeHtml(w)}</div>`).join("")}
+        <div id="warnings-container"></div>
         <div id="fields-container"></div>
       </div>
     </div>
   `;
 
   renderFields(review);
+  renderWarningsAndReasonBox();
   renderDocActionBar();
+}
+
+/* Money-edit reason box: shown under the warnings whenever the server
+   says this document's current fields differ from the AI's on a money
+   field AND an arithmetic check still fails (server._reason_required_for
+   is the single source of truth -- the UI only reflects it). Re-run on
+   every validate() response too, so it appears/disappears live as the
+   employee types, without a full page redraw that would drop focus. */
+function renderWarningsAndReasonBox() {
+  const container = document.getElementById("warnings-container");
+  if (!container) return;
+  const review = docPageState.doc.review;
+  const warningsHtml = (review.warnings || []).map((w) => `<div class="warning-line">${escapeHtml(w)}</div>`).join("");
+  let reasonHtml = "";
+  if (review.reason_required) {
+    reasonHtml = `
+      <div id="reason-box" class="warning-line">
+        <div>This doesn't match the bill's own numbers. Why is it different?</div>
+        <textarea id="reason-input" rows="2" style="width:100%;margin-top:6px;box-sizing:border-box;">${escapeHtml(docPageState.reason || "")}</textarea>
+      </div>`;
+  } else {
+    docPageState.reason = "";
+  }
+  container.innerHTML = warningsHtml + reasonHtml;
+  const reasonInput = document.getElementById("reason-input");
+  if (reasonInput) {
+    reasonInput.addEventListener("input", (e) => {
+      docPageState.reason = e.target.value;
+      updateActionBarState();
+    });
+  }
+  updateActionBarState();
 }
 
 function previewHtml(doc) {
@@ -964,14 +997,13 @@ async function runValidate() {
   if (!docPageState || Object.keys(docPageState.edits).length === 0) return;
   try {
     const result = await api("POST", `/api/documents/${docPageState.doc.id}/validate`, { edits: docPageState.edits });
-    docPageState.doc.review = { ...docPageState.doc.review, warnings: result.review.warnings, needs_review: result.review.needs_review };
-    const warningsHtml = result.review.warnings.map((w) => `<div class="warning-line">${escapeHtml(w)}</div>`).join("");
-    const layout = document.querySelector(".review-layout > div:last-child");
-    if (layout) {
-      const existingWarnings = layout.querySelectorAll(".warning-line");
-      existingWarnings.forEach((w) => w.remove());
-      document.getElementById("fields-container").insertAdjacentHTML("beforebegin", warningsHtml);
-    }
+    docPageState.doc.review = {
+      ...docPageState.doc.review,
+      warnings: result.review.warnings,
+      needs_review: result.review.needs_review,
+      reason_required: result.review.reason_required,
+    };
+    renderWarningsAndReasonBox();
   } catch (err) {
     setDocActionBarStatus(err.message, true);
   }
@@ -1043,6 +1075,11 @@ function updateActionBarState() {
   if (msg && !msg.classList.contains("error") && !msg.classList.contains("saved")) {
     msg.textContent = docPageState.dirty ? "Unsaved changes" : "";
   }
+  const confirmBtn = document.getElementById("btn-confirm");
+  if (confirmBtn && docPageState.doc.review) {
+    const reasonOk = !docPageState.doc.review.reason_required || (docPageState.reason || "").trim().length >= 5;
+    confirmBtn.disabled = !reasonOk;
+  }
 }
 
 function setDocActionBarStatus(message, isError) {
@@ -1094,10 +1131,14 @@ async function undoDocumentChanges() {
 async function confirmDocument() {
   setButtonsBusy(true);
   try {
-    const updated = await api("POST", `/api/documents/${docPageState.doc.id}/confirm`, { edits: docPageState.edits });
+    const updated = await api("POST", `/api/documents/${docPageState.doc.id}/confirm`, {
+      edits: docPageState.edits,
+      reason: docPageState.reason || null,
+    });
     docPageState.doc = updated;
     docPageState.edits = {};
     docPageState.dirty = false;
+    docPageState.reason = "";
     navigate(`#/claims/${updated.claim_id}`);
   } catch (err) {
     setDocActionBarStatus(err.message, true);

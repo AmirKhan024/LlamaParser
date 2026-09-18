@@ -391,6 +391,7 @@ def add_extraction(
                 ai_value=correction.get("ai_value"),
                 employee_value=correction.get("employee_value"),
                 change_type=correction.get("change_type"),
+                direction=correction.get("direction"),
             )
         )
 
@@ -414,6 +415,24 @@ def list_corrections(session: Session, document_id: uuid.UUID) -> list[Correctio
             select(Correction).where(Correction.document_id == document_id).order_by(Correction.created_at)
         )
     )
+
+
+def set_reason_for_corrections(session: Session, extraction_id: uuid.UUID, reason: str) -> int:
+    """Attaches `reason` to every correction row belonging to
+    `extraction_id` -- called from server.confirm_document when a money
+    edit (whether saved in this request or an earlier one, either way
+    now part of the latest extraction) leaves an arithmetic check
+    failing. Applied to the whole extraction's corrections rather than
+    filtered down to just the money field(s): the common case is the one
+    field that triggered the requirement, and over-attaching the reason
+    to an incidental, non-money edit saved in the same request is an
+    acceptable simplification."""
+    rows = list(session.scalars(select(Correction).where(Correction.extraction_id == extraction_id)))
+    for row in rows:
+        row.reason = reason
+    if rows:
+        session.commit()
+    return len(rows)
 
 
 # --------------------------------------------------------------------- misc
