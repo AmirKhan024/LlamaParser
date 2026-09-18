@@ -338,6 +338,11 @@ def validate_claim(claim: BaseClaim) -> list[CheckResult]:
         checks.extend(_validate_restaurant_bill(claim))
     elif isinstance(claim, LocalConveyanceForm):
         checks.extend(_validate_local_conveyance_form(claim))
+    elif isinstance(claim, GenericClaim):
+        # ApprovalCorrespondence is a BaseClaim sibling, not a GenericClaim
+        # subclass, so it's naturally excluded here -- an email has no
+        # subtotal/tax/line-item totals to check.
+        checks.extend(_validate_generic_claim(claim))
     checks.extend(check_gstin_format(claim))
     return checks
 
@@ -459,6 +464,65 @@ def _check_conveyance_total(claim: LocalConveyanceForm) -> CheckResult:
         f"printed total_claimed = {claim.total_claimed} "
         f"(diff {abs(computed - claim.total_claimed)}, tolerance {TOLERANCE})",
     )
+
+
+_SUBTOTAL_FIELD_HINT = re.compile(r"subtotal", re.IGNORECASE)
+_TAX_FIELD_HINT = re.compile(r"tax", re.IGNORECASE)
+_TOTAL_FIELD_HINT = re.compile(r"total", re.IGNORECASE)
+
+
+def _find_amount_in_additional_fields(claim: GenericClaim, pattern: re.Pattern) -> Optional[Decimal]:
+    """GenericClaim (taxi/hotel/fuel/unstructured/generic receipts) has
+    no dedicated subtotal/tax schema fields the way TelecomBill does --
+    those values, when present at all, only ever show up in
+    additional_fields under whatever label the bill printed. Matched
+    case-insensitively on the key, same approach as _find_gstin_like_fields."""
+    for key, value in (claim.additional_fields or {}).items():
+        if pattern.search(key) and isinstance(value, str):
+            parsed, _warning = parse_amount(value)
+            if parsed is not None:
+                return parsed
+    return None
+
+
+def _validate_generic_claim(claim: GenericClaim) -> list[CheckResult]:
+    """Opportunistic, unlike the other per-type checks: a generic
+    receipt may not print a subtotal/tax breakdown at all (a simple taxi
+    fare, say), and that's not a data quality problem -- so this returns
+    no CheckResult at all for a check whose inputs aren't there, rather
+    than a loud "cannot check" failure that would flag every simple
+    receipt for review.
+    """
+    results: list[CheckResult] = []
+
+    subtotal = _find_amount_in_additional_fields(claim, _SUBTOTAL_FIELD_HINT)
+    tax = _find_amount_in_additional_fields(claim, _TAX_FIELD_HINT)
+    total_field = _find_amount_in_additional_fields(claim, _TOTAL_FIELD_HINT)
+    target = claim.amount if claim.amount is not None else total_field
+
+    if subtotal is not None and tax is not None and target is not None:
+        computed = subtotal + tax
+        passed = _isclose(computed, target)
+        results.append(CheckResult(
+            "subtotal + tax == amount", passed,
+            f"{subtotal} + {tax} = {computed}, amount = {target} "
+            f"(diff {abs(computed - target)}, tolerance {TOLERANCE})",
+        ))
+
+    item_totals = [item.total for item in claim.line_items if item.total is not None]
+    if item_totals:
+        items_sum = sum(item_totals, Decimal("0"))
+        compare_to = subtotal if subtotal is not None else claim.amount
+        compare_label = "subtotal" if subtotal is not None else "amount"
+        if compare_to is not None:
+            passed = _isclose(items_sum, compare_to)
+            results.append(CheckResult(
+                f"sum(line items) == {compare_label}", passed,
+                f"sum of {len(item_totals)} item totals = {items_sum}, {compare_label} = {compare_to} "
+                f"(diff {abs(items_sum - compare_to)}, tolerance {TOLERANCE})",
+            ))
+
+    return results
 
 
 def _find_line_with_label(markdown_text: str, label: str) -> Optional[str]:

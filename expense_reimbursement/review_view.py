@@ -161,16 +161,28 @@ def _build_generic_receipt(claim: Dict[str, Any], checks: Dict[str, bool]) -> Di
         _field("date", "Date", claim.get("date"), True),
         _field("amount", "Amount", claim.get("amount"), True),
     ]
+    # _validate_generic_claim only ever runs these when it actually found
+    # the fields to check (a simple receipt with no subtotal/tax
+    # breakdown at all has neither check in `checks`) -- checks.get's
+    # True default only matters for a check that DID run and passed.
+    subtotal_tax_ok = checks.get("subtotal + tax == amount", True)
+    items_sum_ok = checks.get("sum(line items) == subtotal", True) and checks.get("sum(line items) == amount", True)
+
     line_items = claim.get("line_items") or []
     collapsible = {
         "key": "items",
         "label": f"Show items ({len(line_items)})",
-        "auto_expand": False,
+        "auto_expand": not items_sum_ok,
         "line_items": line_items,
         "extra_fields": [],
         "editable": True,
     }
-    return {"fields": fields, "collapsible": collapsible, "warnings": [], "needs_confirm": True}
+    warnings = []
+    if not subtotal_tax_ok:
+        warnings.append("The amounts don't add up: subtotal plus tax should equal the total.")
+    if not items_sum_ok:
+        warnings.append("The amounts don't add up: the items don't add up to the subtotal or total.")
+    return {"fields": fields, "collapsible": collapsible, "warnings": warnings, "needs_confirm": True}
 
 
 _BUILDERS = {
