@@ -118,6 +118,11 @@ def _require_draft(claim: Claim) -> None:
         raise HTTPException(409, "This claim has already been submitted and can no longer be changed.")
 
 
+def _require_not_confirmed(document: Document) -> None:
+    if document.status == "confirmed":
+        raise HTTPException(409, "This document is confirmed. Click 'Edit again' first.")
+
+
 def _decimal_default(obj: Any):
     if isinstance(obj, Decimal):
         return str(obj)
@@ -221,10 +226,11 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
     return {"claim": claim, "clean_json": clean_json, "checks": checks_as_dicts, "view": view}
 
 
-def _document_summary(document: Document) -> dict:
+def _document_summary(document: Document, claim: Claim) -> dict:
     return {
         "id": str(document.id),
         "claim_id": str(document.claim_id),
+        "claim_status": claim.status,
         "original_name": document.original_name,
         "mime_type": document.mime_type,
         "status": document.status,
@@ -234,8 +240,8 @@ def _document_summary(document: Document) -> dict:
     }
 
 
-def _document_detail(session: Session, document: Document) -> dict:
-    summary = _document_summary(document)
+def _document_detail(session: Session, document: Document, claim: Claim) -> dict:
+    summary = _document_summary(document, claim)
     extraction = repository.latest_extraction(session, document.id)
     if extraction is None:
         summary["review"] = None
@@ -247,6 +253,11 @@ def _document_detail(session: Session, document: Document) -> dict:
     completeness_warnings = check_completeness(document.raw_markdown or "", extraction.fields, extraction.document_type)
     review_input = {**extraction.fields, "validation": checks_as_dicts, "completeness_warnings": completeness_warnings}
     summary["review"] = build_review_view(review_input)
+    if document.status == "confirmed":
+        # The employee has verified it; the AI's doubts are resolved.
+        # check_results/completeness stay in the DB for finance and later
+        # stages -- only what's SHOWN to the employee changes.
+        summary["review"]["warnings"] = []
     summary["extraction_version"] = extraction.version
     # Only the latest extraction's corrections -- after a revert, the new
     # version has none (fields equal the AI version again), even though
@@ -280,7 +291,7 @@ def _claim_summary(claim: Claim) -> dict:
 
 def _claim_detail(session: Session, claim: Claim) -> dict:
     summary = _claim_summary(claim)
-    summary["documents"] = [_document_detail(session, d) for d in claim.documents]
+    summary["documents"] = [_document_detail(session, d, claim) for d in claim.documents]
     return summary
 
 
@@ -538,7 +549,7 @@ async def upload_document(
         mime_type=content_type,
     )
     _start_pipeline(document.id, full_path, employee.id)
-    return _document_summary(document)
+    return _document_summary(document, claim)
 
 
 @app.get("/api/documents/{document_id}")
@@ -547,8 +558,8 @@ def get_document(
     session: Session = Depends(get_db),
     employee: Employee = Depends(get_current_employee),
 ):
-    document, _claim = _get_owned_document(session, document_id, employee)
-    return _document_detail(session, document)
+    document, claim = _get_owned_document(session, document_id, employee)
+    return _document_detail(session, document, claim)
 
 
 @app.get("/api/documents/{document_id}/file")
@@ -581,6 +592,7 @@ def validate_document(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
+    _require_not_confirmed(document)
     extraction = repository.latest_extraction(session, document.id)
     if extraction is None:
         raise HTTPException(409, "This document is still being processed.")
@@ -662,12 +674,13 @@ def save_document_fields(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
+    _require_not_confirmed(document)
     if not body.edits:
         raise HTTPException(400, "No edits were sent.")
     _save_edits(session, document, body.edits, employee.id)
     repository.recompute_claim_total(session, claim.id)
     refreshed = repository.get_document(session, document.id)
-    return _document_detail(session, refreshed)
+    return _document_detail(session, refreshed, claim)
 
 
 @app.post("/api/documents/{document_id}/confirm")
@@ -679,12 +692,32 @@ def confirm_document(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
+    _require_not_confirmed(document)
     if body.edits:
         _save_edits(session, document, body.edits, employee.id)
     repository.confirm_document(session, document.id, employee.id)
     repository.recompute_claim_total(session, claim.id)
     refreshed = repository.get_document(session, document.id)
-    return _document_detail(session, refreshed)
+    return _document_detail(session, refreshed, claim)
+
+
+@app.post("/api/documents/{document_id}/reopen")
+def reopen_document(
+    document_id: str,
+    session: Session = Depends(get_db),
+    employee: Employee = Depends(get_current_employee),
+):
+    """"Edit again" on a confirmed document: unconditionally back to
+    needs_review (not recomputed from checks) and switches the review
+    screen back to edit mode."""
+    document, claim = _get_owned_document(session, document_id, employee)
+    _require_draft(claim)
+    if document.status != "confirmed":
+        raise HTTPException(409, "Only a confirmed document can be reopened for editing.")
+    repository.reopen_document(session, document.id, employee.id)
+    repository.recompute_claim_total(session, claim.id)
+    refreshed = repository.get_document(session, document.id)
+    return _document_detail(session, refreshed, claim)
 
 
 @app.post("/api/documents/{document_id}/revert")
@@ -695,6 +728,7 @@ def revert_document(
 ):
     document, claim = _get_owned_document(session, document_id, employee)
     _require_draft(claim)
+    _require_not_confirmed(document)
     ai_extraction = _find_ai_extraction(document)
     if ai_extraction is None:
         raise HTTPException(409, "No AI extraction to revert to.")
@@ -722,7 +756,7 @@ def revert_document(
     repository.update_document_status(session, document.id, status=final_status)
     repository.recompute_claim_total(session, claim.id)
     refreshed = repository.get_document(session, document.id)
-    return _document_detail(session, refreshed)
+    return _document_detail(session, refreshed, claim)
 
 
 @app.post("/api/documents/{document_id}/retry")
@@ -740,7 +774,7 @@ def retry_document(
         raise HTTPException(404, "The original file is no longer on disk.")
     repository.update_document_status(session, document.id, status="processing", error_message=None)
     _start_pipeline(document.id, full_path, employee.id)
-    return _document_summary(document)
+    return _document_summary(document, claim)
 
 
 @app.delete("/api/documents/{document_id}")

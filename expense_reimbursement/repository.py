@@ -232,6 +232,21 @@ def confirm_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UU
     return document
 
 
+def reopen_document(session: Session, document_id: uuid.UUID, actor_id: uuid.UUID) -> Document:
+    """"Edit again": unconditionally back to needs_review (not
+    recomputed from checks) so the employee's edit screen reappears."""
+    document = session.get(Document, document_id)
+    if document is None:
+        raise LookupError(f"document {document_id} not found")
+    document.status = "needs_review"
+    session.add(
+        AuditEvent(claim_id=document.claim_id, document_id=document.id, actor_id=actor_id, action="reopened")
+    )
+    session.commit()
+    session.refresh(document)
+    return document
+
+
 # -------------------------------------------------------------- extractions
 
 def latest_extraction(session: Session, document_id: uuid.UUID) -> Optional[Extraction]:

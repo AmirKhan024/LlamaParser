@@ -150,6 +150,7 @@ def test_full_ui_flow_every_button(live_server):
         page.wait_for_selector("#fields-container")
         assert_no_horizontal_overflow(page)
         assert_no_forbidden_text(page)
+        assert page.get_by_text("Back to claim").count() == 1, "only one Back to claim control, not one in the action bar too"
         shot(page, "04_doc_review_desktop.png")
 
         total_input = page.locator('#fields-container input[data-path="total"]')
@@ -218,7 +219,7 @@ def test_full_ui_flow_every_button(live_server):
         assert page.locator("#btn-confirm").count() == 0  # no Confirm button for a read-only doc
         assert page.locator(".read-only-note").count() == 1
         shot(page, "08_doc_review_readonly_desktop.png")
-        page.click("#btn-back")
+        page.click(".back-link")  # the action bar's own Back button was removed (duplicate)
         page.wait_for_url("**/#/claims/*")
 
         # ---- Note to approver ----
@@ -284,5 +285,72 @@ def test_mobile_screenshots(live_server):
         table_scroll = page.locator(".table-scroll").first
         overflow_x = table_scroll.evaluate("el => getComputedStyle(el).overflowX")
         assert overflow_x == "auto"
+
+        browser.close()
+
+
+def test_confirmed_document_hides_warnings_and_reopens(live_server):
+    """Bug: a confirmed document's warnings came back on reopening it,
+    because they were recomputed from the AI's confidence/checks on
+    every load and ignored document status. Once confirmed, the
+    employee view must show no AI warnings and the document is
+    read-only until "Edit again" is clicked."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+        page.click("#new-claim")
+        page.wait_for_url("**/#/claims/*")
+        claim_url = page.url
+        page.wait_for_selector("#dropzone")
+
+        page.set_input_files("#file-input", str(UPLOADS_DIR / "May-26 Local conveyance.pdf"))
+        page.wait_for_selector(".doc-row")
+        page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
+
+        page.click(".doc-row")
+        page.wait_for_selector("#fields-container")
+        # sanity check: the completeness warning is there before confirming
+        assert page.locator(".warning-line", has_text="5886").count() == 1
+
+        page.click("#btn-confirm")
+        page.wait_for_url("**/#/claims/*")
+        page.wait_for_selector(".chip-confirmed")
+
+        # navigate away, then open the document again
+        page.goto(claim_url)
+        page.wait_for_selector(".doc-row")
+        page.click(".doc-row")
+        page.wait_for_selector("#fields-container")
+
+        assert page.locator(".warning-line").count() == 0, "a confirmed document must show no AI warnings"
+        assert page.locator("#fields-container input").count() == 0, "a confirmed document's fields must not be inputs"
+        assert page.locator(".field-value", has_text="981").count() == 1, "values must still be shown, just read-only"
+        assert page.locator(".chip-confirmed").count() >= 1
+        assert page.locator("#btn-edit-again").count() == 1
+        assert page.locator("#btn-save").count() == 0
+        assert page.locator("#btn-remove").count() == 0
+
+        # reload: the same assertions must hold, not just in-memory state
+        page.reload()
+        page.wait_for_selector("#fields-container")
+        assert page.locator(".warning-line").count() == 0
+        assert page.locator("#fields-container input").count() == 0
+        assert page.locator("#btn-edit-again").count() == 1
+
+        # Edit again -> back to edit mode, status needs_review
+        page.click("#btn-edit-again")
+        page.wait_for_selector("#fields-container input")
+        assert page.locator("#fields-container input").count() > 0, "fields must be editable again"
+        assert page.locator(".warning-line", has_text="5886").count() == 1, "the warning must reappear once reopened"
+        assert page.locator(".chip-confirmed").count() == 0
+        assert page.locator("#btn-edit-again").count() == 0
+
+        # status is genuinely needs_review server-side, not just the UI's guess
+        doc_id = page.url.rsplit("/", 1)[-1]
+        api_status = httpx.get(f"{live_server}/api/documents/{doc_id}").json()["status"]
+        assert api_status == "needs_review"
 
         browser.close()

@@ -266,3 +266,79 @@ def test_retry_failed_document(client, db_session):
     detail = wait_until_processed(client, doc["id"])
     assert detail["status"] == "ready"
     assert detail["error_message"] is None
+
+
+def test_confirmed_document_hides_warnings_but_keeps_check_results(client, db_session):
+    """Bug 1: warnings were recomputed from the AI's confidence/checks on
+    every load and ignored document status, so a confirmed document's
+    warning came right back on the next view. Once confirmed, the
+    employee-facing `warnings` list must be empty, but the underlying
+    check_results rows must survive (finance / later stages need them)."""
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], CONVEYANCE_PDF, filename="conveyance.pdf").json()
+    detail = wait_until_processed(client, doc["id"])
+    assert detail["review"]["warnings"], "test assumes this cached result has a completeness warning"
+
+    r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+    assert r.status_code == 200
+    confirmed = r.json()
+    assert confirmed["status"] == "confirmed"
+    assert confirmed["review"]["warnings"] == []
+
+    # re-fetching (simulating "navigate away, reopen") must not resurrect it
+    refetched = client.get(f"/api/documents/{doc['id']}").json()
+    assert refetched["review"]["warnings"] == []
+
+    import uuid
+
+    extraction = repository.latest_extraction(db_session, uuid.UUID(doc["id"]))
+    assert len(extraction.check_results) > 0, "check_results must still be in the DB, only the employee view changes"
+
+
+def test_confirmed_document_is_locked_until_reopened(client):
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    wait_until_processed(client, doc["id"])
+    client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+
+    for method, path, body in [
+        ("PUT", f"/api/documents/{doc['id']}/fields", {"edits": {"total": "1.00"}}),
+        ("POST", f"/api/documents/{doc['id']}/validate", {"edits": {"total": "1.00"}}),
+        ("POST", f"/api/documents/{doc['id']}/revert", None),
+        ("POST", f"/api/documents/{doc['id']}/confirm", {"edits": {}}),
+    ]:
+        r = client.request(method, path, json=body)
+        assert r.status_code == 409, f"{method} {path} should be blocked on a confirmed document"
+
+    r = client.post(f"/api/documents/{doc['id']}/reopen")
+    assert r.status_code == 200
+    reopened = r.json()
+    assert reopened["status"] == "needs_review"
+
+    # now editing works again
+    r = client.put(f"/api/documents/{doc['id']}/fields", json={"edits": {"total": "1420.00"}})
+    assert r.status_code == 200
+
+
+def test_reopen_removes_amount_from_claim_total(client):
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    wait_until_processed(client, doc["id"])
+    client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+    confirmed_claim = client.get(f"/api/claims/{claim['id']}").json()
+    assert confirmed_claim["total_amount"] == "1417.18"
+
+    client.post(f"/api/documents/{doc['id']}/reopen")
+    reopened_claim = client.get(f"/api/claims/{claim['id']}").json()
+    assert reopened_claim["total_amount"] == "0.00"
+
+
+def test_reopen_on_submitted_claim_rejected(client):
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    wait_until_processed(client, doc["id"])
+    client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
+    client.post(f"/api/claims/{claim['id']}/submit")
+
+    r = client.post(f"/api/documents/{doc['id']}/reopen")
+    assert r.status_code == 409

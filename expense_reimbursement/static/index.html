@@ -254,6 +254,14 @@ async function uploadFile(claimId, file) {
 
 /* ------------------------------------------------------------- helpers */
 
+// Explicit allowlist, not a substring match on the field key -- "total_kms"
+// contains "total" too, and a distance is not an amount.
+const MONEY_FIELD_KEYS = new Set([
+  "amount", "total", "subtotal", "tax", "cgst", "sgst", "grand_total",
+  "total_conveyance_amount", "daily_allowance_amount", "vehicle_maintenance_amount",
+  "mobile_allowance_amount", "total_claimed",
+]);
+
 function fmtMoney(value, currency) {
   if (value === null || value === undefined || value === "") return "–";
   const num = Number(value);
@@ -692,12 +700,16 @@ function drawDocumentPage() {
   }
 
   const review = doc.review;
-  const readOnly = !review.needs_confirm;
+  const isSupportingDoc = !review.needs_confirm; // e.g. approval correspondence -- never needs Confirm
+  const isConfirmed = doc.status === "confirmed";
 
   body.innerHTML = `
     <a class="back-link" href="${claimHash}">&larr; Back to claim</a>
-    <h1 style="font-size:18px;">${escapeHtml(doc.original_name)}</h1>
-    ${readOnly ? `<div class="read-only-note">This is a supporting document. Nothing to confirm here.</div>` : ""}
+    <div style="display:flex;align-items:center;gap:10px;">
+      <h1 style="font-size:18px;margin:0;">${escapeHtml(doc.original_name)}</h1>
+      ${isConfirmed ? `<span class="chip chip-confirmed">Confirmed</span>` : ""}
+    </div>
+    ${isSupportingDoc && !isConfirmed ? `<div class="read-only-note">This is a supporting document. Nothing to confirm here.</div>` : ""}
     <div class="review-layout">
       <div class="doc-preview">${previewHtml(doc)}</div>
       <div>
@@ -740,6 +752,13 @@ function markDirty() {
   updateActionBarState();
 }
 
+/* Confirmed, or the whole claim already submitted: plain values
+   everywhere, no inputs, regardless of a field's own `editable` flag. */
+function isFieldsLocked() {
+  const doc = docPageState.doc;
+  return doc.status === "confirmed" || doc.claim_status === "submitted";
+}
+
 function renderFields(review) {
   const container = document.getElementById("fields-container");
   let html = "";
@@ -760,27 +779,34 @@ function renderFields(review) {
 function simpleFieldHtml(field) {
   const value = currentFieldValue(field);
   const { changed, aiValue } = fieldChangeInfo(field.key, field.value);
-  const displayAsMoney = /amount|total|subtotal|tax|cgst|sgst|grand_total/i.test(field.key) && typeof field.value !== "object";
-  if (!field.editable) {
-    const shown = field.key === "amount" || displayAsMoney ? fmtMoney(value, "INR") : escapeHtml(value ?? "–");
-    return `<div class="field-row"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div></div>`;
+  const displayAsMoney = MONEY_FIELD_KEYS.has(field.key) && typeof field.value !== "object";
+  const changedMarker = changed
+    ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(aiValue ?? "–")}</span></div>`
+    : "";
+  if (!field.editable || isFieldsLocked()) {
+    const shown = displayAsMoney ? fmtMoney(value, "INR") : escapeHtml(value ?? "–");
+    return `<div class="field-row"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
   }
   return `
     <div class="field-row">
       <label for="f-${field.key}">${escapeHtml(field.label)}</label>
       <input type="text" id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}"
              value="${escapeHtml(value ?? "")}" inputmode="${displayAsMoney ? "decimal" : "text"}">
-      ${changed ? `<div class="ai-was"><span class="pen">✎</span> AI read <span class="old-val">${escapeHtml(aiValue ?? "–")}</span></div>` : ""}
+      ${changedMarker}
     </div>`;
 }
 
 function tripsTableHtml(field) {
   const trips = currentFieldValue(field) || [];
   const { changed } = fieldChangeInfo(field.key, field.value);
+  const locked = isFieldsLocked();
   const cols = [["date", "Date"], ["place", "Place"], ["purpose", "Purpose"], ["client", "Client"], ["kms", "Km"]];
   const rows = trips.map((trip, i) => `
     <tr>
-      ${cols.map(([key, _label]) => `<td><input type="text" data-trip-index="${i}" data-trip-key="${key}" value="${escapeHtml(trip[key] ?? "")}"></td>`).join("")}
+      ${cols.map(([key, _label]) => locked
+        ? `<td>${escapeHtml(trip[key] ?? "")}</td>`
+        : `<td><input type="text" data-trip-index="${i}" data-trip-key="${key}" value="${escapeHtml(trip[key] ?? "")}"></td>`
+      ).join("")}
     </tr>`).join("");
   return `
     <div class="field-row">
@@ -798,10 +824,14 @@ function tripsTableHtml(field) {
 function collapsibleHtml(collapsible) {
   const items = currentFieldValue({ key: "line_items", value: collapsible.line_items }) || collapsible.line_items || [];
   const { changed: itemsChanged } = fieldChangeInfo("line_items", collapsible.line_items);
+  const locked = isFieldsLocked();
   const cols = [["name", "Item"], ["quantity", "Qty"], ["unit_price", "Unit price"], ["total", "Total"]];
   const rows = items.map((item, i) => `
     <tr>
-      ${cols.map(([key]) => `<td><input type="text" data-item-index="${i}" data-item-key="${key}" value="${escapeHtml(item[key] ?? "")}"></td>`).join("")}
+      ${cols.map(([key]) => locked
+        ? `<td>${escapeHtml(item[key] ?? "")}</td>`
+        : `<td><input type="text" data-item-index="${i}" data-item-key="${key}" value="${escapeHtml(item[key] ?? "")}"></td>`
+      ).join("")}
     </tr>`).join("");
   const extra = (collapsible.extra_fields || []).map((f) => simpleFieldHtml(f)).join("");
   return `
@@ -875,23 +905,31 @@ function renderDocActionBar() {
   if (bar) bar.remove();
   const { doc } = docPageState;
   const review = doc.review;
+  const isConfirmed = doc.status === "confirmed";
+  const isClaimSubmitted = doc.claim_status === "submitted";
+  const isLocked = isConfirmed || isClaimSubmitted;
+
+  const showEditControls = review.needs_confirm && !isLocked;
+  const showEditAgain = isConfirmed && !isClaimSubmitted;
+  const showRemove = !isConfirmed && !isClaimSubmitted;
+
+  if (!showEditControls && !showEditAgain && !showRemove) {
+    return; // nothing actionable left on this document (e.g. a supporting
+    // document once the whole claim is submitted) -- no action bar at all
+  }
+
   bar = document.createElement("div");
   bar.className = "action-bar";
   const dirtyLabel = docPageState.dirty ? "Unsaved changes" : "";
   bar.innerHTML = `
     <span class="status-msg" id="doc-status-msg">${dirtyLabel}</span>
-    <button id="btn-back">Back to claim</button>
-    ${review.needs_confirm ? `<button id="btn-undo">Undo my changes</button>` : ""}
-    ${review.needs_confirm ? `<button id="btn-save">Save changes</button>` : ""}
-    ${review.needs_confirm ? `<button class="primary" id="btn-confirm">${doc.status === "confirmed" ? "Confirmed" : "Confirm"}</button>` : ""}
-    <button class="danger" id="btn-remove">Remove document</button>
+    ${showEditControls ? `<button id="btn-undo">Undo my changes</button>` : ""}
+    ${showEditControls ? `<button id="btn-save">Save changes</button>` : ""}
+    ${showEditControls ? `<button class="primary" id="btn-confirm">Confirm</button>` : ""}
+    ${showEditAgain ? `<button class="primary" id="btn-edit-again">Edit again</button>` : ""}
+    ${showRemove ? `<button class="danger" id="btn-remove">Remove document</button>` : ""}
   `;
   document.body.appendChild(bar);
-
-  document.getElementById("btn-back").addEventListener("click", async () => {
-    if (docPageState.dirty && !(await confirmDialog("Discard unsaved changes?"))) return;
-    navigate(`#/claims/${doc.claim_id}`);
-  });
 
   const saveBtn = document.getElementById("btn-save");
   if (saveBtn) saveBtn.addEventListener("click", saveDocumentEdits);
@@ -900,10 +938,27 @@ function renderDocActionBar() {
   if (undoBtn) undoBtn.addEventListener("click", undoDocumentChanges);
 
   const confirmBtn = document.getElementById("btn-confirm");
-  if (confirmBtn && doc.status !== "confirmed") confirmBtn.addEventListener("click", confirmDocument);
+  if (confirmBtn) confirmBtn.addEventListener("click", confirmDocument);
 
-  wireRemoveButton(doc);
+  const editAgainBtn = document.getElementById("btn-edit-again");
+  if (editAgainBtn) editAgainBtn.addEventListener("click", reopenDocument);
+
+  if (showRemove) wireRemoveButton(doc);
   updateActionBarState();
+}
+
+async function reopenDocument() {
+  setButtonsBusy(true);
+  try {
+    const updated = await api("POST", `/api/documents/${docPageState.doc.id}/reopen`);
+    docPageState.doc = updated;
+    docPageState.edits = {};
+    docPageState.dirty = false;
+    drawDocumentPage();
+  } catch (err) {
+    setDocActionBarStatus(err.message, true);
+    setButtonsBusy(false);
+  }
 }
 
 function updateActionBarState() {
