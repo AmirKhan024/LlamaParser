@@ -303,9 +303,17 @@ def extract_claim_with_repair(markdown: str, raw_json: Dict[str, Any]) -> Repair
         return RepairOutcome(first, False, False, first, None)
 
     failed_checks_payload = [{"name": c.name, "detail": c.detail} for c in first_failing]
-    repair = repair_claim(markdown, raw_json, first.raw_fields, failed_checks_payload)
-    repair_claim_obj = build_claim(repair.document_type, repair.raw_fields, markdown)
-    repair_checks = validate_claim(repair_claim_obj, markdown)
+    try:
+        repair = repair_claim(markdown, raw_json, first.raw_fields, failed_checks_payload)
+        repair_claim_obj = build_claim(repair.document_type, repair.raw_fields, markdown)
+        repair_checks = validate_claim(repair_claim_obj, markdown)
+    except Exception:  # noqa: BLE001 -- the repair is an OPTIONAL second attempt at an
+        # already-valid first extraction; a Groq-side failure on it (seen in
+        # practice: "Failed to validate JSON" when the model's retry output
+        # doesn't parse) must fall back to the first result, not crash the
+        # whole extraction over a call that was only ever trying to improve
+        # on something that already worked.
+        return RepairOutcome(first, True, False, first, None)
 
     first_arith_passed = sum(1 for c in first_checks if is_arithmetic_check(c) and c.passed)
     repair_arith_passed = sum(1 for c in repair_checks if is_arithmetic_check(c) and c.passed)

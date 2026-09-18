@@ -149,3 +149,27 @@ def test_both_attempts_token_counts_are_available():
 
     assert outcome.first_result.total_tokens == 150
     assert outcome.repair_result.total_tokens == 150
+
+
+def test_repair_call_failing_outright_falls_back_to_the_first_result(monkeypatch):
+    """Real failure mode hit while gathering item 6's reliability
+    numbers: Groq's JSON-mode validation can reject the repair call
+    outright ("Failed to validate JSON") and raise, since the repair
+    prompt asks the model to reproduce a full JSON object a second time
+    under more constraints. That's a failure of the OPTIONAL second
+    attempt, not of the (already valid) first one -- it must not crash
+    the whole extraction."""
+    monkeypatch.setattr(extract, "SELF_REPAIR_ENABLED", True)
+    client = MagicMock()
+    client.chat.completions.create.side_effect = [
+        _fake_response(BROKEN_FIELDS),
+        RuntimeError("Failed to validate JSON. Please adjust your prompt."),
+    ]
+    with patch.object(extract, "_get_client", return_value=client):
+        outcome = extract.extract_claim_with_repair(CONVEYANCE_MARKDOWN, {"pages": []})
+
+    assert outcome.repair_attempted is True
+    assert outcome.repair_accepted is False
+    assert outcome.repair_result is None
+    assert outcome.result is outcome.first_result
+    assert outcome.result.raw_fields["total_kms"] == "5200"

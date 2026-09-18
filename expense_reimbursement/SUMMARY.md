@@ -341,6 +341,70 @@ dropped second daily-allowance figure -- a Stage 3 policy question,
 not an extraction miss, and exactly the kind of non-actionable warning
 this pass stops surfacing once the real (arithmetic) checks pass.
 
+**Review page layout.** The document review page opts into a wider
+page (up to 1600px, vs. the site-wide 900px) with the document at
+~55% (sticky, full viewport height minus the action bar) and the form
+at ~45%. The trips table now shows every column, including Km, with
+no horizontal scrollbar at >=1280px wide (`table-layout:fixed` with
+explicit column widths, instead of scrolling by design as before); its
+cells are plain text until clicked, focused, or activated with Enter,
+swapping to a real `<input>` only then -- not a permanently bordered
+input per cell. A failing trips check highlights the Km column header
+and the Total km field together. Verified with real screenshots at
+1440px and 390px, before (the pre-change layout, checked out briefly)
+and after: before, Km was cut off the trips table entirely at both
+widths and ~700px sat unused at 1440px; after, every column fits with
+no scroll at both widths.
+
+**Code issues found in review.**
+- Restart recovery now marks EVERY document still "processing" as
+  failed at startup, not just ones stuck past a 5-minute age
+  threshold -- a single-process server has no in-flight pipeline that
+  legitimately survives a restart. Switched to timezone-aware UTC
+  datetimes at the touched call sites.
+- Confirm now requires status in (ready, needs_review) -- previously
+  it only rejected an already-confirmed document, so a `processing` or
+  `failed` document (no real extraction behind it) could be silently
+  marked confirmed.
+- The pipeline's own terminal status writes go through a new atomic
+  `UPDATE ... WHERE status = 'processing'`, not a read-then-write, so
+  a slow LlamaParse/Groq call finishing after the employee already
+  confirmed or removed the document can never overwrite that outcome.
+- Save+confirm+recompute (and reopen+recompute, revert+save+recompute,
+  remove+recompute) are each now one transaction, one commit, instead
+  of 2-5 separate commits for one user action -- a failure partway
+  through now leaves no trace at all. Building this surfaced a real
+  bug: `session.refresh()` right after a not-yet-committed change
+  silently discarded it (nothing had been flushed to the DB for the
+  refresh's SELECT to see) -- fixed by flushing first.
+- "Remove document" is now a soft delete (`status='removed'`):
+  extractions, corrections, the audit trail and the uploaded file are
+  all kept; the document disappears from the claim's list/count/
+  totals and from the duplicate-sha check (backed by a partial unique
+  index at the DB level, not just an application check, so a removed
+  document's sha256 can't block a fresh re-upload either).
+
+**Reliability numbers: self-repair retry, "May-26 Local conveyance.pdf",
+5 real-pipeline runs each way (`PIPELINE_MODE=real`, no cache):**
+
+  | Repair | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Correct |
+  |---|---|---|---|---|---|---|
+  | Disabled | 981 / 5200 (yes) | 981 / 5200 (yes) | 5200 / 981 (no -- the swap) | 981 / 5200 (yes) | 981 / 5200 (yes) | 4/5 |
+  | Enabled | 981 / 5200 (yes) | 981 / 5200 (yes, repaired) | 981 / 5200 (yes) | 981 / 5200 (yes, repaired) | 981 / 5200 (yes) | 5/5 |
+
+  ("Correct" = both `total_kms == 981` and `total_conveyance_amount ==
+  5200`, the values the form itself prints.) With repair disabled, the
+  known total_kms/total_conveyance_amount swap reproduced once in 5
+  runs, exactly as expected from earlier observations. With repair
+  enabled, the first attempt still failed an arithmetic check twice
+  (runs 2 and 4) -- but the repair call caught and corrected both,
+  landing at 5/5 correct. Gathering this also surfaced and fixed a real
+  bug: on one repair attempt, Groq's JSON-mode validation rejected the
+  retry call outright ("Failed to validate JSON") and raised, which
+  would have crashed the entire extraction over a failure in the
+  OPTIONAL second attempt -- `extract_claim_with_repair` now catches
+  that and falls back to the (already valid) first result instead.
+
 ## Bug-fix pass: 8 bugs found by actually using the app
 
 After stage 1 shipped, using it for real (uploading a real dollar hotel
