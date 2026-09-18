@@ -589,7 +589,13 @@ def test_claim_total_never_sums_different_currencies(client, db_session):
         currency="USD",
         audit_action="edited",
     )
-    client.post(f"/api/documents/{usd_doc['id']}/confirm", json={"edits": {}})
+    # item 3 (quick-fix pass): directly injecting a generic_receipt
+    # extraction onto what was AI-extracted as a local_conveyance_form
+    # means "amount" is a money field with no corresponding AI value
+    # and no match in the (conveyance-form) markdown -- exactly the
+    # "not on the document" rule, so this now needs a reason too.
+    r = client.post(f"/api/documents/{usd_doc['id']}/confirm", json={"edits": {}, "reason": "manually entered from a paper receipt"})
+    assert r.status_code == 200, r.text
 
     claim_detail = client.get(f"/api/claims/{claim['id']}").json()
     assert claim_detail["total_amount"] is None, "a mixed-currency claim has no single total"

@@ -38,7 +38,7 @@ load_dotenv()
 import json
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -51,7 +51,14 @@ from models import Claim, Document, Employee, Extraction
 from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
-from validate import build_claim, check_completeness, suggest_fixes, validate_claim
+from validate import (
+    _amount_appears_in_markdown as amount_appears_in_markdown,
+    build_claim,
+    check_completeness,
+    parse_amount,
+    suggest_fixes,
+    validate_claim,
+)
 
 BASE_DIR = Path(__file__).resolve().parent
 STORAGE_DIR = BASE_DIR / "storage"
@@ -366,16 +373,67 @@ def _has_failing_arithmetic_check(checks: Any) -> bool:
     return False
 
 
-def _reason_required_for(ai_fields: dict, current_fields: dict, checks: Any) -> bool:
-    """A reason is required exactly when the current (latest) fields
-    differ from the AI's own fields on at least one money field AND at
-    least one arithmetic check still fails on the current fields. An
-    edit that FIXES a previously-failing check needs no reason -- that's
-    the employee correcting an AI misread, not contradicting the bill."""
-    money_edits = [d for d in diff_values(ai_fields, current_fields) if _is_money_field_path(d["field_path"])]
-    if not money_edits:
-        return False
-    return _has_failing_arithmetic_check(checks)
+# Item 3 (quick-fix pass): distance/quantity fields that, inflated
+# alongside money fields in a mutually-consistent way, would otherwise
+# sail through every arithmetic check while still claiming more than
+# the document supports (e.g. kms 78->578, total_kms 981->1481,
+# conveyance 5200->8200, total_claimed 8110->11110 -- every check still
+# balances, nothing here alone looks wrong).
+QUANTITY_FIELD_KEYS = {"total_kms", "kms", "quantity"}
+
+
+def _is_inflatable_field_path(field_path: str) -> bool:
+    tokens = _parse_field_path(field_path)
+    leaf = tokens[-1]
+    return isinstance(leaf, str) and (leaf in MONEY_FIELD_KEYS or leaf in QUANTITY_FIELD_KEYS)
+
+
+def _suggested_value_by_field(ai_fields: dict, markdown_text: str) -> dict[str, str]:
+    """The suggestions suggest_fixes would offer against the AI's own
+    fields -- an edit that exactly matches one of these is an applied
+    suggestion (or a manual edit that happens to match one) and is
+    exempt from the increase/not-on-document rules below, same as it's
+    exempt from needing a reason at all once it fixes a failing check."""
+    doc_type_value = ai_fields.get("document_type")
+    try:
+        claim = build_claim(DocumentType(doc_type_value), ai_fields, markdown_text or "")
+    except Exception:  # noqa: BLE001 -- this is a best-effort exemption check, never load-bearing
+        return {}
+    return {s["field"]: s["suggested_value"] for s in suggest_fixes(claim, markdown_text or "")}
+
+
+def _reason_required_for(ai_fields: dict, current_fields: dict, checks: Any, markdown_text: str = "") -> bool:
+    """A reason is required when:
+    - a money-field edit leaves an arithmetic check failing (the
+      original rule) -- an edit that instead FIXES a failing check
+      needs no reason, since that's a correction, not a contradiction; OR
+    - any money or km/quantity field INCREASES vs. the AI's own value
+      (the "consistent inflation" loophole: every check can still
+      balance while the claim itself grows); OR
+    - a money field's new value isn't printed anywhere on the document
+      at all (numeric compare, ignoring commas/currency symbols).
+    A value that matches what suggest_fixes would have offered against
+    the AI's own fields is exempt from the last two."""
+    diffs = diff_values(ai_fields, current_fields)
+    money_diffs = [d for d in diffs if _is_money_field_path(d["field_path"])]
+    if money_diffs and _has_failing_arithmetic_check(checks):
+        return True
+
+    suggested = _suggested_value_by_field(ai_fields, markdown_text)
+    for d in diffs:
+        field_path = d["field_path"]
+        if not _is_inflatable_field_path(field_path):
+            continue
+        employee_value = d.get("employee_value")
+        if employee_value is not None and _values_equal(suggested.get(field_path), employee_value):
+            continue
+        if _compute_direction(d.get("ai_value"), employee_value) == "increase":
+            return True
+        if _is_money_field_path(field_path) and employee_value is not None:
+            parsed, _warning = parse_amount(str(employee_value))
+            if parsed is not None and not amount_appears_in_markdown(parsed, markdown_text or ""):
+                return True
+    return False
 
 
 def _extraction_amount(document_type: str, clean_json: dict) -> Optional[Decimal]:
@@ -466,7 +524,7 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
     summary["review"]["reason_required"] = (
         document.status != "confirmed"
         and ai_extraction is not None
-        and _reason_required_for(ai_extraction.fields, extraction.fields, checks_as_dicts)
+        and _reason_required_for(ai_extraction.fields, extraction.fields, checks_as_dicts, document.raw_markdown or "")
     )
     summary["extraction_version"] = extraction.version
     # Only the latest extraction's corrections -- after a revert, the new
@@ -884,7 +942,8 @@ def validate_document(
     ai_extraction = _find_ai_extraction(document)
     corrections_preview = _corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, body.edits)
     evaluated["view"]["reason_required"] = (
-        _reason_required_for(ai_extraction.fields, new_fields, evaluated["checks"]) if ai_extraction else False
+        _reason_required_for(ai_extraction.fields, new_fields, evaluated["checks"], document.raw_markdown or "")
+        if ai_extraction else False
     )
 
     return {"review": evaluated["view"], "corrections_preview": corrections_preview}
@@ -1011,7 +1070,7 @@ def confirm_document(
     extraction = repository.latest_extraction(session, document.id)
     ai_extraction = _find_ai_extraction(document)
     if extraction is not None and ai_extraction is not None:
-        if _reason_required_for(ai_extraction.fields, extraction.fields, extraction.check_results):
+        if _reason_required_for(ai_extraction.fields, extraction.fields, extraction.check_results, document.raw_markdown or ""):
             reason = (body.reason or "").strip()
             if len(reason) < 5:
                 raise HTTPException(
@@ -1122,6 +1181,20 @@ def delete_document(
     repository.recompute_claim_total(session, claim.id, commit=False)
     session.commit()
     return {"deleted": True}
+
+
+# An inline SVG emoji, not a real icon file -- just enough that
+# /favicon.ico (which browsers request unprompted) doesn't 404 in the
+# server log on every page load.
+_FAVICON_SVG = (
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
+    "<text y='.9em' font-size='90'>\U0001f9fe</text></svg>"
+)
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return Response(content=_FAVICON_SVG, media_type="image/svg+xml")
 
 
 if STATIC_DIR.is_dir():

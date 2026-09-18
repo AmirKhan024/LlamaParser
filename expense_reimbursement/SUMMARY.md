@@ -550,6 +550,10 @@ before it.
   row 2 in place -- there's no "this row was swapped for a different
   one" signal, since nothing tracks row identity across a save.
 
+## Known risks
+
+- `llama-cloud-services` (the LlamaParse SDK `parse.py` imports) is deprecated, with maintenance ending 2026-05-01; migration to the `llama-cloud` package is deferred.
+
 ## Current cost and latency (Groq call only; LlamaParse not included)
 
 From the most recent real runs:

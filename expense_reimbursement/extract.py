@@ -116,6 +116,9 @@ flatten line items into additional_fields (e.g. as "item_1_name" / \
 "item_1_price" keys, or the item name used as a key) when a line_items \
 array field is available -- that scatters one logical list across many \
 unrelated keys and makes it unusable downstream.
+- Tax, service charge, service tax, tip, discount, and round-off/rounding \
+lines are NOT line items -- they are charges, not products. Put them in \
+the "tax" field (if the schema has one) or in additional_fields instead.
 - Copy every numeric value EXACTLY as printed in the source text -- \
 including commas, periods, and spacing (e.g. "1,201.00" stays the \
 string "1,201.00", do NOT strip commas or reformat it yourself). Python \

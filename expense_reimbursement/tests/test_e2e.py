@@ -18,6 +18,7 @@ from playwright.sync_api import sync_playwright
 BASE_DIR = Path(__file__).resolve().parent.parent
 SCREENSHOTS_DIR = BASE_DIR / "test_screenshots"
 UPLOADS_DIR = BASE_DIR / "uploads"
+TEST_DOCS_DIR = BASE_DIR / "test_documents"
 PORT = 8799
 BASE_URL = f"http://127.0.0.1:{PORT}"
 
@@ -722,6 +723,13 @@ def test_suggestion_apply_fixes_the_swap_and_unlocks_confirm(live_server):
 
         assert page.locator('#fields-container input[data-path="total_kms"]').input_value() == "5200"
 
+        # item 4: the Km header and Total km field are highlighted while
+        # the trips check is failing
+        assert "field-highlight" in (page.locator("#trips-table th.col-kms").get_attribute("class") or "")
+        assert "field-highlight" in (
+            page.locator('.field-row[data-field-key="total_kms"]').get_attribute("class") or ""
+        )
+
         page.click("#btn-apply-suggestions")
         page.wait_for_function(
             "() => document.querySelector('#fields-container input[data-path=\"total_kms\"]')?.value === '981'"
@@ -731,6 +739,13 @@ def test_suggestion_apply_fixes_the_swap_and_unlocks_confirm(live_server):
         # the suggestion box disappears once the checks it was about pass
         page.wait_for_function("() => document.querySelector('#suggestion-box') === null", timeout=5000)
         shot(page, "10_suggestion_box_after_apply.png")
+
+        # item 4: the highlight clears the moment the check passes, right
+        # after Apply -- no reload needed
+        assert "field-highlight" not in (page.locator("#trips-table th.col-kms").get_attribute("class") or "")
+        assert "field-highlight" not in (
+            page.locator('.field-row[data-field-key="total_kms"]').get_attribute("class") or ""
+        )
 
         # save, then confirm with no reason needed
         page.click("#btn-save")
@@ -854,5 +869,44 @@ def test_trips_table_cell_click_to_edit_and_keyboard_reachable(live_server):
         page.wait_for_selector('#trips-table td[data-trip-key="kms"] input')
         page.keyboard.press("Escape")
         page.wait_for_function("() => document.querySelector('#trips-table input') === null")
+
+        browser.close()
+
+
+def test_image_preview_scrolls_to_show_the_full_receipt(live_server):
+    """Quick-fix item 1: Hotel-Receipt.png used to be cropped -- the
+    preview box had a fixed height with overflow hidden. It must now
+    scroll vertically inside the sticky panel, and reach the bottom."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/")
+        page.wait_for_selector("text=My claims")
+        page.click("#new-claim")
+        page.wait_for_url("**/#/claims/*")
+        page.wait_for_selector("#dropzone")
+
+        page.set_input_files("#file-input", str(TEST_DOCS_DIR / "Hotel-Receipt.png"))
+        page.wait_for_selector(".doc-row")
+        page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
+        page.click(".doc-row")
+        page.wait_for_selector("#preview-scroll img")
+        # wait for the image itself to load so its natural size (and
+        # therefore scrollHeight) is known
+        page.wait_for_function(
+            "() => document.querySelector('#preview-scroll img')?.complete === true"
+        )
+
+        scroll_height = page.eval_on_selector("#preview-scroll", "el => el.scrollHeight")
+        client_height = page.eval_on_selector("#preview-scroll", "el => el.clientHeight")
+        assert scroll_height > client_height, "the preview must be tall enough to need scrolling"
+
+        page.eval_on_selector("#preview-scroll", "el => { el.scrollTop = el.scrollHeight; }")
+        scroll_top = page.eval_on_selector("#preview-scroll", "el => el.scrollTop")
+        assert scroll_top > 0, "the preview must actually be scrollable to the bottom"
+
+        # "Fit to screen" shrinks it back into view with no scroll needed
+        page.click("#btn-preview-fit")
+        page.wait_for_selector(".preview-scroll.fit-mode")
 
         browser.close()

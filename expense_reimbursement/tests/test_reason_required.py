@@ -21,7 +21,7 @@ import server
 HOTEL_MARKDOWN = "Grand Plaza Hotel\nInvoice\nSubtotal {subtotal}\nTax {tax}\nTotal {amount}"
 
 
-def _create_generic_document(client, db_session, claim_id, *, amount, subtotal, tax):
+def _create_generic_document(client, db_session, claim_id, *, amount, subtotal, tax, markdown_amount=None):
     employee = repository.get_or_create_seed_employee(db_session)
     document = repository.create_document(
         db_session,
@@ -32,7 +32,7 @@ def _create_generic_document(client, db_session, claim_id, *, amount, subtotal, 
         file_sha256=uuid.uuid4().hex,
         mime_type="image/png",
     )
-    markdown = HOTEL_MARKDOWN.format(subtotal=subtotal, tax=tax, amount=amount)
+    markdown = HOTEL_MARKDOWN.format(subtotal=subtotal, tax=tax, amount=markdown_amount or amount)
     fields = {
         "document_type": "generic_receipt",
         "vendor_name": "Grand Plaza Hotel",
@@ -59,9 +59,11 @@ def _create_generic_document(client, db_session, claim_id, *, amount, subtotal, 
     return document
 
 
-def _new_claim_and_doc(client, db_session, *, amount, subtotal, tax):
+def _new_claim_and_doc(client, db_session, *, amount, subtotal, tax, markdown_amount=None):
     claim = client.post("/api/claims", json={}).json()
-    document = _create_generic_document(client, db_session, claim["id"], amount=amount, subtotal=subtotal, tax=tax)
+    document = _create_generic_document(
+        client, db_session, claim["id"], amount=amount, subtotal=subtotal, tax=tax, markdown_amount=markdown_amount
+    )
     return claim, document
 
 
@@ -106,12 +108,16 @@ def test_upward_money_edit_that_breaks_check_also_requires_reason(client, db_ses
 
 
 def test_edit_that_fixes_a_failing_check_needs_no_reason(client, db_session):
-    """The AI misread the total: 694.00 + 90.00 = 784.00, but it stored
-    780.75 -- the check already fails on the AI version. The employee
-    correcting amount to 784.00 fixes the check, so no reason is needed."""
-    claim, document = _new_claim_and_doc(client, db_session, amount="780.75", subtotal="694.00", tax="90.00")
+    """The AI over-read the total as 800.00, but 694.00 + 86.75 = 780.75
+    -- the printed total -- and the check already fails on the AI
+    version. The employee correcting amount DOWN to 780.75 (the value
+    the document itself prints) fixes the check, so no reason is
+    needed: a decrease, and the new value is on the document."""
+    claim, document = _new_claim_and_doc(
+        client, db_session, amount="800.00", subtotal="694.00", tax="86.75", markdown_amount="780.75"
+    )
 
-    r = client.post(f"/api/documents/{document.id}/confirm", json={"edits": {"amount": "784.00"}})
+    r = client.post(f"/api/documents/{document.id}/confirm", json={"edits": {"amount": "780.75"}})
     assert r.status_code == 200, r.text
     assert r.json()["status"] == "confirmed"
 

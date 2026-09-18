@@ -231,7 +231,7 @@ def _build_generic_receipt(claim: Dict[str, Any], checks: Dict[str, bool], sugge
     # breakdown at all has neither check in `checks`) -- checks.get's
     # True default only matters for a check that DID run and passed.
     subtotal_tax_ok = checks.get("subtotal + tax == amount", True)
-    items_sum_ok = checks.get("sum(line items) == subtotal", True) and checks.get("sum(line items) == amount", True)
+    items_sum_ok = checks.get("sum(line items) == subtotal or amount", True)
 
     line_items = claim.get("line_items") or []
     collapsible = {

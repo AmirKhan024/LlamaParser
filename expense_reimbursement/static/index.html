@@ -167,7 +167,24 @@
     overflow:hidden;min-height:320px;display:flex;flex-direction:column;
     position:sticky;top:16px;height:calc(100vh - 32px - var(--action-bar-height));
   }
-  .doc-preview iframe, .doc-preview img{width:100%;flex:1;border:0;display:block;object-fit:contain;background:#525659;}
+  .doc-preview iframe{width:100%;flex:1;border:0;display:block;background:#525659;}
+  /* Item 1 (quick-fix pass): an image preview used to be capped to the
+     panel's fixed height with overflow:hidden, silently cropping the
+     bottom of a tall receipt. Now it scrolls (overflow:auto) inside the
+     sticky panel, full panel width by default ("actual size" relative
+     to the panel), with a toggle to shrink the whole image into view
+     instead. PDFs are unaffected -- the iframe above keeps the
+     browser's own viewer. */
+  .preview-toolbar{
+    display:flex;gap:6px;padding:6px 8px;border-bottom:1px solid var(--border);
+    flex:0 0 auto;background:var(--card);
+  }
+  .preview-toolbar button{padding:5px 10px;font-size:12px;}
+  .preview-toolbar button.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+  .preview-scroll{flex:1;overflow:auto;background:#525659;}
+  .preview-scroll img{display:block;width:100%;height:auto;}
+  .preview-scroll.fit-mode{display:flex;align-items:center;justify-content:center;}
+  .preview-scroll.fit-mode img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;}
   .field-row{margin-bottom:14px;}
   .field-row label{display:block;font-size:13px;color:var(--ink-muted);margin-bottom:4px;font-weight:600;}
   .field-value{font-size:15px;padding:8px 10px;}
@@ -899,6 +916,7 @@ function drawDocumentPage() {
   renderFields(review);
   renderWarningsAndReasonBox();
   renderDocActionBar();
+  wirePreviewToolbar();
 }
 
 /* Money-edit reason box: shown under the warnings whenever the server
@@ -968,7 +986,35 @@ function previewHtml(doc) {
   if (doc.mime_type === "application/pdf") {
     return `<iframe src="${url}" title="Document preview"></iframe>`;
   }
-  return `<img src="${url}" alt="Document preview">`;
+  return `
+    <div class="preview-toolbar">
+      <button type="button" id="btn-preview-actual" class="active">Actual size</button>
+      <button type="button" id="btn-preview-fit">Fit to screen</button>
+    </div>
+    <div class="preview-scroll" id="preview-scroll">
+      <img src="${url}" alt="Document preview">
+    </div>`;
+}
+
+/* Item 1: default is "actual size" (full panel width, scrolls
+   vertically to see the whole image, per the bug repro); "Fit to
+   screen" shrinks the whole image into view instead. No-op for a PDF
+   (no toolbar exists then). */
+function wirePreviewToolbar() {
+  const scroll = document.getElementById("preview-scroll");
+  const actualBtn = document.getElementById("btn-preview-actual");
+  const fitBtn = document.getElementById("btn-preview-fit");
+  if (!scroll || !actualBtn || !fitBtn) return;
+  actualBtn.addEventListener("click", () => {
+    scroll.classList.remove("fit-mode");
+    actualBtn.classList.add("active");
+    fitBtn.classList.remove("active");
+  });
+  fitBtn.addEventListener("click", () => {
+    scroll.classList.add("fit-mode");
+    fitBtn.classList.add("active");
+    actualBtn.classList.remove("active");
+  });
 }
 
 function currentFieldValue(field) {
@@ -1030,14 +1076,14 @@ function simpleFieldHtml(field) {
   const rowClass = `field-row${highlight ? " field-highlight" : ""}`;
   if (!field.editable || isFieldsLocked()) {
     const shown = displayAsMoney ? fmtMoney(value, docCurrency) : escapeHtml(value ?? "–");
-    return `<div class="${rowClass}"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
+    return `<div class="${rowClass}" data-field-key="${field.key}"><label>${escapeHtml(field.label)}</label><div class="field-value">${shown}</div>${changedMarker}</div>`;
   }
   if (field.type === "select") {
     const options = (field.options || [])
       .map((opt) => `<option value="${escapeHtml(opt)}" ${opt === value ? "selected" : ""}>${escapeHtml(opt)}</option>`)
       .join("");
     return `
-      <div class="${rowClass}">
+      <div class="${rowClass}" data-field-key="${field.key}">
         <label for="f-${field.key}">${escapeHtml(field.label)}</label>
         <select id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}">
           <option value="" ${!value ? "selected" : ""}>Choose…</option>
@@ -1047,12 +1093,25 @@ function simpleFieldHtml(field) {
       </div>`;
   }
   return `
-    <div class="${rowClass}">
+    <div class="${rowClass}" data-field-key="${field.key}">
       <label for="f-${field.key}">${escapeHtml(field.label)}</label>
       <input type="text" id="f-${field.key}" data-path="${field.key}" class="${changed ? "field-changed" : ""}"
              value="${escapeHtml(value ?? "")}" inputmode="${displayAsMoney ? "decimal" : "text"}">
       ${changedMarker}
     </div>`;
+}
+
+/* Item 4: the Km column header + Total km field's yellow highlight
+   must clear the moment the trips check passes (e.g. right after
+   Apply) -- toggles the existing DOM nodes' class directly instead of
+   a full renderFields() re-render, which would drop focus/cursor
+   mid-typing (this runs from the live-validate path too). */
+function updateTripsHighlight() {
+  const failed = !!(docPageState.doc.review && docPageState.doc.review.trips_check_failed);
+  const kmHeader = document.querySelector("#trips-table th.col-kms");
+  if (kmHeader) kmHeader.classList.toggle("field-highlight", failed);
+  const totalKmRow = document.querySelector('.field-row[data-field-key="total_kms"]');
+  if (totalKmRow) totalKmRow.classList.toggle("field-highlight", failed);
 }
 
 const TRIP_COLS = [
@@ -1244,6 +1303,7 @@ async function runValidate() {
       trips_check_failed: result.review.trips_check_failed,
     };
     renderWarningsAndReasonBox();
+    updateTripsHighlight();
   } catch (err) {
     setDocActionBarStatus(err.message, true);
   }

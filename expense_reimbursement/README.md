@@ -62,7 +62,10 @@ pytest tests/test_e2e.py -v
 
 Both need Postgres running (`docker compose up -d`) and use
 `PIPELINE_MODE=fake` regardless of what's in `.env`, so no API keys are
-required to run them.
+required to run them. `tests/conftest.py` runs `alembic upgrade head`
+against `TEST_DATABASE_URL` itself, once per test session, so a fresh
+`expense_test` database (e.g. right after `docker compose up -d` on a
+new machine) doesn't need a manual migration step first.
 
 ## CLI tools (unchanged, JSON-file based, no database)
 

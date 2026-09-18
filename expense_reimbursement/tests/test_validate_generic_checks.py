@@ -82,8 +82,10 @@ def test_line_items_sum_checked_against_subtotal_when_present():
     ]
     claim = build_claim(DocumentType.HOTEL_INVOICE, raw_fields, HOTEL_MARKDOWN)
     checks = {c.name: c for c in validate_claim(claim)}
-    assert "sum(line items) == subtotal" in checks
-    assert checks["sum(line items) == subtotal"].passed is True
+    assert "sum(line items) == subtotal or amount" in checks
+    check = checks["sum(line items) == subtotal or amount"]
+    assert check.passed is True
+    assert "matches subtotal" in check.detail
 
 
 def test_line_items_sum_checked_against_amount_when_no_subtotal_found():
@@ -95,8 +97,10 @@ def test_line_items_sum_checked_against_amount_when_no_subtotal_found():
     }
     claim = build_claim(DocumentType.GENERIC_RECEIPT, raw_fields, "Corner Store receipt")
     checks = {c.name: c for c in validate_claim(claim)}
-    assert "sum(line items) == amount" in checks
-    assert checks["sum(line items) == amount"].passed is True
+    assert "sum(line items) == subtotal or amount" in checks
+    check = checks["sum(line items) == subtotal or amount"]
+    assert check.passed is True
+    assert "matches amount" in check.detail
 
 
 def test_schema_subtotal_and_tax_fields_are_read_before_additional_fields():
@@ -146,3 +150,38 @@ def test_review_view_shows_plain_english_warning_and_expands_items_on_failure():
     # GSTIN/raw check names/formulas never reach the employee view
     for warning in view["warnings"]:
         assert "subtotal + tax == amount" not in warning
+
+
+def test_tax_line_item_moved_out_and_no_false_warning():
+    """Quick-fix item 2: the model extracted "TAX (12.5%)" as a line
+    item. Left in line_items, the 4 real items + the tax row sum to
+    amount (780.75), but the items-sum check only ever compared against
+    subtotal (694.00) when one existed, so it failed even though the
+    warning claimed "subtotal or total" was checked. The tax row must be
+    moved out of line_items into `tax`, leaving exactly 4 real items and
+    no warning at all."""
+    raw_fields = {
+        "document_type": "hotel_invoice",
+        "vendor_name": "GRAND PLAZA HOTEL",
+        "amount": "780.75",
+        "line_items": [
+            {"name": "Room charge", "total": "567.00"},
+            {"name": "Room service", "total": "45.00"},
+            {"name": "Parking", "total": "50.00"},
+            {"name": "Mini bar", "total": "32.00"},
+            {"name": "TAX (12.5%)", "total": "86.75"},
+        ],
+        "additional_fields": {"subtotal": "$694.00"},
+    }
+    claim = build_claim(DocumentType.HOTEL_INVOICE, raw_fields, HOTEL_MARKDOWN)
+
+    assert len(claim.line_items) == 4
+    assert claim.tax == Decimal("86.75")
+    assert any("TAX (12.5%)" in n and "tax" in n for n in claim.extraction_notes)
+
+    checks_as_dicts = [{"name": c.name, "passed": c.passed, "detail": c.detail} for c in validate_claim(claim, HOTEL_MARKDOWN)]
+    assert all(c["passed"] or c["name"].startswith("gstin_format") for c in checks_as_dicts)
+
+    clean_json = claim.model_dump(mode="json")
+    view = build_review_view({**clean_json, "validation": checks_as_dicts, "completeness_warnings": []})
+    assert view["warnings"] == []

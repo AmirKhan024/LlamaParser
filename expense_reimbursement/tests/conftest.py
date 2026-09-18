@@ -4,6 +4,7 @@ so the whole suite runs with no API keys or real extraction calls.
 Every test gets a clean database via the autouse truncate fixture."""
 
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -27,6 +28,17 @@ UPLOADS_DIR = BASE_DIR / "uploads"
 MOBILE_PDF = UPLOADS_DIR / "may26_mobile.pdf"
 CONVEYANCE_PDF = UPLOADS_DIR / "May-26 Local conveyance.pdf"
 APPROVAL_PDF = UPLOADS_DIR / "May-26 mail approval.pdf"
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _migrate_test_db():
+    """Runs `alembic upgrade head` against expense_test once per test
+    session, before any test (session-scoped autouse fixtures run
+    before function-scoped ones) -- so the suite works against a
+    freshly created database (docker-compose up, no manual migration
+    step) instead of requiring it as an undocumented setup step."""
+    subprocess.run(["alembic", "upgrade", "head"], check=True, cwd=str(BASE_DIR), env=os.environ.copy())
+    yield
 
 
 @pytest.fixture(autouse=True)

@@ -263,6 +263,56 @@ def _preprocess_line_items(raw_items: Any, notes: list) -> Any:
     return processed_items
 
 
+# A model sometimes extracts a charge row (tax, a service fee, a tip, a
+# discount, a round-off adjustment) as if it were a line item -- e.g.
+# "TAX (12.5%)" as an $86.75 "product". That then gets summed into the
+# items-sum check's total and makes it fail against subtotal even
+# though it matches amount/total (which includes the charge). Matched
+# on the item's name, case-insensitively, anchored to the start so a
+# product that merely mentions "tax" mid-name isn't caught.
+_CHARGE_LINE_ITEM_PATTERN = re.compile(
+    r"^(tax|gst|cgst|sgst|igst|vat|service\s*charge|service\s*tax|tip|discount|round[\s-]?off|rounding)\b",
+    re.IGNORECASE,
+)
+
+
+def _looks_like_charge_line_item(name: Optional[str]) -> bool:
+    return bool(name) and bool(_CHARGE_LINE_ITEM_PATTERN.search(name.strip()))
+
+
+def _reclassify_charge_line_items(processed: Dict[str, Any], schema_cls: type[BaseClaim], notes: list) -> None:
+    """Moves any line item that looks like a charge, not a product, out
+    of line_items -- into `tax` if that field exists on this schema and
+    is still empty, otherwise into additional_fields. Mutates
+    `processed` in place; appends one extraction_note per move."""
+    items = processed.get("line_items")
+    if not isinstance(items, list):
+        return
+    kept = []
+    moved = False
+    for item in items:
+        if not isinstance(item, dict) or not _looks_like_charge_line_item(item.get("name")):
+            kept.append(item)
+            continue
+        moved = True
+        amount = item.get("total") if item.get("total") is not None else item.get("unit_price")
+        name = str(item.get("name") or "charge")
+        if amount is None:
+            continue
+        if "tax" in schema_cls.model_fields and processed.get("tax") is None:
+            processed["tax"] = amount
+            notes.append(f"moved line item '{name}' ({amount}) out of line_items into tax -- it's a charge, not a product")
+        else:
+            additional = processed.get("additional_fields")
+            if not isinstance(additional, dict):
+                additional = {}
+            additional[name] = str(amount)
+            processed["additional_fields"] = additional
+            notes.append(f"moved line item '{name}' ({amount}) out of line_items into additional_fields -- it's a charge, not a product")
+    if moved:
+        processed["line_items"] = kept
+
+
 def _coerce_additional_fields(value: Any) -> Dict[str, str]:
     """additional_fields is typed dict[str, str], but the model
     occasionally puts a non-string value there (e.g. a nested
@@ -333,6 +383,7 @@ def build_claim(document_type: DocumentType, raw_fields: Dict[str, Any], markdow
 
     if "line_items" in processed:
         processed["line_items"] = _preprocess_line_items(processed["line_items"], notes)
+        _reclassify_charge_line_items(processed, schema_cls, notes)
 
     processed["extraction_notes"] = notes
     processed["currency"] = resolve_currency(processed.get("currency"), markdown_text)
@@ -599,15 +650,24 @@ def _validate_generic_claim(claim: GenericClaim, markdown_text: str = "") -> lis
     item_totals = [item.total for item in claim.line_items if item.total is not None]
     if item_totals:
         items_sum = sum(item_totals, Decimal("0"))
-        compare_to = subtotal if subtotal is not None else claim.amount
-        compare_label = "subtotal" if subtotal is not None else "amount"
-        if compare_to is not None:
-            passed = _isclose(items_sum, compare_to, tolerance)
-            results.append(CheckResult(
-                f"sum(line items) == {compare_label}", passed,
-                f"sum of {len(item_totals)} item totals = {items_sum}, {compare_label} = {compare_to} "
-                f"(diff {abs(items_sum - compare_to)}, tolerance {tolerance}{_tolerance_note(tolerance)})",
-            ))
+        # Passes if it matches EITHER subtotal or amount -- a receipt
+        # whose line items include a tax/charge row (or don't) can
+        # legitimately sum to either one; only failing both is a real
+        # mismatch. Says which one matched (or that neither did) in the
+        # detail rather than always comparing against just one.
+        candidates = [("subtotal", subtotal), ("amount", target)]
+        candidates = [(label, value) for label, value in candidates if value is not None]
+        if candidates:
+            matched = next((label for label, value in candidates if _isclose(items_sum, value, tolerance)), None)
+            targets_text = ", ".join(f"{label} = {value}" for label, value in candidates)
+            if matched:
+                detail = f"sum of {len(item_totals)} item totals = {items_sum} matches {matched} ({targets_text})"
+            else:
+                detail = (
+                    f"sum of {len(item_totals)} item totals = {items_sum}, {targets_text} "
+                    f"(tolerance {tolerance}{_tolerance_note(tolerance)}, matches neither)"
+                )
+            results.append(CheckResult("sum(line items) == subtotal or amount", matched is not None, detail))
 
     return results
 
