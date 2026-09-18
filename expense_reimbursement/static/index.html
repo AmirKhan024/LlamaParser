@@ -863,6 +863,17 @@ function renderWarningsAndReasonBox() {
   if (!container) return;
   const review = docPageState.doc.review;
   const warningsHtml = (review.warnings || []).map((w) => `<div class="warning-line">${escapeHtml(w)}</div>`).join("");
+
+  let suggestionHtml = "";
+  const suggestions = review.suggestions || [];
+  if (suggestions.length > 0 && review.suggestion_sentence) {
+    suggestionHtml = `
+      <div id="suggestion-box" class="warning-line">
+        <div>${escapeHtml(review.suggestion_sentence)}</div>
+        <button type="button" id="btn-apply-suggestions" style="margin-top:6px;">Apply</button>
+      </div>`;
+  }
+
   let reasonHtml = "";
   if (review.reason_required) {
     reasonHtml = `
@@ -873,7 +884,7 @@ function renderWarningsAndReasonBox() {
   } else {
     docPageState.reason = "";
   }
-  container.innerHTML = warningsHtml + reasonHtml;
+  container.innerHTML = warningsHtml + suggestionHtml + reasonHtml;
   const reasonInput = document.getElementById("reason-input");
   if (reasonInput) {
     reasonInput.addEventListener("input", (e) => {
@@ -881,7 +892,26 @@ function renderWarningsAndReasonBox() {
       updateActionBarState();
     });
   }
+  const applyBtn = document.getElementById("btn-apply-suggestions");
+  if (applyBtn) applyBtn.addEventListener("click", applySuggestions);
   updateActionBarState();
+}
+
+/* Fills every current suggestion's field as a normal employee edit
+   (docPageState.edits), the same as typing it in by hand -- still
+   shown "changed" vs the AI value, still saved/confirmed the normal
+   way. Suggestions never apply themselves; this only runs on the
+   click. Re-validates immediately (not the debounced version) so the
+   box disappears as soon as the checks pass. */
+async function applySuggestions() {
+  const suggestions = (docPageState.doc.review.suggestions || []).slice();
+  if (suggestions.length === 0) return;
+  for (const s of suggestions) {
+    docPageState.edits[s.field] = s.suggested_value;
+  }
+  markDirty();
+  renderFields(docPageState.doc.review);
+  await runValidate();
 }
 
 function previewHtml(doc) {
@@ -1099,6 +1129,8 @@ async function runValidate() {
       warnings: result.review.warnings,
       needs_review: result.review.needs_review,
       reason_required: result.review.reason_required,
+      suggestions: result.review.suggestions,
+      suggestion_sentence: result.review.suggestion_sentence,
     };
     renderWarningsAndReasonBox();
   } catch (err) {

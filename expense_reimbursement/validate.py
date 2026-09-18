@@ -612,6 +612,174 @@ def _validate_generic_claim(claim: GenericClaim, markdown_text: str = "") -> lis
     return results
 
 
+# --------------------------------------------------------- suggest_fixes
+
+def _candidate_amount_strings(value: Decimal) -> set[str]:
+    """Every plausible way this number could be printed on the document
+    -- plain, comma-grouped, with/without a trailing ".00" -- so the
+    markdown-contains-it check below isn't defeated by pure formatting
+    differences."""
+    candidates = set()
+    if value == value.to_integral_value():
+        as_int = int(value)
+        candidates.add(str(as_int))
+        candidates.add(f"{as_int:,}")
+        candidates.add(f"{as_int}.00")
+        candidates.add(f"{as_int:,}.00")
+    else:
+        candidates.add(str(value))
+        candidates.add(f"{value:,.2f}")
+    return candidates
+
+
+def _amount_appears_in_markdown(value: Optional[Decimal], markdown_text: str) -> bool:
+    """A suggestion is only ever offered when the exact number it wants
+    to fill in is itself printed somewhere on the document -- never a
+    number that's merely arithmetically consistent but invented. Word-
+    boundary guarded (no digit immediately before/after) so "981" inside
+    "29810" doesn't count as a match."""
+    if value is None or not markdown_text:
+        return False
+    for candidate in _candidate_amount_strings(value):
+        if re.search(rf"(?<!\d){re.escape(candidate)}(?!\d)", markdown_text):
+            return True
+    return False
+
+
+def _suggest_local_conveyance_form_fixes(claim: LocalConveyanceForm, markdown_text: str) -> list[dict]:
+    suggestions: list[dict] = []
+    tolerance = _tolerance_for(markdown_text, claim)
+
+    kms_values = []
+    for entry in claim.travel_entries:
+        value, _warning = parse_amount(str(entry.get("kms"))) if entry.get("kms") is not None else (None, None)
+        if value is not None:
+            kms_values.append(value)
+    if kms_values:
+        computed_kms = sum(kms_values, Decimal("0"))
+        already_matches = claim.total_kms is not None and _isclose(computed_kms, claim.total_kms, tolerance)
+        if not already_matches and _amount_appears_in_markdown(computed_kms, markdown_text):
+            suggestions.append({
+                "field": "total_kms",
+                "current_value": str(claim.total_kms) if claim.total_kms is not None else None,
+                "suggested_value": str(computed_kms),
+                "reason": f"The trip rows add up to {computed_kms} km, which also appears on the document.",
+            })
+
+    if claim.total_claimed is not None:
+        other_amounts = sum(
+            (v for v in (claim.daily_allowance_amount, claim.vehicle_maintenance_amount, claim.mobile_allowance_amount) if v is not None),
+            Decimal("0"),
+        )
+        computed_conveyance = claim.total_claimed - other_amounts
+        already_matches = (
+            claim.total_conveyance_amount is not None
+            and _isclose(computed_conveyance, claim.total_conveyance_amount, tolerance)
+        )
+        if (
+            computed_conveyance >= 0
+            and not already_matches
+            and _amount_appears_in_markdown(computed_conveyance, markdown_text)
+        ):
+            suggestions.append({
+                "field": "total_conveyance_amount",
+                "current_value": str(claim.total_conveyance_amount) if claim.total_conveyance_amount is not None else None,
+                "suggested_value": str(computed_conveyance),
+                "reason": (
+                    f"Total claimed ({claim.total_claimed}) minus the other allowances leaves "
+                    f"{computed_conveyance}, which also appears on the document."
+                ),
+            })
+    return suggestions
+
+
+def _suggest_subtotal_tax_total(
+    subtotal: Optional[Decimal],
+    tax: Optional[Decimal],
+    total: Optional[Decimal],
+    total_field: str,
+    markdown_text: str,
+    tolerance: Decimal,
+) -> list[dict]:
+    """total := subtotal + tax, OR (if that number isn't on the
+    document but total - subtotal is) tax := total - subtotal -- never
+    both at once, since only one field was actually misread."""
+    if subtotal is None or tax is None or total is None:
+        return []
+    if _isclose(subtotal + tax, total, tolerance):
+        return []
+
+    computed_total = subtotal + tax
+    if _amount_appears_in_markdown(computed_total, markdown_text):
+        return [{
+            "field": total_field,
+            "current_value": str(total),
+            "suggested_value": str(computed_total),
+            "reason": f"Subtotal ({subtotal}) plus tax ({tax}) is {computed_total}, which also appears on the document.",
+        }]
+
+    computed_tax = total - subtotal
+    if _amount_appears_in_markdown(computed_tax, markdown_text):
+        return [{
+            "field": "tax",
+            "current_value": str(tax),
+            "suggested_value": str(computed_tax),
+            "reason": f"Total ({total}) minus subtotal ({subtotal}) is {computed_tax}, which also appears on the document.",
+        }]
+    return []
+
+
+def _suggest_telecom_bill_fixes(claim: TelecomBill, markdown_text: str) -> list[dict]:
+    tolerance = _tolerance_for(markdown_text, claim)
+    return _suggest_subtotal_tax_total(claim.subtotal, claim.tax, claim.total, "total", markdown_text, tolerance)
+
+
+def _suggest_generic_claim_fixes(claim: GenericClaim, markdown_text: str) -> list[dict]:
+    tolerance = _tolerance_for(markdown_text, claim)
+    subtotal = claim.subtotal if claim.subtotal is not None else _find_amount_in_additional_fields(claim, _SUBTOTAL_FIELD_HINT)
+    tax = claim.tax if claim.tax is not None else _find_amount_in_additional_fields(claim, _TAX_FIELD_HINT)
+    return _suggest_subtotal_tax_total(subtotal, tax, claim.amount, "amount", markdown_text, tolerance)
+
+
+def _suggest_restaurant_bill_fixes(claim: RestaurantBill, markdown_text: str) -> list[dict]:
+    if claim.subtotal is None or claim.cgst is None or claim.sgst is None or claim.grand_total is None:
+        return []
+    tolerance = _tolerance_for(markdown_text, claim)
+    computed = claim.subtotal + claim.cgst + claim.sgst
+    if _isclose(computed, claim.grand_total, tolerance):
+        return []
+    if not _amount_appears_in_markdown(computed, markdown_text):
+        return []
+    return [{
+        "field": "grand_total",
+        "current_value": str(claim.grand_total),
+        "suggested_value": str(computed),
+        "reason": (
+            f"Subtotal ({claim.subtotal}) plus CGST ({claim.cgst}) and SGST ({claim.sgst}) is {computed}, "
+            "which also appears on the document."
+        ),
+    }]
+
+
+def suggest_fixes(claim: BaseClaim, markdown_text: str = "") -> list[dict]:
+    """{field, current_value, suggested_value, reason} for each field a
+    still-failing arithmetic check implies a fix for -- only ever
+    offered when the suggested number is itself printed somewhere on
+    the document (see _amount_appears_in_markdown), never invented from
+    arithmetic alone. Never applied automatically; the employee clicks
+    Apply (see server._save_edits, which tags an edit that matches a
+    suggestion exactly as change_type='suggestion_applied')."""
+    if isinstance(claim, LocalConveyanceForm):
+        return _suggest_local_conveyance_form_fixes(claim, markdown_text)
+    if isinstance(claim, TelecomBill):
+        return _suggest_telecom_bill_fixes(claim, markdown_text)
+    if isinstance(claim, RestaurantBill):
+        return _suggest_restaurant_bill_fixes(claim, markdown_text)
+    if isinstance(claim, GenericClaim):
+        return _suggest_generic_claim_fixes(claim, markdown_text)
+    return []
+
+
 def _find_line_with_label(markdown_text: str, label: str) -> Optional[str]:
     """First line containing `label`, matched loosely: case-insensitive
     and whitespace-collapsed, so it survives the OCR/markdown-table

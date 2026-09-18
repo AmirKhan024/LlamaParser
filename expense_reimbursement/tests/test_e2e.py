@@ -594,3 +594,106 @@ def test_money_edit_reason_box_gates_confirm(live_server):
         assert page.locator("#btn-confirm").is_disabled()
 
         browser.close()
+
+
+def _seed_swapped_conveyance_document(live_server):
+    """Real repro, seeded directly through the app's own DB modules
+    (same pattern the live_server fixture uses for its own truncate
+    step) rather than through PIPELINE_MODE=fake's sha256 matching,
+    which has no cached fixture for this exact field-swap scenario."""
+    import importlib
+    import uuid
+    from decimal import Decimal
+
+    import httpx
+
+    repository = importlib.import_module("repository")
+    server = importlib.import_module("server")
+    db = importlib.import_module("db")
+
+    claim_id = httpx.post(f"{live_server}/api/claims", json={}).json()["id"]
+
+    session = db.get_sessionmaker()()
+    try:
+        markdown = (
+            "Local Conveyance Form\nTrip 1: 400 km\nTrip 2: 581 km\nTotal Km: 981\n"
+            "Conveyance: 5200\nDaily allowance: 1560\nVehicle maintenance: 600\n"
+            "Mobile allowance: 750\nTotal claimed: 8110\n"
+        )
+        fields = {
+            "document_type": "local_conveyance_form",
+            "travel_entries": [
+                {"date": "26 May 2026", "place": "A", "purpose": "meeting", "client": "x", "kms": "400"},
+                {"date": "26 May 2026", "place": "B", "purpose": "meeting", "client": "y", "kms": "581"},
+            ],
+            "total_kms": "5200",
+            "total_conveyance_amount": None,
+            "daily_allowance_amount": "1560",
+            "vehicle_maintenance_amount": "600",
+            "mobile_allowance_amount": "750",
+            "total_claimed": "8110",
+        }
+        employee = repository.get_or_create_seed_employee(session)
+        document = repository.create_document(
+            session, claim_id=uuid.UUID(claim_id), actor_id=employee.id,
+            original_name="conveyance.pdf", file_key="test/e2e-swap.pdf",
+            file_sha256=uuid.uuid4().hex, mime_type="application/pdf",
+        )
+        evaluated = server.evaluate("local_conveyance_form", fields, markdown)
+        repository.add_extraction(
+            session, document_id=document.id, actor_id=employee.id, source="ai",
+            document_type="local_conveyance_form", fields=evaluated["clean_json"],
+            confidence=evaluated["claim"].confidence, amount=Decimal("8110"), currency="INR",
+            check_results=evaluated["checks"], audit_action="extracted",
+        )
+        repository.update_document_status(session, document.id, status="needs_review", raw_markdown=markdown)
+        return str(document.id)
+    finally:
+        session.close()
+
+
+def test_suggestion_apply_fixes_the_swap_and_unlocks_confirm(live_server):
+    """Item 2, driven through the real browser: a suggestion box appears
+    for the total_kms/total_conveyance_amount swap, clicking Apply fills
+    both fields, and once both checks pass Confirm works immediately --
+    no reason box, since the edit fixed failing checks rather than
+    contradicting the bill."""
+    doc_id = _seed_swapped_conveyance_document(live_server)
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 1280, "height": 900})
+        page.goto(f"{live_server}/#/documents/{doc_id}")
+        page.wait_for_selector("#fields-container")
+
+        assert page.locator("#suggestion-box").count() == 1
+        assert page.locator("#suggestion-box", has_text="Total km 981").count() == 1
+        shot(page, "09_suggestion_box_before_apply.png")
+
+        assert page.locator('#fields-container input[data-path="total_kms"]').input_value() == "5200"
+
+        page.click("#btn-apply-suggestions")
+        page.wait_for_function(
+            "() => document.querySelector('#fields-container input[data-path=\"total_kms\"]')?.value === '981'"
+        )
+        assert page.locator('#fields-container input[data-path="total_conveyance_amount"]').input_value() == "5200"
+
+        # the suggestion box disappears once the checks it was about pass
+        page.wait_for_function("() => document.querySelector('#suggestion-box') === null", timeout=5000)
+        shot(page, "10_suggestion_box_after_apply.png")
+
+        # save, then confirm with no reason needed
+        page.click("#btn-save")
+        # "text=Saved" would also match the still-showing "Unsaved
+        # changes" status (case-insensitive substring) before the save
+        # actually completes -- the "saved" CSS class setDocActionBarStatus
+        # applies only on real success is the reliable signal.
+        page.wait_for_selector("#doc-status-msg.saved")
+        assert page.locator("#reason-box").count() == 0
+        confirm_btn = page.locator("#btn-confirm")
+        assert not confirm_btn.is_disabled()
+        confirm_btn.click()
+        page.wait_for_url("**/#/claims/*")
+        page.wait_for_selector(".chip-confirmed")
+
+        browser.close()

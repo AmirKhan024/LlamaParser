@@ -51,7 +51,7 @@ from models import Claim, Document, Employee, Extraction
 from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
-from validate import build_claim, check_completeness, validate_claim
+from validate import build_claim, check_completeness, suggest_fixes, validate_claim
 
 STUCK_PROCESSING_TIMEOUT = timedelta(minutes=5)
 
@@ -386,7 +386,13 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
     checks = validate_claim(claim, markdown_text or "")
     checks_as_dicts = [{"name": c.name, "passed": c.passed, "detail": c.detail} for c in checks]
     completeness_warnings = check_completeness(markdown_text or "", clean_json, claim.document_type.value)
-    review_input = {**clean_json, "validation": checks_as_dicts, "completeness_warnings": completeness_warnings}
+    suggestions = suggest_fixes(claim, markdown_text or "")
+    review_input = {
+        **clean_json,
+        "validation": checks_as_dicts,
+        "completeness_warnings": completeness_warnings,
+        "suggestions": suggestions,
+    }
     view = build_review_view(review_input)
     return {"claim": claim, "clean_json": clean_json, "checks": checks_as_dicts, "view": view}
 
@@ -416,7 +422,16 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
         {"name": c.check_name, "passed": c.passed, "detail": c.detail} for c in extraction.check_results
     ]
     completeness_warnings = check_completeness(document.raw_markdown or "", extraction.fields, extraction.document_type)
-    review_input = {**extraction.fields, "validation": checks_as_dicts, "completeness_warnings": completeness_warnings}
+    suggestions = []
+    if document.status != "confirmed":
+        current_claim = build_claim(DocumentType(extraction.document_type), extraction.fields, document.raw_markdown or "")
+        suggestions = suggest_fixes(current_claim, document.raw_markdown or "")
+    review_input = {
+        **extraction.fields,
+        "validation": checks_as_dicts,
+        "completeness_warnings": completeness_warnings,
+        "suggestions": suggestions,
+    }
     summary["review"] = build_review_view(review_input)
     if document.status == "confirmed":
         # The employee has verified it; the AI's doubts are resolved.
@@ -848,6 +863,26 @@ def _find_ai_extraction(document: Document) -> Optional[Extraction]:
     return None
 
 
+def _tag_suggestion_applied_corrections(corrections: list[dict[str, Any]], extraction: Extraction, document: Document) -> None:
+    """Marks any correction whose employee_value exactly matches what
+    suggest_fixes would have suggested for that field, computed against
+    the state that was actually on screen before this save (extraction.
+    fields) -- the client's "Apply" button sends its result as a normal
+    edit (per spec), so this is how the server tells an accepted
+    suggestion apart from a coincidentally-identical manual edit,
+    without trusting a client-supplied flag."""
+    pre_edit_claim = build_claim(DocumentType(extraction.document_type), extraction.fields, document.raw_markdown or "")
+    suggested_value_by_field = {
+        s["field"]: s["suggested_value"] for s in suggest_fixes(pre_edit_claim, document.raw_markdown or "")
+    }
+    for correction in corrections:
+        if correction.get("change_type") is not None:
+            continue
+        suggested = suggested_value_by_field.get(correction["field_path"])
+        if suggested is not None and _values_equal(suggested, correction.get("employee_value")):
+            correction["change_type"] = "suggestion_applied"
+
+
 def _save_edits(session: Session, document: Document, edits: dict[str, Any], actor_id: uuid.UUID) -> Extraction:
     extraction = repository.latest_extraction(session, document.id)
     if extraction is None:
@@ -870,6 +905,7 @@ def _save_edits(session: Session, document: Document, edits: dict[str, Any], act
 
     ai_extraction = _find_ai_extraction(document)
     corrections = _with_direction(_corrections_for_edits(ai_extraction.fields if ai_extraction else extraction.fields, edits))
+    _tag_suggestion_applied_corrections(corrections, extraction, document)
 
     new_extraction = repository.add_extraction(
         session,

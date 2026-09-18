@@ -11,7 +11,15 @@ field whose root key isn't in that list is rejected.
 """
 
 import re
+from decimal import Decimal, InvalidOperation
 from typing import Any, Dict, List, Optional
+
+# Fields a suggestion (see suggest_fixes, and _suggestion_sentence below)
+# can ever target that are money, not a count -- total_kms is the one
+# suggested field that's a distance, not an amount, so it's deliberately
+# left out (no currency symbol on a km figure).
+_MONEY_SUGGESTION_FIELDS = {"total_conveyance_amount", "total", "tax", "grand_total", "amount"}
+_SUGGESTION_CURRENCY_SYMBOLS = {"USD": "$", "EUR": "€", "GBP": "£", "INR": "₹"}
 
 _APPROVAL_STATUS_LABELS = {
     "approved": "Approved",
@@ -35,6 +43,33 @@ def _humanize_approval_status(value: Optional[str]) -> Optional[str]:
 
 def _field(key: str, label: str, value: Any, editable: bool) -> Dict[str, Any]:
     return {"key": key, "label": label, "value": value, "editable": editable}
+
+
+def _fmt_suggestion_number(value: str, is_money: bool, currency: Optional[str]) -> str:
+    try:
+        num = Decimal(str(value))
+    except (InvalidOperation, TypeError, ValueError):
+        return str(value)
+    text = f"{int(num):,}" if num == num.to_integral_value() else f"{num:,.2f}"
+    if not is_money:
+        return text
+    return f"{_SUGGESTION_CURRENCY_SYMBOLS.get(currency, '')}{text}"
+
+
+def _suggestion_sentence(suggestions: List[Dict[str, Any]], label_by_key: Dict[str, str], currency: Optional[str]) -> str:
+    """"The numbers on this form don't add up as we read them. Did you
+    mean: Total km 981, Conveyance ₹5,200?" -- one sentence covering
+    every current suggestion, phrased with the same field labels the
+    review screen itself uses (label_by_key, built from this document
+    type's own `fields` list) so it never repeats a raw schema key."""
+    if not suggestions:
+        return ""
+    parts = [
+        f"{label_by_key.get(s['field'], s['field'])} "
+        f"{_fmt_suggestion_number(s['suggested_value'], s['field'] in _MONEY_SUGGESTION_FIELDS, currency)}"
+        for s in suggestions
+    ]
+    return "The numbers on this form don't add up as we read them. Did you mean: " + ", ".join(parts) + "?"
 
 
 _CURRENCY_OPTIONS = ["INR", "USD", "EUR", "GBP"]
@@ -261,6 +296,16 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
 
     needs_review = actionable_checks_failed or bool(completeness_warnings) or low_confidence
 
+    # suggest_fixes (validate.py) already computed these against the
+    # typed claim -- passed straight through here. The caller
+    # (server._document_detail) is responsible for not passing any once
+    # a document is confirmed, same as it already clears `warnings`
+    # then; approval_correspondence never has any (no amount fields to
+    # suggest a fix for).
+    suggestions = claim.get("suggestions") or []
+    label_by_key = {f["key"]: f["label"] for f in fields}
+    suggestion_sentence = _suggestion_sentence(suggestions, label_by_key, currency)
+
     return {
         "document_type": doc_type,
         "currency": currency,
@@ -270,4 +315,6 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
         "editable_fields": editable_fields,
         "needs_confirm": needs_confirm,
         "needs_review": needs_review,
+        "suggestions": suggestions,
+        "suggestion_sentence": suggestion_sentence,
     }
