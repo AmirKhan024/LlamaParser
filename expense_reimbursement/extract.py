@@ -15,7 +15,7 @@ from typing import Any, Dict, Optional
 
 from groq import Groq
 
-from schemas import BaseClaim, DocumentType, SCHEMA_BY_TYPE
+from schemas import BaseClaim, DocumentType, schema_for
 
 # Verified live via client.models.list() -- see README. 120b was picked
 # over 20b for the same reason as the parser tier: better accuracy on
@@ -48,9 +48,18 @@ def _build_system_prompt() -> str:
     type_list = ", ".join(t.value for t in DocumentType)
     base_fields = list(BaseClaim.model_fields.keys())
 
+    # Every DocumentType, not just the ones with their own entry in
+    # SCHEMA_BY_TYPE -- schema_for() falls back to GenericClaim (which
+    # has line_items) for the rest, but the model was never told that
+    # field exists for those types, silently defeating line-item
+    # extraction on anything classified hotel_invoice/taxi_receipt/
+    # fuel_receipt/unstructured_proof. Describing every type with the
+    # schema it's actually validated against (schema_for(t)) instead of
+    # only the ones SCHEMA_BY_TYPE names directly fixes that for good --
+    # a new fallback type added later can't reintroduce this bug.
     type_schemas = "\n".join(
-        f"- {doc_type.value}: {list(cls.model_fields.keys())}"
-        for doc_type, cls in SCHEMA_BY_TYPE.items()
+        f"- {doc_type.value}: {list(schema_for(doc_type).model_fields.keys())}"
+        for doc_type in DocumentType
     )
 
     return f"""You are an expense-claim document extraction engine. The document \
@@ -80,13 +89,14 @@ totals), not just a mention of it.
 2. Extract its data as a single flat JSON object with these base fields \
 (all optional except document_type): {base_fields}.
 
-If document_type is one that has a more specific schema, ALSO include \
-that type's extra fields, on the same flat object (not nested):
+Every document_type's fields, on the same flat object (not nested) as \
+the base fields above -- some types only have the base fields plus \
+line_items, others have more of their own:
 {type_schemas}
-Any document_type not listed above just uses the base fields. Use the \
-named fields whenever a value matches one -- e.g. for local_conveyance_form, \
-vehicle maintenance and mobile allowance amounts belong in \
-vehicle_maintenance_amount / mobile_allowance_amount, not additional_fields.
+Use the named fields whenever a value matches one -- e.g. for \
+local_conveyance_form, vehicle maintenance and mobile allowance amounts \
+belong in vehicle_maintenance_amount / mobile_allowance_amount, not \
+additional_fields.
 
 CRITICAL RULES:
 - If the document has line items (menu items, products, services -- a \

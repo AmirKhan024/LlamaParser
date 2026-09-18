@@ -178,6 +178,16 @@ by inspection alone:
    `generic_receipt` wasn't in it -- so the model was never told the field
    existed for that type. Silently defeated line-item extraction for every
    `generic_receipt`-classified document until fixed.
+   **This first fix was incomplete**: it added `generic_receipt` to
+   `SCHEMA_BY_TYPE`'s iteration, but `taxi_receipt`, `hotel_invoice`,
+   `fuel_receipt`, and `unstructured_proof` -- every other type that
+   falls back to `GenericClaim` via `schema_for()` without its own
+   `SCHEMA_BY_TYPE` entry -- had the exact same bug, undetected until a
+   real hotel receipt (4 line items, $780.75) came back with `Items (0)`.
+   Properly fixed by building the prompt's field list from
+   `schema_for(t)` for every `DocumentType`, not from `SCHEMA_BY_TYPE`'s
+   own entries -- see `tests/test_extract_prompt.py`, which would have
+   caught both the original bug and this incomplete fix.
 
 Found while building the app layer (all caught by actually driving the
 running app -- browser or a live `uvicorn` process -- not by inspection):
