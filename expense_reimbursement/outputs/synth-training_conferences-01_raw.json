@@ -1,0 +1,417 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Skillbridge Academy\nInvoice\nParticipant: Zarna Bhatia\nDate: 2026-04-23\n\nDescription              Qty  Rate  Amount\nProject Management Certification Exam    1  22717.83  22717.83\n                                          Total: 322717 83 JNR\n                                          Total: 722717.83 INR",
+      "md": "## Skillbridge Academy\n\nInvoice\n**Participant**: Zarna Bhatia\n**Date**: 2026-04-23\n\n| Description                           | Qty | Rate     | Amount   |\n| ------------------------------------- | --- | -------- | -------- |\n| Project Management Certification Exam | 1   | 22717.83 | 22717.83 |\n\n\n**Total**: ₹22717.83 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 213,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 31,
+              "y": 145,
+              "w": 214,
+              "h": 14,
+              "confidence": 0.999,
+              "text": "Project Management Certification Exam"
+            },
+            {
+              "x": 440,
+              "y": 144,
+              "w": 57,
+              "h": 17,
+              "confidence": 1,
+              "text": "22717.83"
+            },
+            {
+              "x": 544,
+              "y": 143,
+              "w": 57,
+              "h": 18,
+              "confidence": 1,
+              "text": "22717.83"
+            },
+            {
+              "x": 29,
+              "y": 116,
+              "w": 72,
+              "h": 17,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 382,
+              "y": 115,
+              "w": 28,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 69,
+              "w": 96,
+              "h": 14,
+              "confidence": 0.977,
+              "text": "Date: 2026-04-23"
+            },
+            {
+              "x": 21,
+              "y": 39,
+              "w": 43,
+              "h": 17,
+              "confidence": 1,
+              "text": "Invoice"
+            },
+            {
+              "x": 21,
+              "y": 17,
+              "w": 198,
+              "h": 25,
+              "confidence": 0.999,
+              "text": "Skillbridge Academy"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.67,
+          "width": 150.04,
+          "x": 8.106,
+          "y": 30.698,
+          "original_width": 626,
+          "original_height": 57,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Skillbridge Academy",
+          "value": "Skillbridge Academy",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.674065100628395,
+            "y": 9.099078170112943,
+            "w": 47.19524111540421,
+            "h": 5.038434567658799,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.67,
+              "y": 9.1,
+              "w": 47.2,
+              "h": 5.04,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice\n**Participant**: Zarna Bhatia\n**Date**: 2026-04-23",
+          "value": "Invoice\n**Participant**: Zarna Bhatia\n**Date**: 2026-04-23",
+          "bBox": {
+            "x": 8.6016,
+            "y": 14.515200000000002,
+            "w": 32.256,
+            "h": 9.3312,
+            "confidence": 0.78,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.6,
+              "y": 14.52,
+              "w": 32.26,
+              "h": 9.33,
+              "startIndex": 0,
+              "endIndex": 57,
+              "confidence": 0.78,
+              "label": "key-value-region"
+            },
+            {
+              "x": 7.92,
+              "y": 13.44,
+              "w": 10.32,
+              "h": 4.08,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.78,
+              "label": "key-value-region"
+            },
+            {
+              "x": 7.92,
+              "y": 17.28,
+              "w": 32.88,
+              "h": 3.6,
+              "startIndex": 8,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 20.64,
+              "w": 23.04,
+              "h": 3.36,
+              "startIndex": 38,
+              "endIndex": 57,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                           | Qty | Rate     | Amount   |\n| ------------------------------------- | --- | -------- | -------- |\n| Project Management Certification Exam | 1   | 22717.83 | 22717.83 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Project Management Certification Exam</td>\n<td>1</td>\n<td>22717.83</td>\n<td>22717.83</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Project Management Certification Exam",
+              "1",
+              "22717.83",
+              "22717.83"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Project Management Certification Exam\",\"1\",\"22717.83\",\"22717.83\"",
+          "bBox": {
+            "x": 8.106747834578805,
+            "y": 30.698134181810467,
+            "w": 150.04038192085596,
+            "h": 13.670140009341035,
+            "confidence": 0.91,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.11,
+              "y": 30.7,
+              "w": 150.04,
+              "h": 13.67,
+              "startIndex": 0,
+              "endIndex": 208,
+              "confidence": 0.91,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹22717.83 INR",
+          "value": "**Total**: ₹22717.83 INR",
+          "bBox": {
+            "x": 125.03039999999999,
+            "y": 47.52000000000001,
+            "w": 32.87039999999999,
+            "h": 2.9376000000000033,
+            "confidence": 0.94,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 125.03,
+              "y": 47.52,
+              "w": 32.87,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.94,
+              "label": "key-value-region"
+            },
+            {
+              "x": 124.32,
+              "y": 46.32,
+              "w": 33.84,
+              "h": 4.56,
+              "startIndex": 11,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.786,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.154,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.407,
+            "y": 0.275,
+            "w": 0.107,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.438,
+            "y": 0.275,
+            "w": 0.076,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.178,
+            "w": 0.488,
+            "h": 0.079
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.407,
+            "y": 0.276,
+            "w": 0.028,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.122,
+            "w": 0.05,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.022,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.031,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.105,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.56,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.105,
+            "h": 0.053
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.077,
+            "y": 0.103,
+            "w": 0.056,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

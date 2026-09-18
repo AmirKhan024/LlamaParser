@@ -1,0 +1,45 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "PETRON BKT LANJAN SB",
+    "date": "01/02/2018 4:43:17 PM",
+    "amount": "4.90",
+    "currency": "RM",
+    "additional_fields": {
+      "store_no": "129077 Babu",
+      "pos": "1",
+      "tax_invoice_no": "19729058",
+      "gst_id": "001210736640",
+      "cash": "5.00",
+      "change": "0.10",
+      "address": "KM 458.4 BKT LANJAN UTARA, L/RAYA UTARA SELATAN,SG BULOH 47000 SUNGAI BUL",
+      "tel": "03-6156 8757",
+      "co_no": "001083069-M",
+      "use_petron_miles": "3000 points to pay for RM45 Fuel"
+    },
+    "extraction_notes": [
+      "interpreted food lines as items with total price"
+    ],
+    "confidence": 0.92,
+    "restaurant_gstin": "001210736640",
+    "subtotal": "4.62",
+    "grand_total": "4.90",
+    "line_items": [
+      {
+        "name": "A 2 double ,mint te",
+        "total": "3.00"
+      },
+      {
+        "name": "A 1 sandwich vanill",
+        "total": "1.90"
+      }
+    ]
+  },
+  "duration_seconds": 25.030999999959022,
+  "tokens": {
+    "prompt": 1818,
+    "completion": 1636,
+    "total": 3454
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "CROSS CHANNEL NETWORK SDN. BHD.",
+    "date": "29/01/2018 4:40:40 PM",
+    "amount": "6.35",
+    "currency": "RM",
+    "subtotal": "6.00",
+    "tax": "0.36",
+    "line_items": [
+      {
+        "name": "SCHNEIDER E15R 13A SWITCH SOCKET OUTLET",
+        "quantity": "1",
+        "unit_price": "6.36"
+      }
+    ],
+    "additional_fields": {
+      "address": "47, JALAN MERANTI 1, SEK. 3, BANDAR UTAMA BATANG KALI, 44300 BATANG KALI, SELANGOR",
+      "phone": "03-6057 9688",
+      "fax": "03-6057 9678",
+      "gst_id": "001151500288",
+      "invoice_no": "BTG-052332",
+      "rounding_adjustment": "-0.01",
+      "paid_amount": "10.00",
+      "change": "3.65",
+      "total_qty_tender": "1.00",
+      "gst_summary_amount": "6.00",
+      "gst_summary_tax": "0.36",
+      "email": "gowa9688@gmail.com"
+    },
+    "extraction_notes": [
+      "mapped Total Amt Payable to amount field"
+    ],
+    "confidence": 0.96
+  },
+  "duration_seconds": 20.358999999938533,
+  "tokens": {
+    "prompt": 1880,
+    "completion": 850,
+    "total": 2730
+  }
+}

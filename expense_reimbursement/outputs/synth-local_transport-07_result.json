@@ -1,0 +1,31 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "GoCab",
+    "date": "2026-04-10",
+    "amount": "100.09",
+    "currency": "INR",
+    "additional_fields": {
+      "pickup": "Kaul Street",
+      "drop": "Sarkar Marg",
+      "driver": "Vrishti"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "100.09",
+    "tax": "0.00",
+    "line_items": [
+      {
+        "name": "Fare",
+        "quantity": "1",
+        "unit_price": "100.09",
+        "total": "100.09"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1939
+  }
+}

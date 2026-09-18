@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "DevOps Nexus",
+    "date": "2026-06-19",
+    "amount": "110.30",
+    "currency": "USD",
+    "additional_fields": {
+      "billed_to": "Konkan Digital Systems Pvt Ltd"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "110.30",
+    "line_items": [
+      {
+        "name": "Annual subscription",
+        "quantity": "1",
+        "unit_price": "110.30",
+        "total": "110.30"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1912
+  }
+}

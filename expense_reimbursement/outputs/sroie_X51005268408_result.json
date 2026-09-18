@@ -1,0 +1,50 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "99 SPEED MART S/B (519537-X)",
+    "date": "20-11-17",
+    "amount": "169.80",
+    "currency": "RM",
+    "subtotal": "160.17",
+    "tax": "9.61",
+    "line_items": [
+      {
+        "name": "PEDIASURE COMPLETE 535",
+        "total": "RM117.90"
+      },
+      {
+        "name": "MILO 2KG",
+        "total": "RM34.90"
+      },
+      {
+        "name": "ZING HEING OAT & WHEAT",
+        "total": "RM4.10"
+      },
+      {
+        "name": "DISNEY DS112 WIDE NECK",
+        "total": "RM5.89"
+      },
+      {
+        "name": "JOHNSONS PH5.5 2IN1 BO",
+        "total": "RM6.99"
+      }
+    ],
+    "additional_fields": {
+      "invoice_no": "18222/102/T0341",
+      "gst_id": "000101747712",
+      "rounding_adjustment": "RM .02",
+      "cash": "RM 200.00",
+      "change": "RM 30.20",
+      "address": "LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1413-SETIA ALAM 2"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 15.311999999918044,
+  "tokens": {
+    "prompt": 1837,
+    "completion": 1257,
+    "total": 3094
+  }
+}

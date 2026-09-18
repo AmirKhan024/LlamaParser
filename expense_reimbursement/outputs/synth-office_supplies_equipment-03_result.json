@@ -1,0 +1,36 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "PaperTrail Stationery",
+    "date": "2026-05-21",
+    "amount": "2440.00",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Desk organizer",
+        "quantity": "1",
+        "unit_price": "340",
+        "total": "340"
+      },
+      {
+        "name": "Printer cartridge",
+        "quantity": "1",
+        "unit_price": "1450",
+        "total": "1450"
+      },
+      {
+        "name": "Wireless mouse",
+        "quantity": "1",
+        "unit_price": "650",
+        "total": "650"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1980
+  }
+}

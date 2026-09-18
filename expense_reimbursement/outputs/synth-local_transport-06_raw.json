@@ -1,0 +1,486 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                GoCab\nTrip Receipt\nPickup: Ratta Chowk\nDrop: Sura Chowk\nDate:2026-06-15\nDriver: Fariq\nFare     1 98.12     98.12\n         1\n                     al: 298.12 INR\n                     Total: 798.12 INR",
+      "md": "## GoCab\n\n**Trip Receipt**\n**Pickup:** Ratta Chowk\n**Drop:** Sura Chowk\n**Date:** 2026-06-15\n**Driver:** Fariq\n\n| Fare | 1 | 98.12 | 98.12 |\n| ---- | - | ----- | ----- |\n\n\n**Total: ₹98.12 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 211,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 234,
+              "y": 176,
+              "w": 110,
+              "h": 16,
+              "confidence": 0.943,
+              "text": "Total: 798.12 INR"
+            },
+            {
+              "x": 233,
+              "y": 147,
+              "w": 32,
+              "h": 15,
+              "confidence": 1,
+              "text": "98.12"
+            },
+            {
+              "x": 106,
+              "y": 148,
+              "w": 16,
+              "h": 12,
+              "confidence": 0.999,
+              "text": "1"
+            },
+            {
+              "x": 19,
+              "y": 147,
+              "w": 29,
+              "h": 15,
+              "confidence": 1,
+              "text": "Fare"
+            },
+            {
+              "x": 20,
+              "y": 118,
+              "w": 95,
+              "h": 22,
+              "confidence": 0.997,
+              "text": "Driver: Fariq"
+            },
+            {
+              "x": 21,
+              "y": 43,
+              "w": 91,
+              "h": 20,
+              "confidence": 1,
+              "text": "Trip Receipt"
+            },
+            {
+              "x": 158,
+              "y": 18,
+              "w": 50,
+              "h": 18,
+              "confidence": 1,
+              "text": "GoCab"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## GoCab",
+          "value": "GoCab",
+          "lvl": 2,
+          "bBox": {
+            "x": 38.812423573369564,
+            "y": 6.288647659965184,
+            "w": 11.055440090013585,
+            "h": 3.1021873805833895,
+            "confidence": 0.81,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 38.81,
+              "y": 6.29,
+              "w": 11.06,
+              "h": 3.1,
+              "startIndex": 0,
+              "endIndex": 7,
+              "confidence": 0.81,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Trip Receipt**\n**Pickup:** Ratta Chowk\n**Drop:** Sura Chowk\n**Date:** 2026-06-15\n**Driver:** Fariq",
+          "value": "**Trip Receipt**\n**Pickup:** Ratta Chowk\n**Drop:** Sura Chowk\n**Date:** 2026-06-15\n**Driver:** Fariq",
+          "bBox": {
+            "x": 5.2224,
+            "y": 12.2688,
+            "w": 36.556799999999996,
+            "h": 27.4752,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 11.52,
+              "w": 21.84,
+              "h": 4.8,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 5.04,
+              "y": 11.52,
+              "w": 36.48,
+              "h": 23.28,
+              "startIndex": 0,
+              "endIndex": 99,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Fare | 1 | 98.12 | 98.12 |\n| ---- | - | ----- | ----- |",
+          "html": "<table>\n    <tr>\n        <td>Fare</td>\n<td>1</td>\n<td>98.12</td>\n<td>98.12</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Fare",
+              "1",
+              "98.12",
+              "98.12"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Fare\",\"1\",\"98.12\",\"98.12\"",
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 37.152,
+            "w": 58.367999999999995,
+            "h": 2.5919999999999987,
+            "confidence": 0.89,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 4.8,
+              "y": 36.48,
+              "w": 6.96,
+              "h": 3.6,
+              "startIndex": 2,
+              "endIndex": 5,
+              "confidence": 0.89,
+              "label": "text"
+            },
+            {
+              "x": 56.16,
+              "y": 36.48,
+              "w": 7.68,
+              "h": 3.6,
+              "startIndex": 13,
+              "endIndex": 17,
+              "confidence": 0.89,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, paragraph_title, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹98.12 INR**",
+          "value": "**Total: ₹98.12 INR**",
+          "bBox": {
+            "x": 57.139199999999995,
+            "y": 44.2368,
+            "w": 25.8048,
+            "h": 2.7648,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 57.14,
+              "y": 44.24,
+              "w": 25.8,
+              "h": 2.76,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.786,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.124,
+            "w": 0.066,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.177,
+            "w": 0.03,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.177,
+            "w": 0.039,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.151,
+            "w": 0.063,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.064,
+            "y": 0.098,
+            "w": 0.072,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.124,
+            "w": 0.033,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.151,
+            "w": 0.03,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.098,
+            "w": 0.041,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.216,
+            "w": 0.019,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.185,
+            "y": 0.216,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.085,
+            "y": 0.216,
+            "w": 0.005,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.102,
+            "y": 0.215,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.071,
+            "w": 0.069,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.217,
+            "y": 0.256,
+            "w": 0.053,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.186,
+            "y": 0.256,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.126,
+            "y": 0.036,
+            "w": 0.036,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.186,
+            "y": 0.256,
+            "w": 0.084,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.56,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.071,
+            "w": 0.118,
+            "h": 0.16
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.53,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.017,
+            "y": 0.071,
+            "w": 0.118,
+            "h": 0.129
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.53,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.215,
+            "w": 0.19,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

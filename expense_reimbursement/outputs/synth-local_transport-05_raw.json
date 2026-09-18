@@ -1,0 +1,507 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                RideNow\nTrip Receipt\nPickup: Bhatt Road\nDrop: Airport Terminal\nDate: 2026-03-15\nDriver: Harinakshi\nFare  1 575.30         575.30\n                       Total: 2575.30 INR",
+      "md": "**RideNow**\n\n## Trip Receipt\n\n**Pickup**: Bhatt Road\n**Drop**: Airport Terminal\n**Date**: 2026-03-15\n**Driver**: Harinakshi\n\n**Fare**: ₹ 575.30\n\n**Total**: ₹ 575.30 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 364,
+          "original_height": 210,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 226,
+              "y": 147,
+              "w": 39,
+              "h": 14,
+              "confidence": 1,
+              "text": "575.30"
+            },
+            {
+              "x": 20,
+              "y": 121,
+              "w": 131,
+              "h": 16,
+              "confidence": 0.997,
+              "text": "Driver: Harinakshi"
+            },
+            {
+              "x": 21,
+              "y": 103,
+              "w": 124,
+              "h": 13,
+              "confidence": 0.999,
+              "text": "Date: 2026-03-15"
+            },
+            {
+              "x": 21,
+              "y": 45,
+              "w": 89,
+              "h": 17,
+              "confidence": 0.994,
+              "text": "Trip Receipt"
+            },
+            {
+              "x": 148,
+              "y": 16,
+              "w": 66,
+              "h": 20,
+              "confidence": 1,
+              "text": "RideNow"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**RideNow**",
+          "value": "**RideNow**",
+          "bBox": {
+            "x": 36.84577530570652,
+            "y": 6.343145967566449,
+            "w": 15.055205502717396,
+            "h": 2.995412362140158,
+            "confidence": 0.89,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 36.85,
+              "y": 6.34,
+              "w": 15.06,
+              "h": 3,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.89,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "md": "## Trip Receipt",
+          "value": "Trip Receipt",
+          "lvl": 2,
+          "bBox": {
+            "x": 5.621685791015625,
+            "y": 12.523046443773353,
+            "w": 21.025235914147416,
+            "h": 3.7081839851711105,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.62,
+              "y": 12.52,
+              "w": 21.03,
+              "h": 3.71,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Pickup**: Bhatt Road\n**Drop**: Airport Terminal\n**Date**: 2026-03-15\n**Driver**: Harinakshi",
+          "value": "**Pickup**: Bhatt Road\n**Drop**: Airport Terminal\n**Date**: 2026-03-15\n**Driver**: Harinakshi",
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 12.4416,
+            "w": 58.367999999999995,
+            "h": 27.4752,
+            "confidence": 0.79,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 16.56,
+              "w": 39.12,
+              "h": 17.52,
+              "startIndex": 0,
+              "endIndex": 92,
+              "confidence": 0.79,
+              "label": "key-value-region"
+            },
+            {
+              "x": 5.52,
+              "y": 16.56,
+              "w": 32.88,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 5.28,
+              "y": 21.12,
+              "w": 39.12,
+              "h": 4.08,
+              "startIndex": 23,
+              "endIndex": 48,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 5.52,
+              "y": 25.92,
+              "w": 29.76,
+              "h": 3.12,
+              "startIndex": 50,
+              "endIndex": 69,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 5.28,
+              "y": 30.24,
+              "w": 31.44,
+              "h": 3.84,
+              "startIndex": 71,
+              "endIndex": 92,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Fare**: ₹ 575.30",
+          "value": "**Fare**: ₹ 575.30",
+          "bBox": {
+            "x": 5.575885540506114,
+            "y": 37.27096531080163,
+            "w": 5.8686552628226885,
+            "h": 2.423302161175275,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.58,
+              "y": 37.27,
+              "w": 5.87,
+              "h": 2.42,
+              "startIndex": 0,
+              "endIndex": 7,
+              "confidence": 0.84,
+              "label": "text"
+            },
+            {
+              "x": 55.4,
+              "y": 37.18,
+              "w": 8.35,
+              "h": 2.42,
+              "startIndex": 12,
+              "endIndex": 17,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹ 575.30 INR",
+          "value": "**Total**: ₹ 575.30 INR",
+          "bBox": {
+            "x": 55.296,
+            "y": 43.891200000000005,
+            "w": 27.648000000000003,
+            "h": 2.9376000000000033,
+            "confidence": 0.87,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 55.3,
+              "y": 43.89,
+              "w": 27.65,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.87,
+              "label": "key-value-region"
+            },
+            {
+              "x": 54.72,
+              "y": 42.96,
+              "w": 28.32,
+              "h": 4.32,
+              "startIndex": 13,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.8,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.052,
+            "y": 0.124,
+            "w": 0.093,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.178,
+            "w": 0.039,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.061,
+            "y": 0.178,
+            "w": 0.06,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.052,
+            "y": 0.152,
+            "w": 0.064,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.152,
+            "w": 0.03,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.063,
+            "y": 0.099,
+            "w": 0.063,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.216,
+            "w": 0.019,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.125,
+            "w": 0.031,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.099,
+            "w": 0.041,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.18,
+            "y": 0.215,
+            "w": 0.027,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.79,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.12,
+            "y": 0.037,
+            "w": 0.049,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.74,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.18,
+            "y": 0.254,
+            "w": 0.091,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.078,
+            "y": 0.215,
+            "w": 0.042,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.255,
+            "w": 0.06,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.092,
+            "y": 0.215,
+            "w": 0.027,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.67,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.072,
+            "w": 0.13,
+            "h": 0.159
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.072,
+            "w": 0.068,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.18,
+            "y": 0.255,
+            "w": 0.028,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.077,
+            "y": 0.216,
+            "w": 0.006,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

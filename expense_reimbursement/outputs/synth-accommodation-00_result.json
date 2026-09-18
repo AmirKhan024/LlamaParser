@@ -1,0 +1,37 @@
+{
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "Palm Court Hotel",
+    "date": "2026-05-24",
+    "amount": "32181.59",
+    "currency": "INR",
+    "additional_fields": {
+      "guest_name": "Gaurangi Dasgupta",
+      "check_in_date": "2026-05-24",
+      "nights": "3"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "32181.59",
+    "tax": "0.00",
+    "line_items": [
+      {
+        "name": "Room charge x 3 night(s)",
+        "quantity": "3",
+        "unit_price": "10328.45",
+        "total": "30985.35"
+      },
+      {
+        "name": "Minibar",
+        "quantity": "1",
+        "unit_price": "1196.24",
+        "total": "1196.24"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2073
+  }
+}

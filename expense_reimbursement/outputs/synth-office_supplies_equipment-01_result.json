@@ -1,0 +1,36 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "DeskWorks Supplies",
+    "date": "2026-03-10",
+    "amount": "2280.00",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Printer cartridge",
+        "quantity": "1",
+        "unit_price": "1450",
+        "total": "1450"
+      },
+      {
+        "name": "Notebook pack (5)",
+        "quantity": "1",
+        "unit_price": "180",
+        "total": "180"
+      },
+      {
+        "name": "Wireless mouse",
+        "quantity": "1",
+        "unit_price": "650",
+        "total": "650"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1982
+  }
+}

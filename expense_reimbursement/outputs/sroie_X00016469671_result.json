@@ -1,0 +1,35 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "OJC MARKETING SDN BHD",
+    "date": "02/01/2019 2:47:14 PM",
+    "amount": "170.00",
+    "additional_fields": {
+      "invoice_no": "PEGIV-1030531",
+      "cashier": "RHYS TAN",
+      "sales_person": "FATIN",
+      "approval_code": "123",
+      "round_amt": "0.00",
+      "total_amount": "170.00",
+      "visa_card": "170.00",
+      "qty_total_item_discount": "0.00"
+    },
+    "line_items": [
+      {
+        "name": "000000111 KINGS SAFETY SHOES KWD 805",
+        "quantity": "1",
+        "unit_price": "170.00",
+        "total": "170.00"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 1.6719999999040738,
+  "tokens": {
+    "prompt": 1875,
+    "completion": 575,
+    "total": 2450
+  }
+}

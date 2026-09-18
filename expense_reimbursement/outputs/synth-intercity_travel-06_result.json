@@ -1,0 +1,38 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Northwind Airways",
+    "date": "2026-04-29",
+    "amount": "9330.41",
+    "currency": "INR",
+    "subtotal": "7464.33",
+    "tax": "1866.08",
+    "additional_fields": {
+      "Passenger": "Yash Tandon",
+      "PNR": "NV0981",
+      "Route": "Hyderabad -> Pune",
+      "Flight": "Northwind Airways 329"
+    },
+    "extraction_notes": [],
+    "confidence": 0.823,
+    "line_items": [
+      {
+        "name": "Base fare",
+        "quantity": "1",
+        "unit_price": "7464.33",
+        "total": "7464.33"
+      },
+      {
+        "name": "Taxes & fees",
+        "quantity": "1",
+        "unit_price": "1866.08",
+        "total": "1866.08"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2590
+  }
+}

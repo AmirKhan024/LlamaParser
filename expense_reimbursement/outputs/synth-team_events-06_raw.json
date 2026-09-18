@@ -1,0 +1,407 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Spice Route\nTax Invoice\nDate: 2026-01-06\nTeam Dinner - 6 colleagues\n\nDescription               Qty  Rate  Amount\nFood & beverages          6    580.31    3481.87\n                                  TilJa:O. O=pmp\n                              Total: 3481.87 INR",
+      "md": "# Spice Route\n\nTax Invoice\n\nDate: 2026-01-06\n\nTeam Dinner - 6 colleagues\n\n| Description      | Qty | Rate   | Amount  |\n| ---------------- | --- | ------ | ------- |\n| Food & beverages | 6   | 580.31 | 3481.87 |\n\n\n**Total: ₹3481.87 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 215,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 491,
+              "y": 141,
+              "w": 52,
+              "h": 21,
+              "confidence": 1,
+              "text": "3481.87"
+            },
+            {
+              "x": 369,
+              "y": 141,
+              "w": 47,
+              "h": 22,
+              "confidence": 0.997,
+              "text": "580.31"
+            },
+            {
+              "x": 28,
+              "y": 141,
+              "w": 99,
+              "h": 20,
+              "confidence": 0.973,
+              "text": "Food & beverages"
+            },
+            {
+              "x": 281,
+              "y": 115,
+              "w": 31,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.428,
+          "width": 149.914,
+          "x": 8.256,
+          "y": 30.65,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Spice Route",
+          "value": "Spice Route",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.550300929857336,
+            "y": 9.236735667353091,
+            "w": 29.822452976392665,
+            "h": 4.916355564283289,
+            "confidence": 0.9,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 8.88,
+              "w": 29.52,
+              "h": 4.8,
+              "startIndex": 0,
+              "endIndex": 12,
+              "confidence": 0.9,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice",
+          "value": "Tax Invoice",
+          "bBox": {
+            "x": 8.6016,
+            "y": 14.342400000000001,
+            "w": 35.328,
+            "h": 9.849599999999999,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 13.68,
+              "w": 15.6,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-01-06",
+          "value": "Date: 2026-01-06",
+          "bBox": {
+            "x": 16.317286217730977,
+            "y": 17.486869214928667,
+            "w": 15.518124787703801,
+            "h": 2.6706647126571,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 16.32,
+              "y": 17.49,
+              "w": 15.52,
+              "h": 2.67,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Team Dinner - 6 colleagues",
+          "value": "Team Dinner - 6 colleagues",
+          "bBox": {
+            "x": 8.6016,
+            "y": 20.736,
+            "w": 35.328,
+            "h": 3.4559999999999995,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.92,
+              "y": 19.92,
+              "w": 35.52,
+              "h": 4.08,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description      | Qty | Rate   | Amount  |\n| ---------------- | --- | ------ | ------- |\n| Food & beverages | 6   | 580.31 | 3481.87 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages</td>\n<td>6</td>\n<td>580.31</td>\n<td>3481.87</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages",
+              "6",
+              "580.31",
+              "3481.87"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages\",\"6\",\"580.31\",\"3481.87\"",
+          "bBox": {
+            "x": 8.256015412703805,
+            "y": 30.65046904190727,
+            "w": 149.91451362941572,
+            "h": 13.428006114130433,
+            "confidence": 0.97,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.26,
+              "y": 30.65,
+              "w": 149.91,
+              "h": 13.43,
+              "startIndex": 0,
+              "endIndex": 136,
+              "confidence": 0.97,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹3481.87 INR**",
+          "value": "**Total: ₹3481.87 INR**",
+          "bBox": {
+            "x": 122.88,
+            "y": 47.174400000000006,
+            "w": 35.02080000000001,
+            "h": 3.6288000000000054,
+            "confidence": 0.81,
+            "label": "caption"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 122.4,
+              "y": 46.56,
+              "w": 35.04,
+              "h": 4.56,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.964,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.94,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.177,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.8,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.097,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.088,
+            "y": 0.12,
+            "w": 0.054,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.101,
+            "w": 0.051,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_caption_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "caption",
+          "bbox": {
+            "x": 0.4,
+            "y": 0.273,
+            "w": 0.115,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.12,
+            "w": 0.115,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.102,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.083,
+            "w": 0.05,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.437,
+            "y": 0.274,
+            "w": 0.078,
+            "h": 0.021
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.4,
+            "y": 0.274,
+            "w": 0.034,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.53,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.083,
+            "w": 0.115,
+            "h": 0.057
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

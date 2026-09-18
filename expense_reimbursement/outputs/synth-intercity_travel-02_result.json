@@ -1,0 +1,38 @@
+{
+  "document_type": "unstructured_proof",
+  "clean_json": {
+    "document_type": "unstructured_proof",
+    "vendor_name": "SkyBridge Air",
+    "date": "2026-06-26",
+    "amount": "4648.84",
+    "currency": "INR",
+    "additional_fields": {
+      "passenger": "Idika Jhaveri",
+      "PNR": "BB9103",
+      "route": "Pune -> Hyderabad",
+      "flight": "SkyBridge Air 662"
+    },
+    "extraction_notes": [],
+    "confidence": 0.68,
+    "subtotal": "3719.07",
+    "tax": "929.77",
+    "line_items": [
+      {
+        "name": "Base fare",
+        "quantity": "1",
+        "unit_price": "3719.07",
+        "total": "3719.07"
+      },
+      {
+        "name": "Taxes & fees",
+        "quantity": "1",
+        "unit_price": "929.77",
+        "total": "929.77"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2863
+  }
+}

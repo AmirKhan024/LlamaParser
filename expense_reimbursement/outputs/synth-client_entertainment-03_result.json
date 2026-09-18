@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Bay Leaf Diner",
+    "date": "2026-06-24",
+    "amount": "5479.27",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Novagen Pharma",
+      "attendees": "3"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "5479.27",
+    "grand_total": "5479.27",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "3",
+        "unit_price": "1826.42",
+        "total": "5479.27"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1958
+  }
+}

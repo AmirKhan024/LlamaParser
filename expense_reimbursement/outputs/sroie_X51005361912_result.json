@@ -1,0 +1,40 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "TEO HENG STATIONERY & BOOKS",
+    "date": "29/01/2018",
+    "amount": "1.05",
+    "currency": "RM",
+    "subtotal": "1.00",
+    "tax": "0.06",
+    "line_items": [
+      {
+        "name": "CARBON PAPER",
+        "quantity": "2",
+        "unit_price": "0.50",
+        "total": "1.00"
+      }
+    ],
+    "additional_fields": {
+      "GST No.": "000689913856",
+      "Receipt No.": "CS1801/27224",
+      "Total Qty.": "2",
+      "Rounding": "-0.01",
+      "Change": "0.00",
+      "GST Summary": "SR 6.00 1.00 0.06",
+      "Note": "(*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax)."
+    },
+    "extraction_notes": [
+      "Combined item description from separate row"
+    ],
+    "confidence": 0.9
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 8.968999999924563,
+  "tokens": {
+    "prompt": 2019,
+    "completion": 900,
+    "total": 2919
+  }
+}

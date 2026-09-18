@@ -1,0 +1,37 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "SECURE PARKING CORPORATION S/B",
+    "date": "23.03.18",
+    "amount": "1.00",
+    "currency": "RM",
+    "subtotal": "0.94",
+    "tax": "0.06",
+    "line_items": [
+      {
+        "name": "Parking Fee",
+        "total": "RM 0.94"
+      }
+    ],
+    "additional_fields": {
+      "receipt_number": "K0131800235697",
+      "entry_time": "23.03.18 14:59",
+      "exit_time": "23.03.18 15:27",
+      "park_duration": "0:00:28",
+      "kind_of_payment": "CASH",
+      "rate_note": "Rate incl. 6% GST",
+      "gst_number": "000296652800",
+      "tel_number": "1300881698",
+      "address": "Riverwalk Village, Batu 3, Jalan Ipoh, 51200 KL"
+    },
+    "extraction_notes": [],
+    "confidence": 0.98
+  },
+  "duration_seconds": 23.453000000095926,
+  "tokens": {
+    "prompt": 1749,
+    "completion": 781,
+    "total": 2530
+  }
+}

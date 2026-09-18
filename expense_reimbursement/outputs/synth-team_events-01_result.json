@@ -1,0 +1,29 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Copper Kettle",
+    "date": "2026-06-16",
+    "amount": "2162.30",
+    "currency": "INR",
+    "additional_fields": {
+      "guests": "2"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "2162.30",
+    "grand_total": "2162.30",
+    "line_items": [
+      {
+        "name": "Food & beverages",
+        "quantity": "2",
+        "unit_price": "1081.15",
+        "total": "2162.30"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1927
+  }
+}

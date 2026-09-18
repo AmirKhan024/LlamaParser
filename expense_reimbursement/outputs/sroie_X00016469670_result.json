@@ -1,0 +1,37 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "OJC MARKETING SDN BHD",
+    "date": "15/01/2019 11:05:16 AM",
+    "amount": "193.00",
+    "currency": "SR",
+    "subtotal": "193.00",
+    "tax": "0.00",
+    "line_items": [
+      {
+        "name": "000000111 KINGS SAFETY SHOES KWD B05",
+        "quantity": "1",
+        "unit_price": "193.00",
+        "total": "193.00 SR"
+      }
+    ],
+    "additional_fields": {
+      "invoice_no": "PEGIV-1030765",
+      "cashier": "NG CHUAN MIN",
+      "sales_persor": "FATIN",
+      "bill_to": "THE PEAK QUARRY WORKS",
+      "address": ".",
+      "approval_code": "000",
+      "visa_card": "xxxxxxxxxxxx4318"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 2.73499999998603,
+  "tokens": {
+    "prompt": 1919,
+    "completion": 868,
+    "total": 2787
+  }
+}

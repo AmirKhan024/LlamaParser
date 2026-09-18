@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Copper Kettle",
+    "date": "2026-07-02",
+    "amount": "4468.50",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Novagen Pharma",
+      "attendees": "4"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "4468.50",
+    "grand_total": "4468.50",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "4",
+        "unit_price": "1117.12",
+        "total": "4468.50"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1954
+  }
+}

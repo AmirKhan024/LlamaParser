@@ -1,0 +1,446 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "NetSpeed Broadband\nMonthly Bill\nAccount: 1404375587\nBilling period: June 2026\nPlan charges                949.76     949.76\nTaxes                    1  167.61     167.61\n                                      Amount Due: 1117.37 INR",
+      "md": "# NetSpeed Broadband\n\nMonthly Bill\n\n**Account**: 1404375587\n**Billing period**: June 2026\n\n| Plan charges | 1 | 949.76 | 949.76 |\n| ------------ | - | ------ | ------ |\n| Taxes        | 1 | 167.61 | 167.61 |\n\n\n**Amount Due: ₹1117.37 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 649,
+          "original_height": 201,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 433,
+              "y": 166,
+              "w": 193,
+              "h": 15,
+              "confidence": 0.993,
+              "text": "Amount Due: 1117.37 INR"
+            },
+            {
+              "x": 323,
+              "y": 133,
+              "w": 46,
+              "h": 19,
+              "confidence": 0.99,
+              "text": "167.61"
+            },
+            {
+              "x": 302,
+              "y": 136,
+              "w": 10,
+              "h": 12,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 473,
+              "y": 132,
+              "w": 43,
+              "h": 20,
+              "confidence": 0.908,
+              "text": "167.61"
+            },
+            {
+              "x": 19,
+              "y": 130,
+              "w": 39,
+              "h": 24,
+              "confidence": 1,
+              "text": "Taxes"
+            },
+            {
+              "x": 19,
+              "y": 107,
+              "w": 78,
+              "h": 21,
+              "confidence": 0.997,
+              "text": "Plan charges"
+            },
+            {
+              "x": 472,
+              "y": 108,
+              "w": 44,
+              "h": 19,
+              "confidence": 1,
+              "text": "949.76"
+            },
+            {
+              "x": 323,
+              "y": 108,
+              "w": 46,
+              "h": 19,
+              "confidence": 1,
+              "text": "949.76"
+            },
+            {
+              "x": 22,
+              "y": 63,
+              "w": 118,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Account: 1404375587"
+            },
+            {
+              "x": 22,
+              "y": 47,
+              "w": 68,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "Monthly Bill"
+            },
+            {
+              "x": 21,
+              "y": 18,
+              "w": 220,
+              "h": 25,
+              "confidence": 1,
+              "text": "NetSpeed Broadband"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 10.83,
+          "width": 145.818,
+          "x": 6.848,
+          "y": 29.93,
+          "original_width": 608,
+          "original_height": 46,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# NetSpeed Broadband",
+          "value": "NetSpeed Broadband",
+          "lvl": 1,
+          "bBox": {
+            "x": 7.726959228515625,
+            "y": 8.39760798578677,
+            "w": 51.59529578167459,
+            "h": 5.591759490966798,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.73,
+              "y": 8.4,
+              "w": 51.6,
+              "h": 5.59,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Monthly Bill",
+          "value": "Monthly Bill",
+          "bBox": {
+            "x": 7.536298668902853,
+            "y": 15.676050667140796,
+            "w": 15.554038139011547,
+            "h": 2.997241675335428,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.54,
+              "y": 15.68,
+              "w": 15.55,
+              "h": 3,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Account**: 1404375587\n**Billing period**: June 2026",
+          "value": "**Account**: 1404375587\n**Billing period**: June 2026",
+          "bBox": {
+            "x": 7.3728,
+            "y": 15.7248,
+            "w": 32.5632,
+            "h": 9.676800000000002,
+            "confidence": 0.82,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 18.48,
+              "w": 32.88,
+              "h": 6.72,
+              "startIndex": 0,
+              "endIndex": 52,
+              "confidence": 0.82,
+              "label": "key-value-region"
+            },
+            {
+              "x": 6.96,
+              "y": 18.48,
+              "w": 28.32,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 6.96,
+              "y": 21.36,
+              "w": 32.88,
+              "h": 3.84,
+              "startIndex": 24,
+              "endIndex": 52,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Plan charges | 1 | 949.76 | 949.76 |\n| ------------ | - | ------ | ------ |\n| Taxes        | 1 | 167.61 | 167.61 |",
+          "html": "<table>\n    <tr>\n        <td>Plan charges</td>\n<td>1</td>\n<td>949.76</td>\n<td>949.76</td>\n    </tr>\n<tr>\n        <td>Taxes</td>\n<td>1</td>\n<td>167.61</td>\n<td>167.61</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Plan charges",
+              "1",
+              "949.76",
+              "949.76"
+            ],
+            [
+              "Taxes",
+              "1",
+              "167.61",
+              "167.61"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Plan charges\",\"1\",\"949.76\",\"949.76\"\n\"Taxes\",\"1\",\"167.61\",\"167.61\"",
+          "bBox": {
+            "x": 6.848570450492526,
+            "y": 29.930123569654388,
+            "w": 145.81803111200745,
+            "h": 10.830657229216204,
+            "confidence": 0.9,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.85,
+              "y": 29.93,
+              "w": 145.82,
+              "h": 10.83,
+              "startIndex": 0,
+              "endIndex": 115,
+              "confidence": 0.9,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Amount Due: ₹1117.37 INR**",
+          "value": "**Amount Due: ₹1117.37 INR**",
+          "bBox": {
+            "x": 105.67679999999999,
+            "y": 43.7184,
+            "w": 46.6944,
+            "h": 3.1103999999999985,
+            "confidence": 0.92,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 105.6,
+              "y": 43.2,
+              "w": 46.32,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.931,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.049,
+            "w": 0.168,
+            "h": 0.032
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.344,
+            "y": 0.253,
+            "w": 0.152,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.111,
+            "w": 0.039,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.067,
+            "y": 0.111,
+            "w": 0.048,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.344,
+            "y": 0.253,
+            "w": 0.072,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.419,
+            "y": 0.253,
+            "w": 0.077,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.79,
+          "label": "table",
+          "bbox": {
+            "x": 0.022,
+            "y": 0.173,
+            "w": 0.475,
+            "h": 0.063
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.091,
+            "w": 0.051,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.129,
+            "w": 0.106,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.63,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.091,
+            "w": 0.106,
+            "h": 0.057
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.176,
+            "w": 0.055,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

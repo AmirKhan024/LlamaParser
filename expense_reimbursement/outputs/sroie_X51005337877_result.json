@@ -1,0 +1,61 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "UROKO JAPANESE CUISINE SDN BHD",
+    "date": "20/03/2018 6:41:02 PM",
+    "amount": "53.00",
+    "currency": "SR",
+    "restaurant_gstin": "001126838272",
+    "subtotal": "46.00",
+    "cgst": "3.00",
+    "grand_total": "53.00",
+    "line_items": [
+      {
+        "name": "KO NABE INANIWA UDON",
+        "quantity": "1",
+        "unit_price": "24.00",
+        "total": "24.00"
+      },
+      {
+        "name": "GREEN TEA",
+        "quantity": "1",
+        "unit_price": "1.00",
+        "total": "1.00"
+      },
+      {
+        "name": "GYOZA 5pcs",
+        "quantity": "1",
+        "unit_price": "15.00",
+        "total": "15.00"
+      },
+      {
+        "name": "GARLIC CHAHAN",
+        "quantity": "1",
+        "total": "6.00"
+      }
+    ],
+    "additional_fields": {
+      "bill_no": "01H-25029",
+      "cashier": "RESAN",
+      "table_no": "S09",
+      "discount": "(.00)",
+      "service_charge": "4.00",
+      "gst": "3.00",
+      "gst_summary_percent": "6.00",
+      "gst_summary_amount_rm": "50.00",
+      "gst_summary_tax_rm": "3.00"
+    },
+    "extraction_notes": [
+      "combined multi-line description for KO NABE INANIWA UDON into single name",
+      "omitted unit_price for GARLIC CHAHAN as not provided"
+    ],
+    "confidence": 0.96
+  },
+  "duration_seconds": 19.094000000040978,
+  "tokens": {
+    "prompt": 1924,
+    "completion": 1329,
+    "total": 3253
+  }
+}

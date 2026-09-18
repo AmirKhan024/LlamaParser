@@ -1,0 +1,46 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "BAR WANG RICE@PERMAS JAYA",
+    "date": "25 Mar 2018 18:26",
+    "amount": "$8.50",
+    "currency": "$",
+    "additional_fields": {
+      "invoice_number": "OR18032502170439",
+      "gst_reg_number": "000656195584",
+      "payment_mode": "CASH",
+      "change": "$0.00",
+      "vendor_address": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor",
+      "handwriting": "A02112",
+      "gst_summary_amount": "8.02",
+      "gst_summary_tax": "0.48"
+    },
+    "extraction_notes": [],
+    "confidence": 0.9,
+    "subtotal": "8.02",
+    "cgst": "0.48",
+    "grand_total": "$8.50",
+    "line_items": [
+      {
+        "name": "SR 100100000060- 4 Vege",
+        "quantity": "1",
+        "unit_price": "$5.50",
+        "total": "$5.50"
+      },
+      {
+        "name": "SR 100100000057-Fried Noodle (L)",
+        "quantity": "1",
+        "unit_price": "$3.00",
+        "total": "$3.00"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 23.796999999904074,
+  "tokens": {
+    "prompt": 1907,
+    "completion": 1923,
+    "total": 3830
+  }
+}

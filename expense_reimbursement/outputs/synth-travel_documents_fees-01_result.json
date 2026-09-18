@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "GlobalTravel Docs",
+    "date": "2026-02-15",
+    "amount": "107.25",
+    "currency": "USD",
+    "additional_fields": {
+      "applicant": "Baljiwan Badal",
+      "document_title": "Fee Receipt"
+    },
+    "line_items": [
+      {
+        "name": "Forex card loading fee",
+        "total": "107.25"
+      }
+    ],
+    "extraction_notes": [
+      "The table header for the first column is missing in the markdown, but the value '1 107.25' appears to be a misparsed or duplicated entry. Based on the total and the second column, the fee amount is 107.25."
+    ],
+    "confidence": 0.9
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1934
+  }
+}

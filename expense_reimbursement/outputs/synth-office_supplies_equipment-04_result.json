@@ -1,0 +1,24 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "OfficeMart",
+    "date": "2026-03-19",
+    "amount": "650.00",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Wireless mouse",
+        "quantity": "1",
+        "unit_price": "650",
+        "total": "650"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1855
+  }
+}

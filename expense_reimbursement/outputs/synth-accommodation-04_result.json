@@ -1,0 +1,36 @@
+{
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "Harborview Residency",
+    "date": "2026-03-14",
+    "amount": "20913.64",
+    "currency": "INR",
+    "subtotal": "20913.64",
+    "line_items": [
+      {
+        "name": "Room charge x 2 night(s)",
+        "quantity": "2",
+        "unit_price": "10096.06",
+        "total": "20192.12"
+      },
+      {
+        "name": "Minibar",
+        "quantity": "1",
+        "unit_price": "721.52",
+        "total": "721.52"
+      }
+    ],
+    "additional_fields": {
+      "guest_name": "Hardik Dasgupta",
+      "check_in_date": "2026-03-14",
+      "nights": "2"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2059
+  }
+}

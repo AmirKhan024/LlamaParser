@@ -1,0 +1,22 @@
+{
+  "document_type": "telecom_bill",
+  "clean_json": {
+    "document_type": "telecom_bill",
+    "vendor_name": "Signal Plus Mobile",
+    "date": "August 2026",
+    "amount": "1715.21",
+    "currency": "INR",
+    "account_number": "5400917946",
+    "billing_period": "August 2026",
+    "subtotal": "1457.93",
+    "tax": "257.28",
+    "total": "1715.21",
+    "additional_fields": {},
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1926
+  }
+}

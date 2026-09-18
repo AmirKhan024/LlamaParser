@@ -1,0 +1,62 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "PASAR MINI JIN SENG",
+    "date": "03/03/18",
+    "amount": "34.57",
+    "currency": "RM",
+    "subtotal": "33.80",
+    "tax": "0.77",
+    "line_items": [
+      {
+        "name": "VEGETABLES",
+        "quantity": "1",
+        "unit_price": "16.00",
+        "total": "16.00"
+      },
+      {
+        "name": "TELUR / TELUR MASIN",
+        "quantity": "1",
+        "unit_price": "2.40",
+        "total": "2.40"
+      },
+      {
+        "name": "VEGETABLES",
+        "quantity": "1",
+        "unit_price": "1.80",
+        "total": "1.80"
+      },
+      {
+        "name": "GL STEWED PORK 256G",
+        "quantity": "1",
+        "unit_price": "6.80",
+        "total": "6.80"
+      },
+      {
+        "name": "BOTAN IKAN SARDIN 425G",
+        "quantity": "1",
+        "unit_price": "6.80",
+        "total": "6.80"
+      }
+    ],
+    "additional_fields": {
+      "GST Summary": "SR: 13.60, 0.77; ZRI: 20.20, 0.00",
+      "Payment Details": "CASH 50.00, CASH CHANGE 16.20",
+      "GST NO.": "000150511616",
+      "Co No.": "JM0195368-D",
+      "TAXINV": "001-1541798",
+      "Cashier": "CASHIER",
+      "Item Count": "5"
+    },
+    "extraction_notes": [],
+    "confidence": 0.9
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 24.983999999938533,
+  "tokens": {
+    "prompt": 1938,
+    "completion": 1094,
+    "total": 3032
+  }
+}

@@ -1,0 +1,581 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Local Conveyance Claim\nLocal Conveyance / Mileage Claim Form\nEmployee: Ekavir Tiwari\nVehicle: Four-wheeler (own)\nDate: 2026-02-23\nPurpose: Client visit\nClient: Bluepeak Logistics\n\n Description                         Qty  Rate    Amount\n 93 km @ Rs 9/km                     93   9       837.00\n\n                                                  T-t-l: 3827 00 IND\n                                                  Total: 2837.00 INR",
+      "md": "# Local Conveyance Claim\n\nLocal Conveyance / Mileage Claim Form\n**Employee**: Ekavir Tiwari\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-02-23\n**Purpose**: Client visit\n**Client**: Bluepeak Logistics\n\n| Description     | Qty | Rate | Amount |\n| --------------- | --- | ---- | ------ |\n| 93 km @ Rs 9/km | 93  | 9    | 837.00 |\n\n\n**Total: ₹837.00 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 254,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 30,
+              "y": 184,
+              "w": 97,
+              "h": 16,
+              "confidence": 0.976,
+              "text": "93 km @ Rs 9/km"
+            },
+            {
+              "x": 497,
+              "y": 184,
+              "w": 43,
+              "h": 17,
+              "confidence": 1,
+              "text": "837.00"
+            },
+            {
+              "x": 301,
+              "y": 184,
+              "w": 20,
+              "h": 17,
+              "confidence": 1,
+              "text": "93"
+            },
+            {
+              "x": 498,
+              "y": 159,
+              "w": 50,
+              "h": 15,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 30,
+              "y": 159,
+              "w": 68,
+              "h": 15,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 391,
+              "y": 157,
+              "w": 34,
+              "h": 19,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 301,
+              "y": 157,
+              "w": 27,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 110,
+              "w": 142,
+              "h": 14,
+              "confidence": 0.992,
+              "text": "Client: Bluepeak Logistics"
+            },
+            {
+              "x": 22,
+              "y": 96,
+              "w": 112,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Purpose: Client visit"
+            },
+            {
+              "x": 22,
+              "y": 68,
+              "w": 154,
+              "h": 14,
+              "confidence": 0.994,
+              "text": "Vehicle: Four-wheeler (own)"
+            },
+            {
+              "x": 22,
+              "y": 54,
+              "w": 134,
+              "h": 13,
+              "confidence": 0.999,
+              "text": "Employee: Ekavir Tiwari"
+            },
+            {
+              "x": 22,
+              "y": 20,
+              "w": 226,
+              "h": 18,
+              "confidence": 0.999,
+              "text": "Local Conveyance Claim"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.48,
+          "width": 150.006,
+          "x": 8.116,
+          "y": 40.885,
+          "original_width": 626,
+          "original_height": 57,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Local Conveyance Claim",
+          "value": "Local Conveyance Claim",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.488881782863452,
+            "y": 9.481472247579823,
+            "w": 54.423042894446326,
+            "h": 4.8556743124256965,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 9.12,
+              "w": 54.24,
+              "h": 4.32,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Local Conveyance / Mileage Claim Form\n**Employee**: Ekavir Tiwari\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-02-23\n**Purpose**: Client visit\n**Client**: Bluepeak Logistics",
+          "value": "Local Conveyance / Mileage Claim Form\n**Employee**: Ekavir Tiwari\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-02-23\n**Purpose**: Client visit\n**Client**: Bluepeak Logistics",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.342400000000001,
+            "w": 52.53120000000001,
+            "h": 20.044800000000006,
+            "confidence": 0.89,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.29,
+              "y": 14.34,
+              "w": 52.53,
+              "h": 20.04,
+              "startIndex": 0,
+              "endIndex": 174,
+              "confidence": 0.89,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.4,
+              "y": 14.16,
+              "w": 52.32,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 32.16,
+              "h": 3.12,
+              "startIndex": 38,
+              "endIndex": 64,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 20.64,
+              "w": 36.96,
+              "h": 3.36,
+              "startIndex": 66,
+              "endIndex": 96,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 24,
+              "w": 22.8,
+              "h": 2.88,
+              "startIndex": 98,
+              "endIndex": 117,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 27.36,
+              "w": 26.88,
+              "h": 3.36,
+              "startIndex": 119,
+              "endIndex": 143,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 30.72,
+              "w": 34.08,
+              "h": 3.36,
+              "startIndex": 145,
+              "endIndex": 174,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description     | Qty | Rate | Amount |\n| --------------- | --- | ---- | ------ |\n| 93 km @ Rs 9/km | 93  | 9    | 837.00 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>93 km @ Rs 9/km</td>\n<td>93</td>\n<td>9</td>\n<td>837.00</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "93 km @ Rs 9/km",
+              "93",
+              "9",
+              "837.00"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"93 km @ Rs 9/km\",\"93\",\"9\",\"837.00\"",
+          "bBox": {
+            "x": 8.116644287109375,
+            "y": 40.885265449855645,
+            "w": 150.00619453761888,
+            "h": 13.480658091669497,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.12,
+              "y": 40.89,
+              "w": 150.01,
+              "h": 13.48,
+              "startIndex": 0,
+              "endIndex": 124,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "possible_merged_columns",
+              "details": "col 0 'Description': 1/1 (100%) have interior whitespace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹837.00 INR**",
+          "value": "**Total: ₹837.00 INR**",
+          "bBox": {
+            "x": 128.1024,
+            "y": 57.54240000000001,
+            "w": 29.798400000000015,
+            "h": 2.9376000000000033,
+            "confidence": 0.94,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 128.1,
+              "y": 57.54,
+              "w": 29.8,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.94,
+              "label": "key-value-region"
+            },
+            {
+              "x": 127.2,
+              "y": 56.64,
+              "w": 30.48,
+              "h": 4.32,
+              "startIndex": 9,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.813,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.96,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.237,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.177,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "text",
+          "bbox": {
+            "x": 0.059,
+            "y": 0.181,
+            "w": 0.079,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.89,
+          "label": "text",
+          "bbox": {
+            "x": 0.449,
+            "y": 0.334,
+            "w": 0.064,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.162,
+            "w": 0.037,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.417,
+            "y": 0.333,
+            "w": 0.097,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.18,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.068,
+            "y": 0.162,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.143,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.142,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.075,
+            "y": 0.102,
+            "w": 0.056,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.123,
+            "w": 0.084,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.417,
+            "y": 0.334,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.044,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.79,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.083,
+            "w": 0.172,
+            "h": 0.116
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.078,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.083,
+            "w": 0.17,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.11,
+            "y": 0.084,
+            "w": 0.087,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

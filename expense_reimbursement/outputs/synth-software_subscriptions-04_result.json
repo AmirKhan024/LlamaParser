@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "InsightBoard Analytics",
+    "date": "2026-08-23",
+    "amount": "111.08",
+    "currency": "USD",
+    "additional_fields": {
+      "billed_to": "Konkan Digital Systems Pvt Ltd",
+      "invoice_type": "Invoice"
+    },
+    "line_items": [
+      {
+        "name": "Annual subscription",
+        "quantity": "1",
+        "unit_price": "111.08",
+        "total": "111.08"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1909
+  }
+}

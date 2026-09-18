@@ -1,0 +1,23 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "RideNow",
+    "date": "2026-05-09",
+    "amount": "251.39",
+    "currency": "INR",
+    "additional_fields": {
+      "pickup": "Prabhu Street",
+      "drop": "Airport Terminal",
+      "driver": "Aarav"
+    },
+    "extraction_notes": [
+      "Corrected fare amount from '1 251.39' to '251.39' based on the explicit 'Total: ₹251.39 INR' line, assuming the leading '1' was an OCR artifact or misread label."
+    ],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1914
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "DataMinds Workshop\nInvoice\nParticipant: Abhiram Rajagopalan\nDate: 2026-02-02\n\nDescription                     Qty  Rate         Amount\nAnnual Tech Conference Pass     1    15425.27    15425.27\n                                                 T-t-l: 315425-27 JND\n                                                 Total: 715425.27 INR",
+      "md": "# DataMinds Workshop\n\nInvoice\n\n**Participant**: Abhiram Rajagopalan\n\n**Date**: 2026-02-02\n\n| Description                 | Qty | Rate     | Amount   |\n| --------------------------- | --- | -------- | -------- |\n| Annual Tech Conference Pass | 1   | 15425.27 | 15425.27 |\n\n\n**Total**: ₹15425.27 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 665,
+          "original_height": 211,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 502,
+              "y": 177,
+              "w": 142,
+              "h": 16,
+              "confidence": 0.952,
+              "text": "Total: 715425.27 INR"
+            },
+            {
+              "x": 30,
+              "y": 145,
+              "w": 158,
+              "h": 13,
+              "confidence": 0.999,
+              "text": "Annual Tech Conference Pass"
+            },
+            {
+              "x": 528,
+              "y": 142,
+              "w": 55,
+              "h": 18,
+              "confidence": 1,
+              "text": "15425.27"
+            },
+            {
+              "x": 409,
+              "y": 142,
+              "w": 55,
+              "h": 18,
+              "confidence": 1,
+              "text": "15425.27"
+            },
+            {
+              "x": 526,
+              "y": 116,
+              "w": 53,
+              "h": 17,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 407,
+              "y": 115,
+              "w": 34,
+              "h": 19,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 339,
+              "y": 114,
+              "w": 32,
+              "h": 24,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 21,
+              "y": 68,
+              "w": 95,
+              "h": 13,
+              "confidence": 0.992,
+              "text": "Date: 2026-02-02"
+            },
+            {
+              "x": 20,
+              "y": 53,
+              "w": 186,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "Participant: Abhiram Rajagopalan"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.432,
+          "width": 149.813,
+          "x": 8.188,
+          "y": 30.835,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# DataMinds Workshop",
+          "value": "DataMinds Workshop",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.625892440132473,
+            "y": 9.535198974609376,
+            "w": 46.456225851307735,
+            "h": 4.837292513640031,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.63,
+              "y": 9.54,
+              "w": 46.46,
+              "h": 4.84,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice",
+          "value": "Invoice",
+          "bBox": {
+            "x": 8.625214949898098,
+            "y": 14.575766024382219,
+            "w": 9.571914805536686,
+            "h": 2.5051291092582377,
+            "confidence": 0.89,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.63,
+              "y": 14.58,
+              "w": 9.57,
+              "h": 2.51,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.89,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Participant**: Abhiram Rajagopalan",
+          "value": "**Participant**: Abhiram Rajagopalan",
+          "bBox": {
+            "x": 8.6016,
+            "y": 14.688000000000002,
+            "w": 43.92959999999999,
+            "h": 9.1584,
+            "confidence": 0.87,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.92,
+              "y": 17.04,
+              "w": 44.64,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 35,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-02-02",
+          "value": "**Date**: 2026-02-02",
+          "bBox": {
+            "x": 16.632574728260867,
+            "y": 21.164765863833225,
+            "w": 14.557623556385868,
+            "h": 2.6084062659222154,
+            "confidence": 0.93,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 16.63,
+              "y": 21.16,
+              "w": 14.56,
+              "h": 2.61,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.93,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                 | Qty | Rate     | Amount   |\n| --------------------------- | --- | -------- | -------- |\n| Annual Tech Conference Pass | 1   | 15425.27 | 15425.27 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Annual Tech Conference Pass</td>\n<td>1</td>\n<td>15425.27</td>\n<td>15425.27</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Annual Tech Conference Pass",
+              "1",
+              "15425.27",
+              "15425.27"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Annual Tech Conference Pass\",\"1\",\"15425.27\",\"15425.27\"",
+          "bBox": {
+            "x": 8.188449494735055,
+            "y": 30.83551940917969,
+            "w": 149.81332954738448,
+            "h": 13.43262395444124,
+            "confidence": 0.97,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.19,
+              "y": 30.84,
+              "w": 149.81,
+              "h": 13.43,
+              "startIndex": 0,
+              "endIndex": 178,
+              "confidence": 0.97,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹15425.27 INR",
+          "value": "**Total**: ₹15425.27 INR",
+          "bBox": {
+            "x": 124.1088,
+            "y": 47.52000000000001,
+            "w": 33.792,
+            "h": 2.9376000000000033,
+            "confidence": 0.93,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 124.11,
+              "y": 47.52,
+              "w": 33.79,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.93,
+              "label": "key-value-region"
+            },
+            {
+              "x": 123.6,
+              "y": 46.8,
+              "w": 34.08,
+              "h": 3.84,
+              "startIndex": 11,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.833,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.94,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.178,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.9,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.151,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.081,
+            "y": 0.103,
+            "w": 0.09,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.404,
+            "y": 0.275,
+            "w": 0.11,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.122,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.051,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.024,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.405,
+            "y": 0.275,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.437,
+            "y": 0.275,
+            "w": 0.077,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.78,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.031,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.73,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.143,
+            "h": 0.053
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

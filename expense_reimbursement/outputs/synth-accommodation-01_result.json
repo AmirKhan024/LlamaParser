@@ -1,0 +1,36 @@
+{
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "The Sahyadri Grand",
+    "date": "2026-08-22",
+    "amount": "10248.95",
+    "currency": "INR",
+    "additional_fields": {
+      "guest_name": "Anjali Saha",
+      "check_in_date": "2026-08-22",
+      "nights": "1"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "10248.95",
+    "line_items": [
+      {
+        "name": "Room charge x 1 night(s)",
+        "quantity": "1",
+        "unit_price": "9288.29",
+        "total": "9288.29"
+      },
+      {
+        "name": "Minibar",
+        "quantity": "1",
+        "unit_price": "960.66",
+        "total": "960.66"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2053
+  }
+}

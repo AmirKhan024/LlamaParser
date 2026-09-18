@@ -1,0 +1,385 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "VisaAssist Services\nFee Receipt\nApplicant: Suhani Tripathi\nDate: 2026-02-14\nTravel insurance premium    1 79.20  79.20\n\n                            Total: $79.20 USD",
+      "md": "# VisaAssist Services\n\nFee Receipt\n\nApplicant: Suhani Tripathi\nDate: 2026-02-14\n\n| Travel insurance premium | 1 | 79.20 | 79.20 |\n| ------------------------ | - | ----- | ----- |\n\n\n**Total: $79.20 USD**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 525,
+          "original_height": 179,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 351,
+              "y": 140,
+              "w": 153,
+              "h": 18,
+              "confidence": 0.997,
+              "text": "Total: $79.20 USD"
+            },
+            {
+              "x": 428,
+              "y": 105,
+              "w": 39,
+              "h": 18,
+              "confidence": 1,
+              "text": "79.20"
+            },
+            {
+              "x": 21,
+              "y": 105,
+              "w": 143,
+              "h": 16,
+              "confidence": 0.992,
+              "text": "Travel insurance premium"
+            },
+            {
+              "x": 21,
+              "y": 77,
+              "w": 98,
+              "h": 16,
+              "confidence": 0.997,
+              "text": "Date: 2026-02-14"
+            },
+            {
+              "x": 19,
+              "y": 43,
+              "w": 67,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "Fee Receipt"
+            },
+            {
+              "x": 21,
+              "y": 19,
+              "w": 159,
+              "h": 15,
+              "confidence": 0.998,
+              "text": "VisaAssist Services"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# VisaAssist Services",
+          "value": "VisaAssist Services",
+          "lvl": 1,
+          "bBox": {
+            "x": 7.0119116741677985,
+            "y": 8.179091710629672,
+            "w": 38.4779225225034,
+            "h": 3.1038344341775645,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.01,
+              "y": 8.18,
+              "w": 38.48,
+              "h": 3.1,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fee Receipt",
+          "value": "Fee Receipt",
+          "bBox": {
+            "x": 7.264711860988451,
+            "y": 14.171550949760107,
+            "w": 15.4601098102072,
+            "h": 3.2201563627823533,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.26,
+              "y": 14.17,
+              "w": 15.46,
+              "h": 3.22,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Applicant: Suhani Tripathi\nDate: 2026-02-14",
+          "value": "Applicant: Suhani Tripathi\nDate: 2026-02-14",
+          "bBox": {
+            "x": 7.0656,
+            "y": 14.1696,
+            "w": 35.020799999999994,
+            "h": 11.232000000000001,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.72,
+              "y": 17.52,
+              "w": 35.04,
+              "h": 7.92,
+              "startIndex": 0,
+              "endIndex": 42,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Travel insurance premium | 1 | 79.20 | 79.20 |\n| ------------------------ | - | ----- | ----- |",
+          "html": "<table>\n    <tr>\n        <td>Travel insurance premium</td>\n<td>1</td>\n<td>79.20</td>\n<td>79.20</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Travel insurance premium",
+              "1",
+              "79.20",
+              "79.20"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Travel insurance premium\",\"1\",\"79.20\",\"79.20\"",
+          "bBox": {
+            "x": 7.0656,
+            "y": 28.857600000000005,
+            "w": 106.29119999999999,
+            "h": 3.456000000000003,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 28.32,
+              "w": 34.32,
+              "h": 3.84,
+              "startIndex": 2,
+              "endIndex": 25,
+              "confidence": 0.91,
+              "label": "text"
+            },
+            {
+              "x": 104.64,
+              "y": 28.32,
+              "w": 9.36,
+              "h": 4.32,
+              "startIndex": 33,
+              "endIndex": 37,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: $79.20 USD**",
+          "value": "**Total: $79.20 USD**",
+          "bBox": {
+            "x": 86.5770359205163,
+            "y": 37.4110696543818,
+            "w": 36.44306428328803,
+            "h": 3.863667098335598,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 86.16,
+              "y": 36.72,
+              "w": 36.72,
+              "h": 4.32,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.92,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.047,
+            "w": 0.125,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.167,
+            "w": 0.112,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.279,
+            "y": 0.171,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.344,
+            "y": 0.171,
+            "w": 0.025,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.282,
+            "y": 0.216,
+            "w": 0.119,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.082,
+            "w": 0.05,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.082,
+            "w": 0.114,
+            "h": 0.065
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.105,
+            "w": 0.113,
+            "h": 0.042
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.323,
+            "y": 0.217,
+            "w": 0.078,
+            "h": 0.022
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.129,
+            "w": 0.076,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.282,
+            "y": 0.217,
+            "w": 0.037,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

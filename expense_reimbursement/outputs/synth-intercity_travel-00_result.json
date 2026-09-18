@@ -1,0 +1,25 @@
+{
+  "document_type": "unstructured_proof",
+  "clean_json": {
+    "document_type": "unstructured_proof",
+    "vendor_name": "Meridian Wings",
+    "date": "2026-01-04",
+    "amount": "9978.60",
+    "currency": "INR",
+    "additional_fields": {
+      "Passenger": "Yatan Acharya",
+      "PNR": "DW1762",
+      "Route": "Kolkata -> Bengaluru",
+      "Flight": "Meridian Wings 151",
+      "Base fare": "7982.88",
+      "Taxes & fees": "1995.72",
+      "Total": "9978.60"
+    },
+    "extraction_notes": [],
+    "confidence": 0.822
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2319
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "CloudSuite Pro",
+    "date": "2026-07-11",
+    "amount": "3279.50",
+    "currency": "INR",
+    "additional_fields": {
+      "billed_to": "Konkan Digital Systems Pvt Ltd"
+    },
+    "line_items": [
+      {
+        "name": "Monthly subscription",
+        "quantity": "1",
+        "unit_price": "3279.50",
+        "total": "3279.50"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1908
+  }
+}

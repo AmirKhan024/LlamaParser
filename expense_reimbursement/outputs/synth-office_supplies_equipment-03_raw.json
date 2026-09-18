@@ -1,0 +1,443 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                     PaperTrail Stationery\nRetail Invoice\n oice\nDate: 2026-05-21\nDesk organizer        1 340                340\nPrinter cartridge    1 1450               1450\nWireless mouse        1 650                650\n                      Total: 22440.00 INR",
+      "md": "# PaperTrail Stationery\n\n## Retail Invoice\n\n**Date**: 2026-05-21\n\n| Desk organizer    | 1 | 340  | 340  |\n| ----------------- | - | ---- | ---- |\n| Printer cartridge | 1 | 1450 | 1450 |\n| Wireless mouse    | 1 | 650  | 650  |\n\n\n**Total**: ₹2440.00 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 188,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 284,
+              "y": 124,
+              "w": 24,
+              "h": 16,
+              "confidence": 0.876,
+              "text": "650"
+            },
+            {
+              "x": 216,
+              "y": 124,
+              "w": 36,
+              "h": 15,
+              "confidence": 0.997,
+              "text": "1 650"
+            },
+            {
+              "x": 20,
+              "y": 122,
+              "w": 80,
+              "h": 17,
+              "confidence": 0.963,
+              "text": "Wireless mouse"
+            },
+            {
+              "x": 285,
+              "y": 108,
+              "w": 28,
+              "h": 15,
+              "confidence": 1,
+              "text": "1450"
+            },
+            {
+              "x": 216,
+              "y": 108,
+              "w": 42,
+              "h": 14,
+              "confidence": 0.978,
+              "text": "1 1450"
+            },
+            {
+              "x": 21,
+              "y": 107,
+              "w": 84,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Printer cartridge"
+            },
+            {
+              "x": 284,
+              "y": 90,
+              "w": 24,
+              "h": 16,
+              "confidence": 1,
+              "text": "340"
+            },
+            {
+              "x": 216,
+              "y": 90,
+              "w": 37,
+              "h": 15,
+              "confidence": 0.998,
+              "text": "1 340"
+            },
+            {
+              "x": 21,
+              "y": 89,
+              "w": 75,
+              "h": 15,
+              "confidence": 0.996,
+              "text": "Desk organizer"
+            },
+            {
+              "x": 20,
+              "y": 42,
+              "w": 101,
+              "h": 20,
+              "confidence": 1,
+              "text": "Retail Invoice"
+            },
+            {
+              "x": 108,
+              "y": 17,
+              "w": 149,
+              "h": 20,
+              "confidence": 1,
+              "text": "PaperTrail Stationery"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 14.166,
+          "width": 77.681,
+          "x": 5.29,
+          "y": 23.088,
+          "original_width": 324,
+          "original_height": 60,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# PaperTrail Stationery",
+          "value": "PaperTrail Stationery",
+          "lvl": 1,
+          "bBox": {
+            "x": 26.531638502038042,
+            "y": 6.249995637976605,
+            "w": 35.78078931725543,
+            "h": 3.929728814829951,
+            "confidence": 0.93,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 26.53,
+              "y": 6.25,
+              "w": 35.78,
+              "h": 3.93,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.93,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "md": "## Retail Invoice",
+          "value": "Retail Invoice",
+          "lvl": 2,
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 12.096000000000002,
+            "w": 29.491200000000003,
+            "h": 8.121600000000003,
+            "confidence": 0.79,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.04,
+              "y": 11.28,
+              "w": 24.96,
+              "h": 5.28,
+              "startIndex": 3,
+              "endIndex": 16,
+              "confidence": 1,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-05-21",
+          "value": "**Date**: 2026-05-21",
+          "bBox": {
+            "x": 5.4842034381368885,
+            "y": 16.793204398777174,
+            "w": 29.65323924189028,
+            "h": 3.2914615133534326,
+            "confidence": 0.79,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 15.84,
+              "w": 29.28,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Desk organizer    | 1 | 340  | 340  |\n| ----------------- | - | ---- | ---- |\n| Printer cartridge | 1 | 1450 | 1450 |\n| Wireless mouse    | 1 | 650  | 650  |",
+          "html": "<table>\n    <tr>\n        <td>Desk organizer</td>\n<td>1</td>\n<td>340</td>\n<td>340</td>\n    </tr>\n<tr>\n        <td>Printer cartridge</td>\n<td>1</td>\n<td>1450</td>\n<td>1450</td>\n    </tr>\n<tr>\n        <td>Wireless mouse</td>\n<td>1</td>\n<td>650</td>\n<td>650</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Desk organizer",
+              "1",
+              "340",
+              "340"
+            ],
+            [
+              "Printer cartridge",
+              "1",
+              "1450",
+              "1450"
+            ],
+            [
+              "Wireless mouse",
+              "1",
+              "650",
+              "650"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Desk organizer\",\"1\",\"340\",\"340\"\n\"Printer cartridge\",\"1\",\"1450\",\"1450\"\n\"Wireless mouse\",\"1\",\"650\",\"650\"",
+          "bBox": {
+            "x": 5.2224,
+            "y": 23.155200000000004,
+            "w": 77.7216,
+            "h": 14.169599999999999,
+            "confidence": 0.88,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.04,
+              "y": 22.56,
+              "w": 70.32,
+              "h": 12.24,
+              "startIndex": 2,
+              "endIndex": 155,
+              "confidence": 0.88,
+              "label": "table"
+            },
+            {
+              "x": 68.4,
+              "y": 22.8,
+              "w": 5.76,
+              "h": 3.84,
+              "startIndex": 26,
+              "endIndex": 28,
+              "confidence": 0.88,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹2440.00 INR",
+          "value": "**Total**: ₹2440.00 INR",
+          "bBox": {
+            "x": 53.452799999999996,
+            "y": 38.7072,
+            "w": 29.4912,
+            "h": 2.7648,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 53.45,
+              "y": 38.71,
+              "w": 29.49,
+              "h": 2.76,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.867,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.086,
+            "y": 0.036,
+            "w": 0.116,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.098,
+            "w": 0.062,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.76,
+          "label": "table",
+          "bbox": {
+            "x": 0.017,
+            "y": 0.134,
+            "w": 0.253,
+            "h": 0.082
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.098,
+            "w": 0.03,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.205,
+            "y": 0.224,
+            "w": 0.065,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.65,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.174,
+            "y": 0.224,
+            "w": 0.096,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.174,
+            "y": 0.224,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.59,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.097,
+            "w": 0.097,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_paragraph_title_2_v2.jpg",
+          "confidence": 0.58,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.07,
+            "w": 0.077,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.54,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.07,
+            "w": 0.096,
+            "h": 0.047
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.226,
+            "y": 0.138,
+            "w": 0.015,
+            "h": 0.013
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

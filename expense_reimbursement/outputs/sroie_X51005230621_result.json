@@ -1,0 +1,47 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "SIN LIANHAP SDN BHD",
+    "date": "05/02/2018",
+    "amount": "7.30",
+    "currency": "RM",
+    "subtotal": "7.30",
+    "tax": "0.41",
+    "line_items": [
+      {
+        "name": "PPD 4MM DENLIME",
+        "quantity": "1.000 PC",
+        "unit_price": "2.00",
+        "total": "1.887"
+      },
+      {
+        "name": "6023# GARDEN",
+        "quantity": "1.000 PC",
+        "unit_price": "5.30",
+        "total": "5.000"
+      }
+    ],
+    "additional_fields": {
+      "invoice_number": "H0003939",
+      "gst_summary_amount": "6.89",
+      "gst_summary_tax": "0.41",
+      "rounding_adjustment": "0.00",
+      "total_items": "2",
+      "payment": "7.30",
+      "change_due": "0.00",
+      "total_sales_excluding_gst": "6.69",
+      "total_sales_inclusive_of_gst": "7.30"
+    },
+    "extraction_notes": [
+      "Mapped line item totals and unit prices despite ambiguous table layout"
+    ],
+    "confidence": 0.85
+  },
+  "duration_seconds": 26.733999999938533,
+  "tokens": {
+    "prompt": 1973,
+    "completion": 1397,
+    "total": 3370
+  }
+}

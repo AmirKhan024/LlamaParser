@@ -1,0 +1,57 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "CROSS CHANNEL NETWORK SDN. BHD.",
+    "date": "31/12/2017 10:33:59 AM",
+    "amount": "7.95",
+    "currency": "RM",
+    "subtotal": "7.50",
+    "tax": "0.45",
+    "line_items": [
+      {
+        "name": "20MM HERO PVC CONDUIT PIPE @ 1.7000",
+        "quantity": "1",
+        "total": "1.80"
+      },
+      {
+        "name": "15A PVC CONNECTOR @ 1.8000",
+        "quantity": "1",
+        "total": "1.91"
+      },
+      {
+        "name": "R & B-C/CLIP 8MM X 100PCS CABLE CLIPS @ 3.5000",
+        "quantity": "1",
+        "total": "3.71"
+      },
+      {
+        "name": "3\" X 3\" 2862 A1 PVC NUT BOX @ 0.5000",
+        "quantity": "1",
+        "total": "0.53"
+      }
+    ],
+    "additional_fields": {
+      "gst_id": "001151500288",
+      "invoice_number": "BTG-050036",
+      "vendor_address": "47, JALAN MERANTI 1, SEK. 3, BANDAR UTAMA BATANG KALI, 44300 BATANG KALI, SELANGOR.",
+      "phone": "03-6057 9688",
+      "fax": "03-6057 9678",
+      "paid_amount": "10.00",
+      "change": "2.05",
+      "total_qty_tender": "4.00",
+      "total_amt_incl_gst": "7.95",
+      "gst_summary_amount": "7.50",
+      "gst_summary_tax": "0.45"
+    },
+    "extraction_notes": [
+      "interpreted Total Amt Payable as amount"
+    ],
+    "confidence": 0.96
+  },
+  "duration_seconds": 21.20299999997951,
+  "tokens": {
+    "prompt": 1995,
+    "completion": 1164,
+    "total": 3159
+  }
+}

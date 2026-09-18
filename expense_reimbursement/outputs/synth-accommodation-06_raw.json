@@ -1,0 +1,492 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Harborview Residency\nHotel Folio / Tax Invoice\nHotel Folio / 1\nGuest: Faris Jha\nCheck-in: 2026-02-02\nNights:2\n\n Description                 Qty  Rate    Amount\n Room charge x 2 night(s)    2    3166.74    6333.48\n  Tat-l z0008 48 IND\n Total: 76333.48 INR",
+      "md": "# Harborview Residency\n\nHotel Folio / Tax Invoice\n\nGuest: Faris Jha\n\nCheck-in: 2026-02-02\n\nNights: 2\n\n| Description              | Qty | Rate    | Amount  |\n| ------------------------ | --- | ------- | ------- |\n| Room charge x 2 night(s) | 2   | 3166.74 | 6333.48 |\n\n\n**Total: ₹6333.48 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 227,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 514,
+              "y": 192,
+              "w": 131,
+              "h": 17,
+              "confidence": 0.972,
+              "text": "Total: 76333.48 INR"
+            },
+            {
+              "x": 29,
+              "y": 158,
+              "w": 139,
+              "h": 16,
+              "confidence": 0.996,
+              "text": "Room charge x 2 night(s)"
+            },
+            {
+              "x": 523,
+              "y": 157,
+              "w": 51,
+              "h": 18,
+              "confidence": 0.995,
+              "text": "6333.48"
+            },
+            {
+              "x": 403,
+              "y": 157,
+              "w": 50,
+              "h": 15,
+              "confidence": 1,
+              "text": "3166.74"
+            },
+            {
+              "x": 328,
+              "y": 158,
+              "w": 15,
+              "h": 17,
+              "confidence": 1,
+              "text": "2"
+            },
+            {
+              "x": 28,
+              "y": 129,
+              "w": 71,
+              "h": 18,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 327,
+              "y": 127,
+              "w": 31,
+              "h": 24,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 20,
+              "y": 82,
+              "w": 53,
+              "h": 15,
+              "confidence": 1,
+              "text": "Nights:2"
+            },
+            {
+              "x": 21,
+              "y": 68,
+              "w": 118,
+              "h": 14,
+              "confidence": 0.982,
+              "text": "Check-in: 2026-02-02"
+            },
+            {
+              "x": 20,
+              "y": 17,
+              "w": 218,
+              "h": 23,
+              "confidence": 1,
+              "text": "Harborview Residency"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.394,
+          "width": 149.932,
+          "x": 8.267,
+          "y": 34.278,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Harborview Residency",
+          "value": "Harborview Residency",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.623919677734374,
+            "y": 9.098573933476988,
+            "w": 51.7736643915591,
+            "h": 4.983722653596298,
+            "confidence": 0.97,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.62,
+              "y": 9.1,
+              "w": 51.77,
+              "h": 4.98,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.97,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Hotel Folio / Tax Invoice",
+          "value": "Hotel Folio / Tax Invoice",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.515200000000002,
+            "w": 31.0272,
+            "h": 12.96,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 13.68,
+              "w": 30.72,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Guest: Faris Jha",
+          "value": "Guest: Faris Jha",
+          "bBox": {
+            "x": 8.632295558763587,
+            "y": 17.779186746348508,
+            "w": 21.342050568953805,
+            "h": 2.5838374925696326,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 17.28,
+              "w": 21.12,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Check-in: 2026-02-02",
+          "value": "Check-in: 2026-02-02",
+          "bBox": {
+            "x": 8.431637440557065,
+            "y": 14.449883303434953,
+            "w": 30.93327424422554,
+            "h": 13.045877141537876,
+            "confidence": 0.49,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 20.4,
+              "w": 28.32,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Nights: 2",
+          "value": "Nights: 2",
+          "bBox": {
+            "x": 8.384015688688859,
+            "y": 24.570430258046027,
+            "w": 12.142728324558425,
+            "h": 2.8900658648947015,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.38,
+              "y": 24.57,
+              "w": 12.14,
+              "h": 2.89,
+              "startIndex": 0,
+              "endIndex": 8,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description              | Qty | Rate    | Amount  |\n| ------------------------ | --- | ------- | ------- |\n| Room charge x 2 night(s) | 2   | 3166.74 | 6333.48 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Room charge x 2 night(s)</td>\n<td>2</td>\n<td>3166.74</td>\n<td>6333.48</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Room charge x 2 night(s)",
+              "2",
+              "3166.74",
+              "6333.48"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Room charge x 2 night(s)\",\"2\",\"3166.74\",\"6333.48\"",
+          "bBox": {
+            "x": 8.267111604110054,
+            "y": 34.27836834451427,
+            "w": 149.93234491762905,
+            "h": 13.394610064962638,
+            "confidence": 0.97,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.27,
+              "y": 34.28,
+              "w": 149.93,
+              "h": 13.39,
+              "startIndex": 0,
+              "endIndex": 163,
+              "confidence": 0.97,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹6333.48 INR**",
+          "value": "**Total: ₹6333.48 INR**",
+          "bBox": {
+            "x": 125.95199999999998,
+            "y": 49.248,
+            "w": 31.9488,
+            "h": 4.4928,
+            "confidence": 1,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 125.95,
+              "y": 49.25,
+              "w": 31.95,
+              "h": 4.49,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.777,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.95,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.198,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.93,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.169,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.9,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.414,
+            "y": 0.295,
+            "w": 0.1,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.444,
+            "y": 0.295,
+            "w": 0.07,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.415,
+            "y": 0.295,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.142,
+            "w": 0.04,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.04,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.1,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.071,
+            "y": 0.123,
+            "w": 0.048,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.057,
+            "y": 0.103,
+            "w": 0.04,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.069,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.027,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.101,
+            "h": 0.075
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

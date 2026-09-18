@@ -1,0 +1,74 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "F&P PHARMACY",
+    "date": "02/03/2018",
+    "amount": "31.90",
+    "currency": "RM",
+    "subtotal": "30.68",
+    "tax": "1.22",
+    "line_items": [
+      {
+        "name": "HOMECARE GASCOAL 50MG",
+        "quantity": "1",
+        "unit_price": "5.66",
+        "total": "6.00"
+      },
+      {
+        "name": "P.P NAPROXEN NA 275 MG",
+        "quantity": "1",
+        "unit_price": "6.00",
+        "total": "6.00"
+      },
+      {
+        "name": "YELLOW LOTION 30 ML",
+        "quantity": "1",
+        "unit_price": "4.30",
+        "total": "4.30"
+      },
+      {
+        "name": "PANADOL SOLUBLE TABLET",
+        "quantity": "1",
+        "unit_price": "3.58",
+        "total": "3.80"
+      },
+      {
+        "name": "PMS GAUZE BANDAGE 5CM X 4M",
+        "quantity": "1",
+        "unit_price": "6.13",
+        "total": "6.50"
+      },
+      {
+        "name": "DETTOL 50 ML",
+        "quantity": "1",
+        "unit_price": "5.00",
+        "total": "5.30"
+      }
+    ],
+    "additional_fields": {
+      "GST Reg NO": "001880666112",
+      "Doc No": "CS00110840",
+      "Cashier": "F&P",
+      "Time": "16.46.00",
+      "Change": "18.10",
+      "CASH": "50.00",
+      "Total Sales (Excluding GST)": "30.68",
+      "Discount": "0.00",
+      "Rounding": "0.00",
+      "Total Sales (Inclusive of GST)": "31.90",
+      "Total GST": "1.22",
+      "Total Qty": "6",
+      "GST Summary": "SR 6 20.38 1.22; ZRL 0 10.30 0.00"
+    },
+    "extraction_notes": [],
+    "confidence": 0.9
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 28.5,
+  "tokens": {
+    "prompt": 2298,
+    "completion": 1734,
+    "total": 4032
+  }
+}

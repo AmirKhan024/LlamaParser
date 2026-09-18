@@ -1,0 +1,32 @@
+{
+  "document_type": "local_conveyance_form",
+  "clean_json": {
+    "document_type": "local_conveyance_form",
+    "vendor_name": "Bluepeak Logistics",
+    "date": "2026-01-23",
+    "amount": "1260.00",
+    "currency": "INR",
+    "additional_fields": {
+      "purpose": "Client visit",
+      "vehicle": "Four-wheeler (own)"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "employee_name": "Tarak Chakrabarti",
+    "travel_entries": [
+      {
+        "description": "140 km @ Rs 9/km",
+        "quantity": "140",
+        "rate": "9",
+        "amount": "1260.00"
+      }
+    ],
+    "total_kms": "140",
+    "total_conveyance_amount": "1260.00",
+    "total_claimed": "1260.00"
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2018
+  }
+}

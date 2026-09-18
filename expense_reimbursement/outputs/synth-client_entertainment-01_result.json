@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Spice Route",
+    "date": "2026-02-23",
+    "amount": "5925.50",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Harrow Financial",
+      "attendees": "5"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "5925.50",
+    "grand_total": "5925.50",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "5",
+        "unit_price": "1185.10",
+        "total": "5925.50"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1953
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "QuickHail",
+    "date": "2026-02-16",
+    "amount": "415.28",
+    "currency": "INR",
+    "additional_fields": {
+      "Pickup": "Ganesan Ganj",
+      "Drop": "Narula Zila",
+      "Driver": "Banjeet"
+    },
+    "extraction_notes": [],
+    "confidence": 0.806,
+    "subtotal": "415.28",
+    "line_items": [
+      {
+        "name": "Fare",
+        "quantity": "1",
+        "unit_price": "415.28",
+        "total": "415.28"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2319
+  }
+}

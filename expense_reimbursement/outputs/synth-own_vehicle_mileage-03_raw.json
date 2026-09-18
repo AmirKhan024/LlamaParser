@@ -1,0 +1,614 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Local Conveyance Claim\nLocal Conveyance / Mileage Claim Form\nEmployee: Pahal Barad\nVehicle: Four-wheeler (own)\nDate:2026-07-30\nPurpose: Client visit\nClient: Harrow Financial\n\nDescription                          Qty  Rate  Amount\n108 km @ Rs 9/km                     108  9     972.00\n                                                T-t-l: 3073 00 IND\n                                                Total: 3972.00 INR",
+      "md": "# Local Conveyance Claim\n\nLocal Conveyance / Mileage Claim Form\n\n**Employee**: Pahal Barad\n\n**Vehicle**: Four-wheeler (own)\n\n**Date**: 2026-07-30\n\n**Purpose**: Client visit\n\n**Client**: Harrow Financial\n\n| Description      | Qty | Rate | Amount |\n| ---------------- | --- | ---- | ------ |\n| 108 km @ Rs 9/km | 108 | 9    | 972.00 |\n\n\n**Total: ₹972.00 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 254,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 520,
+              "y": 220,
+              "w": 125,
+              "h": 14,
+              "confidence": 0.975,
+              "text": "Total: 3972.00 INR"
+            },
+            {
+              "x": 30,
+              "y": 159,
+              "w": 68,
+              "h": 15,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 501,
+              "y": 157,
+              "w": 51,
+              "h": 18,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 309,
+              "y": 156,
+              "w": 29,
+              "h": 22,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 96,
+              "w": 112,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Purpose: Client visit"
+            },
+            {
+              "x": 22,
+              "y": 81,
+              "w": 96,
+              "h": 14,
+              "confidence": 1,
+              "text": "Date:2026-07-30"
+            },
+            {
+              "x": 21,
+              "y": 66,
+              "w": 155,
+              "h": 16,
+              "confidence": 0.994,
+              "text": "Vehicle: Four-wheeler (own)"
+            },
+            {
+              "x": 22,
+              "y": 20,
+              "w": 226,
+              "h": 18,
+              "confidence": 0.999,
+              "text": "Local Conveyance Claim"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.475,
+          "width": 150.019,
+          "x": 8.096,
+          "y": 40.89,
+          "original_width": 626,
+          "original_height": 57,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Local Conveyance Claim",
+          "value": "Local Conveyance Claim",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.501048743206521,
+            "y": 9.473716138756796,
+            "w": 54.397271993885866,
+            "h": 4.87475469838018,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 9.12,
+              "w": 54.24,
+              "h": 4.32,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Local Conveyance / Mileage Claim Form",
+          "value": "Local Conveyance / Mileage Claim Form",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.342400000000001,
+            "w": 52.53120000000001,
+            "h": 3.283200000000001,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 14.16,
+              "w": 52.08,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Employee**: Pahal Barad",
+          "value": "**Employee**: Pahal Barad",
+          "bBox": {
+            "x": 22.880817977241847,
+            "y": 17.74859937584919,
+            "w": 15.799323836616846,
+            "h": 2.593424258024794,
+            "confidence": 0.92,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 22.88,
+              "y": 17.75,
+              "w": 15.8,
+              "h": 2.59,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 0.92,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Vehicle**: Four-wheeler (own)",
+          "value": "**Vehicle**: Four-wheeler (own)",
+          "bBox": {
+            "x": 19.79723112686821,
+            "y": 21.290101358164915,
+            "w": 25.89611126443614,
+            "h": 3.0959341297978953,
+            "confidence": 0.92,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.8,
+              "y": 21.29,
+              "w": 25.9,
+              "h": 3.1,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 0.92,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-07-30",
+          "value": "**Date**: 2026-07-30",
+          "bBox": {
+            "x": 16.689039678158966,
+            "y": 24.6222224359927,
+            "w": 14.508017896569296,
+            "h": 2.5337899912958552,
+            "confidence": 0.92,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 16.69,
+              "y": 24.62,
+              "w": 14.51,
+              "h": 2.53,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.92,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Purpose**: Client visit",
+          "value": "**Purpose**: Client visit",
+          "bBox": {
+            "x": 20.700722868546194,
+            "y": 27.951724707561993,
+            "w": 14.339435079823371,
+            "h": 2.5460081017535665,
+            "confidence": 0.93,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 20.7,
+              "y": 27.95,
+              "w": 14.34,
+              "h": 2.55,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 0.93,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Client**: Harrow Financial",
+          "value": "**Client**: Harrow Financial",
+          "bBox": {
+            "x": 18.165712041440216,
+            "y": 31.246962174125343,
+            "w": 22.36543499490489,
+            "h": 2.603548398225203,
+            "confidence": 0.94,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 18.17,
+              "y": 31.25,
+              "w": 22.37,
+              "h": 2.6,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 0.94,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description      | Qty | Rate | Amount |\n| ---------------- | --- | ---- | ------ |\n| 108 km @ Rs 9/km | 108 | 9    | 972.00 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>108 km @ Rs 9/km</td>\n<td>108</td>\n<td>9</td>\n<td>972.00</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "108 km @ Rs 9/km",
+              "108",
+              "9",
+              "972.00"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"108 km @ Rs 9/km\",\"108\",\"9\",\"972.00\"",
+          "bBox": {
+            "x": 8.096131697944973,
+            "y": 40.89064636230469,
+            "w": 150.0193574324898,
+            "h": 13.475671254033632,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.1,
+              "y": 40.89,
+              "w": 150.02,
+              "h": 13.48,
+              "startIndex": 0,
+              "endIndex": 127,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "possible_merged_columns",
+              "details": "col 0 'Description': 1/1 (100%) have interior whitespace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹972.00 INR**",
+          "value": "**Total: ₹972.00 INR**",
+          "bBox": {
+            "x": 137.96991338315217,
+            "y": 57.67470464291781,
+            "w": 19.85817340353261,
+            "h": 2.8657765264096433,
+            "confidence": 0.94,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 137.97,
+              "y": 57.67,
+              "w": 19.86,
+              "h": 2.87,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.94,
+              "label": "text"
+            },
+            {
+              "x": 127.68,
+              "y": 57.12,
+              "w": 30,
+              "h": 3.36,
+              "startIndex": 9,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.813,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.96,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.237,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.177,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.417,
+            "y": 0.333,
+            "w": 0.097,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.449,
+            "y": 0.334,
+            "w": 0.065,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.059,
+            "y": 0.181,
+            "w": 0.073,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.162,
+            "w": 0.037,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.067,
+            "y": 0.162,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.143,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.181,
+            "w": 0.029,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.142,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.074,
+            "y": 0.103,
+            "w": 0.051,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.417,
+            "y": 0.334,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.064,
+            "y": 0.123,
+            "w": 0.084,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.044,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.75,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.083,
+            "w": 0.172,
+            "h": 0.114
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.083,
+            "w": 0.17,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.078,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.11,
+            "y": 0.084,
+            "w": 0.088,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

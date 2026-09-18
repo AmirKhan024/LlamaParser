@@ -1,0 +1,21 @@
+{
+  "document_type": "telecom_bill",
+  "clean_json": {
+    "document_type": "telecom_bill",
+    "vendor_name": "NetSpeed Broadband",
+    "date": "January 2026",
+    "amount": "1356.12",
+    "currency": "INR",
+    "account_number": "2946450827",
+    "billing_period": "January 2026",
+    "subtotal": "1152.70",
+    "tax": "203.42",
+    "total": "1356.12",
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1904
+  }
+}

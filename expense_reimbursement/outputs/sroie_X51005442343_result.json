@@ -1,0 +1,45 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "YONG TAT HARDWARE TRADING",
+    "date": "13/03/2018",
+    "amount": "72.00",
+    "currency": "RM",
+    "subtotal": "67.92",
+    "tax": "4.08",
+    "line_items": [
+      {
+        "name": "8603",
+        "quantity": "1.00 SHTS",
+        "unit_price": "67.92",
+        "total": "72.00"
+      }
+    ],
+    "additional_fields": {
+      "GST ID": "001570349056",
+      "Doc No.": "C500035862",
+      "Cashier": "USER",
+      "Time": "12:41:00",
+      "Salesperson": "",
+      "Total Qty": "1",
+      "Total Sales (Excluding GST)": "67.92",
+      "Discount": "0.00",
+      "Total GST": "4.08",
+      "Rounding": "0.00",
+      "Total Sales (Inclusive of GST)": "72.00",
+      "CASH": "102.00",
+      "Change": "30.00",
+      "GST SUMMARY": "Tax Code SR, % 6, Amt (RM) 67.92, Tax (RM) 4.08"
+    },
+    "extraction_notes": [],
+    "confidence": 0.9
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 27.09299999999348,
+  "tokens": {
+    "prompt": 2005,
+    "completion": 1463,
+    "total": 3468
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Old Town Kopitiam Sdn Bhd",
+    "date": "22 Mar 18 12:44:00 PM",
+    "amount": "30.25",
+    "currency": "RM",
+    "restaurant_gstin": "000801587200",
+    "subtotal": "25.94",
+    "cgst": "1.71",
+    "grand_total": "30.24",
+    "line_items": [
+      {
+        "name": "ST30",
+        "quantity": "1",
+        "total": "13.87"
+      },
+      {
+        "name": "HS4",
+        "quantity": "1",
+        "total": "12.07"
+      }
+    ],
+    "additional_fields": {
+      "check": "37617",
+      "cover": "1",
+      "table": "5 / 1",
+      "stored_timestamp": "22 Mar 18 02:13:50 PM",
+      "signature1": "SY LEE",
+      "signature2": "xW",
+      "logo": "AFREE",
+      "note": "THIS IS NOT A RECEIPT",
+      "GSTSummary_S": "28.53",
+      "GSTSummary_GST": "1.71",
+      "GSTSummary_Z": "0.00"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 2.547000000020489,
+  "tokens": {
+    "prompt": 1955,
+    "completion": 948,
+    "total": 2903
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "GlobalTravel Docs\nFee Receipt\nApplicant: Rehaan Mittal\nDate: 2026-01-23\nVisa application fee    1 146.29  146.29\n\n                        Total: $146.29 USD",
+      "md": "## GlobalTravel Docs\n\nFee Receipt\n\n**Applicant**: Rehaan Mittal\n\n**Date**: 2026-01-23\n\n| Visa application fee | 1 | 146.29 | 146.29 |\n| -------------------- | - | ------ | ------ |\n\n\n**Total: $146.29 USD**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 524,
+          "original_height": 180,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 343,
+              "y": 142,
+              "w": 161,
+              "h": 16,
+              "confidence": 0.992,
+              "text": "Total: $146.29 USD"
+            },
+            {
+              "x": 294,
+              "y": 106,
+              "w": 57,
+              "h": 18,
+              "confidence": 0.99,
+              "text": "1 146.29"
+            },
+            {
+              "x": 404,
+              "y": 105,
+              "w": 43,
+              "h": 19,
+              "confidence": 1,
+              "text": "146.29"
+            },
+            {
+              "x": 19,
+              "y": 44,
+              "w": 67,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "Fee Receipt"
+            },
+            {
+              "x": 21,
+              "y": 20,
+              "w": 153,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "GlobalTravel Docs"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## GlobalTravel Docs",
+          "value": "GlobalTravel Docs",
+          "lvl": 2,
+          "bBox": {
+            "x": 7.435711669921875,
+            "y": 7.966105021601138,
+            "w": 36.56624888544497,
+            "h": 3.3060288470724357,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.44,
+              "y": 7.97,
+              "w": 36.57,
+              "h": 3.31,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fee Receipt",
+          "value": "Fee Receipt",
+          "bBox": {
+            "x": 7.301447594684102,
+            "y": 14.165336210831352,
+            "w": 15.422208570397418,
+            "h": 3.2211818529211955,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.3,
+              "y": 14.17,
+              "w": 15.42,
+              "h": 3.22,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Applicant**: Rehaan Mittal",
+          "value": "**Applicant**: Rehaan Mittal",
+          "bBox": {
+            "x": 7.241718590777853,
+            "y": 18.078733759341034,
+            "w": 32.73925860861073,
+            "h": 3.4702371348505427,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.24,
+              "y": 18.08,
+              "w": 32.74,
+              "h": 3.47,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 0.76,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-01-23",
+          "value": "**Date**: 2026-01-23",
+          "bBox": {
+            "x": 7.265457816745924,
+            "y": 22.295733708920686,
+            "w": 23.109615425441575,
+            "h": 3.107974906589674,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.27,
+              "y": 22.3,
+              "w": 23.11,
+              "h": 3.11,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Visa application fee | 1 | 146.29 | 146.29 |\n| -------------------- | - | ------ | ------ |",
+          "html": "<table>\n    <tr>\n        <td>Visa application fee</td>\n<td>1</td>\n<td>146.29</td>\n<td>146.29</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Visa application fee",
+              "1",
+              "146.29",
+              "146.29"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Visa application fee\",\"1\",\"146.29\",\"146.29\"",
+          "bBox": {
+            "x": 7.0656,
+            "y": 28.857600000000005,
+            "w": 101.6832,
+            "h": 3.6287999999999982,
+            "confidence": 0.94,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.72,
+              "y": 28.08,
+              "w": 26.16,
+              "h": 4.56,
+              "startIndex": 2,
+              "endIndex": 21,
+              "confidence": 0.94,
+              "label": "text"
+            },
+            {
+              "x": 98.88,
+              "y": 28.08,
+              "w": 10.32,
+              "h": 4.56,
+              "startIndex": 29,
+              "endIndex": 34,
+              "confidence": 0.94,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: $146.29 USD**",
+          "value": "**Total: $146.29 USD**",
+          "bBox": {
+            "x": 84.65767026154892,
+            "y": 37.40572814941407,
+            "w": 38.309822944972815,
+            "h": 3.8139312744140628,
+            "confidence": 0.91,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 84.24,
+              "y": 36.96,
+              "w": 38.64,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.92,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.046,
+            "w": 0.119,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.167,
+            "w": 0.083,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.317,
+            "y": 0.217,
+            "w": 0.084,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.24,
+            "y": 0.168,
+            "w": 0.04,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.325,
+            "y": 0.167,
+            "w": 0.029,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.276,
+            "y": 0.217,
+            "w": 0.037,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.276,
+            "y": 0.216,
+            "w": 0.125,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.082,
+            "w": 0.05,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.082,
+            "w": 0.107,
+            "h": 0.065
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.129,
+            "w": 0.075,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.105,
+            "w": 0.107,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.105,
+            "w": 0.107,
+            "h": 0.042
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

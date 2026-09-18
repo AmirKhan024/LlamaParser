@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Copper Kettle",
+    "date": "2026-05-08",
+    "amount": "3368.27",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Harrow Financial",
+      "attendees": "4"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "3368.27",
+    "grand_total": "3368.27",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "4",
+        "unit_price": "842.07",
+        "total": "3368.27"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1953
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Skillbridge Academy\nInvoice\nParticipant: Chasmum Sahota\nDate:2026-01-01\n\nDescription                     Qty  Rate         Amount\nAnnual Tech Conference Pass     1    26080.42     26080.42\n                                             B 11706000 40 Tm\n                                             Total: Z26080.42 INR",
+      "md": "# Skillbridge Academy\n\nInvoice\n\n**Participant**: Chasmum Sahota\n\n**Date**: 2026-01-01\n\n| Description                 | Qty | Rate     | Amount   |\n| --------------------------- | --- | -------- | -------- |\n| Annual Tech Conference Pass | 1   | 26080.42 | 26080.42 |\n\n\n**Total**: ₹26080.42 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 211,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 357,
+              "y": 142,
+              "w": 14,
+              "h": 17,
+              "confidence": 0.998,
+              "text": "1"
+            },
+            {
+              "x": 532,
+              "y": 117,
+              "w": 50,
+              "h": 14,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 356,
+              "y": 115,
+              "w": 30,
+              "h": 19,
+              "confidence": 0.996,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 40,
+              "w": 53,
+              "h": 13,
+              "confidence": 1,
+              "text": "Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.397,
+          "width": 149.785,
+          "x": 8.1,
+          "y": 30.856,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Skillbridge Academy",
+          "value": "Skillbridge Academy",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.630696968410327,
+            "y": 9.423493095066236,
+            "w": 55.222842009171195,
+            "h": 4.475321363366169,
+            "confidence": 0.93,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.63,
+              "y": 9.42,
+              "w": 55.22,
+              "h": 4.48,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.93,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice",
+          "value": "Invoice",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.515200000000002,
+            "w": 47.92320000000001,
+            "h": 9.158399999999999,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 13.92,
+              "w": 12.72,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Participant**: Chasmum Sahota",
+          "value": "**Participant**: Chasmum Sahota",
+          "bBox": {
+            "x": 8.2944,
+            "y": 17.7984,
+            "w": 47.308800000000005,
+            "h": 5.8751999999999995,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 17.52,
+              "w": 47.04,
+              "h": 2.64,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-01-01",
+          "value": "**Date**: 2026-01-01",
+          "bBox": {
+            "x": 19.0464,
+            "y": 21.0816,
+            "w": 17.510399999999997,
+            "h": 2.4192,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.05,
+              "y": 21.08,
+              "w": 17.51,
+              "h": 2.42,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                 | Qty | Rate     | Amount   |\n| --------------------------- | --- | -------- | -------- |\n| Annual Tech Conference Pass | 1   | 26080.42 | 26080.42 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Annual Tech Conference Pass</td>\n<td>1</td>\n<td>26080.42</td>\n<td>26080.42</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Annual Tech Conference Pass",
+              "1",
+              "26080.42",
+              "26080.42"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Annual Tech Conference Pass\",\"1\",\"26080.42\",\"26080.42\"",
+          "bBox": {
+            "x": 8.1000732421875,
+            "y": 30.85602204695992,
+            "w": 149.78519340183422,
+            "h": 13.397719673488456,
+            "confidence": 0.97,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.1,
+              "y": 30.86,
+              "w": 149.79,
+              "h": 13.4,
+              "startIndex": 0,
+              "endIndex": 178,
+              "confidence": 0.97,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹26080.42 INR",
+          "value": "**Total**: ₹26080.42 INR",
+          "bBox": {
+            "x": 117.0432,
+            "y": 47.692800000000005,
+            "w": 41.1648,
+            "h": 2.4192000000000036,
+            "confidence": 0.93,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 117.04,
+              "y": 47.69,
+              "w": 41.16,
+              "h": 2.42,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.93,
+              "label": "key-value-region"
+            },
+            {
+              "x": 116.16,
+              "y": 46.8,
+              "w": 41.52,
+              "h": 3.6,
+              "startIndex": 11,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.857,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.94,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.179,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.18,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.381,
+            "y": 0.276,
+            "w": 0.134,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.427,
+            "y": 0.276,
+            "w": 0.087,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.381,
+            "y": 0.277,
+            "w": 0.04,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.101,
+            "y": 0.104,
+            "w": 0.08,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.123,
+            "w": 0.056,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.067,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.067,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.6,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.156,
+            "h": 0.053
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.063,
+            "y": 0.122,
+            "w": 0.056,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.129,
+            "w": 0.057,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.029,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.041,
+            "h": 0.013
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.52,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.103,
+            "w": 0.154,
+            "h": 0.034
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

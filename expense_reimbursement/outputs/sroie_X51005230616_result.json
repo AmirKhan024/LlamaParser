@@ -1,0 +1,56 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Gerbang Alaf Restaurants Sdn Bhd",
+    "date": "18/01/2018",
+    "amount": "38.90",
+    "restaurant_gstin": "000504664064",
+    "grand_total": "38.90",
+    "line_items": [
+      {
+        "name": "M SpicyDeluxe",
+        "quantity": "2",
+        "total": "25.40"
+      },
+      {
+        "name": "2 M Coke",
+        "quantity": "2"
+      },
+      {
+        "name": "2 M Fries",
+        "quantity": "2"
+      },
+      {
+        "name": "M GrilChicBgr",
+        "quantity": "1",
+        "total": "12.50"
+      },
+      {
+        "name": "1 M Coke",
+        "quantity": "1"
+      },
+      {
+        "name": "1 M Fries",
+        "quantity": "1"
+      },
+      {
+        "name": "Small Cone",
+        "quantity": "1",
+        "total": "1.00"
+      }
+    ],
+    "additional_fields": {
+      "invoice_number": "141900016842",
+      "order_info": "ORD #90 -REG #19- 18/01/2018 17:09:21"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 25.405999999959022,
+  "tokens": {
+    "prompt": 1984,
+    "completion": 1281,
+    "total": 3265
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": " Metro Petro Station\nFuel Receipt\nDate: 2026-05-22\nFuel: Petrol\nruel. reuor\nPetrol 21 67 L @ Bs 106.02\nPetrol 31.67 L @ Rs 106.03    31.67 106.03 3357.97\n Total: 3357.97 INR\nTotal. FoorE oz INp",
+      "md": "**Metro Petro Station**\n\nFuel Receipt\n\n**Date**: 2026-05-22\n**Fuel**: Petrol\n\n| Petrol 31.67 L @ Rs 106.03 | 31.67 | 106.03 | 3357.97 |\n| -------------------------- | ----- | ------ | ------- |\n\n\n**Total: ₹3357.97 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 175,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 202,
+              "y": 109,
+              "w": 127,
+              "h": 17,
+              "confidence": 0.954,
+              "text": "31.67 106.03 3357.97"
+            },
+            {
+              "x": 22,
+              "y": 82,
+              "w": 85,
+              "h": 16,
+              "confidence": 0.996,
+              "text": "Fuel: Petrol"
+            },
+            {
+              "x": 21,
+              "y": 62,
+              "w": 130,
+              "h": 19,
+              "confidence": 0.996,
+              "text": "Date: 2026-05-22"
+            },
+            {
+              "x": 21,
+              "y": 44,
+              "w": 92,
+              "h": 18,
+              "confidence": 0.985,
+              "text": "Fuel Receipt"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**Metro Petro Station**",
+          "value": "**Metro Petro Station**",
+          "bBox": {
+            "x": 25.58996369735054,
+            "y": 6.331723619543988,
+            "w": 37.19888226052989,
+            "h": 3.0827102329420004,
+            "confidence": 0.92,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 25.59,
+              "y": 6.33,
+              "w": 37.2,
+              "h": 3.08,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.92,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fuel Receipt",
+          "value": "Fuel Receipt",
+          "bBox": {
+            "x": 5.745985744310461,
+            "y": 12.213219451904298,
+            "w": 21.613515571925948,
+            "h": 4.13475564044455,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.75,
+              "y": 12.21,
+              "w": 21.61,
+              "h": 4.13,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-05-22\n**Fuel**: Petrol",
+          "value": "**Date**: 2026-05-22\n**Fuel**: Petrol",
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 12.096000000000002,
+            "w": 31.027200000000004,
+            "h": 12.7872,
+            "confidence": 0.76,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 16.08,
+              "w": 31.2,
+              "h": 8.64,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 0.76,
+              "label": "key-value-region"
+            },
+            {
+              "x": 5.28,
+              "y": 16.08,
+              "w": 31.2,
+              "h": 4.56,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 5.52,
+              "y": 20.88,
+              "w": 20.4,
+              "h": 3.84,
+              "startIndex": 21,
+              "endIndex": 36,
+              "confidence": 0.76,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Petrol 31.67 L @ Rs 106.03 | 31.67 | 106.03 | 3357.97 |\n| -------------------------- | ----- | ------ | ------- |",
+          "html": "<table>\n    <tr>\n        <td>Petrol 31.67 L @ Rs 106.03</td>\n<td>31.67</td>\n<td>106.03</td>\n<td>3357.97</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Petrol 31.67 L @ Rs 106.03",
+              "31.67",
+              "106.03",
+              "3357.97"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Petrol 31.67 L @ Rs 106.03\",\"31.67\",\"106.03\",\"3357.97\"",
+          "bBox": {
+            "x": 5.367640487007472,
+            "y": 28.062911124851396,
+            "w": 77.30669502590014,
+            "h": 3.5801499739937177,
+            "confidence": 0.78,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.37,
+              "y": 28.06,
+              "w": 77.31,
+              "h": 3.58,
+              "startIndex": 0,
+              "endIndex": 114,
+              "confidence": 0.78,
+              "label": "key-value-region"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹3357.97 INR**",
+          "value": "**Total: ₹3357.97 INR**",
+          "bBox": {
+            "x": 50.688,
+            "y": 34.90560000000001,
+            "w": 32.256,
+            "h": 3.456000000000003,
+            "confidence": 0.81,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 50.69,
+              "y": 34.91,
+              "w": 32.26,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.81,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.85,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.083,
+            "y": 0.037,
+            "w": 0.121,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.051,
+            "y": 0.125,
+            "w": 0.033,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.019,
+            "y": 0.124,
+            "w": 0.029,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.162,
+            "w": 0.105,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.051,
+            "y": 0.1,
+            "w": 0.068,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.098,
+            "w": 0.03,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.165,
+            "y": 0.202,
+            "w": 0.031,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.199,
+            "y": 0.203,
+            "w": 0.071,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.226,
+            "y": 0.165,
+            "w": 0.033,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.165,
+            "y": 0.202,
+            "w": 0.106,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.161,
+            "y": 0.163,
+            "w": 0.022,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.161,
+            "y": 0.163,
+            "w": 0.098,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.07,
+            "w": 0.1,
+            "h": 0.05
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.019,
+            "y": 0.071,
+            "w": 0.07,
+            "h": 0.024
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.19,
+            "y": 0.163,
+            "w": 0.027,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.161,
+            "y": 0.163,
+            "w": 0.056,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.55,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.017,
+            "y": 0.162,
+            "w": 0.252,
+            "h": 0.021
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.52,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.071,
+            "w": 0.101,
+            "h": 0.073
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Bay Leaf Diner\nTax Invoice\nDate:2026-03-01\nTeam Dinner - 9 colleagues\n\nDescription               Qty  Rate    Amount\nFood & beverages          9    108.17    973.55\n                          T-t-l: Tare aa Dmp\n                          Total: 973-55 INR",
+      "md": "## Bay Leaf Diner\n\nTax Invoice\n\nDate: 2026-03-01\n\nTeam Dinner - 9 colleagues\n\n| Description      | Qty | Rate   | Amount |\n| ---------------- | --- | ------ | ------ |\n| Food & beverages | 9   | 108.17 | 973.55 |\n\n\n**Total**: ₹973.55 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 665,
+          "original_height": 215,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 505,
+              "y": 176,
+              "w": 140,
+              "h": 20,
+              "confidence": 0.978,
+              "text": "Total: 973-55 INR"
+            },
+            {
+              "x": 491,
+              "y": 143,
+              "w": 43,
+              "h": 19,
+              "confidence": 0.983,
+              "text": "973.55"
+            },
+            {
+              "x": 28,
+              "y": 141,
+              "w": 100,
+              "h": 20,
+              "confidence": 0.987,
+              "text": "Food & beverages"
+            },
+            {
+              "x": 284,
+              "y": 143,
+              "w": 14,
+              "h": 18,
+              "confidence": 1,
+              "text": "9"
+            },
+            {
+              "x": 284,
+              "y": 115,
+              "w": 29,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 372,
+              "y": 114,
+              "w": 38,
+              "h": 19,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 21,
+              "y": 39,
+              "w": 66,
+              "h": 15,
+              "confidence": 1,
+              "text": "Tax Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.399,
+          "width": 149.825,
+          "x": 8.281,
+          "y": 30.654,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Bay Leaf Diner",
+          "value": "Bay Leaf Diner",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.477620796535327,
+            "y": 9.14393194447393,
+            "w": 37.18013862941575,
+            "h": 5.057569586712383,
+            "confidence": 0.89,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 9.12,
+              "w": 37.44,
+              "h": 4.56,
+              "startIndex": 0,
+              "endIndex": 16,
+              "confidence": 0.89,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice",
+          "value": "Tax Invoice",
+          "bBox": {
+            "x": 8.6016,
+            "y": 14.342400000000001,
+            "w": 23.04,
+            "h": 6.2208000000000006,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 13.44,
+              "w": 15.84,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-03-01",
+          "value": "Date: 2026-03-01",
+          "bBox": {
+            "x": 8.6016,
+            "y": 17.452800000000003,
+            "w": 23.04,
+            "h": 3.1103999999999985,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 23.04,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Team Dinner - 9 colleagues",
+          "value": "Team Dinner - 9 colleagues",
+          "bBox": {
+            "x": 8.6016,
+            "y": 20.9088,
+            "w": 35.328,
+            "h": 3.283200000000001,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.92,
+              "y": 20.16,
+              "w": 35.52,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description      | Qty | Rate   | Amount |\n| ---------------- | --- | ------ | ------ |\n| Food & beverages | 9   | 108.17 | 973.55 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages</td>\n<td>9</td>\n<td>108.17</td>\n<td>973.55</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages",
+              "9",
+              "108.17",
+              "973.55"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages\",\"9\",\"108.17\",\"973.55\"",
+          "bBox": {
+            "x": 8.281540315047554,
+            "y": 30.654904174804688,
+            "w": 149.82586033033286,
+            "h": 13.399263730256454,
+            "confidence": 0.97,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.28,
+              "y": 30.65,
+              "w": 149.83,
+              "h": 13.4,
+              "startIndex": 0,
+              "endIndex": 133,
+              "confidence": 0.97,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹973.55 INR",
+          "value": "**Total**: ₹973.55 INR",
+          "bBox": {
+            "x": 124.7232,
+            "y": 47.34720000000001,
+            "w": 33.1776,
+            "h": 3.6287999999999982,
+            "confidence": 0.89,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 124.32,
+              "y": 46.32,
+              "w": 33.6,
+              "h": 4.8,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.917,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.95,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.177,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.79,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.406,
+            "y": 0.274,
+            "w": 0.109,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.78,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.121,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.443,
+            "y": 0.274,
+            "w": 0.071,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.406,
+            "y": 0.274,
+            "w": 0.034,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.088,
+            "y": 0.121,
+            "w": 0.054,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.057,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.57,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.115,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.083,
+            "w": 0.075,
+            "h": 0.037
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.083,
+            "w": 0.05,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.101,
+            "w": 0.075,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.102,
+            "w": 0.05,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

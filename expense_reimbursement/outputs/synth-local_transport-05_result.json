@@ -1,0 +1,22 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "RideNow",
+    "date": "2026-03-15",
+    "amount": "575.30",
+    "currency": "INR",
+    "additional_fields": {
+      "pickup": "Bhatt Road",
+      "drop": "Airport Terminal",
+      "driver": "Harinakshi",
+      "fare": "575.30"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1846
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "document_type": "fuel_receipt",
+  "clean_json": {
+    "document_type": "fuel_receipt",
+    "vendor_name": "Highway Energy Point",
+    "date": "2026-09-14",
+    "amount": "3086.00",
+    "currency": "INR",
+    "additional_fields": {
+      "fuel_type": "Petrol",
+      "quantity": "30.78 L",
+      "unit_price": "100.26"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "3086.00",
+    "line_items": [
+      {
+        "name": "Petrol",
+        "quantity": "30.78",
+        "unit_price": "100.26",
+        "total": "3086.00"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1949
+  }
+}

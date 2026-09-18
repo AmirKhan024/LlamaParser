@@ -1,0 +1,371 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                     OfficeMart\nRetail Ir\nRetail Invoice\nDate: 2(\nDate: 2026-03-25\n\nPrinter cartridge    1 1450      1450\nWireless mouse        1 650       650\nStapler               1 120       120\n\n                               Total: 72220.00 INR",
+      "md": "# OfficeMart\n\nRetail Invoice\nDate: 2026-03-25\n\n| Printer cartridge | 1 | 1450 | 1450 |\n| ----------------- | - | ---- | ---- |\n| Wireless mouse    | 1 | 650  | 650  |\n| Stapler           | 1 | 120  | 120  |\n\n\n**Total: ₹2220.00 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 366,
+          "original_height": 188,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 224,
+              "y": 153,
+              "w": 120,
+              "h": 13,
+              "confidence": 0.959,
+              "text": "Total: 72220.00 INR"
+            },
+            {
+              "x": 21,
+              "y": 124,
+              "w": 40,
+              "h": 14,
+              "confidence": 1,
+              "text": "Stapler"
+            },
+            {
+              "x": 209,
+              "y": 124,
+              "w": 36,
+              "h": 12,
+              "confidence": 0.971,
+              "text": "1 120"
+            },
+            {
+              "x": 283,
+              "y": 122,
+              "w": 23,
+              "h": 16,
+              "confidence": 1,
+              "text": "120"
+            },
+            {
+              "x": 23,
+              "y": 109,
+              "w": 79,
+              "h": 10,
+              "confidence": 0.999,
+              "text": "Wireless mouse"
+            },
+            {
+              "x": 210,
+              "y": 108,
+              "w": 36,
+              "h": 11,
+              "confidence": 0.95,
+              "text": "1 650"
+            },
+            {
+              "x": 283,
+              "y": 107,
+              "w": 22,
+              "h": 12,
+              "confidence": 1,
+              "text": "650"
+            },
+            {
+              "x": 22,
+              "y": 90,
+              "w": 81,
+              "h": 14,
+              "confidence": 1,
+              "text": "Printer cartridge"
+            },
+            {
+              "x": 284,
+              "y": 90,
+              "w": 27,
+              "h": 12,
+              "confidence": 1,
+              "text": "1450"
+            },
+            {
+              "x": 209,
+              "y": 89,
+              "w": 44,
+              "h": 14,
+              "confidence": 0.963,
+              "text": "1 1450"
+            },
+            {
+              "x": 23,
+              "y": 64,
+              "w": 126,
+              "h": 13,
+              "confidence": 0.972,
+              "text": "Date: 2026-03-25"
+            },
+            {
+              "x": 23,
+              "y": 46,
+              "w": 98,
+              "h": 14,
+              "confidence": 0.997,
+              "text": "Retail Invoice"
+            },
+            {
+              "x": 145,
+              "y": 19,
+              "w": 79,
+              "h": 17,
+              "confidence": 1,
+              "text": "OfficeMart"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 35.128,
+          "width": 78.03,
+          "x": 5.031,
+          "y": 6.153,
+          "original_width": 326,
+          "original_height": 147,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# OfficeMart",
+          "value": "OfficeMart",
+          "lvl": 1,
+          "bBox": {
+            "x": 35.23626549762228,
+            "y": 6.213948092253313,
+            "w": 18.100590183423915,
+            "h": 3.174898661737857,
+            "confidence": 0.84,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 35.24,
+              "y": 6.21,
+              "w": 18.1,
+              "h": 3.17,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.84,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Retail Invoice\nDate: 2026-03-25",
+          "value": "Retail Invoice\nDate: 2026-03-25",
+          "bBox": {
+            "x": 5.031005859375,
+            "y": 6.153410140327786,
+            "w": 78.03076808763586,
+            "h": 35.128552511464,
+            "confidence": 0.55,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 4.32,
+              "y": 12,
+              "w": 31.44,
+              "h": 8.4,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 0.55,
+              "label": "table"
+            },
+            {
+              "x": 5.52,
+              "y": 12,
+              "w": 23.52,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 0.55,
+              "label": "table"
+            },
+            {
+              "x": 4.32,
+              "y": 15.36,
+              "w": 31.44,
+              "h": 5.04,
+              "startIndex": 15,
+              "endIndex": 30,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Printer cartridge | 1 | 1450 | 1450 |\n| ----------------- | - | ---- | ---- |\n| Wireless mouse    | 1 | 650  | 650  |\n| Stapler           | 1 | 120  | 120  |",
+          "html": "<table>\n    <tr>\n        <td>Printer cartridge</td>\n<td>1</td>\n<td>1450</td>\n<td>1450</td>\n    </tr>\n<tr>\n        <td>Wireless mouse</td>\n<td>1</td>\n<td>650</td>\n<td>650</td>\n    </tr>\n<tr>\n        <td>Stapler</td>\n<td>1</td>\n<td>120</td>\n<td>120</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Printer cartridge",
+              "1",
+              "1450",
+              "1450"
+            ],
+            [
+              "Wireless mouse",
+              "1",
+              "650",
+              "650"
+            ],
+            [
+              "Stapler",
+              "1",
+              "120",
+              "120"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Printer cartridge\",\"1\",\"1450\",\"1450\"\n\"Wireless mouse\",\"1\",\"650\",\"650\"\n\"Stapler\",\"1\",\"120\",\"120\"",
+          "bBox": {
+            "x": 5.031005859375,
+            "y": 6.153410140327786,
+            "w": 78.03076808763586,
+            "h": 35.128552511464,
+            "confidence": 0.69,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.03,
+              "y": 6.15,
+              "w": 78.03,
+              "h": 35.13,
+              "startIndex": 0,
+              "endIndex": 158,
+              "confidence": 0.69,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹2220.00 INR**",
+          "value": "**Total: ₹2220.00 INR**",
+          "bBox": {
+            "x": 54.17310631793478,
+            "y": 38.042126730214,
+            "w": 28.876420261548915,
+            "h": 2.8007004447605257,
+            "confidence": 0.76,
+            "label": "caption"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 54.17,
+              "y": 38.04,
+              "w": 28.88,
+              "h": 2.8,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.76,
+              "label": "caption"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.898,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.69,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.115,
+            "y": 0.036,
+            "w": 0.059,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.59,
+          "label": "table",
+          "bbox": {
+            "x": 0.016,
+            "y": 0.036,
+            "w": 0.254,
+            "h": 0.203
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.052,
+            "y": 0.097,
+            "w": 0.065,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.097,
+            "w": 0.029,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_caption_1_v2.jpg",
+          "confidence": 0.53,
+          "label": "caption",
+          "bbox": {
+            "x": 0.176,
+            "y": 0.22,
+            "w": 0.094,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

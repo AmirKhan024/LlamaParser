@@ -1,0 +1,399 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "TechConf India\nInvoice\nParticipant: Kabir Sankaran\nDate: 2026-05-30\n\n Description                         Qty  Rate    Amount\n Advanced Data Engineering Course    1    25689.79  25689.79\n                                                    Total: 725689.79 INR",
+      "md": "## TechConf India\n\nInvoice\n\nParticipant: Kabir Sankaran\n\nDate: 2026-05-30\n\n| Description                      | Qty | Rate     | Amount   |\n| -------------------------------- | --- | -------- | -------- |\n| Advanced Data Engineering Course | 1   | 25689.79 | 25689.79 |\n\n\n**Total: ₹25689.79 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 213,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 31,
+              "y": 145,
+              "w": 192,
+              "h": 14,
+              "confidence": 1,
+              "text": "Advanced Data Engineering Course"
+            },
+            {
+              "x": 537,
+              "y": 143,
+              "w": 57,
+              "h": 18,
+              "confidence": 1,
+              "text": "25689.79"
+            },
+            {
+              "x": 368,
+              "y": 144,
+              "w": 14,
+              "h": 17,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 30,
+              "y": 118,
+              "w": 69,
+              "h": 14,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 427,
+              "y": 116,
+              "w": 35,
+              "h": 18,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 367,
+              "y": 116,
+              "w": 28,
+              "h": 19,
+              "confidence": 1,
+              "text": "Qty"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.578,
+          "width": 149.995,
+          "x": 8.178,
+          "y": 30.747,
+          "original_width": 625,
+          "original_height": 57,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## TechConf India",
+          "value": "TechConf India",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.71883438773777,
+            "y": 9.117682979417884,
+            "w": 34.26972497027853,
+            "h": 4.095553257154382,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.72,
+              "y": 9.12,
+              "w": 34.27,
+              "h": 4.1,
+              "startIndex": 0,
+              "endIndex": 16,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice",
+          "value": "Invoice",
+          "bBox": {
+            "x": 8.564266304347825,
+            "y": 14.619549527375597,
+            "w": 9.518733016304347,
+            "h": 2.3491775844408114,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.56,
+              "y": 14.62,
+              "w": 9.52,
+              "h": 2.35,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Participant: Kabir Sankaran",
+          "value": "Participant: Kabir Sankaran",
+          "bBox": {
+            "x": 8.586467444378396,
+            "y": 17.76014935037364,
+            "w": 35.54336123259171,
+            "h": 2.682144828464674,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.92,
+              "y": 17.04,
+              "w": 36,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 26,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-05-30",
+          "value": "Date: 2026-05-30",
+          "bBox": {
+            "x": 16.25457657523777,
+            "y": 21.165605959684957,
+            "w": 15.318866232167117,
+            "h": 2.6501602836277165,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 16.25,
+              "y": 21.17,
+              "w": 15.32,
+              "h": 2.65,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                      | Qty | Rate     | Amount   |\n| -------------------------------- | --- | -------- | -------- |\n| Advanced Data Engineering Course | 1   | 25689.79 | 25689.79 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Advanced Data Engineering Course</td>\n<td>1</td>\n<td>25689.79</td>\n<td>25689.79</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Advanced Data Engineering Course",
+              "1",
+              "25689.79",
+              "25689.79"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Advanced Data Engineering Course\",\"1\",\"25689.79\",\"25689.79\"",
+          "bBox": {
+            "x": 8.17880859375,
+            "y": 30.747809103260874,
+            "w": 149.99568189538044,
+            "h": 13.578843622622282,
+            "confidence": 0.96,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.18,
+              "y": 30.75,
+              "w": 150,
+              "h": 13.58,
+              "startIndex": 0,
+              "endIndex": 193,
+              "confidence": 0.96,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹25689.79 INR**",
+          "value": "**Total: ₹25689.79 INR**",
+          "bBox": {
+            "x": 125.03039999999999,
+            "y": 47.52000000000001,
+            "w": 32.8704,
+            "h": 2.9376,
+            "confidence": 0.9,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 125.03,
+              "y": 47.52,
+              "w": 32.87,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.9,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.836,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.178,
+            "w": 0.488,
+            "h": 0.079
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.407,
+            "y": 0.275,
+            "w": 0.107,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.112,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.438,
+            "y": 0.275,
+            "w": 0.076,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.407,
+            "y": 0.276,
+            "w": 0.029,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.022,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.053,
+            "y": 0.122,
+            "w": 0.05,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.031,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.116,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.52,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.116,
+            "h": 0.053
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

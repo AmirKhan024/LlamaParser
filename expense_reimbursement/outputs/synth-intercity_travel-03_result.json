@@ -1,0 +1,38 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Meridian Wings",
+    "date": "2026-01-24",
+    "amount": "5782.74",
+    "currency": "INR",
+    "additional_fields": {
+      "PNR": "RF5266",
+      "Passenger": "Jeremiah Goyal",
+      "Route": "Mumbai -> Kolkata",
+      "Flight": "Meridian Wings 294"
+    },
+    "extraction_notes": [],
+    "confidence": 0.8,
+    "subtotal": "4626.19",
+    "tax": "1156.55",
+    "line_items": [
+      {
+        "name": "Base fare",
+        "quantity": "1",
+        "unit_price": "4626.19",
+        "total": "4626.19"
+      },
+      {
+        "name": "Taxes & fees",
+        "quantity": "1",
+        "unit_price": "1156.55",
+        "total": "1156.55"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2535
+  }
+}

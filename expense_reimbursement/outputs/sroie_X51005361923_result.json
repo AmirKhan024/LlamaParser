@@ -1,0 +1,36 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "SWC ENTERPRISE SDN BHD",
+    "date": "02/01/2018",
+    "amount": "4.20",
+    "subtotal": "4.20",
+    "tax": "0.24",
+    "line_items": [
+      {
+        "name": "5X8 5006 (1X60)5X8 5006",
+        "quantity": "1",
+        "unit_price": "4.20",
+        "total": "4.20"
+      }
+    ],
+    "additional_fields": {
+      "GST ID No. : 002017808384": "GST ID No. : 002017808384",
+      "Cashier: 123": "Cashier: 123",
+      "No:0100036262": "No:0100036262",
+      "Time: 10:46:55": "Time: 10:46:55",
+      "cash_given": "50.20",
+      "change_returned": "46.00"
+    },
+    "extraction_notes": [],
+    "confidence": 0.9
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 28.18700000003446,
+  "tokens": {
+    "prompt": 1821,
+    "completion": 1430,
+    "total": 3251
+  }
+}

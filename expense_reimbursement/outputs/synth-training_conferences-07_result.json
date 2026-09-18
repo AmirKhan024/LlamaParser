@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "DataMinds Workshop",
+    "date": "2026-02-02",
+    "amount": "15425.27",
+    "currency": "INR",
+    "additional_fields": {
+      "participant": "Abhiram Rajagopalan"
+    },
+    "line_items": [
+      {
+        "name": "Annual Tech Conference Pass",
+        "quantity": "1",
+        "unit_price": "15425.27",
+        "total": "15425.27"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1918
+  }
+}

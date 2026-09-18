@@ -1,0 +1,37 @@
+{
+  "document_type": "local_conveyance_form",
+  "clean_json": {
+    "document_type": "local_conveyance_form",
+    "vendor_name": null,
+    "date": "2026-07-30",
+    "amount": "972.00",
+    "currency": "INR",
+    "additional_fields": {
+      "vehicle": "Four-wheeler (own)",
+      "purpose": "Client visit",
+      "client": "Harrow Financial"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "employee_name": "Pahal Barad",
+    "employee_no": null,
+    "travel_entries": [
+      {
+        "description": "108 km @ Rs 9/km",
+        "quantity": "108",
+        "rate": "9",
+        "amount": "972.00"
+      }
+    ],
+    "total_kms": "108",
+    "total_conveyance_amount": "972.00",
+    "daily_allowance_amount": null,
+    "vehicle_maintenance_amount": null,
+    "mobile_allowance_amount": null,
+    "total_claimed": "972.00"
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2052
+  }
+}

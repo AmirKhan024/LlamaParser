@@ -1,0 +1,30 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "RideNow",
+    "date": "2026-05-12",
+    "amount": "155.25",
+    "currency": "INR",
+    "additional_fields": {
+      "Pickup": "Anne Marg",
+      "Drop": "Mishra Ganj",
+      "Driver": "Jai"
+    },
+    "extraction_notes": [],
+    "confidence": 0.732,
+    "subtotal": "155.25",
+    "line_items": [
+      {
+        "name": "Fare",
+        "quantity": "1",
+        "unit_price": "155.25",
+        "total": "155.25"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2159
+  }
+}

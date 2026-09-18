@@ -1,0 +1,478 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Bay Leaf Diner\nTax Invoice\nDate: 2026-09-16\nClient: Coastline Bank\nAttendees: 3\n\n Description                      Qty  Rate  Amount\n Food & beverages (incl. wine)    3    1556.06    4668.18\n                                       Tot2l: 4668 18 INB\n                                      Total: 24668.18 INR",
+      "md": "# Bay Leaf Diner\n\nTax Invoice\n\n**Date**: 2026-09-16\n**Client**: Coastline Bank\n**Attendees**: 3\n\n| Description                   | Qty | Rate    | Amount  |\n| ----------------------------- | --- | ------- | ------- |\n| Food & beverages (incl. wine) | 3   | 1556.06 | 4668.18 |\n\n\n**Total**: ₹4668.18 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 226,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 510,
+              "y": 191,
+              "w": 135,
+              "h": 17,
+              "confidence": 0.966,
+              "text": "Total: 24668.18 INR"
+            },
+            {
+              "x": 28,
+              "y": 157,
+              "w": 166,
+              "h": 18,
+              "confidence": 0.998,
+              "text": "Food & beverages (incl. wine)"
+            },
+            {
+              "x": 534,
+              "y": 156,
+              "w": 50,
+              "h": 19,
+              "confidence": 1,
+              "text": "4668.18"
+            },
+            {
+              "x": 424,
+              "y": 156,
+              "w": 50,
+              "h": 19,
+              "confidence": 1,
+              "text": "1556.06"
+            },
+            {
+              "x": 357,
+              "y": 157,
+              "w": 14,
+              "h": 18,
+              "confidence": 1,
+              "text": "3"
+            },
+            {
+              "x": 28,
+              "y": 129,
+              "w": 70,
+              "h": 18,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 357,
+              "y": 128,
+              "w": 29,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 21,
+              "y": 39,
+              "w": 63,
+              "h": 15,
+              "confidence": 1,
+              "text": "Tax Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.373,
+          "width": 149.927,
+          "x": 8.222,
+          "y": 34.28,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Bay Leaf Diner",
+          "value": "Bay Leaf Diner",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.657689102836278,
+            "y": 9.459111188805624,
+            "w": 32.982401972231656,
+            "h": 4.923794622006623,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.66,
+              "y": 9.46,
+              "w": 32.98,
+              "h": 4.92,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice",
+          "value": "Tax Invoice",
+          "bBox": {
+            "x": 8.64878221594769,
+            "y": 14.563827348792037,
+            "w": 14.648234491762906,
+            "h": 2.4903477212657084,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.65,
+              "y": 14.56,
+              "w": 14.65,
+              "h": 2.49,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-09-16\n**Client**: Coastline Bank\n**Attendees**: 3",
+          "value": "**Date**: 2026-09-16\n**Client**: Coastline Bank\n**Attendees**: 3",
+          "bBox": {
+            "x": 8.2944,
+            "y": 17.6256,
+            "w": 29.491200000000003,
+            "h": 9.6768,
+            "confidence": 0.82,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 17.52,
+              "w": 29.04,
+              "h": 9.6,
+              "startIndex": 0,
+              "endIndex": 63,
+              "confidence": 0.82,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.4,
+              "y": 17.52,
+              "w": 22.56,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 20.88,
+              "w": 28.8,
+              "h": 3.12,
+              "startIndex": 21,
+              "endIndex": 46,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 24.24,
+              "w": 17.52,
+              "h": 2.88,
+              "startIndex": 48,
+              "endIndex": 63,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                   | Qty | Rate    | Amount  |\n| ----------------------------- | --- | ------- | ------- |\n| Food & beverages (incl. wine) | 3   | 1556.06 | 4668.18 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages (incl. wine)</td>\n<td>3</td>\n<td>1556.06</td>\n<td>4668.18</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages (incl. wine)",
+              "3",
+              "1556.06",
+              "4668.18"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages (incl. wine)\",\"3\",\"1556.06\",\"4668.18\"",
+          "bBox": {
+            "x": 8.222909943953805,
+            "y": 34.28031364109205,
+            "w": 149.92736604110053,
+            "h": 13.373093580163044,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.22,
+              "y": 34.28,
+              "w": 149.93,
+              "h": 13.37,
+              "startIndex": 0,
+              "endIndex": 178,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹4668.18 INR",
+          "value": "**Total**: ₹4668.18 INR",
+          "bBox": {
+            "x": 125.95199999999998,
+            "y": 50.976,
+            "w": 31.94879999999999,
+            "h": 2.764800000000001,
+            "confidence": 0.93,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 125.95,
+              "y": 50.98,
+              "w": 31.95,
+              "h": 2.76,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.93,
+              "label": "key-value-region"
+            },
+            {
+              "x": 125.52,
+              "y": 50.16,
+              "w": 32.4,
+              "h": 4.08,
+              "startIndex": 11,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.813,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.95,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.198,
+            "w": 0.488,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.107,
+            "h": 0.028
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.41,
+            "y": 0.295,
+            "w": 0.104,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.058,
+            "y": 0.123,
+            "w": 0.064,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.03,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.054,
+            "y": 0.103,
+            "w": 0.047,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.443,
+            "y": 0.295,
+            "w": 0.071,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.023,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.411,
+            "y": 0.295,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.78,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.143,
+            "w": 0.053,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.077,
+            "y": 0.142,
+            "w": 0.006,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.048,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.68,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.085,
+            "w": 0.096,
+            "h": 0.072
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.64,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.102,
+            "w": 0.096,
+            "h": 0.056
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Signal Plus Mobile\nMonthly Bill\nAccount: 4410075042\nBilling period: January 2026\n\nPlan charges                1 1222.20    1222.20\nTaxes                       1 215.68     215.68\n\n                                         Amount Due: 1437.88 INR",
+      "md": "# Signal Plus Mobile\n\nMonthly Bill\n\n**Account**: 4410075042\n**Billing period**: January 2026\n\n| Description  | Quantity | Rate    | Amount  |\n| ------------ | -------- | ------- | ------- |\n| Plan charges | 1        | 1222.20 | 1222.20 |\n| Taxes        | 1        | 215.68  | 215.68  |\n\n\n**Amount Due**: ₹1437.88 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 649,
+          "original_height": 201,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 300,
+              "y": 134,
+              "w": 44,
+              "h": 16,
+              "confidence": 1,
+              "text": "215.68"
+            },
+            {
+              "x": 460,
+              "y": 132,
+              "w": 45,
+              "h": 20,
+              "confidence": 1,
+              "text": "215.68"
+            },
+            {
+              "x": 278,
+              "y": 134,
+              "w": 13,
+              "h": 16,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 22,
+              "y": 110,
+              "w": 72,
+              "h": 16,
+              "confidence": 1,
+              "text": "Plan charges"
+            },
+            {
+              "x": 461,
+              "y": 109,
+              "w": 49,
+              "h": 16,
+              "confidence": 0.995,
+              "text": "1222.20"
+            },
+            {
+              "x": 299,
+              "y": 108,
+              "w": 52,
+              "h": 19,
+              "confidence": 0.999,
+              "text": "1222.20"
+            },
+            {
+              "x": 278,
+              "y": 110,
+              "w": 13,
+              "h": 15,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 23,
+              "y": 76,
+              "w": 152,
+              "h": 15,
+              "confidence": 0.97,
+              "text": "Billing period: January 2026"
+            },
+            {
+              "x": 22,
+              "y": 63,
+              "w": 118,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Account: 4410075042"
+            },
+            {
+              "x": 22,
+              "y": 47,
+              "w": 68,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "Monthly Bill"
+            },
+            {
+              "x": 21,
+              "y": 18,
+              "w": 187,
+              "h": 25,
+              "confidence": 1,
+              "text": "Signal Plus Mobile"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 10.814,
+          "width": 145.887,
+          "x": 6.796,
+          "y": 29.92,
+          "original_width": 608,
+          "original_height": 46,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Signal Plus Mobile",
+          "value": "Signal Plus Mobile",
+          "lvl": 1,
+          "bBox": {
+            "x": 7.539370064113451,
+            "y": 8.413498157003652,
+            "w": 44.18375960640285,
+            "h": 5.701646356997284,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.54,
+              "y": 8.41,
+              "w": 44.18,
+              "h": 5.7,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Monthly Bill",
+          "value": "Monthly Bill",
+          "bBox": {
+            "x": 7.5131246815557065,
+            "y": 15.647806250530742,
+            "w": 15.640385105298911,
+            "h": 3.0001596202021052,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.51,
+              "y": 15.65,
+              "w": 15.64,
+              "h": 3,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Account**: 4410075042\n**Billing period**: January 2026",
+          "value": "**Account**: 4410075042\n**Billing period**: January 2026",
+          "bBox": {
+            "x": 7.3728,
+            "y": 15.552,
+            "w": 36.864,
+            "h": 9.849600000000002,
+            "confidence": 0.8,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 18.48,
+              "w": 36.72,
+              "h": 6.72,
+              "startIndex": 0,
+              "endIndex": 55,
+              "confidence": 0.8,
+              "label": "key-value-region"
+            },
+            {
+              "x": 6.96,
+              "y": 18.48,
+              "w": 28.32,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.2,
+              "y": 21.6,
+              "w": 36.48,
+              "h": 3.6,
+              "startIndex": 24,
+              "endIndex": 55,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description  | Quantity | Rate    | Amount  |\n| ------------ | -------- | ------- | ------- |\n| Plan charges | 1        | 1222.20 | 1222.20 |\n| Taxes        | 1        | 215.68  | 215.68  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Quantity</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Plan charges</td>\n<td>1</td>\n<td>1222.20</td>\n<td>1222.20</td>\n    </tr>\n<tr>\n        <td>Taxes</td>\n<td>1</td>\n<td>215.68</td>\n<td>215.68</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Quantity",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Plan charges",
+              "1",
+              "1222.20",
+              "1222.20"
+            ],
+            [
+              "Taxes",
+              "1",
+              "215.68",
+              "215.68"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Quantity\",\"Rate\",\"Amount\"\n\"Plan charges\",\"1\",\"1222.20\",\"1222.20\"\n\"Taxes\",\"1\",\"215.68\",\"215.68\"",
+          "bBox": {
+            "x": 6.758399999999999,
+            "y": 29.8944,
+            "w": 145.92,
+            "h": 10.886399999999998,
+            "confidence": 0.9,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 29.76,
+              "w": 17.28,
+              "h": 3.84,
+              "startIndex": 98,
+              "endIndex": 109,
+              "confidence": 0.9,
+              "label": "text"
+            },
+            {
+              "x": 6.96,
+              "y": 29.76,
+              "w": 17.28,
+              "h": 8.4,
+              "startIndex": 98,
+              "endIndex": 187,
+              "confidence": 0.9,
+              "label": "table"
+            },
+            {
+              "x": 68.4,
+              "y": 29.28,
+              "w": 55.68,
+              "h": 10.56,
+              "startIndex": 98,
+              "endIndex": 187,
+              "confidence": 0.9,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Amount Due**: ₹1437.88 INR",
+          "value": "**Amount Due**: ₹1437.88 INR",
+          "bBox": {
+            "x": 105.67679999999999,
+            "y": 43.7184,
+            "w": 46.6944,
+            "h": 3.1103999999999985,
+            "confidence": 0.92,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 105.68,
+              "y": 43.72,
+              "w": 46.69,
+              "h": 3.11,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 0.92,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.839,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.049,
+            "w": 0.144,
+            "h": 0.033
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.344,
+            "y": 0.253,
+            "w": 0.152,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.419,
+            "y": 0.253,
+            "w": 0.077,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.79,
+          "label": "table",
+          "bbox": {
+            "x": 0.022,
+            "y": 0.173,
+            "w": 0.475,
+            "h": 0.063
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.344,
+            "y": 0.253,
+            "w": 0.071,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.111,
+            "w": 0.051,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.111,
+            "w": 0.038,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.129,
+            "w": 0.119,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.091,
+            "w": 0.051,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.6,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.09,
+            "w": 0.12,
+            "h": 0.057
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.025,
+            "y": 0.176,
+            "w": 0.055,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "              OfficeMart\n\nRetail Invoice\nDate: 2026-05-21\n\nD                       1 340  340\nDesk organizer\n\n                Total: 2340.00 INR",
+      "md": "**OfficeMart**\n\nRetail Invoice\n\nDate: 2026-05-21\n\n| Desk organizer | 1 | 340 | 340 |\n| -------------- | - | --- | --- |\n\n\n**Total: ₹340.00 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 150,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 21,
+              "y": 91,
+              "w": 94,
+              "h": 10,
+              "confidence": 0.988,
+              "text": "Desk organizer"
+            },
+            {
+              "x": 20,
+              "y": 62,
+              "w": 154,
+              "h": 15,
+              "confidence": 0.997,
+              "text": "Date: 2026-05-21"
+            },
+            {
+              "x": 21,
+              "y": 46,
+              "w": 136,
+              "h": 13,
+              "confidence": 0.995,
+              "text": "Retail Invoice"
+            },
+            {
+              "x": 135,
+              "y": 19,
+              "w": 92,
+              "h": 13,
+              "confidence": 1,
+              "text": "OfficeMart"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**OfficeMart**",
+          "value": "**OfficeMart**",
+          "bBox": {
+            "x": 33.25484459918478,
+            "y": 6.2355348835820745,
+            "w": 22.112504245923915,
+            "h": 2.6318595388661272,
+            "confidence": 0.85,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 33.25,
+              "y": 6.24,
+              "w": 22.11,
+              "h": 2.63,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 0.85,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Retail Invoice",
+          "value": "Retail Invoice",
+          "bBox": {
+            "x": 5.570444919752038,
+            "y": 12.431832454515542,
+            "w": 32.83477438221807,
+            "h": 2.9784935660984213,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.52,
+              "y": 12.24,
+              "w": 32.64,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-05-21",
+          "value": "Date: 2026-05-21",
+          "bBox": {
+            "x": 19.48435801630435,
+            "y": 16.69157250445822,
+            "w": 23.102780018682065,
+            "h": 3.0570067032523767,
+            "confidence": 0.93,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.48,
+              "y": 16.69,
+              "w": 23.1,
+              "h": 3.06,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.93,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Desk organizer | 1 | 340 | 340 |\n| -------------- | - | --- | --- |",
+          "html": "<table>\n    <tr>\n        <td>Desk organizer</td>\n<td>1</td>\n<td>340</td>\n<td>340</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Desk organizer",
+              "1",
+              "340",
+              "340"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Desk organizer\",\"1\",\"340\",\"340\"",
+          "bBox": {
+            "x": 5.2224,
+            "y": 22.291200000000003,
+            "w": 71.57759999999999,
+            "h": 3.4559999999999995,
+            "confidence": 1,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 22.32,
+              "w": 22.8,
+              "h": 3.12,
+              "startIndex": 2,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 56.16,
+              "y": 21.6,
+              "w": 10.08,
+              "h": 4.32,
+              "startIndex": 19,
+              "endIndex": 25,
+              "confidence": 1,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, paragraph_title, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹340.00 INR**",
+          "value": "**Total: ₹340.00 INR**",
+          "bBox": {
+            "x": 61.90879967730978,
+            "y": 29.9567486970321,
+            "w": 21.343435801630438,
+            "h": 2.4255860038425605,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 61.91,
+              "y": 29.96,
+              "w": 21.34,
+              "h": 2.43,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.83,
+              "label": "text"
+            },
+            {
+              "x": 48.24,
+              "y": 29.04,
+              "w": 34.56,
+              "h": 3.6,
+              "startIndex": 9,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.9,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.063,
+            "y": 0.097,
+            "w": 0.075,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.099,
+            "w": 0.037,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.136,
+            "w": 0.073,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.186,
+            "y": 0.134,
+            "w": 0.064,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.71,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.108,
+            "y": 0.036,
+            "w": 0.072,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.7,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.159,
+            "y": 0.173,
+            "w": 0.112,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.202,
+            "y": 0.173,
+            "w": 0.069,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.072,
+            "w": 0.107,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.159,
+            "y": 0.174,
+            "w": 0.036,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.53,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.072,
+            "w": 0.121,
+            "h": 0.042
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_key-value-region_3_v2.jpg",
+          "confidence": 0.52,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.097,
+            "w": 0.121,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.186,
+            "y": 0.134,
+            "w": 0.028,
+            "h": 0.012
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

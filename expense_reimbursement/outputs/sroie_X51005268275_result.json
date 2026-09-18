@@ -1,0 +1,63 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "LIGHTROOM GALLERY SDN BHD",
+    "date": "20/11/2017",
+    "amount": "278.80",
+    "currency": "RM",
+    "subtotal": "263.02",
+    "tax": "15.78",
+    "line_items": [
+      {
+        "name": "YE36 BK 12W WW LED TRACK LIGHT",
+        "quantity": "2",
+        "unit_price": "45.29",
+        "total": "90.57"
+      },
+      {
+        "name": "YE44 35W WW BK TRACK HOLDER",
+        "quantity": "1",
+        "unit_price": "155.66",
+        "total": "155.66"
+      },
+      {
+        "name": "1METER TRACK-BK",
+        "quantity": "1",
+        "unit_price": "16.99",
+        "total": "16.79"
+      }
+    ],
+    "additional_fields": {
+      "vendor_address": "No: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D. E, MALAYSIA",
+      "roc_number": "(1072825-A)",
+      "gst_number": "000584089600",
+      "telephone": "03-3362 4395",
+      "fax": "03-3362 4395",
+      "credit_note_number": "LCN00212",
+      "cashier": "ANGELA",
+      "cover": "1",
+      "bill_start": "20/11/2017 03:57:01 PM",
+      "code": "300-E0009",
+      "customer_name": "ESWARAN 012-6369400",
+      "item_discount": "0.20",
+      "service_charge": "0.00",
+      "total": "278.80",
+      "casi": "278.80",
+      "change": "0.00",
+      "item_count": "4",
+      "qty_count": "4.0",
+      "closed_bill": "20/11/2017 04:01:23 PM",
+      "bank_accounts": "BANK ACC MBB 5128 4851 2118; BANK ACC MBB 5626 4732 1744; BANK ACC AMBANK 888 100 123 3706",
+      "gst_summary": "SR @ 6%: 263.02 (Tax 15.78); ZR/OS/EZ: 0.00 (Tax 0.00)"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96
+  },
+  "duration_seconds": 21.969000000040978,
+  "tokens": {
+    "prompt": 2123,
+    "completion": 1862,
+    "total": 3985
+  }
+}

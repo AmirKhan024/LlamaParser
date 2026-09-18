@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Skillbridge Academy",
+    "date": "2026-01-01",
+    "amount": "26080.42",
+    "currency": "INR",
+    "additional_fields": {
+      "participant": "Chasmum Sahota"
+    },
+    "line_items": [
+      {
+        "name": "Annual Tech Conference Pass",
+        "quantity": "1",
+        "unit_price": "26080.42",
+        "total": "26080.42"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1912
+  }
+}

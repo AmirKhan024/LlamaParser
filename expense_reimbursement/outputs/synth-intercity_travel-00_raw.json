@@ -1,0 +1,680 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Meridian Wings\nE-Ticket / Boarding Pass\nPassenger: Yatan Acharya\nPNR: DW1762\nRoute: Kolkata -> Bengaluru\nDate: 2026-01-04\nFlight: Meridian Wings 151\nI light. Mendian Wings 151\nBase fare                  1 7982.88    7982.88\n                           1\nTaxes & fees               1 1995.72    1995.72\n                                        Total: 79978.60 INR",
+      "md": "## Meridian Wings\n\nE-Ticket / Boarding Pass\n\n**Passenger**: Yatan Acharya\n\n**PNR**: DW1762\n\n**Route**: Kolkata -> Bengaluru\n\n**Date**: 2026-01-04\n\n**Flight**: Meridian Wings 151\n\n| Base fare    | 1 | 7982.88 | 7982.88 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 1995.72 | 1995.72 |\n\n\n**Total: ₹9978.60 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 606,
+          "original_height": 302,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 42,
+              "y": 216,
+              "w": 73,
+              "h": 16,
+              "confidence": 1,
+              "text": "Taxes & fees"
+            },
+            {
+              "x": 263,
+              "y": 196,
+              "w": 68,
+              "h": 16,
+              "confidence": 1,
+              "text": "1 7982.88"
+            },
+            {
+              "x": 422,
+              "y": 194,
+              "w": 49,
+              "h": 19,
+              "confidence": 1,
+              "text": "7982.88"
+            },
+            {
+              "x": 42,
+              "y": 168,
+              "w": 157,
+              "h": 18,
+              "confidence": 0.999,
+              "text": "Flight: Meridian Wings 151"
+            },
+            {
+              "x": 42,
+              "y": 150,
+              "w": 106,
+              "h": 15,
+              "confidence": 0.993,
+              "text": "Date: 2026-01-04"
+            },
+            {
+              "x": 42,
+              "y": 110,
+              "w": 90,
+              "h": 18,
+              "confidence": 0.992,
+              "text": "PNR: DW1762"
+            },
+            {
+              "x": 41,
+              "y": 41,
+              "w": 139,
+              "h": 24,
+              "confidence": 1,
+              "text": "Meridian Wings"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 62.633,
+          "width": 135.477,
+          "x": 5.765,
+          "y": 6.093,
+          "original_width": 565,
+          "original_height": 261,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Meridian Wings",
+          "value": "Meridian Wings",
+          "lvl": 2,
+          "bBox": {
+            "x": 11.492402184527853,
+            "y": 11.906063212519108,
+            "w": 32.18334085215693,
+            "h": 4.583429518989896,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.49,
+              "y": 11.91,
+              "w": 32.18,
+              "h": 4.58,
+              "startIndex": 0,
+              "endIndex": 16,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "E-Ticket / Boarding Pass",
+          "value": "E-Ticket / Boarding Pass",
+          "bBox": {
+            "x": 11.625164794921874,
+            "y": 19.09410513172979,
+            "w": 34.34647561778193,
+            "h": 3.7430748317552665,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.63,
+              "y": 19.09,
+              "w": 34.35,
+              "h": 3.74,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Passenger**: Yatan Acharya",
+          "value": "**Passenger**: Yatan Acharya",
+          "bBox": {
+            "x": 11.366399999999999,
+            "y": 23.846400000000003,
+            "w": 37.1712,
+            "h": 3.4559999999999995,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 10.8,
+              "y": 23.28,
+              "w": 37.68,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**PNR**: DW1762",
+          "value": "**PNR**: DW1762",
+          "bBox": {
+            "x": 11.421456776494566,
+            "y": 28.30505755880605,
+            "w": 20.92014690896739,
+            "h": 2.8783582604449727,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.42,
+              "y": 28.31,
+              "w": 20.92,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Route**: Kolkata -> Bengaluru",
+          "value": "**Route**: Kolkata -> Bengaluru",
+          "bBox": {
+            "x": 11.440988557235054,
+            "y": 32.82379880158798,
+            "w": 39.825673509680705,
+            "h": 3.624202164359715,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.44,
+              "y": 32.82,
+              "w": 39.83,
+              "h": 3.62,
+              "startIndex": 0,
+              "endIndex": 30,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-01-04",
+          "value": "**Date**: 2026-01-04",
+          "bBox": {
+            "x": 11.366399999999999,
+            "y": 37.497600000000006,
+            "w": 24.576,
+            "h": 2.764800000000001,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 10.8,
+              "y": 36.96,
+              "w": 25.44,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Flight**: Meridian Wings 151",
+          "value": "**Flight**: Meridian Wings 151",
+          "bBox": {
+            "x": 11.366604746942935,
+            "y": 41.9961050282354,
+            "w": 37.343089758831525,
+            "h": 3.6226258651069956,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.37,
+              "y": 42,
+              "w": 37.34,
+              "h": 3.62,
+              "startIndex": 0,
+              "endIndex": 29,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Base fare    | 1 | 7982.88 | 7982.88 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 1995.72 | 1995.72 |",
+          "html": "<table>\n    <tr>\n        <td>Base fare</td>\n<td>1</td>\n<td>7982.88</td>\n<td>7982.88</td>\n    </tr>\n<tr>\n        <td>Taxes &#x26; fees</td>\n<td>1</td>\n<td>1995.72</td>\n<td>1995.72</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Base fare",
+              "1",
+              "7982.88",
+              "7982.88"
+            ],
+            [
+              "Taxes & fees",
+              "1",
+              "1995.72",
+              "1995.72"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Base fare\",\"1\",\"7982.88\",\"7982.88\"\n\"Taxes & fees\",\"1\",\"1995.72\",\"1995.72\"",
+          "bBox": {
+            "x": 5.836799999999999,
+            "y": 6.048000000000001,
+            "w": 135.4752,
+            "h": 62.726400000000005,
+            "confidence": 0.73,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 10.32,
+              "y": 10.8,
+              "w": 40.8,
+              "h": 45.84,
+              "startIndex": 2,
+              "endIndex": 95,
+              "confidence": 0.5,
+              "label": "text"
+            },
+            {
+              "x": 63.6,
+              "y": 48,
+              "w": 16.56,
+              "h": 8.4,
+              "startIndex": 17,
+              "endIndex": 109,
+              "confidence": 0.5,
+              "label": "key-value-region"
+            },
+            {
+              "x": 100.8,
+              "y": 47.52,
+              "w": 36,
+              "h": 15.84,
+              "startIndex": 21,
+              "endIndex": 109,
+              "confidence": 0.5,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹9978.60 INR**",
+          "value": "**Total: ₹9978.60 INR**",
+          "bBox": {
+            "x": 101.376,
+            "y": 59.4432,
+            "w": 35.328,
+            "h": 3.456000000000003,
+            "confidence": 0.83,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 101.38,
+              "y": 59.44,
+              "w": 35.33,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.83,
+              "label": "key-value-region"
+            },
+            {
+              "x": 100.8,
+              "y": 58.56,
+              "w": 36,
+              "h": 4.8,
+              "startIndex": 9,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.822,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.069,
+            "w": 0.105,
+            "h": 0.027
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.31,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.282,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.336,
+            "y": 0.31,
+            "w": 0.034,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.282,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.366,
+            "y": 0.344,
+            "w": 0.079,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.31,
+            "w": 0.051,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.282,
+            "w": 0.052,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.345,
+            "w": 0.032,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.71,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.281,
+            "w": 0.335,
+            "h": 0.045
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.243,
+            "w": 0.122,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.11,
+            "w": 0.13,
+            "h": 0.154
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.65,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.344,
+            "w": 0.115,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.217,
+            "w": 0.024,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.064,
+            "y": 0.217,
+            "w": 0.053,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.11,
+            "w": 0.112,
+            "h": 0.022
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.59,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.164,
+            "w": 0.068,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.13,
+            "h": 0.021
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.052,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.12,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.217,
+            "w": 0.081,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.52,
+          "label": "table",
+          "bbox": {
+            "x": 0.019,
+            "y": 0.035,
+            "w": 0.441,
+            "h": 0.362
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_19_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.092,
+            "y": 0.138,
+            "w": 0.066,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_20_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.19,
+            "w": 0.029,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

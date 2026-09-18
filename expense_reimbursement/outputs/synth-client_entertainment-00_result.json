@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Urban Tandoor",
+    "date": "2026-08-22",
+    "amount": "1848.87",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Novagen Pharma",
+      "attendees": "2"
+    },
+    "extraction_notes": [],
+    "confidence": 1.0,
+    "subtotal": "1848.87",
+    "grand_total": "1848.87",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "2",
+        "unit_price": "924.44",
+        "total": "1848.87"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1948
+  }
+}

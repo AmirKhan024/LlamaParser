@@ -1,0 +1,477 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Urban Tandoor\nTax Invoice\nDate: 2026-08-22\nClient: Novagen Pharma\nAttendees: 2\n\nDescription                       Qty  Rate  Amount\nFood & beverages (incl. wine)     2    924.44  1848.87\n\n\nTotal: “1848.87 INR",
+      "md": "# Urban Tandoor\n\nTax Invoice\nDate: 2026-08-22\nClient: Novagen Pharma\nAttendees: 2\n\n| Description                   | Qty | Rate   | Amount  |\n| ----------------------------- | --- | ------ | ------- |\n| Food & beverages (incl. wine) | 2   | 924.44 | 1848.87 |\n\n\n**Total**: ₹1848.87 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 225,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 482,
+              "y": 194,
+              "w": 163,
+              "h": 11,
+              "confidence": 0.93,
+              "text": "Total: “1848.87 INR"
+            },
+            {
+              "x": 541,
+              "y": 157,
+              "w": 55,
+              "h": 14,
+              "confidence": 0.999,
+              "text": "1848.87"
+            },
+            {
+              "x": 30,
+              "y": 158,
+              "w": 210,
+              "h": 14,
+              "confidence": 0.99,
+              "text": "Food & beverages (incl. wine)"
+            },
+            {
+              "x": 444,
+              "y": 128,
+              "w": 38,
+              "h": 19,
+              "confidence": 0.998,
+              "text": "Rate"
+            },
+            {
+              "x": 383,
+              "y": 128,
+              "w": 30,
+              "h": 20,
+              "confidence": 0.999,
+              "text": "Qty"
+            },
+            {
+              "x": 20,
+              "y": 81,
+              "w": 91,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Attendees: 2"
+            },
+            {
+              "x": 20,
+              "y": 66,
+              "w": 162,
+              "h": 15,
+              "confidence": 0.995,
+              "text": "Client: Novagen Pharma"
+            },
+            {
+              "x": 21,
+              "y": 39,
+              "w": 82,
+              "h": 14,
+              "confidence": 1,
+              "text": "Tax Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.27,
+          "width": 149.842,
+          "x": 8.267,
+          "y": 34.317,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Urban Tandoor",
+          "value": "Urban Tandoor",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.447181502632473,
+            "y": 9.493310613217563,
+            "w": 37.84732002590014,
+            "h": 3.4412135248598834,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.45,
+              "y": 9.49,
+              "w": 37.85,
+              "h": 3.44,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice\nDate: 2026-08-22\nClient: Novagen Pharma\nAttendees: 2",
+          "value": "Tax Invoice\nDate: 2026-08-22\nClient: Novagen Pharma\nAttendees: 2",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.515200000000002,
+            "w": 39.01440000000001,
+            "h": 12.614400000000002,
+            "confidence": 0.8,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.29,
+              "y": 14.52,
+              "w": 39.01,
+              "h": 12.61,
+              "startIndex": 0,
+              "endIndex": 63,
+              "confidence": 0.8,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.16,
+              "y": 13.68,
+              "w": 19.68,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 28.08,
+              "h": 2.88,
+              "startIndex": 12,
+              "endIndex": 27,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.92,
+              "y": 20.16,
+              "w": 38.88,
+              "h": 3.6,
+              "startIndex": 29,
+              "endIndex": 50,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.92,
+              "y": 23.76,
+              "w": 21.84,
+              "h": 3.36,
+              "startIndex": 52,
+              "endIndex": 63,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                   | Qty | Rate   | Amount  |\n| ----------------------------- | --- | ------ | ------- |\n| Food & beverages (incl. wine) | 2   | 924.44 | 1848.87 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages (incl. wine)</td>\n<td>2</td>\n<td>924.44</td>\n<td>1848.87</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages (incl. wine)",
+              "2",
+              "924.44",
+              "1848.87"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages (incl. wine)\",\"2\",\"924.44\",\"1848.87\"",
+          "bBox": {
+            "x": 8.267985733695653,
+            "y": 34.317421158500345,
+            "w": 149.84261209239128,
+            "h": 13.270125413977583,
+            "confidence": 0.96,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.27,
+              "y": 34.32,
+              "w": 149.84,
+              "h": 13.27,
+              "startIndex": 0,
+              "endIndex": 175,
+              "confidence": 0.96,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹1848.87 INR",
+          "value": "**Total**: ₹1848.87 INR",
+          "bBox": {
+            "x": 118.5792,
+            "y": 50.112,
+            "w": 39.6288,
+            "h": 3.455999999999996,
+            "confidence": 0.9,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 118.8,
+              "y": 50.88,
+              "w": 39.12,
+              "h": 2.64,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 1,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.199,
+            "w": 0.488,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.055,
+            "w": 0.123,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.433,
+            "y": 0.295,
+            "w": 0.082,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.81,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.386,
+            "y": 0.295,
+            "w": 0.129,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.78,
+          "label": "text",
+          "bbox": {
+            "x": 0.387,
+            "y": 0.296,
+            "w": 0.039,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.072,
+            "y": 0.123,
+            "w": 0.081,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.61,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.127,
+            "h": 0.073
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.029,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.039,
+            "h": 0.009
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.085,
+            "w": 0.019,
+            "h": 0.012
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.103,
+            "w": 0.057,
+            "h": 0.01
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.051,
+            "y": 0.085,
+            "w": 0.04,
+            "h": 0.011
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.109,
+            "w": 0.029,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.029,
+            "h": 0.012
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.108,
+            "w": 0.057,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.143,
+            "w": 0.06,
+            "h": 0.01
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "Zenith Business Suites",
+    "date": "2026-08-17",
+    "amount": "45171.50",
+    "currency": "INR",
+    "subtotal": "45171.50",
+    "line_items": [
+      {
+        "name": "Room charge x 4 night(s)",
+        "quantity": "4",
+        "unit_price": "11032.37",
+        "total": "44129.48"
+      },
+      {
+        "name": "Minibar",
+        "quantity": "1",
+        "unit_price": "1042.02",
+        "total": "1042.02"
+      }
+    ],
+    "additional_fields": {
+      "guest_name": "Ekapad Mand",
+      "check_in_date": "2026-08-17",
+      "nights": "4"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 2058
+  }
+}

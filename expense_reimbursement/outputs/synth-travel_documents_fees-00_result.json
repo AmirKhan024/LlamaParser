@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "VisaAssist Services",
+    "date": "2026-05-11",
+    "amount": "77.20",
+    "currency": "USD",
+    "additional_fields": {
+      "applicant": "Oliver Sachar",
+      "document_title": "Fee Receipt"
+    },
+    "line_items": [
+      {
+        "name": "Visa application fee",
+        "quantity": "1",
+        "unit_price": "77.20",
+        "total": "77.20"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1886
+  }
+}

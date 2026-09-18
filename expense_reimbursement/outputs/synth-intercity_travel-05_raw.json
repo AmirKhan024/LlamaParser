@@ -1,0 +1,656 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Meridian Wings\nE-Ticket / Boarding Pass\nPassenger: Rayaan Mane\nPNR: HJ2264\nRoute: Bengaluru -> Chennai\nDate: 2026-05-18\nFlight: Meridian Wings 877\nI lignt. Menidian Wings o7 7\nBase fare                   8068.80       8068.80\n                            1\nTaxes & fees                1 2017.20     2017.20\n                                         Totol: 3100\n                                         Total: 710086.00 INR",
+      "md": "## Meridian Wings\n\nE-Ticket / Boarding Pass\n\nPassenger: Rayaan Mane\n\nPNR: HJ2264\n\nRoute: Bengaluru -> Chennai\n\nDate: 2026-05-18\n\nFlight: Meridian Wings 877\n\n| Base fare    | 1 | 8068.80 | 8068.80 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 2017.20 | 2017.20 |\n\n\n**Total: ₹10086.00 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 606,
+          "original_height": 302,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 283,
+              "y": 216,
+              "w": 49,
+              "h": 16,
+              "confidence": 1,
+              "text": "2017.20"
+            },
+            {
+              "x": 423,
+              "y": 214,
+              "w": 49,
+              "h": 19,
+              "confidence": 1,
+              "text": "2017.20"
+            },
+            {
+              "x": 284,
+              "y": 196,
+              "w": 48,
+              "h": 16,
+              "confidence": 1,
+              "text": "8068.80"
+            },
+            {
+              "x": 423,
+              "y": 194,
+              "w": 49,
+              "h": 19,
+              "confidence": 1,
+              "text": "8068.80"
+            },
+            {
+              "x": 44,
+              "y": 170,
+              "w": 155,
+              "h": 15,
+              "confidence": 0.976,
+              "text": "Flight: Meridian Wings 877"
+            },
+            {
+              "x": 44,
+              "y": 93,
+              "w": 152,
+              "h": 15,
+              "confidence": 0.997,
+              "text": "Passenger: Rayaan Mane"
+            },
+            {
+              "x": 44,
+              "y": 74,
+              "w": 146,
+              "h": 15,
+              "confidence": 0.99,
+              "text": "E-Ticket / Boarding Pass"
+            },
+            {
+              "x": 44,
+              "y": 44,
+              "w": 135,
+              "h": 19,
+              "confidence": 0.994,
+              "text": "Meridian Wings"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 62.626,
+          "width": 135.559,
+          "x": 5.623,
+          "y": 6.091,
+          "original_width": 565,
+          "original_height": 261,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Meridian Wings",
+          "value": "Meridian Wings",
+          "lvl": 2,
+          "bBox": {
+            "x": 11.480388077445651,
+            "y": 11.91127933004628,
+            "w": 32.17971615998641,
+            "h": 4.577613332997199,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.48,
+              "y": 11.91,
+              "w": 32.18,
+              "h": 4.58,
+              "startIndex": 0,
+              "endIndex": 16,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "E-Ticket / Boarding Pass",
+          "value": "E-Ticket / Boarding Pass",
+          "bBox": {
+            "x": 11.59383306088655,
+            "y": 19.10089396601138,
+            "w": 34.35645566193954,
+            "h": 3.7085789556088655,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.59,
+              "y": 19.1,
+              "w": 34.36,
+              "h": 3.71,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Passenger: Rayaan Mane",
+          "value": "Passenger: Rayaan Mane",
+          "bBox": {
+            "x": 11.415995456861413,
+            "y": 23.818988700534987,
+            "w": 36.603321373980975,
+            "h": 3.504602249808934,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.42,
+              "y": 23.82,
+              "w": 36.6,
+              "h": 3.5,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "PNR: HJ2264",
+          "value": "PNR: HJ2264",
+          "bBox": {
+            "x": 11.426433264690896,
+            "y": 28.36421177076257,
+            "w": 19.59685881241508,
+            "h": 2.849279121730639,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.43,
+              "y": 28.36,
+              "w": 19.6,
+              "h": 2.85,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Route: Bengaluru -> Chennai",
+          "value": "Route: Bengaluru -> Chennai",
+          "bBox": {
+            "x": 11.48038568911345,
+            "y": 32.8300001061481,
+            "w": 41.01562101944632,
+            "h": 3.6345949919327474,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.48,
+              "y": 32.83,
+              "w": 41.02,
+              "h": 3.63,
+              "startIndex": 0,
+              "endIndex": 26,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-05-18",
+          "value": "Date: 2026-05-18",
+          "bBox": {
+            "x": 11.366399999999999,
+            "y": 37.497600000000006,
+            "w": 24.883200000000002,
+            "h": 2.764800000000001,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.04,
+              "y": 37.2,
+              "w": 24.96,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Flight: Meridian Wings 877",
+          "value": "Flight: Meridian Wings 877",
+          "bBox": {
+            "x": 11.350267758576766,
+            "y": 41.97717152471128,
+            "w": 37.480002494480296,
+            "h": 3.626641845703125,
+            "confidence": 0.88,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.35,
+              "y": 41.98,
+              "w": 37.48,
+              "h": 3.63,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.88,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Base fare    | 1 | 8068.80 | 8068.80 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 2017.20 | 2017.20 |",
+          "html": "<table>\n    <tr>\n        <td>Base fare</td>\n<td>1</td>\n<td>8068.80</td>\n<td>8068.80</td>\n    </tr>\n<tr>\n        <td>Taxes &#x26; fees</td>\n<td>1</td>\n<td>2017.20</td>\n<td>2017.20</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Base fare",
+              "1",
+              "8068.80",
+              "8068.80"
+            ],
+            [
+              "Taxes & fees",
+              "1",
+              "2017.20",
+              "2017.20"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Base fare\",\"1\",\"8068.80\",\"8068.80\"\n\"Taxes & fees\",\"1\",\"2017.20\",\"2017.20\"",
+          "bBox": {
+            "x": 11.054736328125,
+            "y": 48.58321599545687,
+            "w": 102.64401537024456,
+            "h": 7.83322926396909,
+            "confidence": 0.77,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.05,
+              "y": 48.58,
+              "w": 102.64,
+              "h": 7.83,
+              "startIndex": 0,
+              "endIndex": 121,
+              "confidence": 0.77,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹10086.00 INR**",
+          "value": "**Total: ₹10086.00 INR**",
+          "bBox": {
+            "x": 99.5328,
+            "y": 59.4432,
+            "w": 37.17120000000001,
+            "h": 3.456000000000003,
+            "confidence": 0.89,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 99.53,
+              "y": 59.44,
+              "w": 37.17,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.89,
+              "label": "key-value-region"
+            },
+            {
+              "x": 98.4,
+              "y": 58.56,
+              "w": 38.4,
+              "h": 5.04,
+              "startIndex": 9,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.842,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.069,
+            "w": 0.105,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "text",
+          "bbox": {
+            "x": 0.359,
+            "y": 0.344,
+            "w": 0.086,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.31,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.324,
+            "y": 0.345,
+            "w": 0.031,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.31,
+            "w": 0.035,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.282,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.31,
+            "w": 0.052,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.282,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.78,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.324,
+            "y": 0.344,
+            "w": 0.121,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.243,
+            "w": 0.122,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.76,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.281,
+            "w": 0.334,
+            "h": 0.045
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.282,
+            "w": 0.051,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.164,
+            "w": 0.064,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.111,
+            "w": 0.112,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.218,
+            "w": 0.024,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.134,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.217,
+            "w": 0.053,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.119,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.19,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.217,
+            "w": 0.081,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.051,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.52,
+          "label": "table",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.035,
+            "w": 0.441,
+            "h": 0.362
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_19_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.11,
+            "w": 0.134,
+            "h": 0.154
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

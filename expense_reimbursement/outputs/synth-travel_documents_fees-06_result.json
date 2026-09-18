@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "SafeTrip Insurance",
+    "date": "2026-01-24",
+    "amount": "78.20",
+    "currency": "USD",
+    "additional_fields": {
+      "applicant": "Shivansh Sabharwal",
+      "document_title": "Fee Receipt"
+    },
+    "line_items": [
+      {
+        "name": "Travel insurance premium",
+        "total": "78.20"
+      }
+    ],
+    "extraction_notes": [
+      "The table header for the first column is missing in the markdown, but the strikethrough '1' and the value '78.20' suggest a quantity of 1 and a unit price/total of 78.20. The total matches the line item."
+    ],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1933
+  }
+}

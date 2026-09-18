@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Bay Leaf Diner",
+    "date": "2026-09-16",
+    "amount": "4668.18",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Coastline Bank",
+      "attendees": "3"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "4668.18",
+    "grand_total": "4668.18",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "3",
+        "unit_price": "1556.06",
+        "total": "4668.18"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1959
+  }
+}

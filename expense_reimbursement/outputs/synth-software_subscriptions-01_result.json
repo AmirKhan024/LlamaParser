@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "TaskFlow SaaS",
+    "date": "2026-08-29",
+    "amount": "12686.45",
+    "currency": "INR",
+    "additional_fields": {
+      "billed_to": "Konkan Digital Systems Pvt Ltd"
+    },
+    "line_items": [
+      {
+        "name": "Monthly subscription",
+        "quantity": "1",
+        "unit_price": "12686.45",
+        "total": "12686.45"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1914
+  }
+}

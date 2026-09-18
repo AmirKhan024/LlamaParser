@@ -1,0 +1,55 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "TED HENG STATIONERY & BOOKS",
+    "date": "27/01/2018",
+    "amount": "27.35",
+    "currency": "RM",
+    "subtotal": "25.80",
+    "tax": "1.55",
+    "line_items": [
+      {
+        "name": "1355 - DOUBLE SIDE FOAM TAPE 18MM",
+        "quantity": "1",
+        "unit_price": "3.96",
+        "total": "3.80"
+      },
+      {
+        "name": "9557950605126 - CAMIS SQ BOOK 200",
+        "quantity": "5",
+        "unit_price": "2.74",
+        "total": "13.00"
+      },
+      {
+        "name": "9557369315029 - EAGLE F4 200 FOOLSCAP BOOK",
+        "quantity": "1",
+        "unit_price": "5.47",
+        "total": "5.20"
+      },
+      {
+        "name": "9557369305006 - EAGLE F4 120 NUMBERING FOOLSCAP BOOK",
+        "quantity": "1",
+        "unit_price": "3.96",
+        "total": "3.80"
+      }
+    ],
+    "additional_fields": {
+      "GST No": "000689913856",
+      "Receipt No": "CS1801/27175",
+      "Payment Method": "CASH",
+      "Total Qty": "8",
+      "Rounding": "0.00",
+      "Change": "0.00"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 2.640999999945052,
+  "tokens": {
+    "prompt": 2125,
+    "completion": 1652,
+    "total": 3777
+  }
+}

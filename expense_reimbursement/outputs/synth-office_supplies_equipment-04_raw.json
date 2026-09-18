@@ -1,0 +1,319 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "                  OfficeMart\nRetail Invoice\nDate: 2026-03-19\nWireless mouse              1 650  650\n                            Total: 2650.00 INR",
+      "md": "# OfficeMart\n\nRetail Invoice\n**Date**: 2026-03-19\n\n| Description    | Quantity | Unit Price | Total Price |\n| -------------- | -------- | ---------- | ----------- |\n| Wireless mouse | 1        | 650        | 650         |\n\n\n**Total**: ₹650.00 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 154,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 21,
+              "y": 92,
+              "w": 80,
+              "h": 14,
+              "confidence": 1,
+              "text": "Wireless mouse"
+            },
+            {
+              "x": 228,
+              "y": 89,
+              "w": 42,
+              "h": 18,
+              "confidence": 0.987,
+              "text": "1 650"
+            },
+            {
+              "x": 291,
+              "y": 89,
+              "w": 25,
+              "h": 16,
+              "confidence": 1,
+              "text": "650"
+            },
+            {
+              "x": 21,
+              "y": 46,
+              "w": 100,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "Retail Invoice"
+            },
+            {
+              "x": 143,
+              "y": 19,
+              "w": 79,
+              "h": 18,
+              "confidence": 0.999,
+              "text": "OfficeMart"
+            }
+          ]
+        },
+        {
+          "name": "page_1_image_1_v2.jpg",
+          "height": 10.261,
+          "width": 77.697,
+          "x": 5.444,
+          "y": 23.119,
+          "original_width": 324,
+          "original_height": 43,
+          "rotation": 0,
+          "type": "layout_v3_image"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# OfficeMart",
+          "value": "OfficeMart",
+          "lvl": 1,
+          "bBox": {
+            "x": 35.15066448709239,
+            "y": 6.1849128391431725,
+            "w": 18.075706946331525,
+            "h": 3.2054009479025147,
+            "confidence": 0.82,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 35.15,
+              "y": 6.18,
+              "w": 18.08,
+              "h": 3.21,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.82,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Retail Invoice\n**Date**: 2026-03-19",
+          "value": "Retail Invoice\n**Date**: 2026-03-19",
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 12.4416,
+            "w": 29.798400000000004,
+            "h": 7.948800000000004,
+            "confidence": 0.79,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.53,
+              "y": 12.44,
+              "w": 29.8,
+              "h": 7.95,
+              "startIndex": 0,
+              "endIndex": 34,
+              "confidence": 0.79,
+              "label": "key-value-region"
+            },
+            {
+              "x": 5.28,
+              "y": 12,
+              "w": 24,
+              "h": 4.08,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 0.79,
+              "label": "key-value-region"
+            },
+            {
+              "x": 5.04,
+              "y": 15.6,
+              "w": 30.24,
+              "h": 4.8,
+              "startIndex": 15,
+              "endIndex": 34,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description    | Quantity | Unit Price | Total Price |\n| -------------- | -------- | ---------- | ----------- |\n| Wireless mouse | 1        | 650        | 650         |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Quantity</th>\n        <th>Unit Price</th>\n        <th>Total Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Wireless mouse</td>\n<td>1</td>\n<td>650</td>\n<td>650</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Quantity",
+              "Unit Price",
+              "Total Price"
+            ],
+            [
+              "Wireless mouse",
+              "1",
+              "650",
+              "650"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Quantity\",\"Unit Price\",\"Total Price\"\n\"Wireless mouse\",\"1\",\"650\",\"650\"",
+          "bBox": {
+            "x": 5.4444580078125,
+            "y": 23.119627712083904,
+            "w": 77.69750021229619,
+            "h": 10.26195532757303,
+            "confidence": 0.88,
+            "label": "image"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.44,
+              "y": 23.12,
+              "w": 77.7,
+              "h": 10.26,
+              "startIndex": 0,
+              "endIndex": 169,
+              "confidence": 0.88,
+              "label": "image"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [image, text, paragraph_title, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹650.00 INR",
+          "value": "**Total**: ₹650.00 INR",
+          "bBox": {
+            "x": 55.431553583559776,
+            "y": 30.194012185801633,
+            "w": 27.57870881453805,
+            "h": 2.9219357697860064,
+            "confidence": 0.75,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 55.43,
+              "y": 30.19,
+              "w": 27.58,
+              "h": 2.92,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.75,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.762,
+      "layout": [
+        {
+          "image": "page_1_image_1_v2.jpg",
+          "confidence": 0.77,
+          "label": "image",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.134,
+            "w": 0.253,
+            "h": 0.059
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.052,
+            "y": 0.099,
+            "w": 0.063,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.63,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.114,
+            "y": 0.036,
+            "w": 0.059,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.1,
+            "w": 0.03,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.58,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.072,
+            "w": 0.097,
+            "h": 0.046
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.18,
+            "y": 0.175,
+            "w": 0.09,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "The Old Mill Kitchen",
+    "date": "2026-07-18",
+    "amount": "2190.43",
+    "currency": "INR",
+    "additional_fields": {
+      "client": "Coastline Bank",
+      "attendees": "4"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "2190.43",
+    "grand_total": "2190.43",
+    "line_items": [
+      {
+        "name": "Food & beverages (incl. wine)",
+        "quantity": "4",
+        "unit_price": "547.61",
+        "total": "2190.43"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1958
+  }
+}

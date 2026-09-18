@@ -1,0 +1,444 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "DevOps Nexus\nInvoice\nBilled to: Konkan Digital Systems Pvt Ltd\nInvoice date: 2026-07-31\n\nDescription                              Qty  Rate    Amount\nAnnual subscription                      1    156.20  156.20\n                                         m-+-1. $156 20 UCD\n                                         Total: $156.20 USD",
+      "md": "# DevOps Nexus\n\nInvoice\n\n**Billed to**: Konkan Digital Systems Pvt Ltd\n**Invoice date**: 2026-07-31\n\n| Description         | Qty | Rate   | Amount |\n| ------------------- | --- | ------ | ------ |\n| Annual subscription | 1   | 156.20 | 156.20 |\n\n\n**Total**: $156.20 USD",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 211,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 526,
+              "y": 141,
+              "w": 52,
+              "h": 17,
+              "confidence": 0.962,
+              "text": "156.20"
+            },
+            {
+              "x": 407,
+              "y": 141,
+              "w": 51,
+              "h": 17,
+              "confidence": 0.975,
+              "text": "156.20"
+            },
+            {
+              "x": 525,
+              "y": 112,
+              "w": 53,
+              "h": 20,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 331,
+              "y": 113,
+              "w": 30,
+              "h": 20,
+              "confidence": 0.999,
+              "text": "Qty"
+            },
+            {
+              "x": 21,
+              "y": 53,
+              "w": 298,
+              "h": 13,
+              "confidence": 0.995,
+              "text": "Billed to: Konkan Digital Systems Pvt Ltd"
+            },
+            {
+              "x": 21,
+              "y": 39,
+              "w": 54,
+              "h": 13,
+              "confidence": 1,
+              "text": "Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.424,
+          "width": 149.865,
+          "x": 8.165,
+          "y": 30.876,
+          "original_width": 625,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# DevOps Nexus",
+          "value": "DevOps Nexus",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.449498184867528,
+            "y": 9.675306900687842,
+            "w": 34.81404737389606,
+            "h": 4.199889042066491,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 9.36,
+              "w": 35.04,
+              "h": 4.08,
+              "startIndex": 0,
+              "endIndex": 13,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice",
+          "value": "Invoice",
+          "bBox": {
+            "x": 8.579724386463994,
+            "y": 14.597433869735056,
+            "w": 12.527304740574047,
+            "h": 2.0990645698879087,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.58,
+              "y": 14.6,
+              "w": 12.53,
+              "h": 2.1,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Billed to**: Konkan Digital Systems Pvt Ltd\n**Invoice date**: 2026-07-31",
+          "value": "**Billed to**: Konkan Digital Systems Pvt Ltd\n**Invoice date**: 2026-07-31",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.8608,
+            "w": 71.5776,
+            "h": 8.812800000000001,
+            "confidence": 0.87,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 71.52,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 44,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 20.64,
+              "w": 41.76,
+              "h": 2.88,
+              "startIndex": 46,
+              "endIndex": 73,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description         | Qty | Rate   | Amount |\n| ------------------- | --- | ------ | ------ |\n| Annual subscription | 1   | 156.20 | 156.20 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Annual subscription</td>\n<td>1</td>\n<td>156.20</td>\n<td>156.20</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Annual subscription",
+              "1",
+              "156.20",
+              "156.20"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Annual subscription\",\"1\",\"156.20\",\"156.20\"",
+          "bBox": {
+            "x": 8.165890900985055,
+            "y": 30.876023134977924,
+            "w": 149.86526144276493,
+            "h": 13.424688720703125,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.17,
+              "y": 30.88,
+              "w": 149.87,
+              "h": 13.42,
+              "startIndex": 0,
+              "endIndex": 142,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: $156.20 USD",
+          "value": "**Total**: $156.20 USD",
+          "bBox": {
+            "x": 121.0368,
+            "y": 47.692800000000005,
+            "w": 36.864000000000004,
+            "h": 2.764800000000001,
+            "confidence": 0.94,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 120.24,
+              "y": 46.8,
+              "w": 37.44,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.813,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.96,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.179,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.056,
+            "w": 0.113,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.394,
+            "y": 0.276,
+            "w": 0.12,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.44,
+            "y": 0.276,
+            "w": 0.074,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.09,
+            "y": 0.103,
+            "w": 0.171,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.394,
+            "y": 0.277,
+            "w": 0.039,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.107,
+            "y": 0.123,
+            "w": 0.057,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.74,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.086,
+            "w": 0.233,
+            "h": 0.051
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.073,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.073,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.057,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.041,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.129,
+            "w": 0.073,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.057,
+            "h": 0.009
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.11,
+            "w": 0.036,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

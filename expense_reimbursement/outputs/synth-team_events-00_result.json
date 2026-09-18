@@ -1,0 +1,29 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "The Old Mill Kitchen",
+    "date": "2026-06-23",
+    "amount": "1794.45",
+    "currency": "INR",
+    "additional_fields": {
+      "guests": "2"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "1794.45",
+    "grand_total": "1794.45",
+    "line_items": [
+      {
+        "name": "Food & beverages",
+        "quantity": "2",
+        "unit_price": "897.22",
+        "total": "1794.45"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1928
+  }
+}

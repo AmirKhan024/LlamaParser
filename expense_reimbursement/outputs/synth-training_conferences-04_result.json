@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "TechConf India",
+    "date": "2026-04-03",
+    "amount": "25604.38",
+    "currency": "INR",
+    "additional_fields": {
+      "participant": "Charvi Parmar"
+    },
+    "line_items": [
+      {
+        "name": "Cloud Architecture Certification",
+        "quantity": "1",
+        "unit_price": "25604.38",
+        "total": "25604.38"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1906
+  }
+}

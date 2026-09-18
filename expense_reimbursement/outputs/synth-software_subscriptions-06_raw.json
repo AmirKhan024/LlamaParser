@@ -1,0 +1,385 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "TaskFlow SaaS\nInvoice\nBilled to: Konkan Digital Systems Pvt Ltd\nInvoice date: 2026-04-15\n\nDescription                              Qty     Rate     Amount\nAnnual subscription                      1       91.34    91.34\n                                                 Total: $91.34 USD\n                                                 T-+-k. o01 0: USD",
+      "md": "## TaskFlow SaaS\n\nInvoice\n\nBilled to: Konkan Digital Systems Pvt Ltd\n\nInvoice date: 2026-04-15\n\n----\n\n| Description         | Qty | Rate  | Amount |\n| ------------------- | --- | ----- | ------ |\n| Annual subscription | 1   | 91.34 | 91.34  |\n\n\n**Total: $91.34 USD**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 215,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 494,
+              "y": 143,
+              "w": 39,
+              "h": 19,
+              "confidence": 1,
+              "text": "91.34"
+            },
+            {
+              "x": 392,
+              "y": 143,
+              "w": 38,
+              "h": 19,
+              "confidence": 1,
+              "text": "91.34"
+            },
+            {
+              "x": 391,
+              "y": 115,
+              "w": 39,
+              "h": 18,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 307,
+              "y": 115,
+              "w": 30,
+              "h": 21,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 28,
+              "y": 114,
+              "w": 79,
+              "h": 20,
+              "confidence": 0.974,
+              "text": "Description"
+            },
+            {
+              "x": 21,
+              "y": 54,
+              "w": 221,
+              "h": 13,
+              "confidence": 0.983,
+              "text": "Billed to: Konkan Digital Systems Pvt Ltd"
+            },
+            {
+              "x": 20,
+              "y": 39,
+              "w": 44,
+              "h": 15,
+              "confidence": 1,
+              "text": "Invoice"
+            },
+            {
+              "x": 21,
+              "y": 20,
+              "w": 155,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "TaskFlow SaaS"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.509,
+          "width": 150.016,
+          "x": 8.163,
+          "y": 30.608,
+          "original_width": 626,
+          "original_height": 57,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## TaskFlow SaaS",
+          "value": "TaskFlow SaaS",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.344741157863451,
+            "y": 9.119330033012059,
+            "w": 37.44717248004415,
+            "h": 4.083053920579993,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.34,
+              "y": 9.12,
+              "w": 37.45,
+              "h": 4.08,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice",
+          "value": "Invoice",
+          "bBox": {
+            "x": 8.475738790760868,
+            "y": 14.08682844742485,
+            "w": 9.858914317255437,
+            "h": 2.6411010410474685,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.48,
+              "y": 14.09,
+              "w": 9.86,
+              "h": 2.64,
+              "startIndex": 0,
+              "endIndex": 6,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Billed to: Konkan Digital Systems Pvt Ltd",
+          "value": "Billed to: Konkan Digital Systems Pvt Ltd",
+          "bBox": {
+            "x": 8.524118440047555,
+            "y": 17.27784656027089,
+            "w": 53.269913913892665,
+            "h": 3.3689742378566554,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 17.04,
+              "w": 53.04,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 40,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Invoice date: 2026-04-15",
+          "value": "Invoice date: 2026-04-15",
+          "bBox": {
+            "x": 8.573979651409646,
+            "y": 20.82335019318954,
+            "w": 32.80129314920176,
+            "h": 3.215050407077955,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.57,
+              "y": 20.82,
+              "w": 32.8,
+              "h": 3.22,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "----",
+          "value": "----",
+          "layoutAwareBbox": []
+        },
+        {
+          "type": "table",
+          "md": "| Description         | Qty | Rate  | Amount |\n| ------------------- | --- | ----- | ------ |\n| Annual subscription | 1   | 91.34 | 91.34  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Annual subscription</td>\n<td>1</td>\n<td>91.34</td>\n<td>91.34</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Annual subscription",
+              "1",
+              "91.34",
+              "91.34"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Annual subscription\",\"1\",\"91.34\",\"91.34\"",
+          "bBox": {
+            "x": 8.16339111328125,
+            "y": 30.608811751655914,
+            "w": 150.01618174677307,
+            "h": 13.509085215692934,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 30.61,
+              "w": 150.02,
+              "h": 13.51,
+              "startIndex": 0,
+              "endIndex": 139,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: $91.34 USD**",
+          "value": "**Total: $91.34 USD**",
+          "bBox": {
+            "x": 126.30108271059783,
+            "y": 47.23195495605469,
+            "w": 31.42589164402173,
+            "h": 3.6004788606063225,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 126.3,
+              "y": 47.23,
+              "w": 31.43,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.829,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.95,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.177,
+            "w": 0.488,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.053,
+            "w": 0.122,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.411,
+            "y": 0.273,
+            "w": 0.102,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.082,
+            "w": 0.032,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.107,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.1,
+            "w": 0.173,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.52,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.082,
+            "w": 0.174,
+            "h": 0.057
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

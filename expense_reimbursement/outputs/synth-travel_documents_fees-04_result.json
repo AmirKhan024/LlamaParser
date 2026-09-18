@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "VisaAssist Services",
+    "date": "2026-02-14",
+    "amount": "79.20",
+    "currency": "USD",
+    "additional_fields": {
+      "applicant": "Suhani Tripathi",
+      "document_title": "Fee Receipt"
+    },
+    "line_items": [
+      {
+        "name": "Travel insurance premium",
+        "quantity": "1",
+        "unit_price": "79.20",
+        "total": "79.20"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1890
+  }
+}

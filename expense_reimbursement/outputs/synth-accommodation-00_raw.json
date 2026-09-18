@@ -1,0 +1,421 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Palm Court Hotel\nHotel Folio / Tax Invoice\nGuest: Gaurangi Dasgupta\nCheck-in: 2026-05-24\nNights: 3\n\nDescription              Qty      Rate         Amount\nRoom charge x 3 night(s)    3     10328.45     30985.35\nMinibar                     1      1196.24      1196.24\n                                               Total: 323181 50 JNB\n                                               Total: 32181.59 INR",
+      "md": "## Palm Court Hotel\n\nHotel Folio / Tax Invoice\nGuest: Gaurangi Dasgupta\n\nCheck-in: 2026-05-24\n\nNights: 3\n\n| Description              | Qty | Rate     | Amount   |\n| ------------------------ | --- | -------- | -------- |\n| Room charge x 3 night(s) | 3   | 10328.45 | 30985.35 |\n| Minibar                  | 1   | 1196.24  | 1196.24  |\n\n\n**Total: ₹32181.59 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 667,
+          "original_height": 256,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 491,
+              "y": 218,
+              "w": 154,
+              "h": 17,
+              "confidence": 0.981,
+              "text": "Total: 32181.59 INR"
+            },
+            {
+              "x": 391,
+              "y": 184,
+              "w": 48,
+              "h": 18,
+              "confidence": 1,
+              "text": "1196.24"
+            },
+            {
+              "x": 318,
+              "y": 186,
+              "w": 12,
+              "h": 15,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 518,
+              "y": 183,
+              "w": 48,
+              "h": 19,
+              "confidence": 1,
+              "text": "1196.24"
+            },
+            {
+              "x": 29,
+              "y": 183,
+              "w": 49,
+              "h": 18,
+              "confidence": 1,
+              "text": "Minibar"
+            },
+            {
+              "x": 518,
+              "y": 156,
+              "w": 57,
+              "h": 18,
+              "confidence": 0.999,
+              "text": "30985.35"
+            },
+            {
+              "x": 391,
+              "y": 157,
+              "w": 56,
+              "h": 18,
+              "confidence": 1,
+              "text": "10328.45"
+            },
+            {
+              "x": 318,
+              "y": 129,
+              "w": 28,
+              "h": 20,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 30,
+              "y": 129,
+              "w": 77,
+              "h": 18,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 21,
+              "y": 38,
+              "w": 136,
+              "h": 16,
+              "confidence": 0.991,
+              "text": "Hotel Folio / Tax Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 19.813,
+          "width": 150.202,
+          "x": 7.985,
+          "y": 34.06,
+          "original_width": 626,
+          "original_height": 83,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Palm Court Hotel",
+          "value": "Palm Court Hotel",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.494725235648778,
+            "y": 9.25917374984078,
+            "w": 43.522166111158285,
+            "h": 3.9440297002377718,
+            "confidence": 0.93,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 9.12,
+              "w": 43.2,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.93,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Hotel Folio / Tax Invoice\nGuest: Gaurangi Dasgupta",
+          "value": "Hotel Folio / Tax Invoice\nGuest: Gaurangi Dasgupta",
+          "bBox": {
+            "x": 8.263834812330163,
+            "y": 14.067195461107339,
+            "w": 34.19661652938179,
+            "h": 13.416740948220959,
+            "confidence": 0.69,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.92,
+              "y": 13.2,
+              "w": 34.56,
+              "h": 7.68,
+              "startIndex": 0,
+              "endIndex": 49,
+              "confidence": 0.69,
+              "label": "text"
+            },
+            {
+              "x": 7.92,
+              "y": 13.2,
+              "w": 32.64,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.92,
+              "y": 16.56,
+              "w": 34.56,
+              "h": 4.32,
+              "startIndex": 26,
+              "endIndex": 49,
+              "confidence": 0.69,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Check-in: 2026-05-24",
+          "value": "Check-in: 2026-05-24",
+          "bBox": {
+            "x": 8.463701596467391,
+            "y": 20.880095175038214,
+            "w": 28.809757133152175,
+            "h": 3.1108910602072015,
+            "confidence": 0.76,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.46,
+              "y": 20.88,
+              "w": 28.81,
+              "h": 3.11,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.76,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Nights: 3",
+          "value": "Nights: 3",
+          "bBox": {
+            "x": 8.156076447860055,
+            "y": 24.233566151494564,
+            "w": 12.598447584069293,
+            "h": 3.2453171439792827,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 24.23,
+              "w": 12.6,
+              "h": 3.25,
+              "startIndex": 0,
+              "endIndex": 8,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description              | Qty | Rate     | Amount   |\n| ------------------------ | --- | -------- | -------- |\n| Room charge x 3 night(s) | 3   | 10328.45 | 30985.35 |\n| Minibar                  | 1   | 1196.24  | 1196.24  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Room charge x 3 night(s)</td>\n<td>3</td>\n<td>10328.45</td>\n<td>30985.35</td>\n    </tr>\n<tr>\n        <td>Minibar</td>\n<td>1</td>\n<td>1196.24</td>\n<td>1196.24</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Room charge x 3 night(s)",
+              "3",
+              "10328.45",
+              "30985.35"
+            ],
+            [
+              "Minibar",
+              "1",
+              "1196.24",
+              "1196.24"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Room charge x 3 night(s)\",\"3\",\"10328.45\",\"30985.35\"\n\"Minibar\",\"1\",\"1196.24\",\"1196.24\"",
+          "bBox": {
+            "x": 7.9858838952105975,
+            "y": 34.06035182787025,
+            "w": 150.20274552055025,
+            "h": 19.81351915442425,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.99,
+              "y": 34.06,
+              "w": 150.2,
+              "h": 19.81,
+              "startIndex": 0,
+              "endIndex": 226,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹32181.59 INR**",
+          "value": "**Total: ₹32181.59 INR**",
+          "bBox": {
+            "x": 121.0199898097826,
+            "y": 57.07317810058594,
+            "w": 37.03480383831522,
+            "h": 3.631252521017325,
+            "confidence": 0.92,
+            "label": "caption"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 121.02,
+              "y": 57.07,
+              "w": 37.03,
+              "h": 3.63,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.92,
+              "label": "caption"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.895,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.97,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.197,
+            "w": 0.489,
+            "h": 0.115
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.054,
+            "w": 0.142,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_caption_1_v2.jpg",
+          "confidence": 0.84,
+          "label": "caption",
+          "bbox": {
+            "x": 0.394,
+            "y": 0.33,
+            "w": 0.121,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.081,
+            "w": 0.111,
+            "h": 0.078
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.14,
+            "w": 0.041,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.081,
+            "w": 0.105,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.094,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

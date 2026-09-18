@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Skillbridge Academy",
+    "date": "2026-08-11",
+    "amount": "3984.11",
+    "currency": "INR",
+    "additional_fields": {
+      "participant": "Vanya Dora"
+    },
+    "line_items": [
+      {
+        "name": "Cloud Architecture Certification",
+        "quantity": "1",
+        "unit_price": "3984.11",
+        "total": "3984.11"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1900
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "GlobalTravel Docs\nFee Receipt\nApplicant: Baljiwan Badal\nDate: 2026-02-15\nForex card loading fee    1 107.25  107.25\n                          Total: $107.25 USD",
+      "md": "**GlobalTravel Docs**\n\nFee Receipt\n\nApplicant: Baljiwan Badal\n\nDate: 2026-02-15\n\n| Forex card loading fee | 1 107.25 | 107.25 |\n| ---------------------- | -------- | ------ |\n\n\n**Total: $107.25 USD**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 524,
+          "original_height": 180,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 411,
+              "y": 107,
+              "w": 43,
+              "h": 18,
+              "confidence": 1,
+              "text": "107.25"
+            },
+            {
+              "x": 21,
+              "y": 20,
+              "w": 153,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "GlobalTravel Docs"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**GlobalTravel Docs**",
+          "value": "**GlobalTravel Docs**",
+          "bBox": {
+            "x": 7.413353696076766,
+            "y": 7.9697842473569125,
+            "w": 36.5952368694803,
+            "h": 3.3018561321756117,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.41,
+              "y": 7.97,
+              "w": 36.6,
+              "h": 3.3,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fee Receipt",
+          "value": "Fee Receipt",
+          "bBox": {
+            "x": 7.281326692000679,
+            "y": 14.167924565854282,
+            "w": 15.423753025220785,
+            "h": 3.1883195960003383,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.28,
+              "y": 14.17,
+              "w": 15.42,
+              "h": 3.19,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Applicant: Baljiwan Badal",
+          "value": "Applicant: Baljiwan Badal",
+          "bBox": {
+            "x": 7.218482506793477,
+            "y": 18.029137652853265,
+            "w": 33.74131283967392,
+            "h": 3.5043890911599864,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 18,
+              "w": 33.84,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-02-15",
+          "value": "Date: 2026-02-15",
+          "bBox": {
+            "x": 7.250492527173913,
+            "y": 22.348373147715694,
+            "w": 23.153549592391304,
+            "h": 3.077059737495754,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.25,
+              "y": 22.35,
+              "w": 23.15,
+              "h": 3.08,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Forex card loading fee | 1 107.25 | 107.25 |\n| ---------------------- | -------- | ------ |",
+          "html": "<table>\n    <tr>\n        <td>Forex card loading fee</td>\n<td>1 107.25</td>\n<td>107.25</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Forex card loading fee",
+              "1 107.25",
+              "107.25"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Forex card loading fee\",\"1 107.25\",\"107.25\"",
+          "bBox": {
+            "x": 7.0656,
+            "y": 28.857600000000005,
+            "w": 103.5264,
+            "h": 3.6287999999999982,
+            "confidence": 0.93,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.72,
+              "y": 28.56,
+              "w": 28.8,
+              "h": 3.84,
+              "startIndex": 2,
+              "endIndex": 23,
+              "confidence": 0.93,
+              "label": "text"
+            },
+            {
+              "x": 75.84,
+              "y": 27.36,
+              "w": 14.64,
+              "h": 6,
+              "startIndex": 27,
+              "endIndex": 34,
+              "confidence": 0.93,
+              "label": "text"
+            },
+            {
+              "x": 100.56,
+              "y": 28.56,
+              "w": 10.32,
+              "h": 4.32,
+              "startIndex": 38,
+              "endIndex": 43,
+              "confidence": 0.93,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: $107.25 USD**",
+          "value": "**Total: $107.25 USD**",
+          "bBox": {
+            "x": 84.85818189538043,
+            "y": 37.32640088952106,
+            "w": 38.162797214673915,
+            "h": 3.9309643289317275,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 84.86,
+              "y": 37.33,
+              "w": 38.16,
+              "h": 3.93,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.923,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.046,
+            "w": 0.119,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.167,
+            "w": 0.094,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.331,
+            "y": 0.171,
+            "w": 0.029,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.276,
+            "y": 0.216,
+            "w": 0.124,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.253,
+            "y": 0.171,
+            "w": 0.039,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.082,
+            "w": 0.05,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.082,
+            "w": 0.11,
+            "h": 0.065
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.129,
+            "w": 0.075,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.104,
+            "w": 0.11,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

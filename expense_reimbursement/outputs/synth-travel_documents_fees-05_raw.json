@@ -1,0 +1,398 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "GlobalTravel Docs\nFee Receipt\nApplicant: Suhani Lad\nDate: 2026-03-08\nVisa application fee    1 3975.05  3975.05\n                        Total: 13975.05 INR",
+      "md": "# GlobalTravel Docs\n\nFee Receipt\n\nApplicant: Suhani Lad\n\nDate: 2026-03-08\n\n| Visa application fee | 1 | 3975.05 | 3975.05 |\n| -------------------- | - | ------- | ------- |\n\n\n**Total: ₹3975.05 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 525,
+          "original_height": 180,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 393,
+              "y": 107,
+              "w": 50,
+              "h": 18,
+              "confidence": 1,
+              "text": "3975.05"
+            },
+            {
+              "x": 19,
+              "y": 106,
+              "w": 109,
+              "h": 17,
+              "confidence": 0.996,
+              "text": "Visa application fee"
+            },
+            {
+              "x": 22,
+              "y": 19,
+              "w": 152,
+              "h": 17,
+              "confidence": 0.986,
+              "text": "GlobalTravel Docs"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# GlobalTravel Docs",
+          "value": "GlobalTravel Docs",
+          "lvl": 1,
+          "bBox": {
+            "x": 7.419469418733016,
+            "y": 7.97058851822563,
+            "w": 36.57559363323709,
+            "h": 3.3058989815090007,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.42,
+              "y": 7.97,
+              "w": 36.58,
+              "h": 3.31,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fee Receipt",
+          "value": "Fee Receipt",
+          "bBox": {
+            "x": 7.271931789232337,
+            "y": 14.166461115298066,
+            "w": 15.436034625509512,
+            "h": 3.2484321262525464,
+            "confidence": 0.84,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.27,
+              "y": 14.17,
+              "w": 15.44,
+              "h": 3.25,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.84,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Applicant: Suhani Lad",
+          "value": "Applicant: Suhani Lad",
+          "bBox": {
+            "x": 7.2149183190387225,
+            "y": 18.091890484353772,
+            "w": 29.018408999235735,
+            "h": 3.4451847242272393,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.96,
+              "y": 18,
+              "w": 29.28,
+              "h": 3.6,
+              "startIndex": 0,
+              "endIndex": 20,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-03-08",
+          "value": "Date: 2026-03-08",
+          "bBox": {
+            "x": 7.253590194038722,
+            "y": 22.24273960279382,
+            "w": 23.778153394616165,
+            "h": 3.1719672825025467,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 7.25,
+              "y": 22.24,
+              "w": 23.78,
+              "h": 3.17,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Visa application fee | 1 | 3975.05 | 3975.05 |\n| -------------------- | - | ------- | ------- |",
+          "html": "<table>\n    <tr>\n        <td>Visa application fee</td>\n<td>1</td>\n<td>3975.05</td>\n<td>3975.05</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Visa application fee",
+              "1",
+              "3975.05",
+              "3975.05"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Visa application fee\",\"1\",\"3975.05\",\"3975.05\"",
+          "bBox": {
+            "x": 7.0656,
+            "y": 28.857600000000005,
+            "w": 100.76159999999999,
+            "h": 3.6287999999999982,
+            "confidence": 0.94,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 6.48,
+              "y": 28.32,
+              "w": 26.16,
+              "h": 4.08,
+              "startIndex": 2,
+              "endIndex": 21,
+              "confidence": 0.94,
+              "label": "text"
+            },
+            {
+              "x": 96.24,
+              "y": 28.56,
+              "w": 12,
+              "h": 4.32,
+              "startIndex": 29,
+              "endIndex": 35,
+              "confidence": 0.94,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹3975.05 INR**",
+          "value": "**Total: ₹3975.05 INR**",
+          "bBox": {
+            "x": 82.944,
+            "y": 37.3248,
+            "w": 40.2432,
+            "h": 3.9744,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 82.94,
+              "y": 37.32,
+              "w": 40.24,
+              "h": 3.97,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.825,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.046,
+            "w": 0.119,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.167,
+            "w": 0.083,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.224,
+            "y": 0.171,
+            "w": 0.045,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.316,
+            "y": 0.171,
+            "w": 0.035,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.312,
+            "y": 0.217,
+            "w": 0.089,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.73,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.27,
+            "y": 0.216,
+            "w": 0.131,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.27,
+            "y": 0.217,
+            "w": 0.038,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.082,
+            "w": 0.05,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.082,
+            "w": 0.095,
+            "h": 0.065
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.024,
+            "y": 0.129,
+            "w": 0.077,
+            "h": 0.018
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.105,
+            "w": 0.094,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.023,
+            "y": 0.105,
+            "w": 0.095,
+            "h": 0.042
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

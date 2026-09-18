@@ -1,0 +1,27 @@
+{
+  "document_type": "fuel_receipt",
+  "clean_json": {
+    "document_type": "fuel_receipt",
+    "vendor_name": "Metro Petro Station",
+    "date": "2026-05-28",
+    "amount": "1760.55",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Petrol",
+        "quantity": "17.93",
+        "unit_price": "98.19",
+        "total": "1760.55"
+      }
+    ],
+    "additional_fields": {
+      "fuel_type": "Petrol"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1891
+  }
+}

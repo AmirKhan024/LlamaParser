@@ -1,0 +1,28 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "GlobalTravel Docs",
+    "date": "2026-01-23",
+    "amount": "146.29",
+    "currency": "USD",
+    "additional_fields": {
+      "applicant": "Rehaan Mittal",
+      "document_title": "Fee Receipt"
+    },
+    "line_items": [
+      {
+        "name": "Visa application fee",
+        "quantity": "1",
+        "unit_price": "146.29",
+        "total": "146.29"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1894
+  }
+}

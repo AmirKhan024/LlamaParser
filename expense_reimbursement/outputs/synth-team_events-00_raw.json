@@ -1,0 +1,423 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "The Old Mill Kitchen\nTax Invoice\nDate: 2026-06-23\nGuests: 2\n\nDescription         Qty  Rate       Amount\nFood & beverages    2    897.22     1794.45\n                                    B-+-1. 31704 45 TNM\n                                     Total: 1794.45 INR",
+      "md": "# The Old Mill Kitchen\n\nTax Invoice\nDate: 2026-06-23\nGuests: 2\n\n| Description      | Qty | Rate   | Amount  |\n| ---------------- | --- | ------ | ------- |\n| Food & beverages | 2   | 897.22 | 1794.45 |\n\n\n**Total: ₹1794.45 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 211,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 483,
+              "y": 178,
+              "w": 162,
+              "h": 13,
+              "confidence": 0.976,
+              "text": "Total: 1794.45 INR"
+            },
+            {
+              "x": 301,
+              "y": 115,
+              "w": 31,
+              "h": 20,
+              "confidence": 0.999,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 54,
+              "w": 118,
+              "h": 13,
+              "confidence": 0.993,
+              "text": "Date: 2026-06-23"
+            },
+            {
+              "x": 22,
+              "y": 40,
+              "w": 82,
+              "h": 13,
+              "confidence": 1,
+              "text": "Tax Invoice"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.372,
+          "width": 150.048,
+          "x": 8.092,
+          "y": 30.903,
+          "original_width": 626,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# The Old Mill Kitchen",
+          "value": "The Old Mill Kitchen",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.567829695991847,
+            "y": 9.408157315461533,
+            "w": 57.97903468919837,
+            "h": 3.539014832869819,
+            "confidence": 0.91,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 9.12,
+              "w": 57.36,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.91,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice\nDate: 2026-06-23\nGuests: 2",
+          "value": "Tax Invoice\nDate: 2026-06-23\nGuests: 2",
+          "bBox": {
+            "x": 8.373222019361412,
+            "y": 14.539765498949135,
+            "w": 28.09367463485054,
+            "h": 9.102708136517071,
+            "confidence": 0.9,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.37,
+              "y": 14.54,
+              "w": 28.09,
+              "h": 9.1,
+              "startIndex": 0,
+              "endIndex": 37,
+              "confidence": 0.9,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.16,
+              "y": 13.92,
+              "w": 19.68,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 28.32,
+              "h": 3.12,
+              "startIndex": 12,
+              "endIndex": 27,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.92,
+              "y": 20.64,
+              "w": 16.32,
+              "h": 2.64,
+              "startIndex": 29,
+              "endIndex": 37,
+              "confidence": 0.9,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description      | Qty | Rate   | Amount  |\n| ---------------- | --- | ------ | ------- |\n| Food & beverages | 2   | 897.22 | 1794.45 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages</td>\n<td>2</td>\n<td>897.22</td>\n<td>1794.45</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages",
+              "2",
+              "897.22",
+              "1794.45"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages\",\"2\",\"897.22\",\"1794.45\"",
+          "bBox": {
+            "x": 8.092662247367528,
+            "y": 30.90334326702616,
+            "w": 150.04860813306723,
+            "h": 13.37238782799762,
+            "confidence": 0.99,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.09,
+              "y": 30.9,
+              "w": 150.05,
+              "h": 13.37,
+              "startIndex": 0,
+              "endIndex": 136,
+              "confidence": 0.99,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹1794.45 INR**",
+          "value": "**Total: ₹1794.45 INR**",
+          "bBox": {
+            "x": 118.67779381793477,
+            "y": 47.66409739618717,
+            "w": 39.474341881793485,
+            "h": 2.4055544645889975,
+            "confidence": 0.94,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 118.8,
+              "y": 47.04,
+              "w": 38.88,
+              "h": 3.12,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.804,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.98,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.179,
+            "w": 0.488,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "text",
+          "bbox": {
+            "x": 0.433,
+            "y": 0.276,
+            "w": 0.082,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.386,
+            "y": 0.276,
+            "w": 0.128,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.387,
+            "y": 0.277,
+            "w": 0.039,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.103,
+            "w": 0.057,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.041,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.81,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.054,
+            "w": 0.189,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.81,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.091,
+            "h": 0.053
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.029,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.029,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.073,
+            "y": 0.124,
+            "w": 0.008,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.109,
+            "w": 0.029,
+            "h": 0.007
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.02,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.051,
+            "y": 0.085,
+            "w": 0.041,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.5,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.103,
+            "w": 0.056,
+            "h": 0.009
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

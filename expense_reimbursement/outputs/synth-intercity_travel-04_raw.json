@@ -1,0 +1,629 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "AeroVista Airlines\nE-Ticket / Boarding Pass\n5.Ti-lust(Raandi-a Daes\nPassenger: Zaid Boase\nPNR: LX8985\nRoute: Pune -> Bengaluru\nDate: 2026-06-20\nFlight: AeroVista Airlines 974\n1 lignt. Aerovista Alninies S7 4\nRase faro                       1 8393.27     8393.27\nBase fare\nTaxes & fees                    12098.32      2098.32\n                                             Total: 710491.59 INR",
+      "md": "# AeroVista Airlines\n\nE-Ticket / Boarding Pass\n\n**Passenger**: Zaid Boase\n\n**PNR**: LX8985\n\n**Route**: Pune -> Bengaluru\n\n**Date**: 2026-06-20\n\n**Flight**: AeroVista Airlines 974\n\n| Base fare    | 1 | 8393.27 | 8393.27 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 2098.32 | 2098.32 |\n\n\n**Total: ₹10491.59 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 564,
+          "original_height": 254,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 388,
+              "y": 216,
+              "w": 155,
+              "h": 17,
+              "confidence": 0.972,
+              "text": "Total: 710491.59 INR"
+            },
+            {
+              "x": 21,
+              "y": 191,
+              "w": 72,
+              "h": 15,
+              "confidence": 1,
+              "text": "Taxes & fees"
+            },
+            {
+              "x": 400,
+              "y": 190,
+              "w": 49,
+              "h": 17,
+              "confidence": 1,
+              "text": "2098.32"
+            },
+            {
+              "x": 258,
+              "y": 190,
+              "w": 52,
+              "h": 17,
+              "confidence": 1,
+              "text": "2098.32"
+            },
+            {
+              "x": 400,
+              "y": 170,
+              "w": 49,
+              "h": 18,
+              "confidence": 1,
+              "text": "8393.27"
+            },
+            {
+              "x": 22,
+              "y": 145,
+              "w": 167,
+              "h": 14,
+              "confidence": 0.999,
+              "text": "Flight: AeroVista Airlines 974"
+            },
+            {
+              "x": 21,
+              "y": 125,
+              "w": 103,
+              "h": 14,
+              "confidence": 0.985,
+              "text": "Date: 2026-06-20"
+            },
+            {
+              "x": 21,
+              "y": 68,
+              "w": 138,
+              "h": 14,
+              "confidence": 0.995,
+              "text": "Passenger: Zaid Boase"
+            },
+            {
+              "x": 20,
+              "y": 47,
+              "w": 147,
+              "h": 18,
+              "confidence": 0.988,
+              "text": "E-Ticket / Boarding Pass"
+            },
+            {
+              "x": 21,
+              "y": 19,
+              "w": 156,
+              "h": 17,
+              "confidence": 1,
+              "text": "AeroVista Airlines"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# AeroVista Airlines",
+          "value": "AeroVista Airlines",
+          "lvl": 1,
+          "bBox": {
+            "x": 11.350946841032608,
+            "y": 11.975573531441068,
+            "w": 37.540448794157605,
+            "h": 3.7154878035835615,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.35,
+              "y": 11.98,
+              "w": 37.54,
+              "h": 3.72,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "E-Ticket / Boarding Pass",
+          "value": "E-Ticket / Boarding Pass",
+          "bBox": {
+            "x": 11.543631114130434,
+            "y": 19.118081001613454,
+            "w": 34.44030124830164,
+            "h": 3.6320388793945315,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.54,
+              "y": 19.12,
+              "w": 34.44,
+              "h": 3.63,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Passenger**: Zaid Boase",
+          "value": "**Passenger**: Zaid Boase",
+          "bBox": {
+            "x": 11.43945206351902,
+            "y": 23.80383115022079,
+            "w": 32.769586447010866,
+            "h": 3.4355818375297202,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.44,
+              "y": 23.8,
+              "w": 32.77,
+              "h": 3.44,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**PNR**: LX8985",
+          "value": "**PNR**: LX8985",
+          "bBox": {
+            "x": 11.443210502292798,
+            "y": 28.32958155092986,
+            "w": 19.498050324813175,
+            "h": 2.869371563455335,
+            "confidence": 0.87,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.44,
+              "y": 28.33,
+              "w": 19.5,
+              "h": 2.87,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Route**: Pune -> Bengaluru",
+          "value": "**Route**: Pune -> Bengaluru",
+          "bBox": {
+            "x": 11.455756411345108,
+            "y": 32.856854513417126,
+            "w": 36.54957116168478,
+            "h": 3.597243864639945,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.28,
+              "y": 32.64,
+              "w": 36.48,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-06-20",
+          "value": "**Date**: 2026-06-20",
+          "bBox": {
+            "x": 11.366399999999999,
+            "y": 37.497600000000006,
+            "w": 24.576,
+            "h": 2.9376000000000033,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.04,
+              "y": 36.96,
+              "w": 24.72,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Flight**: AeroVista Airlines 974",
+          "value": "**Flight**: AeroVista Airlines 974",
+          "bBox": {
+            "x": 11.362600309952445,
+            "y": 41.980388608186146,
+            "w": 40.2609518299932,
+            "h": 3.5856509001358727,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.28,
+              "y": 41.76,
+              "w": 40.08,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 33,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Base fare    | 1 | 8393.27 | 8393.27 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 2098.32 | 2098.32 |",
+          "html": "<table>\n    <tr>\n        <td>Base fare</td>\n<td>1</td>\n<td>8393.27</td>\n<td>8393.27</td>\n    </tr>\n<tr>\n        <td>Taxes &#x26; fees</td>\n<td>1</td>\n<td>2098.32</td>\n<td>2098.32</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Base fare",
+              "1",
+              "8393.27",
+              "8393.27"
+            ],
+            [
+              "Taxes & fees",
+              "1",
+              "2098.32",
+              "2098.32"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Base fare\",\"1\",\"8393.27\",\"8393.27\"\n\"Taxes & fees\",\"1\",\"2098.32\",\"2098.32\"",
+          "bBox": {
+            "x": 11.059199999999999,
+            "y": 48.55680000000001,
+            "w": 102.6048,
+            "h": 7.775999999999996,
+            "confidence": 0.76,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 102,
+              "y": 47.76,
+              "w": 11.76,
+              "h": 4.32,
+              "startIndex": 21,
+              "endIndex": 27,
+              "confidence": 0.76,
+              "label": "text"
+            },
+            {
+              "x": 11.04,
+              "y": 52.8,
+              "w": 17.28,
+              "h": 3.6,
+              "startIndex": 84,
+              "endIndex": 95,
+              "confidence": 0.76,
+              "label": "text"
+            },
+            {
+              "x": 102,
+              "y": 52.56,
+              "w": 11.76,
+              "h": 4.08,
+              "startIndex": 103,
+              "endIndex": 109,
+              "confidence": 0.76,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [paragraph_title, text, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹10491.59 INR**",
+          "value": "**Total: ₹10491.59 INR**",
+          "bBox": {
+            "x": 99.5328,
+            "y": 59.4432,
+            "w": 37.1712,
+            "h": 3.4560000000000004,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 99.53,
+              "y": 59.44,
+              "w": 37.17,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.731,
+      "layout": [
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.91,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.069,
+            "w": 0.122,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.88,
+          "label": "text",
+          "bbox": {
+            "x": 0.359,
+            "y": 0.344,
+            "w": 0.086,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.31,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.31,
+            "w": 0.035,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.324,
+            "y": 0.345,
+            "w": 0.031,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.243,
+            "w": 0.131,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.282,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.282,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.31,
+            "w": 0.052,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.78,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.324,
+            "y": 0.344,
+            "w": 0.121,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.77,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.281,
+            "w": 0.334,
+            "h": 0.045
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.282,
+            "w": 0.052,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.164,
+            "w": 0.063,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.111,
+            "w": 0.112,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.107,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.119,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.218,
+            "w": 0.025,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.217,
+            "w": 0.052,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.217,
+            "w": 0.08,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

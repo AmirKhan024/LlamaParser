@@ -1,0 +1,30 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "GoCab",
+    "date": "2026-06-15",
+    "amount": "98.12",
+    "currency": "INR",
+    "subtotal": "98.12",
+    "additional_fields": {
+      "driver": "Fariq",
+      "pickup": "Ratta Chowk",
+      "drop": "Sura Chowk"
+    },
+    "line_items": [
+      {
+        "name": "Fare",
+        "quantity": "1",
+        "unit_price": "98.12",
+        "total": "98.12"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.79
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2368
+  }
+}

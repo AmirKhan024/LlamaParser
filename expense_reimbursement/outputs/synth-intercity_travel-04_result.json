@@ -1,0 +1,25 @@
+{
+  "document_type": "unstructured_proof",
+  "clean_json": {
+    "document_type": "unstructured_proof",
+    "vendor_name": "AeroVista Airlines",
+    "date": "2026-06-20",
+    "amount": "10491.59",
+    "currency": "INR",
+    "additional_fields": {
+      "Passenger": "Zaid Boase",
+      "PNR": "LX8985",
+      "Flight": "AeroVista Airlines 974",
+      "Route": "Pune -> Bengaluru",
+      "Base fare": "8393.27",
+      "Taxes & fees": "2098.32",
+      "Total": "10491.59"
+    },
+    "extraction_notes": [],
+    "confidence": 0.8
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2697
+  }
+}

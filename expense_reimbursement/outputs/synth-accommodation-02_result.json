@@ -1,0 +1,30 @@
+{
+  "document_type": "hotel_invoice",
+  "clean_json": {
+    "document_type": "hotel_invoice",
+    "vendor_name": "Harborview Residency",
+    "date": "2026-02-07",
+    "amount": "41646.80",
+    "currency": "INR",
+    "additional_fields": {
+      "guest_name": "Vaishnavi Saini",
+      "check_in_date": "2026-02-07",
+      "nights": "4"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "41646.80",
+    "line_items": [
+      {
+        "name": "Room charge x 4 night(s)",
+        "quantity": "4",
+        "unit_price": "10411.70",
+        "total": "41646.80"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1982
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+    "date": "13 Mar 2018",
+    "amount": "8.20",
+    "currency": "$",
+    "additional_fields": {
+      "GST @6%": "0.46",
+      "Payment Mode": "CASH",
+      "Change": "0.00",
+      "GST Summary SR = GST @6%": "7.74",
+      "Tax($)": "0.46"
+    },
+    "extraction_notes": [
+      "Mapped GST @6% to tax field"
+    ],
+    "confidence": 0.9,
+    "restaurant_gstin": "000656195584",
+    "subtotal": "7.74",
+    "grand_total": "8.20",
+    "line_items": [
+      {
+        "name": "SR 100100000035- 1 Meat + 3 Vege",
+        "quantity": "1",
+        "unit_price": "$7.10",
+        "total": "$7.10"
+      },
+      {
+        "name": "SR 100100000015- Vegetable",
+        "quantity": "1",
+        "unit_price": "$1.10",
+        "total": "$1.10"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 25.54700000002049,
+  "tokens": {
+    "prompt": 1895,
+    "completion": 1450,
+    "total": 3345
+  }
+}

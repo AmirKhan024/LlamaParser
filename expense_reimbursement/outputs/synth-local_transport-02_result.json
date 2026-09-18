@@ -1,0 +1,29 @@
+{
+  "document_type": "taxi_receipt",
+  "clean_json": {
+    "document_type": "taxi_receipt",
+    "vendor_name": "CityGo",
+    "date": "2026-06-23",
+    "amount": "251.37",
+    "currency": "INR",
+    "additional_fields": {
+      "pickup": "Krishnan Chowk",
+      "drop": "Airport Terminal",
+      "driver": "Krishna"
+    },
+    "extraction_notes": [],
+    "confidence": 0.75,
+    "line_items": [
+      {
+        "name": "Fare",
+        "quantity": "1",
+        "unit_price": "251.37",
+        "total": "251.37"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 2140
+  }
+}

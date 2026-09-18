@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Spice Route",
+    "date": "2026-01-06",
+    "amount": "3481.87",
+    "currency": "INR",
+    "additional_fields": {
+      "invoice_type": "Tax Invoice",
+      "occasion": "Team Dinner - 6 colleagues"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "3481.87",
+    "grand_total": "3481.87",
+    "line_items": [
+      {
+        "name": "Food & beverages",
+        "quantity": "6",
+        "unit_price": "580.31",
+        "total": "3481.87"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1940
+  }
+}

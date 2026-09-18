@@ -1,0 +1,27 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "CloudCert Institute",
+    "date": "2026-08-26",
+    "amount": "23010.51",
+    "currency": "INR",
+    "additional_fields": {
+      "participant": "Advika Parikh"
+    },
+    "line_items": [
+      {
+        "name": "Project Management Certification Exam",
+        "quantity": "1",
+        "unit_price": "23010.51",
+        "total": "23010.51"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1911
+  }
+}

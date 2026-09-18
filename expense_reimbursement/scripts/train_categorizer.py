@@ -34,10 +34,12 @@ from sklearn.model_selection import train_test_split
 from categories import CATEGORY_IDS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+REPO_ROOT = BASE_DIR.parent  # dataset rows store paths relative to the repo root (SROIE lives outside expense_reimbursement/)
 TRAIN_PATH = BASE_DIR / "eval" / "categorization" / "train_synthetic.jsonl"
 EVAL_PATH = BASE_DIR / "eval" / "categorization" / "dataset.jsonl"
 MODEL_DIR = BASE_DIR / "models" / "categorizer"
 LEAKAGE_THRESHOLD = 0.95
+EVAL_MARKDOWN_EXCERPT_CHARS = 2000  # matches categorize.MARKDOWN_EXCERPT_CHARS
 
 
 def _load_jsonl(path: Path) -> list[dict]:
@@ -54,7 +56,12 @@ def _row_text(row: dict) -> str:
 def _eval_doc_text(row: dict) -> str:
     fields = row.get("extracted_fields") or {}
     vendor = fields.get("vendor_name", "")
-    return " ".join(x for x in [vendor, row.get("markdown_excerpt", "")] if x)
+    markdown = ""
+    if row.get("markdown_path"):
+        path = REPO_ROOT / row["markdown_path"]
+        if path.exists():
+            markdown = path.read_text(encoding="utf-8", errors="replace")[:EVAL_MARKDOWN_EXCERPT_CHARS]
+    return " ".join(x for x in [vendor, markdown] if x)
 
 
 def main() -> None:

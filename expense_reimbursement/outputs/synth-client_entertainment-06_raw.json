@@ -1,0 +1,440 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Copper Kettle\nTax Invoice\nDate: 2026-07-02\nClient: Novagen Pharma\nAttendees: 4\n\nDescription           Qty  Rate  Amount\nFood & beverages (incl. wine)    4  1117.12    4468.50\n                                               Totel: 34468 50 INP\n                                               Total: 4468.50 INR",
+      "md": "# Copper Kettle\n\nTax Invoice\n\nDate: 2026-07-02\n\nClient: Novagen Pharma\n\nAttendees: 4\n\n| Description                   | Qty | Rate    | Amount  |\n| ----------------------------- | --- | ------- | ------- |\n| Food & beverages (incl. wine) | 4   | 1117.12 | 4468.50 |\n\n\n**Total**: ₹4468.50 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 229,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 495,
+              "y": 191,
+              "w": 150,
+              "h": 18,
+              "confidence": 0.986,
+              "text": "Total: 4468.50 INR"
+            },
+            {
+              "x": 424,
+              "y": 158,
+              "w": 42,
+              "h": 16,
+              "confidence": 0.998,
+              "text": "1117.12"
+            },
+            {
+              "x": 523,
+              "y": 156,
+              "w": 52,
+              "h": 20,
+              "confidence": 1,
+              "text": "4468.50"
+            },
+            {
+              "x": 29,
+              "y": 155,
+              "w": 161,
+              "h": 19,
+              "confidence": 0.99,
+              "text": "Food & beverages (incl. wine)"
+            },
+            {
+              "x": 352,
+              "y": 129,
+              "w": 29,
+              "h": 20,
+              "confidence": 1,
+              "text": "Qty"
+            },
+            {
+              "x": 22,
+              "y": 82,
+              "w": 71,
+              "h": 15,
+              "confidence": 0.971,
+              "text": "Attendees: 4"
+            },
+            {
+              "x": 22,
+              "y": 67,
+              "w": 133,
+              "h": 15,
+              "confidence": 0.998,
+              "text": "Client: Novagen Pharma"
+            },
+            {
+              "x": 21,
+              "y": 16,
+              "w": 146,
+              "h": 25,
+              "confidence": 1,
+              "text": "Copper Kettle"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.333,
+          "width": 150.058,
+          "x": 8.015,
+          "y": 34.078,
+          "original_width": 626,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Copper Kettle",
+          "value": "Copper Kettle",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.602005137567934,
+            "y": 9.197433869735056,
+            "w": 34.52651048743206,
+            "h": 5.134942593781844,
+            "confidence": 0.92,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.6,
+              "y": 9.2,
+              "w": 34.53,
+              "h": 5.13,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.92,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Tax Invoice",
+          "value": "Tax Invoice",
+          "bBox": {
+            "x": 8.555614172894021,
+            "y": 14.370603511644447,
+            "w": 15.227297575577445,
+            "h": 2.4375936425250524,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.56,
+              "y": 14.37,
+              "w": 15.23,
+              "h": 2.44,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-07-02",
+          "value": "Date: 2026-07-02",
+          "bBox": {
+            "x": 8.579660697605298,
+            "y": 17.569848831840186,
+            "w": 23.36438120966372,
+            "h": 2.73427555250085,
+            "confidence": 0.77,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.58,
+              "y": 17.57,
+              "w": 23.36,
+              "h": 2.73,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Client: Novagen Pharma",
+          "value": "Client: Novagen Pharma",
+          "bBox": {
+            "x": 8.551546047044837,
+            "y": 20.84194156812585,
+            "w": 31.610406228770376,
+            "h": 3.2450018841287367,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.55,
+              "y": 20.84,
+              "w": 31.61,
+              "h": 3.25,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.79,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Attendees: 4",
+          "value": "Attendees: 4",
+          "bBox": {
+            "x": 8.316694176715353,
+            "y": 24.343040134595793,
+            "w": 16.73981004797894,
+            "h": 2.931809135105299,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.32,
+              "y": 24.34,
+              "w": 16.74,
+              "h": 2.93,
+              "startIndex": 0,
+              "endIndex": 11,
+              "confidence": 0.78,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description                   | Qty | Rate    | Amount  |\n| ----------------------------- | --- | ------- | ------- |\n| Food & beverages (incl. wine) | 4   | 1117.12 | 4468.50 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Food &#x26; beverages (incl. wine)</td>\n<td>4</td>\n<td>1117.12</td>\n<td>4468.50</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Food & beverages (incl. wine)",
+              "4",
+              "1117.12",
+              "4468.50"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Food & beverages (incl. wine)\",\"4\",\"1117.12\",\"4468.50\"",
+          "bBox": {
+            "x": 8.015597932235055,
+            "y": 34.07883035411006,
+            "w": 150.05883735988448,
+            "h": 13.333976281207539,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.02,
+              "y": 34.08,
+              "w": 150.06,
+              "h": 13.33,
+              "startIndex": 0,
+              "endIndex": 178,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹4468.50 INR",
+          "value": "**Total**: ₹4468.50 INR",
+          "bBox": {
+            "x": 121.6512,
+            "y": 50.6304,
+            "w": 36.2496,
+            "h": 3.6287999999999982,
+            "confidence": 0.91,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 121.68,
+              "y": 49.92,
+              "w": 36,
+              "h": 4.32,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.875,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.95,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.197,
+            "w": 0.488,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.053,
+            "w": 0.112,
+            "h": 0.03
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.396,
+            "y": 0.293,
+            "w": 0.118,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.433,
+            "y": 0.293,
+            "w": 0.081,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.397,
+            "y": 0.293,
+            "w": 0.034,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.121,
+            "w": 0.103,
+            "h": 0.019
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.141,
+            "w": 0.054,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.083,
+            "w": 0.05,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.102,
+            "w": 0.076,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.104,
+            "h": 0.075
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

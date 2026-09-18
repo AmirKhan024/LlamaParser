@@ -1,0 +1,28 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Bay Leaf Diner",
+    "date": "2026-03-01",
+    "amount": "973.55",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Food & beverages",
+        "quantity": "9",
+        "unit_price": "108.17",
+        "total": "973.55"
+      }
+    ],
+    "additional_fields": {
+      "invoice_type": "Tax Invoice",
+      "context": "Team Dinner - 9 colleagues"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1907
+  }
+}

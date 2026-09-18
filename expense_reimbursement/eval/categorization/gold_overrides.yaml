@@ -1,0 +1,19 @@
+# Human review overrides for eval/categorization/dataset.jsonl's silver
+# labels. Each entry's key is a dataset row id; `label` is the corrected
+# category id (or the literal string "ambiguous" is NOT a category -- use
+# the separate `ambiguous: true` flag for that, and still give a best-guess
+# `label`). `notes` is optional, free text explaining the override.
+#
+# scripts/promote_to_gold.py reads this file and writes gold_label onto
+# each matching row (gold_label = override if present here, else the
+# row's own silver_label), sets reviewed=true on every row it touches,
+# and records silver-vs-gold agreement stats in the dataset's metadata.
+#
+# Example (uncomment and edit to add a real override):
+# cat-017:
+#   label: travel_meals
+#   notes: "silver said client_entertainment but no client is named anywhere on the bill"
+# cat-044:
+#   label: team_events
+#   ambiguous: true
+#   notes: "2 attendees, no client name -- genuinely could be either team_events or travel_meals"

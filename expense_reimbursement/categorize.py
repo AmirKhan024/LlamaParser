@@ -45,10 +45,15 @@ MARKDOWN_EXCERPT_CHARS = 2000
 
 # Cheaper/smaller than extract.py's MODEL (openai/gpt-oss-120b) on purpose
 # -- this is a single-label zero-shot classification call, not a full
-# document extraction, and the silver eval labeler (scripts/
-# generate_silver_labels.py) deliberately uses the stronger 120b model
-# instead, so the two don't share a model as well as a prompt.
-LLM_MODEL = "openai/gpt-oss-20b"
+# document extraction. The silver eval labeler (scripts/
+# generate_silver_labels.py) deliberately uses a different model
+# (qwen/qwen3.8-27b) with a different, step-by-step prompt and the full
+# document, so the two setups don't overlap and self-agreement bias stays
+# low. LLM_CATEGORIZER_MODEL overrides this at runtime -- used once, to
+# re-run the eval against qwen after gpt-oss-20b's own daily Groq quota
+# was exhausted building this eval set (see SUMMARY.md's Stage 2
+# section); the production default stays gpt-oss-20b.
+LLM_MODEL = os.environ.get("LLM_CATEGORIZER_MODEL", "openai/gpt-oss-20b")
 
 # Same unverified-pricing caveat as run.py's PRICE_PER_M_*_TOKENS: Groq's
 # publicly listed per-token rate for this model at the time this was

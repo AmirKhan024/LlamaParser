@@ -1,0 +1,75 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "GOGIANT ENGINEERING (M) SDN BHD",
+    "date": "09/02/2018",
+    "amount": "436.20",
+    "currency": "RM",
+    "subtotal": "411.50",
+    "tax": "24.69",
+    "line_items": [
+      {
+        "name": "6783 1809 SR: CERAMIC CAP",
+        "quantity": "5",
+        "unit_price": "3.50",
+        "total": "17.50"
+      },
+      {
+        "name": "2954 1809 SR: S/STEEL 1/2\" STREET ELBOW",
+        "quantity": "30",
+        "unit_price": "3.80",
+        "total": "114.00"
+      },
+      {
+        "name": "1760 GA SR: 2.4MM STARWELD RED HEAD TUNGSTEN ROD",
+        "quantity": "1",
+        "unit_price": "55.00",
+        "total": "55.00"
+      },
+      {
+        "name": "3496 GA SR: ESICUT 4\" CUTTING DISC (1BOX)-50PCS",
+        "quantity": "3",
+        "unit_price": "33.00",
+        "total": "99.00"
+      },
+      {
+        "name": "2460 GA SR: WELDRO PICKLING GEL 1KG",
+        "quantity": "2",
+        "unit_price": "43.00",
+        "total": "86.00"
+      },
+      {
+        "name": "9428 GB SR: 13.5\" WELDING GLOVE - GREEN (GS)",
+        "quantity": "4",
+        "unit_price": "10.00",
+        "total": "40.00"
+      }
+    ],
+    "additional_fields": {
+      "receipt_number": "CS00082258",
+      "cashier": "USER",
+      "time": "08:32:00",
+      "vendor_address": "NO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81750 JOHOR BAHRU",
+      "vendor_phone": "07-386 7524",
+      "vendor_fax": "07-388 3793",
+      "gst_number": "000800689824",
+      "discount": "0.00",
+      "rounding": "0.01",
+      "cash_paid": "436.20",
+      "change": "0.00",
+      "gst_summary_tax_code": "SR",
+      "gst_summary_percent": "6",
+      "gst_summary_amount": "411.50",
+      "gst_summary_gst": "24.69"
+    },
+    "extraction_notes": [],
+    "confidence": 0.97
+  },
+  "duration_seconds": 3.281000000075437,
+  "tokens": {
+    "prompt": 2162,
+    "completion": 1344,
+    "total": 3506
+  }
+}

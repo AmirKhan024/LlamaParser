@@ -1,0 +1,23 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "OfficeMart",
+    "date": "2026-05-21",
+    "amount": "340.00",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Desk organizer",
+        "quantity": "1",
+        "unit_price": "340",
+        "total": "340"
+      }
+    ],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1829
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "The Sahyadri Grand\nHotel Folio / Tax Invoice\nGuest: Anjali Saha\nCheck-in: 2026-08-22\nNights: 1\n\n Description                  Qty     Rate       Amount\n Room charge x 1 night(s)     1       9288.29    9288.29\n Minibar                      1        960.66     960.66\n                                                 Tot0l: 310049 95 IND\n                                                 Total: 710248.95 INR",
+      "md": "# The Sahyadri Grand\n\nHotel Folio / Tax Invoice\n\nGuest: Anjali Saha\n\nCheck-in: 2026-08-22\n\nNights: 1\n\n| Description              | Qty | Rate    | Amount  |\n| ------------------------ | --- | ------- | ------- |\n| Room charge x 1 night(s) | 1   | 9288.29 | 9288.29 |\n| Minibar                  | 1   | 960.66  | 960.66  |\n\n\n**Total: ₹10248.95 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 254,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 506,
+              "y": 218,
+              "w": 138,
+              "h": 17,
+              "confidence": 0.944,
+              "text": "Total: 710248.95 INR"
+            },
+            {
+              "x": 27,
+              "y": 185,
+              "w": 48,
+              "h": 17,
+              "confidence": 1,
+              "text": "Minibar"
+            },
+            {
+              "x": 523,
+              "y": 184,
+              "w": 44,
+              "h": 18,
+              "confidence": 1,
+              "text": "960.66"
+            },
+            {
+              "x": 402,
+              "y": 184,
+              "w": 45,
+              "h": 18,
+              "confidence": 1,
+              "text": "960.66"
+            },
+            {
+              "x": 28,
+              "y": 157,
+              "w": 141,
+              "h": 18,
+              "confidence": 0.997,
+              "text": "Room charge x 1 night(s)"
+            },
+            {
+              "x": 28,
+              "y": 130,
+              "w": 73,
+              "h": 18,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 523,
+              "y": 129,
+              "w": 54,
+              "h": 19,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 401,
+              "y": 129,
+              "w": 36,
+              "h": 19,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 19,
+              "y": 81,
+              "w": 54,
+              "h": 18,
+              "confidence": 0.998,
+              "text": "Nights: 1"
+            },
+            {
+              "x": 20,
+              "y": 54,
+              "w": 104,
+              "h": 16,
+              "confidence": 0.999,
+              "text": "Guest: Anjali Saha"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 19.809,
+          "width": 150.071,
+          "x": 8.14,
+          "y": 34.277,
+          "original_width": 626,
+          "original_height": 83,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# The Sahyadri Grand",
+          "value": "The Sahyadri Grand",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.765815270465353,
+            "y": 9.107515849237856,
+            "w": 45.58786169964334,
+            "h": 5.052535280974016,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.77,
+              "y": 9.11,
+              "w": 45.59,
+              "h": 5.05,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Hotel Folio / Tax Invoice",
+          "value": "Hotel Folio / Tax Invoice",
+          "bBox": {
+            "x": 8.5753441852072,
+            "y": 14.514112124235734,
+            "w": 30.873878810716707,
+            "h": 2.5388484788977594,
+            "confidence": 0.78,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 13.92,
+              "w": 30.48,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Guest: Anjali Saha",
+          "value": "Guest: Anjali Saha",
+          "bBox": {
+            "x": 17.59415867017663,
+            "y": 17.813086136527684,
+            "w": 15.05344132133152,
+            "h": 2.6379941193953815,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 17.59,
+              "y": 17.81,
+              "w": 15.05,
+              "h": 2.64,
+              "startIndex": 0,
+              "endIndex": 17,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Check-in: 2026-08-22",
+          "value": "Check-in: 2026-08-22",
+          "bBox": {
+            "x": 21.834645677649455,
+            "y": 21.192675316852075,
+            "w": 14.823237941576085,
+            "h": 2.6157897949218754,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 21.83,
+              "y": 21.19,
+              "w": 14.82,
+              "h": 2.62,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Nights: 1",
+          "value": "Nights: 1",
+          "bBox": {
+            "x": 8.381843102496603,
+            "y": 24.631961457625682,
+            "w": 11.675792660920514,
+            "h": 2.871757507324219,
+            "confidence": 0.89,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.38,
+              "y": 24.63,
+              "w": 11.68,
+              "h": 2.87,
+              "startIndex": 0,
+              "endIndex": 8,
+              "confidence": 0.89,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description              | Qty | Rate    | Amount  |\n| ------------------------ | --- | ------- | ------- |\n| Room charge x 1 night(s) | 1   | 9288.29 | 9288.29 |\n| Minibar                  | 1   | 960.66  | 960.66  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Room charge x 1 night(s)</td>\n<td>1</td>\n<td>9288.29</td>\n<td>9288.29</td>\n    </tr>\n<tr>\n        <td>Minibar</td>\n<td>1</td>\n<td>960.66</td>\n<td>960.66</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Room charge x 1 night(s)",
+              "1",
+              "9288.29",
+              "9288.29"
+            ],
+            [
+              "Minibar",
+              "1",
+              "960.66",
+              "960.66"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Room charge x 1 night(s)\",\"1\",\"9288.29\",\"9288.29\"\n\"Minibar\",\"1\",\"960.66\",\"960.66\"",
+          "bBox": {
+            "x": 8.140146272078805,
+            "y": 34.277329420006794,
+            "w": 150.0715130349864,
+            "h": 19.809768278702446,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.14,
+              "y": 34.28,
+              "w": 150.07,
+              "h": 19.81,
+              "startIndex": 0,
+              "endIndex": 218,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹10248.95 INR**",
+          "value": "**Total: ₹10248.95 INR**",
+          "bBox": {
+            "x": 125.33759999999998,
+            "y": 57.369600000000005,
+            "w": 32.563199999999995,
+            "h": 2.9376,
+            "confidence": 0.95,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 125.34,
+              "y": 57.37,
+              "w": 32.56,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.95,
+              "label": "key-value-region"
+            },
+            {
+              "x": 124.56,
+              "y": 56.4,
+              "w": 33.12,
+              "h": 4.08,
+              "startIndex": 9,
+              "endIndex": 23,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.824,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.97,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.198,
+            "w": 0.489,
+            "h": 0.115
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.029,
+            "y": 0.053,
+            "w": 0.148,
+            "h": 0.029
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.9,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.408,
+            "y": 0.332,
+            "w": 0.106,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.439,
+            "y": 0.333,
+            "w": 0.075,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.408,
+            "y": 0.333,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.143,
+            "w": 0.038,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.123,
+            "w": 0.04,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.071,
+            "y": 0.123,
+            "w": 0.048,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.057,
+            "y": 0.103,
+            "w": 0.049,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.101,
+            "h": 0.075
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.143,
+            "w": 0.005,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.101,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.101,
+            "h": 0.035
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

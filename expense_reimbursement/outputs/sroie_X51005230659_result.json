@@ -1,0 +1,37 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "SWC ENTERPRISE SDN BHD",
+    "date": "08/01/2018",
+    "amount": "8.00",
+    "currency": null,
+    "additional_fields": {
+      "gst_id": "002017808384",
+      "cashier": "123",
+      "invoice_no": "0100080332",
+      "cash": "10.00",
+      "change": "2.00",
+      "address": "No. 5-7, Jalan Mahagoni 7/1, Sekysen 4, Bandar Utama, 44300 Batang Kali, Selangor",
+      "phone": "03-6057 1377"
+    },
+    "extraction_notes": [],
+    "confidence": 0.96,
+    "subtotal": null,
+    "tax": "0.45",
+    "line_items": [
+      {
+        "name": "20X30 1KG",
+        "quantity": "1",
+        "unit_price": "8.00",
+        "total": "8.00"
+      }
+    ]
+  },
+  "duration_seconds": 22.983999999938533,
+  "tokens": {
+    "prompt": 1818,
+    "completion": 653,
+    "total": 2471
+  }
+}

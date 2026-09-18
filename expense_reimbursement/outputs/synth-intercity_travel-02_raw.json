@@ -1,0 +1,711 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "SkyBridge Air\nE-Ticket / Boarding Pass\nPassenger: Idika Jhaveri\nPNR: BB9103\nRoute: Pune -> Hyderabad\nDate: 2026-06-26\nFlight: SkyBridge Air 662\nTlignt. \"'SkyBndge All 66z\nBase fare                 13719.07     3719.07\nTaxes & fees              1 929.77     929.77\n                                       Total: 74648.84 INR",
+      "md": "# SkyBridge Air\n\nE-Ticket / Boarding Pass\n\n**Passenger**: Idika Jhaveri\n\n**PNR**: BB9103\n\n**Route**: Pune -> Hyderabad\n\n**Date**: 2026-06-26\n\n**Flight**: SkyBridge Air 662\n\n| Description  | Quantity | Unit Price | Total Price |\n| ------------ | -------- | ---------- | ----------- |\n| Base fare    | 1        | 3719.07    | 3719.07     |\n| Taxes & fees | 1        | 929.77     | 929.77      |\n\n\n**Total**: ₹4648.84 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 565,
+          "original_height": 254,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 22,
+              "y": 191,
+              "w": 72,
+              "h": 15,
+              "confidence": 1,
+              "text": "Taxes & fees"
+            },
+            {
+              "x": 401,
+              "y": 190,
+              "w": 42,
+              "h": 17,
+              "confidence": 1,
+              "text": "929.77"
+            },
+            {
+              "x": 257,
+              "y": 170,
+              "w": 54,
+              "h": 18,
+              "confidence": 1,
+              "text": "3719.07"
+            },
+            {
+              "x": 23,
+              "y": 145,
+              "w": 144,
+              "h": 14,
+              "confidence": 0.999,
+              "text": "Flight: SkyBridge Air 662"
+            },
+            {
+              "x": 21,
+              "y": 105,
+              "w": 159,
+              "h": 16,
+              "confidence": 0.985,
+              "text": "Route: Pune -> Hyderabad"
+            },
+            {
+              "x": 23,
+              "y": 68,
+              "w": 144,
+              "h": 14,
+              "confidence": 0.996,
+              "text": "Passenger: Idika Jhaveri"
+            },
+            {
+              "x": 22,
+              "y": 48,
+              "w": 145,
+              "h": 16,
+              "confidence": 0.973,
+              "text": "E-Ticket / Boarding Pass"
+            },
+            {
+              "x": 22,
+              "y": 18,
+              "w": 121,
+              "h": 21,
+              "confidence": 0.998,
+              "text": "SkyBridge Air"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# SkyBridge Air",
+          "value": "SkyBridge Air",
+          "lvl": 1,
+          "bBox": {
+            "x": 11.496195652173913,
+            "y": 11.963272127897843,
+            "w": 28.86478112262228,
+            "h": 4.558644004490066,
+            "confidence": 0.94,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.5,
+              "y": 11.96,
+              "w": 28.86,
+              "h": 4.56,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.94,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "E-Ticket / Boarding Pass",
+          "value": "E-Ticket / Boarding Pass",
+          "bBox": {
+            "x": 11.574833878226903,
+            "y": 19.11365840746009,
+            "w": 34.47939506199049,
+            "h": 3.645084546959921,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.57,
+              "y": 19.11,
+              "w": 34.48,
+              "h": 3.65,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Passenger**: Idika Jhaveri",
+          "value": "**Passenger**: Idika Jhaveri",
+          "bBox": {
+            "x": 11.366399999999999,
+            "y": 23.846400000000003,
+            "w": 34.7136,
+            "h": 3.4559999999999995,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.28,
+              "y": 23.28,
+              "w": 34.56,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**PNR**: BB9103",
+          "value": "**PNR**: BB9103",
+          "bBox": {
+            "x": 11.447829536769701,
+            "y": 28.33516129203465,
+            "w": 19.890426237686818,
+            "h": 2.864314867102586,
+            "confidence": 0.83,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.45,
+              "y": 28.34,
+              "w": 19.89,
+              "h": 2.86,
+              "startIndex": 0,
+              "endIndex": 14,
+              "confidence": 0.83,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Route**: Pune -> Hyderabad",
+          "value": "**Route**: Pune -> Hyderabad",
+          "bBox": {
+            "x": 11.454597274116846,
+            "y": 32.84007409137228,
+            "w": 37.68483143682065,
+            "h": 3.6612917692764975,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.45,
+              "y": 32.84,
+              "w": 37.68,
+              "h": 3.66,
+              "startIndex": 0,
+              "endIndex": 27,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-06-26",
+          "value": "**Date**: 2026-06-26",
+          "bBox": {
+            "x": 19.850013268512228,
+            "y": 37.55563062584918,
+            "w": 16.307661238960595,
+            "h": 2.79880530315897,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.85,
+              "y": 37.56,
+              "w": 16.31,
+              "h": 2.8,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Flight**: SkyBridge Air 662",
+          "value": "**Flight**: SkyBridge Air 662",
+          "bBox": {
+            "x": 11.387771739130434,
+            "y": 41.98796200959579,
+            "w": 34.6269382642663,
+            "h": 3.6530950131623627,
+            "confidence": 0.87,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.28,
+              "y": 41.76,
+              "w": 34.56,
+              "h": 3.36,
+              "startIndex": 0,
+              "endIndex": 28,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description  | Quantity | Unit Price | Total Price |\n| ------------ | -------- | ---------- | ----------- |\n| Base fare    | 1        | 3719.07    | 3719.07     |\n| Taxes & fees | 1        | 929.77     | 929.77      |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Quantity</th>\n        <th>Unit Price</th>\n        <th>Total Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Base fare</td>\n<td>1</td>\n<td>3719.07</td>\n<td>3719.07</td>\n    </tr>\n<tr>\n        <td>Taxes &#x26; fees</td>\n<td>1</td>\n<td>929.77</td>\n<td>929.77</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Quantity",
+              "Unit Price",
+              "Total Price"
+            ],
+            [
+              "Base fare",
+              "1",
+              "3719.07",
+              "3719.07"
+            ],
+            [
+              "Taxes & fees",
+              "1",
+              "929.77",
+              "929.77"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Description\",\"Quantity\",\"Unit Price\",\"Total Price\"\n\"Base fare\",\"1\",\"3719.07\",\"3719.07\"\n\"Taxes & fees\",\"1\",\"929.77\",\"929.77\"",
+          "bBox": {
+            "x": 10.752,
+            "y": 48.55680000000001,
+            "w": 103.52640000000001,
+            "h": 7.775999999999996,
+            "confidence": 0.87,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.04,
+              "y": 48.24,
+              "w": 13.2,
+              "h": 3.84,
+              "startIndex": 112,
+              "endIndex": 120,
+              "confidence": 0.87,
+              "label": "text"
+            },
+            {
+              "x": 67.44,
+              "y": 47.76,
+              "w": 12.96,
+              "h": 4.32,
+              "startIndex": 138,
+              "endIndex": 144,
+              "confidence": 0.87,
+              "label": "text"
+            },
+            {
+              "x": 11.04,
+              "y": 52.8,
+              "w": 17.28,
+              "h": 3.6,
+              "startIndex": 167,
+              "endIndex": 178,
+              "confidence": 0.87,
+              "label": "text"
+            },
+            {
+              "x": 68.88,
+              "y": 53.52,
+              "w": 9.36,
+              "h": 2.88,
+              "startIndex": 193,
+              "endIndex": 198,
+              "confidence": 0.87,
+              "label": "text"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "layout_lvm_disagreement",
+              "details": "layout detected [text, paragraph_title, key-value-region] but no table/form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹4648.84 INR",
+          "value": "**Total**: ₹4648.84 INR",
+          "bBox": {
+            "x": 101.376,
+            "y": 59.4432,
+            "w": 35.328,
+            "h": 3.456000000000003,
+            "confidence": 0.83,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 101.38,
+              "y": 59.44,
+              "w": 35.33,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.83,
+              "label": "key-value-region"
+            },
+            {
+              "x": 101.04,
+              "y": 58.8,
+              "w": 35.28,
+              "h": 4.56,
+              "startIndex": 11,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.684,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "text",
+          "bbox": {
+            "x": 0.366,
+            "y": 0.344,
+            "w": 0.079,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.069,
+            "w": 0.094,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.31,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.282,
+            "w": 0.035,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.335,
+            "y": 0.31,
+            "w": 0.03,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.345,
+            "w": 0.032,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.282,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.78,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.035,
+            "y": 0.281,
+            "w": 0.336,
+            "h": 0.046
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.243,
+            "w": 0.113,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.217,
+            "w": 0.053,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.226,
+            "y": 0.282,
+            "w": 0.036,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.218,
+            "w": 0.024,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.31,
+            "w": 0.046,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.111,
+            "w": 0.112,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.66,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.344,
+            "w": 0.115,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.164,
+            "w": 0.065,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.123,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.113,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.311,
+            "w": 0.006,
+            "h": 0.014
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.283,
+            "w": 0.005,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.051,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_19_v2.jpg",
+          "confidence": 0.55,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.028,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_20_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.226,
+            "y": 0.31,
+            "w": 0.03,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_21_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.091,
+            "y": 0.138,
+            "w": 0.059,
+            "h": 0.017
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_22_v2.jpg",
+          "confidence": 0.53,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.111,
+            "w": 0.123,
+            "h": 0.153
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

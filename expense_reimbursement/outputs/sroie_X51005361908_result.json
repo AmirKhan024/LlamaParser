@@ -1,0 +1,40 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "TED HENG STATIONERY & BOOKS",
+    "date": "15/03/2018",
+    "amount": "127.20",
+    "currency": "RM",
+    "subtotal": "120.00",
+    "tax": "7.20",
+    "line_items": [
+      {
+        "name": "4974052801334<br/>- ARTLINE 70",
+        "quantity": "48",
+        "unit_price": "2.70",
+        "total": "120.00"
+      }
+    ],
+    "additional_fields": {
+      "GST No.": "000689913856",
+      "Address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
+      "Tel": "03-3271 9872",
+      "Fax": "03-3271 9487",
+      "Receipt No.": "CS1803/28617",
+      "Receipt Type": "CASH",
+      "Change": "0.00",
+      "Round-off": "0.00",
+      "Discount Percent": "7.41"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 2.577999999979511,
+  "tokens": {
+    "prompt": 1999,
+    "completion": 1716,
+    "total": 3715
+  }
+}

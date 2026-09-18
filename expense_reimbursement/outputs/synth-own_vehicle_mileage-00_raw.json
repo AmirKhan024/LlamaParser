@@ -1,0 +1,595 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Local Conveyance Claim\nLocal Conveyance / Mileage Claim Form\nEmployee: Zayan Babu\nVehicle: Four-wheeler (own)\nDate: 2026-01-04\nPurpose: Client visit\nClient: Coastline Bank\n\nDescription                          Qty     Rate     Amount\n48 km @ Rs 9/km                      48      9        432.00\n\n                                                      m-+-1: =422 00 TNP\n                                                      Tota1: 3432.00 INR",
+      "md": "# Local Conveyance Claim\n\nLocal Conveyance / Mileage Claim Form\n**Employee**: Zayan Babu\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-01-04\n**Purpose**: Client visit\n**Client**: Coastline Bank\n\n| Description     | Qty | Rate | Amount |\n| --------------- | --- | ---- | ------ |\n| 48 km @ Rs 9/km | 48  | 9    | 432.00 |\n\n\n**Total**: ₹432.00 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 667,
+          "original_height": 253,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 492,
+              "y": 221,
+              "w": 153,
+              "h": 11,
+              "confidence": 0.953,
+              "text": "Tota1: 3432.00 INR"
+            },
+            {
+              "x": 511,
+              "y": 185,
+              "w": 48,
+              "h": 15,
+              "confidence": 1,
+              "text": "432.00"
+            },
+            {
+              "x": 318,
+              "y": 186,
+              "w": 17,
+              "h": 14,
+              "confidence": 0.999,
+              "text": "48"
+            },
+            {
+              "x": 405,
+              "y": 185,
+              "w": 13,
+              "h": 15,
+              "confidence": 1,
+              "text": "9"
+            },
+            {
+              "x": 510,
+              "y": 158,
+              "w": 50,
+              "h": 15,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 404,
+              "y": 158,
+              "w": 36,
+              "h": 15,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 316,
+              "y": 158,
+              "w": 27,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "Qty"
+            },
+            {
+              "x": 23,
+              "y": 97,
+              "w": 153,
+              "h": 11,
+              "confidence": 0.995,
+              "text": "Purpose: Client visit"
+            },
+            {
+              "x": 23,
+              "y": 69,
+              "w": 192,
+              "h": 11,
+              "confidence": 0.995,
+              "text": "Vehicle: Four-wheeler (own)"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.362,
+          "width": 150.095,
+          "x": 8.097,
+          "y": 40.957,
+          "original_width": 626,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Local Conveyance Claim",
+          "value": "Local Conveyance Claim",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.380462646484375,
+            "y": 9.497379435663639,
+            "w": 64.30173419454823,
+            "h": 4.353065921949304,
+            "confidence": 0.95,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.38,
+              "y": 9.5,
+              "w": 64.3,
+              "h": 4.35,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.95,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Local Conveyance / Mileage Claim Form\n**Employee**: Zayan Babu\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-01-04\n**Purpose**: Client visit\n**Client**: Coastline Bank",
+          "value": "Local Conveyance / Mileage Claim Form\n**Employee**: Zayan Babu\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-01-04\n**Purpose**: Client visit\n**Client**: Coastline Bank",
+          "bBox": {
+            "x": 8.066182808254077,
+            "y": 14.460702448305879,
+            "w": 65.09296715777853,
+            "h": 19.349938500445823,
+            "confidence": 0.92,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.4,
+              "y": 13.92,
+              "w": 64.56,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 17.28,
+              "w": 34.8,
+              "h": 3.12,
+              "startIndex": 38,
+              "endIndex": 61,
+              "confidence": 0.92,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.4,
+              "y": 20.88,
+              "w": 46.08,
+              "h": 2.64,
+              "startIndex": 63,
+              "endIndex": 93,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 24,
+              "w": 28.08,
+              "h": 2.88,
+              "startIndex": 95,
+              "endIndex": 114,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 27.6,
+              "w": 36.72,
+              "h": 2.64,
+              "startIndex": 116,
+              "endIndex": 140,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 30.96,
+              "w": 38.4,
+              "h": 2.64,
+              "startIndex": 142,
+              "endIndex": 167,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description     | Qty | Rate | Amount |\n| --------------- | --- | ---- | ------ |\n| 48 km @ Rs 9/km | 48  | 9    | 432.00 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>48 km @ Rs 9/km</td>\n<td>48</td>\n<td>9</td>\n<td>432.00</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "48 km @ Rs 9/km",
+              "48",
+              "9",
+              "432.00"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"48 km @ Rs 9/km\",\"48\",\"9\",\"432.00\"",
+          "bBox": {
+            "x": 8.097747802734375,
+            "y": 40.9576784880265,
+            "w": 150.09503412661346,
+            "h": 13.362621937627374,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.1,
+              "y": 40.96,
+              "w": 150.1,
+              "h": 13.36,
+              "startIndex": 0,
+              "endIndex": 124,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "possible_merged_columns",
+              "details": "col 0 'Description': 1/1 (100%) have interior whitespace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹432.00 INR",
+          "value": "**Total**: ₹432.00 INR",
+          "bBox": {
+            "x": 135.15652173913043,
+            "y": 57.75300730829654,
+            "w": 23.03597995923912,
+            "h": 2.4741700545601204,
+            "confidence": 0.74,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 135.16,
+              "y": 57.75,
+              "w": 23.04,
+              "h": 2.47,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.74,
+              "label": "text"
+            },
+            {
+              "x": 120.96,
+              "y": 57.36,
+              "w": 36.72,
+              "h": 2.64,
+              "startIndex": 11,
+              "endIndex": 21,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.771,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.97,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.237,
+            "w": 0.489,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.055,
+            "w": 0.209,
+            "h": 0.025
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "text",
+          "bbox": {
+            "x": 0.44,
+            "y": 0.334,
+            "w": 0.075,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.89,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.394,
+            "y": 0.334,
+            "w": 0.121,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.072,
+            "y": 0.181,
+            "w": 0.082,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.084,
+            "y": 0.103,
+            "w": 0.058,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.394,
+            "y": 0.335,
+            "w": 0.038,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.163,
+            "w": 0.044,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.123,
+            "w": 0.101,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.84,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.084,
+            "w": 0.212,
+            "h": 0.112
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.163,
+            "w": 0.068,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.143,
+            "w": 0.059,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.051,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.143,
+            "w": 0.028,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.181,
+            "w": 0.039,
+            "h": 0.008
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.123,
+            "w": 0.047,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.188,
+            "w": 0.039,
+            "h": 0.007
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.051,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.149,
+            "w": 0.027,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.13,
+            "w": 0.046,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.57,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.181,
+            "w": 0.039,
+            "h": 0.013
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.21,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_19_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.131,
+            "y": 0.084,
+            "w": 0.107,
+            "h": 0.016
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

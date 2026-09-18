@@ -1,0 +1,612 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Meridian Wings\nE-Ticket / Boarding Pass\nPassenger: Jeremiah Goyal\nPNR: RF5266\nRoute: Mumbai -> Kolkata\nDate: 2026-01-24\nFlight: Meridian Wings 294\n1 lignt. Mendian Wings 294\nBase fare                 1 4626.19     4626.19\n                          1\nTaxes & fees              1 1156.55     1156.55\n                                        Total: 75782.74 INR",
+      "md": "## Meridian Wings\n\nE-Ticket / Boarding Pass\n\nPassenger: Jeremiah Goyal\n\nPNR: RF5266\n\nRoute: Mumbai -> Kolkata\n\nDate: 2026-01-24\n\nFlight: Meridian Wings 294\n\n| Base fare    | 1 | 4626.19 | 4626.19 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 1156.55 | 1156.55 |\n\n\n**Total: ₹5782.74 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 606,
+          "original_height": 302,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 42,
+              "y": 216,
+              "w": 73,
+              "h": 16,
+              "confidence": 1,
+              "text": "Taxes & fees"
+            },
+            {
+              "x": 263,
+              "y": 196,
+              "w": 69,
+              "h": 16,
+              "confidence": 1,
+              "text": "1 4626.19"
+            },
+            {
+              "x": 42,
+              "y": 168,
+              "w": 158,
+              "h": 18,
+              "confidence": 0.987,
+              "text": "Flight: Meridian Wings 294"
+            },
+            {
+              "x": 42,
+              "y": 150,
+              "w": 106,
+              "h": 15,
+              "confidence": 0.991,
+              "text": "Date: 2026-01-24"
+            },
+            {
+              "x": 43,
+              "y": 111,
+              "w": 84,
+              "h": 16,
+              "confidence": 0.996,
+              "text": "PNR: RF5266"
+            },
+            {
+              "x": 43,
+              "y": 93,
+              "w": 163,
+              "h": 15,
+              "confidence": 0.996,
+              "text": "Passenger: Jeremiah Goyal"
+            },
+            {
+              "x": 41,
+              "y": 41,
+              "w": 139,
+              "h": 24,
+              "confidence": 1,
+              "text": "Meridian Wings"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 62.63,
+          "width": 135.541,
+          "x": 5.731,
+          "y": 6.095,
+          "original_width": 565,
+          "original_height": 261,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Meridian Wings",
+          "value": "Meridian Wings",
+          "lvl": 2,
+          "bBox": {
+            "x": 11.48856095023777,
+            "y": 11.921406157120416,
+            "w": 32.198114279042116,
+            "h": 4.562911655591884,
+            "confidence": 0.9,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.49,
+              "y": 11.92,
+              "w": 32.2,
+              "h": 4.56,
+              "startIndex": 0,
+              "endIndex": 16,
+              "confidence": 0.9,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "E-Ticket / Boarding Pass",
+          "value": "E-Ticket / Boarding Pass",
+          "bBox": {
+            "x": 11.600181247877037,
+            "y": 19.106303538446845,
+            "w": 34.43381374193274,
+            "h": 3.700579236901324,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.6,
+              "y": 19.11,
+              "w": 34.43,
+              "h": 3.7,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Passenger: Jeremiah Goyal",
+          "value": "Passenger: Jeremiah Goyal",
+          "bBox": {
+            "x": 11.445561417289403,
+            "y": 23.766592871624493,
+            "w": 38.9583395253057,
+            "h": 3.5359777699346138,
+            "confidence": 0.8,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.45,
+              "y": 23.77,
+              "w": 38.96,
+              "h": 3.54,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 0.8,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "PNR: RF5266",
+          "value": "PNR: RF5266",
+          "bBox": {
+            "x": 11.407426917034647,
+            "y": 28.339419091266137,
+            "w": 20.01025523310122,
+            "h": 2.846723009192423,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.41,
+              "y": 28.34,
+              "w": 20.01,
+              "h": 2.85,
+              "startIndex": 0,
+              "endIndex": 10,
+              "confidence": 0.82,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Route: Mumbai -> Kolkata",
+          "value": "Route: Mumbai -> Kolkata",
+          "bBox": {
+            "x": 11.421456776494566,
+            "y": 32.84929544200068,
+            "w": 36.585122282608694,
+            "h": 2.916791302224863,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.42,
+              "y": 32.85,
+              "w": 36.59,
+              "h": 2.92,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Date: 2026-01-24",
+          "value": "Date: 2026-01-24",
+          "bBox": {
+            "x": 19.790933890964673,
+            "y": 37.55893368928329,
+            "w": 16.335590395720107,
+            "h": 2.753013809867528,
+            "confidence": 0.81,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.79,
+              "y": 37.56,
+              "w": 16.34,
+              "h": 2.75,
+              "startIndex": 0,
+              "endIndex": 15,
+              "confidence": 0.81,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Flight: Meridian Wings 294",
+          "value": "Flight: Meridian Wings 294",
+          "bBox": {
+            "x": 11.340416684358017,
+            "y": 42.001901510487436,
+            "w": 37.577852464758834,
+            "h": 3.590376215395718,
+            "confidence": 0.85,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11.34,
+              "y": 42,
+              "w": 37.58,
+              "h": 3.59,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.85,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Base fare    | 1 | 4626.19 | 4626.19 |\n| ------------ | - | ------- | ------- |\n| Taxes & fees | 1 | 1156.55 | 1156.55 |",
+          "html": "<table>\n    <tr>\n        <td>Base fare</td>\n<td>1</td>\n<td>4626.19</td>\n<td>4626.19</td>\n    </tr>\n<tr>\n        <td>Taxes &#x26; fees</td>\n<td>1</td>\n<td>1156.55</td>\n<td>1156.55</td>\n    </tr>\n</table>",
+          "rows": [
+            [
+              "Base fare",
+              "1",
+              "4626.19",
+              "4626.19"
+            ],
+            [
+              "Taxes & fees",
+              "1",
+              "1156.55",
+              "1156.55"
+            ]
+          ],
+          "isPerfectTable": false,
+          "csv": "\"Base fare\",\"1\",\"4626.19\",\"4626.19\"\n\"Taxes & fees\",\"1\",\"1156.55\",\"1156.55\"",
+          "bBox": {
+            "x": 11.000596817680027,
+            "y": 48.58079780910327,
+            "w": 102.8553389839504,
+            "h": 7.773168679942254,
+            "confidence": 0.73,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 11,
+              "y": 48.58,
+              "w": 102.86,
+              "h": 7.77,
+              "startIndex": 0,
+              "endIndex": 121,
+              "confidence": 0.73,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹5782.74 INR**",
+          "value": "**Total: ₹5782.74 INR**",
+          "bBox": {
+            "x": 101.376,
+            "y": 59.4432,
+            "w": 35.328,
+            "h": 3.456000000000003,
+            "confidence": 0.87,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 101.38,
+              "y": 59.44,
+              "w": 35.33,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.87,
+              "label": "key-value-region"
+            },
+            {
+              "x": 101.04,
+              "y": 58.8,
+              "w": 35.28,
+              "h": 4.56,
+              "startIndex": 9,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.795,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.85,
+          "label": "text",
+          "bbox": {
+            "x": 0.366,
+            "y": 0.344,
+            "w": 0.079,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.81,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.069,
+            "w": 0.105,
+            "h": 0.026
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.31,
+            "w": 0.057,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.345,
+            "w": 0.032,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.336,
+            "y": 0.31,
+            "w": 0.034,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.282,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.31,
+            "w": 0.051,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.75,
+          "label": "text",
+          "bbox": {
+            "x": 0.334,
+            "y": 0.282,
+            "w": 0.036,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.73,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.33,
+            "y": 0.344,
+            "w": 0.115,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.21,
+            "y": 0.282,
+            "w": 0.052,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.7,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.281,
+            "w": 0.335,
+            "h": 0.045
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.243,
+            "w": 0.122,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.64,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.164,
+            "w": 0.065,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.63,
+          "label": "text",
+          "bbox": {
+            "x": 0.038,
+            "y": 0.111,
+            "w": 0.112,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.19,
+            "w": 0.119,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.218,
+            "w": 0.024,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.064,
+            "y": 0.217,
+            "w": 0.053,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.6,
+          "label": "text",
+          "bbox": {
+            "x": 0.037,
+            "y": 0.138,
+            "w": 0.127,
+            "h": 0.02
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.59,
+          "label": "table",
+          "bbox": {
+            "x": 0.019,
+            "y": 0.035,
+            "w": 0.441,
+            "h": 0.362
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.036,
+            "y": 0.11,
+            "w": 0.128,
+            "h": 0.154
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "document_type": "unstructured_proof",
+  "clean_json": {
+    "document_type": "unstructured_proof",
+    "vendor_name": "Northwind Airways",
+    "date": "2026-01-30",
+    "amount": "6911.14",
+    "currency": "INR",
+    "additional_fields": {
+      "Passenger": "Vrinda Bhatt",
+      "PNR": "DK8740",
+      "Route": "Pune -> Hyderabad",
+      "Flight": "Northwind Airways 775"
+    },
+    "extraction_notes": [],
+    "confidence": 0.7,
+    "line_items": [
+      {
+        "name": "Base fare",
+        "quantity": "1",
+        "unit_price": "5528.91",
+        "total": "5528.91"
+      },
+      {
+        "name": "Taxes & fees",
+        "quantity": "1",
+        "unit_price": "1382.23",
+        "total": "1382.23"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 3147
+  }
+}

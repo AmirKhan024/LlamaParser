@@ -1,0 +1,30 @@
+{
+  "document_type": "restaurant_bill",
+  "clean_json": {
+    "document_type": "restaurant_bill",
+    "vendor_name": "Copper Kettle",
+    "date": "2026-02-07",
+    "amount": "1004.59",
+    "currency": "INR",
+    "additional_fields": {
+      "invoice_type": "Tax Invoice",
+      "purpose": "Team Dinner - 3 colleagues"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "1004.59",
+    "grand_total": "1004.59",
+    "line_items": [
+      {
+        "name": "Food & beverages",
+        "quantity": "3",
+        "unit_price": "334.86",
+        "total": "1004.59"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1942
+  }
+}

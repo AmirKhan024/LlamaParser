@@ -1,0 +1,479 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Zenith Business Suites\nHotel Folio / Tax Invoice\nGuest: Ekapad Mand\nCheck-in: 2026-08-17\nNights: 4\n\n Description                  Qty  Rate    Amount\n Room charge x 4 night(s)     4    11032.37    44129.48\n Minibar                      1    1042.02     1042.02\n                                               Total: 245171.50 INR",
+      "md": "# Zenith Business Suites\n\nHotel Folio / Tax Invoice\n**Guest**: Ekapad Mand\n**Check-in**: 2026-08-17\n**Nights**: 4\n\n| Description              | Qty | Rate     | Amount   |\n| ------------------------ | --- | -------- | -------- |\n| Room charge x 4 night(s) | 4   | 11032.37 | 44129.48 |\n| Minibar                  | 1   | 1042.02  | 1042.02  |\n\n\n**Total**: ₹45171.50 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 666,
+          "original_height": 252,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 519,
+              "y": 183,
+              "w": 50,
+              "h": 19,
+              "confidence": 1,
+              "text": "1042.02"
+            },
+            {
+              "x": 391,
+              "y": 183,
+              "w": 50,
+              "h": 18,
+              "confidence": 1,
+              "text": "1042.02"
+            },
+            {
+              "x": 318,
+              "y": 182,
+              "w": 18,
+              "h": 20,
+              "confidence": 1,
+              "text": "1"
+            },
+            {
+              "x": 29,
+              "y": 157,
+              "w": 137,
+              "h": 16,
+              "confidence": 0.996,
+              "text": "Room charge x 4 night(s)"
+            },
+            {
+              "x": 520,
+              "y": 158,
+              "w": 54,
+              "h": 14,
+              "confidence": 1,
+              "text": "44129.48"
+            },
+            {
+              "x": 392,
+              "y": 158,
+              "w": 54,
+              "h": 14,
+              "confidence": 1,
+              "text": "11032.37"
+            },
+            {
+              "x": 28,
+              "y": 129,
+              "w": 70,
+              "h": 18,
+              "confidence": 1,
+              "text": "Description"
+            },
+            {
+              "x": 389,
+              "y": 128,
+              "w": 36,
+              "h": 20,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 19,
+              "y": 81,
+              "w": 55,
+              "h": 17,
+              "confidence": 0.998,
+              "text": "Nights: 4"
+            },
+            {
+              "x": 21,
+              "y": 68,
+              "w": 117,
+              "h": 14,
+              "confidence": 0.994,
+              "text": "Check-in: 2026-08-17"
+            },
+            {
+              "x": 21,
+              "y": 54,
+              "w": 113,
+              "h": 14,
+              "confidence": 0.998,
+              "text": "Guest: Ekapad Mand"
+            },
+            {
+              "x": 20,
+              "y": 18,
+              "w": 210,
+              "h": 21,
+              "confidence": 0.998,
+              "text": "Zenith Business Suites"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 19.774,
+          "width": 149.992,
+          "x": 8.163,
+          "y": 34.303,
+          "original_width": 625,
+          "original_height": 83,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "# Zenith Business Suites",
+          "value": "Zenith Business Suites",
+          "lvl": 1,
+          "bBox": {
+            "x": 8.488911238960597,
+            "y": 9.540904998779297,
+            "w": 50.16508205247961,
+            "h": 3.920450592041016,
+            "confidence": 0.96,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.49,
+              "y": 9.54,
+              "w": 50.17,
+              "h": 3.92,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.96,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Hotel Folio / Tax Invoice\n**Guest**: Ekapad Mand\n**Check-in**: 2026-08-17\n**Nights**: 4",
+          "value": "Hotel Folio / Tax Invoice\n**Guest**: Ekapad Mand\n**Check-in**: 2026-08-17\n**Nights**: 4",
+          "bBox": {
+            "x": 8.2944,
+            "y": 14.515200000000002,
+            "w": 32.256,
+            "h": 12.959999999999999,
+            "confidence": 0.86,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.29,
+              "y": 14.52,
+              "w": 32.26,
+              "h": 12.96,
+              "startIndex": 0,
+              "endIndex": 86,
+              "confidence": 0.86,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 14.16,
+              "w": 32.16,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 17.28,
+              "w": 27.12,
+              "h": 3.36,
+              "startIndex": 26,
+              "endIndex": 47,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 20.64,
+              "w": 28.08,
+              "h": 3.36,
+              "startIndex": 49,
+              "endIndex": 72,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 7.68,
+              "y": 23.76,
+              "w": 13.2,
+              "h": 4.08,
+              "startIndex": 74,
+              "endIndex": 86,
+              "confidence": 0.86,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description              | Qty | Rate     | Amount   |\n| ------------------------ | --- | -------- | -------- |\n| Room charge x 4 night(s) | 4   | 11032.37 | 44129.48 |\n| Minibar                  | 1   | 1042.02  | 1042.02  |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Room charge x 4 night(s)</td>\n<td>4</td>\n<td>11032.37</td>\n<td>44129.48</td>\n    </tr>\n<tr>\n        <td>Minibar</td>\n<td>1</td>\n<td>1042.02</td>\n<td>1042.02</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "Room charge x 4 night(s)",
+              "4",
+              "11032.37",
+              "44129.48"
+            ],
+            [
+              "Minibar",
+              "1",
+              "1042.02",
+              "1042.02"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"Room charge x 4 night(s)\",\"4\",\"11032.37\",\"44129.48\"\n\"Minibar\",\"1\",\"1042.02\",\"1042.02\"",
+          "bBox": {
+            "x": 8.163990584663722,
+            "y": 34.303259542714,
+            "w": 149.9928835661515,
+            "h": 19.774061518130093,
+            "confidence": 0.99,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.16,
+              "y": 34.3,
+              "w": 149.99,
+              "h": 19.77,
+              "startIndex": 0,
+              "endIndex": 226,
+              "confidence": 0.99,
+              "label": "table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹45171.50 INR",
+          "value": "**Total**: ₹45171.50 INR",
+          "bBox": {
+            "x": 124.1088,
+            "y": 57.369600000000005,
+            "w": 33.792,
+            "h": 2.9376,
+            "confidence": 0.88,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 124.11,
+              "y": 57.37,
+              "w": 33.79,
+              "h": 2.94,
+              "startIndex": 0,
+              "endIndex": 23,
+              "confidence": 0.88,
+              "label": "text"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.895,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.98,
+          "label": "table",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.199,
+            "w": 0.488,
+            "h": 0.114
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.92,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.055,
+            "w": 0.163,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.122,
+            "w": 0.041,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.86,
+          "label": "text",
+          "bbox": {
+            "x": 0.072,
+            "y": 0.123,
+            "w": 0.046,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.058,
+            "y": 0.103,
+            "w": 0.056,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.84,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.103,
+            "w": 0.028,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.404,
+            "y": 0.332,
+            "w": 0.11,
+            "h": 0.017
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.143,
+            "w": 0.039,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.405,
+            "y": 0.332,
+            "w": 0.029,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.438,
+            "y": 0.332,
+            "w": 0.077,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.72,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.084,
+            "w": 0.105,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.68,
+          "label": "text",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.143,
+            "w": 0.007,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.61,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.084,
+            "w": 0.104,
+            "h": 0.076
+          },
+          "isLikelyNoise": false
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

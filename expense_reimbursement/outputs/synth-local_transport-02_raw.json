@@ -1,0 +1,532 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "               CityGo\nTrip Receipt\nPickup: Krishnan Chowk\nDrop: Airport Terminal\nDate: 2026-06-23\nDriver: Krishna\nFare  1 251.37        251-37\n          Total: 7251 27 INR\n           Total: 251.37 INR",
+      "md": "**CityGo**\n\n## Trip Receipt\n\n**Pickup**: Krishnan Chowk\n\n**Drop**: Airport Terminal\n\n**Date**: 2026-06-23\n\n**Driver**: Krishna\n\nFare      251.37      251.37\n\n**Total: ₹251.37 INR**",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 365,
+          "original_height": 213,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 217,
+              "y": 176,
+              "w": 126,
+              "h": 17,
+              "confidence": 0.988,
+              "text": "Total: 251.37 INR"
+            },
+            {
+              "x": 227,
+              "y": 148,
+              "w": 38,
+              "h": 16,
+              "confidence": 0.946,
+              "text": "251-37"
+            },
+            {
+              "x": 22,
+              "y": 120,
+              "w": 112,
+              "h": 16,
+              "confidence": 0.997,
+              "text": "Driver: Krishna"
+            },
+            {
+              "x": 21,
+              "y": 62,
+              "w": 177,
+              "h": 19,
+              "confidence": 0.999,
+              "text": "Pickup: Krishnan Chowk"
+            },
+            {
+              "x": 21,
+              "y": 43,
+              "w": 92,
+              "h": 20,
+              "confidence": 1,
+              "text": "Trip Receipt"
+            }
+          ]
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "text",
+          "md": "**CityGo**",
+          "value": "**CityGo**",
+          "bBox": {
+            "x": 37.97643087635869,
+            "y": 6.2235594873843,
+            "w": 12.828490149456517,
+            "h": 3.8834124855373213,
+            "confidence": 0.82,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 37.98,
+              "y": 6.22,
+              "w": 12.83,
+              "h": 3.88,
+              "startIndex": 0,
+              "endIndex": 9,
+              "confidence": 0.82,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "md": "## Trip Receipt",
+          "value": "Trip Receipt",
+          "lvl": 2,
+          "bBox": {
+            "x": 5.529599999999999,
+            "y": 12.2688,
+            "w": 42.7008,
+            "h": 21.6,
+            "confidence": 0.82,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.28,
+              "y": 11.52,
+              "w": 22.08,
+              "h": 4.8,
+              "startIndex": 3,
+              "endIndex": 14,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Pickup**: Krishnan Chowk",
+          "value": "**Pickup**: Krishnan Chowk",
+          "bBox": {
+            "x": 19.873367972995922,
+            "y": 16.910033250891647,
+            "w": 28.622398840862772,
+            "h": 3.280651324728259,
+            "confidence": 0.9,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 19.87,
+              "y": 16.91,
+              "w": 28.62,
+              "h": 3.28,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.9,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Drop**: Airport Terminal",
+          "value": "**Drop**: Airport Terminal",
+          "bBox": {
+            "x": 17.23394085427989,
+            "y": 21.502713676120926,
+            "w": 28.652334196671195,
+            "h": 3.88922284997028,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 17.23,
+              "y": 21.5,
+              "w": 28.65,
+              "h": 3.89,
+              "startIndex": 0,
+              "endIndex": 25,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Date**: 2026-06-23",
+          "value": "**Date**: 2026-06-23",
+          "bBox": {
+            "x": 15.959735372792117,
+            "y": 26.309120576278026,
+            "w": 20.71776759935462,
+            "h": 3.614095936650814,
+            "confidence": 0.91,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 15.96,
+              "y": 26.31,
+              "w": 20.72,
+              "h": 3.61,
+              "startIndex": 0,
+              "endIndex": 19,
+              "confidence": 0.91,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Driver**: Krishna",
+          "value": "**Driver**: Krishna",
+          "bBox": {
+            "x": 5.483883003566576,
+            "y": 12.26801465905231,
+            "w": 42.87992049507472,
+            "h": 21.657130100416104,
+            "confidence": 0.55,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.52,
+              "y": 30,
+              "w": 26.88,
+              "h": 3.84,
+              "startIndex": 0,
+              "endIndex": 18,
+              "confidence": 0.55,
+              "label": "key-value-region"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Fare      251.37      251.37",
+          "value": "Fare      251.37      251.37",
+          "bBox": {
+            "x": 5.549567313816236,
+            "y": 37.2932950227157,
+            "w": 6.07747630243716,
+            "h": 2.40698746390965,
+            "confidence": 0.79,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 5.55,
+              "y": 37.29,
+              "w": 6.08,
+              "h": 2.41,
+              "startIndex": 0,
+              "endIndex": 3,
+              "confidence": 0.79,
+              "label": "text"
+            },
+            {
+              "x": 55.48,
+              "y": 37.75,
+              "w": 8.02,
+              "h": 2.25,
+              "startIndex": 10,
+              "endIndex": 15,
+              "confidence": 0.77,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total: ₹251.37 INR**",
+          "value": "**Total: ₹251.37 INR**",
+          "bBox": {
+            "x": 52.83839999999999,
+            "y": 44.06400000000001,
+            "w": 30.105599999999995,
+            "h": 3.456000000000003,
+            "confidence": 0.83,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 52.84,
+              "y": 44.06,
+              "w": 30.11,
+              "h": 3.46,
+              "startIndex": 0,
+              "endIndex": 21,
+              "confidence": 0.83,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.714,
+      "layout": [
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.83,
+          "label": "text",
+          "bbox": {
+            "x": 0.052,
+            "y": 0.152,
+            "w": 0.067,
+            "h": 0.021
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.056,
+            "y": 0.124,
+            "w": 0.093,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.177,
+            "w": 0.04,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.81,
+          "label": "text",
+          "bbox": {
+            "x": 0.062,
+            "y": 0.177,
+            "w": 0.044,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.8,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.152,
+            "w": 0.03,
+            "h": 0.018
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.124,
+            "w": 0.035,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.065,
+            "y": 0.098,
+            "w": 0.093,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.216,
+            "w": 0.02,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.76,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.098,
+            "w": 0.043,
+            "h": 0.023
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.181,
+            "y": 0.218,
+            "w": 0.026,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.71,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.218,
+            "w": 0.04,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.207,
+            "y": 0.256,
+            "w": 0.063,
+            "h": 0.019
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.67,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.071,
+            "w": 0.14,
+            "h": 0.125
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.66,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.255,
+            "w": 0.098,
+            "h": 0.02
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.65,
+          "label": "text",
+          "bbox": {
+            "x": 0.018,
+            "y": 0.071,
+            "w": 0.07,
+            "h": 0.024
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.64,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.124,
+            "y": 0.036,
+            "w": 0.042,
+            "h": 0.022
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.172,
+            "y": 0.256,
+            "w": 0.032,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_form_1_v2.jpg",
+          "confidence": 0.55,
+          "label": "form",
+          "bbox": {
+            "x": 0.017,
+            "y": 0.216,
+            "w": 0.253,
+            "h": 0.021
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.219,
+            "w": 0.005,
+            "h": 0.011
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

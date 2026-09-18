@@ -1,0 +1,55 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Triple Six Point Enterprise 666",
+    "date": "22-03-2018 04:01:20 PM",
+    "amount": "22.60",
+    "currency": "RM",
+    "subtotal": "22.60",
+    "line_items": [
+      {
+        "name": "VS FUJI500ml",
+        "quantity": "1x",
+        "unit_price": "10.00",
+        "total": "10.00"
+      },
+      {
+        "name": "Apollo cake original 30s",
+        "quantity": "1x",
+        "unit_price": "6.80",
+        "total": "6.50"
+      },
+      {
+        "name": "TG Cashew nuts mixwd Almond smoke",
+        "quantity": "1x",
+        "unit_price": "4.20",
+        "total": "4.20"
+      },
+      {
+        "name": "TG Coated coconut peanuts",
+        "quantity": "1x",
+        "unit_price": "1.90",
+        "total": "1.90"
+      }
+    ],
+    "additional_fields": {
+      "Receipt no": "REC-0014888",
+      "Payment Type": "Cash",
+      "handwritten": "A03103",
+      "Tel": "016-7574666",
+      "Address": "No 14&16 Jalan Permas 4/3 Bandar Baru Permas Jaya"
+    },
+    "extraction_notes": [
+      "Discount of 0.30 applied to Apollo cake item"
+    ],
+    "confidence": 0.95
+  },
+  "model": "openai/gpt-oss-20b",
+  "duration_seconds": 23.95400000002701,
+  "tokens": {
+    "prompt": 1856,
+    "completion": 1265,
+    "total": 3121
+  }
+}

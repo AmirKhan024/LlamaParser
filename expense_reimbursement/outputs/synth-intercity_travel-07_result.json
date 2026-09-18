@@ -1,0 +1,38 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "Northwind Airways",
+    "date": "2026-07-27",
+    "amount": "9326.94",
+    "currency": "INR",
+    "additional_fields": {
+      "PNR": "WV6184",
+      "Passenger": "Nidra Chaudhuri",
+      "Flight": "Northwind Airways 260",
+      "Route": "Chennai -> Mumbai"
+    },
+    "extraction_notes": [],
+    "confidence": 0.85,
+    "subtotal": "7461.55",
+    "tax": "1865.39",
+    "line_items": [
+      {
+        "name": "Base fare",
+        "quantity": "1",
+        "unit_price": "7461.55",
+        "total": "7461.55"
+      },
+      {
+        "name": "Taxes & fees",
+        "quantity": "1",
+        "unit_price": "1865.39",
+        "total": "1865.39"
+      }
+    ]
+  },
+  "model": "openai/gpt-oss-20b",
+  "tokens": {
+    "total": 3259
+  }
+}

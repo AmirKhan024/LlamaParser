@@ -1,0 +1,36 @@
+{
+  "document_type": "generic_receipt",
+  "clean_json": {
+    "document_type": "generic_receipt",
+    "vendor_name": "OfficeMart",
+    "date": "2026-03-25",
+    "amount": "2220.00",
+    "currency": "INR",
+    "line_items": [
+      {
+        "name": "Printer cartridge",
+        "quantity": "1",
+        "unit_price": "1450",
+        "total": "1450"
+      },
+      {
+        "name": "Wireless mouse",
+        "quantity": "1",
+        "unit_price": "650",
+        "total": "650"
+      },
+      {
+        "name": "Stapler",
+        "quantity": "1",
+        "unit_price": "120",
+        "total": "120"
+      }
+    ],
+    "extraction_notes": [],
+    "confidence": 0.95
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1976
+  }
+}

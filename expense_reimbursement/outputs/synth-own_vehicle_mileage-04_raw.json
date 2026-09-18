@@ -1,0 +1,625 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "text": "Local Conveyance Claim\nLocal Conveyance / Mileage Claim Form\nEmployee: Balhaar Mitra\nVehicle: Four-wheeler (own)\nDate: 2026-05-04\nPurpose: Client visit\nClient: Meridian Retail\n\nDescription         Qty              Rate  Amount\n152 km @ Rs 9/km    152              9     1368.00\n\n                                           m-+-1. 31269 00 TNm\n                                           Total: 31368.00 INR",
+      "md": "## Local Conveyance Claim\n\nLocal Conveyance / Mileage Claim Form\n**Employee**: Balhaar Mitra\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-05-04\n**Purpose**: Client visit\n**Client**: Meridian Retail\n\n| Description      | Qty | Rate | Amount  |\n| ---------------- | --- | ---- | ------- |\n| 152 km @ Rs 9/km | 152 | 9    | 1368.00 |\n\n\n**Total**: ₹1368.00 INR",
+      "images": [
+        {
+          "name": "page_1.jpg",
+          "height": 172.8,
+          "width": 307.2,
+          "x": 0,
+          "y": 0,
+          "original_width": 667,
+          "original_height": 253,
+          "rotation": 0,
+          "type": "full_page_screenshot",
+          "ocr": [
+            {
+              "x": 482,
+              "y": 221,
+              "w": 163,
+              "h": 11,
+              "confidence": 0.936,
+              "text": "Total: 31368.00 INR"
+            },
+            {
+              "x": 402,
+              "y": 184,
+              "w": 13,
+              "h": 16,
+              "confidence": 1,
+              "text": "9"
+            },
+            {
+              "x": 501,
+              "y": 158,
+              "w": 49,
+              "h": 15,
+              "confidence": 1,
+              "text": "Amount"
+            },
+            {
+              "x": 401,
+              "y": 158,
+              "w": 35,
+              "h": 15,
+              "confidence": 1,
+              "text": "Rate"
+            },
+            {
+              "x": 317,
+              "y": 158,
+              "w": 27,
+              "h": 17,
+              "confidence": 0.999,
+              "text": "Qty"
+            },
+            {
+              "x": 23,
+              "y": 111,
+              "w": 167,
+              "h": 11,
+              "confidence": 0.992,
+              "text": "Client: Meridian Retail"
+            },
+            {
+              "x": 23,
+              "y": 69,
+              "w": 192,
+              "h": 11,
+              "confidence": 0.996,
+              "text": "Vehicle: Four-wheeler (own)"
+            }
+          ]
+        },
+        {
+          "name": "page_1_table_1_v2.jpg",
+          "height": 13.359,
+          "width": 150.126,
+          "x": 8.094,
+          "y": 40.956,
+          "original_width": 626,
+          "original_height": 56,
+          "rotation": 0,
+          "type": "layout_v3_table"
+        }
+      ],
+      "charts": [],
+      "items": [
+        {
+          "type": "heading",
+          "md": "## Local Conveyance Claim",
+          "value": "Local Conveyance Claim",
+          "lvl": 2,
+          "bBox": {
+            "x": 8.387077530570652,
+            "y": 9.498622562574305,
+            "w": 64.27373896059783,
+            "h": 4.316362331224525,
+            "confidence": 0.93,
+            "label": "paragraph_title"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.39,
+              "y": 9.5,
+              "w": 64.27,
+              "h": 4.32,
+              "startIndex": 0,
+              "endIndex": 24,
+              "confidence": 0.93,
+              "label": "paragraph_title"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "Local Conveyance / Mileage Claim Form\n**Employee**: Balhaar Mitra\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-05-04\n**Purpose**: Client visit\n**Client**: Meridian Retail",
+          "value": "Local Conveyance / Mileage Claim Form\n**Employee**: Balhaar Mitra\n**Vehicle**: Four-wheeler (own)\n**Date**: 2026-05-04\n**Purpose**: Client visit\n**Client**: Meridian Retail",
+          "bBox": {
+            "x": 8.088063911769702,
+            "y": 14.460854704483696,
+            "w": 65.05590263034985,
+            "h": 19.32947706139606,
+            "confidence": 0.9,
+            "label": "key-value-region"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.09,
+              "y": 14.46,
+              "w": 65.06,
+              "h": 19.33,
+              "startIndex": 0,
+              "endIndex": 171,
+              "confidence": 0.9,
+              "label": "key-value-region"
+            },
+            {
+              "x": 8.4,
+              "y": 13.92,
+              "w": 64.32,
+              "h": 2.88,
+              "startIndex": 0,
+              "endIndex": 36,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 17.28,
+              "w": 40.08,
+              "h": 3.12,
+              "startIndex": 38,
+              "endIndex": 64,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 20.88,
+              "w": 46.08,
+              "h": 2.64,
+              "startIndex": 66,
+              "endIndex": 96,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.16,
+              "y": 24,
+              "w": 28.08,
+              "h": 2.88,
+              "startIndex": 98,
+              "endIndex": 117,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 27.6,
+              "w": 36.72,
+              "h": 2.88,
+              "startIndex": 119,
+              "endIndex": 143,
+              "confidence": 1,
+              "label": "text"
+            },
+            {
+              "x": 8.4,
+              "y": 30.96,
+              "w": 40.08,
+              "h": 2.64,
+              "startIndex": 145,
+              "endIndex": 171,
+              "confidence": 1,
+              "label": "text"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "md": "| Description      | Qty | Rate | Amount  |\n| ---------------- | --- | ---- | ------- |\n| 152 km @ Rs 9/km | 152 | 9    | 1368.00 |",
+          "html": "<table>\n  <thead>\n    <tr>\n        <th>Description</th>\n        <th>Qty</th>\n        <th>Rate</th>\n        <th>Amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>152 km @ Rs 9/km</td>\n<td>152</td>\n<td>9</td>\n<td>1368.00</td>\n    </tr>\n  </tbody>\n</table>",
+          "rows": [
+            [
+              "Description",
+              "Qty",
+              "Rate",
+              "Amount"
+            ],
+            [
+              "152 km @ Rs 9/km",
+              "152",
+              "9",
+              "1368.00"
+            ]
+          ],
+          "isPerfectTable": true,
+          "csv": "\"Description\",\"Qty\",\"Rate\",\"Amount\"\n\"152 km @ Rs 9/km\",\"152\",\"9\",\"1368.00\"",
+          "bBox": {
+            "x": 8.094841202445652,
+            "y": 40.95682585343071,
+            "w": 150.12665166440217,
+            "h": 13.359533824091372,
+            "confidence": 0.98,
+            "label": "table"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 8.09,
+              "y": 40.96,
+              "w": 150.13,
+              "h": 13.36,
+              "startIndex": 0,
+              "endIndex": 130,
+              "confidence": 0.98,
+              "label": "table"
+            }
+          ],
+          "parseConcerns": [
+            {
+              "type": "possible_merged_columns",
+              "details": "col 0 'Description': 1/1 (100%) have interior whitespace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "md": "**Total**: ₹1368.00 INR",
+          "value": "**Total**: ₹1368.00 INR",
+          "bBox": {
+            "x": 133.06503057065217,
+            "y": 57.72803729513418,
+            "w": 25.13729194972827,
+            "h": 2.5013683816661025,
+            "confidence": 0.74,
+            "label": "text"
+          },
+          "layoutAwareBbox": [
+            {
+              "x": 133.07,
+              "y": 57.73,
+              "w": 25.14,
+              "h": 2.5,
+              "startIndex": 0,
+              "endIndex": 22,
+              "confidence": 0.74,
+              "label": "text"
+            },
+            {
+              "x": 118.56,
+              "y": 57.36,
+              "w": 39.12,
+              "h": 2.64,
+              "startIndex": 11,
+              "endIndex": 22,
+              "confidence": 1,
+              "label": "key-value-region"
+            }
+          ]
+        }
+      ],
+      "status": "OK",
+      "originalOrientationAngle": 0,
+      "links": [],
+      "width": 307.2,
+      "height": 172.8,
+      "triggeredAutoMode": false,
+      "parsingMode": "accurate",
+      "structuredData": null,
+      "noStructuredContent": false,
+      "noTextContent": false,
+      "pageHeaderMarkdown": "",
+      "pageFooterMarkdown": "",
+      "printedPageNumber": "",
+      "slideSpeakerNotes": null,
+      "slideSectionName": null,
+      "confidence": 0.8,
+      "layout": [
+        {
+          "image": "page_1_table_1_v2.jpg",
+          "confidence": 0.96,
+          "label": "table",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.237,
+            "w": 0.489,
+            "h": 0.077
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "text",
+          "bbox": {
+            "x": 0.433,
+            "y": 0.334,
+            "w": 0.082,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.386,
+            "y": 0.334,
+            "w": 0.129,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_paragraph_title_1_v2.jpg",
+          "confidence": 0.87,
+          "label": "paragraph_title",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.055,
+            "w": 0.209,
+            "h": 0.025
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_2_v2.jpg",
+          "confidence": 0.82,
+          "label": "text",
+          "bbox": {
+            "x": 0.387,
+            "y": 0.335,
+            "w": 0.039,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_key-value-region_2_v2.jpg",
+          "confidence": 0.8,
+          "label": "key-value-region",
+          "bbox": {
+            "x": 0.026,
+            "y": 0.084,
+            "w": 0.212,
+            "h": 0.112
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_3_v2.jpg",
+          "confidence": 0.79,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.123,
+            "w": 0.101,
+            "h": 0.015
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_4_v2.jpg",
+          "confidence": 0.77,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.163,
+            "w": 0.045,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_5_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.071,
+            "y": 0.181,
+            "w": 0.087,
+            "h": 0.014
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_6_v2.jpg",
+          "confidence": 0.74,
+          "label": "text",
+          "bbox": {
+            "x": 0.061,
+            "y": 0.143,
+            "w": 0.059,
+            "h": 0.012
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_7_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.051,
+            "h": 0.016
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_8_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.162,
+            "w": 0.068,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_9_v2.jpg",
+          "confidence": 0.73,
+          "label": "text",
+          "bbox": {
+            "x": 0.084,
+            "y": 0.103,
+            "w": 0.075,
+            "h": 0.013
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_10_v2.jpg",
+          "confidence": 0.7,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.143,
+            "w": 0.028,
+            "h": 0.008
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_11_v2.jpg",
+          "confidence": 0.69,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.181,
+            "w": 0.039,
+            "h": 0.008
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_12_v2.jpg",
+          "confidence": 0.67,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.188,
+            "w": 0.039,
+            "h": 0.007
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_13_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.104,
+            "w": 0.051,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_14_v2.jpg",
+          "confidence": 0.66,
+          "label": "text",
+          "bbox": {
+            "x": 0.027,
+            "y": 0.123,
+            "w": 0.047,
+            "h": 0.009
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_15_v2.jpg",
+          "confidence": 0.62,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.13,
+            "w": 0.046,
+            "h": 0.007
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_16_v2.jpg",
+          "confidence": 0.61,
+          "label": "text",
+          "bbox": {
+            "x": 0.079,
+            "y": 0.162,
+            "w": 0.068,
+            "h": 0.008
+          },
+          "isLikelyNoise": false
+        },
+        {
+          "image": "page_1_text_17_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.149,
+            "w": 0.027,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_18_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.072,
+            "y": 0.188,
+            "w": 0.087,
+            "h": 0.007
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_19_v2.jpg",
+          "confidence": 0.58,
+          "label": "text",
+          "bbox": {
+            "x": 0.129,
+            "y": 0.084,
+            "w": 0.109,
+            "h": 0.015
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_20_v2.jpg",
+          "confidence": 0.56,
+          "label": "text",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.148,
+            "w": 0.059,
+            "h": 0.008
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_21_v2.jpg",
+          "confidence": 0.54,
+          "label": "text",
+          "bbox": {
+            "x": 0.072,
+            "y": 0.18,
+            "w": 0.086,
+            "h": 0.009
+          },
+          "isLikelyNoise": true
+        },
+        {
+          "image": "page_1_text_22_v2.jpg",
+          "confidence": 0.51,
+          "label": "text",
+          "bbox": {
+            "x": 0.028,
+            "y": 0.111,
+            "w": 0.051,
+            "h": 0.009
+          },
+          "isLikelyNoise": true
+        }
+      ],
+      "costOptimized": false
+    }
+  ],
+  "job_metadata": {
+    "credits_used": 0,
+    "job_credits_usage": 0,
+    "job_pages": 1,
+    "job_auto_mode_triggered_pages": 0,
+    "job_is_cache_hit": false
+  }
+}

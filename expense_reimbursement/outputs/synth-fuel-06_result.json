@@ -1,0 +1,31 @@
+{
+  "document_type": "fuel_receipt",
+  "clean_json": {
+    "document_type": "fuel_receipt",
+    "vendor_name": "Suryodaya Fuel Station",
+    "date": "2026-05-02",
+    "amount": "1782.28",
+    "currency": "INR",
+    "additional_fields": {
+      "fuel_type": "Petrol",
+      "quantity": "17.07 L",
+      "unit_price": "104.41"
+    },
+    "extraction_notes": [],
+    "confidence": 0.95,
+    "subtotal": "1782.28",
+    "tax": null,
+    "line_items": [
+      {
+        "name": "Petrol",
+        "quantity": "17.07",
+        "unit_price": "104.41",
+        "total": "1782.28"
+      }
+    ]
+  },
+  "model": "qwen/qwen3.8-27b",
+  "tokens": {
+    "total": 1948
+  }
+}
