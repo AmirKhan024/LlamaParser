@@ -239,6 +239,13 @@ def _call_groq_with_retry(client: Groq, model: str, system_prompt: str, user_con
                 temperature=0,
             )
         except RateLimitError as exc:
+            # A daily-quota 429 ("tokens per day (TPD)") won't recover
+            # within any retry loop's timeframe -- fail immediately
+            # instead of burning minutes of backoff per call across a
+            # whole eval run. A per-minute/burst 429 (no "per day" in
+            # the message) is still worth retrying.
+            if "per day" in str(exc).lower():
+                raise
             attempt += 1
             if attempt > max_retries:
                 raise

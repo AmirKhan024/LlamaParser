@@ -48,6 +48,9 @@ DATASET_PATH = BASE_DIR / "eval" / "categorization" / "dataset.jsonl"
 CACHE_DIR = BASE_DIR / "eval" / "categorization" / "_predictions_cache"
 METHODS = ["rules", "llm", "classifier", "hybrid"]
 REAL_SOURCES = {"sroie", "cord", "real"}
+MAX_ERROR_RATE = 0.2  # above this, a method's numbers this run aren't meaningful (e.g. a Groq quota wall) --
+# hybrid's llm-fallback failures alone hit ~43% while gpt-oss-20b's quota was exhausted, which would
+# otherwise silently read as "hybrid is a bad method" rather than "hybrid's fallback couldn't run"
 
 
 def _load_dataset() -> list[dict]:
@@ -82,24 +85,39 @@ def _row_input(row: dict) -> CategorizationInput:
     return build_input(fields, markdown)
 
 
-def _predict_all(rows: list[dict], method: str) -> dict[str, dict]:
+def _predict_all(rows: list[dict], method: str) -> tuple[dict[str, dict], int]:
+    """Returns (predictions, error_count). A per-row failure (e.g. a
+    Groq daily quota exhausted) is recorded as category=None with
+    confidence 0.0 rather than crashing the whole eval run -- the
+    caller decides whether too many failures means this method's
+    numbers for this run aren't meaningful (see MAX_ERROR_RATE)."""
     cache = _load_cache(method)
-    predictions = dict(cache)
+    # A cached row with an "error" key failed last run (e.g. a quota
+    # wall) -- retry it rather than treating that failure as permanent.
+    predictions = {k: v for k, v in cache.items() if "error" not in v}
+    errors = 0
     for row in rows:
         if row["id"] in predictions:
             continue
         inp = _row_input(row)
-        result = categorize(inp, method)
-        predictions[row["id"]] = {
-            "id": row["id"],
-            "category": result.category,
-            "confidence": result.confidence,
-            "latency_ms": result.latency_ms,
-            "estimated_cost_usd": result.estimated_cost_usd,
-        }
+        try:
+            result = categorize(inp, method)
+            predictions[row["id"]] = {
+                "id": row["id"],
+                "category": result.category,
+                "confidence": result.confidence,
+                "latency_ms": result.latency_ms,
+                "estimated_cost_usd": result.estimated_cost_usd,
+            }
+        except Exception as exc:  # noqa: BLE001 -- keep going, the caller reports the error rate
+            errors += 1
+            predictions[row["id"]] = {
+                "id": row["id"], "category": None, "confidence": 0.0,
+                "latency_ms": 0, "estimated_cost_usd": 0.0, "error": str(exc)[:200],
+            }
     if len(predictions) > len(cache):
         _save_cache(method, predictions)
-    return predictions
+    return predictions, errors
 
 
 def _metrics_for(rows: list[dict], predictions: dict[str, dict], ground_truth_key: str) -> dict:
@@ -225,13 +243,28 @@ def main() -> None:
         )
 
     all_predictions = {}
+    unavailable_methods = {}
     for method in METHODS:
         print(f"Running {method} on {len(rows)} rows...")
-        all_predictions[method] = _predict_all(rows, method)
+        predictions, errors = _predict_all(rows, method)
+        all_predictions[method] = predictions
+        if errors > 0:
+            error_rate = errors / len(rows)
+            print(f"  {errors}/{len(rows)} rows failed ({error_rate:.0%})")
+            if error_rate > MAX_ERROR_RATE:
+                unavailable_methods[method] = errors
 
     sections = []
     best_method, best_f1 = None, -1.0
     for method in METHODS:
+        if method in unavailable_methods:
+            sections.append(
+                f"## {method}\n\n_Unavailable this run: {unavailable_methods[method]}/{len(rows)} calls "
+                "failed (see the per-row `error` field in eval/categorization/_predictions_cache/"
+                f"{method}.jsonl) -- most likely every usable Groq model's daily quota was exhausted "
+                "while this eval set was being built. Re-run once quota resets._\n"
+            )
+            continue
         predictions = all_predictions[method]
         overall = _metrics_for(rows, predictions, ground_truth_key)
         by_source = {
@@ -244,14 +277,22 @@ def main() -> None:
 
     title = "# Categorization eval results (FINAL, gold labels)" if args.final else "# Categorization eval results (SILVER -- interim, not final)"
     banner = "" if args.final else (
-        "\n**These numbers use silver labels (one LLM's own judgment), not human-reviewed gold "
-        "labels. Treat as directional only until RESULTS.md exists.**\n"
+        "\n**These numbers use silver labels (Claude Code's own judgment against categories.py's "
+        "definitions and tie-break rules -- not the categorizer being evaluated, and not human-"
+        "reviewed gold labels). Treat as directional only until RESULTS.md exists.**\n"
     )
+    if unavailable_methods:
+        banner += (
+            f"\n**{', '.join(unavailable_methods)} could not be evaluated this run -- see each "
+            "method's section below for why.**\n"
+        )
     body = "\n".join(sections)
     out = f"{title}\n{banner}\n{body}"
-    if args.final:
+    if args.final and best_method is not None:
         out += _error_analysis(rows, all_predictions[best_method], ground_truth_key, best_method)
         out += f"\n\n_Best method by macro-F1: **{best_method}** ({best_f1:.3f})._\n"
+    elif args.final:
+        out += "\n\n_No method produced usable results this run -- see the sections above._\n"
 
     out_path = BASE_DIR / "eval" / "categorization" / ("RESULTS.md" if args.final else "RESULTS_SILVER.md")
     out_path.write_text(out, encoding="utf-8")

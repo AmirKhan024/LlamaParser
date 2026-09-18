@@ -1,0 +1,1725 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Categorization silver-label review</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; margin: 0; padding: 20px; background: #f7f7f9; color: #1a1a1a; }
+  h1 { margin: 0 0 8px; }
+  .toolbar { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
+  .counts { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .count-pill { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 999px; padding: 3px 10px; font-size: 12px; }
+  .filters label { margin-right: 14px; font-size: 13px; }
+  .group h2 { font-size: 16px; border-bottom: 2px solid #333; padding-bottom: 4px; margin-top: 28px; }
+  .group-count { color: #666; font-weight: normal; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; font-size: 12px; }
+  .card .preview { height: 140px; background: #fafafa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #eee; overflow: hidden; }
+  .card .preview img { max-width: 100%; max-height: 140px; object-fit: contain; }
+  .card .body { padding: 8px 10px; }
+  .id-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .id-row code { font-size: 11px; color: #444; }
+  .badge { font-size: 10px; padding: 1px 6px; border-radius: 999px; }
+  .badge-source { background: #f0f0f0; border: 1px solid #ccc; }
+  .badge-ambiguous { background: #fef3c7; border: 1px solid #fde68a; color: #92400e; }
+  .field { margin-bottom: 2px; }
+  .silver { margin-top: 6px; }
+  .silver-label { font-weight: bold; color: #1d4ed8; }
+  .rationale { color: #555; margin-top: 3px; font-style: italic; }
+  .notes { color: #b45309; margin-top: 4px; }
+  .no-preview { color: #999; font-size: 11px; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+  <h1>Categorization silver-label review</h1>
+  <div class="toolbar">
+    <div class="counts"><span class="count-pill">intercity_travel: 8</span><span class="count-pill">local_transport: 9</span><span class="count-pill">own_vehicle_mileage: 8</span><span class="count-pill">fuel: 8</span><span class="count-pill">accommodation: 8</span><span class="count-pill">travel_meals: 20</span><span class="count-pill">client_entertainment: 8</span><span class="count-pill">team_events: 6</span><span class="count-pill">phone_internet: 8</span><span class="count-pill">software_subscriptions: 8</span><span class="count-pill">office_supplies_equipment: 8</span><span class="count-pill">training_conferences: 8</span><span class="count-pill">travel_documents_fees: 8</span><span class="count-pill">other: 18</span><span class="count-pill">(no category): 1</span></div>
+    <div class="filters">
+      <b>Source:</b> <label><input type="checkbox" class="source-filter" value="cord" checked> cord</label><label><input type="checkbox" class="source-filter" value="real" checked> real</label><label><input type="checkbox" class="source-filter" value="sroie" checked> sroie</label><label><input type="checkbox" class="source-filter" value="synthetic_image" checked> synthetic_image</label>
+      &nbsp;&nbsp; <label><input type="checkbox" id="ambiguous-only"> ambiguous only</label>
+    </div>
+  </div>
+  
+        <section class="group" data-group="intercity_travel">
+          <h2>Intercity Travel <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> unstructured_proof</div>
+        <div class="field"><b>vendor:</b> Meridian Wings</div>
+        <div class="field"><b>amount:</b> 9978.60 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Meridian Wings; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> unstructured_proof</div>
+        <div class="field"><b>vendor:</b> Northwind Airways</div>
+        <div class="field"><b>amount:</b> 6911.14 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Northwind Airways; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> unstructured_proof</div>
+        <div class="field"><b>vendor:</b> SkyBridge Air</div>
+        <div class="field"><b>amount:</b> 4648.84 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from SkyBridge Air; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Meridian Wings</div>
+        <div class="field"><b>amount:</b> 5782.74 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Meridian Wings; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> unstructured_proof</div>
+        <div class="field"><b>vendor:</b> AeroVista Airlines</div>
+        <div class="field"><b>amount:</b> 10491.59 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from AeroVista Airlines; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> unstructured_proof</div>
+        <div class="field"><b>vendor:</b> Meridian Wings</div>
+        <div class="field"><b>amount:</b> 10086.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Meridian Wings; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Northwind Airways</div>
+        <div class="field"><b>amount:</b> 9330.41 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Northwind Airways; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-intercity_travel-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-intercity_travel-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-intercity_travel-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Northwind Airways</div>
+        <div class="field"><b>amount:</b> 9326.94 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">intercity_travel</span></div>
+        <div class="rationale">Generated as a intercity travel document from Northwind Airways; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: intercity_travel</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="local_transport">
+          <h2>Local Transport <span class="group-count">(9)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-011">
+      <div class="preview"><a href="../../../data/X51005288570.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-011</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SECURE PARKING CORPORATION S/B</div>
+        <div class="field"><b>amount:</b> 1.00 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">A parking fee receipt from Secure Parking Corporation -- parking is explicitly part of local_transport's definition.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> RideNow</div>
+        <div class="field"><b>amount:</b> 164.60 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from RideNow; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> RideNow</div>
+        <div class="field"><b>amount:</b> 155.25 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from RideNow; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> CityGo</div>
+        <div class="field"><b>amount:</b> 251.37 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from CityGo; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> QuickHail</div>
+        <div class="field"><b>amount:</b> 415.28 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from QuickHail; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> RideNow</div>
+        <div class="field"><b>amount:</b> 251.39 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from RideNow; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> RideNow</div>
+        <div class="field"><b>amount:</b> 575.30 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from RideNow; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> GoCab</div>
+        <div class="field"><b>amount:</b> 98.12 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from GoCab; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-local_transport-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-local_transport-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-local_transport-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> taxi_receipt</div>
+        <div class="field"><b>vendor:</b> GoCab</div>
+        <div class="field"><b>amount:</b> 100.09 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">local_transport</span></div>
+        <div class="rationale">Generated as a local transport document from GoCab; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: local_transport</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="own_vehicle_mileage">
+          <h2>Own-Vehicle Mileage <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="real" data-ambiguous="0" data-id="cat-real-001">
+      <div class="preview"><a href="../../../expense_reimbursement/uploads/May-26 Local conveyance.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-real-001</code><span class="badge badge-source">real</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> AMALGAMATED BEAN COFFEE TRADING CO LTD., Coffee Day Beverages Division</div>
+        <div class="field"><b>amount:</b> 8110 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">local_conveyance_form with a trip log (date/place/purpose/client/km rows) and a total_kms field -- a mileage claim form.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 432.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from the vendor; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 1170.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from the vendor; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> Bluepeak Logistics</div>
+        <div class="field"><b>amount:</b> 837.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from Bluepeak Logistics; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 972.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from the vendor; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 1368.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from the vendor; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> Novagen Pharma</div>
+        <div class="field"><b>amount:</b> 477.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from Novagen Pharma; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-own_vehicle_mileage-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-own_vehicle_mileage-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-own_vehicle_mileage-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> local_conveyance_form</div>
+        <div class="field"><b>vendor:</b> Bluepeak Logistics</div>
+        <div class="field"><b>amount:</b> 1260.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">own_vehicle_mileage</span></div>
+        <div class="rationale">Generated as a own vehicle mileage document from Bluepeak Logistics; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: own_vehicle_mileage</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="fuel">
+          <h2>Fuel <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Metro Petro Station</div>
+        <div class="field"><b>amount:</b> 3357.97 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Metro Petro Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Metro Petro Station</div>
+        <div class="field"><b>amount:</b> 1335.87 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Metro Petro Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Suryodaya Fuel Station</div>
+        <div class="field"><b>amount:</b> 2728.81 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Suryodaya Fuel Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Metro Petro Station</div>
+        <div class="field"><b>amount:</b> 1760.55 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Metro Petro Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Highway Energy Point</div>
+        <div class="field"><b>amount:</b> 3086.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Highway Energy Point; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Metro Petro Station</div>
+        <div class="field"><b>amount:</b> 517.60 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Metro Petro Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Suryodaya Fuel Station</div>
+        <div class="field"><b>amount:</b> 1782.28 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Suryodaya Fuel Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-fuel-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-fuel-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-fuel-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> fuel_receipt</div>
+        <div class="field"><b>vendor:</b> Metro Petro Station</div>
+        <div class="field"><b>amount:</b> 1573.45 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">fuel</span></div>
+        <div class="rationale">Generated as a fuel document from Metro Petro Station; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: fuel</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="accommodation">
+          <h2>Accommodation <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="real" data-ambiguous="0" data-id="cat-real-003">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/test_documents/Hotel-Receipt.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-real-003</code><span class="badge badge-source">real</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> GRAND PLAZA HOTEL</div>
+        <div class="field"><b>amount:</b> 780.75 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Grand Plaza Hotel hotel_invoice -- a hotel folio.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Palm Court Hotel</div>
+        <div class="field"><b>amount:</b> 32181.59 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Palm Court Hotel; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> The Sahyadri Grand</div>
+        <div class="field"><b>amount:</b> 10248.95 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from The Sahyadri Grand; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Harborview Residency</div>
+        <div class="field"><b>amount:</b> 41646.80 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Harborview Residency; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Zenith Business Suites</div>
+        <div class="field"><b>amount:</b> 45171.50 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Zenith Business Suites; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Harborview Residency</div>
+        <div class="field"><b>amount:</b> 20913.64 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Harborview Residency; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Palm Court Hotel</div>
+        <div class="field"><b>amount:</b> 8612.55 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Palm Court Hotel; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-accommodation-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-accommodation-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-accommodation-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> hotel_invoice</div>
+        <div class="field"><b>vendor:</b> Harborview Residency</div>
+        <div class="field"><b>amount:</b> 6333.48 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">accommodation</span></div>
+        <div class="rationale">Generated as a accommodation document from Harborview Residency; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: accommodation</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="travel_meals">
+          <h2>Travel Meals <span class="group-count">(20)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="sroie" data-ambiguous="1" data-id="cat-sroie-003">
+      <div class="preview"><a href="../../../data/X51005230605.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-003</code><span class="badge badge-source">sroie</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> PETRON BKT LANJAN SB</div>
+        <div class="field"><b>amount:</b> 4.90 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Vendor is a Petron fuel station, but the line items (mint tea, vanilla sandwich) are food from the attached convenience counter, not fuel -- category follows what was actually bought.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-004">
+      <div class="preview"><a href="../../../data/X51005230616.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-004</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Gerbang Alaf Restaurants Sdn Bhd</div>
+        <div class="field"><b>amount:</b> 38.90 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Gerbang Alaf Restaurants (McDonald's Malaysia franchise operator) -- a burger meal, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-013">
+      <div class="preview"><a href="../../../data/X51005337867.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-013</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Old Town Kopitiam Sdn Bhd</div>
+        <div class="field"><b>amount:</b> 30.25 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Old Town Kopitiam (a cafe chain) -- a drink/snack order, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-014">
+      <div class="preview"><a href="../../../data/X51005337877.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-014</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> UROKO JAPANESE CUISINE SDN BHD</div>
+        <div class="field"><b>amount:</b> 53.00 SR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Uroko Japanese Cuisine -- udon, gyoza, fried rice; a meal with no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-020">
+      <div class="preview"><a href="../../../data/X51005433543.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-020</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> UNIHAKKA INTERNATIONAL SDN BHD</div>
+        <div class="field"><b>amount:</b> 8.20 $</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Unihakka International (a mixed-rice fast-food chain) -- a meal, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-024">
+      <div class="preview"><a href="../../../data/X51005442375.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-024</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> BAR WANG RICE@PERMAS JAYA</div>
+        <div class="field"><b>amount:</b> $8.50 $</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Bar Wang Rice -- a mixed-rice/noodle food-stall meal, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-002">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-002</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 28000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Jasmine tea and coconut jelly drinks -- a beverage-stall order, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-003">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-003</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Dynamic Bakery &amp; Cake Natural</div>
+        <div class="field"><b>amount:</b> 11000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Dynamic Bakery &amp; Cake Natural -- a sugar donut, a bakery snack.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-004">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-004</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 174600 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Iced black coffee, avocado coffee, chicken katsu -- a cafe meal, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-005">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-005</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 31.000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">'TRAD KY TOAST CARTE' -- a toast/cafe menu item, restaurant_bill with no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-006">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-006</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Tous Les Jours</div>
+        <div class="field"><b>amount:</b> 46000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Tous Les Jours (bakery cafe chain) -- egg tart and pastries, no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-007">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-007</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 111000 Rp</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">'ADD CHICKEN BOX' with a coupon -- a fast-food combo meal.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-008">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_08.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-008</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 50000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Black Sakura drink with cookie-dough sauce and nata de coco -- a dessert-drink shop order.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-009">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_09.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-009</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 36000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">'Bumbu Kaldu Ayam' (chicken broth seasoning) -- a food-stall order, restaurant_bill with no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-010">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_10.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-010</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Auntie Anne's</div>
+        <div class="field"><b>amount:</b> 17000 IDR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Auntie Anne's -- a cinnamon-sugar pretzel, a snack purchase.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-011">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_11.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-011</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 230000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">'BANABERRY FRESH CREAM CAK' -- a bakery cake purchase.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-013">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_13.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-013</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 51.300 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Meatball soup and mineral water -- a food-stall meal, restaurant_bill with no client or team wording.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="1" data-id="cat-cord-014">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_14.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-014</code><span class="badge badge-source">cord</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 281435 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Cheese cake slice, baked rice, fish and chips, mushroom soup -- several items could suggest more than one diner, but nothing in the document names a client or team.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="1" data-id="synth-team_events-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-00</code><span class="badge badge-source">synthetic_image</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> The Old Mill Kitchen</div>
+        <div class="field"><b>amount:</b> 1794.45 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">The Old Mill Kitchen restaurant bill for 2 diners with no client or 'team' wording -- reads as an ordinary meal, though a team lunch for two is equally plausible.</div>
+        <div class="notes">note: expected category: team_events. 2 diners, no client or 'team' wording -- could read as travel_meals instead</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="1" data-id="synth-team_events-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-01</code><span class="badge badge-source">synthetic_image</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Copper Kettle</div>
+        <div class="field"><b>amount:</b> 2162.30 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_meals</span></div>
+        <div class="rationale">Copper Kettle restaurant bill for 2 diners with no client or 'team' wording -- reads as an ordinary meal, though a team lunch for two is equally plausible.</div>
+        <div class="notes">note: expected category: team_events. 2 diners, no client or 'team' wording -- could read as travel_meals instead</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="client_entertainment">
+          <h2>Client Entertainment <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Urban Tandoor</div>
+        <div class="field"><b>amount:</b> 1848.87 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Urban Tandoor; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Spice Route</div>
+        <div class="field"><b>amount:</b> 5925.50 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Spice Route; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 2525.60 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 5479.27 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 4668.18 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> The Old Mill Kitchen</div>
+        <div class="field"><b>amount:</b> 2190.43 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from The Old Mill Kitchen; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Copper Kettle</div>
+        <div class="field"><b>amount:</b> 4468.50 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Copper Kettle; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-client_entertainment-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-client_entertainment-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-client_entertainment-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Copper Kettle</div>
+        <div class="field"><b>amount:</b> 3368.27 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">client_entertainment</span></div>
+        <div class="rationale">Generated as a client entertainment document from Copper Kettle; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: client_entertainment</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="team_events">
+          <h2>Team Events <span class="group-count">(6)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 2456.05 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Copper Kettle</div>
+        <div class="field"><b>amount:</b> 1004.59 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Copper Kettle; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 973.55 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Bay Leaf Diner</div>
+        <div class="field"><b>amount:</b> 695.61 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Bay Leaf Diner; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Spice Route</div>
+        <div class="field"><b>amount:</b> 3481.87 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Spice Route; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-team_events-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-team_events-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-team_events-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> restaurant_bill</div>
+        <div class="field"><b>vendor:</b> Spice Route</div>
+        <div class="field"><b>amount:</b> 3031.32 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">team_events</span></div>
+        <div class="rationale">Generated as a team events document from Spice Route; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: team_events</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="phone_internet">
+          <h2>Phone and Internet <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="real" data-ambiguous="0" data-id="cat-real-000">
+      <div class="preview"><a href="../../../expense_reimbursement/uploads/may26_mobile.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-real-000</code><span class="badge badge-source">real</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> Vodafone Idea Limited</div>
+        <div class="field"><b>amount:</b> 1417.18 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Vodafone Idea Limited telecom_bill -- a mobile/phone bill.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> NetSpeed Broadband</div>
+        <div class="field"><b>amount:</b> 1356.12 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from NetSpeed Broadband; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> NetSpeed Broadband</div>
+        <div class="field"><b>amount:</b> 1117.37 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from NetSpeed Broadband; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> Signal Plus Mobile</div>
+        <div class="field"><b>amount:</b> 1437.88 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from Signal Plus Mobile; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> Signal Plus Mobile</div>
+        <div class="field"><b>amount:</b> 1715.21 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from Signal Plus Mobile; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> NetSpeed Broadband</div>
+        <div class="field"><b>amount:</b> 2137.17 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from NetSpeed Broadband; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> Signal Plus Mobile</div>
+        <div class="field"><b>amount:</b> 1621.63 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from Signal Plus Mobile; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-phone_internet-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-phone_internet-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-phone_internet-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> telecom_bill</div>
+        <div class="field"><b>vendor:</b> Signal Plus Mobile</div>
+        <div class="field"><b>amount:</b> 772.28 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">phone_internet</span></div>
+        <div class="rationale">Generated as a phone internet document from Signal Plus Mobile; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: phone_internet</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="software_subscriptions">
+          <h2>Software and Subscriptions <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TaskFlow SaaS</div>
+        <div class="field"><b>amount:</b> 25.24 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from TaskFlow SaaS; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TaskFlow SaaS</div>
+        <div class="field"><b>amount:</b> 12686.45 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from TaskFlow SaaS; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TaskFlow SaaS</div>
+        <div class="field"><b>amount:</b> 32.91 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from TaskFlow SaaS; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> DevOps Nexus</div>
+        <div class="field"><b>amount:</b> 110.30 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from DevOps Nexus; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> InsightBoard Analytics</div>
+        <div class="field"><b>amount:</b> 111.08 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from InsightBoard Analytics; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> DevOps Nexus</div>
+        <div class="field"><b>amount:</b> 156.20 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from DevOps Nexus; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TaskFlow SaaS</div>
+        <div class="field"><b>amount:</b> 91.34 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from TaskFlow SaaS; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-software_subscriptions-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-software_subscriptions-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-software_subscriptions-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> CloudSuite Pro</div>
+        <div class="field"><b>amount:</b> 3279.50 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">software_subscriptions</span></div>
+        <div class="rationale">Generated as a software subscriptions document from CloudSuite Pro; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: software_subscriptions</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="office_supplies_equipment">
+          <h2>Office Supplies and Equipment <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-015">
+      <div class="preview"><a href="../../../data/X51005361906.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-015</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TED HENG STATIONERY &amp; BOOKS</div>
+        <div class="field"><b>amount:</b> 27.35 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Ted Heng Stationery &amp; Books -- foam tape and exercise/foolscap books, a textbook stationery purchase.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-016">
+      <div class="preview"><a href="../../../data/X51005361908.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-016</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TED HENG STATIONERY &amp; BOOKS</div>
+        <div class="field"><b>amount:</b> 127.20 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Ted Heng Stationery &amp; Books -- an Artline marker pen, stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-017">
+      <div class="preview"><a href="../../../data/X51005361912.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-017</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TEO HENG STATIONERY &amp; BOOKS</div>
+        <div class="field"><b>amount:</b> 1.05 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Teo Heng Stationery &amp; Books -- carbon paper, stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-office_supplies_equipment-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-office_supplies_equipment-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-office_supplies_equipment-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> OfficeMart</div>
+        <div class="field"><b>amount:</b> 2220.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Generated as a office supplies equipment document from OfficeMart; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: office_supplies_equipment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-office_supplies_equipment-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-office_supplies_equipment-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-office_supplies_equipment-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> DeskWorks Supplies</div>
+        <div class="field"><b>amount:</b> 2280.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Generated as a office supplies equipment document from DeskWorks Supplies; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: office_supplies_equipment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-office_supplies_equipment-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-office_supplies_equipment-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-office_supplies_equipment-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> OfficeMart</div>
+        <div class="field"><b>amount:</b> 340.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Generated as a office supplies equipment document from OfficeMart; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: office_supplies_equipment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-office_supplies_equipment-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-office_supplies_equipment-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-office_supplies_equipment-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> PaperTrail Stationery</div>
+        <div class="field"><b>amount:</b> 2440.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Generated as a office supplies equipment document from PaperTrail Stationery; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: office_supplies_equipment</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-office_supplies_equipment-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-office_supplies_equipment-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-office_supplies_equipment-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> OfficeMart</div>
+        <div class="field"><b>amount:</b> 650.00 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">office_supplies_equipment</span></div>
+        <div class="rationale">Generated as a office supplies equipment document from OfficeMart; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: office_supplies_equipment</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="training_conferences">
+          <h2>Training and Conferences <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> CloudCert Institute</div>
+        <div class="field"><b>amount:</b> 23010.51 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from CloudCert Institute; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Skillbridge Academy</div>
+        <div class="field"><b>amount:</b> 22717.83 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from Skillbridge Academy; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Skillbridge Academy</div>
+        <div class="field"><b>amount:</b> 3984.11 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from Skillbridge Academy; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Skillbridge Academy</div>
+        <div class="field"><b>amount:</b> 26080.42 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from Skillbridge Academy; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TechConf India</div>
+        <div class="field"><b>amount:</b> 25604.38 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from TechConf India; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Skillbridge Academy</div>
+        <div class="field"><b>amount:</b> 5295.70 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from Skillbridge Academy; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> TechConf India</div>
+        <div class="field"><b>amount:</b> 25689.79 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from TechConf India; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-training_conferences-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-training_conferences-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-training_conferences-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> DataMinds Workshop</div>
+        <div class="field"><b>amount:</b> 15425.27 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">training_conferences</span></div>
+        <div class="rationale">Generated as a training conferences document from DataMinds Workshop; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: training_conferences</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="travel_documents_fees">
+          <h2>Travel Documents and Fees <span class="group-count">(8)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-00">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-00</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> VisaAssist Services</div>
+        <div class="field"><b>amount:</b> 77.20 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from VisaAssist Services; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-01">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-01</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> GlobalTravel Docs</div>
+        <div class="field"><b>amount:</b> 107.25 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from GlobalTravel Docs; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-02">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-02.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-02</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SafeTrip Insurance</div>
+        <div class="field"><b>amount:</b> 96.53 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from SafeTrip Insurance; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-03">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-03.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-03</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> VisaAssist Services</div>
+        <div class="field"><b>amount:</b> 8186.68 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from VisaAssist Services; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-04">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-04.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-04</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> VisaAssist Services</div>
+        <div class="field"><b>amount:</b> 79.20 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from VisaAssist Services; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-05">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-05.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-05</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> GlobalTravel Docs</div>
+        <div class="field"><b>amount:</b> 3975.05 INR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from GlobalTravel Docs; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-06">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-06.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-06</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SafeTrip Insurance</div>
+        <div class="field"><b>amount:</b> 78.20 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from SafeTrip Insurance; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div>
+    <div class="card" data-source="synthetic_image" data-ambiguous="0" data-id="synth-travel_documents_fees-07">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/eval/categorization/synthetic_images/synth-travel_documents_fees-07.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>synth-travel_documents_fees-07</code><span class="badge badge-source">synthetic_image</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> GlobalTravel Docs</div>
+        <div class="field"><b>amount:</b> 146.29 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">travel_documents_fees</span></div>
+        <div class="rationale">Generated as a travel documents fees document from GlobalTravel Docs; content matches that category with no ambiguity.</div>
+        <div class="notes">note: expected category: travel_documents_fees</div>
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="other">
+          <h2>Other <span class="group-count">(18)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-000">
+      <div class="preview"><a href="../../../data/X00016469670.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-000</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> OJC MARKETING SDN BHD</div>
+        <div class="field"><b>amount:</b> 193.00 SR</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Safety shoes (KINGS SAFETY SHOES) from a marketing/trading company -- a PPE/safety item, not stationery or any other specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-001">
+      <div class="preview"><a href="../../../data/X00016469671.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-001</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> OJC MARKETING SDN BHD</div>
+        <div class="field"><b>amount:</b> 170.00 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Same vendor and item type as cat-sroie-000: safety footwear, not stationery or any other specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-002">
+      <div class="preview"><a href="../../../data/X51005200931.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-002</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> GOGIANT ENGINEERING (M) SDN BHD</div>
+        <div class="field"><b>amount:</b> 436.20 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Engineering hardware (ceramic cap, steel elbow, tungsten welding rod, cutting discs) from an engineering supplier -- industrial parts, not office stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-005">
+      <div class="preview"><a href="../../../data/X51005230621.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-005</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SIN LIANHAP SDN BHD</div>
+        <div class="field"><b>amount:</b> 7.30 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Hardware/gardening-supply items (PPD tape, garden item) from a trading company -- doesn't fit any specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-006">
+      <div class="preview"><a href="../../../data/X51005230648.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-006</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> CROSS CHANNEL NETWORK SDN. BHD.</div>
+        <div class="field"><b>amount:</b> 6.35 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">A Schneider electrical switch/socket outlet from an electrical supplier -- hardware, not office stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-007">
+      <div class="preview"><a href="../../../data/X51005230657.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-007</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> CROSS CHANNEL NETWORK SDN. BHD.</div>
+        <div class="field"><b>amount:</b> 7.95 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">PVC conduit pipe, connectors, and cable clips -- electrical/plumbing hardware, not office stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-008">
+      <div class="preview"><a href="../../../data/X51005230659.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-008</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SWC ENTERPRISE SDN BHD</div>
+        <div class="field"><b>amount:</b> 8.00 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Small hardware-store purchase with an unclear item code -- doesn't fit any specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-009">
+      <div class="preview"><a href="../../../data/X51005268275.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-009</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> LIGHTROOM GALLERY SDN BHD</div>
+        <div class="field"><b>amount:</b> 278.80 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">LED track lights and mounting hardware from a lighting gallery -- a fixture/electrical purchase, not office stationery.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-010">
+      <div class="preview"><a href="../../../data/X51005268408.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-010</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> 99 SPEED MART S/B (519537-X)</div>
+        <div class="field"><b>amount:</b> 169.80 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Grocery items (baby formula, Milo, cereal, diapers) from a supermarket -- a personal grocery run, not a business expense category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-012">
+      <div class="preview"><a href="../../../data/X51005301666.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-012</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> LIGHTROOM GALLERY SDN BHD</div>
+        <div class="field"><b>amount:</b> 278.80 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Same vendor as cat-sroie-009: LED track lighting hardware.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-018">
+      <div class="preview"><a href="../../../data/X51005361923.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-018</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> SWC ENTERPRISE SDN BHD</div>
+        <div class="field"><b>amount:</b> 4.20 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Small hardware-store purchase with an unclear item code -- doesn't fit any specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-019">
+      <div class="preview"><a href="../../../data/X51005365187.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-019</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> F&amp;P PHARMACY</div>
+        <div class="field"><b>amount:</b> 31.90 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Pharmacy items (pain reliever, lotion, Panadol) -- a personal medical purchase, not a business expense category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-021">
+      <div class="preview"><a href="../../../data/X51005433548.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-021</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> PASAR MINI JIN SENG</div>
+        <div class="field"><b>amount:</b> 34.57 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Wet-market groceries (vegetables, eggs, pork) -- a personal grocery purchase, not a business expense category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-022">
+      <div class="preview"><a href="../../../data/X51005442343.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-022</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> YONG TAT HARDWARE TRADING</div>
+        <div class="field"><b>amount:</b> 72.00 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Yong Tat Hardware Trading -- a hardware-store purchase with an unclear item code.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="sroie" data-ambiguous="0" data-id="cat-sroie-023">
+      <div class="preview"><a href="../../../data/X51005442366.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-sroie-023</code><span class="badge badge-source">sroie</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> Triple Six Point Enterprise 666</div>
+        <div class="field"><b>amount:</b> 22.60 RM</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Confectionery/snack-shop purchase (drink, cake, nuts) -- no business framing (client/team) present, so filed as a generic small purchase rather than team_events.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="1" data-id="cat-cord-000">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_00.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-000</code><span class="badge badge-source">cord</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 60.000 USD</div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Cryptic OCR'd line items ('-TICKET CP', 'TOTAL DISC $') with no vendor name -- can't confidently place in a specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="1" data-id="cat-cord-001">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_01.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-001</code><span class="badge badge-source">cord</span><span class="badge badge-ambiguous">ambiguous</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 91000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">Abbreviated OCR'd item codes ('J.STB PROMO', 'Y.B.BAT') with no vendor name -- likely a minimarket receipt, doesn't fit a specific category.</div>
+        
+      </div>
+    </div>
+    <div class="card" data-source="cord" data-ambiguous="0" data-id="cat-cord-012">
+      <div class="preview"><img loading="lazy" src="../../../expense_reimbursement/outputs/cord_eval/images/cord_12.png" alt="preview"></div>
+      <div class="body">
+        <div class="id-row"><code>cat-cord-012</code><span class="badge badge-source">cord</span></div>
+        <div class="field"><b>document_type:</b> generic_receipt</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b> 120000 </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">other</span></div>
+        <div class="rationale">A women's blouse and shopping bag -- a personal clothing purchase, not a business expense category.</div>
+        
+      </div>
+    </div></div>
+        </section>
+        <section class="group" data-group="(no category)">
+          <h2>(no category) <span class="group-count">(1)</span></h2>
+          <div class="cards">
+    <div class="card" data-source="real" data-ambiguous="0" data-id="cat-real-002">
+      <div class="preview"><a href="../../../expense_reimbursement/uploads/May-26 mail approval.pdf" target="_blank">Open PDF &rarr;</a></div>
+      <div class="body">
+        <div class="id-row"><code>cat-real-002</code><span class="badge badge-source">real</span></div>
+        <div class="field"><b>document_type:</b> approval_correspondence</div>
+        <div class="field"><b>vendor:</b> </div>
+        <div class="field"><b>amount:</b>  </div>
+        <div class="silver"><b>silver_label:</b> <span class="silver-label">(none)</span></div>
+        <div class="rationale">approval_correspondence -- a forwarding email about a claim, not an expense itself.</div>
+        <div class="notes">note: Not an expense -- approval/forwarding email, evidence not a claim.</div>
+      </div>
+    </div></div>
+        </section>
+  <script>
+    function applyFilters() {
+      const checked = new Set(Array.from(document.querySelectorAll('.source-filter:checked')).map(el => el.value));
+      const ambiguousOnly = document.getElementById('ambiguous-only').checked;
+      document.querySelectorAll('.card').forEach(card => {
+        const sourceOk = checked.has(card.dataset.source);
+        const ambiguousOk = !ambiguousOnly || card.dataset.ambiguous === '1';
+        card.classList.toggle('hidden', !(sourceOk && ambiguousOk));
+      });
+      document.querySelectorAll('.group').forEach(group => {
+        const visible = group.querySelectorAll('.card:not(.hidden)').length;
+        group.classList.toggle('hidden', visible === 0);
+      });
+    }
+    document.querySelectorAll('.source-filter, #ambiguous-only').forEach(el => el.addEventListener('change', applyFilters));
+  </script>
+</body></html>
