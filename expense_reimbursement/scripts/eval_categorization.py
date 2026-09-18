@@ -1,27 +1,34 @@
-"""Run all four categorizers (categorize.py) against eval/categorization/
-dataset.jsonl and write a results report: accuracy, macro-F1, per-class
-precision/recall, confusion matrix, latency p50, cost per 1,000 docs, and
-the same split by source (real: sroie/cord/real vs synthetic_image).
+"""Run categorize.py's methods against eval/categorization/dataset.jsonl
+and write a results report: accuracy, macro-F1, per-class precision/
+recall, confusion matrix, latency p50, cost per 1,000 docs -- reported
+three ways (all documents, real-source only, synthetic-only).
 
 Two modes:
 - Default: ground truth is each row's silver_label. Writes RESULTS_SILVER.md.
   Every row need not be reviewed -- this is the interim, "before my
-  review" number.
+  review" number. Always attempts all four methods.
 - --final: ground truth is each row's gold_label. REFUSES to run unless
   every row has reviewed=true (i.e. scripts/promote_to_gold.py has been
-  run) -- the final number must never be quietly computed against
-  unreviewed silver labels. Writes RESULTS.md, with an added error
-  analysis section (every misclassified example of the best-macro-F1
-  method, grouped by (gold, predicted) pair).
+  run). Writes RESULTS.md. Takes --methods (default: rules,classifier --
+  llm/hybrid need a Groq call per row and are left for a separate run,
+  see below) and ACCUMULATES results across separate invocations in
+  eval/categorization/_final_results_state.json, so running one more
+  method later never re-runs (or re-spends a Groq call for) a method
+  already recorded. Adds an error-analysis section for the best-so-far
+  method and a "NOT YET RUN" section listing the exact command for any
+  method missing from the state.
 
 Caches each method's per-row prediction to eval/categorization/
 _predictions_cache/<method>.jsonl, keyed by row id -- re-running this
 script (e.g. after adding rows) never re-spends a Groq call (llm/hybrid)
-for a row already predicted by that method.
+for a row already predicted by that method. A cached row that failed
+last time (e.g. a quota wall) is retried, not treated as permanent.
 
 Usage:
-  python scripts/eval_categorization.py             # writes RESULTS_SILVER.md
-  python scripts/eval_categorization.py --final      # writes RESULTS.md
+  python scripts/eval_categorization.py                          # silver, all 4 methods -> RESULTS_SILVER.md
+  python scripts/eval_categorization.py --final                  # gold, rules+classifier -> RESULTS.md
+  python scripts/eval_categorization.py --final --methods llm     # adds llm to RESULTS.md, doesn't touch the rest
+  python scripts/eval_categorization.py --final --methods hybrid  # same, for hybrid
 """
 
 import argparse
@@ -40,17 +47,17 @@ load_dotenv()
 from sklearn.metrics import confusion_matrix, f1_score, precision_recall_fscore_support
 
 from categories import CATEGORY_IDS
-from categorize import CategorizationInput, categorize
+from categorize import CategorizationInput, build_input, categorize
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = BASE_DIR.parent  # dataset rows store paths relative to the repo root (SROIE lives outside expense_reimbursement/)
 DATASET_PATH = BASE_DIR / "eval" / "categorization" / "dataset.jsonl"
 CACHE_DIR = BASE_DIR / "eval" / "categorization" / "_predictions_cache"
-METHODS = ["rules", "llm", "classifier", "hybrid"]
+STATE_PATH = BASE_DIR / "eval" / "categorization" / "_final_results_state.json"
+ALL_METHODS = ["rules", "llm", "classifier", "hybrid"]
+DEFAULT_FINAL_METHODS = ["rules", "classifier"]  # llm/hybrid need a Groq call/row -- run separately, see docstring
 REAL_SOURCES = {"sroie", "cord", "real"}
-MAX_ERROR_RATE = 0.2  # above this, a method's numbers this run aren't meaningful (e.g. a Groq quota wall) --
-# hybrid's llm-fallback failures alone hit ~43% while gpt-oss-20b's quota was exhausted, which would
-# otherwise silently read as "hybrid is a bad method" rather than "hybrid's fallback couldn't run"
+MAX_ERROR_RATE = 0.2  # above this, a method's numbers this run aren't meaningful (e.g. a Groq quota wall)
 
 
 def _load_dataset() -> list[dict]:
@@ -81,7 +88,6 @@ def _row_input(row: dict) -> CategorizationInput:
         full_path = REPO_ROOT / markdown_path
         if full_path.exists():
             markdown = full_path.read_text(encoding="utf-8", errors="replace")
-    from categorize import build_input
     return build_input(fields, markdown)
 
 
@@ -143,12 +149,14 @@ def _metrics_for(rows: list[dict], predictions: dict[str, dict], ground_truth_ke
         y_true, y_pred, labels=labels, zero_division=0
     )
     cm = confusion_matrix(y_true, y_pred, labels=labels)
+    categories_covered = sorted(set(y_true))  # categories gold actually contains in this slice
 
     return {
         "n": len(y_true),
         "accuracy": accuracy,
         "macro_f1": macro_f1,
         "labels": labels,
+        "categories_covered": categories_covered,
         "per_class": {
             label: {"precision": precision[i], "recall": recall[i], "support": int(support[i])}
             for i, label in enumerate(labels)
@@ -168,35 +176,48 @@ def _format_confusion_matrix(labels: list[str], cm: list[list[int]]) -> str:
     return "\n".join(lines)
 
 
-def _render_method_section(method: str, overall: dict, by_source: dict[str, dict]) -> str:
-    lines = [f"## {method}", ""]
-    if overall["n"] == 0:
-        lines.append("_No categorizable rows._\n")
-        return "\n".join(lines)
-    lines.append(f"- n = {overall['n']}")
-    lines.append(f"- Accuracy: {overall['accuracy']:.1%}")
-    lines.append(f"- Macro-F1: {overall['macro_f1']:.3f}")
-    lines.append(f"- Latency p50: {overall['latency_p50_ms']:.0f} ms" if overall["latency_p50_ms"] is not None else "- Latency p50: n/a")
-    lines.append(f"- Estimated cost per 1,000 docs: ${overall['cost_per_1000_docs']:.4f}")
+def _render_metrics_block(heading: str, metrics: dict, note_partial_coverage: bool = False) -> list[str]:
+    lines = [f"### {heading}", ""]
+    if metrics["n"] == 0:
+        lines.append("_No categorizable rows in this slice._\n")
+        return lines
+    lines.append(f"- n = {metrics['n']}")
+    lines.append(f"- Accuracy: {metrics['accuracy']:.1%}")
+    lines.append(f"- Macro-F1: {metrics['macro_f1']:.3f}")
+    if note_partial_coverage:
+        covered = metrics["categories_covered"]
+        lines.append(
+            f"- **Categories covered: {len(covered)}/{len(CATEGORY_IDS)}** ({', '.join(covered)}) -- "
+            "macro-F1 above is only averaged over these categories, not all 14. Treat it as a read on "
+            "this slice's categories, not overall category coverage."
+        )
+    lines.append(f"- Latency p50: {metrics['latency_p50_ms']:.0f} ms" if metrics["latency_p50_ms"] is not None else "- Latency p50: n/a")
+    lines.append(f"- Estimated cost per 1,000 docs: ${metrics['cost_per_1000_docs']:.4f}")
     lines.append("")
-    lines.append("### Per-class precision/recall")
     lines.append("| category | precision | recall | support |")
     lines.append("|---|---|---|---|")
-    for label, stats in overall["per_class"].items():
+    for label, stats in metrics["per_class"].items():
         lines.append(f"| {label} | {stats['precision']:.2f} | {stats['recall']:.2f} | {stats['support']} |")
     lines.append("")
-    lines.append("### Confusion matrix")
-    lines.append(_format_confusion_matrix(overall["labels"], overall["confusion_matrix"]))
+    lines.append("Confusion matrix:")
     lines.append("")
-    lines.append("### By source")
-    lines.append("| source | n | accuracy | macro-F1 |")
-    lines.append("|---|---|---|---|")
-    for source_name, stats in by_source.items():
-        if stats["n"] == 0:
-            lines.append(f"| {source_name} | 0 | n/a | n/a |")
-        else:
-            lines.append(f"| {source_name} | {stats['n']} | {stats['accuracy']:.1%} | {stats['macro_f1']:.3f} |")
+    lines.append(_format_confusion_matrix(metrics["labels"], metrics["confusion_matrix"]))
     lines.append("")
+    return lines
+
+
+def _render_method_section(method: str, entry: dict) -> str:
+    if entry.get("unavailable"):
+        return (
+            f"## {method}\n\n_Unavailable: {entry['errors']}/{entry['total_rows']} calls failed "
+            f"(see the per-row `error` field in eval/categorization/_predictions_cache/{method}.jsonl) "
+            "-- most likely every usable Groq model's daily quota was exhausted while this eval set "
+            "was being built. Re-run once quota resets._\n"
+        )
+    lines = [f"## {method}", ""]
+    lines += _render_metrics_block("All documents", entry["metrics_all"])
+    lines += _render_metrics_block("Real-source only (sroie + cord + real)", entry["metrics_real"], note_partial_coverage=True)
+    lines += _render_metrics_block("Synthetic-only", entry["metrics_synth"])
     return "\n".join(lines)
 
 
@@ -224,27 +245,28 @@ def _error_analysis(rows: list[dict], predictions: dict[str, dict], ground_truth
     return "\n".join(lines)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--final", action="store_true")
-    args = parser.parse_args()
-
-    if not DATASET_PATH.exists():
-        raise SystemExit(f"No dataset at {DATASET_PATH} -- build it first (Part A5).")
-    rows = _load_dataset()
-
-    ground_truth_key = "gold_label" if args.final else "silver_label"
-    if args.final and not all(row.get("reviewed") for row in rows):
-        unreviewed = [row["id"] for row in rows if not row.get("reviewed")]
-        raise SystemExit(
-            f"--final requires every row reviewed -- {len(unreviewed)} row(s) aren't: "
-            f"{unreviewed[:10]}{'...' if len(unreviewed) > 10 else ''}. "
-            "Run scripts/promote_to_gold.py first."
+def _not_yet_run_section(missing_methods: list[str]) -> str:
+    if not missing_methods:
+        return ""
+    lines = ["\n## Not yet run\n"]
+    for method in missing_methods:
+        lines.append(
+            f"- **{method}**: `python scripts/eval_categorization.py --final --methods {method}` -- "
+            f"standalone (doesn't touch {', '.join(m for m in ALL_METHODS if m != method)}), uses "
+            f"eval/categorization/_predictions_cache/{method}.jsonl for any row already predicted "
+            "(nothing already done gets re-spent), and appends its section into this file via "
+            "_final_results_state.json without rerunning anything else."
         )
+    lines.append("")
+    return "\n".join(lines)
 
+
+# ------------------------------------------------------------------ silver
+
+def _run_silver(rows: list[dict]) -> None:
     all_predictions = {}
     unavailable_methods = {}
-    for method in METHODS:
+    for method in ALL_METHODS:
         print(f"Running {method} on {len(rows)} rows...")
         predictions, errors = _predict_all(rows, method)
         all_predictions[method] = predictions
@@ -255,8 +277,7 @@ def main() -> None:
                 unavailable_methods[method] = errors
 
     sections = []
-    best_method, best_f1 = None, -1.0
-    for method in METHODS:
+    for method in ALL_METHODS:
         if method in unavailable_methods:
             sections.append(
                 f"## {method}\n\n_Unavailable this run: {unavailable_methods[method]}/{len(rows)} calls "
@@ -266,37 +287,119 @@ def main() -> None:
             )
             continue
         predictions = all_predictions[method]
-        overall = _metrics_for(rows, predictions, ground_truth_key)
-        by_source = {
-            "real (sroie+cord+real)": _metrics_for([r for r in rows if r["source"] in REAL_SOURCES], predictions, ground_truth_key),
-            "synthetic_image": _metrics_for([r for r in rows if r["source"] == "synthetic_image"], predictions, ground_truth_key),
-        }
-        sections.append(_render_method_section(method, overall, by_source))
-        if overall["n"] > 0 and overall["macro_f1"] > best_f1:
-            best_f1, best_method = overall["macro_f1"], method
+        metrics_all = _metrics_for(rows, predictions, "silver_label")
+        metrics_real = _metrics_for([r for r in rows if r["source"] in REAL_SOURCES], predictions, "silver_label")
+        metrics_synth = _metrics_for([r for r in rows if r["source"] == "synthetic_image"], predictions, "silver_label")
+        sections.append(_render_method_section(method, {
+            "metrics_all": metrics_all, "metrics_real": metrics_real, "metrics_synth": metrics_synth,
+        }))
 
-    title = "# Categorization eval results (FINAL, gold labels)" if args.final else "# Categorization eval results (SILVER -- interim, not final)"
-    banner = "" if args.final else (
+    title = "# Categorization eval results (SILVER -- interim, not final)"
+    banner = (
         "\n**These numbers use silver labels (Claude Code's own judgment against categories.py's "
         "definitions and tie-break rules -- not the categorizer being evaluated, and not human-"
         "reviewed gold labels). Treat as directional only until RESULTS.md exists.**\n"
     )
     if unavailable_methods:
-        banner += (
-            f"\n**{', '.join(unavailable_methods)} could not be evaluated this run -- see each "
-            "method's section below for why.**\n"
-        )
-    body = "\n".join(sections)
-    out = f"{title}\n{banner}\n{body}"
-    if args.final and best_method is not None:
-        out += _error_analysis(rows, all_predictions[best_method], ground_truth_key, best_method)
-        out += f"\n\n_Best method by macro-F1: **{best_method}** ({best_f1:.3f})._\n"
-    elif args.final:
-        out += "\n\n_No method produced usable results this run -- see the sections above._\n"
-
-    out_path = BASE_DIR / "eval" / "categorization" / ("RESULTS.md" if args.final else "RESULTS_SILVER.md")
+        banner += f"\n**{', '.join(unavailable_methods)} could not be evaluated this run.**\n"
+    out = f"{title}\n{banner}\n" + "\n".join(sections)
+    out_path = BASE_DIR / "eval" / "categorization" / "RESULTS_SILVER.md"
     out_path.write_text(out, encoding="utf-8")
     print(f"\nWrote {out_path}")
+
+
+# ------------------------------------------------------------------- final
+
+def _load_state() -> dict:
+    if STATE_PATH.exists():
+        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def _save_state(state: dict) -> None:
+    STATE_PATH.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def _run_final(rows: list[dict], methods: list[str]) -> None:
+    state = _load_state()
+
+    for method in methods:
+        print(f"Running {method} on {len(rows)} rows...")
+        predictions, errors = _predict_all(rows, method)
+        error_rate = errors / len(rows) if rows else 0.0
+        if error_rate > MAX_ERROR_RATE:
+            print(f"  {errors}/{len(rows)} rows failed ({error_rate:.0%}) -- marking unavailable")
+            state[method] = {"unavailable": True, "errors": errors, "total_rows": len(rows)}
+            continue
+
+        metrics_all = _metrics_for(rows, predictions, "gold_label")
+        metrics_real = _metrics_for([r for r in rows if r["source"] in REAL_SOURCES], predictions, "gold_label")
+        metrics_synth = _metrics_for([r for r in rows if r["source"] == "synthetic_image"], predictions, "gold_label")
+        state[method] = {
+            "unavailable": False,
+            "metrics_all": metrics_all, "metrics_real": metrics_real, "metrics_synth": metrics_synth,
+            # predictions kept for the error-analysis section if this method turns out best -- small
+            # dataset (134 rows), fine to keep inline rather than re-deriving from the cache file.
+            "predictions": predictions,
+        }
+        print(f"  {method}: accuracy {metrics_all['accuracy']:.1%}, macro-F1 {metrics_all['macro_f1']:.3f}")
+
+    _save_state(state)
+
+    sections = []
+    best_method, best_f1 = None, -1.0
+    for method in ALL_METHODS:
+        entry = state.get(method)
+        if entry is None:
+            continue
+        sections.append(_render_method_section(method, entry))
+        if not entry.get("unavailable") and entry["metrics_all"]["n"] > 0 and entry["metrics_all"]["macro_f1"] > best_f1:
+            best_f1, best_method = entry["metrics_all"]["macro_f1"], method
+
+    title = "# Categorization eval results (FINAL, gold labels)"
+    out = f"{title}\n\n" + "\n".join(sections)
+    if best_method is not None:
+        out += _error_analysis(rows, state[best_method]["predictions"], "gold_label", best_method)
+        out += f"\n\n_Best method by macro-F1 (all documents) among those run: **{best_method}** ({best_f1:.3f})._\n"
+    else:
+        out += "\n\n_No method produced usable results yet._\n"
+
+    missing = [m for m in ALL_METHODS if m not in state]
+    out += _not_yet_run_section(missing)
+
+    out_path = BASE_DIR / "eval" / "categorization" / "RESULTS.md"
+    out_path.write_text(out, encoding="utf-8")
+    print(f"\nWrote {out_path}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--final", action="store_true")
+    parser.add_argument("--methods", default=None, help="Comma-separated subset of rules,llm,classifier,hybrid (--final only).")
+    args = parser.parse_args()
+
+    if not DATASET_PATH.exists():
+        raise SystemExit(f"No dataset at {DATASET_PATH} -- build it first (Part A5).")
+    rows = _load_dataset()
+
+    if not args.final:
+        if args.methods:
+            raise SystemExit("--methods only applies with --final.")
+        _run_silver(rows)
+        return
+
+    if not all(row.get("reviewed") for row in rows):
+        unreviewed = [row["id"] for row in rows if not row.get("reviewed")]
+        raise SystemExit(
+            f"--final requires every row reviewed -- {len(unreviewed)} row(s) aren't: "
+            f"{unreviewed[:10]}{'...' if len(unreviewed) > 10 else ''}. "
+            "Run scripts/promote_to_gold.py first."
+        )
+    methods = args.methods.split(",") if args.methods else DEFAULT_FINAL_METHODS
+    unknown = set(methods) - set(ALL_METHODS)
+    if unknown:
+        raise SystemExit(f"Unknown method(s): {unknown}. Choose from {ALL_METHODS}.")
+    _run_final(rows, methods)
 
 
 if __name__ == "__main__":

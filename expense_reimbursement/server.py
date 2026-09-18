@@ -476,9 +476,14 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
 
 
 # Read once at import time, same convention as extract.py's
-# SELF_REPAIR_ENABLED -- which categorizer runs in the pipeline until the
-# Stage 2 eval (eval/categorization/RESULTS.md) picks a production default.
-CATEGORIZER = os.environ.get("CATEGORIZER", "llm")
+# SELF_REPAIR_ENABLED. Default picked from eval/categorization/RESULTS.md:
+# `rules` has the higher macro-F1 on all 134 gold-labeled documents (0.894
+# vs classifier's 0.706) and isn't worse on the real-source slice either
+# (83.7% vs 46.5% accuracy) -- rules wins outright, no tiebreak needed.
+# `llm`/`hybrid` haven't been benchmarked yet (Groq quota exhausted while
+# building the eval set -- see RESULTS.md's "Not yet run" section); this
+# default may change once they are.
+CATEGORIZER = os.environ.get("CATEGORIZER", "rules")
 
 
 def _categorize_document(
