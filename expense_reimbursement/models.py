@@ -160,6 +160,10 @@ class Correction(Base):
     field_path: Mapped[str] = mapped_column(Text, nullable=False)
     ai_value: Mapped[Optional[Any]] = mapped_column(JSONB, nullable=True)
     employee_value: Mapped[Optional[Any]] = mapped_column(JSONB, nullable=True)
+    # None for an ordinary per-cell value change; "row_added"/"row_removed"
+    # for a whole array element (a trip, a line item) added/removed
+    # wholesale rather than edited -- see server.diff_values.
+    change_type: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
 
 

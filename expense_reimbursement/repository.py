@@ -371,6 +371,7 @@ def add_extraction(
                 field_path=correction["field_path"],
                 ai_value=correction.get("ai_value"),
                 employee_value=correction.get("employee_value"),
+                change_type=correction.get("change_type"),
             )
         )
 

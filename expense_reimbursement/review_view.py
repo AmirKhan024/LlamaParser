@@ -113,7 +113,29 @@ def _build_restaurant_bill(claim: Dict[str, Any], checks: Dict[str, bool]) -> Di
     return {"fields": fields, "collapsible": collapsible, "warnings": warnings, "needs_confirm": True}
 
 
-_TRIP_ENTRY_KEYS = ("date", "place", "purpose", "client", "kms")
+# travel_entries is `list[dict]` with no Pydantic-enforced key names
+# (schemas.py's comment says "date, place, purpose, client, kms", but
+# nothing makes the model actually use those -- real extractions come
+# back with e.g. "place_of_visit"/"purpose_of_travel"/"client_name"
+# instead, which silently rendered as permanently blank Place/Purpose/
+# Client columns until this alias table existed). Not fixed by renaming
+# fields in the extraction prompt (out of scope here) -- normalized on
+# display instead, consistently reused by server.py's corrections diff
+# so an edit's field_path lines up with what's actually in the DB.
+TRIP_FIELD_ALIASES = {
+    "date": ("date",),
+    "place": ("place", "place_of_visit", "location"),
+    "purpose": ("purpose", "purpose_of_travel", "reason"),
+    "client": ("client", "client_name", "customer"),
+    "kms": ("kms", "km", "distance"),
+}
+
+
+def normalize_trip_entry(entry: Dict[str, Any]) -> Dict[str, Any]:
+    normalized = {}
+    for canonical, aliases in TRIP_FIELD_ALIASES.items():
+        normalized[canonical] = next((entry[a] for a in aliases if a in entry), None)
+    return normalized
 
 
 def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
@@ -122,7 +144,7 @@ def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool])
         "conveyance_amount + daily_allowance + vehicle_maintenance + mobile_allowance == total_claimed", True
     )
     trips = [
-        {k: entry.get(k) for k in _TRIP_ENTRY_KEYS}
+        normalize_trip_entry(entry)
         for entry in (claim.get("travel_entries") or [])
         if isinstance(entry, dict)
     ]

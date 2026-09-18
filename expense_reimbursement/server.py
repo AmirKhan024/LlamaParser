@@ -45,7 +45,7 @@ from extract import MODEL as GROQ_MODEL
 from extract import extract_claim
 from models import Claim, Document, Employee, Extraction
 from parse import parse_pdf
-from review_view import build_review_view
+from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
 from validate import build_claim, check_completeness, validate_claim
 
@@ -190,10 +190,74 @@ def _apply_edits(fields: dict, edits: dict[str, Any], editable_fields: set[str])
     return new_fields
 
 
+# The two array-shaped fields a whole-array edit can arrive as
+# (line_items[i].total etc. -- see applyTableEdit/addBlankLineItem in
+# static/index.html, which always submit the entire array, not a single
+# cell). diff_values() below breaks that back down per cell.
+_ARRAY_ROOT_FIELDS = {"line_items", "travel_entries"}
+
+
+def diff_values(ai_value: Any, employee_value: Any, path: str = "") -> list[dict[str, Any]]:
+    """Recursive per-cell diff, not a single coarse correction for an
+    entire array: an edited line_items/travel_entries field gets one
+    correction row per changed cell (field_path like "line_items[2].total"),
+    plus a row_added/row_removed row for an element added or removed
+    wholesale rather than edited in place. This is training data for a
+    later stage, so per-cell precision is required -- a single
+    "line_items changed" row would lose exactly the information that
+    stage needs.
+    """
+    if isinstance(ai_value, list) and isinstance(employee_value, list):
+        corrections: list[dict[str, Any]] = []
+        shared = min(len(ai_value), len(employee_value))
+        for i in range(shared):
+            corrections.extend(diff_values(ai_value[i], employee_value[i], f"{path}[{i}]"))
+        for i in range(shared, len(employee_value)):
+            corrections.append({
+                "field_path": f"{path}[{i}]", "ai_value": None, "employee_value": employee_value[i],
+                "change_type": "row_added",
+            })
+        for i in range(shared, len(ai_value)):
+            corrections.append({
+                "field_path": f"{path}[{i}]", "ai_value": ai_value[i], "employee_value": None,
+                "change_type": "row_removed",
+            })
+        return corrections
+
+    if isinstance(ai_value, dict) and isinstance(employee_value, dict):
+        corrections = []
+        for key in sorted(set(ai_value) | set(employee_value)):
+            sub_path = f"{path}.{key}" if path else key
+            corrections.extend(diff_values(ai_value.get(key), employee_value.get(key), sub_path))
+        return corrections
+
+    if not _values_equal(ai_value, employee_value):
+        return [{"field_path": path, "ai_value": ai_value, "employee_value": employee_value}]
+    return []
+
+
 def _corrections_for_edits(ai_fields: dict, edits: dict[str, Any]) -> list[dict[str, Any]]:
     corrections = []
     for field_path, employee_value in edits.items():
-        ai_value = _get_by_path(ai_fields, _parse_field_path(field_path))
+        tokens = _parse_field_path(field_path)
+        root = tokens[0]
+        if len(tokens) == 1 and root in _ARRAY_ROOT_FIELDS and isinstance(employee_value, list):
+            ai_root_value = ai_fields.get(root)
+            ai_list = ai_root_value if isinstance(ai_root_value, list) else []
+            if root == "travel_entries":
+                # Employee edits always arrive with review_view's
+                # canonical trip keys (date/place/purpose/client/kms);
+                # the AI's own stored fields may still use whatever
+                # aliases the model happened to use (place_of_visit,
+                # etc.) -- normalize this side the same way before
+                # diffing, or every field would show as both added and
+                # removed under two different key spellings.
+                ai_list = [
+                    normalize_trip_entry(e) if isinstance(e, dict) else e for e in ai_list
+                ]
+            corrections.extend(diff_values(ai_list, employee_value, root))
+            continue
+        ai_value = _get_by_path(ai_fields, tokens)
         if not _values_equal(ai_value, employee_value):
             corrections.append(
                 {"field_path": field_path, "ai_value": ai_value, "employee_value": employee_value}
@@ -274,6 +338,7 @@ def _document_detail(session: Session, document: Document, claim: Claim) -> dict
             "field_path": c.field_path,
             "ai_value": c.ai_value,
             "employee_value": c.employee_value,
+            "change_type": c.change_type,
         }
         for c in corrections
     ]

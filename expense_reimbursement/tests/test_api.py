@@ -63,7 +63,9 @@ def test_full_flow_create_upload_edit_confirm_submit(client, db_session):
     assert r.status_code == 200
     saved = r.json()
     assert next(f["value"] for f in saved["review"]["fields"] if f["key"] == "total") == "1420.00"
-    assert saved["corrections"] == [{"field_path": "total", "ai_value": "1417.18", "employee_value": "1420.00"}]
+    assert saved["corrections"] == [
+        {"field_path": "total", "ai_value": "1417.18", "employee_value": "1420.00", "change_type": None}
+    ]
     assert saved["extraction_version"] == 2
 
     # revert discards the saved edit and clears the correction
@@ -384,3 +386,106 @@ def test_claim_total_never_sums_different_currencies(client, db_session):
     # the claims list must show the same breakdown, not a stale/summed figure
     listed = next(c for c in client.get("/api/claims").json() if c["id"] == claim["id"])
     assert listed["totals_by_currency"] == {"INR": "1417.18", "USD": "780.75"}
+
+
+def test_travel_entries_correction_is_per_cell_not_a_whole_array_blob(client, db_session):
+    """Bug 6: array-field edits used to produce one coarse correction
+    row for the entire travel_entries array. Restored per-cell diffing
+    (server.diff_values): editing one trip's km must show up as exactly
+    one travel_entries[i].kms correction, and appending a new trip row
+    must show up as a row_added correction carrying the whole new row --
+    not 13 rows' worth of noise for a 1-cell edit.
+
+    Also exercises the real-world key-alias bug found while building
+    this: the model's actual travel_entries dicts use place_of_visit/
+    purpose_of_travel/client_name, not review_view's canonical place/
+    purpose/client -- diffing the raw AI value against a canonical-key
+    edit without normalizing first would show every field as changed.
+    """
+    import uuid
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], CONVEYANCE_PDF, filename="conveyance.pdf").json()
+    detail = wait_until_processed(client, doc["id"])
+    trips_field = next(f for f in detail["review"]["fields"] if f["key"] == "travel_entries")
+    trips = trips_field["value"]
+    original_count = len(trips)
+    assert trips[0]["place"], "sanity check: place must already be populated (the alias bug this guards against)"
+
+    edited_trips = [dict(t) for t in trips]
+    edited_trips[0]["kms"] = "999"
+    edited_trips.append({"date": "30 May 2026", "place": "ANDHERI", "purpose": "MEETING", "client": "ACME", "kms": "20"})
+
+    r = client.put(f"/api/documents/{doc['id']}/fields", json={"edits": {"travel_entries": edited_trips}})
+    assert r.status_code == 200
+
+    corrections = repository.list_corrections(db_session, uuid.UUID(doc["id"]))
+    by_path = {c.field_path: c for c in corrections}
+
+    assert "travel_entries[0].kms" in by_path
+    assert by_path["travel_entries[0].kms"].ai_value == "78"
+    assert by_path["travel_entries[0].kms"].employee_value == "999"
+    assert by_path["travel_entries[0].kms"].change_type is None
+
+    added_path = f"travel_entries[{original_count}]"
+    assert added_path in by_path
+    assert by_path[added_path].change_type == "row_added"
+    assert by_path[added_path].ai_value is None
+    assert by_path[added_path].employee_value["place"] == "ANDHERI"
+
+    # only the one genuinely-changed field plus the one added row -- not
+    # a correction per field per row (13 unrelated trips untouched)
+    unrelated = [p for p in by_path if p not in ("travel_entries[0].kms", added_path)]
+    assert unrelated == [], f"unexpected corrections for unchanged rows: {unrelated}"
+
+
+def test_diff_values_line_items_per_cell_not_a_whole_array_blob():
+    """Pure unit coverage of server.diff_values (bug 6): editing one
+    cell in one row of a 3-row array must produce exactly one
+    correction, not a blob for the whole array, and an unrelated
+    unchanged row must produce nothing at all."""
+    import server
+
+    ai_items = [
+        {"name": "Coffee", "quantity": "1", "unit_price": "150.00", "total": "150.00"},
+        {"name": "Tea", "quantity": "1", "unit_price": "150.00", "total": "150.00"},
+        {"name": "Cake", "quantity": "1", "unit_price": "200.00", "total": "200.00"},
+    ]
+    employee_items = [dict(item) for item in ai_items]
+    employee_items[0]["quantity"] = "2"
+    employee_items[0]["total"] = "300.00"
+
+    corrections = server.diff_values(ai_items, employee_items, "line_items")
+    by_path = {c["field_path"]: c for c in corrections}
+
+    assert by_path.keys() == {"line_items[0].quantity", "line_items[0].total"}
+    assert by_path["line_items[0].quantity"] == {"field_path": "line_items[0].quantity", "ai_value": "1", "employee_value": "2"}
+    assert by_path["line_items[0].total"] == {"field_path": "line_items[0].total", "ai_value": "150.00", "employee_value": "300.00"}
+
+
+def test_diff_values_row_added_and_row_removed():
+    """change_type distinguishes a whole row added/removed (index-based:
+    the employee array's/AI array's trailing elements once the shared
+    prefix is exhausted) from an ordinary per-cell value edit."""
+    import server
+
+    ai_items = [
+        {"name": "Coffee", "total": "150.00"},
+        {"name": "Tea", "total": "150.00"},
+    ]
+
+    appended = ai_items + [{"name": "Muffin", "total": "60.00"}]
+    added = server.diff_values(ai_items, appended, "line_items")
+    assert len(added) == 1
+    assert added[0] == {
+        "field_path": "line_items[2]", "ai_value": None,
+        "employee_value": {"name": "Muffin", "total": "60.00"}, "change_type": "row_added",
+    }
+
+    truncated = ai_items[:1]
+    removed = server.diff_values(ai_items, truncated, "line_items")
+    assert len(removed) == 1
+    assert removed[0] == {
+        "field_path": "line_items[1]", "ai_value": {"name": "Tea", "total": "150.00"},
+        "employee_value": None, "change_type": "row_removed",
+    }
