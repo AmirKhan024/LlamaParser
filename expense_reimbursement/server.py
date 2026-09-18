@@ -217,6 +217,7 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
 def _document_summary(document: Document) -> dict:
     return {
         "id": str(document.id),
+        "claim_id": str(document.claim_id),
         "original_name": document.original_name,
         "mime_type": document.mime_type,
         "status": document.status,
@@ -534,7 +535,15 @@ def get_document_file(
     full_path = STORAGE_DIR / document.file_key
     if not full_path.exists():
         raise HTTPException(404, "File not found on disk.")
-    return FileResponse(full_path, media_type=document.mime_type, filename=document.original_name)
+    # content_disposition_type="inline" -- the default ("attachment")
+    # makes the browser download the file instead of rendering it in the
+    # review screen's <iframe>/<img> preview.
+    return FileResponse(
+        full_path,
+        media_type=document.mime_type,
+        filename=document.original_name,
+        content_disposition_type="inline",
+    )
 
 
 @app.post("/api/documents/{document_id}/validate")
