@@ -172,16 +172,22 @@ def _get_client() -> Groq:
     return Groq(api_key=api_key)
 
 
-def _call_groq(user_content: str) -> ExtractResult:
+def _call_groq(user_content: str, model: str = MODEL) -> ExtractResult:
     """The one Groq call both extract_claim and repair_claim make --
     same system prompt (classification + every schema's fields) either
     way, only the user content differs. Parsing/document_type
     resolution is identical for a first extraction and a repair, so
-    this is the single place that logic lives."""
+    this is the single place that logic lives.
+
+    `model` defaults to MODEL (the production pipeline never overrides
+    it) -- exposed so one-off scripts (e.g. building the Stage 2 eval
+    set from documents that don't need Stage-1-pipeline-quality
+    extraction) can fall back to a less rate-limited model without
+    touching production behavior."""
     client = _get_client()
     start = time.monotonic()
     response = client.chat.completions.create(
-        model=MODEL,
+        model=model,
         messages=[
             {"role": "system", "content": _build_system_prompt()},
             {"role": "user", "content": user_content},
@@ -193,6 +199,12 @@ def _call_groq(user_content: str) -> ExtractResult:
 
     raw_text = response.choices[0].message.content or "{}"
     raw_fields = json.loads(raw_text)
+    # The prompt asks for a single JSON object, but the model occasionally
+    # wraps it in a one-element array instead (seen on SROIE receipts
+    # while building the Stage 2 eval set) -- unwrap rather than crash the
+    # whole extraction on a call that otherwise succeeded.
+    if isinstance(raw_fields, list):
+        raw_fields = raw_fields[0] if raw_fields and isinstance(raw_fields[0], dict) else {}
 
     doc_type_value = raw_fields.get("document_type", DocumentType.GENERIC_RECEIPT.value)
     try:
@@ -225,7 +237,7 @@ def _call_groq(user_content: str) -> ExtractResult:
     )
 
 
-def extract_claim(markdown: str, raw_json: Dict[str, Any]) -> ExtractResult:
+def extract_claim(markdown: str, raw_json: Dict[str, Any], model: str = MODEL) -> ExtractResult:
     trimmed_json = _trim_json_for_prompt(raw_json)
     user_content = (
         "=== DOCUMENT MARKDOWN ===\n\n"
@@ -233,7 +245,7 @@ def extract_claim(markdown: str, raw_json: Dict[str, Any]) -> ExtractResult:
         "=== SUPPORTING JSON (layout/image data stripped) ===\n\n"
         f"{json.dumps(trimmed_json, ensure_ascii=False)}"
     )
-    return _call_groq(user_content)
+    return _call_groq(user_content, model=model)
 
 
 def _decimal_default(obj: Any):
