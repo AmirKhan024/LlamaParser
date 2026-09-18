@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Any, Dict, List, Optional
 
-from groq import Groq
+from groq import BadRequestError, Groq
 
 from schemas import BaseClaim, DocumentType, schema_for
 from validate import build_claim, failing_arithmetic_checks, is_arithmetic_check, validate_claim
@@ -186,15 +186,36 @@ def _call_groq(user_content: str, model: str = MODEL) -> ExtractResult:
     touching production behavior."""
     client = _get_client()
     start = time.monotonic()
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": _build_system_prompt()},
-            {"role": "user", "content": user_content},
-        ],
-        response_format={"type": "json_object"},
-        temperature=0,
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": _build_system_prompt()},
+                {"role": "user", "content": user_content},
+            ],
+            response_format={"type": "json_object"},
+            temperature=0,
+        )
+    except BadRequestError as exc:
+        # Groq's own JSON-mode validator occasionally rejects a
+        # generation outright ("Failed to validate JSON") on otherwise
+        # ordinary input -- found while extracting SROIE receipts for
+        # the Stage 2 eval set: 5 clean, well-formed receipts failed
+        # this way with no retry at all. One retry, same input --
+        # transient generation failures don't reliably repeat twice.
+        body = exc.body if isinstance(exc.body, dict) else {}
+        error_code = (body.get("error") or {}).get("code")
+        if error_code not in ("json_validate_failed", "json_generate_failed"):
+            raise
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": _build_system_prompt()},
+                {"role": "user", "content": user_content},
+            ],
+            response_format={"type": "json_object"},
+            temperature=0,
+        )
     duration = time.monotonic() - start
 
     raw_text = response.choices[0].message.content or "{}"
