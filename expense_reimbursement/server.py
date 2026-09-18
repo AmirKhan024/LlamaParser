@@ -1,17 +1,19 @@
 """FastAPI backend for the expense reimbursement employee UI.
 
-Pipeline per uploaded document: parse_pdf -> extract_claim -> evaluate()
-(build_claim -> validate_claim -> check_completeness -> build_review_view,
-the same sequence run.py uses) -> stored as an `extractions` row. Runs as
-a real asyncio task on the same event loop uvicorn already owns (parsing
-via LlamaParse's own async aparse(), the Groq call via
-asyncio.to_thread since that client is sync-only) so the upload endpoint
-returns immediately; the UI polls GET /api/documents/{id} while status
-stays "processing". This replaced an earlier plain-thread +
-nest_asyncio.apply() approach: it worked, but a document whose pipeline
-thread died with the process on a restart stayed "processing" forever
-with nothing to resume it. The startup hook below (_recover_stuck_
-processing_documents) covers exactly that case now.
+Pipeline per uploaded document: parse_pdf -> extract_claim_with_repair
+(one Groq call, plus one self-repair retry only if the first extraction
+fails an arithmetic check -- see extract.py) -> evaluate() (build_claim
+-> validate_claim -> check_completeness -> build_review_view, the same
+sequence run.py uses) -> stored as an `extractions` row. Runs as a real
+asyncio task on the same event loop uvicorn already owns (parsing via
+LlamaParse's own async aparse(), the Groq call via asyncio.to_thread
+since that client is sync-only) so the upload endpoint returns
+immediately; the UI polls GET /api/documents/{id} while status stays
+"processing". This replaced an earlier plain-thread + nest_asyncio.apply()
+approach: it worked, but a document whose pipeline thread died with the
+process on a restart stayed "processing" forever with nothing to resume
+it. The startup hook below (_recover_stuck_processing_documents) covers
+exactly that case now.
 
 PIPELINE_MODE=fake (see .env.example) skips LlamaParse/Groq entirely and
 replays a cached outputs/*_result.json matched by the upload's sha256,
@@ -44,7 +46,7 @@ from sqlalchemy.orm import Session
 import repository
 from db import get_db, get_sessionmaker
 from extract import MODEL as GROQ_MODEL
-from extract import extract_claim
+from extract import extract_claim_with_repair
 from models import Claim, Document, Employee, Extraction
 from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
@@ -550,6 +552,11 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
     try:
         pipeline_mode = os.environ.get("PIPELINE_MODE", "real")
         try:
+            repair_attempted = False
+            repair_accepted = False
+            first_attempt_tokens = None
+            repair_attempt_tokens = None
+
             if pipeline_mode == "fake":
                 document_type_value, fields, markdown_text, total_tokens, duration_ms = await asyncio.to_thread(
                     _fake_pipeline_result, file_path
@@ -557,16 +564,24 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
                 model_name = f"fake:{document_type_value}"
             else:
                 markdown, raw_json = await aparse_pdf(file_path)
-                # extract_claim (Groq) has no async client here -- run it
-                # on a worker thread instead of blocking the event loop
-                # every other request/pipeline is sharing.
-                result = await asyncio.to_thread(extract_claim, markdown, raw_json)
+                # extract_claim_with_repair (Groq) has no async client
+                # here -- run it on a worker thread instead of blocking
+                # the event loop every other request/pipeline is sharing.
+                # It makes at most 2 Groq calls: the first extraction,
+                # plus one self-repair retry only if that first
+                # extraction fails an arithmetic check (see extract.py).
+                outcome = await asyncio.to_thread(extract_claim_with_repair, markdown, raw_json)
+                result = outcome.result
                 document_type_value = result.document_type.value
                 fields = result.raw_fields
                 markdown_text = markdown
                 total_tokens = result.total_tokens
                 duration_ms = int(result.duration_seconds * 1000)
                 model_name = GROQ_MODEL
+                repair_attempted = outcome.repair_attempted
+                repair_accepted = outcome.repair_accepted
+                first_attempt_tokens = outcome.first_result.total_tokens
+                repair_attempt_tokens = outcome.repair_result.total_tokens if outcome.repair_result else None
 
             evaluated = evaluate(document_type_value, fields, markdown_text)
             claim = evaluated["claim"]
@@ -593,6 +608,10 @@ async def _run_pipeline(document_id: uuid.UUID, file_path: Path, actor_id: uuid.
                 currency=_extraction_currency(clean_json),
                 check_results=evaluated["checks"],
                 audit_action="extracted",
+                repair_attempted=repair_attempted,
+                repair_accepted=repair_accepted if repair_attempted else None,
+                first_attempt_tokens=first_attempt_tokens,
+                repair_attempt_tokens=repair_attempt_tokens,
             )
             final_status = "needs_review" if view["needs_review"] else "ready"
             repository.update_document_status(session, document_id, status=final_status)

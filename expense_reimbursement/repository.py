@@ -348,6 +348,10 @@ def add_extraction(
     check_results: Optional[list[dict[str, Any]]] = None,
     corrections: Optional[list[dict[str, Any]]] = None,
     audit_action: str = "edited",
+    repair_attempted: bool = False,
+    repair_accepted: Optional[bool] = None,
+    first_attempt_tokens: Optional[int] = None,
+    repair_attempt_tokens: Optional[int] = None,
 ) -> Extraction:
     document = session.get(Document, document_id)
     if document is None:
@@ -368,6 +372,10 @@ def add_extraction(
         bill_date=bill_date,
         amount=amount,
         currency=currency,
+        repair_attempted=repair_attempted,
+        repair_accepted=repair_accepted,
+        first_attempt_tokens=first_attempt_tokens,
+        repair_attempt_tokens=repair_attempt_tokens,
     )
     session.add(extraction)
     session.flush()

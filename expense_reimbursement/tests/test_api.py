@@ -547,3 +547,62 @@ def test_stuck_processing_document_recovered_on_startup(client, db_session):
     final = wait_until_processed(client, doc["id"])
     assert final["status"] == "ready"
     assert final["error_message"] is None
+
+
+def test_fake_pipeline_extraction_has_no_repair_attempted(client, db_session):
+    """PIPELINE_MODE=fake replays a cached result and never calls Groq at
+    all, so self-repair (extract.extract_claim_with_repair) never runs --
+    the new columns must default sanely, not error out or stay unset."""
+    import uuid
+
+    claim = client.post("/api/claims", json={}).json()
+    doc = upload(client, claim["id"], MOBILE_PDF).json()
+    wait_until_processed(client, doc["id"])
+
+    extraction = db_session.scalars(
+        select(Extraction).where(Extraction.document_id == uuid.UUID(doc["id"]), Extraction.source == "ai")
+    ).one()
+    assert extraction.repair_attempted is False
+    assert extraction.repair_accepted is None
+    assert extraction.first_attempt_tokens is None
+    assert extraction.repair_attempt_tokens is None
+
+
+def test_add_extraction_stores_repair_columns(db_session):
+    """Direct repository-level check that the new columns round-trip --
+    server._run_pipeline is the real caller, exercised end-to-end in
+    tests/test_extract_repair.py's mocked-Groq tests instead (no live
+    API calls there either)."""
+    import uuid
+    from decimal import Decimal
+
+    employee = repository.get_or_create_seed_employee(db_session)
+    claim = repository.create_claim(db_session, employee_id=employee.id, title="repair test")
+    document = repository.create_document(
+        db_session,
+        claim_id=claim.id,
+        actor_id=employee.id,
+        original_name="conveyance.pdf",
+        file_key="test/conveyance.pdf",
+        file_sha256=uuid.uuid4().hex,
+        mime_type="application/pdf",
+    )
+    extraction = repository.add_extraction(
+        db_session,
+        document_id=document.id,
+        actor_id=employee.id,
+        source="ai",
+        document_type="local_conveyance_form",
+        fields={"document_type": "local_conveyance_form", "total_claimed": "8110"},
+        amount=Decimal("8110"),
+        audit_action="extracted",
+        repair_attempted=True,
+        repair_accepted=True,
+        first_attempt_tokens=1200,
+        repair_attempt_tokens=1350,
+    )
+    db_session.refresh(extraction)
+    assert extraction.repair_attempted is True
+    assert extraction.repair_accepted is True
+    assert extraction.first_attempt_tokens == 1200
+    assert extraction.repair_attempt_tokens == 1350

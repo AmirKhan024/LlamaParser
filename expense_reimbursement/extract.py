@@ -11,11 +11,13 @@ import json
 import os
 import time
 from dataclasses import dataclass
-from typing import Any, Dict, Optional
+from decimal import Decimal
+from typing import Any, Dict, List, Optional
 
 from groq import Groq
 
 from schemas import BaseClaim, DocumentType, schema_for
+from validate import build_claim, failing_arithmetic_checks, is_arithmetic_check, validate_claim
 
 # Verified live via client.models.list() -- see README. 120b was picked
 # over 20b for the same reason as the parser tier: better accuracy on
@@ -23,6 +25,11 @@ from schemas import BaseClaim, DocumentType, schema_for
 # well within Groq's free-tier rate limit for documents this size once
 # the JSON payload is trimmed.
 MODEL = "openai/gpt-oss-120b"
+
+# Read once at import time, same as PIPELINE_MODE elsewhere -- set
+# SELF_REPAIR_ENABLED=false to compare reliability with/without the
+# retry (see SUMMARY.md's reliability table).
+SELF_REPAIR_ENABLED = os.environ.get("SELF_REPAIR_ENABLED", "true").strip().lower() not in ("false", "0", "no")
 
 # Fields that exist on every page of LlamaParse's raw JSON but aren't
 # useful for a flat-schema extraction task: bbox/pixel layout data
@@ -162,15 +169,12 @@ def _get_client() -> Groq:
     return Groq(api_key=api_key)
 
 
-def extract_claim(markdown: str, raw_json: Dict[str, Any]) -> ExtractResult:
-    trimmed_json = _trim_json_for_prompt(raw_json)
-    user_content = (
-        "=== DOCUMENT MARKDOWN ===\n\n"
-        f"{markdown}\n\n"
-        "=== SUPPORTING JSON (layout/image data stripped) ===\n\n"
-        f"{json.dumps(trimmed_json, ensure_ascii=False)}"
-    )
-
+def _call_groq(user_content: str) -> ExtractResult:
+    """The one Groq call both extract_claim and repair_claim make --
+    same system prompt (classification + every schema's fields) either
+    way, only the user content differs. Parsing/document_type
+    resolution is identical for a first extraction and a repair, so
+    this is the single place that logic lives."""
     client = _get_client()
     start = time.monotonic()
     response = client.chat.completions.create(
@@ -215,4 +219,102 @@ def extract_claim(markdown: str, raw_json: Dict[str, Any]) -> ExtractResult:
         prompt_tokens=getattr(usage, "prompt_tokens", None),
         completion_tokens=getattr(usage, "completion_tokens", None),
         total_tokens=getattr(usage, "total_tokens", None),
+    )
+
+
+def extract_claim(markdown: str, raw_json: Dict[str, Any]) -> ExtractResult:
+    trimmed_json = _trim_json_for_prompt(raw_json)
+    user_content = (
+        "=== DOCUMENT MARKDOWN ===\n\n"
+        f"{markdown}\n\n"
+        "=== SUPPORTING JSON (layout/image data stripped) ===\n\n"
+        f"{json.dumps(trimmed_json, ensure_ascii=False)}"
+    )
+    return _call_groq(user_content)
+
+
+def _decimal_default(obj: Any):
+    if isinstance(obj, Decimal):
+        return str(obj)
+    raise TypeError(f"not JSON serializable: {type(obj)}")
+
+
+def repair_claim(
+    markdown: str,
+    raw_json: Dict[str, Any],
+    first_raw_fields: Dict[str, Any],
+    failed_checks: List[Dict[str, str]],
+) -> ExtractResult:
+    """The one extra Groq call extract_claim_with_repair makes when the
+    first extraction fails an arithmetic check. Sends the same document
+    content plus the first extraction and exactly which checks failed
+    (name + detail, e.g. "total km 5200 vs trip kms summing to 981"),
+    and asks the model to re-read only the fields those checks involve
+    and return the FULL corrected JSON -- not a diff, so the caller can
+    treat this result exactly like a first extraction."""
+    trimmed_json = _trim_json_for_prompt(raw_json)
+    failed_checks_text = "\n".join(f"- {c['name']}: {c['detail']}" for c in failed_checks)
+    user_content = (
+        "=== DOCUMENT MARKDOWN ===\n\n"
+        f"{markdown}\n\n"
+        "=== SUPPORTING JSON (layout/image data stripped) ===\n\n"
+        f"{json.dumps(trimmed_json, ensure_ascii=False)}\n\n"
+        "=== YOUR FIRST EXTRACTION ===\n\n"
+        f"{json.dumps(first_raw_fields, ensure_ascii=False, default=_decimal_default)}\n\n"
+        "=== ARITHMETIC CHECKS THAT FAILED ON YOUR FIRST EXTRACTION ===\n\n"
+        f"{failed_checks_text}\n\n"
+        "These numbers don't add up against each other. Re-read ONLY the "
+        "fields involved in the failed checks above, directly from the "
+        "document markdown/JSON -- a number was very likely misread, "
+        "swapped with a different field, or dropped entirely. Return the "
+        "FULL corrected JSON object, in the same shape as your first "
+        "extraction (every field, not just the ones you changed)."
+    )
+    return _call_groq(user_content)
+
+
+@dataclass
+class RepairOutcome:
+    """What extract_claim_with_repair actually did, for the pipeline to
+    record on the extraction row (server.py) or print (run.py)."""
+
+    result: ExtractResult          # the one to use: first_result or repair_result
+    repair_attempted: bool
+    repair_accepted: bool
+    first_result: ExtractResult
+    repair_result: Optional[ExtractResult]
+
+
+def extract_claim_with_repair(markdown: str, raw_json: Dict[str, Any]) -> RepairOutcome:
+    """extract_claim, then -- only if the first extraction fails at
+    least one arithmetic check -- ONE repair attempt (never more than
+    one, regardless of how the repair itself turns out). The repair's
+    result replaces the first only if it passes STRICTLY more
+    arithmetic checks; a tie or a worse result keeps the first
+    extraction, on the assumption that "no clear improvement" is more
+    likely noise than a real fix.
+    """
+    first = extract_claim(markdown, raw_json)
+    first_claim = build_claim(first.document_type, first.raw_fields, markdown)
+    first_checks = validate_claim(first_claim, markdown)
+    first_failing = failing_arithmetic_checks(first_checks)
+
+    if not SELF_REPAIR_ENABLED or not first_failing:
+        return RepairOutcome(first, False, False, first, None)
+
+    failed_checks_payload = [{"name": c.name, "detail": c.detail} for c in first_failing]
+    repair = repair_claim(markdown, raw_json, first.raw_fields, failed_checks_payload)
+    repair_claim_obj = build_claim(repair.document_type, repair.raw_fields, markdown)
+    repair_checks = validate_claim(repair_claim_obj, markdown)
+
+    first_arith_passed = sum(1 for c in first_checks if is_arithmetic_check(c) and c.passed)
+    repair_arith_passed = sum(1 for c in repair_checks if is_arithmetic_check(c) and c.passed)
+    accepted = repair_arith_passed > first_arith_passed
+
+    return RepairOutcome(
+        result=repair if accepted else first,
+        repair_attempted=True,
+        repair_accepted=accepted,
+        first_result=first,
+        repair_result=repair,
     )

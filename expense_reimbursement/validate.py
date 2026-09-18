@@ -353,6 +353,21 @@ class CheckResult:
     detail: str
 
 
+# gstin_format:* is a format check (does this look like a valid GSTIN),
+# not an arithmetic one -- excluded from "arithmetic checks" everywhere
+# that phrase is used (the self-repair retry below, and server.py's
+# money-edit reason gate).
+_NON_ARITHMETIC_CHECK_PREFIXES = ("gstin_format:",)
+
+
+def is_arithmetic_check(check: CheckResult) -> bool:
+    return not any(check.name.startswith(p) for p in _NON_ARITHMETIC_CHECK_PREFIXES)
+
+
+def failing_arithmetic_checks(checks: list[CheckResult]) -> list[CheckResult]:
+    return [c for c in checks if is_arithmetic_check(c) and not c.passed]
+
+
 def _isclose(a: Decimal, b: Decimal, tolerance: Decimal = TOLERANCE) -> bool:
     return abs(a - b) <= tolerance
 

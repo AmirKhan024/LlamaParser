@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
-from extract import ExtractResult, extract_claim
+from extract import ExtractResult, extract_claim_with_repair
 from parse import OUTPUTS_DIR, parse_pdf
 from review_view import build_review_view
 from validate import CheckResult, build_claim, check_completeness, validate_claim
@@ -62,9 +62,15 @@ def process_one(pdf_path: Path) -> dict:
     print(f"  Raw JSON     -> {OUTPUTS_DIR / (pdf_path.stem + '_raw.json')}")
 
     print("Classifying + extracting via Groq...")
-    result = extract_claim(markdown, raw_json)
+    outcome = extract_claim_with_repair(markdown, raw_json)
+    result = outcome.result
     claim = build_claim(result.document_type, result.raw_fields, markdown)
 
+    if outcome.repair_attempted:
+        print(
+            f"  self-repair: attempted (first attempt failed an arithmetic check) -- "
+            f"{'accepted the repaired extraction' if outcome.repair_accepted else 'kept the first extraction (repair did not improve on it)'}"
+        )
     print(f"\ndocument_type: {claim.document_type.value}")
 
     print("\nClean extracted JSON:")
@@ -98,11 +104,18 @@ def process_one(pdf_path: Path) -> dict:
     else:
         print("  (none)" if claim.document_type.value == "local_conveyance_form" else "  (not applicable to this document_type)")
 
-    cost = _estimate_cost(result)
-    print(f"\nTime taken: {result.duration_seconds:.2f}s")
+    # Cost/duration cover BOTH Groq calls when a repair was attempted --
+    # the repair is a real second call, not a free retry.
+    cost = _estimate_cost(outcome.first_result)
+    total_duration = outcome.first_result.duration_seconds
+    if outcome.repair_result is not None:
+        cost += _estimate_cost(outcome.repair_result)
+        total_duration += outcome.repair_result.duration_seconds
+    print(f"\nTime taken: {total_duration:.2f}s")
     print(
         f"Tokens: prompt={result.prompt_tokens} completion={result.completion_tokens} "
-        f"total={result.total_tokens}  (~${cost:.5f} estimated, unverified pricing -- see note in run.py)"
+        f"total={result.total_tokens}  (~${cost:.5f} estimated for both Groq calls, "
+        f"unverified pricing -- see note in run.py)"
     )
 
     # build_review_view expects one dict with the claim's own fields plus
@@ -132,6 +145,10 @@ def process_one(pdf_path: Path) -> dict:
             "total": result.total_tokens,
         },
         "estimated_cost_usd": str(cost),
+        "repair_attempted": outcome.repair_attempted,
+        "repair_accepted": outcome.repair_accepted if outcome.repair_attempted else None,
+        "first_attempt_tokens": outcome.first_result.total_tokens,
+        "repair_attempt_tokens": outcome.repair_result.total_tokens if outcome.repair_result else None,
     }
     out_path = OUTPUTS_DIR / f"{pdf_path.stem}_result.json"
     out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=_decimal_default), encoding="utf-8")

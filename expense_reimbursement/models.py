@@ -20,6 +20,7 @@ from sqlalchemy import (
     Numeric,
     Text,
     UniqueConstraint,
+    false,
     func,
 )
 from sqlalchemy.dialects.postgresql import JSONB, UUID
@@ -115,6 +116,15 @@ class Extraction(Base):
     model: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     total_tokens: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     duration_ms: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    # Self-repair retry (extract.extract_claim_with_repair): only ever
+    # true/non-null for source="ai" rows -- an employee save never calls
+    # Groq at all. repair_accepted is null when no repair was attempted,
+    # and false when it was attempted but discarded (didn't pass strictly
+    # more arithmetic checks than the first attempt).
+    repair_attempted: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default=false())
+    repair_accepted: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
+    first_attempt_tokens: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    repair_attempt_tokens: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     created_at: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
 
     vendor_name: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
