@@ -562,8 +562,13 @@ def _validate_generic_claim(claim: GenericClaim, markdown_text: str = "") -> lis
     results: list[CheckResult] = []
     tolerance = _tolerance_for(markdown_text, claim)
 
-    subtotal = _find_amount_in_additional_fields(claim, _SUBTOTAL_FIELD_HINT)
-    tax = _find_amount_in_additional_fields(claim, _TAX_FIELD_HINT)
+    # The named schema fields (claim.subtotal/claim.tax) are what the
+    # extraction prompt now asks the model for explicitly -- read those
+    # first. additional_fields is only a fallback, for extractions saved
+    # before these fields existed or where the model still filed the
+    # value under a free-form key despite being asked for it by name.
+    subtotal = claim.subtotal if claim.subtotal is not None else _find_amount_in_additional_fields(claim, _SUBTOTAL_FIELD_HINT)
+    tax = claim.tax if claim.tax is not None else _find_amount_in_additional_fields(claim, _TAX_FIELD_HINT)
     total_field = _find_amount_in_additional_fields(claim, _TOTAL_FIELD_HINT)
     target = claim.amount if claim.amount is not None else total_field
 

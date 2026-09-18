@@ -8,19 +8,24 @@
     "amount": "780.75",
     "currency": "USD",
     "additional_fields": {
-      "check_in": "11/15/2024",
-      "check_out": "11/18/2024",
+      "address": "500 Luxury Avenue\nDowntown, USA 10001",
+      "phone": "(555) 800-1234",
+      "time": "10:52:41 PM",
       "guest_name": "John Smith",
       "room_number": "412",
+      "check_in": "11/15/2024",
+      "check_out": "11/18/2024",
       "payment_method": "AMEX",
-      "card_number": "****9876",
-      "bar_code": "5556247758110959"
+      "card_masked": "****9876",
+      "barcode": "5556247758110959"
     },
     "extraction_notes": [],
-    "confidence": 0.9,
+    "confidence": 0.85,
+    "subtotal": "694.00",
+    "tax": "86.75",
     "line_items": [
       {
-        "name": "ROOM - KING SUITE",
+        "name": "3 x ROOM - KING SUITE @ $189.00",
         "quantity": "3",
         "unit_price": "189.00",
         "total": "567.00"
@@ -32,7 +37,7 @@
         "total": "45.00"
       },
       {
-        "name": "PARKING (DAILY)",
+        "name": "2 x PARKING (DAILY) @ $25.00",
         "quantity": "2",
         "unit_price": "25.00",
         "total": "50.00"
@@ -46,20 +51,28 @@
     ]
   },
   "additional_fields": {
-    "check_in": "11/15/2024",
-    "check_out": "11/18/2024",
+    "address": "500 Luxury Avenue\nDowntown, USA 10001",
+    "phone": "(555) 800-1234",
+    "time": "10:52:41 PM",
     "guest_name": "John Smith",
     "room_number": "412",
+    "check_in": "11/15/2024",
+    "check_out": "11/18/2024",
     "payment_method": "AMEX",
-    "card_number": "****9876",
-    "bar_code": "5556247758110959"
+    "card_masked": "****9876",
+    "barcode": "5556247758110959"
   },
   "extraction_notes": [],
   "validation": [
     {
-      "name": "sum(line items) == amount",
-      "passed": false,
-      "detail": "sum of 4 item totals = 694.00, amount = 780.75 (diff 86.75, tolerance 0.01)"
+      "name": "subtotal + tax == amount",
+      "passed": true,
+      "detail": "694.00 + 86.75 = 780.75, amount = 780.75 (diff 0.00, tolerance 0.01)"
+    },
+    {
+      "name": "sum(line items) == subtotal",
+      "passed": true,
+      "detail": "sum of 4 item totals = 694.00, subtotal = 694.00 (diff 0.00, tolerance 0.01)"
     }
   ],
   "completeness_warnings": [],
@@ -89,10 +102,10 @@
     "collapsible": {
       "key": "items",
       "label": "Show items (4)",
-      "auto_expand": true,
+      "auto_expand": false,
       "line_items": [
         {
-          "name": "ROOM - KING SUITE",
+          "name": "3 x ROOM - KING SUITE @ $189.00",
           "quantity": "3",
           "unit_price": "189.00",
           "total": "567.00"
@@ -104,7 +117,7 @@
           "total": "45.00"
         },
         {
-          "name": "PARKING (DAILY)",
+          "name": "2 x PARKING (DAILY) @ $25.00",
           "quantity": "2",
           "unit_price": "25.00",
           "total": "50.00"
@@ -119,9 +132,7 @@
       "extra_fields": [],
       "editable": true
     },
-    "warnings": [
-      "The amounts don't add up: the items don't add up to the subtotal or total."
-    ],
+    "warnings": [],
     "editable_fields": [
       "vendor_name",
       "date",
@@ -129,13 +140,13 @@
       "line_items"
     ],
     "needs_confirm": true,
-    "needs_review": true
+    "needs_review": false
   },
-  "duration_seconds": 13.795999999972992,
+  "duration_seconds": 2.75,
   "tokens": {
-    "prompt": 1888,
-    "completion": 916,
-    "total": 2804
+    "prompt": 1918,
+    "completion": 1074,
+    "total": 2992
   },
-  "estimated_cost_usd": "0.00097020"
+  "estimated_cost_usd": "0.00109320"
 }

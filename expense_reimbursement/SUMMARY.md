@@ -249,6 +249,61 @@ re-ran the CORD eval and all 4 real documents fresh.
   tolerance allowed -- unrelated to this change, same limitation
   documented in the first bug-fix pass above.
 
+**Employee money edits need a reason when they contradict the bill.**
+A tighter tolerance alone still let an employee silently save a money
+edit that broke the bill's own arithmetic, as long as they didn't mind
+the warning staying up -- nothing stopped them from confirming anyway.
+Confirm now requires a >=5 character reason whenever a money-field
+edit (the same allowlist used for display formatting, plus line-item
+`unit_price`/`total`) leaves an arithmetic check failing (gstin format
+checks excluded -- those aren't arithmetic). An edit that instead FIXES
+a check that was already failing on the AI version needs no reason --
+that's a correction, not a contradiction. Enforced server-side (422,
+`server._reason_required_for`), not just in the UI: `Correction` gained
+`reason` (nullable) and `direction` (increase/decrease/none) columns.
+One inline reason box appears under the warnings; Confirm stays
+disabled until the reason clears 5 characters; no browser dialogs.
+
+**Currency warning was noise.** The tolerance/reason work above didn't
+touch this, but it was reported in the same pass: a document with NO
+currency marker at all (e.g. a plain INR conveyance form) was treated
+the same as a genuine conflict -- both left currency `null` and warned.
+Most bills in the company's own currency never print a symbol, so this
+warned on nearly every one of them. `validate.resolve_currency` now
+only leaves currency null (with a warning) on an actual conflict -- two
+or more distinct currency markers in the same document. No marker at
+all falls back to the new `COMPANY_CURRENCY` env var (default `INR`),
+no warning. Verified against the real conveyance form's own markdown
+(zero currency markers) end-to-end through the API: currency comes
+back `"INR"`, no currency warning.
+
+**Generic checks (subtotal + tax == amount) were non-deterministic.**
+`GenericClaim` (the fallback schema for hotel/taxi/fuel/unstructured/
+generic receipts) had no dedicated `subtotal`/`tax` schema fields --
+those values, when the model found them at all, only ever landed in
+`additional_fields` under whatever label it felt like using that run,
+so the same document sometimes produced a check and sometimes didn't.
+Added explicit optional `subtotal`/`tax` fields to `GenericClaim`
+(`extract.py`'s prompt already lists every schema field by name for
+`generic_receipt`, so this alone gets the model asked for them
+directly); `_validate_generic_claim` now reads `claim.subtotal`/
+`claim.tax` first, falling back to `additional_fields` only when those
+are missing (older extractions, or a model that still buries the value
+despite being asked). Verified with 3 fresh real-pipeline runs of
+`test_documents/Hotel-Receipt.png` (`PIPELINE_MODE=real`, no cache):
+
+  | Run | subtotal | tax | amount | check present | check passed |
+  |-----|----------|-----|--------|---------------|--------------|
+  | 1   | 694.00   | 86.75 | 780.75 | yes | yes |
+  | 2   | 694.00   | 86.75 | 780.75 | yes | yes |
+  | 3   | 694.00   | 86.75 | 780.75 | yes | yes |
+
+  `subtotal`/`tax`/`amount` and the check itself were identical and
+  present in all 3 runs -- fully deterministic. `additional_fields`
+  still varied run to run (key casing, which extra fields like
+  address/phone showed up) exactly as before, which is expected and
+  harmless now that the arithmetic check no longer depends on it.
+
 ## Bug-fix pass: 8 bugs found by actually using the app
 
 After stage 1 shipped, using it for real (uploading a real dollar hotel

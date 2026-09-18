@@ -91,6 +91,13 @@ class ApprovalCorrespondence(BaseClaim):
 
 
 class GenericClaim(BaseClaim):
+    # Explicit schema fields (not just additional_fields) so the
+    # extraction prompt asks the model for them by name every time --
+    # additional_fields is free-form, model-chosen keys, which is why
+    # the same document's subtotal/tax showed up under a different key
+    # (or not at all) between runs. See validate._validate_generic_claim.
+    subtotal: Optional[Decimal] = None
+    tax: Optional[Decimal] = None
     line_items: list[LineItem] = Field(default_factory=list)
 
 

@@ -99,6 +99,40 @@ def test_line_items_sum_checked_against_amount_when_no_subtotal_found():
     assert checks["sum(line items) == amount"].passed is True
 
 
+def test_schema_subtotal_and_tax_fields_are_read_before_additional_fields():
+    """Prior-prompt item 4: GenericClaim now has explicit subtotal/tax
+    schema fields (so the extraction prompt asks for them by name,
+    instead of leaving them to whatever free-form key the model felt
+    like using that run). Those must be read first."""
+    raw_fields = {
+        "document_type": "hotel_invoice",
+        "amount": "780.75",
+        "subtotal": "694.00",
+        "tax": "86.75",
+        # deliberately conflicting additional_fields, to prove the
+        # schema fields win rather than being overridden by a fallback
+        "additional_fields": {"subtotal": "1.00", "tax": "1.00"},
+    }
+    claim = build_claim(DocumentType.HOTEL_INVOICE, raw_fields, HOTEL_MARKDOWN)
+    assert claim.subtotal == Decimal("694.00")
+    assert claim.tax == Decimal("86.75")
+    checks = {c.name: c for c in validate_claim(claim)}
+    check = checks["subtotal + tax == amount"]
+    assert check.passed is True
+    assert "694.00 + 86.75 = 780.75" in check.detail
+
+
+def test_generic_check_still_falls_back_to_additional_fields_when_schema_fields_missing():
+    """Extractions saved before subtotal/tax existed as schema fields
+    (or a model that still buries them in additional_fields despite
+    being asked for them by name) must keep working via the old path."""
+    claim = build_claim(DocumentType.HOTEL_INVOICE, HOTEL_RAW_FIELDS, HOTEL_MARKDOWN)
+    assert claim.subtotal is None
+    assert claim.tax is None
+    checks = {c.name: c for c in validate_claim(claim)}
+    assert checks["subtotal + tax == amount"].passed is True
+
+
 def test_review_view_shows_plain_english_warning_and_expands_items_on_failure():
     raw = dict(HOTEL_RAW_FIELDS, amount="999.00")
     raw["additional_fields"] = dict(HOTEL_RAW_FIELDS["additional_fields"], total="$999.00")
