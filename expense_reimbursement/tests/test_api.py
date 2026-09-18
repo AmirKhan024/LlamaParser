@@ -281,11 +281,41 @@ def test_confirmed_document_hides_warnings_but_keeps_check_results(client, db_se
     every load and ignored document status, so a confirmed document's
     warning came right back on the next view. Once confirmed, the
     employee-facing `warnings` list must be empty, but the underlying
-    check_results rows must survive (finance / later stages need them)."""
+    check_results rows must survive (finance / later stages need them).
+
+    Seeded directly (not via the cached fake-pipeline fixtures) with a
+    failing check whose implied fix ISN'T printed on the document, so
+    item 3's suggestion-based warning dedup doesn't suppress it too --
+    this test needs a warning that's genuinely still visible pre-confirm."""
+    import uuid
+    from decimal import Decimal
+
+    import server
+
     claim = client.post("/api/claims", json={}).json()
-    doc = upload(client, claim["id"], CONVEYANCE_PDF, filename="conveyance.pdf").json()
-    detail = wait_until_processed(client, doc["id"])
-    assert detail["review"]["warnings"], "test assumes this cached result has a completeness warning"
+    employee = repository.get_or_create_seed_employee(db_session)
+    document = repository.create_document(
+        db_session, claim_id=uuid.UUID(claim["id"]), actor_id=employee.id,
+        original_name="receipt.png", file_key="test/receipt.png",
+        file_sha256=uuid.uuid4().hex, mime_type="image/png",
+    )
+    markdown = "Receipt\nSubtotal 100.00\nTax 20.00\nTotal 150.00\n"  # 999.00 (the "fix") is nowhere on the page
+    fields = {"document_type": "generic_receipt", "amount": "150.00", "subtotal": "100.00", "tax": "20.00"}
+    evaluated = server.evaluate("generic_receipt", fields, markdown)
+    repository.add_extraction(
+        db_session, document_id=document.id, actor_id=employee.id, source="ai",
+        document_type="generic_receipt", fields=evaluated["clean_json"],
+        confidence=evaluated["claim"].confidence, amount=Decimal("150.00"), currency="INR",
+        check_results=evaluated["checks"], audit_action="extracted",
+    )
+    repository.update_document_status(db_session, document.id, status="needs_review", raw_markdown=markdown)
+    doc = {"id": str(document.id)}
+
+    detail = client.get(f"/api/documents/{doc['id']}").json()
+    assert detail["review"]["warnings"] == [
+        "The amounts don't add up: subtotal plus tax should equal the total."
+    ]
+    assert detail["review"]["suggestions"] == [], "no suggestion possible: 120.00 isn't printed anywhere"
 
     r = client.post(f"/api/documents/{doc['id']}/confirm", json={"edits": {}})
     assert r.status_code == 200

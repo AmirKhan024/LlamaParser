@@ -163,7 +163,10 @@ def test_suggestion_shown_apply_fixes_both_checks_then_confirm_needs_no_reason(c
     assert suggestions["total_kms"]["suggested_value"] == "981"
     assert suggestions["total_conveyance_amount"]["suggested_value"] == "5200"
     assert "Total km 981" in detail["review"]["suggestion_sentence"]
-    assert detail["review"]["warnings"], "the swap should still show a warning before Apply"
+    # item 3: the check-driven warning for a field a suggestion already
+    # covers is suppressed -- the suggestion sentence is the one thing
+    # shown, not both saying the same thing.
+    assert detail["review"]["warnings"] == []
 
     # "Apply": the exact edits the button sends -- a normal PUT /fields
     r = client.put(

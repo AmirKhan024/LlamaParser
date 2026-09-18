@@ -105,7 +105,7 @@ def _completeness_sentences(completeness_warnings: List[str]) -> List[str]:
     return sentences
 
 
-def _build_telecom_bill(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
+def _build_telecom_bill(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
     check_ok = checks.get("subtotal + tax == total", True)
     fields = [
         _field("vendor_name", "Provider", claim.get("vendor_name"), True),
@@ -117,12 +117,15 @@ def _build_telecom_bill(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[
         fields.append(_field("subtotal", "Subtotal", claim.get("subtotal"), True))
         fields.append(_field("tax", "Tax", claim.get("tax"), True))
     warnings = []
-    if not check_ok:
+    # A suggestion already covers this exact failure (with a fix
+    # attached) -- showing this sentence too would be the same root
+    # problem said twice.
+    if not check_ok and not ({"total", "tax"} & suggested_fields):
         warnings.append("The amounts don't add up: subtotal plus tax should equal the total.")
     return {"fields": fields, "collapsible": None, "warnings": warnings, "needs_confirm": True}
 
 
-def _build_restaurant_bill(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
+def _build_restaurant_bill(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
     check_ok = checks.get("subtotal + cgst + sgst == grand_total", True)
     fields = [
         _field("vendor_name", "Restaurant", claim.get("vendor_name"), True),
@@ -143,7 +146,7 @@ def _build_restaurant_bill(claim: Dict[str, Any], checks: Dict[str, bool]) -> Di
         "editable": True,
     }
     warnings = []
-    if not check_ok:
+    if not check_ok and "grand_total" not in suggested_fields:
         warnings.append("The amounts don't add up: subtotal plus CGST and SGST should equal the total.")
     return {"fields": fields, "collapsible": collapsible, "warnings": warnings, "needs_confirm": True}
 
@@ -173,7 +176,7 @@ def normalize_trip_entry(entry: Dict[str, Any]) -> Dict[str, Any]:
     return normalized
 
 
-def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
+def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
     kms_ok = checks.get("sum(travel_entries.kms) == total_kms", True)
     total_ok = checks.get(
         "conveyance_amount + daily_allowance + vehicle_maintenance + mobile_allowance == total_claimed", True
@@ -193,9 +196,9 @@ def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool])
         _field("total_claimed", "Total claimed", claim.get("total_claimed"), True),
     ]
     warnings = []
-    if not kms_ok:
+    if not kms_ok and "total_kms" not in suggested_fields:
         warnings.append("The trip distances don't add up to the total km claimed. Check the trips table.")
-    if not total_ok:
+    if not total_ok and "total_conveyance_amount" not in suggested_fields:
         warnings.append(
             "The amounts don't add up: conveyance, daily allowance, vehicle maintenance and mobile "
             "allowance should sum to the total claimed."
@@ -203,7 +206,7 @@ def _build_local_conveyance_form(claim: Dict[str, Any], checks: Dict[str, bool])
     return {"fields": fields, "collapsible": None, "warnings": warnings, "needs_confirm": True}
 
 
-def _build_approval_correspondence(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
+def _build_approval_correspondence(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
     fields = [
         _field("sender", "From", claim.get("sender"), False),
         _field("sent_date", "Date", claim.get("sent_date"), False),
@@ -212,7 +215,7 @@ def _build_approval_correspondence(claim: Dict[str, Any], checks: Dict[str, bool
     return {"fields": fields, "collapsible": None, "warnings": [], "needs_confirm": False}
 
 
-def _build_generic_receipt(claim: Dict[str, Any], checks: Dict[str, bool]) -> Dict[str, Any]:
+def _build_generic_receipt(claim: Dict[str, Any], checks: Dict[str, bool], suggested_fields: set) -> Dict[str, Any]:
     fields = [
         _field("vendor_name", "Vendor", claim.get("vendor_name"), True),
         _field("date", "Date", claim.get("date"), True),
@@ -235,9 +238,11 @@ def _build_generic_receipt(claim: Dict[str, Any], checks: Dict[str, bool]) -> Di
         "editable": True,
     }
     warnings = []
-    if not subtotal_tax_ok:
+    if not subtotal_tax_ok and not ({"amount", "tax"} & suggested_fields):
         warnings.append("The amounts don't add up: subtotal plus tax should equal the total.")
     if not items_sum_ok:
+        # suggest_fixes has no rule for a line-items-vs-total mismatch --
+        # nothing to dedupe against here.
         warnings.append("The amounts don't add up: the items don't add up to the subtotal or total.")
     return {"fields": fields, "collapsible": collapsible, "warnings": warnings, "needs_confirm": True}
 
@@ -261,9 +266,11 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
     checks = _checks_by_name(claim.get("validation", []))
     completeness_warnings = claim.get("completeness_warnings") or []
     confidence = claim.get("confidence", 1.0)
+    suggestions = claim.get("suggestions") or []
+    suggested_fields = {s["field"] for s in suggestions}
 
     builder = _BUILDERS.get(doc_type, _build_generic_receipt)
-    built = builder(claim, checks)
+    built = builder(claim, checks, suggested_fields)
 
     fields = list(built["fields"])
     collapsible = built.get("collapsible")
@@ -283,26 +290,37 @@ def build_review_view(claim: Dict[str, Any]) -> Dict[str, Any]:
         editable_fields.append(collapsible["key"] if collapsible["key"] != "items" else "line_items")
         editable_fields.extend(f["key"] for f in collapsible.get("extra_fields", []) if f["editable"])
 
-    warnings = list(built.get("warnings", []))
-    warnings.extend(_completeness_sentences(completeness_warnings))
-
     actionable_checks_failed = any(
         not passed for name, passed in checks.items()
         if not any(name.startswith(p) for p in _NON_ACTIONABLE_CHECK_PREFIXES)
     )
+
+    warnings = list(built.get("warnings", []))
+    # A document quirk that doesn't affect any number (a dropped value,
+    # an unclear currency) is only worth surfacing when there's still an
+    # arithmetic reason to look at this document at all -- otherwise
+    # it's noise with nothing actionable attached. check_completeness
+    # itself is unchanged (still computed and available for a later
+    # approver-facing stage); only what reaches the EMPLOYEE view here
+    # narrows.
+    if actionable_checks_failed:
+        completeness_sentences = _completeness_sentences(completeness_warnings)
+        suggested_numbers = {str(s["suggested_value"]) for s in suggestions}
+        # Never say the same root problem twice: if a suggestion already
+        # explains (and offers to fix) the exact number a completeness
+        # sentence is about, drop that sentence.
+        completeness_sentences = [
+            sentence for sentence in completeness_sentences
+            if not any(number in sentence for number in suggested_numbers)
+        ]
+        warnings.extend(completeness_sentences)
+
     low_confidence = needs_confirm and confidence < 0.85
     if low_confidence:
         warnings.append(_LOW_CONFIDENCE_WARNING)
 
-    needs_review = actionable_checks_failed or bool(completeness_warnings) or low_confidence
+    needs_review = actionable_checks_failed or low_confidence
 
-    # suggest_fixes (validate.py) already computed these against the
-    # typed claim -- passed straight through here. The caller
-    # (server._document_detail) is responsible for not passing any once
-    # a document is confirmed, same as it already clears `warnings`
-    # then; approval_correspondence never has any (no amount fields to
-    # suggest a fix for).
-    suggestions = claim.get("suggestions") or []
     label_by_key = {f["key"]: f["label"] for f in fields}
     suggestion_sentence = _suggestion_sentence(suggestions, label_by_key, currency)
 

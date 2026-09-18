@@ -311,31 +311,80 @@ def test_mobile_screenshots(live_server):
         browser.close()
 
 
+def _seed_unfixable_conveyance_mismatch(live_server):
+    """A total_kms mismatch with no matching evidence anywhere on the
+    document -- unlike _seed_swapped_conveyance_document below, this one
+    must NOT produce a suggestion (item 2), so its check-driven warning
+    (item 3) stays visible instead of being deduped away. Used for tests
+    that need a warning genuinely still showing pre-confirm."""
+    import importlib
+    import uuid
+    from decimal import Decimal
+
+    import httpx
+
+    repository = importlib.import_module("repository")
+    server = importlib.import_module("server")
+    db = importlib.import_module("db")
+
+    claim_id = httpx.post(f"{live_server}/api/claims", json={}).json()["id"]
+
+    session = db.get_sessionmaker()()
+    try:
+        # total_kms is wrong (12345) and the trip rows sum to 981, but
+        # "981" never appears anywhere else on the document (total_claimed
+        # is unrelated), so suggest_fixes has no evidence to offer a fix --
+        # the check-driven warning must stay visible, undeduped. The
+        # conveyance-total identity is set up to pass cleanly so this
+        # test isolates just the one kms-mismatch warning.
+        markdown = "Local Conveyance Form\nTrip 1: 400 km\nTrip 2: 581 km\nTotal claimed: 50000\n"
+        fields = {
+            "document_type": "local_conveyance_form",
+            "travel_entries": [
+                {"date": "26 May 2026", "place": "A", "purpose": "meeting", "client": "x", "kms": "400"},
+                {"date": "26 May 2026", "place": "B", "purpose": "meeting", "client": "y", "kms": "581"},
+            ],
+            "total_kms": "12345",
+            "total_conveyance_amount": "50000",
+            "total_claimed": "50000",
+        }
+        employee = repository.get_or_create_seed_employee(session)
+        document = repository.create_document(
+            session, claim_id=uuid.UUID(claim_id), actor_id=employee.id,
+            original_name="conveyance.pdf", file_key="test/e2e-unfixable.pdf",
+            file_sha256=uuid.uuid4().hex, mime_type="application/pdf",
+        )
+        evaluated = server.evaluate("local_conveyance_form", fields, markdown)
+        repository.add_extraction(
+            session, document_id=document.id, actor_id=employee.id, source="ai",
+            document_type="local_conveyance_form", fields=evaluated["clean_json"],
+            confidence=evaluated["claim"].confidence, amount=Decimal("50000"), currency="INR",
+            check_results=evaluated["checks"], audit_action="extracted",
+        )
+        repository.update_document_status(session, document.id, status="needs_review", raw_markdown=markdown)
+        return str(document.id), claim_id
+    finally:
+        session.close()
+
+
 def test_confirmed_document_hides_warnings_and_reopens(live_server):
     """Bug: a confirmed document's warnings came back on reopening it,
     because they were recomputed from the AI's confidence/checks on
     every load and ignored document status. Once confirmed, the
     employee view must show no AI warnings and the document is
     read-only until "Edit again" is clicked."""
+    doc_id, claim_id = _seed_unfixable_conveyance_mismatch(live_server)
+
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1280, "height": 900})
 
-        page.goto(f"{live_server}/#/")
-        page.wait_for_selector("text=My claims")
-        page.click("#new-claim")
-        page.wait_for_url("**/#/claims/*")
-        claim_url = page.url
-        page.wait_for_selector("#dropzone")
-
-        page.set_input_files("#file-input", str(UPLOADS_DIR / "May-26 Local conveyance.pdf"))
-        page.wait_for_selector(".doc-row")
-        page.wait_for_function("() => !document.querySelector('.chip-processing')", timeout=15000)
-
-        page.click(".doc-row")
+        claim_url = f"{live_server}/#/claims/{claim_id}"
+        page.goto(f"{live_server}/#/documents/{doc_id}")
         page.wait_for_selector("#fields-container")
-        # sanity check: the completeness warning is there before confirming
-        assert page.locator(".warning-line", has_text="5886").count() == 1
+        # sanity check: the check-driven warning is there before confirming
+        assert page.locator(".warning-line", has_text="trip distances").count() == 1
+        assert page.locator("#suggestion-box").count() == 0, "no suggestion possible for this mismatch"
 
         page.click("#btn-confirm")
         page.wait_for_url("**/#/claims/*")
@@ -349,9 +398,7 @@ def test_confirmed_document_hides_warnings_and_reopens(live_server):
 
         assert page.locator(".warning-line").count() == 0, "a confirmed document must show no AI warnings"
         assert page.locator("#fields-container input").count() == 0, "a confirmed document's fields must not be inputs"
-        # values must still be shown, just read-only -- checked generically
-        # (not a specific hardcoded number) since the real extraction isn't
-        # perfectly deterministic run to run
+        # values must still be shown, just read-only
         total_km_row = page.locator(".field-row", has=page.locator("label", has_text="Total km"))
         assert total_km_row.locator(".field-value").inner_text().strip() != ""
         assert page.locator(".chip-confirmed").count() >= 1
@@ -370,12 +417,11 @@ def test_confirmed_document_hides_warnings_and_reopens(live_server):
         page.click("#btn-edit-again")
         page.wait_for_selector("#fields-container input")
         assert page.locator("#fields-container input").count() > 0, "fields must be editable again"
-        assert page.locator(".warning-line", has_text="5886").count() == 1, "the warning must reappear once reopened"
+        assert page.locator(".warning-line", has_text="trip distances").count() == 1, "the warning must reappear once reopened"
         assert page.locator(".chip-confirmed").count() == 0
         assert page.locator("#btn-edit-again").count() == 0
 
         # status is genuinely needs_review server-side, not just the UI's guess
-        doc_id = page.url.rsplit("/", 1)[-1]
         api_status = httpx.get(f"{live_server}/api/documents/{doc_id}").json()["status"]
         assert api_status == "needs_review"
 

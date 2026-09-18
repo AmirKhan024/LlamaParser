@@ -304,6 +304,43 @@ despite being asked). Verified with 3 fresh real-pipeline runs of
   address/phone showed up) exactly as before, which is expected and
   harmless now that the arithmetic check no longer depends on it.
 
+## Third pass: self-repair, suggested fixes, grouped warnings
+
+**Self-repair retry.** `extract.extract_claim_with_repair`: after the
+first extraction, run `validate_claim`. If any arithmetic check fails
+(`gstin_format` excluded), make ONE more Groq call with the same
+markdown, the first JSON, and the failed checks' names/details, asking
+the model to re-read only the fields involved and return the full
+corrected JSON. Kept only if it passes strictly more arithmetic checks
+than the first; never retried more than once regardless. `Extraction`
+gained `repair_attempted`/`repair_accepted`/`first_attempt_tokens`/
+`repair_attempt_tokens` columns. `SELF_REPAIR_ENABLED` env var (default
+true) turns it off for the reliability comparison below.
+
+**Suggested fix when checks still fail.** `validate.suggest_fixes`
+offers a fix only when it's both implied by the document's own
+arithmetic AND the exact number is printed somewhere on the document --
+never invented. Implemented for the three swap/misread patterns this
+project has actually seen: local_conveyance_form's total_kms/
+total_conveyance_amount, telecom_bill/generic's total-vs-subtotal+tax,
+restaurant_bill's grand_total. One "Did you mean: ...?" box with an
+Apply button; Apply is a normal employee edit (still shown as changed,
+still re-validated), never automatic.
+
+**Warnings: fewer and grouped.** All employee warnings already lived in
+one box (`#warnings-container`); this pass added the deduplication:
+a check-driven or completeness sentence about the exact same field/
+number a suggestion already covers is dropped, and completeness
+warnings are hidden from the employee entirely once every arithmetic
+check passes (still computed -- `check_completeness` is unchanged --
+just not shown; reserved for a later approver-facing stage). See the
+corrected note on the conveyance form's real completeness-warning
+example ("Real-document check" section above): "5886" is very likely
+`981 x 6`, a per-km rate calculation printed on the form, not a
+dropped second daily-allowance figure -- a Stage 3 policy question,
+not an extraction miss, and exactly the kind of non-actionable warning
+this pass stops surfacing once the real (arithmetic) checks pass.
+
 ## Bug-fix pass: 8 bugs found by actually using the app
 
 After stage 1 shipped, using it for real (uploading a real dollar hotel
@@ -352,16 +389,30 @@ before it.
 
 ### Honest state after this run
 
-- **The local conveyance form's real, still-unfixed extraction problem**:
-  its markdown table has *two* number columns for both "Total Conveyance
-  Amount" (5200 and 981) and "Daily Allowance" (1560 and 5886), and the
-  model still only ever captures the first one. `check_completeness`
-  correctly caught *both* drops this run (not just the original 5886) --
-  but catching it isn't fixing it, and there's no schema field to put a
-  second, unexplained number in. This is the same limitation
-  `check_completeness` was always documented as having (a warning the
-  employee explains via `note_to_approver`, not a correction), just now
-  visibly happening twice on one document instead of once.
+- **The local conveyance form's real extraction problem, corrected**:
+  earlier notes here mischaracterized this as "no schema field to put a
+  second number in." That's wrong on both counts:
+  - "Total Conveyance Amount (5200 and 981)" is not two conveyance
+    amounts -- 981 is the trip km total, and `LocalConveyanceForm`
+    already has a dedicated field for it (`total_kms`). The real
+    problem is the model sometimes files 981 under the wrong field
+    (`total_kms` <-> `total_conveyance_amount` swapped, or one of them
+    left null) -- an extraction miss, not a missing field. This is what
+    items 1 (self-repair retry) and 2 (suggest_fixes) above now catch
+    and, in item 2's case, offer a one-click fix for.
+  - "Daily Allowance (1560 and 5886)" is likely not a second daily
+    allowance at all: 5886 = 981 x 6, almost certainly a per-km rate
+    calculation (Rs 6/km) printed on the form near that row, not a
+    dropped allowance figure. Whether the claim should even account for
+    a per-km rate is a Stage 3 reimbursement-policy question, not an
+    extraction gap -- `check_completeness` flagging it as a "possible
+    dropped value" is a reasonable, honest guess from a generic
+    heuristic (a number near a label that isn't in the output), not
+    evidence that a field is missing. This is the completeness-warning
+    case item 3 above addresses: it's the kind of warning that's only
+    worth showing when there's still an arithmetic reason to look at
+    the document at all, and is now suppressed once the real (kms/
+    conveyance) checks pass.
 - **This exposed a real trade-off in the currency fix (bug 3) worth
   flagging, not just a bug**: the conveyance form's raw markdown has *no*
   currency symbol anywhere -- it's an internal Indian company form that
