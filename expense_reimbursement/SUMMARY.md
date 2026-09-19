@@ -571,17 +571,14 @@ a billing figure.
 
 # Stage 2: Expense categorization
 
-**Resume later.** Once Groq's daily quota has reset, run:
-```bash
-python scripts/eval_categorization.py --final --methods llm
-python scripts/eval_categorization.py --final --methods hybrid
-```
-Each is standalone (doesn't touch `rules`/`classifier`/each other), uses its own
-`eval/categorization/_predictions_cache/<method>.jsonl` for any row already
-predicted (nothing already done gets re-spent), and appends its section into
-`RESULTS.md` via `_final_results_state.json` without rerunning anything already
-there. Then redo Part B step 4's comparison across all four methods -- the
-current default (`rules`) was picked from only two of the four, and may change.
+**Status: CLOSED.** Production default: `CATEGORIZER=rules`. One-line reason:
+on the primary metric (accuracy over the 43 real documents) `rules` scores
+83.7% vs `llm` 69.8% vs `classifier` 46.5%, and `llm`'s win on the secondary
+metric (all documents, 90.2% vs 87.2%) comes from synthetic data -- so the
+winners are split, and the decision rule keeps the free, deterministic,
+quota-independent method. **Read `eval/categorization/RESULTS.md`'s what-if
+before treating this as settled:** the ranking on real documents leans on one
+label boundary (10 hardware/PPE receipts, see "What Stage 3 should know").
 
 ## What was built
 
@@ -597,13 +594,21 @@ current default (`rules`) was picked from only two of the four, and may change.
   extras, fuel vs mileage, airport cab vs flight, etc.) -- a different axis
   from `document_type` (what kind of paper it is, Stage 1) vs category (what
   the money was for).
-- **Four categorizer implementations** (`categorize.py`): `rules`
-  (document_type default + keyword tie-break, free), `llm` (Groq
-  `openai/gpt-oss-20b`, zero-shot, retry-with-backoff), `classifier`
-  (sentence-transformers `all-MiniLM-L6-v2` embeddings + scikit-learn
-  LogisticRegression, trained on 540 synthetic examples generated from the
-  category definitions alone), `hybrid` (classifier first, falls back to
-  `llm` below a confidence threshold tuned on a held-out synthetic split).
+- **Categorizers** (`categorize.py`), all returning one `CategorizationResult`:
+  - `rules` -- document_type default + keyword tie-break. Free, instant.
+  - `classifier` -- sentence-transformers `all-MiniLM-L6-v2` embeddings +
+    scikit-learn LogisticRegression, trained on 540 synthetic examples
+    generated from the category definitions alone.
+  - `llm` -- Groq `openai/gpt-oss-120b`, temperature 0, **few-shot**: the 14
+    definitions + tie-break rules from `categories.py` and 3 hand-written
+    worked examples (none from the eval set; a test enforces it). It sees the
+    Stage 1 extracted fields only (document_type, vendor, date, amount,
+    line-item names, `additional_fields`) -- never the OCR markdown. Output is
+    strict JSON; a category that isn't exactly one of the 14 ids is a recorded
+    **parse failure**, never coerced. (This replaced an earlier zero-shot
+    gpt-oss-20b implementation that was never benchmarked.)
+  - `hybrid` -- exists in code, **not pursued and never benchmarked**; don't
+    select it.
 - **Product integration**: `extractions.category`/`category_confidence`/
   `category_method` columns; the pipeline categorizes every new document
   (`CATEGORIZER` env var, falls back to `rules` on any failure -- never fails
@@ -611,105 +616,145 @@ current default (`rules`) was picked from only two of the four, and may change.
   claim page's document rows; `scripts/backfill_categories.py` and
   `scripts/export_category_corrections.py` for existing documents and future
   retraining data.
-- **Eval pipeline**: `scripts/build_eval_dataset.py`,
-  `scripts/generate_silver_labels.py` (Groq-based, batched, model-agnostic --
-  kept for when quota allows), `scripts/apply_manual_silver_labels.py` (the
-  one actually used this time, see below), `scripts/promote_to_gold.py`,
-  `scripts/eval_categorization.py`, `scripts/generate_review_html.py`.
+- **Eval pipeline**: `scripts/build_eval_dataset.py` (now refuses to rebuild
+  once any row is reviewed -- the set is frozen), `scripts/apply_manual_silver_labels.py`,
+  `scripts/promote_to_gold.py`, `scripts/generate_review_html.py`, and
+  `scripts/eval_categorization.py`, which scores every method against gold
+  and writes `RESULTS.md`. Run mechanics: per-document checkpointing and a
+  disk cache (a re-run makes zero API calls unless `--no-cache`); the exact
+  request/response of every `llm` call in `_llm_raw_cache/<doc id>.json`;
+  cache rows carry a prompt/config fingerprint so an edited prompt can never
+  reuse stale results; on quota exhaustion the run exits saying how many
+  documents completed and does **not** write partial results into `RESULTS.md`.
 
 ## Eval methodology
 
 **Silver labels, by hand, not by another LLM call.** Every reachable Groq
-model on this account (`openai/gpt-oss-120b`, `openai/gpt-oss-20b`,
-`qwen/qwen3.8-27b`, and `groq/compound-mini`'s underlying
-`llama-3.3-70b-versatile`) hit its own daily token quota in turn while
-building this eval set -- a real constraint from one day's heavy usage, not
-a design choice (see "Limitations" below). Per instruction, all 134 rows
-were labeled directly: reading each document's `extracted_fields` and full
-markdown against `categories.py`'s definitions and tie-break rules,
-`silver_model="claude-code"` -- which incidentally serves the eval's own
-goal better than a Groq-based labeler would have, since the categorizers
-being measured are themselves Groq-based.
+model on the original key hit its daily token quota in turn while building the
+eval set -- a real constraint, not a design choice. All 134 rows were labeled
+directly by Claude Code, reading each document's `extracted_fields` and full
+markdown against `categories.py`'s definitions and tie-break rules
+(`silver_model="claude-code"`), which also keeps the labeler independent of the
+Groq-based categorizers being measured.
 
-**Silver -> gold.** The project owner reviewed all 134 rows in
-`review.html` and agreed with every label, including the ones flagged
-ambiguous -- 100% agreement, 0 overrides (`gold_overrides.yaml` empty).
-`dataset_metadata.json` records this, including an explicit anchoring-risk
-note: the reviewer saw each row's silver label while reviewing it, which
-can pull the reviewer toward agreeing with what's already shown rather than
-an independent judgment. 100% here is not proof the labels are error-free;
-a blind relabel of a sample (document only, no visible silver label) is the
-documented follow-up to test that properly.
+**Silver -> gold.** The project owner reviewed all 134 rows in `review.html`
+and agreed with every label, including the ambiguous ones -- 100% agreement, 0
+overrides. `dataset_metadata.json` records this with the review method
+("reviewed silver labels with the label visible") and an explicit anchoring
+risk: a reviewer who sees the label can drift toward agreeing with it, so 100%
+is not proof the labels are error-free. A blind relabel of a sample is the
+documented, not-yet-done check.
 
-**Leakage rule.** The `classifier`'s training data (540 synthetic examples,
-generated from category definitions alone, before the eval set existed) was
-checked against the eval set by embedding cosine similarity
-(`scripts/train_categorizer.py`, threshold 0.95) and retrained through the
-filter once the eval set existed -- 0 training rows were within threshold of
-an eval document, so nothing was dropped, but the check is real and reruns
-automatically if training data changes.
+**Leakage rule.** The `classifier`'s 540 training examples were generated from
+category definitions alone and checked against the eval set by embedding cosine
+similarity (threshold 0.95): 0 rows were within threshold. The `llm` few-shot
+examples are hand-written fictional documents; `tests/test_llm_categorizer.py`
+fails if any of their names appear in `dataset.jsonl`, and the prompt was run
+once against the eval set and **not** iterated on its results.
 
-**Synthetic-train / real-test split.** The classifier never trains on eval
-documents (enforced by the leakage check above); the eval set itself mixes
-25 SROIE + 15 CORD + 4 real Stage 1 documents (44 real, minus 1
-non-categorizable) with 90 synthetic images, reported separately in
-`RESULTS.md` specifically so a synthetic-heavy overall number is never
-mistaken for a real-world one.
+**Synthetic-train / real-test split.** The eval set is 25 SROIE + 15 CORD + 4
+real Stage 1 documents (44 real; 43 scored, since one approval email has no
+category) plus 90 synthetic images, reported separately in `RESULTS.md` so a
+synthetic-heavy overall number is never mistaken for a real-world one.
 
-## RESULTS.md (gold labels, `rules` and `classifier` -- see "Resume later")
+## Results (gold labels; full detail in `eval/categorization/RESULTS.md`)
 
-| method | all (n=133) | real-only (n=43, 7/14 categories) | synthetic-only (n=90) |
-|---|---|---|---|
-| `rules` | 87.2% acc, macro-F1 0.894 | 83.7% acc, macro-F1 0.805 | 88.9% acc, macro-F1 0.856 |
-| `classifier` | 70.7% acc, macro-F1 0.706 | 46.5% acc, macro-F1 0.357 | 82.2% acc, macro-F1 0.776 |
+| method | all docs (n=133) | real docs (n=43, 7/14 categories) | synthetic (n=90) | parse failures | mean latency | tokens |
+|---|---|---|---|---|---|---|
+| `rules` | 87.2% acc, macro-F1 0.894 | **83.7%** (95% CI 70-92%), macro-F1 0.805 | 88.9% | n/a | 0 ms | n/a |
+| `classifier` | 70.7%, 0.706 | 46.5% (33-61%), 0.357 | 82.2% | n/a | 108 ms | n/a |
+| `llm` | **90.2%**, 0.931 | 69.8% (55-81%), 0.732 | 100.0% | 0 | 3.7 s | 210,986 |
+| `hybrid` | not pursued -- decision: two-method comparison was sufficient | | | | | |
 
-`llm`/`hybrid`: not yet run (Groq quota). The real-only macro-F1 above is
-averaged over only the 7 categories that slice actually contains
-(accommodation, local_transport, office_supplies_equipment, other,
-own_vehicle_mileage, phone_internet, travel_meals) -- not all 14.
-
-`rules`' 17 misclassifications (its error-analysis section in `RESULTS.md`)
-are mostly `other` swallowing two categories its keyword list doesn't cover
-yet (`training_conferences`, `travel_documents_fees` vendor names) and one
-real document (`cat-sroie-011`, a parking receipt) where the keyword list
-has `"parking receipt"` but the actual text is `"Parking Fee"` -- a literal
-string-match gap, not a conceptual one.
+Real-only macro-F1 is averaged over only the 7 categories that slice contains,
+not all 14. **Decision rule** (fixed before the `llm` numbers): primary =
+real-docs accuracy, secondary = all-docs accuracy; one method winning both
+becomes the default, a split keeps `rules`; cost/latency are tiebreaker
+considerations only. **Outcome: split** (`rules` wins primary, `llm` wins
+secondary) -> `rules` stays. On the same 43 real documents, `rules` vs `llm`:
+both right 26, only `rules` right 10, only `llm` right 4, both wrong 3.
 
 ## Production default
 
-`CATEGORIZER=rules`. Rule as specified: pick the higher macro-F1 on all
-documents unless its real-only accuracy is more than 5 points worse than
-the other's. `rules` has both the higher macro-F1 (0.894 vs 0.706) and the
-better real-only accuracy (83.7% vs 46.5%) -- it wins outright on the
-numbers actually measured, no tiebreak needed. This is a two-method
-comparison, not a four-method one, and may change once `llm`/`hybrid` are
-benchmarked (see "Resume later" above).
+`CATEGORIZER=rules` (unchanged from before the `llm` run). It costs nothing,
+is deterministic, has no quota or network dependency, and wins the metric the
+rule designates as primary. `llm` costs ~1.6k tokens and ~4 s per document on
+Groq. The default is a decision under the recorded rule, not a claim that
+`rules` is the better categorizer in general -- see the what-if below.
+
+## The 5 SROIE receipts that failed extraction (verified)
+
+While building the eval set, 5 SROIE receipts failed extraction (`X51005433518`,
+`X51005433556`, `X51005442322`, `X51005442334`, `X51005442382`); the eval set
+stays at 134 and they are not in it. All 5 failed at the **extract** stage
+(each has a cached `_raw.md`) and none is corrupt: they are ordinary receipts,
+and they failed on the *fallback* model `gpt-oss-20b` after `gpt-oss-120b`'s
+quota ran out. Groq's JSON validator rejected the generation and `extract.py`
+had no retry, so a one-retry fix was added. **Re-checked once quota returned
+(`scripts/verify_sroie_retry_fix.py`, `scripts/diagnose_sroie_failures.py`):
+the fix only partly works.** 3 of the 5 succeeded on the very first call (the
+original failures were transient; the retry wasn't exercised). `X51005442334`
+failed twice in a row (call + retry), then succeeded on a later call, then
+failed again -- intermittent. `X51005442322` fails every time on `gpt-oss-20b`
+with "max completion tokens reached": the reasoning model spends its completion
+budget before emitting JSON on that long table -- systematic, not something a
+retry can fix. **Both succeed on the production model `gpt-oss-120b`** (both
+runs), so this is a fallback-model limitation, not a bug in the production
+extraction path. Known issue, not fixed: on `gpt-oss-20b`, long receipt tables
+can exhaust the completion budget.
 
 ## Limitations, stated plainly
 
-- **`llm` and `hybrid` are built and cached-ready but not yet benchmarked**
-  (Groq daily quota exhausted while building this eval set) -- this is the
-  single biggest open item before Stage 2's comparison is actually complete.
-  The production default above reflects only `rules` vs `classifier`.
 - **90 of 134 eval documents are synthetic**, generated and labeled in the
-  same session as the categorizers being measured -- results are likely
-  optimistic versus real-world documents the categorizers have never seen
-  described in their own construction.
-- **The real-only slice covers only 7 of the 14 categories** -- there is no
-  real-document evidence at all for `client_entertainment`, `fuel`,
-  `intercity_travel`, `software_subscriptions`, `team_events`,
-  `training_conferences`, or `travel_documents_fees`.
-- **`rules`' keywords were written in the same session as the eval set** --
-  it may be partly tuned to documents it's now being scored against, rather
-  than independently validated.
-- **100% silver -> gold agreement with the label visible to the reviewer**
-  -- a real risk of anchoring, not independent confirmation; see "Silver ->
-  gold" above.
-- **`team_events` has 6 examples, not 8** -- 2 of its synthetic documents
-  were deliberately ambiguous (2 diners, no client/team wording) and were
-  honestly relabeled `travel_meals` on review rather than kept as
-  `team_events` to hit the floor, which is itself informative about how
-  blurry that category boundary is.
-- **Single category per document** -- a hotel bill with a minibar line item
-  is filed entirely under `accommodation`; there is no per-line-item
-  categorization.
+  same session as the categorizers measured. `llm` scored 100% on them and
+  69.8% on the real documents -- a 30-point gap that is what synthetic
+  inflation looks like. All-documents numbers are optimistic.
+- **The real slice covers only 7 of the 14 categories** (18 `other`, 18
+  `travel_meals`), so real-only numbers say nothing about `client_entertainment`,
+  `fuel`, `intercity_travel`, `software_subscriptions`, `team_events`,
+  `training_conferences` or `travel_documents_fees`; one real document is 2.3
+  points.
+- **The primary-metric ranking leans on one label boundary.** 10 of `llm`'s 13
+  real-document misses are SROIE hardware/PPE receipts (safety shoes, conduit,
+  LED track lights, welding rods) that the gold label puts in `other` and the
+  model files under `office_supplies_equipment` -- applying that category's
+  definition literally ("other small physical purchases for work"). `rules`
+  gets them "right" only through its `other` fallback. If they were labeled
+  `office_supplies_equipment`, real-only accuracy would be `llm` 93.0%, `rules`
+  60.5% (RESULTS.md what-if; labels **not** changed).
+- **100% silver -> gold agreement with the label visible** -- possible
+  anchoring, not independent confirmation.
+- **Unequal inputs.** `rules`/`classifier` read a 2,000-character OCR excerpt;
+  `llm` reads only the Stage 1 extracted fields. `additional_fields` is
+  included for `llm` because the client/attendee/"Team Dinner" signals live only
+  there -- a literal vendor/date/amount/line-items input would make
+  `client_entertainment`, `team_events` and `travel_meals` indistinguishable.
+- **`rules`' keywords were written in the same session as the eval set**, so it
+  may be partly tuned to it; its real-only score is also propped up by the
+  `other` fallback (18 of 43 real documents are `other`).
+- **`llm` was run once**; gpt-oss is not perfectly deterministic at temperature
+  0 and no variance estimate exists. The prompt, tie-break rules, `rules`
+  keywords and eval labels share an author.
+- **`team_events` has 6 examples, not 8** (two ambiguous synthetic documents
+  were honestly relabeled `travel_meals`).
+- **Single category per document** -- a hotel folio with a minibar line is
+  filed entirely under `accommodation`.
+
+## What Stage 3 should know
+
+1. **Stage 3 (policy RAG) gets `category` from `rules` by default**, plus the
+   clause mapping in `categories.py` (`policy_clauses`) and the grade/base-city
+   on `employees` -- the inputs it needs to pick the right policy clause and cap.
+2. **The category definition for `office_supplies_equipment` is the weak spot.**
+   Tightening its wording in `categories.py` (exclude tools, hardware, PPE) and
+   re-running `llm` is the obvious next experiment -- but it's tuning on these
+   results, so do it knowingly, with a fresh prompt fingerprint, and ideally
+   after a blind relabel of a sample to check the gold labels themselves.
+3. **API key precedence.** `server.py` calls plain `load_dotenv()`, which does
+   *not* override an already-set environment variable. A machine-level
+   `GROQ_API_KEY` therefore beats the key in `.env`; the eval scripts use
+   `load_dotenv(override=True)`, the server does not.
+4. **Docker Desktop must be running** for the test suite (Postgres on 5433).
+5. To re-render `RESULTS.md` without any API call:
+   `python scripts/eval_categorization.py --final --report-only`. To re-run
+   `llm` from scratch: `... --final --methods llm --no-cache`.

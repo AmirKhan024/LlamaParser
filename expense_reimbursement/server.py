@@ -476,13 +476,16 @@ def evaluate(document_type_value: str, fields: dict, markdown_text: str) -> dict
 
 
 # Read once at import time, same convention as extract.py's
-# SELF_REPAIR_ENABLED. Default picked from eval/categorization/RESULTS.md:
-# `rules` has the higher macro-F1 on all 134 gold-labeled documents (0.894
-# vs classifier's 0.706) and isn't worse on the real-source slice either
-# (83.7% vs 46.5% accuracy) -- rules wins outright, no tiebreak needed.
-# `llm`/`hybrid` haven't been benchmarked yet (Groq quota exhausted while
-# building the eval set -- see RESULTS.md's "Not yet run" section); this
-# default may change once they are.
+# SELF_REPAIR_ENABLED. Default picked from eval/categorization/RESULTS.md
+# (gold labels, rules vs classifier vs llm): the primary metric is accuracy
+# on the 43 real documents, where `rules` scores 83.7% vs llm's 69.8% and
+# classifier's 46.5%; `llm` wins only the secondary all-documents metric
+# (90.2% vs 87.2%, driven by synthetic documents), so the winners are split
+# and the rule keeps `rules` -- free, deterministic, no quota dependency.
+# NOTE: that ranking leans on one label boundary (10 real hardware receipts,
+# gold `other`, which `llm` files under office_supplies_equipment) -- see
+# RESULTS.md's what-if before treating it as settled. `hybrid` was not
+# pursued and has never been benchmarked; don't select it.
 CATEGORIZER = os.environ.get("CATEGORIZER", "rules")
 
 

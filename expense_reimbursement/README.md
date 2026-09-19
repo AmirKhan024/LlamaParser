@@ -5,6 +5,17 @@ key details extracted from each one, confirms them, and submits the
 claim. See `SUMMARY.md` for the full pipeline/data-model writeup and
 what's still out of scope.
 
+## Status
+
+- **Stage 1** (upload -> extract -> check -> employee review -> submit): done.
+- **Stage 2** (expense categorization): **CLOSED.** Every document gets one of 14
+  categories (`categories.py`) from the method chosen by `CATEGORIZER`; the
+  default is **`rules`** -- on the real documents it scores 83.7% vs the LLM's
+  69.8% and the classifier's 46.5%, and it is free, deterministic and needs no
+  API quota. Methods, the eval set, results and caveats: `SUMMARY.md`'s Stage 2
+  section and `eval/categorization/RESULTS.md`. Company/policy (fictional):
+  `policy/`.
+
 ## Setup
 
 ```bash
@@ -93,3 +104,8 @@ python eval_cord.py     # accuracy check against the CORD benchmark set
   `expense_test`.
 - `storage/` -- uploaded files on disk, gitignored. Never in the
   database.
+- `categories.py`, `categorize.py`, `models/categorizer/`, `policy/`,
+  `eval/categorization/`, `scripts/eval_categorization.py` -- Stage 2:
+  categories, the categorizers, the fictional policy, and the frozen eval
+  set + results. Re-render results with no API call:
+  `python scripts/eval_categorization.py --final --report-only`.

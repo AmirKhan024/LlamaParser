@@ -24,12 +24,18 @@ in full if you have it) is a 9-stage **"AI expense system that reads a
 receipt, checks it against company policy, catches fraud, and routes it
 for approval, with a human only stepping in when the AI is uncertain."**
 
-**Only stage 1 (Intelligent Document Processing) is built.** Stages 2-9
-(categorization, policy RAG, fraud/anomaly detection, agentic approval
-workflow, conversational assistant, continuous learning, explainability
-dashboard, analytics) do not exist yet. Don't assume otherwise from the
-polish of stage 1 — there's no policy engine, no fraud model, no agents,
-no auth, no chat interface. See "What's realistically next" below.
+**Stages 1 and 2 are built.** Stage 1 is Intelligent Document Processing;
+Stage 2 (expense categorization) is CLOSED -- see `SUMMARY.md`'s Stage 2 section
+and `eval/categorization/RESULTS.md`. Default categorizer is `rules`
+(`CATEGORIZER=rules`): 83.7% on the 43 real eval documents vs `llm` 69.8% and
+`classifier` 46.5%; `llm` wins only on the synthetic-heavy all-documents metric
+(90.2% vs 87.2%), so the pre-agreed decision rule keeps `rules`. That ranking
+leans on one label boundary (10 hardware receipts) -- read RESULTS.md's what-if
+and SUMMARY.md's "What Stage 3 should know" before building on it. Stages 3-9
+(policy RAG, fraud/anomaly detection, agentic approval workflow, conversational
+assistant, continuous learning, explainability dashboard, analytics) do not
+exist yet: no policy engine, no fraud model, no agents, no auth, no chat
+interface. See "What's realistically next" below.
 
 ## What's built and working (stage 1)
 
