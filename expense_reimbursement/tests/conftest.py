@@ -47,7 +47,7 @@ def clean_db():
     with engine.begin() as conn:
         conn.execute(
             text(
-                "TRUNCATE audit_events, corrections, check_results, extractions, "
+                "TRUNCATE policy_decisions, policy_clauses, policy_versions, audit_events, corrections, check_results, extractions, "
                 "documents, claims, employees RESTART IDENTITY CASCADE"
             )
         )

@@ -17,6 +17,9 @@ from models import (
     Document,
     Employee,
     Extraction,
+    PolicyClause,
+    PolicyDecision,
+    PolicyVersion,
 )
 
 SEED_EMPLOYEE_NAME = "Nasir Ahmed Khan"
@@ -552,3 +555,173 @@ def add_audit_event(
     session.commit()
     session.refresh(event)
     return event
+
+
+# ------------------------------------------------------- Stage 3: policy
+
+def get_policy_version(session: Session, label: Optional[str] = None) -> Optional[PolicyVersion]:
+    """The named policy version, or (no label) the active one."""
+    query = select(PolicyVersion).options(selectinload(PolicyVersion.clauses))
+    if label:
+        query = query.where(PolicyVersion.version == label)
+    else:
+        query = query.where(PolicyVersion.is_active.is_(True)).order_by(PolicyVersion.created_at.desc()).limit(1)
+    return session.scalar(query)
+
+
+def create_policy_version(
+    session: Session,
+    *,
+    version: str,
+    source_sha256: str,
+    reference_data: dict[str, Any],
+    build_meta: dict[str, Any],
+    clauses: list[dict[str, Any]],
+    activate: bool = True,
+) -> PolicyVersion:
+    """Clause rows are immutable once a version exists: an existing label is
+    refused, never overwritten (a policy change is a new version)."""
+    if session.scalar(select(PolicyVersion).where(PolicyVersion.version == version)) is not None:
+        raise ValueError(f"policy version {version!r} already exists; a changed policy is a new version")
+    if activate:
+        session.execute(update(PolicyVersion).values(is_active=False))
+    pv = PolicyVersion(
+        version=version, is_active=activate, source_sha256=source_sha256,
+        reference_data=reference_data, build_meta=build_meta,
+    )
+    for c in clauses:
+        pv.clauses.append(PolicyClause(
+            clause_id=c["clause_id"], section=c["section"], sort_order=c["sort_order"],
+            verbatim_text=c["verbatim_text"], applies_to_categories=list(c["applies_to_categories"]),
+            limit_amount=Decimal(c["limit_amount"]) if c.get("limit_amount") is not None else None,
+            limit_currency=c.get("limit_currency"), limit_unit=c["limit_unit"], limit_kind=c["limit_kind"],
+            limit_inclusive=c["limit_inclusive"], limit_table=c["limit_table"], conditions=c["conditions"],
+            documentation_required=c["documentation_required"],
+            requires_approval_above=c.get("requires_approval_above"),
+            is_prohibition=c["is_prohibition"], notes=c.get("notes"),
+        ))
+    session.add(pv)
+    session.commit()
+    session.refresh(pv)
+    return pv
+
+
+def lock_claim(session: Session, claim_id: uuid.UUID) -> None:
+    """Row lock held until commit: serializes concurrent evaluations of one claim."""
+    session.execute(select(Claim.id).where(Claim.id == claim_id).with_for_update())
+
+
+def next_evaluation_seq(session: Session, claim_id: uuid.UUID) -> int:
+    from sqlalchemy import func as sa_func
+
+    current = session.scalar(select(sa_func.max(PolicyDecision.evaluation_seq)).where(PolicyDecision.claim_id == claim_id))
+    return (current or 0) + 1
+
+
+def latest_decision_run(
+    session: Session, claim_id: uuid.UUID, *, policy_version: Optional[str] = None, prompt_version: Optional[str] = None
+) -> list[PolicyDecision]:
+    """Rows of the highest evaluation_seq for the claim (restricted to one
+    policy/prompt version when given), in document/unit order."""
+    from sqlalchemy import func as sa_func
+
+    base = select(sa_func.max(PolicyDecision.evaluation_seq)).where(PolicyDecision.claim_id == claim_id)
+    if policy_version:
+        base = base.where(PolicyDecision.policy_version == policy_version)
+    if prompt_version:
+        base = base.where(PolicyDecision.prompt_version == prompt_version)
+    seq = session.scalar(base)
+    if seq is None:
+        return []
+    return list(session.scalars(
+        select(PolicyDecision)
+        .where(PolicyDecision.claim_id == claim_id, PolicyDecision.evaluation_seq == seq)
+        .order_by(PolicyDecision.created_at, PolicyDecision.unit_index)
+    ))
+
+
+def add_policy_decisions(
+    session: Session, rows: list[PolicyDecision], *, claim_id: uuid.UUID, actor_id: uuid.UUID, payload: dict[str, Any]
+) -> None:
+    session.add_all(rows)
+    session.add(AuditEvent(claim_id=claim_id, actor_id=actor_id, action="policy_evaluated", payload=payload))
+    session.commit()
+
+
+def get_policy_decision(session: Session, decision_id: uuid.UUID) -> Optional[PolicyDecision]:
+    return session.get(PolicyDecision, decision_id)
+
+
+def override_decision(
+    session: Session, decision: PolicyDecision, *, human_verdict: str, human_clause_id: Optional[str],
+    human_note: Optional[str], actor_id: uuid.UUID,
+) -> PolicyDecision:
+    """Fills ONLY the five reviewer columns (a DB trigger rejects anything
+    else); the model's decision is untouched. An earlier override is kept in
+    the audit trail."""
+    from datetime import datetime as _dt
+
+    previous = {
+        "human_verdict": decision.human_verdict, "human_clause_id": decision.human_clause_id,
+        "human_note": decision.human_note,
+    }
+    decision.human_verdict = human_verdict
+    decision.human_clause_id = human_clause_id
+    decision.human_note = human_note
+    decision.overridden_at = _dt.utcnow()
+    decision.overridden_by = actor_id
+    session.add(AuditEvent(
+        claim_id=decision.claim_id, document_id=decision.document_id, actor_id=actor_id,
+        action="decision_overridden",
+        payload={"decision_id": str(decision.id), "model_verdict": decision.verdict, "previous": previous,
+                 "new": {"human_verdict": human_verdict, "human_clause_id": human_clause_id, "human_note": human_note}},
+    ))
+    session.commit()
+    session.refresh(decision)
+    return decision
+
+
+def monthly_peer_amounts(
+    session: Session, *, employee_id: uuid.UUID, category: str, currency: Optional[str], clause_id: str,
+    year: int, month: int, exclude_document_id: uuid.UUID, current_claim_id: uuid.UUID,
+) -> tuple[list[tuple[uuid.UUID, Decimal]], list[uuid.UUID]]:
+    """(matched, unattributed). Other documents of this employee in the same
+    category, currency and calendar month (by document date) -- every document
+    of the current claim plus documents of SUBMITTED claims -- that were judged
+    under the SAME CLAUSE in their latest evaluation run. Aggregating by clause,
+    not category, keeps mobile (12.1) and broadband (12.2) from being pooled.
+    A peer never evaluated has no clause yet: it is returned in `unattributed`
+    (and recorded in the decision's check_detail), never silently counted."""
+    from sqlalchemy import func as sa_func
+
+    import policy_check
+
+    claims = session.scalars(
+        select(Claim)
+        .options(selectinload(Claim.documents).selectinload(Document.extractions))
+        .where(Claim.employee_id == employee_id)
+    )
+    matched: list[tuple[uuid.UUID, Decimal]] = []
+    unattributed: list[uuid.UUID] = []
+    for claim in claims:
+        if claim.id != current_claim_id and claim.status != "submitted":
+            continue
+        for doc in claim.documents:
+            if doc.id == exclude_document_id or doc.status not in ("ready", "needs_review", "confirmed") or not doc.extractions:
+                continue
+            ext = doc.extractions[-1]
+            if ext.category != category or ext.currency != currency or ext.amount is None:
+                continue
+            d = policy_check.parse_date(ext.bill_date)
+            if d is None or (d.year, d.month) != (year, month):
+                continue
+            seq = session.scalar(select(sa_func.max(PolicyDecision.evaluation_seq)).where(PolicyDecision.claim_id == doc.claim_id))
+            clauses = set(session.scalars(
+                select(PolicyDecision.clause_id).where(
+                    PolicyDecision.document_id == doc.id, PolicyDecision.evaluation_seq == seq)
+            )) if seq else set()
+            if not clauses:
+                unattributed.append(doc.id)
+            elif clause_id in clauses:
+                matched.append((doc.id, ext.amount))
+    return matched, unattributed

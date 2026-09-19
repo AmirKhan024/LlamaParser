@@ -758,3 +758,18 @@ can exhaust the completion budget.
 5. To re-render `RESULTS.md` without any API call:
    `python scripts/eval_categorization.py --final --report-only`. To re-run
    `llm` from scratch: `... --final --methods llm --no-cache`.
+
+---
+
+## Stage 3 -- policy compliance engine (built; policy JSON awaiting human review)
+
+Full write-up: `docs/STAGE3.md`. In short: for each expense (per line item when line items
+exist) the model picks the governing clause and reads quantities off the document; **code**
+does every comparison, division, date calculation and aggregation and decides the verdict
+(`compliant | violation | needs_approval | insufficient_information`), citing the verbatim
+clause. Decisions are immutable rows in `policy_decisions` (DB trigger), re-evaluation
+appends, reviewers label via `POST /api/decisions/{id}/override`. Files: `policy.py`,
+`policy_check.py` (deterministic checker), `policy_select.py` (+ `prompts/policy_select_v1.md`),
+`policy_eval.py`, `policy_llm.py`, `scripts/build_policy.py`, `scripts/seed_policy.py`,
+`scripts/reevaluate_claims.py`, `policy/policy_v1.json` (+ `.review.txt`, `.overrides.json`).
+Setup: `alembic upgrade head`, `python scripts/seed_policy.py`. 88 new tests.

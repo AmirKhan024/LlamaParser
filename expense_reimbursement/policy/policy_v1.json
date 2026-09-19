@@ -1,0 +1,4573 @@
+{
+  "version": "v1",
+  "source": "policy/expense_policy.md",
+  "source_sha256": "2de164b40b41aa83a1f64b5d4242c8931a00cf18a99f446e294b73cf706cd791",
+  "reference_data": {
+    "grades": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ],
+    "city_tiers": {
+      "1": [
+        "mumbai",
+        "delhi ncr",
+        "bengaluru",
+        "chennai",
+        "hyderabad",
+        "kolkata",
+        "pune"
+      ],
+      "2": [
+        "ahmedabad",
+        "jaipur",
+        "chandigarh",
+        "kochi",
+        "coimbatore",
+        "indore",
+        "nagpur",
+        "surat",
+        "lucknow",
+        "vadodara"
+      ]
+    },
+    "zone_a_countries": [
+      "usa",
+      "canada",
+      "united kingdom",
+      "france",
+      "germany",
+      "netherlands",
+      "switzerland",
+      "ireland",
+      "singapore",
+      "japan",
+      "australia"
+    ],
+    "zone_a_open_ended": [
+      "Western Europe"
+    ]
+  },
+  "build_meta": {
+    "structuring_model": "openai/gpt-oss-120b",
+    "structuring_prompt_version": "structure-v2",
+    "built_at": "2026-09-19T09:13:31.782226+00:00",
+    "confirmed_flag_passed": true,
+    "human_reviewed": false,
+    "reviewed_by": null,
+    "unstructured_clause_ids": [],
+    "replayed_from": "structure-v1",
+    "manual_edits": [
+      {
+        "clause_id": "10.4",
+        "reason": "The model turned 'pre-approval required above 15,000 / $200' into a hard per-event limit as well as an approval threshold. Exceeding a threshold that needs approval must read as needs_approval, not violation. Also removed an unconditional 'preapproval_evidence' documentation item: approval is already checked through requires_approval_above, and the item would make every event under the threshold 'unknown'.",
+        "changed": [
+          "documentation_required",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_event",
+          "limit_table": [
+            {
+              "amount": "15000",
+              "currency": "INR",
+              "when": {}
+            },
+            {
+              "amount": "200",
+              "currency": "USD",
+              "when": {}
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "preapproval_evidence",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "11.2",
+        "reason": "Same defect as 10.4: 'more than 5,000 requires approval' is an approval threshold, not a cap.",
+        "changed": [
+          "limit_inclusive",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_claim",
+          "limit_inclusive": false,
+          "limit_table": [
+            {
+              "amount": "5000",
+              "currency": "INR",
+              "when": {}
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "15.1",
+        "reason": "Same defect as 10.4: the 50,000 figure is the level above which an L5+ approver is needed, not a cap on training spend.",
+        "changed": [
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "50000",
+              "currency": "INR",
+              "when": {}
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "15.3",
+        "reason": "The model made 50,000 a hard limit. The clause says a course above 50,000 needs a signed service bond: a requirement that applies only above the threshold, i.e. 'not above 50,000 OR bond signed'.",
+        "changed": [
+          "conditions",
+          "documentation_required",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "50000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "service_bond",
+              "min_amount": "50000"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "employee must sign a 12‑month service retention bond",
+              "depends_on": [
+                "preapproval_evidence"
+              ],
+              "kind": "requires",
+              "check": "judgment",
+              "numeric": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "20.1",
+        "reason": "The model structured the receipt thresholds (500 / $10) as per-claim LIMITS and as failing conditions, so any expense of 500 or more would read as a violation. They are thresholds for a documentation requirement, per currency.",
+        "changed": [
+          "conditions",
+          "documentation_required",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "500",
+              "currency": "INR",
+              "when": {}
+            },
+            {
+              "amount": "10",
+              "currency": "USD",
+              "when": {}
+            }
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "expense amount is ₹500 or more (domestic)",
+              "depends_on": [
+                "document_amount"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "amount",
+                "op": ">=",
+                "value": "500"
+              }
+            },
+            {
+              "id": "c2",
+              "text": "expense amount is $10 or more (international)",
+              "depends_on": [
+                "document_amount"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "amount",
+                "op": ">=",
+                "value": "10"
+              }
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "itemised_original_receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "20.2",
+        "reason": "The model used the 'amount' quantity for a cumulative monthly figure (it would compare one bill to 3,000 twice). Kept as the monthly aggregate limit; the 'below the receipt threshold' condition is the numeric amount < 500. NOTE: the clause means all self-declared expenses across categories, but monthly aggregation here is per category.",
+        "changed": [
+          "conditions",
+          "documentation_required"
+        ],
+        "before": {
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "expense amount is below ₹500",
+              "depends_on": [
+                "document_amount"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "amount",
+                "op": "<",
+                "value": "500"
+              }
+            },
+            {
+              "id": "c2",
+              "text": "cumulative self‑declared expenses for the employee in the month do not exceed ₹3,000",
+              "depends_on": [
+                "other_claims_history"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "amount",
+                "op": "<=",
+                "value": "3000"
+              }
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "self_declaration",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "21.1",
+        "reason": "A submission deadline is a time window, not a per-day amount limit: requires days_since_expense <= 30.",
+        "changed": [
+          "conditions",
+          "limit_kind",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_day",
+          "limit_kind": "count",
+          "limit_table": [
+            {
+              "amount": "30",
+              "currency": null,
+              "when": {}
+            }
+          ],
+          "conditions": []
+        }
+      },
+      {
+        "clause_id": "21.2",
+        "reason": "A window measured from the employee's return from a trip: trip dates are not extracted, so this is a judgment that will usually be unknown, not a per-day limit.",
+        "changed": [
+          "conditions",
+          "limit_kind",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_day",
+          "limit_kind": "count",
+          "limit_table": [
+            {
+              "amount": "60",
+              "currency": null,
+              "when": {}
+            }
+          ],
+          "conditions": []
+        }
+      },
+      {
+        "clause_id": "21.3",
+        "reason": "'Ordinarily one claim per trip' is guidance, not something checkable on one expense; the model invented a count limit of 1 that is not in the text.",
+        "changed": [
+          "applies_to_categories",
+          "limit_kind",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "limit_unit": "per_claim",
+          "limit_kind": "count",
+          "limit_table": [
+            {
+              "amount": "1",
+              "currency": null,
+              "when": {}
+            },
+            {
+              "amount": "1",
+              "currency": null,
+              "when": {
+                "recurring_expense": [
+                  "phone",
+                  "mileage"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "21.4",
+        "reason": "The model used the 'days' quantity (trip days) for 'older than 90 days from the expense date' and left a per-day unit; it must be days_since_expense > 90.",
+        "changed": [
+          "conditions",
+          "limit_kind",
+          "limit_table",
+          "limit_unit"
+        ],
+        "before": {
+          "limit_unit": "per_day",
+          "limit_kind": "count",
+          "limit_table": [],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "claim is older than 90 days from expense date",
+              "depends_on": [
+                "bill_date"
+              ],
+              "kind": "excludes",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "days",
+                "op": ">",
+                "value": "90"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "23.1",
+        "reason": "Approval routing by claim TOTAL (section 23) cannot be checked on one expense; it is Stage 6's approval workflow. The model turned the tiers into per-claim limits.",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "limit_table",
+          "limit_unit",
+          "requires_approval_above"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "5000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "no validation flags (all arithmetic checks pass, no policy-limit breach)",
+              "depends_on": [],
+              "kind": "requires",
+              "check": "judgment",
+              "numeric": null
+            }
+          ],
+          "requires_approval_above": null
+        }
+      },
+      {
+        "clause_id": "23.2",
+        "reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "limit_table",
+          "limit_unit",
+          "requires_approval_above"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "5001",
+              "currency": "INR",
+              "when": {}
+            },
+            {
+              "amount": "25000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "conditions": [],
+          "requires_approval_above": {
+            "INR": "5000"
+          }
+        }
+      },
+      {
+        "clause_id": "23.3",
+        "reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "limit_table",
+          "limit_unit",
+          "requires_approval_above"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "25001",
+              "currency": "INR",
+              "when": {}
+            },
+            {
+              "amount": "100000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "conditions": [],
+          "requires_approval_above": {
+            "INR": "25000"
+          }
+        }
+      },
+      {
+        "clause_id": "23.4",
+        "reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "limit_table",
+          "limit_unit",
+          "requires_approval_above"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "limit_unit": "per_claim",
+          "limit_table": [
+            {
+              "amount": "100000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "conditions": [],
+          "requires_approval_above": {
+            "INR": "100000"
+          }
+        }
+      },
+      {
+        "clause_id": "23.5",
+        "reason": "The policy-exception rule (a breach needs written justification and one level more approval) is a consequence of a violation, applied by the approval workflow (Stage 6), not a check on one expense.",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "documentation_required"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "*"
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "requires a written justification from the employee and approval one level above what the claim amount alone would require",
+              "depends_on": [],
+              "kind": "requires",
+              "check": "judgment",
+              "numeric": null
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "written_justification",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "24.1",
+        "reason": "Never structured by the model (its daily quota ran out before section 24). Duplicate-claim detection is Stage 4 (fraud) and cannot be judged from one expense.",
+        "changed": [
+          "applies_to_categories",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [],
+          "notes": "UNSTRUCTURED: the model's answer failed validation twice"
+        }
+      },
+      {
+        "clause_id": "24.2",
+        "reason": "Never structured by the model (quota). Claim-splitting detection needs cross-claim analysis: Stage 4.",
+        "changed": [
+          "applies_to_categories",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [],
+          "notes": "UNSTRUCTURED: the model's answer failed validation twice"
+        }
+      },
+      {
+        "clause_id": "24.3",
+        "reason": "Never structured by the model (quota). Tamper detection is Stage 4.",
+        "changed": [
+          "applies_to_categories",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [],
+          "notes": "UNSTRUCTURED: the model's answer failed validation twice"
+        }
+      },
+      {
+        "clause_id": "24.4",
+        "reason": "Never structured by the model (quota). Double-reimbursement detection needs data Stage 1 does not extract: Stage 4.",
+        "changed": [
+          "applies_to_categories",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [],
+          "notes": "UNSTRUCTURED: the model's answer failed validation twice"
+        }
+      },
+      {
+        "clause_id": "24.5",
+        "reason": "Statement about audits and consequences; not checkable on an expense.",
+        "changed": [
+          "applies_to_categories",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [],
+          "notes": "UNSTRUCTURED: the model's answer failed validation twice"
+        }
+      },
+      {
+        "clause_id": "8.6",
+        "reason": "The 7,500 threshold was structured both as the documentation threshold AND as a 'requires amount >= 7,500' condition, so a Rs 5,000 hotel bill would fail the condition. It is only a threshold for the GST-invoice requirement (documentation min_amount).",
+        "changed": [
+          "conditions",
+          "limit_inclusive"
+        ],
+        "before": {
+          "limit_inclusive": false,
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "document amount is ₹7,500 or more (domestic)",
+              "depends_on": [
+                "document_amount",
+                "currency"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "amount",
+                "op": ">=",
+                "value": "7500"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "5.3",
+        "reason": "The model added an unconditional 'receipt' documentation requirement that 5.3 does not state (receipt rules are 5.4 / 20.1); it would make every ride unknown.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "3.2",
+        "reason": "The model compared the 'days' quantity (trip days) with 7 and 14 as if it were booking lead time. Booking date vs travel date is not extracted, so this is a judgment that will usually be unknown.",
+        "changed": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "For domestic tickets the booking must be made at least 7 days before travel",
+              "depends_on": [
+                "booking_lead_time",
+                "expense_country"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "days",
+                "op": ">=",
+                "value": "7"
+              }
+            },
+            {
+              "id": "c2",
+              "text": "For international tickets the booking must be made at least 14 days before travel",
+              "depends_on": [
+                "booking_lead_time",
+                "expense_country"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "days",
+                "op": ">=",
+                "value": "14"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "4.2",
+        "reason": "'Rail or bus should be preferred ... under 400 km' is guidance ('should'), not a prohibition; the model made air travel under 400 km an excluded circumstance using a route distance that is not extracted.",
+        "changed": [
+          "applies_to_categories",
+          "conditions",
+          "notes"
+        ],
+        "before": {
+          "applies_to_categories": [
+            "intercity_travel"
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "Air travel on routes shorter than 400 km is not reimbursable unless schedule requires it",
+              "depends_on": [
+                "distance_km"
+              ],
+              "kind": "excludes",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "distance_km",
+                "op": "<",
+                "value": "400"
+              }
+            }
+          ],
+          "notes": "Journey‑time (<5 hours) condition not captured due to missing field in the data model."
+        }
+      },
+      {
+        "clause_id": "12.2",
+        "reason": "Home broadband is reimbursable for 'L4 and above OR any role designated remote/field-based': the model AND-ed the two conditions and restricted the limit entry to grades L4-L6, so a designated remote L2 would find no limit. Now one any_of condition and an unrestricted 1,500 limit.",
+        "changed": [
+          "conditions",
+          "documentation_required",
+          "limit_table"
+        ],
+        "before": {
+          "limit_table": [
+            {
+              "amount": "1500",
+              "currency": "INR",
+              "when": {
+                "grade": [
+                  "L4",
+                  "L5",
+                  "L6"
+                ]
+              }
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "bill",
+              "min_amount": null
+            }
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "employee grade is L4 or above",
+              "depends_on": [
+                "employee_grade"
+              ],
+              "kind": "requires",
+              "check": "numeric",
+              "numeric": {
+                "quantity": "grade_rank",
+                "op": ">=",
+                "value": "4"
+              }
+            },
+            {
+              "id": "c2",
+              "text": "employee role is remote or field‑based as designated by HR",
+              "depends_on": [
+                "employee_designation"
+              ],
+              "kind": "requires",
+              "check": "judgment",
+              "numeric": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "12.3",
+        "reason": "'Reimbursable only with pre-approval, capped at 3,000 per trip (or actuals with WRITTEN pre-approval for a higher amount)': above 3,000 is allowed with written approval, so it is an approval matter, not a violation. Structured as approval always required; the 3,000 figure is kept in notes. Unconditional 'bill'/'preapproval_email' documentation items removed (the approval requirement covers the latter).",
+        "changed": [
+          "conditions",
+          "documentation_required",
+          "limit_table",
+          "limit_unit",
+          "notes",
+          "requires_approval_above"
+        ],
+        "before": {
+          "limit_unit": "per_trip",
+          "limit_table": [
+            {
+              "amount": "3000",
+              "currency": "INR",
+              "when": {}
+            }
+          ],
+          "conditions": [
+            {
+              "id": "c1",
+              "text": "pre‑approval before travel (written if amount exceeds ₹3,000)",
+              "depends_on": [
+                "preapproval_evidence"
+              ],
+              "kind": "requires",
+              "check": "judgment",
+              "numeric": null
+            }
+          ],
+          "documentation_required": [
+            {
+              "item": "bill",
+              "min_amount": null
+            },
+            {
+              "item": "preapproval_email",
+              "min_amount": null
+            }
+          ],
+          "requires_approval_above": null,
+          "notes": null
+        }
+      },
+      {
+        "clause_id": "12.4",
+        "reason": "Removed an unconditional 'bill' documentation item (the document IS the bill); the substantive rule is the billed-to-name condition.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "bill",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "9.1",
+        "reason": "Receipts are required only when the employee chooses actuals over the per diem; the model made 'receipt' unconditional, which would make every travel-meal unit unknown. Documentation removed; the per-trip method choice stays a judgment condition.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "16.1",
+        "reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "16.2",
+        "reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "16.3",
+        "reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      },
+      {
+        "clause_id": "16.4",
+        "reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+        "changed": [
+          "documentation_required"
+        ],
+        "before": {
+          "documentation_required": [
+            {
+              "item": "receipt",
+              "min_amount": null
+            }
+          ]
+        }
+      }
+    ],
+    "conflicts": [
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "1.2"
+        ],
+        "message": "1.2: conditions depend on business_purpose (not_extracted)"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "3.4"
+        ],
+        "message": "3.4: number(s) [Decimal('3')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "3.5"
+        ],
+        "message": "3.5: number(s) [Decimal('6')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "4.1"
+        ],
+        "message": "4.1: number(s) [Decimal('2'), Decimal('3')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "5.2"
+        ],
+        "message": "5.2: conditions depend on vehicle_type (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "5.3.2"
+        ],
+        "message": "5.3.2: conditions depend on business_purpose (not_extracted), time_of_day (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "5.6"
+        ],
+        "message": "5.6: conditions depend on business_purpose (not_extracted), time_of_day (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "6.4"
+        ],
+        "message": "6.4: conditions depend on trip_log_rows (partial)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "7.2"
+        ],
+        "message": "7.2: conditions depend on receipt_itemised (partial)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "7.3"
+        ],
+        "message": "7.3: conditions depend on trip_id (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "8.5"
+        ],
+        "message": "8.5: conditions depend on stay_dates (partial)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "10.1"
+        ],
+        "message": "10.1: conditions depend on attendee_count (partial), business_purpose (not_extracted), client_name (partial)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "13.1"
+        ],
+        "message": "13.1: conditions depend on preapproval_evidence (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "13.2"
+        ],
+        "message": "13.2: conditions depend on business_purpose (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "17.2"
+        ],
+        "message": "17.2: conditions depend on recipient_identity (not_extracted)"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.1"
+        ],
+        "message": "19.1: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.2"
+        ],
+        "message": "19.2: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.3"
+        ],
+        "message": "19.3: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.4"
+        ],
+        "message": "19.4: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.5"
+        ],
+        "message": "19.5: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.6"
+        ],
+        "message": "19.6: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.7"
+        ],
+        "message": "19.7: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "SYNTHESIZED_ID",
+        "clause_ids": [
+          "19.8"
+        ],
+        "message": "19.8: the policy prints this as an unnumbered bullet under section 19; the id is generated"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "20.3"
+        ],
+        "message": "20.3: conditions depend on receipt_itemised (partial)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "20.4"
+        ],
+        "message": "20.4: conditions depend on gstin_on_invoice (not_extracted)"
+      },
+      {
+        "kind": "OVERLAP",
+        "clause_ids": [
+          "8.1",
+          "8.3"
+        ],
+        "message": "[accommodation] 8.1 and 8.3 both set a per_night limit that can apply to the same expense (3500 vs 1500 INR); the text may make one an alternative to the other"
+      },
+      {
+        "kind": "OVERLAP",
+        "clause_ids": [
+          "8.2",
+          "8.3"
+        ],
+        "message": "[accommodation] 8.2 and 8.3 both set a per_night limit that can apply to the same expense (120 vs 40 USD); the text may make one an alternative to the other"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "3.2"
+        ],
+        "message": "3.2: conditions depend on booking_lead_time (not_extracted)"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "4.2"
+        ],
+        "message": "4.2: number(s) [Decimal('5'), Decimal('400')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "12.2"
+        ],
+        "message": "12.2: conditions depend on employee_designation (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "12.4"
+        ],
+        "message": "12.4: conditions depend on billed_to_name (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "15.3"
+        ],
+        "message": "15.3: conditions depend on service_bond (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "16.1"
+        ],
+        "message": "16.1: conditions depend on business_purpose (not_extracted), preapproval_evidence (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "16.2"
+        ],
+        "message": "16.2: conditions depend on business_purpose (not_extracted), preapproval_evidence (not_extracted)"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "16.3"
+        ],
+        "message": "16.3: conditions depend on expense_country (partial)"
+      },
+      {
+        "kind": "NUMBER_NOT_IN_TEXT",
+        "clause_ids": [
+          "20.2"
+        ],
+        "message": "20.2: structured number(s) [Decimal('500')] do not appear in the clause text"
+      },
+      {
+        "kind": "STAGE1_GAP",
+        "clause_ids": [
+          "21.2"
+        ],
+        "message": "21.2: conditions depend on trip_dates (not_extracted)"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "23.1"
+        ],
+        "message": "23.1: number(s) [Decimal('5000')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "23.2"
+        ],
+        "message": "23.2: number(s) [Decimal('5001'), Decimal('25000')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "23.3"
+        ],
+        "message": "23.3: number(s) [Decimal('25001'), Decimal('100000')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "UNCAPTURED_NUMBERS",
+        "clause_ids": [
+          "23.4"
+        ],
+        "message": "23.4: number(s) [Decimal('100000')] in the text appear nowhere in the structure"
+      },
+      {
+        "kind": "OVERLAP",
+        "clause_ids": [
+          "12.1",
+          "12.2"
+        ],
+        "message": "[phone_internet] 12.1 and 12.2 both set a per_month limit that can apply to the same expense (800 vs 1500 INR); the text may make one an alternative to the other"
+      }
+    ]
+  },
+  "clauses": [
+    {
+      "clause_id": "1.1",
+      "section": "1",
+      "sort_order": 0,
+      "verbatim_text": "1.1. This policy governs reimbursement of expenses genuinely and reasonably incurred by an employee in the course of Konkan Digital business — client work, internal meetings, training, and approved travel. It does not create an entitlement to spend up to any stated cap; caps are ceilings, not targets.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "1.2",
+      "section": "1",
+      "sort_order": 1,
+      "verbatim_text": "1.2. **Business purpose required.** Every claim must state a genuine business purpose. An expense with no identifiable business purpose is not reimbursable, regardless of amount or approval level.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense must have a genuine business purpose",
+          "depends_on": [
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "1.3",
+      "section": "1",
+      "sort_order": 2,
+      "verbatim_text": "1.3. **Spend as if it were your own money.** Employees are expected to exercise the same judgment and care they would apply to their own funds — choosing reasonable, not lavish, options.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "1.4",
+      "section": "1",
+      "sort_order": 3,
+      "verbatim_text": "1.4. **Lowest reasonable cost.** Where multiple reasonable options exist (fare class, hotel category, vendor), the employee should choose the lowest-cost option that reasonably meets the business need, not the maximum the policy permits.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "1.5",
+      "section": "1",
+      "sort_order": 4,
+      "verbatim_text": "1.5. **No personal expenses.** Expenses for personal benefit, convenience unrelated to business need, or for family/dependents are not reimbursable under any clause of this policy (see also §19).",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is for personal benefit, convenience unrelated to business need, or for family/dependents",
+          "depends_on": [],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "1.6",
+      "section": "1",
+      "sort_order": 5,
+      "verbatim_text": "1.6. Nothing in this policy overrides statutory tax withholding or reporting obligations; Finance may adjust the taxability of a reimbursement independently of whether it is approved for payment.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.1",
+      "section": "3",
+      "sort_order": 6,
+      "verbatim_text": "3.1. All air travel should be booked through the Travel Desk wherever possible; the Travel Desk has negotiated corporate fares and handles GST invoicing correctly. Self-booking is permitted when the Travel Desk cannot meet the required schedule, with intimation to the Reporting Manager.",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense must be booked through the Travel Desk, or if self‑booked an intimation to the Reporting Manager must be provided",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.2",
+      "section": "3",
+      "sort_order": 7,
+      "verbatim_text": "3.2. **Advance booking.** Domestic tickets should be booked at least 7 days in advance; international tickets at least 14 days in advance. Late booking without a documented urgent business reason (e.g., client escalation, force majeure) may result in the claim being reduced to the fare that would have applied at the required advance-booking window.",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "domestic tickets were booked at least 7 days ahead and international tickets at least 14 days ahead, or a documented urgent business reason exists",
+          "kind": "requires",
+          "check": "judgment",
+          "depends_on": [
+            "booking_lead_time"
+          ],
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.3",
+      "section": "3",
+      "sort_order": 8,
+      "verbatim_text": "3.3. **Lowest logical fare.** Employees must select the lowest-cost itinerary within a 2-hour window of the required departure/arrival time, on a reasonably direct routing (at most one reasonable connection for domestic, at most two for international).",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Selected itinerary must be the lowest‑cost option within a 2‑hour window of the required departure/arrival time and may include at most one reasonable connection for domestic flights or at most two for international flights",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.4",
+      "section": "3",
+      "sort_order": 9,
+      "verbatim_text": "3.4. **Class of travel — domestic flights**\n\n| Grade | Class |\n|---|---|\n| L1 | Economy |\n| L2 | Economy |\n| L3 | Economy (Economy Plus / extra-legroom permitted for flights over 3 hours) |\n| L4 | Economy Plus / Premium Economy |\n| L5 | Business permitted for flights over 3 hours; otherwise Economy Plus |\n| L6 | Business, any duration |",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Allowed travel class is determined by employee grade as per the domestic flight class table",
+          "depends_on": [
+            "employee_grade"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.5",
+      "section": "3",
+      "sort_order": 10,
+      "verbatim_text": "3.5. **Class of travel — international flights**\n\n| Grade | Under 6 hours | 6 hours and over |\n|---|---|---|\n| L1 | Economy | Economy |\n| L2 | Economy | Economy |\n| L3 | Economy | Premium Economy |\n| L4 | Premium Economy | Business (Department Head pre-approval required) |\n| L5 | Business | Business |\n| L6 | Business | Business (First Class at the Executive's discretion, logged as a policy exception per §23.4) |",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Allowed travel class for international flights is determined by employee grade (and flight duration) as per the international flight class table",
+          "depends_on": [
+            "employee_grade"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.6",
+      "section": "3",
+      "sort_order": 11,
+      "verbatim_text": "3.6. **Baggage and seat fees.** One checked bag within the airline's standard allowance is reimbursable for any flight. Extra baggage requires a stated business reason (e.g., client deliverables, demo hardware). Seat-selection fees are reimbursable only for L4 and above on flights over 3 hours; otherwise not reimbursable.",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "One checked bag within the airline's standard allowance is reimbursable; extra baggage requires a documented business reason",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "Seat‑selection fees are reimbursable only for grades L4 and above on flights longer than 3 hours",
+          "depends_on": [
+            "employee_grade"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "3.7",
+      "section": "3",
+      "sort_order": 12,
+      "verbatim_text": "3.7. **Cancellation and change fees.** Reimbursable when the change is driven by a genuine business reason (client reschedule, itinerary change directed by a manager, illness, force majeure) with Reporting Manager approval. Not reimbursable when the change is for personal convenience.",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Cancellation or change fees are reimbursable when driven by a genuine business reason and approved by the Reporting Manager",
+          "depends_on": [
+            "claim_note",
+            "approval_email_in_claim"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "Cancellation or change fees are not reimbursable when the change is for personal convenience",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "4.1",
+      "section": "4",
+      "sort_order": 13,
+      "verbatim_text": "4.1. **Class of travel by grade**\n\n| Grade | Rail | Intercity bus |\n|---|---|---|\n| L1 | AC 3-Tier / AC Chair Car | AC Seater |\n| L2 | AC 3-Tier / AC Chair Car | AC Seater |\n| L3 | AC 2-Tier / Executive Chair Car | AC Sleeper |\n| L4 | AC 2-Tier / Executive Chair Car | AC Sleeper |\n| L5 | AC First Class | AC Sleeper |\n| L6 | AC First Class / Executive | AC Sleeper |",
+      "applies_to_categories": [
+        "intercity_travel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Travel class must be one of the allowed classes for the employee's grade",
+          "depends_on": [
+            "employee_grade"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Only applies to intercity travel tickets (rail or bus) and defines allowed classes per grade."
+    },
+    {
+      "clause_id": "4.2",
+      "section": "4",
+      "sort_order": 14,
+      "verbatim_text": "4.2. Rail or bus should be preferred over air travel for routes under 400 km or under 5 hours' journey time where a reasonable service exists, unless the business schedule requires air travel.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Guidance only; not checked."
+    },
+    {
+      "clause_id": "5.1",
+      "section": "5",
+      "sort_order": 15,
+      "verbatim_text": "5.1. **Ride-hailing and cabs — allowed vehicle tier by grade**\n\n| Grade | Allowed tier |\n|---|---|\n| L1 – L3 | Economy / hatchback-sedan tier (e.g., \"Go\"/\"Mini\"-equivalent) |\n| L4 – L5 | Sedan / Premium Sedan |\n| L6 | Any tier, including premium |",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Employee grade must be within the allowed vehicle tier for ride‑hailing/cab",
+          "depends_on": [
+            "employee_grade"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Tier restriction only; no monetary cap."
+    },
+    {
+      "clause_id": "5.2",
+      "section": "5",
+      "sort_order": 16,
+      "verbatim_text": "5.2. Premium tiers (SUV, luxury sedan) above an employee's allowed tier are not reimbursable unless no alternative is available — e.g., group travel with colleagues, heavy equipment/luggage, or no lower-tier vehicle available at the time — and the reason is noted on the claim.",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is for a premium tier vehicle above the employee’s allowed tier",
+          "depends_on": [
+            "employee_grade",
+            "vehicle_type"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "No lower‑tier vehicle or alternative is available, or travel is with a group/heavy luggage, and the reason is noted on the claim",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": "Premium‑tier rides are blocked unless justified."
+    },
+    {
+      "clause_id": "5.3",
+      "section": "5",
+      "sort_order": 17,
+      "verbatim_text": "5.3. **Per-ride cap**\n\n| City tier / zone | Cap per ride |\n|---|---|\n| Tier 1 | ₹800 |\n| Tier 2 | ₹500 |\n| Tier 3 | ₹400 |\n| International (Zone A) | $35 |\n| International (Zone B) | $25 |",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_ride",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "800",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "500",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "400",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "35",
+          "currency": "USD",
+          "when": {
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "25",
+          "currency": "USD",
+          "when": {
+            "zone": [
+              "B"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "5.3.1",
+      "section": "5",
+      "sort_order": 18,
+      "verbatim_text": "5.3.1. **Airport transfers.** A cab or ride-hailing trip to or from the airport is reimbursable as local transport under this clause, at the applicable per-ride cap; it is a separate expense from the flight itself (§3), which is booked and claimed under intercity travel.",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Airport transfers follow the per‑ride caps in clause 5.3."
+    },
+    {
+      "clause_id": "5.3.2",
+      "section": "5",
+      "sort_order": 19,
+      "verbatim_text": "5.3.2. **Late-night travel.** A cab home after 9:00 PM for safety reasons is reimbursable at the standard allowed tier for the employee's grade, regardless of whether the employee would normally use public transport, provided the late finish was for a genuine business reason (client call, release, event).",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Ride occurs after 9:00 PM and the late finish is for a genuine business reason",
+          "depends_on": [
+            "time_of_day",
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Allows standard tier even if employee would normally use public transport."
+    },
+    {
+      "clause_id": "5.4",
+      "section": "5",
+      "sort_order": 20,
+      "verbatim_text": "5.4. Auto-rickshaw, metro, and other public transport fares are reimbursable at actuals with a receipt or a digital payment record (e.g., metro card top-up receipt, UPI payment screenshot showing the vendor).",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [
+        {
+          "item": "receipt",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Auto‑rickshaw, metro, etc. reimbursed at actuals with receipt."
+    },
+    {
+      "clause_id": "5.5",
+      "section": "5",
+      "sort_order": 21,
+      "verbatim_text": "5.5. Parking and toll charges incurred during business travel are reimbursable at actuals with a receipt.",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [
+        {
+          "item": "receipt",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Parking and toll charges reimbursed at actuals with receipt."
+    },
+    {
+      "clause_id": "5.6",
+      "section": "5",
+      "sort_order": 22,
+      "verbatim_text": "5.6. **Daily commute excluded.** The employee's regular home-to-office and office-to-home commute is never reimbursable, regardless of grade, except for the late-night safety exception in §5.3.2.",
+      "applies_to_categories": [
+        "local_transport"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is the employee’s regular home‑to‑office or office‑to‑home commute",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "Late‑night safety exception applies as per clause 5.3.2",
+          "depends_on": [
+            "time_of_day",
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": "Daily commute not reimbursable except for approved late‑night safety rides."
+    },
+    {
+      "clause_id": "6.1",
+      "section": "6",
+      "sort_order": 23,
+      "verbatim_text": "6.1. Employees who use their own two-wheeler or four-wheeler for business travel (client visits, inter-office travel) may claim mileage instead of actual fuel cost.",
+      "applies_to_categories": [
+        "own_vehicle_mileage"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "6.2",
+      "section": "6",
+      "sort_order": 24,
+      "verbatim_text": "6.2. **Per-km rates**\n\n| Vehicle | Rate |\n|---|---|\n| Two-wheeler | ₹4 / km |\n| Four-wheeler | ₹9 / km |",
+      "applies_to_categories": [
+        "own_vehicle_mileage"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_km",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "4",
+          "currency": "INR",
+          "when": {
+            "vehicle_type": [
+              "two_wheeler"
+            ]
+          }
+        },
+        {
+          "amount": "9",
+          "currency": "INR",
+          "when": {
+            "vehicle_type": [
+              "four_wheeler"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "6.3",
+      "section": "6",
+      "sort_order": 25,
+      "verbatim_text": "6.3. **Monthly cap by grade**\n\n| Grade | Monthly cap |\n|---|---|\n| L1 – L2 | ₹3,000 |\n| L3 – L4 | ₹5,000 |\n| L5 – L6 | ₹8,000 |",
+      "applies_to_categories": [
+        "own_vehicle_mileage"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_month",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "3000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L1",
+              "L2"
+            ]
+          }
+        },
+        {
+          "amount": "5000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L3",
+              "L4"
+            ]
+          }
+        },
+        {
+          "amount": "8000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L5",
+              "L6"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "6.4",
+      "section": "6",
+      "sort_order": 26,
+      "verbatim_text": "6.4. **Trip log required.** Every mileage claim must be supported by a trip log recording, for each trip: date, place visited, purpose, client (if applicable), and kilometres travelled. A conveyance form without a trip log will not be processed.",
+      "applies_to_categories": [
+        "own_vehicle_mileage"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "trip log must be attached",
+          "depends_on": [
+            "trip_log_rows"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [
+        {
+          "item": "trip_log",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "6.5",
+      "section": "6",
+      "sort_order": 27,
+      "verbatim_text": "6.5. Mileage and fuel (§7) cannot both be claimed for the same trip — an employee claims one or the other, never both, for a given journey.",
+      "applies_to_categories": [
+        "own_vehicle_mileage",
+        "fuel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "fuel claim for the same trip also submitted",
+          "depends_on": [],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "7.1",
+      "section": "7",
+      "sort_order": 28,
+      "verbatim_text": "7.1. Fuel expenses are reimbursable at actuals, with a fuel station receipt, only for: (a) a company-leased vehicle, or (b) an employee at L5 or above who is on the company car policy.",
+      "applies_to_categories": [
+        "fuel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "company-leased vehicle OR employee grade L5 or above on company car policy",
+          "depends_on": [],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [
+        {
+          "item": "fuel_receipt",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "7.2",
+      "section": "7",
+      "sort_order": 29,
+      "verbatim_text": "7.2. Fuel receipts must show the station name, date, quantity, and amount. A card slip alone is not sufficient (§20.3).",
+      "applies_to_categories": [
+        "fuel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "receipt includes station name, date, quantity and amount",
+          "depends_on": [
+            "receipt_itemised"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [
+        {
+          "item": "fuel_receipt",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "7.3",
+      "section": "7",
+      "sort_order": 30,
+      "verbatim_text": "7.3. Fuel and mileage (§6) cannot both be claimed for the same trip.",
+      "applies_to_categories": [
+        "own_vehicle_mileage",
+        "fuel"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "both fuel and mileage are claimed for the same trip",
+          "depends_on": [
+            "trip_id"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "8.1",
+      "section": "8",
+      "sort_order": 31,
+      "verbatim_text": "8.1. **Nightly caps — domestic (INR), by grade × city tier**\n\n| Grade | Tier 1 | Tier 2 | Tier 3 |\n|---|---|---|---|\n| L1 | 3,500 | 2,800 | 2,200 |\n| L2 | 4,500 | 3,500 | 2,800 |\n| L3 | 6,000 | 4,500 | 3,500 |\n| L4 | 8,000 | 6,000 | 4,500 |\n| L5 | 11,000 | 8,500 | 6,500 |\n| L6 | 16,000 | 12,000 | 9,000 |",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_night",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "3500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L1"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "2800",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L1"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "2200",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L1"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "4500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L2"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "3500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L2"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "2800",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L2"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "6000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L3"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "4500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L3"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "3500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L3"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "8000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L4"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "6000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L4"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "4500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L4"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "11000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L5"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "8500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L5"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "6500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L5"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "16000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L6"
+            ],
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "12000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L6"
+            ],
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "9000",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L6"
+            ],
+            "city_tier": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "8.2",
+      "section": "8",
+      "sort_order": 32,
+      "verbatim_text": "8.2. **Nightly caps — international (USD), by grade × zone**\n\n| Grade | Zone A | Zone B |\n|---|---|---|\n| L1 | 120 | 90 |\n| L2 | 150 | 110 |\n| L3 | 190 | 140 |\n| L4 | 240 | 180 |\n| L5 | 320 | 240 |\n| L6 | 450 | 340 |",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_night",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "120",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L1"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "90",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L1"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        },
+        {
+          "amount": "150",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L2"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "110",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L2"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        },
+        {
+          "amount": "190",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L3"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "140",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L3"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        },
+        {
+          "amount": "240",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L4"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "180",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L4"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        },
+        {
+          "amount": "320",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L5"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "240",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L5"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        },
+        {
+          "amount": "450",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L6"
+            ],
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "340",
+          "currency": "USD",
+          "when": {
+            "grade": [
+              "L6"
+            ],
+            "zone": [
+              "B"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "8.3",
+      "section": "8",
+      "sort_order": 33,
+      "verbatim_text": "8.3. **Staying with friends or family.** In lieu of a hotel, an employee may claim a flat allowance of ₹1,500/night (domestic) or $40/night (international), self-declared, no hotel receipt required.",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_night",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "1500",
+          "currency": "INR",
+          "when": {}
+        },
+        {
+          "amount": "40",
+          "currency": "USD",
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "8.4",
+      "section": "8",
+      "sort_order": 34,
+      "verbatim_text": "8.4. **Non-reimbursable extras.** Minibar charges, alcohol, in-room movies/pay-per-view, and spa/salon services on a hotel folio are never reimbursable, even if the hotel stay itself is within cap.",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the expense is a minibar charge, alcohol, in‑room movie/pay‑per‑view, or spa/salon service",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "8.5",
+      "section": "8",
+      "sort_order": 35,
+      "verbatim_text": "8.5. **Laundry.** Reimbursable only on trips longer than 5 nights, capped at ₹300/day (domestic) or $15/day (international).",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_day",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "300",
+          "currency": "INR",
+          "when": {}
+        },
+        {
+          "amount": "15",
+          "currency": "USD",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "trip length is greater than 5 nights",
+          "depends_on": [
+            "stay_dates"
+          ],
+          "kind": "requires",
+          "check": "numeric",
+          "numeric": {
+            "quantity": "nights",
+            "op": ">",
+            "value": "5"
+          }
+        },
+        {
+          "id": "c2",
+          "text": "the expense is laundry",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "8.6",
+      "section": "8",
+      "sort_order": 36,
+      "verbatim_text": "8.6. **GST invoice required.** A hotel bill of ₹7,500 or more (domestic) must carry a GST invoice showing Konkan Digital's GSTIN; a card slip or folio summary without GST break-up is not accepted above this amount.",
+      "applies_to_categories": [
+        "accommodation"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [
+        {
+          "item": "gst_invoice",
+          "min_amount": "7500"
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "9.1",
+      "section": "9",
+      "sort_order": 37,
+      "verbatim_text": "9.1. Employees may claim meals while travelling either as a fixed daily allowance (per diem, no receipts needed) **or** as actuals up to the same cap (receipts required) — the employee chooses per trip, not per meal, and may not mix both methods on the same day.",
+      "applies_to_categories": [
+        "travel_meals"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_day",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "employee must choose either per diem or actuals for the whole day and cannot mix both methods on the same day",
+          "depends_on": [],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "9.2",
+      "section": "9",
+      "sort_order": 38,
+      "verbatim_text": "9.2. **Per diem / actuals cap**\n\n| City tier / zone | Amount per day |\n|---|---|\n| Tier 1 | ₹1,200 |\n| Tier 2 | ₹900 |\n| Tier 3 | ₹700 |\n| International Zone A | $70 |\n| International Zone B | $50 |",
+      "applies_to_categories": [
+        "travel_meals"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_day",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "1200",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "1"
+            ]
+          }
+        },
+        {
+          "amount": "900",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "2"
+            ]
+          }
+        },
+        {
+          "amount": "700",
+          "currency": "INR",
+          "when": {
+            "city_tier": [
+              "3"
+            ]
+          }
+        },
+        {
+          "amount": "70",
+          "currency": "USD",
+          "when": {
+            "zone": [
+              "A"
+            ]
+          }
+        },
+        {
+          "amount": "50",
+          "currency": "USD",
+          "when": {
+            "zone": [
+              "B"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "9.3",
+      "section": "9",
+      "sort_order": 39,
+      "verbatim_text": "9.3. Alcohol is never reimbursable under travel meals (it is only ever reimbursable under client entertainment, §10.3, within that clause's cap).",
+      "applies_to_categories": [
+        "travel_meals"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is alcohol",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "9.4",
+      "section": "9",
+      "sort_order": 40,
+      "verbatim_text": "9.4. Tips are reimbursable up to 10% of the underlying bill.",
+      "applies_to_categories": [
+        "travel_meals"
+      ],
+      "limit_amount": "10",
+      "limit_currency": null,
+      "limit_unit": "percent_of_amount",
+      "limit_kind": "percent",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "10",
+          "currency": null,
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "10.1",
+      "section": "10",
+      "sort_order": 41,
+      "verbatim_text": "10.1. Meals or events with clients or prospects are reimbursable when the business purpose, client company name, and number of attendees are recorded on the claim.",
+      "applies_to_categories": [
+        "client_entertainment"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "business purpose recorded on the claim",
+          "depends_on": [
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "client company name recorded on the claim",
+          "depends_on": [
+            "client_name"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c3",
+          "text": "number of attendees recorded on the claim",
+          "depends_on": [
+            "attendee_count"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "10.2",
+      "section": "10",
+      "sort_order": 42,
+      "verbatim_text": "10.2. **Per-person cap:** ₹2,500 (domestic) / $60 (international).",
+      "applies_to_categories": [
+        "client_entertainment"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_person",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "2500",
+          "currency": "INR",
+          "when": {}
+        },
+        {
+          "amount": "60",
+          "currency": "USD",
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "10.3",
+      "section": "10",
+      "sort_order": 43,
+      "verbatim_text": "10.3. Alcohol is permitted only under this clause, capped at 30% of the total bill.",
+      "applies_to_categories": [
+        "client_entertainment"
+      ],
+      "limit_amount": "30",
+      "limit_currency": null,
+      "limit_unit": "percent_of_amount",
+      "limit_kind": "percent",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "30",
+          "currency": null,
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is for alcohol",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "10.4",
+      "section": "10",
+      "sort_order": 44,
+      "verbatim_text": "10.4. **Pre-approval required** for any single client entertainment event above ₹15,000 (or $200) — obtained from the Reporting Manager before the event.",
+      "applies_to_categories": [
+        "client_entertainment"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": {
+        "INR": "15000",
+        "USD": "200"
+      },
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "11.1",
+      "section": "11",
+      "sort_order": 45,
+      "verbatim_text": "11.1. **Per-head cap:** ₹800 for a routine team lunch/dinner; ₹1,500 for a celebration (birthday, festival, project milestone).",
+      "applies_to_categories": [
+        "team_events"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_person",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "800",
+          "currency": "INR",
+          "when": {
+            "occasion": [
+              "routine"
+            ]
+          }
+        },
+        {
+          "amount": "1500",
+          "currency": "INR",
+          "when": {
+            "occasion": [
+              "celebration"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "11.2",
+      "section": "11",
+      "sort_order": 46,
+      "verbatim_text": "11.2. Any team event totalling more than ₹5,000 requires Reporting Manager approval before or promptly after the event.",
+      "applies_to_categories": [
+        "team_events"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": {
+        "INR": "5000"
+      },
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "11.3",
+      "section": "11",
+      "sort_order": 47,
+      "verbatim_text": "11.3. **Frequency limit:** no more than 2 reimbursed team events per team per calendar month.",
+      "applies_to_categories": [
+        "team_events"
+      ],
+      "limit_amount": "2",
+      "limit_currency": null,
+      "limit_unit": "per_month",
+      "limit_kind": "count",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "2",
+          "currency": null,
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "12.1",
+      "section": "12",
+      "sort_order": 48,
+      "verbatim_text": "12.1. **Mobile monthly cap by grade**\n\n| Grade | Monthly cap |\n|---|---|\n| L1 – L2 | ₹800 |\n| L3 – L4 | ₹1,500 |\n| L5 – L6 | ₹2,500 |",
+      "applies_to_categories": [
+        "phone_internet"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_month",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "800",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L1",
+              "L2"
+            ]
+          }
+        },
+        {
+          "amount": "1500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L3",
+              "L4"
+            ]
+          }
+        },
+        {
+          "amount": "2500",
+          "currency": "INR",
+          "when": {
+            "grade": [
+              "L5",
+              "L6"
+            ]
+          }
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "12.2",
+      "section": "12",
+      "sort_order": 49,
+      "verbatim_text": "12.2. Home broadband is reimbursable, up to ₹1,500/month, for L4 and above, and for any role formally designated remote or field-based by HR.",
+      "applies_to_categories": [
+        "phone_internet"
+      ],
+      "limit_amount": "1500",
+      "limit_currency": "INR",
+      "limit_unit": "per_month",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "1500",
+          "currency": "INR",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the employee is grade L4 or above, or the role is formally designated remote/field-based by HR",
+          "kind": "requires",
+          "check": "judgment",
+          "depends_on": [
+            "employee_designation"
+          ],
+          "numeric": null,
+          "any_of": [
+            {
+              "id": "c1a",
+              "text": "grade is L4 or above",
+              "check": "numeric",
+              "depends_on": [
+                "employee_grade"
+              ],
+              "numeric": {
+                "quantity": "grade_rank",
+                "op": ">=",
+                "value": "4"
+              }
+            },
+            {
+              "id": "c1b",
+              "text": "the role is designated remote or field-based by HR",
+              "check": "judgment",
+              "depends_on": [
+                "employee_designation"
+              ],
+              "numeric": null
+            }
+          ]
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "12.3",
+      "section": "12",
+      "sort_order": 50,
+      "verbatim_text": "12.3. International roaming is reimbursable only with pre-approval before travel, capped at ₹3,000 per trip (or actuals with written pre-approval for a higher amount).",
+      "applies_to_categories": [
+        "phone_internet"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": {
+        "INR": "0"
+      },
+      "is_prohibition": false,
+      "notes": "Cap is 3,000 per trip; above that, WRITTEN pre-approval is required. This structure only records that approval is always required."
+    },
+    {
+      "clause_id": "12.4",
+      "section": "12",
+      "sort_order": 51,
+      "verbatim_text": "12.4. The bill must be in the employee's own name or in Konkan Digital's name; a bill in a third party's name (family member, flatmate) is not reimbursable.",
+      "applies_to_categories": [
+        "phone_internet"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "bill is in a third‑party name (family member, flatmate)",
+          "depends_on": [
+            "billed_to_name"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "13.1",
+      "section": "13",
+      "sort_order": 52,
+      "verbatim_text": "13.1. Any paid software, SaaS tool, or online subscription for business use requires IT pre-approval before purchase.",
+      "applies_to_categories": [
+        "software_subscriptions"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "IT pre‑approval before purchase",
+          "depends_on": [
+            "preapproval_evidence"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "13.2",
+      "section": "13",
+      "sort_order": 53,
+      "verbatim_text": "13.2. Personal subscriptions (streaming, personal cloud storage, personal productivity tools) are never reimbursable (see also §19).",
+      "applies_to_categories": [
+        "software_subscriptions"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the subscription is personal (non‑business)",
+          "depends_on": [
+            "business_purpose"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "13.3",
+      "section": "13",
+      "sort_order": 54,
+      "verbatim_text": "13.3. Annual billing plans require both Reporting Manager and IT approval; monthly billing is the default without this additional approval.",
+      "applies_to_categories": [
+        "software_subscriptions"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "billing plan is annual (requires both Reporting Manager and IT approval)",
+          "depends_on": [
+            "claim_note"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "14.1",
+      "section": "14",
+      "sort_order": 55,
+      "verbatim_text": "14.1. Small purchases under ₹2,000 per item (stationery, a mouse, a headset) may be bought and claimed directly without prior approval.",
+      "applies_to_categories": [
+        "office_supplies_equipment"
+      ],
+      "limit_amount": "2000",
+      "limit_currency": "INR",
+      "limit_unit": "per_item",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [
+        {
+          "amount": "2000",
+          "currency": "INR",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense amount per item is under ₹2,000",
+          "depends_on": [
+            "document_amount"
+          ],
+          "kind": "requires",
+          "check": "numeric",
+          "numeric": {
+            "quantity": "amount",
+            "op": "<",
+            "value": "2000"
+          }
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "applies per individual item, not total claim"
+    },
+    {
+      "clause_id": "14.2",
+      "section": "14",
+      "sort_order": 56,
+      "verbatim_text": "14.2. Any purchase of ₹2,000 or more is capital equipment and must go through Procurement as a company asset — it is not reimbursed as an expense claim.",
+      "applies_to_categories": [
+        "office_supplies_equipment"
+      ],
+      "limit_amount": "2000",
+      "limit_currency": "INR",
+      "limit_unit": "per_item",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "2000",
+          "currency": "INR",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense amount per item is ₹2,000 or more",
+          "depends_on": [
+            "document_amount"
+          ],
+          "kind": "excludes",
+          "check": "numeric",
+          "numeric": {
+            "quantity": "amount",
+            "op": ">=",
+            "value": "2000"
+          }
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": "must be processed via Procurement, not reimbursed as an expense claim"
+    },
+    {
+      "clause_id": "15.1",
+      "section": "15",
+      "sort_order": 57,
+      "verbatim_text": "15.1. Any course, certification, exam, or conference requires pre-approval from the Reporting Manager and, for a spend above ₹50,000, from an L5-or-above approver, before enrolment.",
+      "applies_to_categories": [
+        "training_conferences"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": {
+        "INR": "50000"
+      },
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "15.2",
+      "section": "15",
+      "sort_order": 58,
+      "verbatim_text": "15.2. Covered costs: course/exam fees and official course materials. Conference passes are covered under this clause; travel and accommodation to attend are claimed under the relevant travel clauses (§3–§9), not under this one.",
+      "applies_to_categories": [
+        "training_conferences"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "covers only fees and official materials; travel/accommodation claimed elsewhere"
+    },
+    {
+      "clause_id": "15.3",
+      "section": "15",
+      "sort_order": 59,
+      "verbatim_text": "15.3. **Service bond.** Any single course or certification costing more than ₹50,000 requires the employee to sign a 12-month service retention bond before enrolment.",
+      "applies_to_categories": [
+        "training_conferences"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the course costs no more than 50,000, or the employee has signed the 12-month service retention bond",
+          "kind": "requires",
+          "check": "judgment",
+          "depends_on": [
+            "service_bond"
+          ],
+          "numeric": null,
+          "any_of": [
+            {
+              "id": "c1a",
+              "text": "the amount is no more than 50,000",
+              "check": "numeric",
+              "depends_on": [
+                "document_amount"
+              ],
+              "numeric": {
+                "quantity": "amount",
+                "op": "<=",
+                "value": "50000"
+              }
+            },
+            {
+              "id": "c1b",
+              "text": "a 12-month service retention bond was signed before enrolment",
+              "check": "judgment",
+              "depends_on": [
+                "service_bond"
+              ],
+              "numeric": null
+            }
+          ]
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "16.1",
+      "section": "16",
+      "sort_order": 60,
+      "verbatim_text": "16.1. **Visa fees** for an approved business trip are reimbursable at actuals with pre-approval.",
+      "applies_to_categories": [
+        "travel_documents_fees"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is for an approved business trip",
+          "depends_on": [
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "pre‑approval evidence is required",
+          "depends_on": [
+            "preapproval_evidence"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "16.2",
+      "section": "16",
+      "sort_order": 61,
+      "verbatim_text": "16.2. **Passport fees** are reimbursable only when a first-time application or renewal is solely necessitated by a specific approved business trip and the employee holds no other valid passport; capped at the government fee (expedited/tatkal surcharge requires pre-approval).",
+      "applies_to_categories": [
+        "travel_documents_fees"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is for a first‑time application or renewal solely necessitated by the approved business trip",
+          "depends_on": [
+            "business_purpose"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c2",
+          "text": "employee holds no other valid passport",
+          "depends_on": [],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        },
+        {
+          "id": "c3",
+          "text": "if expedited/tatkal surcharge is claimed, pre‑approval evidence is required",
+          "depends_on": [
+            "preapproval_evidence",
+            "line_item_names"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "16.3",
+      "section": "16",
+      "sort_order": 62,
+      "verbatim_text": "16.3. **Travel insurance** is mandatory for all international trips — arranged by the Travel Desk where possible, or reimbursed at actuals up to $50/trip.",
+      "applies_to_categories": [
+        "travel_documents_fees"
+      ],
+      "limit_amount": "50",
+      "limit_currency": "USD",
+      "limit_unit": "per_trip",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "50",
+          "currency": "USD",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "expense is for an international trip",
+          "depends_on": [
+            "expense_country"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "16.4",
+      "section": "16",
+      "sort_order": 63,
+      "verbatim_text": "16.4. **Forex fees.** Currency conversion/markup fees and prepaid forex card loading fees are reimbursable up to 2% of the converted amount.",
+      "applies_to_categories": [
+        "travel_documents_fees"
+      ],
+      "limit_amount": "2",
+      "limit_currency": null,
+      "limit_unit": "percent_of_amount",
+      "limit_kind": "percent",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "2",
+          "currency": null,
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "17.1",
+      "section": "17",
+      "sort_order": 64,
+      "verbatim_text": "17.1. **Per-recipient limit:** ₹2,500 (domestic) / $50 (international).",
+      "applies_to_categories": [
+        "other"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "per_person",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "2500",
+          "currency": "INR",
+          "when": {}
+        },
+        {
+          "amount": "50",
+          "currency": "USD",
+          "when": {}
+        }
+      ],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "17.2",
+      "section": "17",
+      "sort_order": 65,
+      "verbatim_text": "17.2. **Anti-bribery.** Gifts to government officials, public-sector employees, or regulators are prohibited without exception, regardless of value, and regardless of local custom.",
+      "applies_to_categories": [
+        "other"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "gift to government officials, public-sector employees, or regulators",
+          "depends_on": [
+            "recipient_identity"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "17.3",
+      "section": "17",
+      "sort_order": 66,
+      "verbatim_text": "17.3. Every business gift must be logged in the Gifts Register with recipient name, organization, and occasion, in addition to the expense claim itself.",
+      "applies_to_categories": [
+        "other"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "gift is logged in the Gifts Register with recipient name, organization, and occasion",
+          "depends_on": [],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "18.1",
+      "section": "18",
+      "sort_order": 67,
+      "verbatim_text": "18.1. Courier/postage and printing for business purposes are reimbursable at actuals. Amounts under ₹1,000 may be self-declared (§20.2); ₹1,000 and above require a receipt.",
+      "applies_to_categories": [
+        "other"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [
+        {
+          "item": "receipt",
+          "min_amount": "1000"
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "19.1",
+      "section": "19",
+      "sort_order": 68,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Traffic fines, parking fines, and other penalties, however incurred.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is a traffic fine, parking fine, or other penalty",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.2",
+      "section": "19",
+      "sort_order": 69,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Personal grooming (haircuts, spa, salon) other than the exclusion already noted in §8.4.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is personal grooming (haircut, spa, salon)",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.3",
+      "section": "19",
+      "sort_order": 70,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Expenses for family members or other dependents accompanying the employee.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is for family members or dependents accompanying the employee",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.4",
+      "section": "19",
+      "sort_order": 71,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Purchase or top-up of loyalty points, airline miles, or hotel-status upgrades paid in cash.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is purchase or top‑up of loyalty points, airline miles, or hotel‑status upgrades paid in cash",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.5",
+      "section": "19",
+      "sort_order": 72,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Personal software/media subscriptions (§13.2).",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is a personal software or media subscription",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.6",
+      "section": "19",
+      "sort_order": 73,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Alcohol, except within the client entertainment cap (§10.3).",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is alcohol (outside the client entertainment cap)",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.7",
+      "section": "19",
+      "sort_order": 74,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Entertainment unrelated to business (movies, personal outings, personal gym/club memberships).",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense is entertainment unrelated to business (movies, personal outings, personal gym/club memberships)",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "19.8",
+      "section": "19",
+      "sort_order": 75,
+      "verbatim_text": "The following are never reimbursable, under any clause of this policy:\n- Any expense already reimbursed by a client or under any other Konkan Digital policy or benefit.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "Expense has already been reimbursed by a client or under another Konkan Digital policy or benefit",
+          "depends_on": [
+            "line_item_names"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "20.1",
+      "section": "20",
+      "sort_order": 76,
+      "verbatim_text": "20.1. An itemised original receipt is required for any single expense of ₹500 or more (domestic) or $10 or more (international).",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [
+        {
+          "item": "itemised_original_receipt",
+          "min_amount": {
+            "INR": "500",
+            "USD": "10"
+          }
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "20.2",
+      "section": "20",
+      "sort_order": 77,
+      "verbatim_text": "20.2. Below that amount, self-declaration (a short note describing the expense) is acceptable, up to a cumulative ₹3,000 per employee per month across all self-declared expenses.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": "3000",
+      "limit_currency": "INR",
+      "limit_unit": "per_month",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [
+        {
+          "amount": "3000",
+          "currency": "INR",
+          "when": {}
+        }
+      ],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the expense is below the 500 receipt threshold (self-declaration is only for these)",
+          "kind": "requires",
+          "check": "numeric",
+          "depends_on": [
+            "document_amount"
+          ],
+          "numeric": {
+            "quantity": "amount",
+            "op": "<",
+            "value": "500"
+          }
+        }
+      ],
+      "documentation_required": [
+        {
+          "item": "self_declaration_note",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "20.3",
+      "section": "20",
+      "sort_order": 78,
+      "verbatim_text": "20.3. A card payment slip or swipe confirmation alone, without an itemised bill, is not accepted as proof of an expense.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "count",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "proof is only a card payment slip or swipe confirmation without an itemised bill",
+          "depends_on": [
+            "receipt_itemised"
+          ],
+          "kind": "excludes",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": null
+    },
+    {
+      "clause_id": "20.4",
+      "section": "20",
+      "sort_order": 79,
+      "verbatim_text": "20.4. Digital receipts (emailed invoice, PDF, clear photo/scan) are accepted provided they legibly show the vendor name, amount, date, and — where applicable — GSTIN.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "count",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "digital receipt legibly shows vendor name, amount, date, and where applicable GSTIN",
+          "depends_on": [
+            "vendor_name",
+            "document_amount",
+            "bill_date",
+            "gstin_on_invoice"
+          ],
+          "kind": "requires",
+          "check": "judgment",
+          "numeric": null
+        }
+      ],
+      "documentation_required": [
+        {
+          "item": "digital_receipt",
+          "min_amount": null
+        }
+      ],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "21.1",
+      "section": "21",
+      "sort_order": 80,
+      "verbatim_text": "21.1. Domestic expenses must be submitted within 30 days of the expense date.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the expense is submitted within 30 days of the expense date",
+          "kind": "requires",
+          "check": "numeric",
+          "depends_on": [
+            "bill_date"
+          ],
+          "numeric": {
+            "quantity": "days_since_expense",
+            "op": "<=",
+            "value": "30"
+          }
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "applies to submission date vs expense date"
+    },
+    {
+      "clause_id": "21.2",
+      "section": "21",
+      "sort_order": 81,
+      "verbatim_text": "21.2. Expenses from an international trip must be submitted within 60 days of the employee's return.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the expense is submitted within 60 days of the employee's return from the international trip",
+          "kind": "requires",
+          "check": "judgment",
+          "depends_on": [
+            "trip_dates"
+          ],
+          "numeric": null
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "applies to international trip expense submission"
+    },
+    {
+      "clause_id": "21.3",
+      "section": "21",
+      "sort_order": 82,
+      "verbatim_text": "21.3. Ordinarily one claim per trip, or one consolidated claim per month for recurring expenses (phone, mileage).",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "recurring expenses (phone, mileage) may be consolidated monthly"
+    },
+    {
+      "clause_id": "21.4",
+      "section": "21",
+      "sort_order": 83,
+      "verbatim_text": "21.4. Claims older than 90 days from the expense date are rejected outright; there is no exception process for a claim submitted this late.",
+      "applies_to_categories": [
+        "*"
+      ],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [
+        {
+          "id": "c1",
+          "text": "the claim is more than 90 days after the expense date",
+          "kind": "excludes",
+          "check": "numeric",
+          "depends_on": [
+            "bill_date"
+          ],
+          "numeric": {
+            "quantity": "days_since_expense",
+            "op": ">",
+            "value": "90"
+          }
+        }
+      ],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": true,
+      "notes": "no exception process for late claims"
+    },
+    {
+      "clause_id": "22.1",
+      "section": "22",
+      "sort_order": 84,
+      "verbatim_text": "22.1. For a card payment, the conversion rate actually applied by the card issuer (as shown on the card/bank statement) is used.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Conversion rate for card payments is taken from the card issuer's statement."
+    },
+    {
+      "clause_id": "22.2",
+      "section": "22",
+      "sort_order": 85,
+      "verbatim_text": "22.2. Where no card statement is available (e.g., cash payment), the Reserve Bank of India reference rate for the transaction date is used.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "When no card statement is available, the RBI reference rate for the transaction date is used."
+    },
+    {
+      "clause_id": "22.3",
+      "section": "22",
+      "sort_order": 86,
+      "verbatim_text": "22.3. For a cash currency exchange, the rate on the money-changer's own receipt is used, provided the receipt is attached.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "For cash currency exchange, the rate on the money‑changer's receipt is used if the receipt is attached."
+    },
+    {
+      "clause_id": "23.1",
+      "section": "23",
+      "sort_order": 87,
+      "verbatim_text": "23.1. **Auto-approval.** A claim of ₹5,000 or less with no validation flags (all arithmetic checks pass, no policy-limit breach) is approved automatically.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "23.2",
+      "section": "23",
+      "sort_order": 88,
+      "verbatim_text": "23.2. **₹5,001 – ₹25,000:** Reporting Manager approval required.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "23.3",
+      "section": "23",
+      "sort_order": 89,
+      "verbatim_text": "23.3. **₹25,001 – ₹1,00,000:** Reporting Manager and Finance approval required.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "23.4",
+      "section": "23",
+      "sort_order": 90,
+      "verbatim_text": "23.4. **Above ₹1,00,000:** Reporting Manager, Finance, and Department Head approval required.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "23.5",
+      "section": "23",
+      "sort_order": 91,
+      "verbatim_text": "23.5. **Policy exceptions.** Any claim that breaches a specific clause of this policy (an over-cap hotel night, a higher class of air travel than the grade allows, etc.) requires a written justification from the employee and approval one level above what the claim amount alone would require under §23.2–23.4.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": false,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": null
+    },
+    {
+      "clause_id": "24.1",
+      "section": "24",
+      "sort_order": 92,
+      "verbatim_text": "24.1. **Duplicate claims** — submitting the same receipt or bill more than once, in the same or a different claim — are prohibited and treated as a compliance violation.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Informational here: duplicate detection is Stage 4."
+    },
+    {
+      "clause_id": "24.2",
+      "section": "24",
+      "sort_order": 93,
+      "verbatim_text": "24.2. **Claim splitting** — dividing a single expense into multiple smaller claims to stay under an approval or receipt threshold — is prohibited.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Informational here: claim splitting is Stage 4."
+    },
+    {
+      "clause_id": "24.3",
+      "section": "24",
+      "sort_order": 94,
+      "verbatim_text": "24.3. **Altered receipts** — any receipt that has been edited, whited-out, or otherwise tampered with — are treated as fraud, not a processing error.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Informational here: tamper detection is Stage 4."
+    },
+    {
+      "clause_id": "24.4",
+      "section": "24",
+      "sort_order": 95,
+      "verbatim_text": "24.4. **Double reimbursement** — claiming an expense that has already been reimbursed by a client, another employer, or under any other Konkan Digital benefit — is prohibited.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Informational here: double reimbursement is Stage 4."
+    },
+    {
+      "clause_id": "24.5",
+      "section": "24",
+      "sort_order": 96,
+      "verbatim_text": "24.5. Finance conducts periodic random and risk-based audits of submitted claims. A confirmed violation of §24.1–24.4 may result in recovery of the amount paid, disciplinary action up to and including termination, and referral to law enforcement where fraud is indicated.",
+      "applies_to_categories": [],
+      "limit_amount": null,
+      "limit_currency": null,
+      "limit_unit": "none",
+      "limit_kind": "amount",
+      "limit_inclusive": true,
+      "limit_table": [],
+      "conditions": [],
+      "documentation_required": [],
+      "requires_approval_above": null,
+      "is_prohibition": false,
+      "notes": "Informational."
+    }
+  ]
+}

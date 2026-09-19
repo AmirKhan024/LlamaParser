@@ -1,0 +1,160 @@
+
+Applied 32 manual correction(s) from policy\policy_v1.overrides.json (recorded in the JSON).
+
+Policy structured: 97 clauses from 23 sections (model openai/gpt-oss-120b, prompt structure-v2)
+
+id      categories                 unit            limit                                        cond doc appr         proh flags
+--------------------------------------------------------------------------------------------------------------------------------
+1.1     (informational)            none            -                                            0    0   -            -    
+1.2     *                          none            -                                            1    0   -            -    STAGE1_GAP
+1.3     (informational)            none            -                                            0    0   -            -    
+1.4     (informational)            none            -                                            0    0   -            -    
+1.5     *                          none            -                                            1    0   -            Y    
+1.6     (informational)            none            -                                            0    0   -            -    
+3.1     intercity_travel           none            -                                            1    0   -            -    
+3.2     intercity_travel           none            -                                            1    0   -            -    STAGE1_GAP
+3.3     intercity_travel           none            -                                            1    0   -            -    
+3.4     intercity_travel           none            -                                            1    0   -            -    UNCAPTURED_NUMBERS
+3.5     intercity_travel           none            -                                            1    0   -            -    UNCAPTURED_NUMBERS
+3.6     intercity_travel           none            -                                            2    0   -            -    
+3.7     intercity_travel           none            -                                            2    0   -            -    
+4.1     intercity_travel           none            -                                            1    0   -            -    UNCAPTURED_NUMBERS
+4.2     (informational)            none            -                                            0    0   -            -    UNCAPTURED_NUMBERS
+5.1     local_transport            none            -                                            1    0   -            -    
+5.2     local_transport            none            -                                            2    0   -            Y    STAGE1_GAP
+5.3     local_transport            per_ride        5 entries 25-800 INR/USD by city_tierxzone   0    0   -            -    
+5.3.1   local_transport            none            -                                            0    0   -            -    
+5.3.2   local_transport            none            -                                            1    0   -            -    STAGE1_GAP
+5.4     local_transport            none            -                                            0    1   -            -    
+5.5     local_transport            none            -                                            0    1   -            -    
+5.6     local_transport            none            -                                            2    0   -            Y    STAGE1_GAP
+6.1     own_vehicle_mileage        none            -                                            0    0   -            -    
+6.2     own_vehicle_mileage        per_km          2 entries 4-9 INR by vehicle_type            0    0   -            -    
+6.3     own_vehicle_mileage        per_month       3 entries 3000-8000 INR by grade             0    0   -            -    
+6.4     own_vehicle_mileage        none            -                                            1    1   -            -    STAGE1_GAP
+6.5     own_vehicle_mileage,fuel   none            -                                            1    0   -            Y    
+7.1     fuel                       none            -                                            1    1   -            -    
+7.2     fuel                       none            -                                            1    1   -            -    STAGE1_GAP
+7.3     own_vehicle_mileage,fuel   none            -                                            1    0   -            Y    STAGE1_GAP
+8.1     accommodation              per_night       18 entries 2200-16000 INR by city_tierxgrade 0    0   -            -    OVERLAP
+8.2     accommodation              per_night       12 entries 90-450 USD by gradexzone          0    0   -            -    OVERLAP
+8.3     accommodation              per_night       2 entries 40-1500 INR/USD by n/a             0    0   -            -    OVERLAP
+8.4     accommodation              none            -                                            1    0   -            Y    
+8.5     accommodation              per_day         2 entries 15-300 INR/USD by n/a              2    0   -            -    STAGE1_GAP
+8.6     accommodation              none            -                                            0    1   -            -    
+9.1     travel_meals               per_day         -                                            1    0   -            -    
+9.2     travel_meals               per_day         5 entries 50-1200 INR/USD by city_tierxzone  0    0   -            -    
+9.3     travel_meals               none            -                                            1    0   -            Y    
+9.4     travel_meals               percent_of_amount 10                                           0    0   -            -    
+10.1    client_entertainment       none            -                                            3    0   -            -    STAGE1_GAP
+10.2    client_entertainment       per_person      2 entries 60-2500 INR/USD by n/a             0    0   -            -    
+10.3    client_entertainment       percent_of_amount 30                                           1    0   -            -    
+10.4    client_entertainment       none            -                                            0    0   INR>15000,US -    
+11.1    team_events                per_person      2 entries 800-1500 INR by occasion           0    0   -            -    
+11.2    team_events                none            -                                            0    0   INR>5000     -    
+11.3    team_events                per_month       2                                            0    0   -            -    
+12.1    phone_internet             per_month       3 entries 800-2500 INR by grade              0    0   -            -    OVERLAP
+12.2    phone_internet             per_month       1500 INR                                     1    0   -            -    OVERLAP,STAGE1_GAP
+12.3    phone_internet             none            -                                            0    0   INR>0        -    
+12.4    phone_internet             none            -                                            1    0   -            Y    STAGE1_GAP
+13.1    software_subscriptions     none            -                                            1    0   -            -    STAGE1_GAP
+13.2    software_subscriptions     none            -                                            1    0   -            Y    STAGE1_GAP
+13.3    software_subscriptions     none            -                                            1    0   -            -    
+14.1    office_supplies_equipment  per_item        2000 INR (excl)                              1    0   -            -    
+14.2    office_supplies_equipment  per_item        2000 INR                                     1    0   -            Y    
+15.1    training_conferences       none            -                                            0    0   INR>50000    -    
+15.2    training_conferences       none            -                                            0    0   -            -    
+15.3    training_conferences       none            -                                            1    0   -            -    STAGE1_GAP
+16.1    travel_documents_fees      none            -                                            2    0   -            -    STAGE1_GAP
+16.2    travel_documents_fees      none            -                                            3    0   -            -    STAGE1_GAP
+16.3    travel_documents_fees      per_trip        50 USD                                       1    0   -            -    STAGE1_GAP
+16.4    travel_documents_fees      percent_of_amount 2                                            0    0   -            -    
+17.1    other                      per_person      2 entries 50-2500 INR/USD by n/a             0    0   -            -    
+17.2    other                      none            -                                            1    0   -            Y    STAGE1_GAP
+17.3    other                      none            -                                            1    0   -            -    
+18.1    other                      none            -                                            0    1   -            -    
+19.1    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.2    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.3    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.4    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.5    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.6    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.7    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+19.8    *                          none            -                                            1    0   -            Y    SYNTHESIZED_ID
+20.1    *                          none            -                                            0    1   -            -    
+20.2    *                          per_month       3000 INR                                     1    1   -            -    NUMBER_NOT_IN_TEXT
+20.3    *                          none            -                                            1    0   -            Y    STAGE1_GAP
+20.4    *                          none            -                                            1    1   -            -    STAGE1_GAP
+21.1    *                          none            -                                            1    0   -            -    
+21.2    *                          none            -                                            1    0   -            -    STAGE1_GAP
+21.3    (informational)            none            -                                            0    0   -            -    
+21.4    *                          none            -                                            1    0   -            Y    
+22.1    (informational)            none            -                                            0    0   -            -    
+22.2    (informational)            none            -                                            0    0   -            -    
+22.3    (informational)            none            -                                            0    0   -            -    
+23.1    (informational)            none            -                                            0    0   -            -    UNCAPTURED_NUMBERS
+23.2    (informational)            none            -                                            0    0   -            -    UNCAPTURED_NUMBERS
+23.3    (informational)            none            -                                            0    0   -            -    UNCAPTURED_NUMBERS
+23.4    (informational)            none            -                                            0    0   -            -    UNCAPTURED_NUMBERS
+23.5    (informational)            none            -                                            0    0   -            -    
+24.1    (informational)            none            -                                            0    0   -            -    
+24.2    (informational)            none            -                                            0    0   -            -    
+24.3    (informational)            none            -                                            0    0   -            -    
+24.4    (informational)            none            -                                            0    0   -            -    
+24.5    (informational)            none            -                                            0    0   -            -    
+
+CONFLICTS (42) -- none of these were resolved automatically:
+
+[OVERLAP] (3)
+  - [accommodation] 8.1 and 8.3 both set a per_night limit that can apply to the same expense (3500 vs 1500 INR); the text may make one an alternative to the other
+  - [accommodation] 8.2 and 8.3 both set a per_night limit that can apply to the same expense (120 vs 40 USD); the text may make one an alternative to the other
+  - [phone_internet] 12.1 and 12.2 both set a per_month limit that can apply to the same expense (800 vs 1500 INR); the text may make one an alternative to the other
+
+[NUMBER_NOT_IN_TEXT] (1)
+  - 20.2: structured number(s) [Decimal('500')] do not appear in the clause text
+
+[UNCAPTURED_NUMBERS] (8)
+  - 3.4: number(s) [Decimal('3')] in the text appear nowhere in the structure
+  - 3.5: number(s) [Decimal('6')] in the text appear nowhere in the structure
+  - 4.1: number(s) [Decimal('2'), Decimal('3')] in the text appear nowhere in the structure
+  - 4.2: number(s) [Decimal('5'), Decimal('400')] in the text appear nowhere in the structure
+  - 23.1: number(s) [Decimal('5000')] in the text appear nowhere in the structure
+  - 23.2: number(s) [Decimal('5001'), Decimal('25000')] in the text appear nowhere in the structure
+  - 23.3: number(s) [Decimal('25001'), Decimal('100000')] in the text appear nowhere in the structure
+  - 23.4: number(s) [Decimal('100000')] in the text appear nowhere in the structure
+
+[STAGE1_GAP] (22)
+  - 1.2: conditions depend on business_purpose (not_extracted)
+  - 5.2: conditions depend on vehicle_type (not_extracted)
+  - 5.3.2: conditions depend on business_purpose (not_extracted), time_of_day (not_extracted)
+  - 5.6: conditions depend on business_purpose (not_extracted), time_of_day (not_extracted)
+  - 6.4: conditions depend on trip_log_rows (partial)
+  - 7.2: conditions depend on receipt_itemised (partial)
+  - 7.3: conditions depend on trip_id (not_extracted)
+  - 8.5: conditions depend on stay_dates (partial)
+  - 10.1: conditions depend on attendee_count (partial), business_purpose (not_extracted), client_name (partial)
+  - 13.1: conditions depend on preapproval_evidence (not_extracted)
+  - 13.2: conditions depend on business_purpose (not_extracted)
+  - 17.2: conditions depend on recipient_identity (not_extracted)
+  - 20.3: conditions depend on receipt_itemised (partial)
+  - 20.4: conditions depend on gstin_on_invoice (not_extracted)
+  - 3.2: conditions depend on booking_lead_time (not_extracted)
+  - 12.2: conditions depend on employee_designation (not_extracted)
+  - 12.4: conditions depend on billed_to_name (not_extracted)
+  - 15.3: conditions depend on service_bond (not_extracted)
+  - 16.1: conditions depend on business_purpose (not_extracted), preapproval_evidence (not_extracted)
+  - 16.2: conditions depend on business_purpose (not_extracted), preapproval_evidence (not_extracted)
+  - 16.3: conditions depend on expense_country (partial)
+  - 21.2: conditions depend on trip_dates (not_extracted)
+
+[SYNTHESIZED_ID] (8)
+  - 19.1: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.2: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.3: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.4: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.5: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.6: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.7: the policy prints this as an unnumbered bullet under section 19; the id is generated
+  - 19.8: the policy prints this as an unnumbered bullet under section 19; the id is generated
+
+Wrote C:\Users\Amir Khan\Desktop\Ai Reimbursement\expense_reimbursement\policy\policy_v1.json (97 clauses; human_reviewed=False).

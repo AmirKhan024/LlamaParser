@@ -1,0 +1,346 @@
+{
+  "_comment": "Manual corrections applied by scripts/build_policy.py --overrides on top of the model's structure. Written by the Claude session that built Stage 3, NOT by a human reviewer -- each is a judgment to check against policy/expense_policy.md. Every entry is copied into policy_v1.json's build_meta.manual_edits with its reason and the value it replaced.",
+  "10.4": {
+    "_reason": "The model turned 'pre-approval required above 15,000 / $200' into a hard per-event limit as well as an approval threshold. Exceeding a threshold that needs approval must read as needs_approval, not violation. Also removed an unconditional 'preapproval_evidence' documentation item: approval is already checked through requires_approval_above, and the item would make every event under the threshold 'unknown'.",
+    "limit_unit": "none",
+    "limit_table": [],
+    "documentation_required": []
+  },
+  "11.2": {
+    "_reason": "Same defect as 10.4: 'more than 5,000 requires approval' is an approval threshold, not a cap.",
+    "limit_unit": "none",
+    "limit_inclusive": true,
+    "limit_table": []
+  },
+  "15.1": {
+    "_reason": "Same defect as 10.4: the 50,000 figure is the level above which an L5+ approver is needed, not a cap on training spend.",
+    "limit_unit": "none",
+    "limit_table": []
+  },
+  "15.3": {
+    "_reason": "The model made 50,000 a hard limit. The clause says a course above 50,000 needs a signed service bond: a requirement that applies only above the threshold, i.e. 'not above 50,000 OR bond signed'.",
+    "limit_unit": "none",
+    "limit_table": [],
+    "documentation_required": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the course costs no more than 50,000, or the employee has signed the 12-month service retention bond",
+        "kind": "requires",
+        "check": "judgment",
+        "depends_on": [
+          "service_bond"
+        ],
+        "numeric": null,
+        "any_of": [
+          {
+            "id": "c1a",
+            "text": "the amount is no more than 50,000",
+            "check": "numeric",
+            "depends_on": [
+              "document_amount"
+            ],
+            "numeric": {
+              "quantity": "amount",
+              "op": "<=",
+              "value": "50000"
+            }
+          },
+          {
+            "id": "c1b",
+            "text": "a 12-month service retention bond was signed before enrolment",
+            "check": "judgment",
+            "depends_on": [
+              "service_bond"
+            ],
+            "numeric": null
+          }
+        ]
+      }
+    ]
+  },
+  "20.1": {
+    "_reason": "The model structured the receipt thresholds (500 / $10) as per-claim LIMITS and as failing conditions, so any expense of 500 or more would read as a violation. They are thresholds for a documentation requirement, per currency.",
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "documentation_required": [
+      {
+        "item": "itemised_original_receipt",
+        "min_amount": {
+          "INR": "500",
+          "USD": "10"
+        }
+      }
+    ]
+  },
+  "20.2": {
+    "_reason": "The model used the 'amount' quantity for a cumulative monthly figure (it would compare one bill to 3,000 twice). Kept as the monthly aggregate limit; the 'below the receipt threshold' condition is the numeric amount < 500. NOTE: the clause means all self-declared expenses across categories, but monthly aggregation here is per category.",
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the expense is below the 500 receipt threshold (self-declaration is only for these)",
+        "kind": "requires",
+        "check": "numeric",
+        "depends_on": [
+          "document_amount"
+        ],
+        "numeric": {
+          "quantity": "amount",
+          "op": "<",
+          "value": "500"
+        }
+      }
+    ],
+    "documentation_required": [
+      {
+        "item": "self_declaration_note",
+        "min_amount": null
+      }
+    ]
+  },
+  "21.1": {
+    "_reason": "A submission deadline is a time window, not a per-day amount limit: requires days_since_expense <= 30.",
+    "limit_unit": "none",
+    "limit_kind": "amount",
+    "limit_table": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the expense is submitted within 30 days of the expense date",
+        "kind": "requires",
+        "check": "numeric",
+        "depends_on": [
+          "bill_date"
+        ],
+        "numeric": {
+          "quantity": "days_since_expense",
+          "op": "<=",
+          "value": "30"
+        }
+      }
+    ]
+  },
+  "21.2": {
+    "_reason": "A window measured from the employee's return from a trip: trip dates are not extracted, so this is a judgment that will usually be unknown, not a per-day limit.",
+    "limit_unit": "none",
+    "limit_kind": "amount",
+    "limit_table": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the expense is submitted within 60 days of the employee's return from the international trip",
+        "kind": "requires",
+        "check": "judgment",
+        "depends_on": [
+          "trip_dates"
+        ],
+        "numeric": null
+      }
+    ]
+  },
+  "21.3": {
+    "_reason": "'Ordinarily one claim per trip' is guidance, not something checkable on one expense; the model invented a count limit of 1 that is not in the text.",
+    "applies_to_categories": [],
+    "limit_unit": "none",
+    "limit_kind": "amount",
+    "limit_table": []
+  },
+  "21.4": {
+    "_reason": "The model used the 'days' quantity (trip days) for 'older than 90 days from the expense date' and left a per-day unit; it must be days_since_expense > 90.",
+    "limit_unit": "none",
+    "limit_kind": "amount",
+    "limit_table": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the claim is more than 90 days after the expense date",
+        "kind": "excludes",
+        "check": "numeric",
+        "depends_on": [
+          "bill_date"
+        ],
+        "numeric": {
+          "quantity": "days_since_expense",
+          "op": ">",
+          "value": "90"
+        }
+      }
+    ]
+  },
+  "23.1": {
+    "_reason": "Approval routing by claim TOTAL (section 23) cannot be checked on one expense; it is Stage 6's approval workflow. The model turned the tiers into per-claim limits.",
+    "applies_to_categories": [],
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "requires_approval_above": null
+  },
+  "23.2": {
+    "_reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+    "applies_to_categories": [],
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "requires_approval_above": null
+  },
+  "23.3": {
+    "_reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+    "applies_to_categories": [],
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "requires_approval_above": null
+  },
+  "23.4": {
+    "_reason": "Approval routing by claim total: informational for Stage 3 (see 23.1).",
+    "applies_to_categories": [],
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "requires_approval_above": null
+  },
+  "23.5": {
+    "_reason": "The policy-exception rule (a breach needs written justification and one level more approval) is a consequence of a violation, applied by the approval workflow (Stage 6), not a check on one expense.",
+    "applies_to_categories": [],
+    "conditions": [],
+    "documentation_required": []
+  },
+  "24.1": {
+    "_reason": "Never structured by the model (its daily quota ran out before section 24). Duplicate-claim detection is Stage 4 (fraud) and cannot be judged from one expense.",
+    "applies_to_categories": [],
+    "notes": "Informational here: duplicate detection is Stage 4."
+  },
+  "24.2": {
+    "_reason": "Never structured by the model (quota). Claim-splitting detection needs cross-claim analysis: Stage 4.",
+    "applies_to_categories": [],
+    "notes": "Informational here: claim splitting is Stage 4."
+  },
+  "24.3": {
+    "_reason": "Never structured by the model (quota). Tamper detection is Stage 4.",
+    "applies_to_categories": [],
+    "notes": "Informational here: tamper detection is Stage 4."
+  },
+  "24.4": {
+    "_reason": "Never structured by the model (quota). Double-reimbursement detection needs data Stage 1 does not extract: Stage 4.",
+    "applies_to_categories": [],
+    "notes": "Informational here: double reimbursement is Stage 4."
+  },
+  "24.5": {
+    "_reason": "Statement about audits and consequences; not checkable on an expense.",
+    "applies_to_categories": [],
+    "notes": "Informational."
+  },
+  "8.6": {
+    "_reason": "The 7,500 threshold was structured both as the documentation threshold AND as a 'requires amount >= 7,500' condition, so a Rs 5,000 hotel bill would fail the condition. It is only a threshold for the GST-invoice requirement (documentation min_amount).",
+    "limit_inclusive": true,
+    "conditions": []
+  },
+  "5.3": {
+    "_reason": "The model added an unconditional 'receipt' documentation requirement that 5.3 does not state (receipt rules are 5.4 / 20.1); it would make every ride unknown.",
+    "documentation_required": []
+  },
+  "3.2": {
+    "_reason": "The model compared the 'days' quantity (trip days) with 7 and 14 as if it were booking lead time. Booking date vs travel date is not extracted, so this is a judgment that will usually be unknown.",
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "domestic tickets were booked at least 7 days ahead and international tickets at least 14 days ahead, or a documented urgent business reason exists",
+        "kind": "requires",
+        "check": "judgment",
+        "depends_on": [
+          "booking_lead_time"
+        ],
+        "numeric": null
+      }
+    ]
+  },
+  "4.2": {
+    "_reason": "'Rail or bus should be preferred ... under 400 km' is guidance ('should'), not a prohibition; the model made air travel under 400 km an excluded circumstance using a route distance that is not extracted.",
+    "applies_to_categories": [],
+    "conditions": [],
+    "notes": "Guidance only; not checked."
+  },
+  "12.2": {
+    "_reason": "Home broadband is reimbursable for 'L4 and above OR any role designated remote/field-based': the model AND-ed the two conditions and restricted the limit entry to grades L4-L6, so a designated remote L2 would find no limit. Now one any_of condition and an unrestricted 1,500 limit.",
+    "limit_table": [
+      {
+        "amount": "1500",
+        "currency": "INR",
+        "when": {}
+      }
+    ],
+    "documentation_required": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "text": "the employee is grade L4 or above, or the role is formally designated remote/field-based by HR",
+        "kind": "requires",
+        "check": "judgment",
+        "depends_on": [
+          "employee_designation"
+        ],
+        "numeric": null,
+        "any_of": [
+          {
+            "id": "c1a",
+            "text": "grade is L4 or above",
+            "check": "numeric",
+            "depends_on": [
+              "employee_grade"
+            ],
+            "numeric": {
+              "quantity": "grade_rank",
+              "op": ">=",
+              "value": "4"
+            }
+          },
+          {
+            "id": "c1b",
+            "text": "the role is designated remote or field-based by HR",
+            "check": "judgment",
+            "depends_on": [
+              "employee_designation"
+            ],
+            "numeric": null
+          }
+        ]
+      }
+    ]
+  },
+  "12.3": {
+    "_reason": "'Reimbursable only with pre-approval, capped at 3,000 per trip (or actuals with WRITTEN pre-approval for a higher amount)': above 3,000 is allowed with written approval, so it is an approval matter, not a violation. Structured as approval always required; the 3,000 figure is kept in notes. Unconditional 'bill'/'preapproval_email' documentation items removed (the approval requirement covers the latter).",
+    "limit_unit": "none",
+    "limit_table": [],
+    "conditions": [],
+    "documentation_required": [],
+    "requires_approval_above": {
+      "INR": "0"
+    },
+    "notes": "Cap is 3,000 per trip; above that, WRITTEN pre-approval is required. This structure only records that approval is always required."
+  },
+  "12.4": {
+    "_reason": "Removed an unconditional 'bill' documentation item (the document IS the bill); the substantive rule is the billed-to-name condition.",
+    "documentation_required": []
+  },
+  "9.1": {
+    "_reason": "Receipts are required only when the employee chooses actuals over the per diem; the model made 'receipt' unconditional, which would make every travel-meal unit unknown. Documentation removed; the per-trip method choice stays a judgment condition.",
+    "documentation_required": []
+  },
+  "16.1": {
+    "_reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+    "documentation_required": []
+  },
+  "16.2": {
+    "_reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+    "documentation_required": []
+  },
+  "16.3": {
+    "_reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+    "documentation_required": []
+  },
+  "16.4": {
+    "_reason": "The model added an unconditional 'receipt' documentation item the clause does not state (receipts are governed by 20.1); it would make every unit unknown.",
+    "documentation_required": []
+  }
+}

@@ -109,3 +109,9 @@ python eval_cord.py     # accuracy check against the CORD benchmark set
   categories, the categorizers, the fictional policy, and the frozen eval
   set + results. Re-render results with no API call:
   `python scripts/eval_categorization.py --final --report-only`.
+
+## Stage 3: policy check
+
+`alembic upgrade head && python scripts/seed_policy.py`, then
+`POST /api/claims/{id}/evaluate` (or "Check against policy" on `#/claims/<id>/policy`).
+Design, verdicts, versioning and the eval-set plan: `docs/STAGE3.md`.

@@ -279,6 +279,31 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}
   }
+
+  /* ---- Stage 3: policy check ---- */
+  .verdict{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;}
+  .verdict.compliant{background:#dcfce7;color:var(--ok);}
+  .verdict.violation{background:var(--danger-light);color:var(--danger);}
+  .verdict.needs_approval{background:var(--warn-light);color:var(--warn);}
+  .verdict.insufficient_information{background:#e0e7ff;color:#3730a3;}
+  .verdict.none{background:var(--bg);color:var(--ink-muted);}
+  .policy-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+  .policy-head h2{margin:0;font-size:17px;margin-right:auto;}
+  .policy-doc{margin-top:14px;}
+  .policy-doc-title{display:flex;align-items:center;gap:8px;font-weight:600;margin-bottom:6px;}
+  .decision{border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;background:#fff;}
+  .decision-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .decision .where{font-size:13px;color:var(--ink-muted);}
+  .decision .comparison{font-weight:600;margin-left:auto;}
+  .clause-cite{margin:8px 0;padding:8px 12px;border-left:3px solid var(--blue);background:var(--blue-light);border-radius:0 6px 6px 0;font-size:13px;white-space:pre-wrap;}
+  .clause-cite .cid{display:block;font-weight:700;margin-bottom:2px;color:var(--blue);}
+  .decision .why{font-size:14px;}
+  .decision .missing{font-size:13px;color:#3730a3;margin-top:4px;}
+  .decision details{font-size:12px;color:var(--ink-muted);margin-top:6px;}
+  .override-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);font-size:13px;}
+  .override-row select,.override-row input{font:inherit;padding:5px 8px;border:1px solid var(--border);border-radius:6px;width:auto;}
+  .override-row input.note{flex:1;min-width:140px;}
+  .override-label{font-size:13px;margin-top:8px;padding:6px 10px;background:var(--warn-light);border-radius:6px;}
 </style>
 </head>
 <body>
@@ -634,6 +659,7 @@ function drawClaimPage(claim) {
     <div class="doc-list">
       ${claim.documents.length === 0 ? `<div class="empty-state">No documents yet.</div>` : claim.documents.map(docRowHtml).join("")}
     </div>
+    <div id="policy-section"></div>
     ${noteSection}
     ${isDraft ? `<div class="claim-total-row">
       <span>Total</span>
@@ -642,6 +668,7 @@ function drawClaimPage(claim) {
   `;
 
   renderClaimActionBar(claim, submitDisabled, submitReason);
+  loadPolicySection(claim);
 
   if (isDraft) {
     document.getElementById("claim-title").addEventListener("change", async (e) => {
@@ -665,6 +692,180 @@ function drawClaimPage(claim) {
 
     wireDropzone(claim.id);
   }
+}
+
+
+/* ------------------------------------------------ Stage 3: policy check
+   Every verdict is shown WITH the verbatim clause it rests on -- a verdict
+   without its citation is never rendered (a decision with no clause says so
+   and gives the reason instead). */
+
+const VERDICT_LABELS = {
+  compliant: "Compliant",
+  violation: "Violation",
+  needs_approval: "Needs approval",
+  insufficient_information: "Information needed",
+};
+
+function verdictBadge(verdict) {
+  if (!verdict) return `<span class="verdict none">Not checked</span>`;
+  return `<span class="verdict ${verdict}">${VERDICT_LABELS[verdict] || escapeHtml(verdict)}</span>`;
+}
+
+function humanMissing(field) {
+  if (field.startsWith("system:")) return "";
+  return field.replace(/^documentation:/, "proof: ").replace(/_/g, " ");
+}
+
+async function loadPolicySection(claim) {
+  const el = document.getElementById("policy-section");
+  if (!el || claim.documents.length === 0) { if (el) el.innerHTML = ""; return; }
+  let data;
+  try {
+    data = await api("GET", `/api/claims/${claim.id}/decisions`);
+  } catch (err) {
+    el.innerHTML = `<div class="warning-line">${escapeHtml(err.message)}</div>`;
+    return;
+  }
+  drawPolicySummary(claim, data);
+}
+
+/* The claim page only ever shows a read-only summary and a link: it stays
+   free of inputs/buttons once submitted. The check button and the override
+   controls live on the policy page (#/claims/<id>/policy). */
+function drawPolicySummary(claim, data) {
+  const el = document.getElementById("policy-section");
+  if (!el) return;
+  const counts = {};
+  data.decisions.forEach((d) => { counts[d.effective_verdict] = (counts[d.effective_verdict] || 0) + 1; });
+  const parts = Object.keys(VERDICT_LABELS).filter((v) => counts[v]).map((v) => `${counts[v]} ${VERDICT_LABELS[v].toLowerCase()}`);
+  el.innerHTML = `
+    <div class="card">
+      <div class="policy-head">
+        <h2>Policy check</h2>
+        ${data.decisions.length ? verdictBadge(data.verdict) : verdictBadge(null)}
+        <a href="#/claims/${claim.id}/policy">${data.decisions.length ? "Open policy check" : "Run policy check"} &rarr;</a>
+      </div>
+      <div class="ai-was">${data.decisions.length ? escapeHtml(parts.join(", ")) + (data.stale ? " · documents changed since this check" : "") : "Not checked yet."}</div>
+    </div>`;
+}
+
+/* ---- the full policy page: verdict + verbatim clause + comparison + override ---- */
+
+route(/^#\/claims\/([^/]+)\/policy$/, renderPolicyPage);
+
+async function renderPolicyPage(claimId) {
+  stopClaimPolling();
+  const app = document.getElementById("app");
+  app.innerHTML = `<a class="back-link" href="#/claims/${claimId}">&larr; Back to claim</a><h1>Policy check</h1><div id="policy-section">Loading…</div>`;
+  try {
+    const claim = await api("GET", `/api/claims/${claimId}`);
+    drawPolicySection(claim, await api("GET", `/api/claims/${claimId}/decisions`));
+  } catch (err) {
+    document.getElementById("policy-section").innerHTML = `<div class="warning-line">${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function decisionHtml(d, docLabelOf) {
+  const where = d.line_item_ref !== null
+    ? `Line item${d.line_item_ref.includes(",") ? "s" : ""} ${escapeHtml(d.line_item_ref.split(",").map((n) => Number(n) + 1).join(", "))}`
+    : "Whole document";
+  const cite = d.clause.id
+    ? `<div class="clause-cite"><span class="cid">Policy clause ${escapeHtml(d.clause.id)}</span>${escapeHtml(d.clause.text || "")}</div>`
+    : `<div class="clause-cite" style="border-color:var(--ink-muted);"><span class="cid" style="color:var(--ink-muted);">No policy clause identified</span></div>`;
+  const missing = (d.missing_fields || []).map(humanMissing).filter(Boolean);
+  const failure = d.hard_failure_reason
+    ? `<div class="missing">Could not be checked automatically: ${escapeHtml(d.hard_failure_reason)}</div>` : "";
+  const derivation = d.amount_derivation
+    ? `<details><summary>How the amount was derived</summary>${escapeHtml(d.amount_derivation)}</details>` : "";
+  const ov = d.override;
+  const overrideLabel = ov
+    ? `<div class="override-label">Reviewer label: ${verdictBadge(ov.human_verdict)}${ov.human_clause_id ? ` under clause ${escapeHtml(ov.human_clause_id)}` : ""}${ov.human_note ? ` &mdash; ${escapeHtml(ov.human_note)}` : ""}</div>` : "";
+  return `
+    <div class="decision" data-decision="${d.id}">
+      <div class="decision-top">
+        ${verdictBadge(d.verdict)}
+        <span class="where">${where}${d.category ? " · " + escapeHtml(d.category.label) : ""}</span>
+        ${d.comparison_text ? `<span class="comparison">${escapeHtml(d.comparison_text)}</span>` : ""}
+      </div>
+      ${cite}
+      <div class="why">${escapeHtml(d.explanation)}</div>
+      ${missing.length ? `<div class="missing">Needed to decide: ${missing.map(escapeHtml).join(", ")}</div>` : ""}
+      ${failure}
+      ${derivation}
+      ${overrideLabel}
+      <div class="override-row">
+        <span>Reviewer verdict:</span>
+        <select class="ov-verdict">
+          ${Object.keys(VERDICT_LABELS).map((v) => `<option value="${v}" ${(ov ? ov.human_verdict : d.verdict) === v ? "selected" : ""}>${VERDICT_LABELS[v]}</option>`).join("")}
+        </select>
+        <input class="ov-clause" placeholder="clause (optional)" size="14" value="${escapeHtml(ov && ov.human_clause_id ? ov.human_clause_id : "")}">
+        <input class="ov-note note" placeholder="note (optional)" value="${escapeHtml(ov && ov.human_note ? ov.human_note : "")}">
+        <button class="ov-save">Save label</button>
+        <span class="ov-msg"></span>
+      </div>
+    </div>`;
+}
+
+function drawPolicySection(claim, data) {
+  const el = document.getElementById("policy-section");
+  if (!el) return;
+  const docLabel = (id) => {
+    const doc = claim.documents.find((d) => d.id === id);
+    return doc ? docRowLabel(doc) : "Document";
+  };
+  const hasRun = data.decisions.length > 0;
+  const byDoc = {};
+  data.decisions.forEach((d) => { (byDoc[d.document_id] = byDoc[d.document_id] || []).push(d); });
+
+  el.innerHTML = `
+    <div class="card">
+      <div class="policy-head">
+        <h2>Policy check</h2>
+        ${hasRun ? verdictBadge(data.verdict) : ""}
+        ${data.stale ? `<span class="ai-was">Documents changed since this check.</span>` : ""}
+        <button id="policy-run" class="${hasRun ? "" : "primary"}">${hasRun ? "Re-check" : "Check against policy"}</button>
+      </div>
+      <div id="policy-msg" class="ai-was"></div>
+      ${hasRun ? Object.keys(byDoc).map((docId) => `
+        <div class="policy-doc">
+          <div class="policy-doc-title">${escapeHtml(docLabel(docId))} ${verdictBadge(data.documents[docId].verdict)}</div>
+          ${byDoc[docId].map((d) => decisionHtml(d)).join("")}
+        </div>`).join("") : `<div class="ai-was">Not checked yet. Each expense is judged against the company policy and cites the clause it rests on.</div>`}
+      ${data.skipped && data.skipped.length ? `<div class="ai-was" style="margin-top:8px;">Not judged: ${data.skipped.map((s) => escapeHtml(s.reason)).join("; ")}.</div>` : ""}
+    </div>`;
+
+  document.getElementById("policy-run").addEventListener("click", async (e) => {
+    const btn = e.currentTarget;
+    const msg = document.getElementById("policy-msg");
+    btn.disabled = true;
+    msg.textContent = "Checking against policy… this can take a few seconds per document.";
+    try {
+      const fresh = await api("POST", `/api/claims/${claim.id}/evaluate${hasRun ? "?force=true" : ""}`);
+      drawPolicySection(claim, fresh);
+    } catch (err) {
+      btn.disabled = false;
+      msg.textContent = err.message;
+      msg.style.color = "var(--danger)";
+    }
+  });
+
+  el.querySelectorAll(".decision").forEach((node) => {
+    node.querySelector(".ov-save").addEventListener("click", async () => {
+      const msg = node.querySelector(".ov-msg");
+      try {
+        await api("POST", `/api/decisions/${node.dataset.decision}/override`, {
+          human_verdict: node.querySelector(".ov-verdict").value,
+          human_clause_id: node.querySelector(".ov-clause").value.trim() || null,
+          human_note: node.querySelector(".ov-note").value.trim() || null,
+        });
+        drawPolicySection(claim, await api("GET", `/api/claims/${claim.id}/decisions`));
+      } catch (err) {
+        msg.textContent = err.message;
+        msg.style.color = "var(--danger)";
+      }
+    });
+  });
 }
 
 // Column headers for the two array-shaped fields -- kept separate from

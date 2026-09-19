@@ -31,9 +31,24 @@ from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
 
-from dotenv import load_dotenv
+from dotenv import dotenv_values, load_dotenv
 
-load_dotenv()
+# API credentials in .env must beat a stale machine-level variable (a plain
+# load_dotenv() never overrides one). Deliberately NOT load_dotenv(override=True)
+# for everything: that would also let .env replace DATABASE_URL / PIPELINE_MODE
+# that the test suite sets before importing this module, pointing pytest at the
+# dev database.
+_CREDENTIAL_KEYS = ("GROQ_API_KEY", "LLAMA_CLOUD_API_KEY")
+
+
+def _load_env(env_path=None) -> None:
+    load_dotenv(env_path)
+    for key, value in dotenv_values(env_path).items():
+        if key in _CREDENTIAL_KEYS and value:
+            os.environ[key] = value
+
+
+_load_env()
 
 import json
 
@@ -50,9 +65,11 @@ from db import get_db, get_sessionmaker
 from extract import MODEL as GROQ_MODEL
 from extract import extract_claim_with_repair
 from models import Claim, Document, Employee, Extraction
+import policy_eval
 from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
 from schemas import DocumentType
+from policy_check import VERDICTS
 from validate import (
     _amount_appears_in_markdown as amount_appears_in_markdown,
     build_claim,
@@ -905,6 +922,84 @@ def submit_claim(
         raise HTTPException(400, f"Confirm every document before submitting: {', '.join(not_confirmed)}")
     submitted = repository.submit_claim(session, claim.id, employee.id)
     return _claim_detail(session, submitted)
+
+
+# ------------------------------------------------- Stage 3: policy decisions
+
+class OverrideBody(BaseModel):
+    human_verdict: str
+    human_clause_id: Optional[str] = None
+    human_note: Optional[str] = None
+
+
+@app.post("/api/claims/{claim_id}/evaluate")
+def evaluate_claim_policy(
+    claim_id: str,
+    force: bool = False,
+    policy_version: Optional[str] = None,
+    prompt_version: Optional[str] = None,
+    session: Session = Depends(get_db),
+    employee: Employee = Depends(get_current_employee),
+):
+    """Run the policy check. Idempotent per (claim, policy_version,
+    prompt_version): a repeat returns the stored run unless ?force=true,
+    which writes a NEW run (higher evaluation_seq) and keeps the old one."""
+    claim = _get_owned_claim(session, claim_id, employee)
+    try:
+        result = policy_eval.evaluate_claim(
+            session, claim, employee, actor_id=employee.id, policy_version=policy_version,
+            prompt_version=prompt_version, force=force,
+        )
+    except policy_eval.PolicyNotSeeded as exc:
+        raise HTTPException(409, str(exc))
+    except FileNotFoundError as exc:
+        raise HTTPException(400, str(exc))
+    except policy_eval.PolicyModelDown as exc:
+        raise HTTPException(503, f"The policy model is unavailable; nothing was stored. {exc}")
+    return policy_eval.decisions_payload(claim, result.decisions, reused=result.reused, skipped=result.skipped)
+
+
+@app.get("/api/claims/{claim_id}/decisions")
+def get_claim_decisions(
+    claim_id: str,
+    session: Session = Depends(get_db),
+    employee: Employee = Depends(get_current_employee),
+):
+    """The latest evaluation run's decisions (empty list if never evaluated)."""
+    claim = _get_owned_claim(session, claim_id, employee)
+    decisions = repository.latest_decision_run(session, claim.id)
+    return policy_eval.decisions_payload(claim, decisions)
+
+
+@app.post("/api/decisions/{decision_id}/override")
+def override_policy_decision(
+    decision_id: str,
+    body: OverrideBody,
+    session: Session = Depends(get_db),
+    employee: Employee = Depends(get_current_employee),
+):
+    """The labeling path: records a reviewer's verdict (and the clause they
+    think governs) next to the model's decision, which is never changed."""
+    try:
+        decision_uuid = uuid.UUID(decision_id)
+    except ValueError:
+        raise HTTPException(404, "Decision not found")
+    decision = repository.get_policy_decision(session, decision_uuid)
+    claim = repository.get_claim(session, decision.claim_id) if decision else None
+    if decision is None or claim is None or claim.employee_id != employee.id:
+        raise HTTPException(404, "Decision not found")
+    if body.human_verdict not in VERDICTS:
+        raise HTTPException(422, f"human_verdict must be one of {', '.join(VERDICTS)}")
+    if body.human_clause_id:
+        pv = repository.get_policy_version(session, decision.policy_version)
+        if pv is None or body.human_clause_id not in {c.clause_id for c in pv.clauses}:
+            raise HTTPException(422, f"human_clause_id {body.human_clause_id!r} is not a clause of policy {decision.policy_version}")
+    updated = repository.override_decision(
+        session, decision, human_verdict=body.human_verdict,
+        human_clause_id=body.human_clause_id or None, human_note=(body.human_note or "").strip() or None,
+        actor_id=employee.id,
+    )
+    return policy_eval.decision_view(updated)
 
 
 def _needs_confirm(session: Session, document: Document) -> bool:
