@@ -65,6 +65,7 @@ from db import get_db, get_sessionmaker
 from extract import MODEL as GROQ_MODEL
 from extract import extract_claim_with_repair
 from models import Claim, Document, Employee, Extraction
+import fraud_eval
 import policy_eval
 from parse import aparse_pdf
 from review_view import build_review_view, normalize_trip_entry
@@ -1000,6 +1001,72 @@ def override_policy_decision(
         actor_id=employee.id,
     )
     return policy_eval.decision_view(updated)
+
+
+# ------------------------------------------------- Stage 4: fraud assessment
+# Reviewer-facing: these endpoints are deliberately NOT scoped to the claim's owner
+# (a reviewer looks across employees). There is no auth/role model yet (Stage 5), so
+# anyone who can reach the API can assess and review.
+
+class FraudReviewBody(BaseModel):
+    human_assessment: str            # "confirmed" | "dismissed"
+    human_note: Optional[str] = None
+
+
+def _get_claim_any(session: Session, claim_id: str) -> Claim:
+    try:
+        claim = repository.get_claim(session, uuid.UUID(claim_id))
+    except ValueError:
+        claim = None
+    if claim is None:
+        raise HTTPException(404, "Claim not found")
+    return claim
+
+
+@app.post("/api/claims/{claim_id}/assess-fraud")
+def assess_fraud(claim_id: str, session: Session = Depends(get_db)):
+    """Run the deterministic fraud rules (+ a grounded narrative if any fired).
+    Every call writes a new immutable assessment row."""
+    claim = _get_claim_any(session, claim_id)
+    try:
+        row = fraud_eval.assess_claim(session, claim)
+    except FileNotFoundError as exc:
+        raise HTTPException(400, str(exc))
+    return fraud_eval.assessment_view(row, claim)
+
+
+@app.get("/api/claims/{claim_id}/fraud")
+def get_claim_fraud(claim_id: str, session: Session = Depends(get_db)):
+    claim = _get_claim_any(session, claim_id)
+    row = fraud_eval.latest_assessment(session, claim.id)
+    return {"claim_id": str(claim.id), "assessment": fraud_eval.assessment_view(row, claim) if row else None}
+
+
+@app.get("/api/fraud/queue")
+def fraud_queue(session: Session = Depends(get_db)):
+    """Latest assessment per claim, riskiest band first."""
+    return {"items": fraud_eval.review_queue(session)}
+
+
+@app.post("/api/fraud/{assessment_id}/review")
+def review_fraud(
+    assessment_id: str, body: FraudReviewBody, session: Session = Depends(get_db),
+    employee: Employee = Depends(get_current_employee),
+):
+    """The reviewer's label (confirmed | dismissed); the assessment itself is never changed."""
+    from models import FraudAssessment
+
+    try:
+        row = session.get(FraudAssessment, uuid.UUID(assessment_id))
+    except ValueError:
+        row = None
+    if row is None:
+        raise HTTPException(404, "Assessment not found")
+    if body.human_assessment not in ("confirmed", "dismissed"):
+        raise HTTPException(422, "human_assessment must be 'confirmed' or 'dismissed'")
+    row = fraud_eval.review_assessment(session, row, decision=body.human_assessment,
+                                       note=(body.human_note or "").strip() or None, actor_id=employee.id)
+    return fraud_eval.assessment_view(row, repository.get_claim(session, row.claim_id))
 
 
 def _needs_confirm(session: Session, document: Document) -> bool:

@@ -1,0 +1,369 @@
+{
+  "employees": {
+    "aarav": "0e255557-96bf-4d66-8af7-c272ab1535d5",
+    "priya": "cb09d856-cefa-4eae-b85e-9c74b71832cd",
+    "rohan": "69d75f4f-4fe0-46a0-8f96-39670d3ae5e3",
+    "sneha": "a5ef98eb-bce9-4334-8a5e-00ee2591e0e0",
+    "vikram": "2d7716d3-f24f-497f-b37f-a5ec4b96e1ba",
+    "ananya": "5c0e62ae-957e-4cde-b1bf-4acbeda45218",
+    "karthik": "6fa6c861-7789-425f-a444-ca1867d466a7",
+    "meera": "2e500b72-276a-4ce3-8136-3ade7218a8cb"
+  },
+  "claims": {
+    "aarav/jun": "f0d87d0b-eacc-4a5b-97ea-ddb2fce91711",
+    "aarav/jul": "9bd5384c-150e-43fe-af60-2ecf57cb0fb3",
+    "aarav/aug": "6a1b69de-e1f5-422e-a6a7-295c957760cf",
+    "priya/jun": "2d3936ee-6a57-4daa-b215-f18ef856e555",
+    "priya/jul-a": "7ec9a7c6-9b10-42a8-9334-92149013d197",
+    "priya/jul-b": "11e2bce3-ca06-4660-9ed2-2bd90d94fc13",
+    "priya/jul-c": "fb9443a7-7cc1-429c-b836-44265f7eca16",
+    "priya/aug": "7999ab26-f513-423b-b171-81dab60f26cf",
+    "rohan/jul": "e1d51ff7-439d-421c-b2d5-5290d0462225",
+    "sneha/jun": "23754616-9043-4c5a-a54d-a790d5f376b8",
+    "sneha/jul": "7b4ebee5-009b-4ca5-9294-cd4cce8403b1",
+    "sneha/aug": "6af09021-aa0a-45d1-ba5b-2a79bcfc8b76",
+    "vikram/jun": "720288a1-27f1-4ab3-850f-c45ebdea4dd1",
+    "vikram/jul": "3c753542-2d86-4920-80bf-871d4da5935f",
+    "vikram/aug": "2a8cd9df-16a4-4f44-814f-4cda431dc607",
+    "ananya/jun": "c4f5209d-b463-4244-a2f3-bd47911253a8",
+    "ananya/jul": "2422647f-4f70-4330-9eac-5ae38fcb6386",
+    "ananya/aug": "d692b373-7805-48c3-9a73-1859748d0dca",
+    "karthik/wk": "ce58c1ed-9846-4cd6-b007-7e163c38f375",
+    "karthik/jul": "233a94e3-5cd4-4926-a073-f6bdcebdaeaa",
+    "karthik/aug": "0cf9f676-1171-421b-bc56-16c076719a34",
+    "meera/jun": "ce166924-7abf-439d-acdd-f1d0dc150a65",
+    "meera/jul": "81847e9f-381b-4fd7-979d-5c2e81de86c6"
+  },
+  "files": {
+    "receipts/r01.png": {
+      "document_id": "ab712f20-ea89-43a0-9a04-7017ea74db32",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r02.png": {
+      "document_id": "278c777b-72f6-4574-a18c-7cc7a02693dc",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r03.png": {
+      "document_id": "48052564-e341-476f-b632-6c21d4ad9ec3",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r04.png": {
+      "document_id": "4f325179-8280-4d75-a717-9ea4e3d68d72",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r05.png": {
+      "document_id": "e6e2e3bd-787d-4ad6-a2fb-b9dbcb6c32ec",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r06.png": {
+      "document_id": "d76f70dd-6f34-480d-a060-c6cdf5d07f9b",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r07.png": {
+      "document_id": "74648177-9d3b-4fa0-80a0-c9b4ea1d3894",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r08.png": {
+      "document_id": "27116d1c-1d7d-4235-9c00-7e441968e29d",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r09.png": {
+      "document_id": "c6c22865-37a9-4271-b7ce-6f636f0699a9",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r10.png": {
+      "document_id": "af1685d8-3e5f-4ab1-bc77-e0de68a35fbd",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r11.png": {
+      "document_id": "69debbd5-0e3c-400a-b21d-4efc7dc3450f",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r12.png": {
+      "document_id": "4a64a4d0-c4b6-4d83-8f18-d448eddd2f1c",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r13.png": {
+      "document_id": "384aef06-fa43-437a-8f81-b87b83d2f145",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r14.png": {
+      "document_id": "f3de3608-86cf-4e55-abfe-d43d4b050ca8",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r15.png": {
+      "document_id": "08a479c9-0cf7-4505-a4cc-6f5916c6da53",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r16.png": {
+      "document_id": "997da6e5-9a00-4fef-bf6c-88dfd367ac5f",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r17.png": {
+      "document_id": "67d044a6-e76f-4bc2-b923-16c71ae3f645",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r18.png": {
+      "document_id": "e11921d3-35c7-453b-a468-a79d45db7c7a",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r19.png": {
+      "document_id": "d7d927b4-a240-45c0-a37a-bc03e3e65e79",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r20.png": {
+      "document_id": "65c0e18a-d45a-4143-84d2-2ddf8f066064",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r21.png": {
+      "document_id": "04e9fe6b-eff9-4532-b485-3efc37f7880c",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r22.png": {
+      "document_id": "4ca7cf41-8f5a-4ee3-9f6c-502235848185",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r23.png": {
+      "document_id": "2faa0076-304b-446f-8d9c-41c01d06d55b",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r24.png": {
+      "document_id": "a2ea2876-c27a-4120-9312-343871721a4b",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r25.png": {
+      "document_id": "ec4ad3cd-e542-4a85-a83d-12ee4fddd341",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r26.png": {
+      "document_id": "ee45f73f-0b87-48f1-8588-da56e4b7c656",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r27.png": {
+      "document_id": "ed30de57-b5ed-46b5-8c9b-3703158a0e3a",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r28.png": {
+      "document_id": "dc8a6368-39df-4047-9ed8-0b937ec124ed",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r29.png": {
+      "document_id": "7055b122-4204-4e7b-a6a8-8f6cbaab1d0d",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r30.png": {
+      "document_id": "276769cb-a42d-4a0e-a226-c9ab01c0ecd6",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r31.png": {
+      "document_id": "28b7d70c-534a-4cb1-9e2d-a296f87b6658",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r32.png": {
+      "document_id": "b37d4036-d346-4a86-8e9c-79d379fda85c",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r33.png": {
+      "document_id": "1059d25a-4eb6-4de7-921e-e952b8bfefeb",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r34.png": {
+      "document_id": "157be68b-9df2-4802-afc1-d1a8b9d4d3a1",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r35.png": {
+      "document_id": "0948c681-585f-4672-888f-ae78f33dc717",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r36.png": {
+      "document_id": "6ed78688-3ee5-4ab1-95db-78a2ea0112e6",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r37.png": {
+      "document_id": "7ea542db-712b-4bcd-9366-f724a583a65b",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r38.png": {
+      "document_id": "475a5324-c345-4c22-892c-24653812dad1",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r39.png": {
+      "document_id": "42f75b8b-bd2d-463c-88f2-0a16fe46075f",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r40.png": {
+      "document_id": "7481d708-2af3-46b0-8526-75c18bc94df9",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r41.png": {
+      "document_id": "b9ad0e14-addd-4492-91d1-37f5d9c462f2",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r42.png": {
+      "document_id": "0517957e-cb66-4e82-af99-e44af2252c5e",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r43.png": {
+      "document_id": "6ba95c11-797c-463d-9f1a-901570974e6d",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r44.png": {
+      "document_id": "e57c984e-ab46-4725-9738-9bdf3330ae11",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r45.png": {
+      "document_id": "eb6e5cb8-5619-4d20-96ad-1d1536bbac4d",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r46.png": {
+      "document_id": "baa4c74d-f9ef-45a6-88b8-28451cf98d92",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r47.png": {
+      "document_id": "12877a6f-aa56-4d40-9054-1d164392f8fb",
+      "status_after_extract": "ready",
+      "confirmed": true
+    },
+    "receipts/r48.png": {
+      "document_id": "79c26d72-3635-4b7e-a08e-735950298c92",
+      "status_after_extract": "ready",
+      "confirmed": true
+    }
+  },
+  "oddities": [
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/jul",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    },
+    {
+      "claim": "vikram/aug",
+      "what": "evaluate 503: {\"detail\":\"The policy model is unavailable; nothing was stored. RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gp"
+    }
+  ],
+  "submitted": {
+    "f0d87d0b-eacc-4a5b-97ea-ddb2fce91711": true,
+    "9bd5384c-150e-43fe-af60-2ecf57cb0fb3": true,
+    "6a1b69de-e1f5-422e-a6a7-295c957760cf": true,
+    "2d3936ee-6a57-4daa-b215-f18ef856e555": true,
+    "7ec9a7c6-9b10-42a8-9334-92149013d197": true,
+    "11e2bce3-ca06-4660-9ed2-2bd90d94fc13": true,
+    "fb9443a7-7cc1-429c-b836-44265f7eca16": true,
+    "7999ab26-f513-423b-b171-81dab60f26cf": true,
+    "e1d51ff7-439d-421c-b2d5-5290d0462225": true,
+    "23754616-9043-4c5a-a54d-a790d5f376b8": true,
+    "7b4ebee5-009b-4ca5-9294-cd4cce8403b1": true,
+    "6af09021-aa0a-45d1-ba5b-2a79bcfc8b76": true,
+    "720288a1-27f1-4ab3-850f-c45ebdea4dd1": true,
+    "3c753542-2d86-4920-80bf-871d4da5935f": true,
+    "2a8cd9df-16a4-4f44-814f-4cda431dc607": true,
+    "c4f5209d-b463-4244-a2f3-bd47911253a8": true,
+    "2422647f-4f70-4330-9eac-5ae38fcb6386": true,
+    "d692b373-7805-48c3-9a73-1859748d0dca": true,
+    "ce58c1ed-9846-4cd6-b007-7e163c38f375": true,
+    "233a94e3-5cd4-4926-a073-f6bdcebdaeaa": true,
+    "0cf9f676-1171-421b-bc56-16c076719a34": true,
+    "ce166924-7abf-439d-acdd-f1d0dc150a65": true,
+    "81847e9f-381b-4fd7-979d-5c2e81de86c6": true
+  },
+  "evaluated": {
+    "f0d87d0b-eacc-4a5b-97ea-ddb2fce91711": "violation",
+    "9bd5384c-150e-43fe-af60-2ecf57cb0fb3": "insufficient_information",
+    "6a1b69de-e1f5-422e-a6a7-295c957760cf": "violation",
+    "2d3936ee-6a57-4daa-b215-f18ef856e555": "violation",
+    "7ec9a7c6-9b10-42a8-9334-92149013d197": "violation",
+    "11e2bce3-ca06-4660-9ed2-2bd90d94fc13": "compliant",
+    "fb9443a7-7cc1-429c-b836-44265f7eca16": "compliant",
+    "7999ab26-f513-423b-b171-81dab60f26cf": "violation",
+    "e1d51ff7-439d-421c-b2d5-5290d0462225": "violation",
+    "23754616-9043-4c5a-a54d-a790d5f376b8": "violation",
+    "7b4ebee5-009b-4ca5-9294-cd4cce8403b1": "insufficient_information",
+    "6af09021-aa0a-45d1-ba5b-2a79bcfc8b76": "violation",
+    "720288a1-27f1-4ab3-850f-c45ebdea4dd1": "insufficient_information"
+  }
+}

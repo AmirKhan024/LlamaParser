@@ -404,3 +404,49 @@ class PolicyDecision(Base):
     overridden_by: Mapped[Optional[uuid.UUID]] = mapped_column(
         UUID(as_uuid=True), ForeignKey("employees.id"), nullable=True
     )
+
+
+# ---------------------------------------------------------------- Stage 4
+
+class FraudAssessment(Base):
+    """Immutable, one row per claim per assessment run (same capture pattern as
+    PolicyDecision: a DB trigger allows only the reviewer columns to change).
+    Rules and score are computed by code (fraud_rules.py); the narrative is the
+    only model output and is stored with its raw request/response."""
+
+    __tablename__ = "fraud_assessments"
+    __table_args__ = (Index("ix_fraud_assessments_claim_created", "claim_id", "created_at"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    claim_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("claims.id"), nullable=False)
+    employee_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("employees.id"), nullable=False)
+    run_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    ruleset_version: Mapped[str] = mapped_column(Text, nullable=False)
+    rules_fired: Mapped[list[dict[str, Any]]] = mapped_column(JSONB, nullable=False)
+    rules_not_applicable: Mapped[list[dict[str, Any]]] = mapped_column(JSONB, nullable=False)
+    # Assessed and found nothing ("no risk found"), kept apart from not_applicable ("could not assess").
+    rules_clear: Mapped[list[dict[str, Any]]] = mapped_column(JSONB, nullable=False)
+    risk_score: Mapped[int] = mapped_column(Integer, nullable=False)
+    # low | medium | high | unassessable
+    risk_band: Mapped[str] = mapped_column(Text, nullable=False)
+    assessable_signal_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    total_signal_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    # ok | rejected | unavailable | error | not_needed (nothing fired)
+    narrative_status: Mapped[str] = mapped_column(Text, nullable=False)
+    narrative: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    model_name: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    prompt_version: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    raw_request: Mapped[Optional[dict[str, Any]]] = mapped_column(JSONB, nullable=True)
+    raw_response: Mapped[Optional[dict[str, Any]]] = mapped_column(JSONB, nullable=True)
+    latency_ms: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    prompt_tokens: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    completion_tokens: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
+
+    # The reviewer's label -- the only columns ever updated on this row.
+    human_assessment: Mapped[Optional[str]] = mapped_column(Text, nullable=True)   # confirmed | dismissed
+    human_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    reviewed_at: Mapped[Optional[datetime]] = mapped_column(nullable=True)
+    reviewed_by: Mapped[Optional[uuid.UUID]] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("employees.id"), nullable=True
+    )

@@ -304,6 +304,28 @@
   .override-row select,.override-row input{font:inherit;padding:5px 8px;border:1px solid var(--border);border-radius:6px;width:auto;}
   .override-row input.note{flex:1;min-width:140px;}
   .override-label{font-size:13px;margin-top:8px;padding:6px 10px;background:var(--warn-light);border-radius:6px;}
+
+  /* ---- Stage 4: fraud review queue ---- */
+  .band{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.03em;}
+  .band.high{background:var(--danger-light);color:var(--danger);}
+  .band.medium{background:var(--warn-light);color:var(--warn);}
+  .band.low{background:#dcfce7;color:var(--ok);}
+  .band.unassessable{background:#e0e7ff;color:#3730a3;}
+  .fraud-card{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);padding:16px;margin-bottom:16px;}
+  .fraud-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .fraud-head .who{font-weight:600;}
+  .fraud-head .cov{margin-left:auto;font-size:13px;color:var(--ink-muted);}
+  .fraud-narr{margin:10px 0;padding:10px 12px;background:var(--blue-light);border-radius:8px;font-size:14px;}
+  .fraud-narr.none{background:var(--bg);color:var(--ink-muted);}
+  .rule{border-left:3px solid var(--danger);padding:6px 12px;margin:10px 0;background:var(--danger-light);border-radius:0 6px 6px 0;}
+  .rule .rid{font-weight:700;font-size:13px;}
+  .rule .w{float:right;font-size:12px;color:var(--ink-muted);}
+  .ev{font-size:13px;margin:4px 0 0 0;padding-left:16px;}
+  .ev li{margin:2px 0;}
+  .docchip{display:inline-block;background:#fff;border:1px solid var(--border);border-radius:6px;padding:1px 7px;font-size:12px;}
+  .na-list{font-size:13px;color:var(--ink-muted);margin-top:8px;}
+  .review-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);}
+  .review-row input{font:inherit;padding:5px 8px;border:1px solid var(--border);border-radius:6px;flex:1;min-width:160px;}
 </style>
 </head>
 <body>
@@ -513,7 +535,7 @@ route(/^#\/$/, renderMyClaims);
 
 async function renderMyClaims() {
   const app = document.getElementById("app");
-  app.innerHTML = `<div class="page-header"><h1>My claims</h1><button class="primary" id="new-claim">New claim</button></div><div id="claims-body">Loading…</div>`;
+  app.innerHTML = `<div class="page-header"><h1>My claims</h1><span><a href="#/fraud" id="fraud-link" style="margin-right:14px;">Fraud review queue</a><button class="primary" id="new-claim">New claim</button></span></div><div id="claims-body">Loading…</div>`;
   document.getElementById("new-claim").addEventListener("click", async (e) => {
     e.target.disabled = true;
     try {
@@ -865,6 +887,115 @@ function drawPolicySection(claim, data) {
         msg.style.color = "var(--danger)";
       }
     });
+  });
+}
+
+
+/* ------------------------------------------------ Stage 4: fraud review queue
+   Riskiest first. A band is never shown without the rules that produced it:
+   each card lists the fired rules WITH their evidence, the signal coverage
+   ("n of m assessable"), and what could not be assessed. */
+
+route(/^#\/fraud$/, renderFraudQueue);
+
+function evValue(v) {
+  if (v === null || v === undefined) return "–";
+  return escapeHtml(String(v));
+}
+
+function evidenceHtml(node) {
+  if (Array.isArray(node)) {
+    if (node.length === 0) return "";
+    return `<ul class="ev">${node.map((x) => `<li>${evidenceHtml(x)}</li>`).join("")}</ul>`;
+  }
+  if (node && typeof node === "object") {
+    if (node.document_id && ("vendor" in node || "file" in node)) {
+      const bits = [node.vendor, node.date, node.amount ? `${node.currency === "INR" ? "₹" : (node.currency || "") + " "}${node.amount}` : null, node.employee]
+        .filter((b) => b).map(escapeHtml).join(" · ");
+      return `<span class="docchip" title="${escapeHtml(node.file || "")}">${bits}</span>`;
+    }
+    return Object.entries(node).map(([k, v]) => {
+      const label = escapeHtml(k.replace(/_/g, " "));
+      if (v && typeof v === "object") return `<div><strong>${label}:</strong> ${evidenceHtml(v)}</div>`;
+      return `<div><strong>${label}:</strong> ${evValue(v)}</div>`;
+    }).join("");
+  }
+  return evValue(node);
+}
+
+function ruleHtml(r) {
+  return `<div class="rule">
+    <span class="w">weight ${r.weight}</span>
+    <div class="rid">${escapeHtml(r.rule_id)}</div>
+    <div>${escapeHtml(r.description)}</div>
+    <div class="ai-was">${escapeHtml(r.reason)}</div>
+    ${evidenceHtml(r.evidence)}
+  </div>`;
+}
+
+function fraudCardHtml(a) {
+  const narr = a.narrative
+    ? `<div class="fraud-narr">${escapeHtml(a.narrative)}</div>`
+    : a.rules_fired.length
+      ? `<div class="fraud-narr none">No narrative (${escapeHtml(a.narrative_status)}) – the rules below are the raw findings.</div>` : "";
+  const na = a.rules_not_applicable.length
+    ? `<div class="na-list"><strong>Could not assess:</strong> ${a.rules_not_applicable.map((r) => `${escapeHtml(r.rule_id)} (${escapeHtml(r.reason)})`).join("; ")}</div>` : "";
+  const clear = a.rules_clear.length
+    ? `<div class="na-list"><strong>Assessed, nothing found:</strong> ${a.rules_clear.map((r) => escapeHtml(r.rule_id)).join(", ")}</div>` : "";
+  const review = a.review
+    ? `<div class="override-label">Reviewer: <strong>${escapeHtml(a.review.human_assessment)}</strong>${a.review.human_note ? " – " + escapeHtml(a.review.human_note) : ""}</div>` : "";
+  return `
+    <div class="fraud-card" data-assessment="${a.id}">
+      <div class="fraud-head">
+        <span class="band ${a.risk_band}">${escapeHtml(a.risk_band)}</span>
+        <span>score ${a.risk_score}</span>
+        <span class="who">${escapeHtml(a.employee_name || "")} · <a href="#/claims/${a.claim_id}">${escapeHtml(a.claim_title || "claim")}</a></span>
+        <span class="cov">${escapeHtml(a.assessable_signals)} signals assessable</span>
+      </div>
+      ${narr}
+      ${a.rules_fired.map(ruleHtml).join("") || `<div class="ai-was" style="margin:8px 0;">${a.risk_band === "unassessable" ? "Nothing fired, but too few signals could be assessed to call this low risk." : "No rule fired."}</div>`}
+      ${na}${clear}${review}
+      <div class="review-row">
+        <input class="fr-note" placeholder="note (optional)" value="${escapeHtml(a.review && a.review.human_note ? a.review.human_note : "")}">
+        <button class="fr-confirm">Confirm</button>
+        <button class="fr-dismiss">Dismiss</button>
+        <span class="fr-msg ai-was"></span>
+      </div>
+    </div>`;
+}
+
+async function renderFraudQueue() {
+  stopClaimPolling();
+  const app = document.getElementById("app");
+  app.innerHTML = `<a class="back-link" href="#/">&larr; My claims</a><h1>Fraud review queue</h1><div id="fraud-body">Loading…</div>`;
+  let data;
+  try {
+    data = await api("GET", "/api/fraud/queue");
+  } catch (err) {
+    document.getElementById("fraud-body").innerHTML = `<div class="warning-line">${escapeHtml(err.message)}</div>`;
+    return;
+  }
+  const body = document.getElementById("fraud-body");
+  if (!data.items.length) {
+    body.innerHTML = `<div class="empty-state">No claims have been assessed yet (POST /api/claims/{id}/assess-fraud).</div>`;
+    return;
+  }
+  body.innerHTML = data.items.map(fraudCardHtml).join("");
+  body.querySelectorAll(".fraud-card").forEach((card) => {
+    const decide = (decision) => async () => {
+      const msg = card.querySelector(".fr-msg");
+      try {
+        await api("POST", `/api/fraud/${card.dataset.assessment}/review`, {
+          human_assessment: decision, human_note: card.querySelector(".fr-note").value.trim() || null,
+        });
+        renderFraudQueue();
+      } catch (err) {
+        msg.textContent = err.message;
+        msg.style.color = "var(--danger)";
+      }
+    };
+    card.querySelector(".fr-confirm").addEventListener("click", decide("confirmed"));
+    card.querySelector(".fr-dismiss").addEventListener("click", decide("dismissed"));
   });
 }
 

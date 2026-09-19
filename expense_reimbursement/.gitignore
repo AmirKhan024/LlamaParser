@@ -7,3 +7,4 @@ test_screenshots/
 node_modules/
 run_server*.log
 eval/categorization/dataset.jsonl.bak
+demo/*.log

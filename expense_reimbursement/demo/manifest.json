@@ -1,0 +1,349 @@
+{
+  "note": "Who submits which file. No expected verdicts, clauses or categories -- this is a demo script, not an eval set.",
+  "employees": [
+    {
+      "key": "aarav",
+      "name": "Aarav Mehta",
+      "grade": "L2",
+      "base_city": "Mumbai"
+    },
+    {
+      "key": "priya",
+      "name": "Priya Nair",
+      "grade": "L3",
+      "base_city": "Bengaluru"
+    },
+    {
+      "key": "rohan",
+      "name": "Rohan Iyer",
+      "grade": "L1",
+      "base_city": "Pune"
+    },
+    {
+      "key": "sneha",
+      "name": "Sneha Kulkarni",
+      "grade": "L4",
+      "base_city": "Mumbai"
+    },
+    {
+      "key": "vikram",
+      "name": "Vikram Singh",
+      "grade": "L5",
+      "base_city": "Delhi"
+    },
+    {
+      "key": "ananya",
+      "name": "Ananya Das",
+      "grade": "L2",
+      "base_city": "Kolkata"
+    },
+    {
+      "key": "karthik",
+      "name": "Karthik Reddy",
+      "grade": "L3",
+      "base_city": "Hyderabad"
+    },
+    {
+      "key": "meera",
+      "name": "Meera Joshi",
+      "grade": "L1",
+      "base_city": "Jaipur"
+    }
+  ],
+  "items": [
+    {
+      "file": "receipts/r01.png",
+      "employee": "aarav",
+      "claim": "jun",
+      "edit": {
+        "amount": "640.00",
+        "reason": "Toll and waiting charges were added by the driver."
+      }
+    },
+    {
+      "file": "receipts/r02.png",
+      "employee": "aarav",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r03.png",
+      "employee": "aarav",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r04.png",
+      "employee": "aarav",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r05.png",
+      "employee": "aarav",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r06.png",
+      "employee": "aarav",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r07.png",
+      "employee": "priya",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r08.png",
+      "employee": "priya",
+      "claim": "jul-a",
+      "edit": null
+    },
+    {
+      "file": "receipts/r09.png",
+      "employee": "priya",
+      "claim": "jul-b",
+      "edit": null
+    },
+    {
+      "file": "receipts/r10.png",
+      "employee": "priya",
+      "claim": "jul-c",
+      "edit": null
+    },
+    {
+      "file": "receipts/r11.png",
+      "employee": "priya",
+      "claim": "jul-c",
+      "edit": null
+    },
+    {
+      "file": "receipts/r12.png",
+      "employee": "priya",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r13.png",
+      "employee": "rohan",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r14.png",
+      "employee": "rohan",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r15.png",
+      "employee": "rohan",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r16.png",
+      "employee": "rohan",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r17.png",
+      "employee": "sneha",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r18.png",
+      "employee": "sneha",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r19.png",
+      "employee": "sneha",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r20.png",
+      "employee": "sneha",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r21.png",
+      "employee": "sneha",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r22.png",
+      "employee": "sneha",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r23.png",
+      "employee": "vikram",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r24.png",
+      "employee": "vikram",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r25.png",
+      "employee": "vikram",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r26.png",
+      "employee": "vikram",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r27.png",
+      "employee": "vikram",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r28.png",
+      "employee": "ananya",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r29.png",
+      "employee": "ananya",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r30.png",
+      "employee": "ananya",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r31.png",
+      "employee": "ananya",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r32.png",
+      "employee": "ananya",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r33.png",
+      "employee": "ananya",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r34.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r35.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r36.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r37.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r38.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": {
+        "amount": "530.00",
+        "reason": "Airport surcharge and parking were extra."
+      }
+    },
+    {
+      "file": "receipts/r39.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r40.png",
+      "employee": "karthik",
+      "claim": "wk",
+      "edit": null
+    },
+    {
+      "file": "receipts/r41.png",
+      "employee": "karthik",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r42.png",
+      "employee": "karthik",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r43.png",
+      "employee": "karthik",
+      "claim": "aug",
+      "edit": null
+    },
+    {
+      "file": "receipts/r44.png",
+      "employee": "meera",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r45.png",
+      "employee": "meera",
+      "claim": "jun",
+      "edit": null
+    },
+    {
+      "file": "receipts/r46.png",
+      "employee": "meera",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r47.png",
+      "employee": "meera",
+      "claim": "jul",
+      "edit": null
+    },
+    {
+      "file": "receipts/r48.png",
+      "employee": "meera",
+      "claim": "jul",
+      "edit": null
+    }
+  ]
+}
