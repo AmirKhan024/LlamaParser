@@ -1,0 +1,36 @@
+[
+  {
+    "stem": "X51005442322",
+    "markdown_chars": 2075,
+    "fallback_model": {
+      "model": "openai/gpt-oss-20b",
+      "outcome": "failed",
+      "code": "json_validate_failed",
+      "message": "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.",
+      "failed_generation": ""
+    },
+    "production_model": {
+      "model": "openai/gpt-oss-120b",
+      "outcome": "success",
+      "total_tokens": 3330,
+      "document_type": "restaurant_bill"
+    }
+  },
+  {
+    "stem": "X51005442334",
+    "markdown_chars": 877,
+    "fallback_model": {
+      "model": "openai/gpt-oss-20b",
+      "outcome": "failed",
+      "code": "json_validate_failed",
+      "message": "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.",
+      "failed_generation": ""
+    },
+    "production_model": {
+      "model": "openai/gpt-oss-120b",
+      "outcome": "success",
+      "total_tokens": 2998,
+      "document_type": "restaurant_bill"
+    }
+  }
+]

@@ -200,9 +200,18 @@ def _call_groq(user_content: str, model: str = MODEL) -> ExtractResult:
         # Groq's own JSON-mode validator occasionally rejects a
         # generation outright ("Failed to validate JSON") on otherwise
         # ordinary input -- found while extracting SROIE receipts for
-        # the Stage 2 eval set: 5 clean, well-formed receipts failed
-        # this way with no retry at all. One retry, same input --
-        # transient generation failures don't reliably repeat twice.
+        # the Stage 2 eval set with the fallback model gpt-oss-20b. One
+        # retry, same input. Measured limits (scripts/
+        # verify_sroie_retry_fix.py, eval/categorization/
+        # sroie_failure_diagnosis.json): this only rescues TRANSIENT
+        # failures -- of 5 originally failing receipts, 3 succeeded on
+        # the first call (nothing to retry), 1 failed twice in a row and
+        # then succeeded on a later call, and 1 fails every time on
+        # gpt-oss-20b ("max completion tokens reached": the reasoning
+        # model spends its completion budget before emitting JSON on a
+        # long table). That last kind is systematic, not transient, and a
+        # retry can't fix it; the production model (gpt-oss-120b) handled
+        # it fine.
         body = exc.body if isinstance(exc.body, dict) else {}
         error_code = (body.get("error") or {}).get("code")
         if error_code not in ("json_validate_failed", "json_generate_failed"):

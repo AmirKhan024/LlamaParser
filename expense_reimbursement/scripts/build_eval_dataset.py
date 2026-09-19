@@ -139,7 +139,24 @@ def _synthetic_rows() -> list[dict]:
     return rows
 
 
+def _is_frozen() -> bool:
+    """True once any row has been reviewed (silver -> gold). The eval set is
+    frozen from that point: rebuilding would re-glob outputs/ (which can
+    now contain extra sroie_* results, e.g. the receipts re-extracted while
+    verifying the retry fix), renumber the cat-sroie-NNN ids, and silently
+    change what every recorded result was scored against."""
+    if not DATASET_PATH.exists():
+        return False
+    with DATASET_PATH.open(encoding="utf-8") as f:
+        return any(json.loads(line).get("reviewed") for line in f if line.strip())
+
+
 def main() -> None:
+    if _is_frozen() and "--force" not in sys.argv[1:]:
+        raise SystemExit(
+            f"{DATASET_PATH} has reviewed rows -- the eval set is frozen and rebuilding it would "
+            "renumber ids and invalidate recorded results. Pass --force only if you really intend a new eval set."
+        )
     rows = _sroie_rows() + _cord_rows() + _real_rows() + _synthetic_rows()
     print(f"sroie={len(_sroie_rows())} cord={len(_cord_rows())} real={len(_real_rows())} synthetic={len(_synthetic_rows())}")
     print(f"Total rows: {len(rows)}")
